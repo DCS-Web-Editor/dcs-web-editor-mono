@@ -5,7 +5,7 @@ export default defineConfig({
     plugins: [viteSingleFile()],
     build: {
         lib: {
-            entry: path.resolve(__dirname, './dist/icons'),
+            entry: path.resolve(__dirname, './dist/index'),
             name: 'icons',
         },
         minify: true,

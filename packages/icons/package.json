@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && vite build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "tsc",
+    "build": "npm run copy-assets && tsc && vite build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-assets": "rm -rf ./dist && mkdir dist && cp -r ./src/small/ ./dist/small" 
   },
   "author": "",
   "license": "ISC",
