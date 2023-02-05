@@ -1,8 +1,9 @@
 {
-  "name": "icons",
+  "name": "@dcs-web-editor-mono/icons",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/icons.umd.js",
+  "module": "dist/icons.mjs",
   "scripts": {
     "clean": "rimraf dist/ && mkdir dist",
     "tsc": "tsc",
