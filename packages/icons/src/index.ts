@@ -67,7 +67,16 @@ import P0091000014 from './small/P91000014.png';
 import P0091000096 from './small/P91000096.png';
 import P0091000066 from './small/P91000066.png';
 
-export default {
+import iconMap from './iconMap.json'
+
+const getIcon = function geticon(unitType:string) {
+    const iconName: string = (iconMap as any)[unitType];
+    const icon = toExport[iconName];
+    return icon;
+}
+
+const toExport: any = {
+    getIcon,
     P0091000015,
     P0091000024,
     P0091000004,
@@ -136,3 +145,5 @@ export default {
     P0091000096,
     P0091000066,
 }
+
+export default toExport;
