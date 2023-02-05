@@ -15,7 +15,8 @@
   "author": "fyyyy",
   "license": "GNU GPL v3.0 Affero",
   "workspaces": [
-    "packages/icons"
+    "packages/icons",
+    "packages/beacons"
   ],
   "dependencies": {
     "typescript": "^4.9.5",

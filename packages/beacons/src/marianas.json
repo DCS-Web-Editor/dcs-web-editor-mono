@@ -1,0 +1,372 @@
+[
+    {
+        "beaconId": "world_0",
+        "callsign": "AJA",
+        "direction": -25.46479,
+        "display_name": "MTMACAJNA",
+        "frequency": 385000.0,
+        "position": [
+            -3436.749756,
+            192.952586,
+            -6602.758789
+        ],
+        "positionGeo": {
+            "latitude": 13.453405,
+            "longitude": 144.736872
+        },
+        "sceneObjects": [
+            "t:15564954"
+        ]
+    },
+    {
+        "beaconId": "world_1",
+        "callsign": "UNZ",
+        "channel": 105,
+        "direction": 24.95549,
+        "display_name": "Nimitz",
+        "frequency": 115800000.0,
+        "position": [
+            -3308.61377,
+            194.660687,
+            -6986.220215
+        ],
+        "positionGeo": {
+            "latitude": 13.454531,
+            "longitude": 144.733321
+        },
+        "sceneObjects": [
+            "t:61476409"
+        ]
+    },
+    {
+        "beaconId": "world_2",
+        "callsign": "SN",
+        "direction": 52.966778,
+        "display_name": "SAIPAN",
+        "frequency": 312000.0,
+        "position": [
+            179201.03753,
+            34.008945,
+            99842.086026
+        ],
+        "positionGeo": {
+            "latitude": 15.111283,
+            "longitude": 145.710437
+        },
+        "sceneObjects": [
+            "t:36307053"
+        ]
+    },
+    {
+        "beaconId": "airfield6_0",
+        "callsign": "UAM",
+        "channel": 54,
+        "direction": 86.750069,
+        "display_name": "ANDERSEN",
+        "position": [
+            11615.371094,
+            184.237672,
+            16240.750977
+        ],
+        "positionGeo": {
+            "latitude": 13.591233,
+            "longitude": 144.9466
+        },
+        "sceneObjects": [
+            "t:52468368"
+        ]
+    },
+    {
+        "beaconId": "airfield6_1",
+        "callsign": "IPMY",
+        "direction": 66.208465,
+        "display_name": "",
+        "frequency": 110150000.0,
+        "position": [
+            11230.984375,
+            180.44087,
+            15875.927734
+        ],
+        "positionGeo": {
+            "latitude": 13.587732,
+            "longitude": 144.943259
+        },
+        "sceneObjects": [
+            "t:63275331"
+        ]
+    },
+    {
+        "beaconId": "airfield6_2",
+        "callsign": "IUAM",
+        "direction": -113.500825,
+        "display_name": "",
+        "frequency": 110100000.0,
+        "position": [
+            10130.34375,
+            163.402965,
+            13251.070313
+        ],
+        "positionGeo": {
+            "latitude": 13.577585,
+            "longitude": 144.919098
+        },
+        "sceneObjects": [
+            "t:63014066"
+        ]
+    },
+    {
+        "beaconId": "airfield6_3",
+        "callsign": "IYIG",
+        "direction": 66.208465,
+        "display_name": "",
+        "frequency": 109350000.0,
+        "position": [
+            11521.810547,
+            179.350185,
+            15579.264648
+        ],
+        "positionGeo": {
+            "latitude": 13.590338,
+            "longitude": 144.940496
+        },
+        "sceneObjects": [
+            "t:63275332"
+        ]
+    },
+    {
+        "beaconId": "airfield6_4",
+        "callsign": "IAND",
+        "direction": -114.010146,
+        "display_name": "",
+        "frequency": 109300000.0,
+        "position": [
+            10474.082031,
+            162.781687,
+            13216.631836
+        ],
+        "positionGeo": {
+            "latitude": 13.580689,
+            "longitude": 144.918753
+        },
+        "sceneObjects": [
+            "t:63243099"
+        ]
+    },
+    {
+        "beaconId": "airfield6_5",
+        "callsign": "IUAM",
+        "chartOffsetX": 4109.0,
+        "direction": -113.620825,
+        "display_name": "",
+        "frequency": 110100000.0,
+        "position": [
+            11405.985352,
+            183.124176,
+            16448.888672
+        ],
+        "positionGeo": {
+            "latitude": 13.589357,
+            "longitude": 144.948539
+        },
+        "sceneObjects": [
+            "t:209125376"
+        ]
+    },
+    {
+        "beaconId": "airfield6_6",
+        "callsign": "IAND",
+        "chartOffsetX": 3872.0,
+        "direction": -113.630831,
+        "display_name": "",
+        "frequency": 109300000.0,
+        "position": [
+            11862.963303,
+            191.000298,
+            16134.421092
+        ],
+        "positionGeo": {
+            "latitude": 13.593463,
+            "longitude": 144.945598
+        },
+        "sceneObjects": [
+            "t:209125377"
+        ]
+    },
+    {
+        "beaconId": "airfield6_7",
+        "callsign": "IYIG",
+        "chartOffsetX": 3987.0,
+        "direction": 66.348484,
+        "display_name": "",
+        "frequency": 109350000.0,
+        "position": [
+            10254.586245,
+            163.673534,
+            12456.810317
+        ],
+        "positionGeo": {
+            "latitude": 13.578646,
+            "longitude": 144.911752
+        },
+        "sceneObjects": [
+            "t:209125378"
+        ]
+    },
+    {
+        "beaconId": "airfield6_8",
+        "callsign": "IPMY",
+        "chartOffsetX": 4138.0,
+        "direction": 66.373456,
+        "display_name": "",
+        "frequency": 110150000.0,
+        "position": [
+            9716.791016,
+            171.495045,
+            12586.375977
+        ],
+        "positionGeo": {
+            "latitude": 13.573797,
+            "longitude": 144.912991
+        },
+        "sceneObjects": [
+            "t:209125379"
+        ]
+    },
+    {
+        "beaconId": "airfield4_0",
+        "callsign": "IGUM",
+        "chartOffsetX": 4105.0,
+        "direction": -114.591552,
+        "display_name": "",
+        "frequency": 110300000.0,
+        "position": [
+            872.144714,
+            94.243914,
+            1873.931763
+        ],
+        "positionGeo": {
+            "latitude": 13.493032,
+            "longitude": 144.814772
+        },
+        "sceneObjects": [
+            "t:209158144"
+        ]
+    },
+    {
+        "beaconId": "airfield4_1",
+        "callsign": "PGUM",
+        "direction": -114.082259,
+        "display_name": "",
+        "frequency": 110300000.0,
+        "position": [
+            -366.423035,
+            77.792078,
+            -1274.609497
+        ],
+        "positionGeo": {
+            "latitude": 13.481585,
+            "longitude": 144.785804
+        },
+        "sceneObjects": [
+            "t:61866199"
+        ]
+    },
+    {
+        "beaconId": "airfield4_2",
+        "callsign": "IAWD",
+        "chartOffsetX": 3501.0,
+        "direction": -114.591552,
+        "display_name": "",
+        "frequency": 110900000.0,
+        "position": [
+            549.03418,
+            79.179538,
+            1685.082764
+        ],
+        "positionGeo": {
+            "latitude": 13.490097,
+            "longitude": 144.813055
+        },
+        "sceneObjects": [
+            "t:209158145"
+        ]
+    },
+    {
+        "beaconId": "airfield4_3",
+        "callsign": "PGUM",
+        "direction": -114.591552,
+        "display_name": "",
+        "frequency": 110900000.0,
+        "position": [
+            -631.026611,
+            77.792078,
+            -1149.327148
+        ],
+        "positionGeo": {
+            "latitude": 13.479205,
+            "longitude": 144.786982
+        },
+        "sceneObjects": [
+            "t:61866008"
+        ]
+    },
+    {
+        "beaconId": "airfield1_0",
+        "callsign": "GRO",
+        "direction": 93.71043,
+        "display_name": "ROTA",
+        "frequency": 332000.0,
+        "position": [
+            75584.387208,
+            173.311117,
+            48455.189908
+        ],
+        "positionGeo": {
+            "latitude": 14.171648,
+            "longitude": 145.239866
+        },
+        "sceneObjects": [
+            "t:1441814"
+        ]
+    },
+    {
+        "beaconId": "airfield2_0",
+        "callsign": "IGSN",
+        "chartOffsetX": 3013.0,
+        "direction": -111.80319,
+        "display_name": "",
+        "frequency": 109900000.0,
+        "position": [
+            180642.546875,
+            64.185947,
+            103385.359375
+        ],
+        "positionGeo": {
+            "latitude": 15.124498,
+            "longitude": 145.743327
+        },
+        "sceneObjects": [
+            "t:209190913"
+        ]
+    },
+    {
+        "beaconId": "airfield2_1",
+        "callsign": "PGSN",
+        "chartOffsetX": 3013.0,
+        "direction": -113.840375,
+        "display_name": "",
+        "frequency": 109900000.0,
+        "position": [
+            179748.296875,
+            65.000065,
+            100905.421875
+        ],
+        "positionGeo": {
+            "latitude": 15.116286,
+            "longitude": 145.7203
+        },
+        "sceneObjects": [
+            "t:209190912"
+        ]
+    }
+]

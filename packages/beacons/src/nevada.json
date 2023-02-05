@@ -1,0 +1,895 @@
+[
+    {
+        "beaconId": "airfield1_0",
+        "callsign": "ICRR",
+        "channel": 24,
+        "direction": -88.617531,
+        "display_name": "Creech",
+        "frequency": 108700000.0,
+        "position": [
+            -360394.21875,
+            952.944679,
+            -76976.257813
+        ],
+        "positionGeo": {
+            "latitude": 36.585008,
+            "longitude": -115.691917
+        },
+        "sceneObjects": [
+            "t:85164032"
+        ]
+    },
+    {
+        "beaconId": "airfield1_1",
+        "callsign": "ICRR",
+        "channel": 24,
+        "chartOffsetX": 3370.0,
+        "direction": -88.457008,
+        "display_name": "Creech",
+        "frequency": 108700000.0,
+        "position": [
+            -360542.96875,
+            951.059301,
+            -74232.171875
+        ],
+        "positionGeo": {
+            "latitude": 36.583327,
+            "longitude": -115.661273
+        },
+        "sceneObjects": [
+            "t:43451422"
+        ]
+    },
+    {
+        "beaconId": "airfield1_2",
+        "callsign": "ICRS",
+        "channel": 22,
+        "chartOffsetX": 1912.0,
+        "direction": -34.860002,
+        "display_name": "Creech",
+        "frequency": 108500000.0,
+        "position": [
+            -360622.4375,
+            952.943336,
+            -74673.570313
+        ],
+        "positionGeo": {
+            "latitude": 36.582666,
+            "longitude": -115.666218
+        },
+        "sceneObjects": [
+            "t:43451423"
+        ]
+    },
+    {
+        "beaconId": "airfield1_3",
+        "callsign": "ICRS",
+        "channel": 22,
+        "direction": -35.35967,
+        "display_name": "Creech",
+        "frequency": 108500000.0,
+        "position": [
+            -359425.09375,
+            952.943397,
+            -75627.359375
+        ],
+        "positionGeo": {
+            "latitude": 36.593576,
+            "longitude": -115.676693
+        },
+        "sceneObjects": [
+            "t:85196813"
+        ]
+    },
+    {
+        "beaconId": "airfield1_4",
+        "callsign": "INS",
+        "channel": 87,
+        "direction": -88.835728,
+        "display_name": "Creech",
+        "position": [
+            -360368.5625,
+            952.943458,
+            -75045.421875
+        ],
+        "positionGeo": {
+            "latitude": 36.585001,
+            "longitude": -115.670334
+        },
+        "sceneObjects": [
+            "t:43614213"
+        ]
+    },
+    {
+        "beaconId": "airfield2_0",
+        "callsign": "GLRI",
+        "channel": 30,
+        "chartOffsetX": 4269.0,
+        "direction": 156.426878,
+        "display_name": "Groom-Lake",
+        "frequency": 109300000.0,
+        "position": [
+            -286660.59375,
+            1357.831924,
+            -87720.34375
+        ],
+        "positionGeo": {
+            "latitude": 37.250797,
+            "longitude": -115.801637
+        },
+        "sceneObjects": [
+            "t:46661634"
+        ]
+    },
+    {
+        "beaconId": "airfield2_1",
+        "callsign": "GLRI",
+        "channel": 30,
+        "direction": 156.426864,
+        "display_name": "Groom-Lake",
+        "frequency": 109300000.0,
+        "position": [
+            -290061.15625,
+            1369.163234,
+            -86409.328125
+        ],
+        "positionGeo": {
+            "latitude": 37.22,
+            "longitude": -115.787349
+        },
+        "sceneObjects": [
+            "t:96927881"
+        ]
+    },
+    {
+        "beaconId": "airfield2_2",
+        "callsign": "GRL",
+        "channel": 18,
+        "direction": -23.573122,
+        "display_name": "Groom-Lake",
+        "position": [
+            -288771.78125,
+            1363.947653,
+            -87782.398438
+        ],
+        "positionGeo": {
+            "latitude": 37.231778,
+            "longitude": -115.802638
+        },
+        "sceneObjects": [
+            "t:46432495"
+        ]
+    },
+    {
+        "beaconId": "airfield3_0",
+        "callsign": "I-RLE",
+        "direction": 89.34565,
+        "display_name": "McCarran-International",
+        "frequency": 111750000.0,
+        "position": [
+            -416373.15625,
+            631.500204,
+            -25578.058594
+        ],
+        "positionGeo": {
+            "latitude": 36.072917,
+            "longitude": -115.12971
+        },
+        "sceneObjects": [
+            "t:68454835"
+        ]
+    },
+    {
+        "beaconId": "airfield3_1",
+        "callsign": "I-LAS",
+        "channel": 40,
+        "direction": 89.34565,
+        "display_name": "McCarran-International",
+        "frequency": 110300000.0,
+        "position": [
+            -416071.34375,
+            634.169579,
+            -25586.15625
+        ],
+        "positionGeo": {
+            "latitude": 36.075638,
+            "longitude": -115.129735
+        },
+        "sceneObjects": [
+            "t:68454836"
+        ]
+    },
+    {
+        "beaconId": "airfield3_2",
+        "callsign": "I-RLE",
+        "chartOffsetX": 3623.0,
+        "direction": 88.846008,
+        "display_name": "McCarran-International",
+        "frequency": 111750000.0,
+        "position": [
+            -416353.0,
+            662.86132,
+            -28740.046875
+        ],
+        "positionGeo": {
+            "latitude": 36.073641,
+            "longitude": -115.164803
+        },
+        "sceneObjects": [
+            "t:35425610"
+        ]
+    },
+    {
+        "beaconId": "airfield3_3",
+        "callsign": "I-LAS",
+        "channel": 40,
+        "chartOffsetX": 4696.0,
+        "direction": 88.846008,
+        "display_name": "McCarran-International",
+        "frequency": 110300000.0,
+        "position": [
+            -416063.5,
+            664.091545,
+            -29393.269531
+        ],
+        "positionGeo": {
+            "latitude": 36.076361,
+            "longitude": -115.171993
+        },
+        "sceneObjects": [
+            "t:35425611"
+        ]
+    },
+    {
+        "beaconId": "airfield3_4",
+        "callsign": "LAS",
+        "channel": 116,
+        "direction": -179.199384,
+        "display_name": "McCarran-International",
+        "frequency": 116900000.0,
+        "position": [
+            -415686.09375,
+            657.922167,
+            -28303.363281
+        ],
+        "positionGeo": {
+            "latitude": 36.079576,
+            "longitude": -115.159816
+        },
+        "sceneObjects": [
+            "t:69208390"
+        ]
+    },
+    {
+        "beaconId": "airfield4_0",
+        "callsign": "IDIQ",
+        "direction": 40.016713,
+        "display_name": "Nellis",
+        "frequency": 109100000.0,
+        "position": [
+            -397384.6875,
+            563.598708,
+            -16357.164063
+        ],
+        "positionGeo": {
+            "latitude": 36.242368,
+            "longitude": -115.023073
+        },
+        "sceneObjects": [
+            "t:76480576"
+        ]
+    },
+    {
+        "beaconId": "airfield4_1",
+        "callsign": "LSV",
+        "channel": 12,
+        "direction": -141.002194,
+        "display_name": "Nellis",
+        "position": [
+            -397135.9375,
+            564.647598,
+            -16545.675781
+        ],
+        "positionGeo": {
+            "latitude": 36.244644,
+            "longitude": -115.025113
+        },
+        "sceneObjects": [
+            "t:41518947"
+        ]
+    },
+    {
+        "beaconId": "airfield4_2",
+        "callsign": "IDIQ",
+        "chartOffsetX": 3753.0,
+        "direction": 40.110013,
+        "display_name": "Nellis",
+        "frequency": 109100000.0,
+        "position": [
+            -399661.15625,
+            559.453379,
+            -18468.027344
+        ],
+        "positionGeo": {
+            "latitude": 36.222242,
+            "longitude": -115.047062
+        },
+        "sceneObjects": [
+            "t:40538038"
+        ]
+    },
+    {
+        "beaconId": "airfield15_0",
+        "callsign": "I-HWG",
+        "chartOffsetX": 1420.0,
+        "direction": -46.742991,
+        "display_name": "North-Las-Vegas",
+        "frequency": 110700000.0,
+        "position": [
+            -401983.125,
+            680.161752,
+            -30840.599609
+        ],
+        "positionGeo": {
+            "latitude": 36.203486,
+            "longitude": -115.185139
+        },
+        "sceneObjects": [
+            "t:39029306"
+        ]
+    },
+    {
+        "beaconId": "airfield15_1",
+        "callsign": "I-HWG",
+        "direction": -46.552826,
+        "display_name": "North-Las-Vegas",
+        "frequency": 110700000.0,
+        "position": [
+            -401152.40625,
+            679.279671,
+            -31581.777344
+        ],
+        "positionGeo": {
+            "latitude": 36.211096,
+            "longitude": -115.193207
+        },
+        "sceneObjects": [
+            "t:75498833"
+        ]
+    },
+    {
+        "beaconId": "airfield18_0",
+        "callsign": "I-RVP",
+        "chartOffsetX": 4585.0,
+        "direction": -22.918,
+        "display_name": "Tonopah-Test-Range",
+        "frequency": 108300000.0,
+        "position": [
+            -228754.375,
+            1686.814187,
+            -173747.390625
+        ],
+        "positionGeo": {
+            "latitude": 37.778583,
+            "longitude": -116.770052
+        },
+        "sceneObjects": [
+            "t:48037928"
+        ]
+    },
+    {
+        "beaconId": "airfield18_1",
+        "callsign": "I-UVV",
+        "chartOffsetX": 4330.0,
+        "direction": 157.100006,
+        "display_name": "Tonopah-Test-Range",
+        "frequency": 111700000.0,
+        "position": [
+            -224471.734375,
+            1686.831765,
+            -175559.625
+        ],
+        "positionGeo": {
+            "latitude": 37.817221,
+            "longitude": -116.790522
+        },
+        "sceneObjects": [
+            "t:48103431"
+        ]
+    },
+    {
+        "beaconId": "airfield18_2",
+        "callsign": "I-UVV",
+        "direction": 157.226653,
+        "display_name": "Tonopah-Test-Range",
+        "frequency": 111700000.0,
+        "position": [
+            -228097.671875,
+            1686.814187,
+            -174188.0
+        ],
+        "positionGeo": {
+            "latitude": 37.784512,
+            "longitude": -116.775037
+        },
+        "sceneObjects": [
+            "t:104726551"
+        ]
+    },
+    {
+        "beaconId": "airfield18_3",
+        "callsign": "I-RVP",
+        "direction": -23.276421,
+        "display_name": "Tonopah-Test-Range",
+        "frequency": 108300000.0,
+        "position": [
+            -225076.921875,
+            1686.67759,
+            -175461.53125
+        ],
+        "positionGeo": {
+            "latitude": 37.811765,
+            "longitude": -116.789423
+        },
+        "sceneObjects": [
+            "t:105250849"
+        ]
+    },
+    {
+        "beaconId": "airfield18_4",
+        "callsign": "TQQ",
+        "channel": 77,
+        "direction": -24.171672,
+        "display_name": "Silverbow",
+        "frequency": 113000000.0,
+        "position": [
+            -227436.90625,
+            1689.105083,
+            -174559.0
+        ],
+        "positionGeo": {
+            "latitude": 37.790475,
+            "longitude": -116.779233
+        },
+        "sceneObjects": [
+            "t:104726560"
+        ]
+    },
+    {
+        "beaconId": "world_0",
+        "callsign": "UTI",
+        "channel": 23,
+        "direction": 0.0,
+        "display_name": "StGeorge",
+        "frequency": 108600000.0,
+        "position": [
+            -299933.84375,
+            874.956686,
+            108917.28125
+        ],
+        "positionGeo": {
+            "latitude": 37.088212,
+            "longitude": -113.592167
+        },
+        "sceneObjects": [
+            "t:94374515"
+        ]
+    },
+    {
+        "beaconId": "world_1",
+        "callsign": "GCN",
+        "channel": 78,
+        "direction": 0.0,
+        "display_name": "GrandCanyon",
+        "frequency": 113100000.0,
+        "position": [
+            -419559.71875,
+            2024.336253,
+            243873.65625
+        ],
+        "positionGeo": {
+            "latitude": 35.960444,
+            "longitude": -112.145901
+        },
+        "sceneObjects": [
+            "t:67960832"
+        ]
+    },
+    {
+        "beaconId": "world_2",
+        "callsign": "IGM",
+        "channel": 25,
+        "direction": 0.0,
+        "display_name": "Kingman",
+        "frequency": 108800000.0,
+        "position": [
+            -503781.59375,
+            1039.00934,
+            84923.976563
+        ],
+        "positionGeo": {
+            "latitude": 35.260535,
+            "longitude": -113.93413
+        },
+        "sceneObjects": [
+            "t:59342848"
+        ]
+    },
+    {
+        "beaconId": "world_3",
+        "callsign": "AZC",
+        "direction": 0.0,
+        "display_name": "ColoradoCity",
+        "frequency": 403000.0,
+        "position": [
+            -312156.03125,
+            1481.302018,
+            161375.6875
+        ],
+        "positionGeo": {
+            "latitude": 36.959895,
+            "longitude": -113.008973
+        },
+        "sceneObjects": [
+            "t:9076736"
+        ]
+    },
+    {
+        "beaconId": "world_4",
+        "callsign": "EC",
+        "direction": 0.0,
+        "display_name": "Meggi",
+        "frequency": 217000.0,
+        "position": [
+            -219910.453125,
+            1680.801608,
+            156418.015625
+        ],
+        "positionGeo": {
+            "latitude": 37.791252,
+            "longitude": -113.020879
+        },
+        "sceneObjects": [
+            "t:10846208"
+        ]
+    },
+    {
+        "beaconId": "world_5",
+        "callsign": "DAG",
+        "channel": 79,
+        "direction": 0.0,
+        "display_name": "Daggett",
+        "frequency": 113200000.0,
+        "position": [
+            -541075.1875,
+            538.428761,
+            -155482.53125
+        ],
+        "positionGeo": {
+            "latitude": 34.962384,
+            "longitude": -116.578128
+        },
+        "sceneObjects": [
+            "t:55246848"
+        ]
+    },
+    {
+        "beaconId": "world_6",
+        "callsign": "HEC",
+        "channel": 74,
+        "direction": 0.0,
+        "display_name": "Hector",
+        "frequency": 112700000.0,
+        "position": [
+            -559341.375,
+            565.24141,
+            -144867.3125
+        ],
+        "positionGeo": {
+            "latitude": 34.797214,
+            "longitude": -116.462929
+        },
+        "sceneObjects": [
+            "t:52232192"
+        ]
+    },
+    {
+        "beaconId": "world_7",
+        "callsign": "EED",
+        "channel": 99,
+        "direction": 0.0,
+        "display_name": "Needles",
+        "frequency": 115200000.0,
+        "position": [
+            -560035.0,
+            198.369263,
+            37194.679688
+        ],
+        "positionGeo": {
+            "latitude": 34.765927,
+            "longitude": -114.473902
+        },
+        "sceneObjects": [
+            "t:52461568"
+        ]
+    },
+    {
+        "beaconId": "world_8",
+        "callsign": "MLF",
+        "channel": 58,
+        "direction": -141.002194,
+        "display_name": "Milford",
+        "frequency": 112100000.0,
+        "position": [
+            -156700.828125,
+            1517.31829,
+            154376.0625
+        ],
+        "positionGeo": {
+            "latitude": 38.360356,
+            "longitude": -113.013233
+        },
+        "sceneObjects": [
+            "t:110788608"
+        ]
+    },
+    {
+        "beaconId": "world_9",
+        "callsign": "GFS",
+        "channel": 91,
+        "direction": -141.002194,
+        "display_name": "GOFFS",
+        "frequency": 114400000.0,
+        "position": [
+            -520917.28125,
+            1224.939335,
+            -27855.832031
+        ],
+        "positionGeo": {
+            "latitude": 35.131167,
+            "longitude": -115.1765
+        },
+        "sceneObjects": [
+            "t:57606144"
+        ]
+    },
+    {
+        "beaconId": "world_10",
+        "callsign": "TPH",
+        "channel": 119,
+        "direction": -141.002194,
+        "display_name": "Tonopah",
+        "frequency": 117200000.0,
+        "position": [
+            -200809.96875,
+            1631.569136,
+            -196936.796875
+        ],
+        "positionGeo": {
+            "latitude": 38.030667,
+            "longitude": -117.0335
+        },
+        "sceneObjects": [
+            "t:108527616"
+        ]
+    },
+    {
+        "beaconId": "world_11",
+        "callsign": "MVA",
+        "channel": 98,
+        "direction": -141.002194,
+        "display_name": "Mina",
+        "frequency": 115100000.0,
+        "position": [
+            -140979.484375,
+            2342.236961,
+            -283977.375
+        ],
+        "positionGeo": {
+            "latitude": 38.565333,
+            "longitude": -118.032833
+        },
+        "sceneObjects": [
+            "t:111411200"
+        ]
+    },
+    {
+        "beaconId": "world_12",
+        "callsign": "ILC",
+        "channel": 110,
+        "direction": -141.002194,
+        "display_name": "WilsonCreek",
+        "frequency": 116300000.0,
+        "position": [
+            -173244.484375,
+            2778.903658,
+            34027.542969
+        ],
+        "positionGeo": {
+            "latitude": 38.250167,
+            "longitude": -114.394167
+        },
+        "sceneObjects": [
+            "t:110067712"
+        ]
+    },
+    {
+        "beaconId": "world_13",
+        "callsign": "CDC",
+        "channel": 120,
+        "direction": -141.002194,
+        "display_name": "CedarCity",
+        "frequency": 117300000.0,
+        "position": [
+            -220522.046875,
+            1664.931475,
+            152270.421875
+        ],
+        "positionGeo": {
+            "latitude": 37.787333,
+            "longitude": -113.068167
+        },
+        "sceneObjects": [
+            "t:106201088"
+        ]
+    },
+    {
+        "beaconId": "world_14",
+        "callsign": "BCE",
+        "channel": 75,
+        "direction": -141.002194,
+        "display_name": "BryceCanyon",
+        "frequency": 112800000.0,
+        "position": [
+            -228309.53125,
+            2711.394069,
+            220166.203125
+        ],
+        "positionGeo": {
+            "latitude": 37.689167,
+            "longitude": -112.303833
+        },
+        "sceneObjects": [
+            "t:104824832"
+        ]
+    },
+    {
+        "beaconId": "world_15",
+        "callsign": "MMM",
+        "channel": 90,
+        "direction": -141.002194,
+        "display_name": "MormonMesa",
+        "frequency": 114300000.0,
+        "position": [
+            -337286.5625,
+            641.303376,
+            48996.441406
+        ],
+        "positionGeo": {
+            "latitude": 36.769333,
+            "longitude": -114.2775
+        },
+        "sceneObjects": [
+            "t:88801284"
+        ]
+    },
+    {
+        "beaconId": "world_16",
+        "callsign": "BTY",
+        "channel": 94,
+        "direction": -141.002194,
+        "display_name": "Beatty",
+        "frequency": 114700000.0,
+        "position": [
+            -337247.5625,
+            890.306066,
+            -171484.9375
+        ],
+        "positionGeo": {
+            "latitude": 36.800583,
+            "longitude": -116.747647
+        },
+        "sceneObjects": [
+            "t:88080384"
+        ]
+    },
+    {
+        "beaconId": "world_17",
+        "callsign": "BIH",
+        "channel": 33,
+        "direction": -141.002194,
+        "display_name": "Bishop",
+        "frequency": 109600000.0,
+        "position": [
+            -272456.59375,
+            1254.3931,
+            -314982.75
+        ],
+        "positionGeo": {
+            "latitude": 37.377,
+            "longitude": -118.3665
+        },
+        "sceneObjects": [
+            "t:99287040"
+        ]
+    },
+    {
+        "beaconId": "world_18",
+        "callsign": "OAL",
+        "channel": 124,
+        "direction": -141.002194,
+        "display_name": "Coaldale",
+        "frequency": 117700000.0,
+        "position": [
+            -203563.140625,
+            1462.989134,
+            -261642.09375
+        ],
+        "positionGeo": {
+            "latitude": 38.003333,
+            "longitude": -117.7705
+        },
+        "sceneObjects": [
+            "t:108068864"
+        ]
+    },
+    {
+        "beaconId": "world_19",
+        "callsign": "PGS",
+        "channel": 57,
+        "direction": -141.002194,
+        "display_name": "PeachSprings",
+        "frequency": 112000000.0,
+        "position": [
+            -462207.28125,
+            1448.867416,
+            118969.703125
+        ],
+        "positionGeo": {
+            "latitude": 35.624667,
+            "longitude": -113.5445
+        },
+        "sceneObjects": [
+            "t:60784640"
+        ]
+    },
+    {
+        "beaconId": "world_20",
+        "callsign": "BLD",
+        "channel": 114,
+        "direction": 41.253552,
+        "display_name": "BoulderCity",
+        "frequency": 116700000.0,
+        "position": [
+            -424440.15625,
+            1080.228009,
+            -1424.503052
+        ],
+        "positionGeo": {
+            "latitude": 35.995752,
+            "longitude": -114.863607
+        },
+        "sceneObjects": [
+            "t:65438387"
+        ]
+    },
+    {
+        "beaconId": "world_21",
+        "callsign": "MCY",
+        "direction": 0.0,
+        "display_name": "Mercury",
+        "frequency": 326000.0,
+        "position": [
+            -356041.71875,
+            1004.306546,
+            -107048.789063
+        ],
+        "positionGeo": {
+            "latitude": 36.627456,
+            "longitude": -116.027531
+        },
+        "sceneObjects": [
+            "t:8323107"
+        ]
+    }
+]
