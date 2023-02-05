@@ -16,5 +16,9 @@
   "license": "GNU GPL v3.0 Affero",
   "workspaces": [
     "packages/icons"
-  ]
+  ],
+  "dependencies": {
+    "vite": "^4.1.1",
+    "typescript": "^4.9.5"
+  }
 }
