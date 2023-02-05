@@ -1,0 +1,20 @@
+{
+  "name": "dcs-web-editor-mono",
+  "version": "1.0.0",
+  "description": "dcs web editor mono repository",
+  "main": "index.js",
+  "engines": {
+    "node": "^18.12.1",
+    "npm": "^8.19.2"
+  },
+  "scripts": {
+    "build": "npm run build -ws",
+    "test": "jest",
+    "lint": "npm run lint -ws"
+  },
+  "author": "fyyyy",
+  "license": "GNU GPL v3.0 Affero",
+  "workspaces": [
+    "packages/icons"
+  ]
+}
