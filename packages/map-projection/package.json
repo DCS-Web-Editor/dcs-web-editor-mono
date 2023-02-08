@@ -1,0 +1,25 @@
+{
+  "name": "@dcs-web-editor-mono/map-projection",
+  "version": "1.0.0",
+  "description": "coordinate conversion DCS <-> lat, lon",
+  "main": "dist/index.js",
+  "module": "dist/map-projection.mjs",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCS-Web-Editor/dcs-web-editor-mono.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono/issues"
+  },
+  "homepage": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono#readme",
+  "dependencies": {
+    "@types/proj4": "^2.5.2",
+    "proj4": "^2.8.1"
+  }
+}

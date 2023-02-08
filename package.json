@@ -16,7 +16,10 @@
   "license": "GNU GPL v3.0 Affero",
   "workspaces": [
     "packages/icons",
-    "packages/beacons"
+    "packages/beacons",
+    "packages/briefing",
+    "packages/sky-vector",
+    "packages/map-projection"
   ],
   "dependencies": {
     "typescript": "^4.9.5",
