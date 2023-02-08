@@ -1,0 +1,26 @@
+{
+  "name": "@dcs-web-editor-mono/sky-vector",
+  "version": "1.0.0",
+  "description": "skyvector url generator for export",
+  "main": "dist/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCS-Web-Editor/dcs-web-editor-mono.git"
+  },
+  "keywords": [
+    "skyvector",
+    "flight",
+    "plan"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono/issues"
+  },
+  "homepage": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono#readme"
+}
