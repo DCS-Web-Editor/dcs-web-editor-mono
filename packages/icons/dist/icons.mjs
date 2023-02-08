@@ -466,6 +466,7 @@ const g = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAA
   "UH-60L": "P0091000020",
   HL_KORD: mC,
   "MiG-29A": "P0091000024",
+  "MiG-29S": "P0091000024",
   "Coach cargo": "P0091000212",
   "Ural-375 ZU-23 Insurgent": "P0091000205",
   ZTZ96B: MC,
