@@ -1,0 +1,24 @@
+{
+  "name": "@dcs-web-editor-mono/utils",
+  "version": "1.0.0",
+  "description": "util functions",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCS-Web-Editor/dcs-web-editor-mono.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono/issues"
+  },
+  "homepage": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono#readme",
+  "dependencies": {
+    "geolib": "^3.3.3"
+  }
+}

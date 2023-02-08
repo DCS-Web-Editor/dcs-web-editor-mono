@@ -15,6 +15,7 @@
   "author": "fyyyy",
   "license": "GNU GPL v3.0 Affero",
   "workspaces": [
+    "packages/utils",
     "packages/icons",
     "packages/beacons",
     "packages/briefing",
