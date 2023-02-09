@@ -1,4 +1,8 @@
 
+import airdrome_class_1 from "./small/airdrome_class_1.png";
+import airdrome_class_2 from "./small/airdrome_class_2.png";
+import airdrome_class_3 from "./small/airdrome_class_3.png";
+import airdrome_class_0 from "./small/airdrome_class_none.png";
 import P0091000015 from './small/P91000015.png';
 import P0091000024 from './small/P91000024.png';
 import P0091000004 from './small/P91000004.png';
@@ -78,6 +82,10 @@ const getIcon = function geticon(unitType: string) {
 const toExport: any = {
     getIcon,
     icons: {
+        airdrome_class_1,
+        airdrome_class_2,
+        airdrome_class_3,
+        airdrome_class_0,
         P0091000015,
         P0091000024,
         P0091000004,
