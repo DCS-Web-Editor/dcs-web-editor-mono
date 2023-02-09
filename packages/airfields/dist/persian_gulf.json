@@ -1,632 +1,2689 @@
 [
     {
-        "geometry": {
-            "coordinates": [
-                55.021382072783,
-                25.875041761239,
-                5.0000047683716
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -121335.307759,
+            "x": -31505.274308
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Abu Musa Island",
-            "name": "Abu Musa Island",
-            "point": {
-                "x": -31593.10546875,
-                "y": 5.0000047683716,
-                "z": -122493.0546875
+        "fueldepots": [
+            "externalId:110010",
+            "externalId:110011",
+            "externalId:110012",
+            "externalId:110013",
+            "externalId:110014",
+            "externalId:110015",
+            "externalId:110016"
+        ],
+        "code": "OIBA",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/abu_musa_airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Abu Musa Island"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -31343.894531,
+                2.5,
+                -121343.9375
+            ]
+        },
+        "display_name": "Abu Musa Island",
+        "reference_point_geo": {
+            "lon": 55.032918,
+            "lat": 25.875991
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.032808,
+                "lat": 25.877447,
+                "height": 2.5
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield1_0"
+        ],
+        "civilian": false,
+        "id": "abu_musa_airport",
+        "towers": [
+            "externalId:110000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/abu_musa_airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:110001",
+            "externalId:110002",
+            "externalId:110003",
+            "externalId:110004",
+            "externalId:110005",
+            "externalId:110006",
+            "externalId:110007",
+            "externalId:110008",
+            "externalId:110009"
+        ],
+        "runwayName": [
+            "26"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield1_0"
+            }
+        },
+        "runways": {
+            "0": {
+                "start": "08",
+                "id": 1,
+                "name": "08-26",
+                "end": "26"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                56.3703560378,
-                27.203638553985,
-                5.587854385376
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": 14257.968262,
+            "x": 115765.882812
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Bandar Abbas Intl",
-            "name": "Bandar Abbas Intl",
-            "point": {
-                "x": 114214.0546875,
-                "y": 5.587854385376,
-                "z": 13397.94140625
+        "fueldepots": [
+            "externalId:120012",
+            "externalId:120013",
+            "externalId:120014",
+            "externalId:120015",
+            "externalId:120016",
+            "externalId:120017",
+            "externalId:120018",
+            "externalId:120019"
+        ],
+        "code": "OIKB",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Bandar_Abbas_airfield.rn4",
+        "class": "1",
+        "names": {
+            "en": "Bandar Abbas Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                115325.359375,
+                6.222656,
+                14412.21582
+            ]
+        },
+        "display_name": "Bandar Abbas Intl",
+        "reference_point_geo": {
+            "lon": 56.378962,
+            "lat": 27.217687
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 56.380541,
+                "lat": 27.213717,
+                "height": 6.222656
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield2_0"
+        ],
+        "civilian": true,
+        "id": "Bandar_Abbas_airfield",
+        "towers": [
+            "externalId:120000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Bandar_Abbas_airfield.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:120001",
+            "externalId:120002",
+            "externalId:120003",
+            "externalId:120004",
+            "externalId:120005",
+            "externalId:120006",
+            "externalId:120007",
+            "externalId:120008",
+            "externalId:120009",
+            "externalId:120010",
+            "externalId:120011"
+        ],
+        "runwayName": [
+            "21L"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield2_1"
+            },
+            {
+                "runwayName": "3-21",
+                "runwayId": 1,
+                "runwaySide": "21",
+                "beaconId": "airfield2_2"
+            },
+            {
+                "runwayName": "3-21",
+                "runwayId": 1,
+                "runwaySide": "21",
+                "beaconId": "airfield2_3"
+            },
+            {
+                "beaconId": "airfield2_4"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "03R",
+                "id": 1,
+                "name": "03R-21L",
+                "end": "21L"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                54.813116140778,
-                26.530817420578,
-                24.653238296509
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -140987.327942,
+            "x": 41536.408234
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Bandar Lengeh",
-            "name": "Bandar Lengeh",
-            "point": {
-                "x": 41395.73828125,
-                "y": 24.653238296509,
-                "z": -142141.3125
+        "fueldepots": [
+            "externalId:130001",
+            "externalId:130002",
+            "externalId:130003",
+            "externalId:130004",
+            "externalId:130005",
+            "externalId:130006",
+            "externalId:130007",
+            "externalId:130008"
+        ],
+        "code": "OIBL",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Bandar_Lengeh_Airport.rn4",
+        "class": "2",
+        "names": {
+            "en": "Bandar Lengeh"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                41443.699219,
+                12.496565,
+                -140945.734375
+            ]
+        },
+        "display_name": "Bandar Lengeh",
+        "reference_point_geo": {
+            "lon": 54.824667,
+            "lat": 26.532264
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 54.8251,
+                "lat": 26.531434,
+                "height": 12.496565
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield3_0"
+        ],
+        "civilian": false,
+        "id": "Bandar_Lengeh_Airport",
+        "towers": [
+            "externalId:130000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Bandar_Lengeh_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:130009",
+            "externalId:130010",
+            "externalId:130011",
+            "externalId:130012",
+            "externalId:130013"
+        ],
+        "runwayName": [
+            "26"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield3_1"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "08",
+                "id": 1,
+                "name": "08-26",
+                "end": "26"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                54.534202504328,
-                24.25792911231,
-                16.000015258789
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -173240.007812,
+            "x": -211027.78125
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Al Dhafra AFB",
-            "name": "Al Dhafra AFB",
-            "point": {
-                "x": -209935.484375,
-                "y": 16.000015258789,
-                "z": -174592.0625
+        "fueldepots": [
+            "externalId:140012",
+            "externalId:140013",
+            "externalId:140014",
+            "externalId:140015",
+            "externalId:140016",
+            "externalId:140017",
+            "externalId:140018",
+            "externalId:140019",
+            "externalId:140020",
+            "externalId:140021",
+            "externalId:140022",
+            "externalId:140023",
+            "externalId:140024",
+            "externalId:140025",
+            "externalId:140026",
+            "externalId:140027",
+            "externalId:140028",
+            "externalId:140029",
+            "externalId:140030",
+            "externalId:140031",
+            "externalId:140032",
+            "externalId:140033",
+            "externalId:140034",
+            "externalId:140035",
+            "externalId:140036",
+            "externalId:140037",
+            "externalId:140038",
+            "externalId:140039",
+            "externalId:140040",
+            "externalId:140041",
+            "externalId:140042"
+        ],
+        "code": "OMAM",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Dhafra_AFB.rn4",
+        "class": "1",
+        "names": {
+            "en": "Al Dhafra AFB"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -212023.875,
+                8,
+                -172742.75
+            ]
+        },
+        "display_name": "Al Dhafra AFB",
+        "reference_point_geo": {
+            "lon": 54.547699,
+            "lat": 24.248288
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 54.552765,
+                "lat": 24.239378,
+                "height": 8
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield4_0"
+        ],
+        "civilian": false,
+        "id": "Dhafra_AFB",
+        "towers": [
+            "externalId:140007"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Dhafra_AFB.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:140000",
+            "externalId:140001",
+            "externalId:140002",
+            "externalId:140003",
+            "externalId:140004",
+            "externalId:140005",
+            "externalId:140006",
+            "externalId:140008",
+            "externalId:140009",
+            "externalId:140010",
+            "externalId:140011",
+            "externalId:140043",
+            "externalId:140044",
+            "externalId:140045",
+            "externalId:140046",
+            "externalId:140047",
+            "externalId:140048",
+            "externalId:140049",
+            "externalId:140050",
+            "externalId:140051",
+            "externalId:140052",
+            "externalId:140053",
+            "externalId:140054",
+            "externalId:140055",
+            "externalId:140056",
+            "externalId:140057",
+            "externalId:140058"
+        ],
+        "runwayName": [
+            "31R",
+            "13R",
+            "31L"
+        ],
+        "beacons": [
+            {
+                "runwayName": "13R-31L",
+                "runwayId": 2,
+                "runwaySide": "31L",
+                "beaconId": "airfield4_1"
+            },
+            {
+                "runwayName": "13L-31R",
+                "runwayId": 1,
+                "runwaySide": "31R",
+                "beaconId": "airfield4_2"
+            },
+            {
+                "runwayName": "13R-31L",
+                "runwayId": 2,
+                "runwaySide": "13R",
+                "beaconId": "airfield4_3"
+            },
+            {
+                "runwayName": "13L-31R",
+                "runwayId": 1,
+                "runwaySide": "13L",
+                "beaconId": "airfield4_4"
+            },
+            {
+                "runwayName": "13R-31L",
+                "runwayId": 2,
+                "runwaySide": "13R",
+                "beaconId": "airfield4_5"
+            },
+            {
+                "runwayName": "13R-31L",
+                "runwayId": 2,
+                "runwaySide": "31L",
+                "beaconId": "airfield4_6"
+            },
+            {
+                "runwayName": "13L-31R",
+                "runwayId": 1,
+                "runwaySide": "31R",
+                "beaconId": "airfield4_7"
+            },
+            {
+                "beaconId": "airfield4_8"
+            }
+        ],
+        "runways": [
+            {
+                "start": "13R",
+                "id": 2,
+                "name": "13R-31L",
+                "end": "31L"
+            }
+        ]
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.379295777402,
-                25.248265300858,
-                5.0000047683716
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -88875.371094,
+            "x": -100594.371094
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Dubai Intl",
-            "name": "Dubai Intl",
-            "point": {
-                "x": -101509.84375,
-                "y": 5.0000047683716,
-                "z": -87472.578125
+        "fueldepots": [
+            "externalId:150001",
+            "externalId:150002",
+            "externalId:150003",
+            "externalId:150004",
+            "externalId:150005",
+            "externalId:150006",
+            "externalId:150007",
+            "externalId:150008",
+            "externalId:150009",
+            "externalId:150010",
+            "externalId:150011",
+            "externalId:150012",
+            "externalId:150013",
+            "externalId:150014",
+            "externalId:150015"
+        ],
+        "code": "OMDB",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Dubai_International_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Dubai Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -101219.921875,
+                2.5,
+                -88308.414062
+            ]
+        },
+        "display_name": "Dubai Intl",
+        "reference_point_geo": {
+            "lon": 55.365261,
+            "lat": 25.256376
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.370964,
+                "lat": 25.250791,
+                "height": 2.5
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield5_0"
+        ],
+        "civilian": true,
+        "id": "Dubai_International_Airport",
+        "towers": [
+            "externalId:150000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Dubai_International_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:150016",
+            "externalId:150017",
+            "externalId:150018",
+            "externalId:150019",
+            "externalId:150020",
+            "externalId:150021",
+            "externalId:150022",
+            "externalId:150023",
+            "externalId:150024",
+            "externalId:150025",
+            "externalId:150026",
+            "externalId:150027",
+            "externalId:150028",
+            "externalId:150029",
+            "externalId:150030",
+            "externalId:150031"
+        ],
+        "runwayName": [
+            "12L",
+            "30L",
+            "12R"
+        ],
+        "beacons": [
+            {
+                "runwayName": "12L-30R",
+                "runwayId": 2,
+                "runwaySide": "12L",
+                "beaconId": "airfield5_1"
+            },
+            {
+                "runwayName": "30L-12R",
+                "runwayId": 1,
+                "runwaySide": "30L",
+                "beaconId": "airfield5_2"
+            },
+            {
+                "runwayName": "30R-12L",
+                "runwayId": 2,
+                "runwaySide": "30R",
+                "beaconId": "airfield5_3"
+            },
+            {
+                "runwayName": "30R-12L",
+                "runwayId": 2,
+                "runwaySide": "30R",
+                "beaconId": "airfield5_4"
+            },
+            {
+                "runwayName": "12L-30R",
+                "runwayId": 2,
+                "runwaySide": "12L",
+                "beaconId": "airfield5_5"
+            },
+            {
+                "runwayName": "30L-12R",
+                "runwayId": 1,
+                "runwaySide": "30L",
+                "beaconId": "airfield5_6"
+            },
+            {
+                "runwayName": "12R-30L",
+                "runwayId": 1,
+                "runwaySide": "12R",
+                "beaconId": "airfield5_7"
+            }
+        ],
+        "runways": [
+            {
+                "start": "30L",
+                "id": 1,
+                "name": "30L-12R",
+                "end": "12R"
+            }
+        ]
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.174919966811,
-                24.888624487709,
-                37.618499755859
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -110068.890625,
+            "x": -140127.671875
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Al Maktoum Intl",
-            "name": "Al Maktoum Intl",
-            "point": {
-                "x": -141081.625,
-                "y": 37.618499755859,
-                "z": -108598.2421875
+        "fueldepots": [
+            "externalId:160000",
+            "externalId:160001",
+            "externalId:160002",
+            "externalId:160003",
+            "externalId:160004",
+            "externalId:160005",
+            "externalId:160006",
+            "externalId:160007",
+            "externalId:160008",
+            "externalId:160009",
+            "externalId:160010",
+            "externalId:160011",
+            "externalId:160012",
+            "externalId:160013",
+            "externalId:160014",
+            "externalId:160015",
+            "externalId:160016",
+            "externalId:160017",
+            "externalId:160018",
+            "externalId:160019",
+            "externalId:160020",
+            "externalId:160021"
+        ],
+        "code": "OMDW",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Dubai_World_Central_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Al Maktoum Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -140847.34375,
+                18.809231,
+                -109806.890625
+            ]
+        },
+        "display_name": "Al Maktoum Intl",
+        "reference_point_geo": {
+            "lon": 55.160239,
+            "lat": 24.897057
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.162928,
+                "lat": 24.890592,
+                "height": 18.809231
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield6_0"
+        ],
+        "civilian": true,
+        "id": "Dubai_World_Central_Airport",
+        "towers": [
+            "externalId:160030"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Dubai_World_Central_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:160022",
+            "externalId:160023",
+            "externalId:160024",
+            "externalId:160025",
+            "externalId:160026",
+            "externalId:160027",
+            "externalId:160028",
+            "externalId:160029"
+        ],
+        "runwayName": [
+            "12"
+        ],
+        "beacons": [
+            {
+                "runwayName": "30-12",
+                "runwayId": 1,
+                "runwaySide": "30",
+                "beaconId": "airfield6_1"
+            },
+            {
+                "runwayName": "12-30",
+                "runwayId": 1,
+                "runwaySide": "12",
+                "beaconId": "airfield6_2"
+            },
+            {
+                "runwayName": "30-12",
+                "runwayId": 1,
+                "runwaySide": "30",
+                "beaconId": "airfield6_3"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "30",
+                "id": 1,
+                "name": "30-12",
+                "end": "12"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                56.340423943738,
-                25.105735807567,
-                18.52036857605
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": 7939.275818,
+            "x": -117531.972946
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Fujairah Intl",
-            "name": "Fujairah Intl",
-            "point": {
-                "x": -118114.78125,
-                "y": 18.52036857605,
-                "z": 9254.498046875
+        "fueldepots": [
+            "externalId:170018",
+            "externalId:170019",
+            "externalId:170020",
+            "externalId:170021",
+            "externalId:170022",
+            "externalId:170023"
+        ],
+        "code": "OMFJ",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Fujarirah_AFB.rn4",
+        "class": "1",
+        "names": {
+            "en": "Fujairah Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -117313.140625,
+                21.357582,
+                7717.005859
+            ]
+        },
+        "display_name": "Fujairah Intl",
+        "reference_point_geo": {
+            "lon": 56.327351,
+            "lat": 25.11094
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 56.325136,
+                "lat": 25.112906,
+                "height": 21.357582
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield7_0"
+        ],
+        "civilian": true,
+        "id": "Fujarirah_AFB",
+        "towers": [
+            "externalId:170000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Fujarirah_AFB.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:170001",
+            "externalId:170002",
+            "externalId:170003",
+            "externalId:170004",
+            "externalId:170005",
+            "externalId:170006",
+            "externalId:170007",
+            "externalId:170008",
+            "externalId:170009",
+            "externalId:170010",
+            "externalId:170011",
+            "externalId:170012",
+            "externalId:170013",
+            "externalId:170014",
+            "externalId:170015",
+            "externalId:170016",
+            "externalId:170017"
+        ],
+        "runwayName": [
+            "11"
+        ],
+        "beacons": [
+            {
+                "runwayName": "29-11",
+                "runwayId": 1,
+                "runwaySide": "29",
+                "beaconId": "airfield7_1"
+            },
+            {
+                "runwayName": "29-11",
+                "runwayId": 1,
+                "runwaySide": "29",
+                "beaconId": "airfield7_2"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "29",
+                "id": 1,
+                "name": "29-11",
+                "end": "11"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.311280020098,
-                26.251538702312,
-                13.000012397766
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -92440.328125,
+            "x": 10515.440918
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Tunb Island AFB",
-            "name": "Tunb Island AFB",
-            "point": {
-                "x": 9707.2099609375,
-                "y": 13.000012397766,
-                "z": -92900.5859375
+        "fueldepots": [
+            "externalId:180000",
+            "externalId:180001"
+        ],
+        "code": "OIGI",
+        "runways": {
+            "0": {
+                "start": "03",
+                "id": 1,
+                "name": "03-21",
+                "end": "21"
             }
         },
-        "type": "Feature"
+        "projectors": {},
+        "names": {
+            "en": "Tunb Island AFB"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                10634.341797,
+                6.5,
+                -92524.867188
+            ]
+        },
+        "display_name": "Tunb Island AFB",
+        "reference_point_geo": {
+            "lon": 55.315782,
+            "lat": 26.258888
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.31492,
+                "lat": 26.259951,
+                "height": 6.5
+            }
+        },
+        "civilian": false,
+        "id": "Greater_Tunb_Island_AFB",
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Greater_Tunb_Island_AFB.rn5",
+        "abandoned": false,
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Greater_Tunb_Island_AFB.rn4",
+        "warehouses": [
+            "externalId:180002",
+            "externalId:180003",
+            "externalId:180004"
+        ],
+        "runwayName": [
+            "21"
+        ],
+        "beacons": {},
+        "class": "2"
     },
     {
-        "geometry": {
-            "coordinates": [
-                56.183089447173,
-                27.159927526116,
-                15.475476264954
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -6278.723145,
+            "x": 109297.824219
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Havadarya",
-            "name": "Havadarya",
-            "point": {
-                "x": 109479.28125,
-                "y": 15.475476264954,
-                "z": -5180.5727539062
+        "fueldepots": [
+            "externalId:190001",
+            "externalId:190002",
+            "externalId:190003",
+            "externalId:190004",
+            "externalId:190005",
+            "externalId:190006",
+            "externalId:190007",
+            "externalId:190008",
+            "externalId:190021",
+            "externalId:190022"
+        ],
+        "code": "OIKP",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Havadarya_AFB.rn4",
+        "class": "2",
+        "names": {
+            "en": "Havadarya"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                109403.15625,
+                7.765254,
+                -6274.892578
+            ]
+        },
+        "display_name": "Havadarya",
+        "reference_point_geo": {
+            "lon": 56.172019,
+            "lat": 27.158224
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 56.17205,
+                "lat": 27.159176,
+                "height": 7.765254
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield9_0"
+        ],
+        "civilian": false,
+        "id": "Havadarya_AFB",
+        "towers": [
+            "externalId:190000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Havadarya_AFB.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:190009",
+            "externalId:190010",
+            "externalId:190011",
+            "externalId:190012",
+            "externalId:190013",
+            "externalId:190014",
+            "externalId:190015",
+            "externalId:190016",
+            "externalId:190017",
+            "externalId:190018",
+            "externalId:190019",
+            "externalId:190020"
+        ],
+        "runwayName": [
+            "08"
+        ],
+        "beacons": [
+            {
+                "runwayName": "08-26",
+                "runwayId": 1,
+                "runwaySide": "08",
+                "beaconId": "airfield9_1"
+            },
+            {
+                "runwayName": "08-26",
+                "runwayId": 1,
+                "runwaySide": "08",
+                "beaconId": "airfield9_2"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "26",
+                "id": 1,
+                "name": "26-08",
+                "end": "08"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                56.24317158197,
-                26.179806360704,
-                14.490728378296
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -177.707709,
+            "x": -219.726892
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Khasab",
-            "name": "Khasab",
-            "point": {
-                "x": 883.880859375,
-                "y": 14.490728378296,
-                "z": 128.69967651367
+        "fueldepots": [
+            "externalId:200001",
+            "externalId:200002",
+            "externalId:200003",
+            "externalId:200004",
+            "externalId:200005",
+            "externalId:200006",
+            "externalId:200007"
+        ],
+        "code": "OOKB",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Khasab_AFB.rn4",
+        "class": "1",
+        "names": {
+            "en": "Khasab"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -148.713989,
+                16.140623,
+                -279.37912
+            ]
+        },
+        "display_name": "Khasab",
+        "reference_point_geo": {
+            "lon": 56.24017,
+            "lat": 26.169826
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 56.239149,
+                "lat": 26.170462,
+                "height": 16.140623
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield10_0"
+        ],
+        "civilian": false,
+        "id": "Khasab_AFB",
+        "towers": [
+            "externalId:200000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Khasab_AFB.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:200008",
+            "externalId:200009",
+            "externalId:200010"
+        ],
+        "runwayName": [
+            "01"
+        ],
+        "beacons": [
+            {
+                "runwayName": "19-01",
+                "runwayId": 1,
+                "runwaySide": "19",
+                "beaconId": "airfield10_1"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "19",
+                "id": 1,
+                "name": "19-01",
+                "end": "01"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                54.368317250382,
-                27.674804842122,
-                803.32891845703
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -182359.639734,
+            "x": 168977.578922
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Lar",
-            "name": "Lar",
-            "point": {
-                "x": 169016.75,
-                "y": 803.32891845703,
-                "z": -183822.578125
+        "fueldepots": [
+            "externalId:210005",
+            "externalId:210006",
+            "externalId:210007"
+        ],
+        "code": "OISL",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Lar_airbase.rn4",
+        "class": "1",
+        "names": {
+            "en": "Lar"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                168682.53125,
+                401.664062,
+                -182323.75
+            ]
+        },
+        "display_name": "Lar",
+        "reference_point_geo": {
+            "lon": 54.383145,
+            "lat": 27.674732
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 54.383572,
+                "lat": 27.672078,
+                "height": 401.664062
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield11_0"
+        ],
+        "civilian": false,
+        "id": "Lar_airbase",
+        "towers": [
+            "externalId:210000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Lar_airbase.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:210001",
+            "externalId:210002",
+            "externalId:210003",
+            "externalId:210004"
+        ],
+        "runwayName": [
+            "27"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield11_1"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "09",
+                "id": 1,
+                "name": "09-27",
+                "end": "27"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.383678016973,
-                25.026805920475,
-                58.147457122803
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -89133.46875,
+            "x": -126013.714844
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Al Minhad AFB",
-            "name": "Al Minhad AFB",
-            "point": {
-                "x": -126043.78125,
-                "y": 58.147457122803,
-                "z": -87325.1640625
+        "fueldepots": [
+            "externalId:220007",
+            "externalId:220008",
+            "externalId:220009",
+            "externalId:220010",
+            "externalId:220011",
+            "externalId:220012",
+            "externalId:220013",
+            "externalId:220014",
+            "externalId:220015",
+            "externalId:220016",
+            "externalId:220017"
+        ],
+        "code": "OMDM",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Minhad_AFB.rn4",
+        "class": "1",
+        "names": {
+            "en": "Al Minhad AFB"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -126580.765625,
+                29.450001,
+                -89126.023438
+            ]
+        },
+        "display_name": "Al Minhad AFB",
+        "reference_point_geo": {
+            "lon": 55.365758,
+            "lat": 25.026881
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.365899,
+                "lat": 25.021763,
+                "height": 29.450001
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield12_0"
+        ],
+        "civilian": false,
+        "id": "Minhad_AFB",
+        "towers": [
+            "externalId:220000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Minhad_AFB.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:220001",
+            "externalId:220002",
+            "externalId:220003",
+            "externalId:220004",
+            "externalId:220005",
+            "externalId:220006"
+        ],
+        "runwayName": [
+            "09"
+        ],
+        "beacons": [
+            {
+                "runwayName": "09-27",
+                "runwayId": 1,
+                "runwaySide": "09",
+                "beaconId": "airfield12_1"
+            },
+            {
+                "runwayName": "09-27",
+                "runwayId": 1,
+                "runwaySide": "09",
+                "beaconId": "airfield12_2"
+            },
+            {
+                "runwayName": "27-09",
+                "runwayId": 1,
+                "runwaySide": "27",
+                "beaconId": "airfield12_3"
+            },
+            {
+                "runwayName": "27-09",
+                "runwayId": 1,
+                "runwaySide": "27",
+                "beaconId": "airfield12_4"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "27",
+                "id": 1,
+                "name": "27-09",
+                "end": "09"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.918070160223,
-                26.76633161238,
-                8.0288496017456
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -33383.481445,
+            "x": 64800.714844
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Qeshm Island",
-            "name": "Qeshm Island",
-            "point": {
-                "x": 66079.171875,
-                "y": 8.0288496017456,
-                "z": -31812.6796875
+        "fueldepots": [
+            "externalId:230013",
+            "externalId:230014",
+            "externalId:230015",
+            "externalId:230016",
+            "externalId:230017"
+        ],
+        "code": "OIKQ",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Qeshm_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Qeshm Island"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                64857.015625,
+                4.3515,
+                -33390.410156
+            ]
+        },
+        "display_name": "Qeshm Island",
+        "reference_point_geo": {
+            "lon": 55.902384,
+            "lat": 26.754669
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.90231,
+                "lat": 26.755177,
+                "height": 4.3515
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield13_0"
+        ],
+        "civilian": false,
+        "id": "Qeshm_Airport",
+        "towers": [
+            "externalId:230000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Qeshm_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:230001",
+            "externalId:230002",
+            "externalId:230003",
+            "externalId:230004",
+            "externalId:230005",
+            "externalId:230006",
+            "externalId:230007",
+            "externalId:230008",
+            "externalId:230009",
+            "externalId:230010",
+            "externalId:230011",
+            "externalId:230012"
+        ],
+        "runwayName": [
+            "05"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield13_1"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "23",
+                "id": 1,
+                "name": "23-05",
+                "end": "05"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.531388153673,
-                25.322796067752,
-                29.999982833862
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -73373.601562,
+            "x": -92544.089844
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Sharjah Intl",
-            "name": "Sharjah Intl",
-            "point": {
-                "x": -93431.3203125,
-                "y": 29.999982833862,
-                "z": -72062
+        "fueldepots": [
+            "externalId:240001",
+            "externalId:240002",
+            "externalId:240003",
+            "externalId:240004",
+            "externalId:240005",
+            "externalId:240006",
+            "externalId:240007",
+            "externalId:240021",
+            "externalId:240022",
+            "externalId:240023",
+            "externalId:240024"
+        ],
+        "code": "OMSJ",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Sharjah_International_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Sharjah Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -92916.539062,
+                14.999971,
+                -73664.609375
+            ]
+        },
+        "display_name": "Sharjah Intl",
+        "reference_point_geo": {
+            "lon": 55.518263,
+            "lat": 25.330675
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.515413,
+                "lat": 25.327284,
+                "height": 14.999971
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield14_0"
+        ],
+        "civilian": true,
+        "id": "Sharjah_International_Airport",
+        "towers": [
+            "externalId:240000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Sharjah_International_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:240008",
+            "externalId:240009",
+            "externalId:240010",
+            "externalId:240011",
+            "externalId:240012",
+            "externalId:240013",
+            "externalId:240014",
+            "externalId:240015",
+            "externalId:240016",
+            "externalId:240017",
+            "externalId:240018",
+            "externalId:240019",
+            "externalId:240020"
+        ],
+        "runwayName": [
+            "12L",
+            "30L",
+            "12R"
+        ],
+        "beacons": [
+            {
+                "runwayName": "30R-12L",
+                "runwayId": 2,
+                "runwaySide": "30R",
+                "beaconId": "airfield14_1"
+            },
+            {
+                "runwayName": "30R-12L",
+                "runwayId": 2,
+                "runwaySide": "30R",
+                "beaconId": "airfield14_2"
+            },
+            {
+                "runwayName": "30R-12L",
+                "runwayId": 2,
+                "runwaySide": "12L",
+                "beaconId": "airfield14_3"
+            }
+        ],
+        "runways": [
+            {
+                "start": "30L",
+                "id": 1,
+                "name": "30L-12R",
+                "end": "12R"
+            }
+        ]
     },
     {
-        "geometry": {
-            "coordinates": [
-                54.548214653399,
-                25.903343862392,
-                5.4417409896851
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -170745.015625,
+            "x": -26946.104553
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Sirri Island",
-            "name": "Sirri Island",
-            "point": {
-                "x": -27656.474609375,
-                "y": 5.4417409896851,
-                "z": -169860.078125
+        "fueldepots": [
+            "externalId:250001",
+            "externalId:250002"
+        ],
+        "code": "OIBS",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Siri_Island_AFB.rn4",
+        "class": "2",
+        "names": {
+            "en": "Sirri Island"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -27043.5,
+                2.875,
+                -170765.328125
+            ]
+        },
+        "display_name": "Sirri Island",
+        "reference_point_geo": {
+            "lon": 54.539254,
+            "lat": 25.909603
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 54.53907,
+                "lat": 25.908721,
+                "height": 2.875
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield15_0"
+        ],
+        "civilian": false,
+        "id": "Siri_Island_AFB",
+        "towers": [
+            "externalId:250000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Siri_Island_AFB.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:250003",
+            "externalId:250004",
+            "externalId:250005",
+            "externalId:250006",
+            "externalId:250007"
+        ],
+        "runwayName": [
+            "12"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield15_1"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "30",
+                "id": 1,
+                "name": "30-12",
+                "end": "12"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.149352101732,
-                26.243605485601,
-                4.6347489356995
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -109467.078125,
+            "x": 9023.430176
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Tunb Kochak",
-            "name": "Tunb Kochak",
-            "point": {
-                "x": 9049.3994140625,
-                "y": 4.6347489356995,
-                "z": -109088.578125
+        "fueldepots": [
+            "externalId:260000"
+        ],
+        "code": "OITK",
+        "runways": {
+            "0": {
+                "start": "26",
+                "id": 1,
+                "name": "26-08",
+                "end": "08"
             }
         },
-        "type": "Feature"
+        "projectors": {},
+        "names": {
+            "en": "Tunb Kochak"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                9015.283203,
+                2.500157,
+                -109470.523438
+            ]
+        },
+        "display_name": "Tunb Kochak",
+        "reference_point_geo": {
+            "lon": 55.145568,
+            "lat": 26.243322
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.145535,
+                "lat": 26.243248,
+                "height": 2.500157
+            }
+        },
+        "civilian": false,
+        "id": "Tonb_e_Kochak_Airport",
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Tonb_e_Kochak_Airport.rn5",
+        "abandoned": false,
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Tonb_e_Kochak_Airport.rn4",
+        "warehouses": [
+            "externalId:260001",
+            "externalId:260002"
+        ],
+        "runwayName": [
+            "08"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield16_0"
+            }
+        },
+        "class": "2"
     },
     {
-        "geometry": {
-            "coordinates": [
-                54.23693990531,
-                25.216154518016,
-                7.6827998161316
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -202973.078125,
+            "x": -103102.871094
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Sir Abu Nuayr",
-            "name": "Sir Abu Nuayr",
-            "point": {
-                "x": -103189.046875,
-                "y": 7.6827998161316,
-                "z": -202643.03125
+        "code": "OMSN",
+        "runways": {
+            "0": {
+                "start": "28",
+                "id": -1,
+                "name": "28-10",
+                "end": "10"
             }
         },
-        "type": "Feature"
+        "class": "4",
+        "names": {
+            "en": "Sir Abu Nuayr"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -103075.46875,
+                3.75,
+                -202972.25
+            ]
+        },
+        "display_name": "Sir Abu Nuayr",
+        "reference_point_geo": {
+            "lon": 54.23365,
+            "lat": 25.216871
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 54.233652,
+                "lat": 25.217118,
+                "height": 3.75
+            }
+        },
+        "radio": [
+            "airfield17_0"
+        ],
+        "civilian": false,
+        "id": "Sir_Abu_Nuair_ Island_Airport",
+        "towers": [
+            "externalId:270000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Sir_Abu_Nuair_ Island_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "runwayName": [
+            "10"
+        ],
+        "beacons": {},
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Sir_Abu_Nuair_ Island_Airport.rn4"
     },
     {
-        "geometry": {
-            "coordinates": [
-                56.958269051762,
-                30.257695568151,
-                1751.4256591797
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": 71096.085938,
+            "x": 454116.796875
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Kerman",
-            "name": "Kerman",
-            "point": {
-                "x": 452408.40625,
-                "y": 1751.4256591797,
-                "z": 71741.5859375
+        "fueldepots": [
+            "externalId:280000",
+            "externalId:280001",
+            "externalId:280002",
+            "externalId:280003",
+            "externalId:280004",
+            "externalId:280021",
+            "externalId:280022",
+            "externalId:280023",
+            "externalId:280024",
+            "externalId:280025",
+            "externalId:280026"
+        ],
+        "code": "OIKK",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Kerman_AFB.rn4",
+        "class": "1",
+        "names": {
+            "en": "Kerman"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                454378,
+                875.711731,
+                71919.53125
+            ]
+        },
+        "display_name": "Kerman",
+        "reference_point_geo": {
+            "lon": 56.951551,
+            "lat": 30.27311
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 56.960112,
+                "lat": 30.27547,
+                "height": 875.711731
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield18_0"
+        ],
+        "civilian": false,
+        "id": "Kerman_AFB",
+        "towers": [
+            "externalId:280027"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Kerman_AFB.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:280005",
+            "externalId:280006",
+            "externalId:280007",
+            "externalId:280008",
+            "externalId:280009",
+            "externalId:280010",
+            "externalId:280011",
+            "externalId:280012",
+            "externalId:280013",
+            "externalId:280014",
+            "externalId:280015",
+            "externalId:280016",
+            "externalId:280017",
+            "externalId:280018",
+            "externalId:280019",
+            "externalId:280020"
+        ],
+        "runwayName": [
+            "16"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield18_1"
+            },
+            {
+                "beaconId": "airfield18_2"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "34",
+                "id": 1,
+                "name": "34-16",
+                "end": "16"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                52.609894223947,
-                29.533103964275,
-                1487.0014648438
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -351636.515625,
+            "x": 381101.03125
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Shiraz Intl",
-            "name": "Shiraz Intl",
-            "point": {
-                "x": 380165.53125,
-                "y": 1487.0014648438,
-                "z": -349843.03125
+        "fueldepots": [
+            "externalId:290035",
+            "externalId:290036",
+            "externalId:290037",
+            "externalId:290038",
+            "externalId:290039",
+            "externalId:290040",
+            "externalId:290041",
+            "externalId:290042",
+            "externalId:290043",
+            "externalId:290044",
+            "externalId:290045",
+            "externalId:290046",
+            "externalId:290047"
+        ],
+        "code": "OISS",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Shiraz_AFB.rn4",
+        "class": "1",
+        "names": {
+            "en": "Shiraz Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                380916.71875,
+                749.758728,
+                -352131.8125
+            ]
+        },
+        "display_name": "Shiraz Intl",
+        "reference_point_geo": {
+            "lon": 52.591074,
+            "lat": 29.54091
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 52.586049,
+                "lat": 29.539082,
+                "height": 749.758728
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield19_0"
+        ],
+        "civilian": false,
+        "id": "Shiraz_AFB",
+        "towers": [
+            "externalId:290048"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Shiraz_AFB.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:290000",
+            "externalId:290001",
+            "externalId:290002",
+            "externalId:290003",
+            "externalId:290004",
+            "externalId:290005",
+            "externalId:290006",
+            "externalId:290007",
+            "externalId:290008",
+            "externalId:290009",
+            "externalId:290010",
+            "externalId:290011",
+            "externalId:290012",
+            "externalId:290013",
+            "externalId:290014",
+            "externalId:290015",
+            "externalId:290016",
+            "externalId:290017",
+            "externalId:290018",
+            "externalId:290019",
+            "externalId:290020",
+            "externalId:290021",
+            "externalId:290022",
+            "externalId:290023",
+            "externalId:290024",
+            "externalId:290025",
+            "externalId:290026",
+            "externalId:290027",
+            "externalId:290028",
+            "externalId:290029",
+            "externalId:290030",
+            "externalId:290031",
+            "externalId:290032",
+            "externalId:290033",
+            "externalId:290034"
+        ],
+        "runwayName": [
+            "11L",
+            "29L",
+            "11R"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield19_1"
+            },
+            {
+                "beaconId": "airfield19_2"
+            },
+            {
+                "runwayName": "11R-29L",
+                "runwayId": 1,
+                "runwaySide": "29L",
+                "beaconId": "airfield19_3"
+            },
+            {
+                "runwayName": "11R-29L",
+                "runwayId": 1,
+                "runwaySide": "29L",
+                "beaconId": "airfield19_4"
+            }
+        ],
+        "runways": [
+            {
+                "start": "29L",
+                "id": 1,
+                "name": "29L-11R",
+                "end": "11R"
+            }
+        ]
     },
     {
-        "geometry": {
-            "coordinates": [
-                54.514696522843,
-                24.448211362508,
-                2.9453413486481
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -175974.140625,
+            "x": -189610.296875
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Sas Al Nakheel",
-            "name": "Sas Al Nakheel",
-            "point": {
-                "x": -188819.25,
-                "y": 2.9453413486481,
-                "z": -176195.984375
+        "fueldepots": [
+            "externalId:300000",
+            "externalId:300001",
+            "externalId:300002",
+            "externalId:300003",
+            "externalId:300004",
+            "externalId:300005",
+            "externalId:300006",
+            "externalId:300007",
+            "externalId:300008",
+            "externalId:300009",
+            "externalId:300010",
+            "externalId:300011"
+        ],
+        "code": "OMNK",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Sas_Al_Nakheel_Airport.rn4",
+        "class": "2",
+        "names": {
+            "en": "Sas Al Nakheel"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -189655.140625,
+                1.5,
+                -175924.765625
+            ]
+        },
+        "display_name": "Sas Al Nakheel",
+        "reference_point_geo": {
+            "lon": 54.517023,
+            "lat": 24.441109
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 54.517518,
+                "lat": 24.440713,
+                "height": 1.5
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield20_0"
+        ],
+        "civilian": false,
+        "id": "Sas_Al_Nakheel_Airport",
+        "towers": [
+            "externalId:300019"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Sas_Al_Nakheel_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:300012",
+            "externalId:300013",
+            "externalId:300014",
+            "externalId:300015",
+            "externalId:300016",
+            "externalId:300017",
+            "externalId:300018"
+        ],
+        "runwayName": [
+            "34"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield20_0"
+            }
+        },
+        "runways": {
+            "0": {
+                "start": "16",
+                "id": -1,
+                "name": "16-34",
+                "end": "34"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                57.792125537415,
-                25.650484470488,
-                7.9505105018616
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": 156196.507812,
+            "x": -57247.5
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Bandar-e-Jask",
-            "name": "Bandar-e-Jask",
-            "point": {
-                "x": -57716.9375,
-                "y": 7.9505105018616,
-                "z": 155264.78125
+        "fueldepots": [
+            "externalId:310004",
+            "externalId:310005",
+            "externalId:310006",
+            "externalId:310007",
+            "externalId:310008"
+        ],
+        "code": "OIZJ",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Bandar_e_Jask_airfield.rn4",
+        "class": "3",
+        "names": {
+            "en": "Bandar-e-Jask"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -57207.757812,
+                4,
+                156049.3125
+            ]
+        },
+        "display_name": "Bandar-e-Jask",
+        "reference_point_geo": {
+            "lon": 57.801436,
+            "lat": 25.654673
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 57.799972,
+                "lat": 25.655039,
+                "height": 4
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield21_0"
+        ],
+        "civilian": false,
+        "id": "Bandar_e_Jask_airfield",
+        "towers": [
+            "externalId:310009"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Bandar_e_Jask_airfield.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:310000",
+            "externalId:310001",
+            "externalId:310002",
+            "externalId:310003"
+        ],
+        "runwayName": [
+            "24"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield21_1"
+            },
+            {
+                "beaconId": "airfield21_2"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "6",
+                "id": -1,
+                "name": "6-24",
+                "end": "24"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                54.639226001065,
-                24.464722760717,
-                28.000028610229
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -162030.984375,
+            "x": -188457.460938
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Abu Dhabi Intl",
-            "name": "Abu Dhabi Intl",
-            "point": {
-                "x": -187211.25,
-                "y": 28.000028610229,
-                "z": -163535.515625
+        "fueldepots": [
+            "externalId:320001",
+            "externalId:320003",
+            "externalId:320007",
+            "externalId:320009",
+            "externalId:320010",
+            "externalId:320011",
+            "externalId:320013",
+            "externalId:320014",
+            "externalId:320015",
+            "externalId:320019",
+            "externalId:320023",
+            "externalId:320025",
+            "externalId:320027",
+            "externalId:320029",
+            "externalId:320031",
+            "externalId:320033",
+            "externalId:320035",
+            "externalId:320036",
+            "externalId:320037",
+            "externalId:320039",
+            "externalId:320040",
+            "externalId:320058",
+            "externalId:320060",
+            "externalId:320062",
+            "externalId:320063",
+            "externalId:320065",
+            "externalId:320066",
+            "externalId:320068",
+            "externalId:320069",
+            "externalId:320077",
+            "externalId:320080",
+            "externalId:320081",
+            "externalId:320084",
+            "externalId:320085",
+            "externalId:320086",
+            "externalId:320087"
+        ],
+        "code": "OMAA",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Abu_Dhabi_International_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Abu Dhabi Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -189960.671875,
+                14,
+                -162598.875
+            ]
+        },
+        "display_name": "Abu Dhabi Intl",
+        "reference_point_geo": {
+            "lon": 54.654268,
+            "lat": 24.453708
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 54.648921,
+                "lat": 24.440056,
+                "height": 14
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield22_0"
+        ],
+        "civilian": true,
+        "id": "Abu_Dhabi_International_Airport",
+        "towers": [
+            "externalId:320074"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Abu_Dhabi_International_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:320000",
+            "externalId:320002",
+            "externalId:320004",
+            "externalId:320005",
+            "externalId:320006",
+            "externalId:320008",
+            "externalId:320012",
+            "externalId:320016",
+            "externalId:320017",
+            "externalId:320018",
+            "externalId:320020",
+            "externalId:320021",
+            "externalId:320022",
+            "externalId:320024",
+            "externalId:320026",
+            "externalId:320028",
+            "externalId:320030",
+            "externalId:320032",
+            "externalId:320034",
+            "externalId:320038",
+            "externalId:320041",
+            "externalId:320042",
+            "externalId:320043",
+            "externalId:320044",
+            "externalId:320045",
+            "externalId:320046",
+            "externalId:320047",
+            "externalId:320048",
+            "externalId:320049",
+            "externalId:320050",
+            "externalId:320051",
+            "externalId:320052",
+            "externalId:320053",
+            "externalId:320054",
+            "externalId:320055",
+            "externalId:320056",
+            "externalId:320057",
+            "externalId:320059",
+            "externalId:320061",
+            "externalId:320064",
+            "externalId:320067",
+            "externalId:320070",
+            "externalId:320071",
+            "externalId:320072",
+            "externalId:320073",
+            "externalId:320075",
+            "externalId:320076",
+            "externalId:320078",
+            "externalId:320079",
+            "externalId:320082",
+            "externalId:320083",
+            "externalId:320088",
+            "externalId:320089"
+        ],
+        "runwayName": [
+            "31",
+            "31",
+            "13",
+            "13",
+            "31"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield22_1"
+            }
+        ],
+        "runways": [
+            {
+                "start": "31",
+                "id": -1,
+                "name": "31-13",
+                "end": "13"
+            },
+            {
+                "start": "13",
+                "id": -1,
+                "name": "13-31",
+                "end": "31"
+            }
+        ]
     },
     {
-        "geometry": {
-            "coordinates": [
-                54.450706215697,
-                24.434059322946,
-                3.6506268978119
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -181928.271658,
+            "x": -190946.55263
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Al-Bateen",
-            "name": "Al-Bateen",
-            "point": {
-                "x": -190269.109375,
-                "y": 3.6506268978119,
-                "z": -182714.796875
+        "fueldepots": [
+            "externalId:330000",
+            "externalId:330005",
+            "externalId:330006",
+            "externalId:330007",
+            "externalId:330008",
+            "externalId:330009",
+            "externalId:330010"
+        ],
+        "code": "OMAD",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Al_Bateen_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Al-Bateen"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -190770.125,
+                1.825311,
+                -182236.125
+            ]
+        },
+        "display_name": "Al-Bateen",
+        "reference_point_geo": {
+            "lon": 54.45858,
+            "lat": 24.428077
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 54.455514,
+                "lat": 24.429618,
+                "height": 1.825311
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield23_0"
+        ],
+        "civilian": true,
+        "id": "Al_Bateen_Airport",
+        "towers": [
+            "externalId:330011"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Al_Bateen_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:330001",
+            "externalId:330002",
+            "externalId:330003",
+            "externalId:330004"
+        ],
+        "runwayName": [
+            "31"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield23_0"
+            }
+        },
+        "runways": {
+            "0": {
+                "start": "13",
+                "id": -1,
+                "name": "13-31",
+                "end": "31"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                53.964909162786,
-                26.529651099908,
-                35.000034332275
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -225094.046875,
+            "x": 42784.291016
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Kish Intl",
-            "name": "Kish Intl",
-            "point": {
-                "x": 42988.859375,
-                "y": 35.000034332275,
-                "z": -226699.40625
+        "fueldepots": [
+            "externalId:340004",
+            "externalId:340005",
+            "externalId:340006",
+            "externalId:340007",
+            "externalId:340008",
+            "externalId:340009"
+        ],
+        "code": "OIBK",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Kish_International_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Kish Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                42621.933594,
+                17.5,
+                -225119.59375
+            ]
+        },
+        "display_name": "Kish Intl",
+        "reference_point_geo": {
+            "lon": 53.981049,
+            "lat": 26.528148
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 53.980831,
+                "lat": 26.526679,
+                "height": 17.5
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield24_0"
+        ],
+        "civilian": true,
+        "id": "Kish_International_Airport",
+        "towers": [
+            "externalId:340010"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Kish_International_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:340000",
+            "externalId:340001",
+            "externalId:340002",
+            "externalId:340003"
+        ],
+        "runwayName": [
+            "28",
+            "10",
+            "28"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield24_1"
+            }
+        ],
+        "runways": [
+            {
+                "start": "10",
+                "id": -1,
+                "name": "10-28",
+                "end": "28"
+            }
+        ]
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.611735832913,
-                24.276767283196,
-                248.0495300293
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -65421.177734,
+            "x": -211058.15625
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Al Ain Intl",
-            "name": "Al Ain Intl",
-            "point": {
-                "x": -209361.96875,
-                "y": 248.0495300293,
-                "z": -65151.40625
+        "fueldepots": [
+            "externalId:350017",
+            "externalId:350018",
+            "externalId:350019",
+            "externalId:350020",
+            "externalId:350021",
+            "externalId:350022",
+            "externalId:350023",
+            "externalId:350024",
+            "externalId:350025",
+            "externalId:350026",
+            "externalId:350027",
+            "externalId:350028",
+            "externalId:350029"
+        ],
+        "code": "OMAL",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Al_Ain_International_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Al Ain Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -211277.40625,
+                124.024635,
+                -65153.5
+            ]
+        },
+        "display_name": "Al Ain Intl",
+        "reference_point_geo": {
+            "lon": 55.609245,
+            "lat": 24.261428
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.611903,
+                "lat": 24.259472,
+                "height": 124.024635
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield25_0"
+        ],
+        "civilian": true,
+        "id": "Al_Ain_International_Airport",
+        "towers": [
+            "externalId:350030"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Al_Ain_International_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:350000",
+            "externalId:350001",
+            "externalId:350002",
+            "externalId:350003",
+            "externalId:350004",
+            "externalId:350005",
+            "externalId:350006",
+            "externalId:350007",
+            "externalId:350008",
+            "externalId:350009",
+            "externalId:350010",
+            "externalId:350011",
+            "externalId:350012",
+            "externalId:350013",
+            "externalId:350014",
+            "externalId:350015",
+            "externalId:350016"
+        ],
+        "runwayName": [
+            "1"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield25_0"
+            }
+        },
+        "runways": {
+            "0": {
+                "start": "19",
+                "id": -1,
+                "name": "19-1",
+                "end": "1"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                53.3416042246,
-                26.815354172873,
-                22.910776138306
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -286801.46313,
+            "x": 75789.741687
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Lavan Island",
-            "name": "Lavan Island",
-            "point": {
-                "x": 76294.1171875,
-                "y": 22.910776138306,
-                "z": -287950.9375
+        "fueldepots": [
+            "externalId:360008",
+            "externalId:360009",
+            "externalId:360010",
+            "externalId:360011",
+            "externalId:360012",
+            "externalId:360013",
+            "externalId:360014"
+        ],
+        "code": "OIBV",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Lavan_Island_Airport.rn4",
+        "class": "2",
+        "names": {
+            "en": "Lavan Island"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                75775.65625,
+                11.5,
+                -286808.625
+            ]
+        },
+        "display_name": "Lavan Island",
+        "reference_point_geo": {
+            "lon": 53.353293,
+            "lat": 26.811108
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 53.353225,
+                "lat": 26.810979,
+                "height": 11.5
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield26_0"
+        ],
+        "civilian": false,
+        "id": "Lavan_Island_Airport",
+        "towers": [
+            "externalId:360000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Lavan_Island_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:360001",
+            "externalId:360002",
+            "externalId:360003",
+            "externalId:360004",
+            "externalId:360005",
+            "externalId:360006",
+            "externalId:360007"
+        ],
+        "runwayName": [
+            "29"
+        ],
+        "beacons": [
+            {
+                "beaconId": "airfield26_1"
+            }
+        ],
+        "runways": {
+            "0": {
+                "start": "11",
+                "id": -1,
+                "name": "11-29",
+                "end": "29"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                57.664118826397,
-                28.731593220974,
-                812.00085449219
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": 141685.262108,
+            "x": 282607.962896
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Jiroft",
-            "name": "Jiroft",
-            "point": {
-                "x": 283496.71875,
-                "y": 812.00085449219,
-                "z": 140608.3125
+        "fueldepots": [
+            "externalId:370007",
+            "externalId:370008",
+            "externalId:370009",
+            "externalId:370010"
+        ],
+        "code": "OIKJ",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Jiroft_airfield.rn4",
+        "class": "2",
+        "names": {
+            "en": "Jiroft"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                282624.6875,
+                406,
+                141698.328125
+            ]
+        },
+        "display_name": "Jiroft",
+        "reference_point_geo": {
+            "lon": 57.675095,
+            "lat": 28.723517
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 57.67523,
+                "lat": 28.723667,
+                "height": 406
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield27_0"
+        ],
+        "civilian": true,
+        "id": "Jiroft_airfield",
+        "towers": [
+            "externalId:370000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Jiroft_airfield.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:370001",
+            "externalId:370002",
+            "externalId:370003",
+            "externalId:370004",
+            "externalId:370005",
+            "externalId:370006",
+            "externalId:370011"
+        ],
+        "runwayName": [
+            "31"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield27_0"
+            }
+        },
+        "runways": {
+            "0": {
+                "start": "13",
+                "id": -1,
+                "name": "13-31",
+                "end": "31"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.941864730965,
-                25.602262321804,
-                21.589021682739
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -30795.647521,
+            "x": -61624.488064
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Ras Al Khaimah Intl",
-            "name": "Ras Al Khaimah Intl",
-            "point": {
-                "x": -62870.8828125,
-                "y": 21.589021682739,
-                "z": -30497.56640625
+        "fueldepots": [
+            "externalId:380002",
+            "externalId:380003",
+            "externalId:380004",
+            "externalId:380005",
+            "externalId:380006",
+            "externalId:380007",
+            "externalId:380008",
+            "externalId:380009",
+            "externalId:380010"
+        ],
+        "code": "OMRK",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Ras_Al_Khaimah_International_Airport.rn4",
+        "class": "1",
+        "names": {
+            "en": "Ras Al Khaimah Intl"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -61808.417969,
+                10.7945,
+                -30659.90625
+            ]
+        },
+        "display_name": "Ras Al Khaimah Intl",
+        "reference_point_geo": {
+            "lon": 55.938797,
+            "lat": 25.613494
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.940164,
+                "lat": 25.611843,
+                "height": 10.7945
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield28_0"
+        ],
+        "civilian": true,
+        "id": "Ras_Al_Khaimah_International_Airport",
+        "towers": [
+            "externalId:380000"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Ras_Al_Khaimah_International_Airport.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:380001",
+            "externalId:380011",
+            "externalId:380012",
+            "externalId:380013"
+        ],
+        "runwayName": [
+            "17"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield28_0"
+            }
+        },
+        "runways": {
+            "0": {
+                "start": "35",
+                "id": -1,
+                "name": "35-17",
+                "end": "17"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                53.812497591899,
-                23.660697450016,
-                121.93011474609
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -248213.578125,
+            "x": -275765.53125
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Liwa AFB",
-            "name": "Liwa AFB",
-            "point": {
-                "x": -274638.75,
-                "y": 121.93011474609,
-                "z": -249407.125
+        "fueldepots": [
+            "externalId:390005",
+            "externalId:390006",
+            "externalId:390007",
+            "externalId:390008",
+            "externalId:390009",
+            "externalId:390010",
+            "externalId:390011",
+            "externalId:390012"
+        ],
+        "code": "OMLW",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Liwa_Airbase.rn4",
+        "class": "1",
+        "names": {
+            "en": "Liwa AFB"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -275998.25,
+                60.965,
+                -248440.078125
+            ]
+        },
+        "display_name": "Liwa AFB",
+        "reference_point_geo": {
+            "lon": 53.824429,
+            "lat": 23.650775
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 53.822263,
+                "lat": 23.648631,
+                "height": 60.965
             }
         },
-        "type": "Feature"
+        "radio": [
+            "airfield29_0"
+        ],
+        "civilian": false,
+        "id": "Liwa_Airbase",
+        "towers": [
+            "externalId:390013"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Liwa_Airbase.rn5",
+        "abandoned": false,
+        "projectors": {},
+        "warehouses": [
+            "externalId:390000",
+            "externalId:390001",
+            "externalId:390002",
+            "externalId:390003",
+            "externalId:390004"
+        ],
+        "runwayName": [
+            "31"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield29_0"
+            }
+        },
+        "runways": {
+            "0": {
+                "start": "13",
+                "id": -1,
+                "name": "13-31",
+                "end": "31"
+            }
+        }
     },
     {
-        "geometry": {
-            "coordinates": [
-                55.077137969517,
-                22.775988239359,
-                100.47110748291
-            ],
-            "type": "Point"
+        "reference_point": {
+            "y": -123072.511719,
+            "x": -374897.296875
         },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Quasoura_airport",
-            "name": "",
-            "point": {
-                "x": -374928.21875,
-                "y": 100.47110748291,
-                "z": -121651.640625
+        "code": "",
+        "runways": {
+            "0": {
+                "start": "27",
+                "id": 1,
+                "name": "27-09",
+                "end": "09"
             }
         },
-        "type": "Feature"
+        "projectors": {},
+        "names": {
+            "en": ""
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                -375140.125,
+                50.235397,
+                -122952.53125
+            ]
+        },
+        "display_name": "",
+        "reference_point_geo": {
+            "lon": 55.0633,
+            "lat": 22.7761
+        },
+        "default_camera_position_geo": {
+            "bearing": 0,
+            "pnt": {
+                "lon": 55.064499,
+                "lat": 22.773922,
+                "height": 50.235397
+            }
+        },
+        "civilian": false,
+        "runwayName": [
+            "09"
+        ],
+        "roadnet5": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Quasoura_airport.rn5",
+        "abandoned": true,
+        "id": "Quasoura_airport",
+        "roadnet": "./Mods/terrains/PersianGulf/AirfieldsTaxiways/Quasoura_airport.rn4",
+        "beacons": {},
+        "class": "1"
     }
 ]

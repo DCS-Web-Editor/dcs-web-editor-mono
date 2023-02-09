@@ -2,8 +2,7 @@
   "name": "@dcs-web-editor-mono/airfields",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/airfields.umd.js",
-  "module": "dist/airfields.mjs",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist/*",
     "tsc": "tsc",

@@ -1,376 +1,820 @@
 [
-    {
-        "geometry": {
-            "coordinates": [
-                -115.68681060569,
-                36.584429875554,
-                952.94458007812
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Creech",
-            "name": "Creech",
-            "point": {
-                "x": -360452.15625,
-                "y": 952.94458007812,
-                "z": -76518.5859375
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+  {
+    "reference_point": {
+      "y": -75590.070313,
+      "x": -360507.203125
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -115.78531067518,
-                37.21913894289,
-                1369.8676757812
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Groom Lake",
-            "name": "Groom Lake",
-            "point": {
-                "x": -290154.40625,
-                "y": 1369.8676757812,
-                "z": -86227.296875
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "code": "KINS",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/Creech.rn4",
+    "projectors": {},
+    "names": {
+      "en": "Creech"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -115.16219006293,
-                36.076670073498,
-                661.37609863281
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "McCarran International",
-            "name": "McCarran International",
-            "point": {
-                "x": -416012.53125,
-                "y": 661.37609863281,
-                "z": -28511.072265625
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -359994.6875,
+        476.476898,
+        -75948.328125
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -115.04380774353,
-                36.225662018016,
-                561.30914306641
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Nellis",
-            "name": "Nellis",
-            "point": {
-                "x": -399275.84375,
-                "y": 561.30914306641,
-                "z": -18183.12109375
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "display_name": "Creech",
+    "radio": [
+      "airfield1_0"
+    ],
+    "civilian": false,
+    "id": "Creech",
+    "towers": [
+      "externalId:110000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/Creech.rn5",
+    "runways": [
+      {
+        "start": "13",
+        "id": 2,
+        "name": "13-31",
+        "end": "31"
+      }
+    ],
+    "runwayName": [
+      "26",
+      "13",
+      "31"
+    ],
+    "class": "3",
+    "beacons": [
+      {
+        "runwayName": "08-26",
+        "runwayId": 1,
+        "runwaySide": "08",
+        "beaconId": "airfield1_1"
+      },
+      {
+        "runwayName": "13-31",
+        "runwayId": 2,
+        "runwaySide": "13",
+        "beaconId": "airfield1_2"
+      },
+      {
+        "runwayName": "13-31",
+        "runwayId": 2,
+        "runwaySide": "13",
+        "beaconId": "airfield1_3"
+      },
+      {
+        "beaconId": "airfield1_4"
+      }
+    ],
+    "abandoned": false
+  },
+  {
+    "reference_point": {
+      "y": -86870.445313,
+      "x": -288604.671875
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -116.78608313042,
-                36.868394298081,
-                967.13366699219
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Beatty",
-            "name": "Beatty",
-            "point": {
-                "x": -329733.625,
-                "y": 967.13366699219,
-                "z": -174930.5625
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "code": "KXTA",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/groom.rn4",
+    "projectors": {},
+    "names": {
+      "en": "Groom Lake"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -114.86055178579,
-                35.943681644578,
-                646.66363525391
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Boulder City",
-            "name": "Boulder City",
-            "point": {
-                "x": -430210.6875,
-                "y": 646.66363525391,
-                "z": -1022.3584594727
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -287256.90625,
+        686.238953,
+        -87914.226563
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -114.46933764146,
-                36.310471394437,
-                472.03369140625
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Echo Bay",
-            "name": "Echo Bay",
-            "point": {
-                "x": -388670.5,
-                "y": 472.03369140625,
-                "z": 33210.671875
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "display_name": "Groom Lake",
+    "radio": [
+      "airfield2_0"
+    ],
+    "civilian": false,
+    "id": "groom",
+    "towers": [
+      "externalId:120000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/groom.rn5",
+    "runways": {
+      "0": {
+        "start": "32",
+        "id": 1,
+        "name": "32-14",
+        "end": "14"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -115.13347108341,
-                35.96746878808,
-                759.43688964844
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Henderson Executive",
-            "name": "Henderson Executive",
-            "point": {
-                "x": -428077.34375,
-                "y": 759.43688964844,
-                "z": -25692.619140625
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "runwayName": [
+      "14"
+    ],
+    "class": "1",
+    "beacons": [
+      {
+        "runwayName": "32-14",
+        "runwayId": 1,
+        "runwaySide": "32",
+        "beaconId": "airfield2_1"
+      },
+      {
+        "beaconId": "airfield2_2"
+      }
+    ],
+    "abandoned": false
+  },
+  {
+    "reference_point": {
+      "y": -26929.336914,
+      "x": -416011.359375
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -115.32570272555,
-                35.773785550964,
-                860.87591552734
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Jean",
-            "name": "Jean",
-            "point": {
-                "x": -449876.78125,
-                "y": 860.87591552734,
-                "z": -42659.71875
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "code": "KLAS",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/LasVegas.rn4",
+    "projectors": {},
+    "names": {
+      "en": "McCarran International"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -114.55986431857,
-                35.165905267476,
-                200.00019836426
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Laughlin",
-            "name": "Laughlin",
-            "point": {
-                "x": -515859.90625,
-                "y": 200.00019836426,
-                "z": 28242.046875
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -414841.5625,
+        332.045441,
+        -27130.964844
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -114.41923699635,
-                37.793389585399,
-                1467.6899414062
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Lincoln County",
-            "name": "Lincoln County",
-            "point": {
-                "x": -223999.078125,
-                "y": 1467.6899414062,
-                "z": 33240.8203125
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "display_name": "McCarran International",
+    "radio": [
+      "airfield3_0"
+    ],
+    "civilian": false,
+    "id": "LasVegas",
+    "towers": [
+      "externalId:130000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/LasVegas.rn5",
+    "runways": [
+      {
+        "start": "7R",
+        "id": 1,
+        "name": "7R-25L",
+        "end": "25L"
+      }
+    ],
+    "runwayName": [
+      "25R",
+      "7R",
+      "25L"
+    ],
+    "class": "2",
+    "beacons": [
+      {
+        "runwayName": "7L-25R",
+        "runwayId": 2,
+        "runwaySide": "25R",
+        "beaconId": "airfield3_1"
+      },
+      {
+        "runwayName": "7R-25L",
+        "runwayId": 1,
+        "runwaySide": "25L",
+        "beaconId": "airfield3_2"
+      },
+      {
+        "runwayName": "7L-25R",
+        "runwayId": 2,
+        "runwaySide": "25R",
+        "beaconId": "airfield3_3"
+      },
+      {
+        "beaconId": "airfield3_4"
+      }
+    ],
+    "abandoned": false
+  },
+  {
+    "reference_point": {
+      "y": -17233.236816,
+      "x": -398195.375
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -114.06033514493,
-                36.827345248734,
-                566.48736572266
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Mesquite",
-            "name": "Mesquite",
-            "point": {
-                "x": -330275,
-                "y": 566.48736572266,
-                "z": 68185.8671875
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "code": "KLSV",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/nellis.rn4",
+    "projectors": {},
+    "names": {
+      "en": "Nellis"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -118.09349931622,
-                38.374546852088,
-                1390.5122070312
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Mina",
-            "name": "Mina",
-            "point": {
-                "x": -162089.078125,
-                "y": 1390.5122070312,
-                "z": -289514.125
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -397566.8125,
+        287.213196,
+        -16839.84375
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -115.18673756618,
-                36.213364566271,
-                679.27984619141
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "North Las Vegas",
-            "name": "North Las Vegas",
-            "point": {
-                "x": -400889.90625,
-                "y": 679.27984619141,
-                "z": -31004.841796875
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "display_name": "Nellis",
+    "radio": [
+      "airfield4_0"
+    ],
+    "civilian": false,
+    "id": "nellis",
+    "towers": [
+      "externalId:140000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/nellis.rn5",
+    "runways": [
+      {
+        "start": "03L",
+        "id": 1,
+        "name": "03L-21R",
+        "end": "21R"
+      }
+    ],
+    "runwayName": [
+      "21L",
+      "03L",
+      "21R"
+    ],
+    "class": "2",
+    "beacons": [
+      {
+        "beaconId": "airfield4_1"
+      },
+      {
+        "runwayName": "03R-21L",
+        "runwayId": 2,
+        "runwaySide": "21L",
+        "beaconId": "airfield4_2"
+      }
+    ],
+    "abandoned": false
+  },
+  {
+    "reference_point": {
+      "y": -174958.53125,
+      "x": -330553.625
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -116.31539962949,
-                37.094831346541,
-                1541.3635253906
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Pahute Mesa",
-            "name": "Pahute Mesa",
-            "point": {
-                "x": -304416.4375,
-                "y": 1541.3635253906,
-                "z": -133159.09375
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "civilian": false,
+    "abandoned": false,
+    "id": "BeattyAirport",
+    "class": "3",
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/BeattyAirport.rn5",
+    "names": {
+      "en": "Beatty"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -117.07591711356,
-                38.058024445654,
-                1644.1396484375
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Tonopah",
-            "name": "Tonopah",
-            "point": {
-                "x": -197772.359375,
-                "y": 1644.1396484375,
-                "z": -200656.875
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -330520.5625,
+        484.146942,
+        -174864.5625
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                -116.77330290767,
-                37.78403952166,
-                1686.8143310547
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Tonopah Test Range",
-            "name": "Tonopah Test Range",
-            "point": {
-                "x": -228149.671875,
-                "y": 1686.8143310547,
-                "z": -174035.171875
-            },
-            "type": "AIRBASE"
-        },
-        "type": "Feature"
-    }
+    "projectors": {},
+    "display_name": "Beatty",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/BeattyAirport.rn4",
+    "runwayName": [
+      "34"
+    ],
+    "runways": {
+      "0": {
+        "start": "16",
+        "id": 1,
+        "name": "16-34",
+        "end": "34"
+      }
+    },
+    "beacons": {},
+    "code": "KBTY"
+  },
+  {
+    "reference_point": {
+      "y": -1148.724518,
+      "x": -429660.09375
+    },
+    "code": "KBVU",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/BoulderCityAirport.rn4",
+    "projectors": {},
+    "names": {
+      "en": "Boulder City"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -429658.9375,
+        337.329254,
+        -922.24292
+      ]
+    },
+    "display_name": "Boulder City",
+    "radio": [
+      "airfield6_0"
+    ],
+    "civilian": false,
+    "id": "BoulderCityAirport",
+    "towers": [
+      "externalId:160000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/BoulderCityAirport.rn5",
+    "runways": [
+      {
+        "start": "27L",
+        "id": 1,
+        "name": "27L-9",
+        "end": "9"
+      }
+    ],
+    "runwayName": [
+      "15",
+      "27L",
+      "9"
+    ],
+    "class": "3",
+    "beacons": {},
+    "abandoned": false
+  },
+  {
+    "reference_point": {
+      "y": 33697.310547,
+      "x": -388592.34375
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "EchoBayAirport",
+    "class": "4",
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/EchoBayAirport.rn5",
+    "names": {
+      "en": "Echo Bay"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -388555.5,
+        237.335922,
+        33712.65625
+      ]
+    },
+    "projectors": {},
+    "display_name": "Echo Bay",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/EchoBayAirport.rn4",
+    "runwayName": [
+      "24"
+    ],
+    "runways": {
+      "0": {
+        "start": "6",
+        "id": 1,
+        "name": "6-24",
+        "end": "24"
+      }
+    },
+    "beacons": {},
+    "code": "0L9"
+  },
+  {
+    "reference_point": {
+      "y": -25668.716797,
+      "x": -427352.71875
+    },
+    "code": "KHND",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/HendersonExecutiveAirport.rn4",
+    "projectors": {},
+    "names": {
+      "en": "Henderson Executive"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -427588.125,
+        380.404999,
+        -26063.835938
+      ]
+    },
+    "display_name": "Henderson Executive",
+    "radio": [
+      "airfield8_0"
+    ],
+    "civilian": false,
+    "id": "HendersonExecutiveAirport",
+    "towers": [
+      "externalId:180000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/HendersonExecutiveAirport.rn5",
+    "runways": [
+      {
+        "start": "35L",
+        "id": 1,
+        "name": "35L-17R",
+        "end": "17R"
+      }
+    ],
+    "runwayName": [
+      "17L",
+      "35L",
+      "17R"
+    ],
+    "class": "3",
+    "beacons": {},
+    "abandoned": false
+  },
+  {
+    "reference_point": {
+      "y": -43000.460938,
+      "x": -450392.859375
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "JeanAirport",
+    "class": "3",
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/JeanAirport.rn5",
+    "names": {
+      "en": "Jean"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -450413.25,
+        430.4375,
+        -42978.523438
+      ]
+    },
+    "projectors": {},
+    "display_name": "Jean",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/JeanAirport.rn4",
+    "runwayName": [
+      "2L",
+      "20L",
+      "2R"
+    ],
+    "runways": [
+      {
+        "start": "20L",
+        "id": 1,
+        "name": "20L-2R",
+        "end": "2R"
+      }
+    ],
+    "beacons": {},
+    "code": ""
+  },
+  {
+    "reference_point": {
+      "y": 28306.30957,
+      "x": -516946.421875
+    },
+    "code": "KIFP",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/LaughlinAirport.rn4",
+    "projectors": {},
+    "names": {
+      "en": "Laughlin"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -516859.5625,
+        109.999977,
+        28448.253906
+      ]
+    },
+    "display_name": "Laughlin",
+    "radio": [
+      "airfield10_0"
+    ],
+    "civilian": false,
+    "id": "LaughlinAirport",
+    "towers": [
+      "externalId:200000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/LaughlinAirport.rn5",
+    "runways": {
+      "0": {
+        "start": "16",
+        "id": 1,
+        "name": "16-34",
+        "end": "34"
+      }
+    },
+    "runwayName": [
+      "34"
+    ],
+    "class": "2",
+    "beacons": {},
+    "abandoned": false
+  },
+  {
+    "reference_point": {
+      "y": 33199.935547,
+      "x": -224670.351563
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "LincolnCountyAirport",
+    "class": "3",
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/LincolnCountyAirport.rn5",
+    "names": {
+      "en": "Lincoln County"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -224629.078125,
+        733.654846,
+        33321.984375
+      ]
+    },
+    "projectors": {},
+    "display_name": "Lincoln County",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/LincolnCountyAirport.rn4",
+    "runwayName": [
+      "35"
+    ],
+    "runways": {
+      "0": {
+        "start": "17",
+        "id": 1,
+        "name": "17-35",
+        "end": "35"
+      }
+    },
+    "beacons": {},
+    "code": ""
+  },
+  null,
+  {
+    "reference_point": {
+      "y": 68561.148438,
+      "x": -329622.09375
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "MesquiteAirport",
+    "class": "3",
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/MesquiteAirport.rn5",
+    "names": {
+      "en": "Mesquite"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -329612.28125,
+        283.243408,
+        68493.15625
+      ]
+    },
+    "projectors": {},
+    "display_name": "Mesquite",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/MesquiteAirport.rn4",
+    "runwayName": [
+      "19"
+    ],
+    "runways": {
+      "0": {
+        "start": "1",
+        "id": 1,
+        "name": "1-19",
+        "end": "19"
+      }
+    },
+    "beacons": {},
+    "code": "67L"
+  },
+  {
+    "reference_point": {
+      "y": -289784.765625,
+      "x": -161504.46875
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "MinaAirport_3Q0",
+    "class": "3",
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/MinaAirport_3Q0.rn5",
+    "names": {
+      "en": "Mina"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -161495.3125,
+        695.296875,
+        -289785.46875
+      ]
+    },
+    "projectors": {},
+    "display_name": "Mina",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/MinaAirport_3Q0.rn4",
+    "runwayName": [
+      "31"
+    ],
+    "runways": {
+      "0": {
+        "start": "13",
+        "id": 1,
+        "name": "13-31",
+        "end": "31"
+      }
+    },
+    "beacons": {},
+    "code": ""
+  },
+  {
+    "reference_point": {
+      "y": -31726.952148,
+      "x": -400891.484375
+    },
+    "code": "KVGT",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/NorthLasVegasAirport.rn4",
+    "projectors": {},
+    "names": {
+      "en": "North Las Vegas"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -401413.8125,
+        348.370911,
+        -30752.386719
+      ]
+    },
+    "display_name": "North Las Vegas",
+    "radio": [
+      "airfield15_0"
+    ],
+    "civilian": true,
+    "id": "NorthLasVegasAirport",
+    "towers": [
+      "externalId:250000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/NorthLasVegasAirport.rn5",
+    "runways": [
+      {
+        "start": "30L",
+        "id": 1,
+        "name": "30L-12R",
+        "end": "12R"
+      },
+      {
+        "start": "12L",
+        "id": 2,
+        "name": "12L-30R",
+        "end": "30R"
+      }
+    ],
+    "runwayName": [
+      "7",
+      "30L",
+      "12R",
+      "12L",
+      "30R"
+    ],
+    "class": "3",
+    "beacons": [
+      {
+        "runwayName": "12L-30R",
+        "runwayId": 2,
+        "runwaySide": "12L",
+        "beaconId": "airfield15_1"
+      }
+    ],
+    "abandoned": false
+  },
+  {
+    "reference_point": {
+      "y": -132937.929688,
+      "x": -303620
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "PahuteMesaAirstrip",
+    "class": "3",
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/PahuteMesaAirstrip.rn5",
+    "names": {
+      "en": "Pahute Mesa"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -303782.6875,
+        771.102478,
+        -132963.75
+      ]
+    },
+    "projectors": {},
+    "display_name": "Pahute Mesa",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/PahuteMesaAirstrip.rn4",
+    "runwayName": [
+      "18"
+    ],
+    "runways": {
+      "0": {
+        "start": "36",
+        "id": 1,
+        "name": "36-18",
+        "end": "18"
+      }
+    },
+    "beacons": {},
+    "code": ""
+  },
+  {
+    "reference_point": {
+      "y": -201302.882813,
+      "x": -197282.898438
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "TonopahAirport",
+    "class": "3",
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/TonopahAirport.rn5",
+    "names": {
+      "en": "Tonopah"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -197988.03125,
+        821.640625,
+        -201277.640625
+      ]
+    },
+    "projectors": {},
+    "display_name": "Tonopah",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/TonopahAirport.rn4",
+    "runwayName": [
+      "11",
+      "33",
+      "15"
+    ],
+    "runways": [
+      {
+        "start": "33",
+        "id": 1,
+        "name": "33-15",
+        "end": "15"
+      }
+    ],
+    "beacons": {},
+    "code": "KTPH"
+  },
+  {
+    "reference_point": {
+      "y": -174698.484375,
+      "x": -226505.273438
+    },
+    "code": "KTNX",
+    "roadnet": "./Mods/terrains/Nevada/AirfieldsTaxiways/TonopathAFB.rn4",
+    "projectors": {},
+    "names": {
+      "en": "Tonopah Test Range"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -226104.34375,
+        846.414063,
+        -173567.03125
+      ]
+    },
+    "display_name": "Tonopah Test Range",
+    "radio": [
+      "airfield18_0"
+    ],
+    "civilian": false,
+    "id": "TonopathAFB",
+    "towers": [
+      "externalId:280000"
+    ],
+    "roadnet5": "./Mods/terrains/Nevada/AirfieldsTaxiways/TonopathAFB.rn5",
+    "runways": {
+      "0": {
+        "start": "32",
+        "id": 1,
+        "name": "32-14",
+        "end": "14"
+      }
+    },
+    "runwayName": [
+      "14"
+    ],
+    "class": "1",
+    "beacons": [
+      {
+        "runwayName": "32-14",
+        "runwayId": 2,
+        "runwaySide": "32",
+        "beaconId": "airfield18_1"
+      },
+      {
+        "runwayName": "32-14",
+        "runwayId": 2,
+        "runwaySide": "32",
+        "beaconId": "airfield18_2"
+      },
+      {
+        "runwayName": "14-32",
+        "runwayId": 1,
+        "runwaySide": "14",
+        "beaconId": "airfield18_3"
+      },
+      {
+        "beaconId": "airfield18_4"
+      }
+    ],
+    "abandoned": false
+  }
 ]

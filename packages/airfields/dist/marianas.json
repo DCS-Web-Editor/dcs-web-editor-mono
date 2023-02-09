@@ -1,1 +1,466 @@
-[]
+[
+    {
+        "reference_point": {
+            "y": 48589.876953,
+            "x": 75884.859375
+        },
+        "fueldepots": [
+            "externalId:110004"
+        ],
+        "code": "PGRO",
+        "runways": {
+            "0": {
+                "start": "9",
+                "id": -1,
+                "name": "9-27",
+                "end": "27"
+            }
+        },
+        "projectors": {},
+        "names": {
+            "en": "Rota Intl"
+        },
+        "default_camera_position": {
+            "bearing": 313.424291,
+            "pnt": [
+                74672.807739,
+                720.676025,
+                46833.633545
+            ]
+        },
+        "display_name": "Rota Intl",
+        "radio": [
+            "airfield1_0"
+        ],
+        "civilian": true,
+        "id": "Rota_Int",
+        "towers": [
+            "externalId:110000"
+        ],
+        "roadnet5": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Rota_Int.rn5",
+        "abandoned": false,
+        "roadnet": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Rota_Int.rn4",
+        "warehouses": [
+            "externalId:110001",
+            "externalId:110002",
+            "externalId:110003"
+        ],
+        "runwayName": [
+            "27"
+        ],
+        "beacons": {
+            "0": {
+                "beaconId": "airfield1_0"
+            }
+        },
+        "class": "3"
+    },
+    {
+        "reference_point": {
+            "y": 101855.960938,
+            "x": 180035.4375
+        },
+        "fueldepots": [
+            "externalId:120005"
+        ],
+        "code": "PGSN",
+        "runways": {
+            "0": {
+                "start": "07",
+                "id": 1,
+                "name": "07-25",
+                "end": "25"
+            }
+        },
+        "projectors": {},
+        "names": {
+            "en": "Saipan Intl"
+        },
+        "default_camera_position": {
+            "bearing": 66.226852,
+            "pnt": [
+                179544.34375,
+                707.42334,
+                104173.085938
+            ]
+        },
+        "display_name": "Saipan Intl",
+        "radio": [
+            "airfield2_0"
+        ],
+        "civilian": true,
+        "id": "Saipan_Int",
+        "towers": [
+            "externalId:120000"
+        ],
+        "roadnet5": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Saipan_Int.rn5",
+        "abandoned": false,
+        "roadnet": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Saipan_Int.rn4",
+        "warehouses": [
+            "externalId:120001",
+            "externalId:120002",
+            "externalId:120003",
+            "externalId:120004"
+        ],
+        "runwayName": [
+            "25"
+        ],
+        "beacons": [
+            {
+                "runwayName": "7-25",
+                "runwayId": 1,
+                "runwaySide": "7",
+                "beaconId": "airfield2_1"
+            }
+        ],
+        "class": "1"
+    },
+    {
+        "reference_point": {
+            "y": 89956.625,
+            "x": 166859.859375
+        },
+        "fueldepots": [
+            "externalId:130002"
+        ],
+        "code": "PGWT",
+        "runways": {
+            "0": {
+                "start": "08",
+                "id": 2,
+                "name": "08-26",
+                "end": "26"
+            }
+        },
+        "projectors": {},
+        "names": {
+            "en": "Tinian Intl"
+        },
+        "default_camera_position": {
+            "bearing": 335.000001,
+            "pnt": [
+                164759.010986,
+                501.323975,
+                88766.811523
+            ]
+        },
+        "display_name": "Tinian Intl",
+        "radio": [
+            "airfield3_0"
+        ],
+        "civilian": true,
+        "id": "Tinian_Int",
+        "towers": [
+            "externalId:130000"
+        ],
+        "roadnet5": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Tinian_Int.rn5",
+        "abandoned": false,
+        "roadnet": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Tinian_Int.rn4",
+        "warehouses": [
+            "externalId:130001",
+            "externalId:130003",
+            "externalId:130004"
+        ],
+        "runwayName": [
+            "26"
+        ],
+        "beacons": {},
+        "class": "2"
+    },
+    {
+        "reference_point": {
+            "y": -77.940308,
+            "x": -23.656158
+        },
+        "fueldepots": [
+            "externalId:140006",
+            "externalId:140007",
+            "externalId:140008",
+            "externalId:140009"
+        ],
+        "code": "PGUM",
+        "runways": [
+            {
+                "start": "06R",
+                "id": 2,
+                "name": "06R-24L",
+                "end": "24L"
+            }
+        ],
+        "projectors": {},
+        "names": {
+            "en": "Antonio B. Won Pat Intl"
+        },
+        "default_camera_position": {
+            "bearing": 338.810952,
+            "pnt": [
+                -2539.531036,
+                626.110291,
+                -2246.216736
+            ]
+        },
+        "display_name": "Antonio B. Won Pat Intl",
+        "radio": [
+            "airfield4_0"
+        ],
+        "civilian": true,
+        "id": "Antonio_B._Won_Pat_Int_Airport",
+        "towers": [
+            "externalId:140000"
+        ],
+        "roadnet5": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Antonio_B._Won_Pat_Int_Airport.rn5",
+        "abandoned": false,
+        "roadnet": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Antonio_B._Won_Pat_Int_Airport.rn4",
+        "warehouses": [
+            "externalId:140001",
+            "externalId:140002",
+            "externalId:140003",
+            "externalId:140004",
+            "externalId:140005"
+        ],
+        "runwayName": [
+            "24R",
+            "06R",
+            "24L"
+        ],
+        "beacons": [
+            {
+                "runwayName": "06L",
+                "runwayId": 1,
+                "runwaySide": "06L-24R",
+                "beaconId": "airfield4_1"
+            },
+            {
+                "runwayName": "06R",
+                "runwayId": 2,
+                "runwaySide": "06R-24L",
+                "beaconId": "airfield4_2"
+            },
+            {
+                "runwayName": "06R",
+                "runwayId": 2,
+                "runwaySide": "06R-24L",
+                "beaconId": "airfield4_3"
+            }
+        ],
+        "class": "1"
+    },
+    {
+        "reference_point": {
+            "y": -16869.435119,
+            "x": -5023.305023
+        },
+        "civilian": false,
+        "abandoned": false,
+        "id": "Olf_Orote_Field",
+        "class": "4",
+        "roadnet5": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Olf_Orote_Field.rn5",
+        "names": {
+            "en": "Olf Orote"
+        },
+        "default_camera_position": {
+            "bearing": 87.233667,
+            "pnt": [
+                -5116.758331,
+                228.977921,
+                -15763.492798
+            ]
+        },
+        "projectors": {},
+        "display_name": "Olf Orote",
+        "roadnet": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Olf_Orote_Field.rn4",
+        "runwayName": [
+            "7"
+        ],
+        "runways": {
+            "0": {
+                "start": "25",
+                "id": -1,
+                "name": "25-7",
+                "end": "7"
+            }
+        },
+        "beacons": {},
+        "code": ""
+    },
+    {
+        "reference_point": {
+            "y": 14548.833496,
+            "x": 10574.989746
+        },
+        "fueldepots": [
+            "externalId:160000",
+            "externalId:160001",
+            "externalId:160002",
+            "externalId:160003"
+        ],
+        "code": "PGUA",
+        "runways": [
+            {
+                "start": "06L",
+                "id": 1,
+                "name": "06L-24R",
+                "end": "24R"
+            }
+        ],
+        "projectors": {},
+        "names": {
+            "en": "Andersen AFB"
+        },
+        "default_camera_position": {
+            "bearing": 45.526796,
+            "pnt": [
+                8970.058594,
+                797.690369,
+                16342.770508
+            ]
+        },
+        "display_name": "Andersen AFB",
+        "radio": [
+            "airfield6_0"
+        ],
+        "civilian": false,
+        "id": "Andersen_AFB",
+        "towers": [
+            "externalId:160014"
+        ],
+        "roadnet5": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Andersen_AFB.rn5",
+        "abandoned": false,
+        "roadnet": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Andersen_AFB.rn4",
+        "warehouses": [
+            "externalId:160004",
+            "externalId:160005",
+            "externalId:160006",
+            "externalId:160007",
+            "externalId:160008",
+            "externalId:160009",
+            "externalId:160010",
+            "externalId:160011",
+            "externalId:160012",
+            "externalId:160013"
+        ],
+        "runwayName": [
+            "24L",
+            "06L",
+            "24R"
+        ],
+        "beacons": [
+            {
+                "runwayName": "24L",
+                "runwayId": 2,
+                "runwaySide": "06R-24L",
+                "beaconId": "airfield6_1"
+            },
+            {
+                "runwayName": "06R",
+                "runwayId": 2,
+                "runwaySide": "06R-24L",
+                "beaconId": "airfield6_2"
+            },
+            {
+                "runwayName": "24R",
+                "runwayId": 1,
+                "runwaySide": "06L-24R",
+                "beaconId": "airfield6_3"
+            },
+            {
+                "runwayName": "06L",
+                "runwayId": 1,
+                "runwaySide": "06L-24R",
+                "beaconId": "airfield6_4"
+            },
+            {
+                "runwayName": "06R",
+                "runwayId": 2,
+                "runwaySide": "06R-24L",
+                "beaconId": "airfield6_5"
+            },
+            {
+                "runwayName": "06L",
+                "runwayId": 1,
+                "runwaySide": "06L-24R",
+                "beaconId": "airfield6_6"
+            },
+            {
+                "runwayName": "24R",
+                "runwayId": 1,
+                "runwaySide": "06L-24R",
+                "beaconId": "airfield6_7"
+            },
+            {
+                "runwayName": "24L",
+                "runwayId": 2,
+                "runwaySide": "06R-24L",
+                "beaconId": "airfield6_8"
+            }
+        ],
+        "class": "1"
+    },
+    {
+        "reference_point": {
+            "y": 107564.608564,
+            "x": 512410.262497
+        },
+        "civilian": false,
+        "abandoned": false,
+        "id": "Pagan_Airstrip",
+        "class": "4",
+        "roadnet5": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Pagan_Airstrip.rn5",
+        "names": {
+            "en": "Pagan Airstrip"
+        },
+        "default_camera_position": {
+            "bearing": 296.737455,
+            "pnt": [
+                512196.5,
+                304.439301,
+                106995.632813
+            ]
+        },
+        "projectors": {},
+        "display_name": "Pagan Airstrip",
+        "roadnet": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/Pagan_Airstrip.rn4",
+        "runwayName": [
+            "29"
+        ],
+        "runways": {
+            "0": {
+                "start": "11",
+                "id": -1,
+                "name": "11-29",
+                "end": "29"
+            }
+        },
+        "beacons": {},
+        "code": ""
+    },
+    {
+        "reference_point": {
+            "y": 7619.561523,
+            "x": 15909.476563
+        },
+        "civilian": false,
+        "abandoned": false,
+        "id": "North_West_Field",
+        "class": "4",
+        "roadnet5": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/North_West_Field.rn5",
+        "names": {
+            "en": "North West Field"
+        },
+        "default_camera_position": {
+            "bearing": 0,
+            "pnt": [
+                15450.640625,
+                159,
+                6696.899414
+            ]
+        },
+        "projectors": {},
+        "display_name": "North West Field",
+        "roadnet": "./Mods/terrains/MarianaIslands/AirfieldsTaxiways/North_West_Field.rn4",
+        "runwayName": {},
+        "runways": {},
+        "beacons": {},
+        "code": ""
+    }
+]

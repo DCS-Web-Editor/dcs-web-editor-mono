@@ -1,1304 +1,3544 @@
 [
-    {
-        "geometry": {
-            "coordinates": [
-                37.118801734534,
-                35.731462428174,
-                250.00024414062
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Abu al-Duhur",
-            "name": "Abu al-Duhur",
-            "point": {
-                "x": 75929.7734375,
-                "y": 250.00024414062,
-                "z": 112670.328125
-            }
-        },
-        "type": "Feature"
+  {
+    "reference_point": {
+      "y": 111344.925781,
+      "x": 76048.957031
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.291372307265,
-                36.988281127829,
-                17.000017166138
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Adana Sakirpasa",
-            "name": "Adana Sakirpasa",
-            "point": {
-                "x": 220139.03125,
-                "y": 17.000017166138,
-                "z": -47292.88671875
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:110006",
+      "externalId:110007",
+      "externalId:110011",
+      "externalId:110012",
+      "externalId:110013",
+      "externalId:110014",
+      "externalId:110015",
+      "externalId:110017",
+      "externalId:110018",
+      "externalId:110022",
+      "externalId:110023",
+      "externalId:110025",
+      "externalId:110026",
+      "externalId:110027",
+      "externalId:110028",
+      "externalId:110029",
+      "externalId:110030",
+      "externalId:110031",
+      "externalId:110032",
+      "externalId:110033",
+      "externalId:110051"
+    ],
+    "code": "OS57",
+    "runways": {
+      "0": {
+        "start": "27",
+        "id": -1,
+        "name": "27-09",
+        "end": "09"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.5854147754,
-                34.566877297302,
-                527.00054931641
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Al Qusayr",
-            "name": "Al Qusayr",
-            "point": {
-                "x": -52203.73046875,
-                "y": 527.00054931641,
-                "z": 61287.859375
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Abu al-Duhur"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.875344527767,
-                33.92656597361,
-                837.16253662109
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "An Nasiriyah",
-            "name": "An Nasiriyah",
-            "point": {
-                "x": -123819.2890625,
-                "y": 837.16253662109,
-                "z": 86407.890625
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        76086.703125,
+        124.99881,
+        111109.835938
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.402739209399,
-                32.698127092337,
-                725.75042724609
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Tha'lah",
-            "name": "Tha'lah",
-            "point": {
-                "x": -259061.421875,
-                "y": 725.75042724609,
-                "z": 39317.87890625
-            }
-        },
-        "type": "Feature"
+    "display_name": "Abu al-Duhur",
+    "radio": [
+      "airfield1_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "09"
+    ],
+    "towers": [
+      "externalId:110071"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Abu_al-Duhur.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Abu_al-Duhur.rn4",
+    "shelters": [
+      "externalId:110000",
+      "externalId:110002",
+      "externalId:110003",
+      "externalId:110042",
+      "externalId:110043",
+      "externalId:110044"
+    ],
+    "warehouses": [
+      "externalId:110001",
+      "externalId:110004",
+      "externalId:110005",
+      "externalId:110008",
+      "externalId:110009",
+      "externalId:110010",
+      "externalId:110016",
+      "externalId:110019",
+      "externalId:110020",
+      "externalId:110021",
+      "externalId:110024",
+      "externalId:110034",
+      "externalId:110035",
+      "externalId:110036",
+      "externalId:110037",
+      "externalId:110038",
+      "externalId:110039",
+      "externalId:110040",
+      "externalId:110041",
+      "externalId:110045",
+      "externalId:110046",
+      "externalId:110047",
+      "externalId:110048",
+      "externalId:110049",
+      "externalId:110050",
+      "externalId:110052",
+      "externalId:110053",
+      "externalId:110054",
+      "externalId:110055",
+      "externalId:110056",
+      "externalId:110057",
+      "externalId:110058",
+      "externalId:110059",
+      "externalId:110060",
+      "externalId:110061",
+      "externalId:110062",
+      "externalId:110063",
+      "externalId:110064",
+      "externalId:110065",
+      "externalId:110066",
+      "externalId:110067",
+      "externalId:110068",
+      "externalId:110069",
+      "externalId:110070"
+    ],
+    "id": "Abu_al-Duhur",
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -48332.732422,
+      "x": 219468.65625
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.487416760577,
-                33.836465479357,
-                12.000012397766
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Beirut-Rafic Hariri",
-            "name": "Beirut-Rafic Hariri",
-            "point": {
-                "x": -130289.4375,
-                "y": 12.000012397766,
-                "z": -42276.67578125
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:120001"
+    ],
+    "code": "LTAF",
+    "runways": {
+      "0": {
+        "start": "23",
+        "id": 1,
+        "name": "23-05",
+        "end": "05"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.504254828586,
-                33.415340013895,
-                612.00061035156
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Damascus",
-            "name": "Damascus",
-            "point": {
-                "x": -179748.328125,
-                "y": 612.00061035156,
-                "z": 50728.265625
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Adana Sakirpasa"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.475050826595,
-                33.487483451402,
-                611.96624755859
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Marj as Sultan South",
-            "name": "Marj as Sultan South",
-            "point": {
-                "x": -171681.265625,
-                "y": 611.96624755859,
-                "z": 48206.46875
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        219513.5,
+        8.49951,
+        -48182.679688
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.735832718421,
-                33.604657449318,
-                630.00061035156
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Al-Dumayr",
-            "name": "Al-Dumayr",
-            "point": {
-                "x": -159245.390625,
-                "y": 630.00061035156,
-                "z": 72725.0546875
-            }
-        },
-        "type": "Feature"
+    "display_name": "Adana Sakirpasa",
+    "radio": [
+      "airfield2_0"
+    ],
+    "civilian": true,
+    "id": "Adana",
+    "towers": [
+      "externalId:120003"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Adana.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Adana.rn4",
+    "warehouses": [
+      "externalId:120000",
+      "externalId:120002"
+    ],
+    "runwayName": [
+      "05"
+    ],
+    "beacons": [
+      {
+        "runwayName": "05-23",
+        "runwayId": 1,
+        "runwaySide": "05",
+        "beaconId": "airfield2_1"
+      },
+      {
+        "beaconId": "airfield2_2"
+      },
+      {
+        "beaconId": "airfield2_3"
+      }
+    ],
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 60013.205078,
+      "x": -51906.964844
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.001899624572,
-                32.441791483481,
-                28.576030731201
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Eyn Shemer",
-            "name": "Eyn Shemer",
-            "point": {
-                "x": -283415.875,
-                "y": 28.576030731201,
-                "z": -93149.375
-            }
-        },
-        "type": "Feature"
+    "code": "OS70",
+    "runways": {
+      "0": {
+        "start": "28",
+        "id": -1,
+        "name": "28-10",
+        "end": "10"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                37.464512889798,
-                36.951397233614,
-                697.21142578125
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Gaziantep",
-            "name": "Gaziantep",
-            "point": {
-                "x": 210716.109375,
-                "y": 697.21142578125,
-                "z": 146087.90625
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Al Qusayr"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                38.206376228872,
-                32.536851104207,
-                688.00067138672
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "H4",
-            "name": "H4",
-            "point": {
-                "x": -279644.28125,
-                "y": 688.00067138672,
-                "z": 208278.046875
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -52207.546875,
+        263.5,
+        60126.148438
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.04502076035,
-                32.80645293353,
-                6.0000066757202
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Haifa",
-            "name": "Haifa",
-            "point": {
-                "x": -243102.609375,
-                "y": 6.0000066757202,
-                "z": -87583.546875
-            }
-        },
-        "type": "Feature"
+    "display_name": "Al Qusayr",
+    "radio": [
+      "airfield3_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "10"
+    ],
+    "towers": [
+      "externalId:130010"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Al_Qusayr.rn5",
+    "abandoned": false,
+    "class": "1",
+    "shelters": [
+      "externalId:130000",
+      "externalId:130001",
+      "externalId:130002",
+      "externalId:130003",
+      "externalId:130004",
+      "externalId:130005",
+      "externalId:130006",
+      "externalId:130007",
+      "externalId:130008",
+      "externalId:130009"
+    ],
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Al_Qusayr.rn4",
+    "beacons": {},
+    "id": "Al_Qusayr"
+  },
+  {
+    "reference_point": {
+      "y": 85510.820313,
+      "x": -124683.738281
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.72547347191,
-                35.116099484431,
-                300.00030517578
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Hama",
-            "name": "Hama",
-            "point": {
-                "x": 8419.59375,
-                "y": 300.00030517578,
-                "z": 75521.7109375
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:140009"
+    ],
+    "code": "OS64",
+    "runways": {
+      "0": {
+        "start": "22",
+        "id": -1,
+        "name": "22-04",
+        "end": "04"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.298090184913,
-                36.371269972814,
-                77.175567626953
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Hatay",
-            "name": "Hatay",
-            "point": {
-                "x": 148653.765625,
-                "y": 77.175567626953,
-                "z": 40403.9453125
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "An Nasiriyah"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.412713065757,
-                36.994254281542,
-                47.783618927002
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Incirlik",
-            "name": "Incirlik",
-            "point": {
-                "x": 220387.578125,
-                "y": 47.783618927002,
-                "z": -36463.7109375
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -125097.351563,
+        425.308472,
+        85148.085938
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                37.951086106528,
-                36.094487121629,
-                356.71685791016
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Jirah",
-            "name": "Jirah",
-            "point": {
-                "x": 115071.7578125,
-                "y": 356.71685791016,
-                "z": 188376.15625
-            }
-        },
-        "type": "Feature"
+    "display_name": "An Nasiriyah",
+    "radio": [
+      "airfield4_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "04"
+    ],
+    "towers": [
+      "externalId:140015"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/An_Nasiriyah.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/An_Nasiriyah.rn4",
+    "shelters": [
+      "externalId:140000",
+      "externalId:140001",
+      "externalId:140002",
+      "externalId:140003",
+      "externalId:140004",
+      "externalId:140005",
+      "externalId:140006",
+      "externalId:140007",
+      "externalId:140011",
+      "externalId:140012",
+      "externalId:140013",
+      "externalId:140014"
+    ],
+    "warehouses": [
+      "externalId:140008",
+      "externalId:140010"
+    ],
+    "id": "An_Nasiriyah",
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 40368.677734,
+      "x": -258434.929688
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.559784748722,
-                33.06361028266,
-                712.33355712891
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Khalkhalah",
-            "name": "Khalkhalah",
-            "point": {
-                "x": -218879.4375,
-                "y": 712.33355712891,
-                "z": 54981.8828125
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:150002",
+      "externalId:150003",
+      "externalId:150004"
+    ],
+    "code": "OS60",
+    "runways": {
+      "0": {
+        "start": "05R",
+        "id": 1,
+        "name": "05R-23L",
+        "end": "23L"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.270213489366,
-                32.348793954817,
-                672.00067138672
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "King Hussein Air College",
-            "name": "King Hussein Air College",
-            "point": {
-                "x": -297491.9375,
-                "y": 672.00067138672,
-                "z": 25897.087890625
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Tha'lah"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.592419825247,
-                33.212372031645,
-                93.483139038086
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Kiryat Shmona",
-            "name": "Kiryat Shmona",
-            "point": {
-                "x": -199857.734375,
-                "y": 93.483139038086,
-                "z": -34831.58984375
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -258300.8125,
+        726.23584,
+        40287.484375
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.95003283514,
-                35.411589930353,
-                28.363424301147
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Bassel Al-Assad",
-            "name": "Bassel Al-Assad",
-            "point": {
-                "x": 43096.125,
-                "y": 28.363424301147,
-                "z": 5843.9418945312
-            }
-        },
-        "type": "Feature"
+    "display_name": "Tha'lah",
+    "radio": [
+      "airfield5_0"
+    ],
+    "civilian": false,
+    "id": "As_Suwayda",
+    "towers": [
+      "externalId:150005"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/As_Suwayda.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/As_Suwayda.rn4",
+    "warehouses": [
+      "externalId:150000",
+      "externalId:150001"
+    ],
+    "runwayName": [
+      "23L"
+    ],
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -42286.496094,
+      "x": -131310.8125
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.466321617972,
-                33.500422745428,
-                611.83978271484
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Marj as Sultan North",
-            "name": "Marj as Sultan North",
-            "point": {
-                "x": -170226.375,
-                "y": 611.83978271484,
-                "z": 47430.26953125
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:160000",
+      "externalId:160001",
+      "externalId:160002"
+    ],
+    "code": "OLBA",
+    "runways": [
+      {
+        "start": "03",
+        "id": 3,
+        "name": "03-21",
+        "end": "21"
+      },
+      {
+        "start": "16",
+        "id": 1,
+        "name": "16-34",
+        "end": "34"
+      }
+    ],
+    "projectors": {},
+    "names": {
+      "en": "Beirut-Rafic Hariri"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.446981161337,
-                33.279509844412,
-                658.59417724609
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Marj Ruhayyil",
-            "name": "Marj Ruhayyil",
-            "point": {
-                "x": -194683.9375,
-                "y": 658.59417724609,
-                "z": 45031.90234375
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -132255.6875,
+        5.999756,
+        -41864.585938
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.220203497046,
-                32.597578671655,
-                55.000053405762
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Megiddo",
-            "name": "Megiddo",
-            "point": {
-                "x": -266879.71875,
-                "y": 55.000053405762,
-                "z": -71994.765625
-            }
-        },
-        "type": "Feature"
+    "display_name": "Beirut-Rafic Hariri",
+    "radio": [
+      "airfield6_0"
+    ],
+    "civilian": true,
+    "id": "Beirut",
+    "towers": [
+      "externalId:160007"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Beirut.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Beirut.rn4",
+    "warehouses": [
+      "externalId:160003",
+      "externalId:160004",
+      "externalId:160005",
+      "externalId:160006"
+    ],
+    "runwayName": [
+      "35",
+      "03",
+      "21",
+      "16",
+      "34"
+    ],
+    "beacons": [
+      {
+        "runwayName": "16-34",
+        "runwayId": 1,
+        "runwaySide": "16",
+        "beaconId": "airfield6_1"
+      },
+      {
+        "runwayName": "03-21",
+        "runwayId": 2,
+        "runwaySide": "03",
+        "beaconId": "airfield6_2"
+      },
+      {
+        "runwayName": "17-35",
+        "runwayId": 3,
+        "runwaySide": "17",
+        "beaconId": "airfield6_3"
+      },
+      {
+        "runwayName": "16-34",
+        "runwayId": 1,
+        "runwaySide": "16",
+        "beaconId": "airfield6_4"
+      },
+      {
+        "runwayName": "17-35",
+        "runwayId": 3,
+        "runwaySide": "17",
+        "beaconId": "airfield6_5"
+      },
+      {
+        "runwayName": "03-21",
+        "runwayId": 2,
+        "runwaySide": "03",
+        "beaconId": "airfield6_6"
+      },
+      {
+        "beaconId": "airfield6_7"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 52081.296875,
+      "x": -178652.320313
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.235064059083,
-                33.482713511778,
-                718.09167480469
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Mezzeh",
-            "name": "Mezzeh",
-            "point": {
-                "x": -171641.84375,
-                "y": 718.09167480469,
-                "z": 25888.533203125
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:170000",
+      "externalId:170001",
+      "externalId:170004",
+      "externalId:170005",
+      "externalId:170006",
+      "externalId:170007",
+      "externalId:170008",
+      "externalId:170009"
+    ],
+    "code": "OSDI",
+    "runways": [
+      {
+        "start": "05R",
+        "id": 2,
+        "name": "05R-23L",
+        "end": "23L"
+      }
+    ],
+    "projectors": {},
+    "names": {
+      "en": "Damascus"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                37.033622455645,
-                36.522812218953,
-                492.00051879883
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Minakh",
-            "name": "Minakh",
-            "point": {
-                "x": 163870.921875,
-                "y": 492.00051879883,
-                "z": 106743.0390625
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -180408.296875,
+        305.999847,
+        51698.671875
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                37.210383232385,
-                36.182211524331,
-                382.19104003906
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Aleppo",
-            "name": "Aleppo",
-            "point": {
-                "x": 125776.703125,
-                "y": 382.19104003906,
-                "z": 121870.953125
-            }
-        },
-        "type": "Feature"
+    "display_name": "Damascus",
+    "radio": [
+      "airfield7_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "23R",
+      "05R",
+      "23L"
+    ],
+    "towers": [
+      "externalId:170018"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Damascus.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Damascus.rn4",
+    "shelters": [
+      "externalId:170010",
+      "externalId:170011",
+      "externalId:170012",
+      "externalId:170013",
+      "externalId:170014",
+      "externalId:170015",
+      "externalId:170016",
+      "externalId:170017"
+    ],
+    "warehouses": [
+      "externalId:170002",
+      "externalId:170003"
+    ],
+    "id": "Damascus",
+    "beacons": [
+      {
+        "runwayName": "05L-23R",
+        "runwayId": 1,
+        "runwaySide": "23R",
+        "beaconId": "airfield7_1"
+      },
+      {
+        "beaconId": "airfield7_2"
+      },
+      {
+        "runwayName": "05R-23L",
+        "runwayId": 2,
+        "runwaySide": "05R",
+        "beaconId": "airfield7_3"
+      },
+      {
+        "beaconId": "airfield7_4"
+      },
+      {
+        "beaconId": "airfield7_5"
+      },
+      {
+        "runwayName": "05R-23L",
+        "runwayId": 2,
+        "runwaySide": "05R",
+        "beaconId": "airfield7_6"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 48243.74032,
+      "x": -171711.336701
     },
-    {
-        "geometry": {
-            "coordinates": [
-                38.331123062337,
-                34.558235536659,
-                386.22402954102
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Palmyra",
-            "name": "Palmyra",
-            "point": {
-                "x": -55607.97265625,
-                "y": 386.22402954102,
-                "z": 221438.15625
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:180000",
+      "externalId:180001",
+      "externalId:180002",
+      "externalId:180003"
+    ],
+    "code": "",
+    "runways": {
+      "0": {
+        "start": "09",
+        "id": -1,
+        "name": "09-27",
+        "end": "27"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.356880859456,
-                33.458606617206,
-                650.57080078125
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Qabr as Sitt",
-            "name": "Qabr as Sitt",
-            "point": {
-                "x": -174610.671875,
-                "y": 650.57080078125,
-                "z": 37142.67578125
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Marj as Sultan South"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.165455922777,
-                32.666055265719,
-                32.239345550537
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Ramat David",
-            "name": "Ramat David",
-            "point": {
-                "x": -259097.328125,
-                "y": 32.239345550537,
-                "z": -76862.3203125
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -171852.703125,
+        306.549805,
+        48268.742188
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                37.570439309206,
-                36.18937442608,
-                366.00036621094
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Kuweires",
-            "name": "Kuweires",
-            "point": {
-                "x": 126034.1171875,
-                "y": 366.00036621094,
-                "z": 154262.765625
-            }
-        },
-        "type": "Feature"
+    "display_name": "Marj as Sultan South",
+    "radio": [
+      "airfield8_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "27"
+    ],
+    "towers": [
+      "externalId:180004"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Der_Salman.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Der_Salman.rn4",
+    "id": "Der_Salman",
+    "beacons": {},
+    "class": "4"
+  },
+  {
+    "reference_point": {
+      "y": 73973.316406,
+      "x": -158713.039063
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.976931824797,
-                33.84290182523,
-                894.38146972656
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Rayak",
-            "name": "Rayak",
-            "point": {
-                "x": -131016.3046875,
-                "y": 894.38146972656,
-                "z": 3064.6674804688
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:190012",
+      "externalId:190015"
+    ],
+    "code": "OS61",
+    "runways": {
+      "0": {
+        "start": "06",
+        "id": -1,
+        "name": "06-24",
+        "end": "24"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.9986872567,
-                34.583953310218,
-                4.410843372345
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Rene Mouawad",
-            "name": "Rene Mouawad",
-            "point": {
-                "x": -48864.37109375,
-                "y": 4.410843372345,
-                "z": 7502.1235351562
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Al-Dumayr"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.572651208285,
-                32.97928167649,
-                263.91259765625
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Rosh Pina",
-            "name": "Rosh Pina",
-            "point": {
-                "x": -225657.046875,
-                "y": 263.91259765625,
-                "z": -37520.85546875
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -157699.671875,
+        315,
+        73906.828125
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                37.204068911005,
-                33.680052164369,
-                693.00067138672
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Sayqal",
-            "name": "Sayqal",
-            "point": {
-                "x": -151737.078125,
-                "y": 693.00067138672,
-                "z": 116320.8671875
-            }
-        },
-        "type": "Feature"
+    "display_name": "Al-Dumayr",
+    "radio": [
+      "airfield9_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "24"
+    ],
+    "towers": [
+      "externalId:190016"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Dumayr.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Dumayr.rn4",
+    "shelters": [
+      "externalId:190000",
+      "externalId:190001",
+      "externalId:190002",
+      "externalId:190003",
+      "externalId:190004",
+      "externalId:190005",
+      "externalId:190006",
+      "externalId:190007",
+      "externalId:190008",
+      "externalId:190009"
+    ],
+    "warehouses": [
+      "externalId:190010",
+      "externalId:190011",
+      "externalId:190013",
+      "externalId:190014"
+    ],
+    "id": "Dumayr",
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -92619.707031,
+      "x": -283538.6875
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.894468654443,
-                34.494640308217,
-                803.97332763672
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Shayrat",
-            "name": "Shayrat",
-            "point": {
-                "x": -60850.84375,
-                "y": 803.97332763672,
-                "z": 89478.2890625
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:200002",
+      "externalId:200003",
+      "externalId:200004",
+      "externalId:200005"
+    ],
+    "code": "LLES",
+    "runways": {
+      "0": {
+        "start": "09",
+        "id": -1,
+        "name": "09-27",
+        "end": "27"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                38.551250775516,
-                35.755613770805,
-                335.00033569336
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Tabqa",
-            "name": "Tabqa",
-            "point": {
-                "x": 77069.8359375,
-                "y": 335.00033569336,
-                "z": 242231.75
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Eyn Shemer"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                36.785894108748,
-                35.973223381816,
-                311.00030517578
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Taftanaz",
-            "name": "Taftanaz",
-            "point": {
-                "x": 103379,
-                "y": 311.00030517578,
-                "z": 83165.9296875
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -283429.34375,
+        16.999996,
+        -92686.96875
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                37.645765105063,
-                34.522531432479,
-                548.00054931641
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Tiyas",
-            "name": "Tiyas",
-            "point": {
-                "x": -58937.7421875,
-                "y": 548.00054931641,
-                "z": 158507.125
-            }
-        },
-        "type": "Feature"
+    "display_name": "Eyn Shemer",
+    "radio": [
+      "airfield10_0"
+    ],
+    "civilian": true,
+    "id": "Eyn_Shemer",
+    "towers": [
+      "externalId:200006"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Eyn_Shemer.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Eyn_Shemer.rn4",
+    "warehouses": [
+      "externalId:200000",
+      "externalId:200001"
+    ],
+    "runwayName": [
+      "27"
+    ],
+    "beacons": {},
+    "class": "3"
+  },
+  {
+    "reference_point": {
+      "y": 147379.28125,
+      "x": 210314.796875
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.683990308563,
-                34.286960508475,
-                188.67385864258
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Wujah Al Hajar",
-            "name": "Wujah Al Hajar",
-            "point": {
-                "x": -80912.171875,
-                "y": 188.67385864258,
-                "z": -22454.466796875
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:210000",
+      "externalId:210001",
+      "externalId:210002"
+    ],
+    "code": "LTAJ",
+    "runways": {
+      "0": {
+        "start": "10",
+        "id": -1,
+        "name": "10-28",
+        "end": "28"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                32.286068490305,
-                36.297823085147,
-                11.104940414429
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Gazipasa",
-            "name": "Gazipasa",
-            "point": {
-                "x": 158094.9375,
-                "y": 11.104940414429,
-                "z": -320441.0625
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Gaziantep"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                40.190671143219,
-                35.280828897833,
-                204.59194946289
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Deir ez-Zor",
-            "name": "Deir ez-Zor",
-            "point": {
-                "x": 24970.5390625,
-                "y": 204.59194946289,
-                "z": 391081.8125
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        209948.46875,
+        353.535828,
+        148058.765625
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                33.275002451661,
-                35.150919822632,
-                210.00021362305
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Nicosia",
-            "name": "Nicosia",
-            "point": {
-                "x": 24950.58984375,
-                "y": 210.00021362305,
-                "z": -238947.84375
-            }
-        },
-        "type": "Feature"
+    "display_name": "Gaziantep",
+    "radio": [
+      "airfield11_0"
+    ],
+    "civilian": true,
+    "runwayName": [
+      "28"
+    ],
+    "towers": [
+      "externalId:210003"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Gaziantep.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Gaziantep.rn4",
+    "id": "Gaziantep",
+    "beacons": [
+      {
+        "runwayName": "10-28",
+        "runwayId": 1,
+        "runwaySide": "28",
+        "beaconId": "airfield11_1"
+      },
+      {
+        "beaconId": "airfield11_2"
+      },
+      {
+        "beaconId": "airfield11_3"
+      }
+    ],
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 207219.265625,
+      "x": -279366.765625
     },
-    {
-        "geometry": {
-            "coordinates": [
-                32.974818319372,
-                34.594065664734,
-                18.946063995361
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Akrotiri",
-            "name": "Akrotiri",
-            "point": {
-                "x": -35297.09375,
-                "y": 18.946063995361,
-                "z": -270072.28125
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:220000",
+      "externalId:220015"
+    ],
+    "code": "OJHR",
+    "runways": {
+      "0": {
+        "start": "28",
+        "id": -1,
+        "name": "28-10",
+        "end": "10"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                33.721655835024,
-                35.016621196807,
-                84.00008392334
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Kingsfield",
-            "name": "Kingsfield",
-            "point": {
-                "x": 7776.0004882812,
-                "y": 84.00008392334,
-                "z": -198993.40625
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "H4"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                32.471801697209,
-                34.72239325815,
-                12.305082321167
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Paphos",
-            "name": "Paphos",
-            "point": {
-                "x": -18147.3125,
-                "y": 12.305082321167,
-                "z": -315369.5
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -279499.5625,
+        344,
+        207151.875
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                33.613584325006,
-                34.865619667975,
-                5.0000047683716
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Larnaca",
-            "name": "Larnaca",
-            "point": {
-                "x": -8466.0517578125,
-                "y": 5.0000047683716,
-                "z": -209773.46875
-            }
-        },
-        "type": "Feature"
+    "display_name": "H4",
+    "radio": [
+      "airfield12_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "10"
+    ],
+    "towers": [
+      "externalId:220016"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/H4.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/H4.rn4",
+    "shelters": [
+      "externalId:220003",
+      "externalId:220004",
+      "externalId:220005",
+      "externalId:220006",
+      "externalId:220007",
+      "externalId:220008",
+      "externalId:220009",
+      "externalId:220010",
+      "externalId:220011",
+      "externalId:220012",
+      "externalId:220013",
+      "externalId:220014"
+    ],
+    "warehouses": [
+      "externalId:220001",
+      "externalId:220002"
+    ],
+    "id": "H4",
+    "beacons": {},
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": -87704.417969,
+      "x": -242620.8125
     },
-    {
-        "geometry": {
-            "coordinates": [
-                33.321670653775,
-                35.106311731529,
-                231.00024414062
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Lakatamia",
-            "name": "Lakatamia",
-            "point": {
-                "x": 19750.611328125,
-                "y": 231.00024414062,
-                "z": -234973.515625
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:230003",
+      "externalId:230004",
+      "externalId:230005",
+      "externalId:230006"
+    ],
+    "code": "LLHA",
+    "runways": {
+      "0": {
+        "start": "34",
+        "id": 1,
+        "name": "34-16",
+        "end": "16"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                33.49011058133,
-                35.159249791336,
-                95.000091552734
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Ercan",
-            "name": "Ercan",
-            "point": {
-                "x": 24764.4765625,
-                "y": 95.000091552734,
-                "z": -219271.6875
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Haifa"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                33.707277702803,
-                35.236403909864,
-                45.000045776367
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Gecitkale",
-            "name": "Gecitkale",
-            "point": {
-                "x": 32254.640625,
-                "y": 45.000045776367,
-                "z": -199005.984375
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -242649.6875,
+        3.000013,
+        -87601.390625
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                33.26701429987,
-                35.278334798852,
-                235.00022888184
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Pinarbashi",
-            "name": "Pinarbashi",
-            "point": {
-                "x": 39146.83203125,
-                "y": 235.00022888184,
-                "z": -238857.234375
-            }
-        },
-        "type": "Feature"
+    "display_name": "Haifa",
+    "radio": [
+      "airfield13_0"
+    ],
+    "civilian": true,
+    "id": "Haifa",
+    "towers": [
+      "externalId:230007"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Haifa.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Haifa.rn4",
+    "warehouses": [
+      "externalId:230000",
+      "externalId:230001",
+      "externalId:230002"
+    ],
+    "runwayName": [
+      "16"
+    ],
+    "beacons": {},
+    "class": "3"
+  },
+  {
+    "reference_point": {
+      "y": 74333.1875,
+      "x": 8662.594238
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.127285739707,
-                33.10790532693,
-                115.27894592285
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Naqoura",
-            "name": "Naqoura",
-            "point": {
-                "x": -209938.1875,
-                "y": 115.27894592285,
-                "z": -78642.609375
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:240017"
+    ],
+    "code": "OS58",
+    "runways": {
+      "0": {
+        "start": "27",
+        "id": -1,
+        "name": "27-09",
+        "end": "09"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                39.732582868536,
-                32.940993052246,
-                774.86505126953
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "H3",
-            "name": "H3",
-            "point": {
-                "x": -234882.46875,
-                "y": 774.86505126953,
-                "z": 351282.125
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Hama"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                39.60662588777,
-                33.070356444511,
-                785.70843505859
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "H3 Northwest",
-            "name": "H3 Northwest",
-            "point": {
-                "x": -220615.71875,
-                "y": 785.70843505859,
-                "z": 339424.875
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        8882.724609,
+        149.999985,
+        74042.46875
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                39.612247285995,
-                32.738030133825,
-                814.00079345703
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "H3 Southwest",
-            "name": "H3 Southwest",
-            "point": {
-                "x": -257454.703125,
-                "y": 814.00079345703,
-                "z": 340163.46875
-            }
-        },
-        "type": "Feature"
+    "display_name": "Hama",
+    "radio": [
+      "airfield14_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "09"
+    ],
+    "towers": [
+      "externalId:240018"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Hama.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Hama.rn4",
+    "shelters": [
+      "externalId:240000",
+      "externalId:240001",
+      "externalId:240002",
+      "externalId:240003",
+      "externalId:240004",
+      "externalId:240005",
+      "externalId:240006",
+      "externalId:240007",
+      "externalId:240008",
+      "externalId:240009",
+      "externalId:240010",
+      "externalId:240011",
+      "externalId:240012",
+      "externalId:240015"
+    ],
+    "warehouses": [
+      "externalId:240013",
+      "externalId:240014",
+      "externalId:240016"
+    ],
+    "id": "Hama",
+    "beacons": {},
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 39418.742188,
+      "x": 147687.484375
     },
-    {
-        "geometry": {
-            "coordinates": [
-                39.142215977076,
-                32.403696420912,
-                908.02374267578
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Ruwayshid",
-            "name": "Ruwayshid",
-            "point": {
-                "x": -294673.28125,
-                "y": 908.02374267578,
-                "z": 296174.875
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:250002"
+    ],
+    "code": "LTDA",
+    "runways": {
+      "0": {
+        "start": "22",
+        "id": -1,
+        "name": "22-04",
+        "end": "04"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                38.912852189935,
-                37.460456062347,
-                823.94732666016
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Sanliurfa",
-            "name": "Sanliurfa",
-            "point": {
-                "x": 266091.8125,
-                "y": 823.94732666016,
-                "z": 275093.9375
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Hatay"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                38.587524391694,
-                36.546920540733,
-                431.39971923828
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Kharab Ishk",
-            "name": "Kharab Ishk",
-            "point": {
-                "x": 164825.84375,
-                "y": 431.39971923828,
-                "z": 245883.84375
-            }
-        },
-        "type": "Feature"
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        147503.71875,
+        39.522724,
+        39317.742188
+      ]
     },
-    {
-        "geometry": {
-            "coordinates": [
-                38.924054611964,
-                36.263473166914,
-                299.00030517578
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Tal Siman",
-            "name": "Tal Siman",
-            "point": {
-                "x": 133308.796875,
-                "y": 299.00030517578,
-                "z": 275979.0625
-            }
-        },
-        "type": "Feature"
+    "display_name": "Hatay",
+    "radio": [
+      "airfield15_0"
+    ],
+    "civilian": true,
+    "id": "Hatay",
+    "towers": [
+      "externalId:250003"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Hatay.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Hatay.rn4",
+    "warehouses": [
+      "externalId:250000",
+      "externalId:250001"
+    ],
+    "runwayName": [
+      "04"
+    ],
+    "beacons": [
+      {
+        "runwayName": "04-22",
+        "runwayId": 1,
+        "runwaySide": "04",
+        "beaconId": "airfield15_1"
+      },
+      {
+        "runwayName": "04-22",
+        "runwayId": 1,
+        "runwaySide": "04",
+        "beaconId": "airfield15_2"
+      },
+      {
+        "beaconId": "airfield15_3"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -35240.347656,
+      "x": 221207.773438
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.900560445898,
-                35.021918232008,
-                0
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Raj al Issa East",
-            "name": "Raj al Issa East",
-            "point": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        "type": "Feature"
+    "fueldepots": [
+      "externalId:260007",
+      "externalId:260008",
+      "externalId:260009",
+      "externalId:260010",
+      "externalId:260011",
+      "externalId:260012",
+      "externalId:260013"
+    ],
+    "code": "LTAG",
+    "runways": {
+      "0": {
+        "start": "05",
+        "id": 1,
+        "name": "05-23",
+        "end": "23"
+      }
     },
-    {
-        "geometry": {
-            "coordinates": [
-                35.900560445898,
-                35.021918232008,
-                0
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "Raj al Issa West",
-            "name": "Raj al Issa West",
-            "point": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        "type": "Feature"
+    "projectors": {},
+    "names": {
+      "en": "Incirlik"
     },
-    {
-        "geometry": {
-            "coordinates": [
-                38.614884032103,
-                33.506450284054,
-                710.00073242188
-            ],
-            "type": "Point"
-        },
-        "properties": {
-            "category": "AIRDROME",
-            "id": "At Tanf",
-            "name": "At Tanf",
-            "point": {
-                "x": -172365.28125,
-                "y": 710.00073242188,
-                "z": 247031.90625
-            }
-        },
-        "type": "Feature"
-    }
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        221591.796875,
+        39.929447,
+        -35455.03125
+      ]
+    },
+    "display_name": "Incirlik",
+    "radio": [
+      "airfield16_0"
+    ],
+    "civilian": false,
+    "id": "Incirlik",
+    "towers": [
+      "externalId:260024"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Incirlik.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Incirlik.rn4",
+    "warehouses": [
+      "externalId:260000",
+      "externalId:260001",
+      "externalId:260002",
+      "externalId:260003",
+      "externalId:260004",
+      "externalId:260005",
+      "externalId:260006",
+      "externalId:260014",
+      "externalId:260015",
+      "externalId:260016",
+      "externalId:260017",
+      "externalId:260018",
+      "externalId:260019",
+      "externalId:260020",
+      "externalId:260021",
+      "externalId:260022",
+      "externalId:260023"
+    ],
+    "runwayName": [
+      "23"
+    ],
+    "beacons": [
+      {
+        "runwayName": "05-23",
+        "runwayId": 1,
+        "runwaySide": "05",
+        "beaconId": "airfield16_1"
+      },
+      {
+        "runwayName": "05-23",
+        "runwayId": 1,
+        "runwaySide": "05",
+        "beaconId": "airfield16_2"
+      },
+      {
+        "runwayName": "05-23",
+        "runwayId": 1,
+        "runwaySide": "23",
+        "beaconId": "airfield16_3"
+      },
+      {
+        "runwayName": "05-23",
+        "runwayId": 1,
+        "runwaySide": "23",
+        "beaconId": "airfield16_4"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 187020.734375,
+      "x": 115359.652344
+    },
+    "fueldepots": [
+      "externalId:270012",
+      "externalId:270013",
+      "externalId:270014",
+      "externalId:270015"
+    ],
+    "code": "OS62",
+    "runways": {
+      "0": {
+        "start": "28",
+        "id": -1,
+        "name": "28-10",
+        "end": "10"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Jirah"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        115122.28125,
+        179.07341,
+        187139.03125
+      ]
+    },
+    "display_name": "Jirah",
+    "radio": [
+      "airfield17_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "10"
+    ],
+    "towers": [
+      "externalId:270016"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Jirah.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Jirah.rn4",
+    "shelters": [
+      "externalId:270000",
+      "externalId:270001",
+      "externalId:270002",
+      "externalId:270003",
+      "externalId:270004",
+      "externalId:270005",
+      "externalId:270006",
+      "externalId:270007",
+      "externalId:270008",
+      "externalId:270009"
+    ],
+    "warehouses": [
+      "externalId:270010",
+      "externalId:270011"
+    ],
+    "id": "Jirah",
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 56161.078125,
+      "x": -218620.25
+    },
+    "fueldepots": [
+      "externalId:280010",
+      "externalId:280011"
+    ],
+    "code": "OS69",
+    "runways": [
+      {
+        "start": "15",
+        "id": 2,
+        "name": "15-33",
+        "end": "33"
+      }
+    ],
+    "projectors": {},
+    "names": {
+      "en": "Khalkhalah"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -217262.5,
+        377.335052,
+        55049.261719
+      ]
+    },
+    "display_name": "Khalkhalah",
+    "radio": [
+      "airfield18_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "25",
+      "15",
+      "33"
+    ],
+    "towers": [
+      "externalId:280016"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Khalkhalah.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Khalkhalah.rn4",
+    "shelters": [
+      "externalId:280000",
+      "externalId:280001",
+      "externalId:280002",
+      "externalId:280003",
+      "externalId:280004",
+      "externalId:280005",
+      "externalId:280006",
+      "externalId:280007",
+      "externalId:280008",
+      "externalId:280009"
+    ],
+    "warehouses": [
+      "externalId:280012",
+      "externalId:280013",
+      "externalId:280014",
+      "externalId:280015"
+    ],
+    "id": "Khalkhalah",
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 24944.355658,
+      "x": -296592.405413
+    },
+    "fueldepots": [
+      "externalId:290022"
+    ],
+    "code": "OJMF",
+    "runways": {
+      "0": {
+        "start": "31",
+        "id": -1,
+        "name": "31-13",
+        "end": "13"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "King Hussein Air College"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -296778.5,
+        335.999207,
+        25138.886719
+      ]
+    },
+    "display_name": "King Hussein Air College",
+    "radio": [
+      "airfield19_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "13"
+    ],
+    "towers": [
+      "externalId:290028"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/King_Hussein.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/King_Hussein.rn4",
+    "shelters": [
+      "externalId:290000",
+      "externalId:290001",
+      "externalId:290002",
+      "externalId:290003",
+      "externalId:290004",
+      "externalId:290005",
+      "externalId:290006",
+      "externalId:290007",
+      "externalId:290008",
+      "externalId:290009",
+      "externalId:290010",
+      "externalId:290011",
+      "externalId:290012",
+      "externalId:290013",
+      "externalId:290014",
+      "externalId:290015",
+      "externalId:290016",
+      "externalId:290017",
+      "externalId:290018",
+      "externalId:290019",
+      "externalId:290020",
+      "externalId:290021",
+      "externalId:290023",
+      "externalId:290024",
+      "externalId:290027"
+    ],
+    "warehouses": [
+      "externalId:290025",
+      "externalId:290026"
+    ],
+    "id": "King_Hussein",
+    "beacons": {},
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": -34500.691406,
+      "x": -199486.164063
+    },
+    "fueldepots": [
+      "externalId:300000"
+    ],
+    "code": "LLKS",
+    "runways": {
+      "0": {
+        "start": "03",
+        "id": -1,
+        "name": "03-21",
+        "end": "21"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Kiryat Shmona"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -199502.84375,
+        57,
+        -34712.242188
+      ]
+    },
+    "display_name": "Kiryat Shmona",
+    "radio": [
+      "airfield20_0"
+    ],
+    "civilian": true,
+    "id": "Kiryat_Shmona",
+    "towers": [
+      "externalId:300002"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Kiryat_Shmona.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Kiryat_Shmona.rn4",
+    "warehouses": [
+      "externalId:300001"
+    ],
+    "runwayName": [
+      "21"
+    ],
+    "beacons": {},
+    "class": "3"
+  },
+  {
+    "reference_point": {
+      "y": 5841.909424,
+      "x": 41994.498047
+    },
+    "fueldepots": [
+      "externalId:310004"
+    ],
+    "code": "OSLK",
+    "runways": {
+      "0": {
+        "start": "17L",
+        "id": 1,
+        "name": "17L-35R",
+        "end": "35R"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Bassel Al-Assad"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        41859.964844,
+        27.674244,
+        6002.731445
+      ]
+    },
+    "display_name": "Bassel Al-Assad",
+    "radio": [
+      "airfield21_0"
+    ],
+    "civilian": false,
+    "id": "Latakia",
+    "towers": [
+      "externalId:310005"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Latakia.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Latakia.rn4",
+    "warehouses": [
+      "externalId:310000",
+      "externalId:310001",
+      "externalId:310002",
+      "externalId:310003"
+    ],
+    "runwayName": [
+      "35R"
+    ],
+    "beacons": [
+      {
+        "runwayName": "17R-35L",
+        "runwayId": 1,
+        "runwaySide": "17R",
+        "beaconId": "airfield21_1"
+      },
+      {
+        "beaconId": "airfield21_2"
+      },
+      {
+        "beaconId": "airfield21_3"
+      }
+    ],
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 47506.718825,
+      "x": -170244.028992
+    },
+    "fueldepots": [
+      "externalId:320001"
+    ],
+    "code": "",
+    "runways": {
+      "0": {
+        "start": "08",
+        "id": -1,
+        "name": "08-26",
+        "end": "26"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Marj as Sultan North"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -170127.640625,
+        307.063232,
+        47461.453125
+      ]
+    },
+    "display_name": "Marj as Sultan North",
+    "radio": [
+      "airfield22_0"
+    ],
+    "civilian": false,
+    "id": "Marj_Al_Sultan",
+    "towers": [
+      "externalId:320003"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Marj_Al_Sultan.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Marj_Al_Sultan.rn4",
+    "warehouses": [
+      "externalId:320000",
+      "externalId:320002"
+    ],
+    "runwayName": [
+      "26"
+    ],
+    "beacons": {},
+    "class": "4"
+  },
+  {
+    "reference_point": {
+      "y": 46043.976563,
+      "x": -194233.6875
+    },
+    "fueldepots": [
+      "externalId:330004",
+      "externalId:330005"
+    ],
+    "code": "OS63",
+    "runways": [
+      {
+        "start": "06L",
+        "id": 1,
+        "name": "06L-24R",
+        "end": "24R"
+      }
+    ],
+    "projectors": {},
+    "names": {
+      "en": "Marj Ruhayyil"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -194080.34375,
+        336.688965,
+        45975.6875
+      ]
+    },
+    "display_name": "Marj Ruhayyil",
+    "radio": [
+      "airfield23_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "24L",
+      "06L",
+      "24R"
+    ],
+    "towers": [
+      "externalId:330015"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Marj_Ruhayyil.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Marj_Ruhayyil.rn4",
+    "shelters": [
+      "externalId:330000",
+      "externalId:330001",
+      "externalId:330002",
+      "externalId:330003",
+      "externalId:330006",
+      "externalId:330007",
+      "externalId:330008",
+      "externalId:330009",
+      "externalId:330010",
+      "externalId:330011",
+      "externalId:330012"
+    ],
+    "warehouses": [
+      "externalId:330013",
+      "externalId:330014"
+    ],
+    "id": "Marj_Ruhayyil",
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -71068.832031,
+      "x": -266965.015625
+    },
+    "code": "LLMG",
+    "runways": {
+      "0": {
+        "start": "09",
+        "id": -1,
+        "name": "09-27",
+        "end": "27"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Megiddo"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -266816.625,
+        27.499998,
+        -71121.265625
+      ]
+    },
+    "display_name": "Megiddo",
+    "radio": [
+      "airfield24_0"
+    ],
+    "civilian": false,
+    "id": "Megiddo",
+    "towers": [
+      "externalId:340003"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Megiddo.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Megiddo.rn4",
+    "warehouses": [
+      "externalId:340000",
+      "externalId:340001",
+      "externalId:340002"
+    ],
+    "runwayName": [
+      "27"
+    ],
+    "beacons": {},
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 24865.682617,
+      "x": -172160.453125
+    },
+    "fueldepots": [
+      "externalId:350000"
+    ],
+    "code": "OS67",
+    "runways": {
+      "0": {
+        "start": "24",
+        "id": -1,
+        "name": "24-06",
+        "end": "06"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Mezzeh"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -171976.6875,
+        376.512543,
+        24858.078125
+      ]
+    },
+    "display_name": "Mezzeh",
+    "radio": [
+      "airfield25_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "06"
+    ],
+    "towers": [
+      "externalId:350009"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Mezzeh.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Mezzeh.rn4",
+    "shelters": [
+      "externalId:350001",
+      "externalId:350003",
+      "externalId:350004",
+      "externalId:350005",
+      "externalId:350006",
+      "externalId:350007",
+      "externalId:350008"
+    ],
+    "warehouses": [
+      "externalId:350002"
+    ],
+    "id": "Mezzeh",
+    "beacons": {
+      "0": {
+        "beaconId": "airfield25_0"
+      }
+    },
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 107430.609375,
+      "x": 163697.53125
+    },
+    "fueldepots": [
+      "externalId:360008"
+    ],
+    "code": "OS71",
+    "runways": [
+      {
+        "start": "04",
+        "id": 2,
+        "name": "04-22",
+        "end": "22"
+      }
+    ],
+    "projectors": {},
+    "names": {
+      "en": "Minakh"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        163811.125,
+        246,
+        107549.375
+      ]
+    },
+    "display_name": "Minakh",
+    "radio": [
+      "airfield26_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "28",
+      "04",
+      "22"
+    ],
+    "towers": [
+      "externalId:360012"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Minakh.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Minakh.rn4",
+    "shelters": [
+      "externalId:360000",
+      "externalId:360001",
+      "externalId:360002",
+      "externalId:360003",
+      "externalId:360004"
+    ],
+    "warehouses": [
+      "externalId:360005",
+      "externalId:360006",
+      "externalId:360007",
+      "externalId:360009",
+      "externalId:360010",
+      "externalId:360011"
+    ],
+    "id": "Minakh",
+    "beacons": {},
+    "class": "3"
+  },
+  {
+    "reference_point": {
+      "y": 123125.304688,
+      "x": 125576.863281
+    },
+    "fueldepots": [
+      "externalId:370005",
+      "externalId:370006",
+      "externalId:370007"
+    ],
+    "code": "OSAP",
+    "runways": {
+      "0": {
+        "start": "09",
+        "id": -1,
+        "name": "09-27",
+        "end": "27"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Aleppo"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        125681.1875,
+        191.095139,
+        123286.757813
+      ]
+    },
+    "display_name": "Aleppo",
+    "radio": [
+      "airfield27_0"
+    ],
+    "civilian": true,
+    "runwayName": [
+      "27"
+    ],
+    "towers": [
+      "externalId:370008"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Nejrab.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Nejrab.rn4",
+    "shelters": [
+      "externalId:370000",
+      "externalId:370001",
+      "externalId:370002",
+      "externalId:370003"
+    ],
+    "warehouses": [
+      "externalId:370004"
+    ],
+    "id": "Nejrab",
+    "beacons": [
+      {
+        "beaconId": "airfield27_1"
+      },
+      {
+        "beaconId": "airfield27_2"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 220114.742188,
+      "x": -55704.023438
+    },
+    "fueldepots": [
+      "externalId:380001",
+      "externalId:380002"
+    ],
+    "code": "OSPR",
+    "runways": {
+      "0": {
+        "start": "26",
+        "id": -1,
+        "name": "26-08",
+        "end": "08"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Palmyra"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -55424.109375,
+        202.499329,
+        220184.3125
+      ]
+    },
+    "display_name": "Palmyra",
+    "radio": [
+      "airfield28_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "08"
+    ],
+    "towers": [
+      "externalId:380017"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Palmyra.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Palmyra.rn4",
+    "shelters": [
+      "externalId:380003",
+      "externalId:380004",
+      "externalId:380005",
+      "externalId:380006",
+      "externalId:380007",
+      "externalId:380008",
+      "externalId:380009",
+      "externalId:380010",
+      "externalId:380011",
+      "externalId:380012",
+      "externalId:380013",
+      "externalId:380014",
+      "externalId:380015"
+    ],
+    "warehouses": [
+      "externalId:380000",
+      "externalId:380016"
+    ],
+    "id": "Palmyra",
+    "beacons": [
+      {
+        "beaconId": "airfield28_1"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 37221.970678,
+      "x": -174597.761535
+    },
+    "fueldepots": [
+      "externalId:390003",
+      "externalId:390004"
+    ],
+    "code": "",
+    "runways": {
+      "0": {
+        "start": "05",
+        "id": 1,
+        "name": "05-23",
+        "end": "23"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Qabr as Sitt"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -174573.75,
+        325.949707,
+        37102.695313
+      ]
+    },
+    "display_name": "Qabr as Sitt",
+    "radio": [
+      "airfield29_0"
+    ],
+    "civilian": false,
+    "id": "Qabr_al_Sitt",
+    "towers": [
+      "externalId:390005"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Qabr_al_Sitt.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Qabr_al_Sitt.rn4",
+    "warehouses": [
+      "externalId:390000",
+      "externalId:390001",
+      "externalId:390002"
+    ],
+    "runwayName": [
+      "23"
+    ],
+    "beacons": {},
+    "class": "4"
+  },
+  {
+    "reference_point": {
+      "y": -75789.410156,
+      "x": -259102.132813
+    },
+    "fueldepots": [
+      "externalId:400002"
+    ],
+    "code": "LLRD",
+    "runways": [
+      {
+        "start": "15",
+        "id": 3,
+        "name": "15-33",
+        "end": "33"
+      },
+      {
+        "start": "11",
+        "id": 2,
+        "name": "11-29",
+        "end": "29"
+      }
+    ],
+    "projectors": {},
+    "names": {
+      "en": "Ramat David"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -259247.21875,
+        30.501793,
+        -75488.835938
+      ]
+    },
+    "display_name": "Ramat David",
+    "radio": [
+      "airfield30_0"
+    ],
+    "civilian": false,
+    "id": "Ramat_David",
+    "towers": [
+      "externalId:400004"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Ramat_David.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Ramat_David.rn4",
+    "warehouses": [
+      "externalId:400000",
+      "externalId:400001",
+      "externalId:400003"
+    ],
+    "runwayName": [
+      "27",
+      "15",
+      "33",
+      "11",
+      "29"
+    ],
+    "beacons": [
+      {
+        "beaconId": "airfield30_1"
+      },
+      {
+        "runwayName": "15-33",
+        "runwayId": 3,
+        "runwaySide": "33",
+        "beaconId": "airfield30_2"
+      },
+      {
+        "runwayName": "15-33",
+        "runwayId": 3,
+        "runwaySide": "33",
+        "beaconId": "airfield30_3"
+      }
+    ],
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 155253.8125,
+      "x": 125810.890625
+    },
+    "fueldepots": [
+      "externalId:410005",
+      "externalId:410006",
+      "externalId:410007",
+      "externalId:410028",
+      "externalId:410029",
+      "externalId:410030",
+      "externalId:410031"
+    ],
+    "code": "OS66",
+    "runways": {
+      "0": {
+        "start": "10",
+        "id": -1,
+        "name": "10-28",
+        "end": "28"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Kuweires"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        125761.40625,
+        182.999786,
+        155216.375
+      ]
+    },
+    "display_name": "Kuweires",
+    "radio": [
+      "airfield31_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "28"
+    ],
+    "towers": [
+      "externalId:410049"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Rasin_El_Aboud.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Rasin_El_Aboud.rn4",
+    "shelters": [
+      "externalId:410009",
+      "externalId:410010",
+      "externalId:410011",
+      "externalId:410012",
+      "externalId:410013",
+      "externalId:410014",
+      "externalId:410015",
+      "externalId:410016",
+      "externalId:410017"
+    ],
+    "warehouses": [
+      "externalId:410000",
+      "externalId:410001",
+      "externalId:410002",
+      "externalId:410003",
+      "externalId:410004",
+      "externalId:410008",
+      "externalId:410018",
+      "externalId:410019",
+      "externalId:410020",
+      "externalId:410021",
+      "externalId:410022",
+      "externalId:410023",
+      "externalId:410024",
+      "externalId:410025",
+      "externalId:410026",
+      "externalId:410027",
+      "externalId:410032",
+      "externalId:410033",
+      "externalId:410034",
+      "externalId:410035",
+      "externalId:410036",
+      "externalId:410037",
+      "externalId:410038",
+      "externalId:410039",
+      "externalId:410040",
+      "externalId:410041",
+      "externalId:410042",
+      "externalId:410043",
+      "externalId:410044",
+      "externalId:410045",
+      "externalId:410046",
+      "externalId:410047",
+      "externalId:410048"
+    ],
+    "id": "Rasin_El_Aboud",
+    "beacons": {},
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 4053.336304,
+      "x": -130132.492188
+    },
+    "fueldepots": [
+      "externalId:420002"
+    ],
+    "code": "OLRA",
+    "runways": {
+      "0": {
+        "start": "04",
+        "id": -1,
+        "name": "04-22",
+        "end": "22"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Rayak"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -130139.90625,
+        464.743805,
+        4257.183594
+      ]
+    },
+    "display_name": "Rayak",
+    "radio": [
+      "airfield32_0"
+    ],
+    "civilian": false,
+    "id": "Rayak",
+    "towers": [
+      "externalId:420004"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Rayak.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Rayak.rn4",
+    "warehouses": [
+      "externalId:420000",
+      "externalId:420001",
+      "externalId:420003"
+    ],
+    "runwayName": [
+      "22"
+    ],
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 8690.693604,
+      "x": -48306.007813
+    },
+    "fueldepots": [
+      "externalId:430000",
+      "externalId:430001"
+    ],
+    "code": "OLKA",
+    "runways": {
+      "0": {
+        "start": "06",
+        "id": -1,
+        "name": "06-24",
+        "end": "24"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Rene Mouawad"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -48068.890625,
+        4.000001,
+        8719.304688
+      ]
+    },
+    "display_name": "Rene Mouawad",
+    "radio": [
+      "airfield33_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "24"
+    ],
+    "towers": [
+      "externalId:430009"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Rene_Mouawad.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Rene_Mouawad.rn4",
+    "shelters": [
+      "externalId:430003",
+      "externalId:430005",
+      "externalId:430006",
+      "externalId:430007",
+      "externalId:430008"
+    ],
+    "warehouses": [
+      "externalId:430002",
+      "externalId:430004"
+    ],
+    "id": "Rene_Mouawad",
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -37687.536255,
+      "x": -225277.733943
+    },
+    "fueldepots": [
+      "externalId:440003",
+      "externalId:440004",
+      "externalId:440005",
+      "externalId:440006",
+      "externalId:440007",
+      "externalId:440008"
+    ],
+    "code": "LLIB",
+    "runways": {
+      "0": {
+        "start": "33",
+        "id": -1,
+        "name": "33-15",
+        "end": "15"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Rosh Pina"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -225411.40625,
+        141.094345,
+        -37774.984375
+      ]
+    },
+    "display_name": "Rosh Pina",
+    "radio": [
+      "airfield34_0"
+    ],
+    "civilian": false,
+    "id": "Rosh_Pina",
+    "towers": [
+      "externalId:440009"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Rosh_Pina.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Rosh_Pina.rn4",
+    "warehouses": [
+      "externalId:440000",
+      "externalId:440001",
+      "externalId:440002"
+    ],
+    "runwayName": [
+      "15"
+    ],
+    "beacons": {
+      "0": {
+        "beaconId": "airfield34_0"
+      }
+    },
+    "class": "4"
+  },
+  {
+    "reference_point": {
+      "y": 117529.734375,
+      "x": -151781.367188
+    },
+    "fueldepots": [
+      "externalId:450014",
+      "externalId:450015",
+      "externalId:450016",
+      "externalId:450018",
+      "externalId:450019",
+      "externalId:450020",
+      "externalId:450021",
+      "externalId:450022",
+      "externalId:450023",
+      "externalId:450024",
+      "externalId:450035",
+      "externalId:450036",
+      "externalId:450037",
+      "externalId:450038",
+      "externalId:450039",
+      "externalId:450040"
+    ],
+    "code": "OS68",
+    "runways": {
+      "0": {
+        "start": "08",
+        "id": 1,
+        "name": "08-26",
+        "end": "26"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Sayqal"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -151046.8125,
+        346.5,
+        117993.890625
+      ]
+    },
+    "display_name": "Sayqal",
+    "radio": [
+      "airfield35_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "26"
+    ],
+    "towers": [
+      "externalId:450041"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Sayqal.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Sayqal.rn4",
+    "shelters": [
+      "externalId:450000",
+      "externalId:450001",
+      "externalId:450002",
+      "externalId:450003",
+      "externalId:450026",
+      "externalId:450027",
+      "externalId:450028",
+      "externalId:450029",
+      "externalId:450030",
+      "externalId:450031",
+      "externalId:450032",
+      "externalId:450033",
+      "externalId:450034"
+    ],
+    "warehouses": [
+      "externalId:450004",
+      "externalId:450005",
+      "externalId:450006",
+      "externalId:450007",
+      "externalId:450008",
+      "externalId:450009",
+      "externalId:450010",
+      "externalId:450011",
+      "externalId:450012",
+      "externalId:450013",
+      "externalId:450017",
+      "externalId:450025"
+    ],
+    "id": "Sayqal",
+    "beacons": {},
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 90675.136719,
+      "x": -61368.207031
+    },
+    "fueldepots": [
+      "externalId:460006",
+      "externalId:460007",
+      "externalId:460008"
+    ],
+    "code": "OS65",
+    "runways": {
+      "0": {
+        "start": "11",
+        "id": -1,
+        "name": "11-29",
+        "end": "29"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Shayrat"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -61673.234375,
+        401.986145,
+        91778.507813
+      ]
+    },
+    "display_name": "Shayrat",
+    "radio": [
+      "airfield36_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "29"
+    ],
+    "towers": [
+      "externalId:460009"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Shayrat.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Shayrat.rn4",
+    "shelters": [
+      "externalId:460000",
+      "externalId:460001",
+      "externalId:460002",
+      "externalId:460003"
+    ],
+    "warehouses": [
+      "externalId:460004",
+      "externalId:460005"
+    ],
+    "id": "Shayrat",
+    "beacons": {},
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 243605.210938,
+      "x": 76964.6875
+    },
+    "fueldepots": [
+      "externalId:470002",
+      "externalId:470003",
+      "externalId:470004"
+    ],
+    "code": "OS59",
+    "runways": {
+      "0": {
+        "start": "09",
+        "id": -1,
+        "name": "09-27",
+        "end": "27"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Tabqa"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        78119.039063,
+        169,
+        243686.328125
+      ]
+    },
+    "display_name": "Tabqa",
+    "radio": [
+      "airfield37_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "27"
+    ],
+    "towers": [
+      "externalId:470014"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Tabqa.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Tabqa.rn4",
+    "shelters": [
+      "externalId:470005",
+      "externalId:470006",
+      "externalId:470007",
+      "externalId:470008",
+      "externalId:470009",
+      "externalId:470010"
+    ],
+    "warehouses": [
+      "externalId:470000",
+      "externalId:470001",
+      "externalId:470011",
+      "externalId:470012",
+      "externalId:470013"
+    ],
+    "id": "Tabqa",
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 82766.671875,
+      "x": 103485.980469
+    },
+    "fueldepots": [
+      "externalId:480000",
+      "externalId:480001",
+      "externalId:480002",
+      "externalId:480003",
+      "externalId:480004",
+      "externalId:480005",
+      "externalId:480006",
+      "externalId:480007"
+    ],
+    "code": "",
+    "runways": {
+      "0": {
+        "start": "28",
+        "id": -1,
+        "name": "28-10",
+        "end": "10"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Taftanaz"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        103234.84375,
+        155.499802,
+        82651.515625
+      ]
+    },
+    "display_name": "Taftanaz",
+    "radio": [
+      "airfield38_0"
+    ],
+    "civilian": false,
+    "id": "Taftanaz",
+    "towers": [
+      "externalId:480044"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Taftanaz.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Taftanaz.rn4",
+    "warehouses": [
+      "externalId:480008",
+      "externalId:480009",
+      "externalId:480010",
+      "externalId:480011",
+      "externalId:480012",
+      "externalId:480013",
+      "externalId:480014",
+      "externalId:480015",
+      "externalId:480016",
+      "externalId:480017",
+      "externalId:480018",
+      "externalId:480019",
+      "externalId:480020",
+      "externalId:480021",
+      "externalId:480022",
+      "externalId:480023",
+      "externalId:480024",
+      "externalId:480025",
+      "externalId:480026",
+      "externalId:480027",
+      "externalId:480028",
+      "externalId:480029",
+      "externalId:480030",
+      "externalId:480031",
+      "externalId:480032",
+      "externalId:480033",
+      "externalId:480034",
+      "externalId:480035",
+      "externalId:480036",
+      "externalId:480037",
+      "externalId:480038",
+      "externalId:480039",
+      "externalId:480040",
+      "externalId:480041",
+      "externalId:480042",
+      "externalId:480043"
+    ],
+    "runwayName": [
+      "10"
+    ],
+    "beacons": {},
+    "class": "4"
+  },
+  {
+    "reference_point": {
+      "y": 157071.484375,
+      "x": -58907.53125
+    },
+    "fueldepots": [
+      "externalId:490002",
+      "externalId:490003",
+      "externalId:490004",
+      "externalId:490005"
+    ],
+    "code": "OS72",
+    "runways": {
+      "0": {
+        "start": "27",
+        "id": -1,
+        "name": "27-09",
+        "end": "09"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Tiyas"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -59511.457031,
+        273.999756,
+        157369.75
+      ]
+    },
+    "display_name": "Tiyas",
+    "radio": [
+      "airfield39_0"
+    ],
+    "civilian": false,
+    "id": "Tiyas",
+    "towers": [
+      "externalId:490006"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Tiyas.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Tiyas.rn4",
+    "warehouses": [
+      "externalId:490000",
+      "externalId:490001"
+    ],
+    "runwayName": [
+      "09"
+    ],
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -22832.533203,
+      "x": -81524.375
+    },
+    "fueldepots": [
+      "externalId:500002",
+      "externalId:500003"
+    ],
+    "code": "Z19O",
+    "runways": {
+      "0": {
+        "start": "20",
+        "id": -1,
+        "name": "20-02",
+        "end": "02"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Wujah Al Hajar"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -81501.75,
+        100.779518,
+        -22869.710938
+      ]
+    },
+    "display_name": "Wujah Al Hajar",
+    "radio": [
+      "airfield40_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "02"
+    ],
+    "towers": [
+      "externalId:500007"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Wujah_Al_Hajar.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Wujah_Al_Hajar.rn4",
+    "shelters": [
+      "externalId:500004",
+      "externalId:500005",
+      "externalId:500006"
+    ],
+    "warehouses": [
+      "externalId:500000",
+      "externalId:500001"
+    ],
+    "id": "Wujah_Al_Hajar",
+    "beacons": {
+      "0": {
+        "beaconId": "airfield40_0"
+      }
+    },
+    "class": "3"
+  },
+  {
+    "reference_point": {
+      "y": -319392.546875,
+      "x": 158144.617188
+    },
+    "fueldepots": [
+      "externalId:510001",
+      "externalId:510002"
+    ],
+    "code": "LTFG",
+    "runways": {
+      "0": {
+        "start": "08",
+        "id": 1,
+        "name": "08-26",
+        "end": "26"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Gazipasa"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        158096.03125,
+        21.289225,
+        -319431
+      ]
+    },
+    "display_name": "Gazipasa",
+    "radio": [
+      "airfield41_0"
+    ],
+    "civilian": true,
+    "runwayName": [
+      "26"
+    ],
+    "towers": [
+      "externalId:510000"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Gazipasa.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Gazipasa.rn4",
+    "id": "Gazipasa",
+    "beacons": [
+      {
+        "beaconId": "airfield41_1"
+      },
+      {
+        "beaconId": "airfield41_2"
+      }
+    ],
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": 389747.03125,
+      "x": 25465.167969
+    },
+    "fueldepots": [
+      "externalId:520001"
+    ],
+    "code": "OSDZ",
+    "runways": {
+      "0": {
+        "start": "28",
+        "id": -1,
+        "name": "28-10",
+        "end": "10"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Deir ez-Zor"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        25599.400391,
+        110.921875,
+        389842.09375
+      ]
+    },
+    "display_name": "Deir ez-Zor",
+    "radio": [
+      "airfield42_0"
+    ],
+    "civilian": false,
+    "id": "Deir_ez_Zor",
+    "towers": [
+      "externalId:520000"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Deir_ez_Zor.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Deir_ez_Zor.rn4",
+    "warehouses": [
+      "externalId:520002"
+    ],
+    "runwayName": [
+      "10"
+    ],
+    "beacons": [
+      {
+        "beaconId": "airfield42_1"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -238947.84375,
+      "x": 24950.589844
+    },
+    "abandoned": true,
+    "id": "Nicosia",
+    "class": "1",
+    "names": {
+      "en": "Nicosia"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        24950.589844,
+        104.999023,
+        -238947.84375
+      ]
+    },
+    "display_name": "Nicosia",
+    "code": "LCNC",
+    "projectors": {},
+    "beacons": {},
+    "civilian": true
+  },
+  {
+    "reference_point": {
+      "y": -268906.125,
+      "x": -35778.628906
+    },
+    "code": "LCRA",
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Akrotiri.rn4",
+    "projectors": {},
+    "names": {
+      "en": "Akrotiri"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -36143.695313,
+        16.999992,
+        -268790.625
+      ]
+    },
+    "display_name": "Akrotiri",
+    "radio": [
+      "airfield44_0"
+    ],
+    "civilian": false,
+    "id": "Akrotiri",
+    "towers": [
+      "externalId:540016"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Akrotiri.rn5",
+    "abandoned": false,
+    "class": "2",
+    "shelters": [
+      "externalId:540001",
+      "externalId:540002",
+      "externalId:540003",
+      "externalId:540004",
+      "externalId:540005",
+      "externalId:540006",
+      "externalId:540007",
+      "externalId:540008",
+      "externalId:540009",
+      "externalId:540010",
+      "externalId:540011",
+      "externalId:540012",
+      "externalId:540013"
+    ],
+    "warehouses": [
+      "externalId:540000",
+      "externalId:540014",
+      "externalId:540015"
+    ],
+    "runways": {
+      "0": {
+        "start": "10",
+        "id": 1,
+        "name": "10-28",
+        "end": "28"
+      }
+    },
+    "beacons": [
+      {
+        "runwayName": "10-28",
+        "runwayId": 1,
+        "runwaySide": "28",
+        "beaconId": "airfield44_1"
+      },
+      {
+        "beaconId": "airfield44_2"
+      },
+      {
+        "beaconId": "airfield44_3"
+      }
+    ],
+    "runwayName": [
+      "28"
+    ]
+  },
+  {
+    "reference_point": {
+      "y": -199426.492188,
+      "x": 7596.761963
+    },
+    "fueldepots": [
+      "externalId:550002",
+      "externalId:550003"
+    ],
+    "code": "LCRE",
+    "runways": {
+      "0": {
+        "start": "24",
+        "id": -1,
+        "name": "24-06",
+        "end": "06"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Kingsfield"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        7573.708008,
+        87.000008,
+        -199422.625
+      ]
+    },
+    "display_name": "Kingsfield",
+    "radio": [
+      "airfield45_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "06"
+    ],
+    "towers": [
+      "externalId:550001"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Kingsfield.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Kingsfield.rn4",
+    "shelters": [
+      "externalId:550000"
+    ],
+    "id": "Kingsfield",
+    "beacons": {},
+    "class": "3"
+  },
+  {
+    "reference_point": {
+      "y": -314208.375,
+      "x": -18696.34668
+    },
+    "fueldepots": [
+      "externalId:560008"
+    ],
+    "code": "LCPH",
+    "runways": {
+      "0": {
+        "start": "11",
+        "id": 1,
+        "name": "11-29",
+        "end": "29"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Paphos"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -18661.703125,
+        10.372441,
+        -313871.3125
+      ]
+    },
+    "display_name": "Paphos",
+    "radio": [
+      "airfield46_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "29"
+    ],
+    "towers": [
+      "externalId:560009"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Paphos.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Paphos.rn4",
+    "shelters": [
+      "externalId:560000",
+      "externalId:560001",
+      "externalId:560002",
+      "externalId:560003",
+      "externalId:560004",
+      "externalId:560005"
+    ],
+    "warehouses": [
+      "externalId:560006",
+      "externalId:560007"
+    ],
+    "id": "Paphos",
+    "beacons": [
+      {
+        "runwayName": "11-29",
+        "runwayId": 1,
+        "runwaySide": "29",
+        "beaconId": "airfield46_1"
+      },
+      {
+        "runwayName": "11-29",
+        "runwayId": 1,
+        "runwaySide": "29",
+        "beaconId": "airfield46_2"
+      },
+      {
+        "beaconId": "airfield46_3"
+      },
+      {
+        "beaconId": "airfield46_4"
+      },
+      {
+        "beaconId": "airfield46_5"
+      }
+    ],
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": -208843.625,
+      "x": -7674.737061
+    },
+    "fueldepots": [
+      "externalId:570000",
+      "externalId:570001",
+      "externalId:570002",
+      "externalId:570003",
+      "externalId:570004",
+      "externalId:570005",
+      "externalId:570006",
+      "externalId:570007",
+      "externalId:570008",
+      "externalId:570009",
+      "externalId:570010",
+      "externalId:570011",
+      "externalId:570012",
+      "externalId:570013",
+      "externalId:570014"
+    ],
+    "code": "LCLK",
+    "runways": {
+      "0": {
+        "start": "04",
+        "id": 1,
+        "name": "04-22",
+        "end": "22"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Larnaca"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -7536.410156,
+        2.499713,
+        -209204
+      ]
+    },
+    "display_name": "Larnaca",
+    "radio": [
+      "airfield47_0"
+    ],
+    "civilian": true,
+    "id": "Larnaca",
+    "towers": [
+      "externalId:570016"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Larnaca.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Larnaca.rn4",
+    "warehouses": [
+      "externalId:570015"
+    ],
+    "runwayName": [
+      "22"
+    ],
+    "beacons": [
+      {
+        "beaconId": "airfield47_1"
+      },
+      {
+        "runwayName": "1#04-22",
+        "runwayId": 1,
+        "runwaySide": "22",
+        "beaconId": "airfield47_2"
+      },
+      {
+        "beaconId": "airfield47_3"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -234985.75,
+      "x": 19561.164063
+    },
+    "fueldepots": [
+      "externalId:580001"
+    ],
+    "code": "CY-0001",
+    "runways": {
+      "0": {
+        "start": "17",
+        "id": -1,
+        "name": "17-35",
+        "end": "35"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Lakatamia"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        19574.011719,
+        115.499756,
+        -234741.296875
+      ]
+    },
+    "display_name": "Lakatamia",
+    "radio": [
+      "airfield48_0"
+    ],
+    "civilian": false,
+    "id": "Lakatamia",
+    "towers": [
+      "externalId:580000"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Lakatamia.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Lakatamia.rn4",
+    "warehouses": [
+      "externalId:580002"
+    ],
+    "runwayName": [
+      "35"
+    ],
+    "beacons": {},
+    "class": "4"
+  },
+  {
+    "reference_point": {
+      "y": -218240.28125,
+      "x": 24250.327148
+    },
+    "fueldepots": [
+      "externalId:590004",
+      "externalId:590005"
+    ],
+    "code": "LCEN",
+    "runways": {
+      "0": {
+        "start": "11",
+        "id": 1,
+        "name": "11-29",
+        "end": "29"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Ercan"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        23886.832031,
+        62.499512,
+        -218028.9375
+      ]
+    },
+    "display_name": "Ercan",
+    "radio": [
+      "airfield49_0"
+    ],
+    "civilian": true,
+    "id": "Ercan",
+    "towers": [
+      "externalId:590003"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Ercan.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Ercan.rn4",
+    "warehouses": [
+      "externalId:590000",
+      "externalId:590001",
+      "externalId:590002"
+    ],
+    "runwayName": [
+      "29"
+    ],
+    "beacons": [
+      {
+        "runwayName": "11-29",
+        "runwayId": 1,
+        "runwaySide": "29",
+        "beaconId": "airfield49_1"
+      }
+    ],
+    "class": "2"
+  },
+  {
+    "reference_point": {
+      "y": -197767.51907,
+      "x": 32144.729634
+    },
+    "fueldepots": [
+      "externalId:600003",
+      "externalId:600004",
+      "externalId:600005"
+    ],
+    "code": "LCGK",
+    "runways": {
+      "0": {
+        "start": "09",
+        "id": -1,
+        "name": "09-27",
+        "end": "27"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Gecitkale"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        31937.113281,
+        22.498287,
+        -197568.125
+      ]
+    },
+    "display_name": "Gecitkale",
+    "radio": [
+      "airfield50_0"
+    ],
+    "civilian": false,
+    "id": "Gecitkale",
+    "towers": [
+      "externalId:600002"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Gecitkale.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Gecitkale.rn4",
+    "warehouses": [
+      "externalId:600000",
+      "externalId:600001"
+    ],
+    "runwayName": [
+      "27"
+    ],
+    "beacons": [
+      {
+        "beaconId": "airfield50_1"
+      }
+    ],
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": -238774.6875,
+      "x": 38639.882813
+    },
+    "fueldepots": [
+      "externalId:610004",
+      "externalId:610005"
+    ],
+    "code": "CY-0003",
+    "runways": {
+      "0": {
+        "start": "16",
+        "id": -1,
+        "name": "16-34",
+        "end": "34"
+      }
+    },
+    "projectors": {},
+    "names": {
+      "en": "Pinarbashi"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        36864,
+        117.499878,
+        -241664
+      ]
+    },
+    "display_name": "Pinarbashi",
+    "radio": [
+      "airfield51_0"
+    ],
+    "civilian": false,
+    "runwayName": [
+      "34"
+    ],
+    "towers": [
+      "externalId:610003"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Ilker_Karter.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Ilker_Karter.rn4",
+    "shelters": [
+      "externalId:610000",
+      "externalId:610001"
+    ],
+    "warehouses": [
+      "externalId:610002"
+    ],
+    "id": "Ilker_Karter",
+    "beacons": {},
+    "class": "4"
+  },
+  {
+    "reference_point": {
+      "y": -78642.609375,
+      "x": -209938.1875
+    },
+    "fueldepots": [
+      "externalId:620000",
+      "externalId:620002",
+      "externalId:620003"
+    ],
+    "code": "",
+    "runways": {},
+    "projectors": {},
+    "names": {
+      "en": "Naqoura"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -209570.78125,
+        58.18169,
+        -78688.171875
+      ]
+    },
+    "display_name": "Naqoura",
+    "radio": [
+      "airfield52_0"
+    ],
+    "civilian": false,
+    "id": "Naqoura",
+    "towers": [
+      "externalId:620004"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/Naqoura.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/Naqoura.rn4",
+    "warehouses": [
+      "externalId:620001"
+    ],
+    "runwayName": {},
+    "beacons": {},
+    "class": "4"
+  },
+  {
+    "reference_point": {
+      "y": 352522.65625,
+      "x": -235405.664063
+    },
+    "fueldepots": [
+      "externalId:630001",
+      "externalId:630002"
+    ],
+    "code": "IQ-0018",
+    "runways": [
+      {
+        "start": "06",
+        "id": 2,
+        "name": "06-24",
+        "end": "24"
+      }
+    ],
+    "projectors": {},
+    "names": {
+      "en": "H3"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -236375,
+        395.081329,
+        352528.0625
+      ]
+    },
+    "display_name": "H3",
+    "radio": [
+      "airfield53_0"
+    ],
+    "civilian": false,
+    "id": "H3",
+    "towers": [
+      "externalId:630000"
+    ],
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/H3.rn5",
+    "abandoned": false,
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/H3.rn4",
+    "warehouses": [
+      "externalId:630003"
+    ],
+    "runwayName": [
+      "29",
+      "06",
+      "24"
+    ],
+    "beacons": {},
+    "class": "1"
+  },
+  {
+    "reference_point": {
+      "y": 338483.561903,
+      "x": -220000.35156
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "H3_Northwest",
+    "class": "1",
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/H3_Northwest.rn5",
+    "names": {
+      "en": "H3 Northwest"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -220270.078125,
+        395.006561,
+        338449.125
+      ]
+    },
+    "projectors": {},
+    "display_name": "H3 Northwest",
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/H3_Northwest.rn4",
+    "runwayName": [
+      "12"
+    ],
+    "runways": {
+      "0": {
+        "start": "30",
+        "id": 1,
+        "name": "30-12",
+        "end": "12"
+      }
+    },
+    "beacons": {},
+    "code": "IQ-0020"
+  },
+  {
+    "reference_point": {
+      "y": 339219.1875,
+      "x": -256859.445313
+    },
+    "civilian": false,
+    "abandoned": false,
+    "id": "H3_Southwest",
+    "class": "2",
+    "roadnet5": "./Mods/terrains/Syria/AirfieldsTaxiways/H3_Southwest.rn5",
+    "names": {
+      "en": "H3 Southwest"
+    },
+    "default_camera_position": {
+      "bearing": 0,
+      "pnt": [
+        -256868.78125,
+        407,
+        339448.6875
+      ]
+    },
+    "projectors": {},
+    "display_name": "H3 Southwest",
+    "roadnet": "./Mods/terrains/Syria/AirfieldsTaxiways/H3_Southwest.rn4",
+    "runwayName": [
+      "12"
+    ],
+    "runways": {
+      "0": {
+        "start": "30",
+        "id": 1,
+        "name": "30-12",
+        "end": "12"
+      }
+    },
+    "beacons": {},
+    "code": "IQ-0021"
+  }
 ]
