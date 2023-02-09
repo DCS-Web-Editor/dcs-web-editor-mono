@@ -15,12 +15,13 @@
   "author": "fyyyy",
   "license": "GNU GPL v3.0 Affero",
   "workspaces": [
-    "packages/utils",
-    "packages/icons",
+    "packages/airfields",
     "packages/beacons",
     "packages/briefing",
+    "packages/icons",
+    "packages/map-projection",
     "packages/sky-vector",
-    "packages/map-projection"
+    "packages/utils"
   ],
   "dependencies": {
     "typescript": "^4.9.5",

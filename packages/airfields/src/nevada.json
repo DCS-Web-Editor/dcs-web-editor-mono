@@ -1,0 +1,376 @@
+[
+    {
+        "geometry": {
+            "coordinates": [
+                -115.68681060569,
+                36.584429875554,
+                952.94458007812
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Creech",
+            "name": "Creech",
+            "point": {
+                "x": -360452.15625,
+                "y": 952.94458007812,
+                "z": -76518.5859375
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -115.78531067518,
+                37.21913894289,
+                1369.8676757812
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Groom Lake",
+            "name": "Groom Lake",
+            "point": {
+                "x": -290154.40625,
+                "y": 1369.8676757812,
+                "z": -86227.296875
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -115.16219006293,
+                36.076670073498,
+                661.37609863281
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "McCarran International",
+            "name": "McCarran International",
+            "point": {
+                "x": -416012.53125,
+                "y": 661.37609863281,
+                "z": -28511.072265625
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -115.04380774353,
+                36.225662018016,
+                561.30914306641
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Nellis",
+            "name": "Nellis",
+            "point": {
+                "x": -399275.84375,
+                "y": 561.30914306641,
+                "z": -18183.12109375
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -116.78608313042,
+                36.868394298081,
+                967.13366699219
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Beatty",
+            "name": "Beatty",
+            "point": {
+                "x": -329733.625,
+                "y": 967.13366699219,
+                "z": -174930.5625
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -114.86055178579,
+                35.943681644578,
+                646.66363525391
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Boulder City",
+            "name": "Boulder City",
+            "point": {
+                "x": -430210.6875,
+                "y": 646.66363525391,
+                "z": -1022.3584594727
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -114.46933764146,
+                36.310471394437,
+                472.03369140625
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Echo Bay",
+            "name": "Echo Bay",
+            "point": {
+                "x": -388670.5,
+                "y": 472.03369140625,
+                "z": 33210.671875
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -115.13347108341,
+                35.96746878808,
+                759.43688964844
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Henderson Executive",
+            "name": "Henderson Executive",
+            "point": {
+                "x": -428077.34375,
+                "y": 759.43688964844,
+                "z": -25692.619140625
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -115.32570272555,
+                35.773785550964,
+                860.87591552734
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Jean",
+            "name": "Jean",
+            "point": {
+                "x": -449876.78125,
+                "y": 860.87591552734,
+                "z": -42659.71875
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -114.55986431857,
+                35.165905267476,
+                200.00019836426
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Laughlin",
+            "name": "Laughlin",
+            "point": {
+                "x": -515859.90625,
+                "y": 200.00019836426,
+                "z": 28242.046875
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -114.41923699635,
+                37.793389585399,
+                1467.6899414062
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Lincoln County",
+            "name": "Lincoln County",
+            "point": {
+                "x": -223999.078125,
+                "y": 1467.6899414062,
+                "z": 33240.8203125
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -114.06033514493,
+                36.827345248734,
+                566.48736572266
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Mesquite",
+            "name": "Mesquite",
+            "point": {
+                "x": -330275,
+                "y": 566.48736572266,
+                "z": 68185.8671875
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -118.09349931622,
+                38.374546852088,
+                1390.5122070312
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Mina",
+            "name": "Mina",
+            "point": {
+                "x": -162089.078125,
+                "y": 1390.5122070312,
+                "z": -289514.125
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -115.18673756618,
+                36.213364566271,
+                679.27984619141
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "North Las Vegas",
+            "name": "North Las Vegas",
+            "point": {
+                "x": -400889.90625,
+                "y": 679.27984619141,
+                "z": -31004.841796875
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -116.31539962949,
+                37.094831346541,
+                1541.3635253906
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Pahute Mesa",
+            "name": "Pahute Mesa",
+            "point": {
+                "x": -304416.4375,
+                "y": 1541.3635253906,
+                "z": -133159.09375
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -117.07591711356,
+                38.058024445654,
+                1644.1396484375
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Tonopah",
+            "name": "Tonopah",
+            "point": {
+                "x": -197772.359375,
+                "y": 1644.1396484375,
+                "z": -200656.875
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                -116.77330290767,
+                37.78403952166,
+                1686.8143310547
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Tonopah Test Range",
+            "name": "Tonopah Test Range",
+            "point": {
+                "x": -228149.671875,
+                "y": 1686.8143310547,
+                "z": -174035.171875
+            },
+            "type": "AIRBASE"
+        },
+        "type": "Feature"
+    }
+]

@@ -1,0 +1,632 @@
+[
+    {
+        "geometry": {
+            "coordinates": [
+                55.021382072783,
+                25.875041761239,
+                5.0000047683716
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Abu Musa Island",
+            "name": "Abu Musa Island",
+            "point": {
+                "x": -31593.10546875,
+                "y": 5.0000047683716,
+                "z": -122493.0546875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                56.3703560378,
+                27.203638553985,
+                5.587854385376
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Bandar Abbas Intl",
+            "name": "Bandar Abbas Intl",
+            "point": {
+                "x": 114214.0546875,
+                "y": 5.587854385376,
+                "z": 13397.94140625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                54.813116140778,
+                26.530817420578,
+                24.653238296509
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Bandar Lengeh",
+            "name": "Bandar Lengeh",
+            "point": {
+                "x": 41395.73828125,
+                "y": 24.653238296509,
+                "z": -142141.3125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                54.534202504328,
+                24.25792911231,
+                16.000015258789
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Al Dhafra AFB",
+            "name": "Al Dhafra AFB",
+            "point": {
+                "x": -209935.484375,
+                "y": 16.000015258789,
+                "z": -174592.0625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.379295777402,
+                25.248265300858,
+                5.0000047683716
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Dubai Intl",
+            "name": "Dubai Intl",
+            "point": {
+                "x": -101509.84375,
+                "y": 5.0000047683716,
+                "z": -87472.578125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.174919966811,
+                24.888624487709,
+                37.618499755859
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Al Maktoum Intl",
+            "name": "Al Maktoum Intl",
+            "point": {
+                "x": -141081.625,
+                "y": 37.618499755859,
+                "z": -108598.2421875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                56.340423943738,
+                25.105735807567,
+                18.52036857605
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Fujairah Intl",
+            "name": "Fujairah Intl",
+            "point": {
+                "x": -118114.78125,
+                "y": 18.52036857605,
+                "z": 9254.498046875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.311280020098,
+                26.251538702312,
+                13.000012397766
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Tunb Island AFB",
+            "name": "Tunb Island AFB",
+            "point": {
+                "x": 9707.2099609375,
+                "y": 13.000012397766,
+                "z": -92900.5859375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                56.183089447173,
+                27.159927526116,
+                15.475476264954
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Havadarya",
+            "name": "Havadarya",
+            "point": {
+                "x": 109479.28125,
+                "y": 15.475476264954,
+                "z": -5180.5727539062
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                56.24317158197,
+                26.179806360704,
+                14.490728378296
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Khasab",
+            "name": "Khasab",
+            "point": {
+                "x": 883.880859375,
+                "y": 14.490728378296,
+                "z": 128.69967651367
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                54.368317250382,
+                27.674804842122,
+                803.32891845703
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Lar",
+            "name": "Lar",
+            "point": {
+                "x": 169016.75,
+                "y": 803.32891845703,
+                "z": -183822.578125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.383678016973,
+                25.026805920475,
+                58.147457122803
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Al Minhad AFB",
+            "name": "Al Minhad AFB",
+            "point": {
+                "x": -126043.78125,
+                "y": 58.147457122803,
+                "z": -87325.1640625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.918070160223,
+                26.76633161238,
+                8.0288496017456
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Qeshm Island",
+            "name": "Qeshm Island",
+            "point": {
+                "x": 66079.171875,
+                "y": 8.0288496017456,
+                "z": -31812.6796875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.531388153673,
+                25.322796067752,
+                29.999982833862
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Sharjah Intl",
+            "name": "Sharjah Intl",
+            "point": {
+                "x": -93431.3203125,
+                "y": 29.999982833862,
+                "z": -72062
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                54.548214653399,
+                25.903343862392,
+                5.4417409896851
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Sirri Island",
+            "name": "Sirri Island",
+            "point": {
+                "x": -27656.474609375,
+                "y": 5.4417409896851,
+                "z": -169860.078125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.149352101732,
+                26.243605485601,
+                4.6347489356995
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Tunb Kochak",
+            "name": "Tunb Kochak",
+            "point": {
+                "x": 9049.3994140625,
+                "y": 4.6347489356995,
+                "z": -109088.578125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                54.23693990531,
+                25.216154518016,
+                7.6827998161316
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Sir Abu Nuayr",
+            "name": "Sir Abu Nuayr",
+            "point": {
+                "x": -103189.046875,
+                "y": 7.6827998161316,
+                "z": -202643.03125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                56.958269051762,
+                30.257695568151,
+                1751.4256591797
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Kerman",
+            "name": "Kerman",
+            "point": {
+                "x": 452408.40625,
+                "y": 1751.4256591797,
+                "z": 71741.5859375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                52.609894223947,
+                29.533103964275,
+                1487.0014648438
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Shiraz Intl",
+            "name": "Shiraz Intl",
+            "point": {
+                "x": 380165.53125,
+                "y": 1487.0014648438,
+                "z": -349843.03125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                54.514696522843,
+                24.448211362508,
+                2.9453413486481
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Sas Al Nakheel",
+            "name": "Sas Al Nakheel",
+            "point": {
+                "x": -188819.25,
+                "y": 2.9453413486481,
+                "z": -176195.984375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                57.792125537415,
+                25.650484470488,
+                7.9505105018616
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Bandar-e-Jask",
+            "name": "Bandar-e-Jask",
+            "point": {
+                "x": -57716.9375,
+                "y": 7.9505105018616,
+                "z": 155264.78125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                54.639226001065,
+                24.464722760717,
+                28.000028610229
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Abu Dhabi Intl",
+            "name": "Abu Dhabi Intl",
+            "point": {
+                "x": -187211.25,
+                "y": 28.000028610229,
+                "z": -163535.515625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                54.450706215697,
+                24.434059322946,
+                3.6506268978119
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Al-Bateen",
+            "name": "Al-Bateen",
+            "point": {
+                "x": -190269.109375,
+                "y": 3.6506268978119,
+                "z": -182714.796875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                53.964909162786,
+                26.529651099908,
+                35.000034332275
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Kish Intl",
+            "name": "Kish Intl",
+            "point": {
+                "x": 42988.859375,
+                "y": 35.000034332275,
+                "z": -226699.40625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.611735832913,
+                24.276767283196,
+                248.0495300293
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Al Ain Intl",
+            "name": "Al Ain Intl",
+            "point": {
+                "x": -209361.96875,
+                "y": 248.0495300293,
+                "z": -65151.40625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                53.3416042246,
+                26.815354172873,
+                22.910776138306
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Lavan Island",
+            "name": "Lavan Island",
+            "point": {
+                "x": 76294.1171875,
+                "y": 22.910776138306,
+                "z": -287950.9375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                57.664118826397,
+                28.731593220974,
+                812.00085449219
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Jiroft",
+            "name": "Jiroft",
+            "point": {
+                "x": 283496.71875,
+                "y": 812.00085449219,
+                "z": 140608.3125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.941864730965,
+                25.602262321804,
+                21.589021682739
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Ras Al Khaimah Intl",
+            "name": "Ras Al Khaimah Intl",
+            "point": {
+                "x": -62870.8828125,
+                "y": 21.589021682739,
+                "z": -30497.56640625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                53.812497591899,
+                23.660697450016,
+                121.93011474609
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Liwa AFB",
+            "name": "Liwa AFB",
+            "point": {
+                "x": -274638.75,
+                "y": 121.93011474609,
+                "z": -249407.125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                55.077137969517,
+                22.775988239359,
+                100.47110748291
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Quasoura_airport",
+            "name": "",
+            "point": {
+                "x": -374928.21875,
+                "y": 100.47110748291,
+                "z": -121651.640625
+            }
+        },
+        "type": "Feature"
+    }
+]

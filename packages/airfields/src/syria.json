@@ -1,0 +1,1304 @@
+[
+    {
+        "geometry": {
+            "coordinates": [
+                37.118801734534,
+                35.731462428174,
+                250.00024414062
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Abu al-Duhur",
+            "name": "Abu al-Duhur",
+            "point": {
+                "x": 75929.7734375,
+                "y": 250.00024414062,
+                "z": 112670.328125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.291372307265,
+                36.988281127829,
+                17.000017166138
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Adana Sakirpasa",
+            "name": "Adana Sakirpasa",
+            "point": {
+                "x": 220139.03125,
+                "y": 17.000017166138,
+                "z": -47292.88671875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.5854147754,
+                34.566877297302,
+                527.00054931641
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Al Qusayr",
+            "name": "Al Qusayr",
+            "point": {
+                "x": -52203.73046875,
+                "y": 527.00054931641,
+                "z": 61287.859375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.875344527767,
+                33.92656597361,
+                837.16253662109
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "An Nasiriyah",
+            "name": "An Nasiriyah",
+            "point": {
+                "x": -123819.2890625,
+                "y": 837.16253662109,
+                "z": 86407.890625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.402739209399,
+                32.698127092337,
+                725.75042724609
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Tha'lah",
+            "name": "Tha'lah",
+            "point": {
+                "x": -259061.421875,
+                "y": 725.75042724609,
+                "z": 39317.87890625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.487416760577,
+                33.836465479357,
+                12.000012397766
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Beirut-Rafic Hariri",
+            "name": "Beirut-Rafic Hariri",
+            "point": {
+                "x": -130289.4375,
+                "y": 12.000012397766,
+                "z": -42276.67578125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.504254828586,
+                33.415340013895,
+                612.00061035156
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Damascus",
+            "name": "Damascus",
+            "point": {
+                "x": -179748.328125,
+                "y": 612.00061035156,
+                "z": 50728.265625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.475050826595,
+                33.487483451402,
+                611.96624755859
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Marj as Sultan South",
+            "name": "Marj as Sultan South",
+            "point": {
+                "x": -171681.265625,
+                "y": 611.96624755859,
+                "z": 48206.46875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.735832718421,
+                33.604657449318,
+                630.00061035156
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Al-Dumayr",
+            "name": "Al-Dumayr",
+            "point": {
+                "x": -159245.390625,
+                "y": 630.00061035156,
+                "z": 72725.0546875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.001899624572,
+                32.441791483481,
+                28.576030731201
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Eyn Shemer",
+            "name": "Eyn Shemer",
+            "point": {
+                "x": -283415.875,
+                "y": 28.576030731201,
+                "z": -93149.375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                37.464512889798,
+                36.951397233614,
+                697.21142578125
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Gaziantep",
+            "name": "Gaziantep",
+            "point": {
+                "x": 210716.109375,
+                "y": 697.21142578125,
+                "z": 146087.90625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                38.206376228872,
+                32.536851104207,
+                688.00067138672
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "H4",
+            "name": "H4",
+            "point": {
+                "x": -279644.28125,
+                "y": 688.00067138672,
+                "z": 208278.046875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.04502076035,
+                32.80645293353,
+                6.0000066757202
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Haifa",
+            "name": "Haifa",
+            "point": {
+                "x": -243102.609375,
+                "y": 6.0000066757202,
+                "z": -87583.546875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.72547347191,
+                35.116099484431,
+                300.00030517578
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Hama",
+            "name": "Hama",
+            "point": {
+                "x": 8419.59375,
+                "y": 300.00030517578,
+                "z": 75521.7109375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.298090184913,
+                36.371269972814,
+                77.175567626953
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Hatay",
+            "name": "Hatay",
+            "point": {
+                "x": 148653.765625,
+                "y": 77.175567626953,
+                "z": 40403.9453125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.412713065757,
+                36.994254281542,
+                47.783618927002
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Incirlik",
+            "name": "Incirlik",
+            "point": {
+                "x": 220387.578125,
+                "y": 47.783618927002,
+                "z": -36463.7109375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                37.951086106528,
+                36.094487121629,
+                356.71685791016
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Jirah",
+            "name": "Jirah",
+            "point": {
+                "x": 115071.7578125,
+                "y": 356.71685791016,
+                "z": 188376.15625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.559784748722,
+                33.06361028266,
+                712.33355712891
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Khalkhalah",
+            "name": "Khalkhalah",
+            "point": {
+                "x": -218879.4375,
+                "y": 712.33355712891,
+                "z": 54981.8828125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.270213489366,
+                32.348793954817,
+                672.00067138672
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "King Hussein Air College",
+            "name": "King Hussein Air College",
+            "point": {
+                "x": -297491.9375,
+                "y": 672.00067138672,
+                "z": 25897.087890625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.592419825247,
+                33.212372031645,
+                93.483139038086
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Kiryat Shmona",
+            "name": "Kiryat Shmona",
+            "point": {
+                "x": -199857.734375,
+                "y": 93.483139038086,
+                "z": -34831.58984375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.95003283514,
+                35.411589930353,
+                28.363424301147
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Bassel Al-Assad",
+            "name": "Bassel Al-Assad",
+            "point": {
+                "x": 43096.125,
+                "y": 28.363424301147,
+                "z": 5843.9418945312
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.466321617972,
+                33.500422745428,
+                611.83978271484
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Marj as Sultan North",
+            "name": "Marj as Sultan North",
+            "point": {
+                "x": -170226.375,
+                "y": 611.83978271484,
+                "z": 47430.26953125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.446981161337,
+                33.279509844412,
+                658.59417724609
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Marj Ruhayyil",
+            "name": "Marj Ruhayyil",
+            "point": {
+                "x": -194683.9375,
+                "y": 658.59417724609,
+                "z": 45031.90234375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.220203497046,
+                32.597578671655,
+                55.000053405762
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Megiddo",
+            "name": "Megiddo",
+            "point": {
+                "x": -266879.71875,
+                "y": 55.000053405762,
+                "z": -71994.765625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.235064059083,
+                33.482713511778,
+                718.09167480469
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Mezzeh",
+            "name": "Mezzeh",
+            "point": {
+                "x": -171641.84375,
+                "y": 718.09167480469,
+                "z": 25888.533203125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                37.033622455645,
+                36.522812218953,
+                492.00051879883
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Minakh",
+            "name": "Minakh",
+            "point": {
+                "x": 163870.921875,
+                "y": 492.00051879883,
+                "z": 106743.0390625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                37.210383232385,
+                36.182211524331,
+                382.19104003906
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Aleppo",
+            "name": "Aleppo",
+            "point": {
+                "x": 125776.703125,
+                "y": 382.19104003906,
+                "z": 121870.953125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                38.331123062337,
+                34.558235536659,
+                386.22402954102
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Palmyra",
+            "name": "Palmyra",
+            "point": {
+                "x": -55607.97265625,
+                "y": 386.22402954102,
+                "z": 221438.15625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.356880859456,
+                33.458606617206,
+                650.57080078125
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Qabr as Sitt",
+            "name": "Qabr as Sitt",
+            "point": {
+                "x": -174610.671875,
+                "y": 650.57080078125,
+                "z": 37142.67578125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.165455922777,
+                32.666055265719,
+                32.239345550537
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Ramat David",
+            "name": "Ramat David",
+            "point": {
+                "x": -259097.328125,
+                "y": 32.239345550537,
+                "z": -76862.3203125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                37.570439309206,
+                36.18937442608,
+                366.00036621094
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Kuweires",
+            "name": "Kuweires",
+            "point": {
+                "x": 126034.1171875,
+                "y": 366.00036621094,
+                "z": 154262.765625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.976931824797,
+                33.84290182523,
+                894.38146972656
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Rayak",
+            "name": "Rayak",
+            "point": {
+                "x": -131016.3046875,
+                "y": 894.38146972656,
+                "z": 3064.6674804688
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.9986872567,
+                34.583953310218,
+                4.410843372345
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Rene Mouawad",
+            "name": "Rene Mouawad",
+            "point": {
+                "x": -48864.37109375,
+                "y": 4.410843372345,
+                "z": 7502.1235351562
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.572651208285,
+                32.97928167649,
+                263.91259765625
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Rosh Pina",
+            "name": "Rosh Pina",
+            "point": {
+                "x": -225657.046875,
+                "y": 263.91259765625,
+                "z": -37520.85546875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                37.204068911005,
+                33.680052164369,
+                693.00067138672
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Sayqal",
+            "name": "Sayqal",
+            "point": {
+                "x": -151737.078125,
+                "y": 693.00067138672,
+                "z": 116320.8671875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.894468654443,
+                34.494640308217,
+                803.97332763672
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Shayrat",
+            "name": "Shayrat",
+            "point": {
+                "x": -60850.84375,
+                "y": 803.97332763672,
+                "z": 89478.2890625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                38.551250775516,
+                35.755613770805,
+                335.00033569336
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Tabqa",
+            "name": "Tabqa",
+            "point": {
+                "x": 77069.8359375,
+                "y": 335.00033569336,
+                "z": 242231.75
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                36.785894108748,
+                35.973223381816,
+                311.00030517578
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Taftanaz",
+            "name": "Taftanaz",
+            "point": {
+                "x": 103379,
+                "y": 311.00030517578,
+                "z": 83165.9296875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                37.645765105063,
+                34.522531432479,
+                548.00054931641
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Tiyas",
+            "name": "Tiyas",
+            "point": {
+                "x": -58937.7421875,
+                "y": 548.00054931641,
+                "z": 158507.125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.683990308563,
+                34.286960508475,
+                188.67385864258
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Wujah Al Hajar",
+            "name": "Wujah Al Hajar",
+            "point": {
+                "x": -80912.171875,
+                "y": 188.67385864258,
+                "z": -22454.466796875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                32.286068490305,
+                36.297823085147,
+                11.104940414429
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Gazipasa",
+            "name": "Gazipasa",
+            "point": {
+                "x": 158094.9375,
+                "y": 11.104940414429,
+                "z": -320441.0625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                40.190671143219,
+                35.280828897833,
+                204.59194946289
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Deir ez-Zor",
+            "name": "Deir ez-Zor",
+            "point": {
+                "x": 24970.5390625,
+                "y": 204.59194946289,
+                "z": 391081.8125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                33.275002451661,
+                35.150919822632,
+                210.00021362305
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Nicosia",
+            "name": "Nicosia",
+            "point": {
+                "x": 24950.58984375,
+                "y": 210.00021362305,
+                "z": -238947.84375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                32.974818319372,
+                34.594065664734,
+                18.946063995361
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Akrotiri",
+            "name": "Akrotiri",
+            "point": {
+                "x": -35297.09375,
+                "y": 18.946063995361,
+                "z": -270072.28125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                33.721655835024,
+                35.016621196807,
+                84.00008392334
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Kingsfield",
+            "name": "Kingsfield",
+            "point": {
+                "x": 7776.0004882812,
+                "y": 84.00008392334,
+                "z": -198993.40625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                32.471801697209,
+                34.72239325815,
+                12.305082321167
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Paphos",
+            "name": "Paphos",
+            "point": {
+                "x": -18147.3125,
+                "y": 12.305082321167,
+                "z": -315369.5
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                33.613584325006,
+                34.865619667975,
+                5.0000047683716
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Larnaca",
+            "name": "Larnaca",
+            "point": {
+                "x": -8466.0517578125,
+                "y": 5.0000047683716,
+                "z": -209773.46875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                33.321670653775,
+                35.106311731529,
+                231.00024414062
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Lakatamia",
+            "name": "Lakatamia",
+            "point": {
+                "x": 19750.611328125,
+                "y": 231.00024414062,
+                "z": -234973.515625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                33.49011058133,
+                35.159249791336,
+                95.000091552734
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Ercan",
+            "name": "Ercan",
+            "point": {
+                "x": 24764.4765625,
+                "y": 95.000091552734,
+                "z": -219271.6875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                33.707277702803,
+                35.236403909864,
+                45.000045776367
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Gecitkale",
+            "name": "Gecitkale",
+            "point": {
+                "x": 32254.640625,
+                "y": 45.000045776367,
+                "z": -199005.984375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                33.26701429987,
+                35.278334798852,
+                235.00022888184
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Pinarbashi",
+            "name": "Pinarbashi",
+            "point": {
+                "x": 39146.83203125,
+                "y": 235.00022888184,
+                "z": -238857.234375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.127285739707,
+                33.10790532693,
+                115.27894592285
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Naqoura",
+            "name": "Naqoura",
+            "point": {
+                "x": -209938.1875,
+                "y": 115.27894592285,
+                "z": -78642.609375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                39.732582868536,
+                32.940993052246,
+                774.86505126953
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "H3",
+            "name": "H3",
+            "point": {
+                "x": -234882.46875,
+                "y": 774.86505126953,
+                "z": 351282.125
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                39.60662588777,
+                33.070356444511,
+                785.70843505859
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "H3 Northwest",
+            "name": "H3 Northwest",
+            "point": {
+                "x": -220615.71875,
+                "y": 785.70843505859,
+                "z": 339424.875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                39.612247285995,
+                32.738030133825,
+                814.00079345703
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "H3 Southwest",
+            "name": "H3 Southwest",
+            "point": {
+                "x": -257454.703125,
+                "y": 814.00079345703,
+                "z": 340163.46875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                39.142215977076,
+                32.403696420912,
+                908.02374267578
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Ruwayshid",
+            "name": "Ruwayshid",
+            "point": {
+                "x": -294673.28125,
+                "y": 908.02374267578,
+                "z": 296174.875
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                38.912852189935,
+                37.460456062347,
+                823.94732666016
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Sanliurfa",
+            "name": "Sanliurfa",
+            "point": {
+                "x": 266091.8125,
+                "y": 823.94732666016,
+                "z": 275093.9375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                38.587524391694,
+                36.546920540733,
+                431.39971923828
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Kharab Ishk",
+            "name": "Kharab Ishk",
+            "point": {
+                "x": 164825.84375,
+                "y": 431.39971923828,
+                "z": 245883.84375
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                38.924054611964,
+                36.263473166914,
+                299.00030517578
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Tal Siman",
+            "name": "Tal Siman",
+            "point": {
+                "x": 133308.796875,
+                "y": 299.00030517578,
+                "z": 275979.0625
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.900560445898,
+                35.021918232008,
+                0
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Raj al Issa East",
+            "name": "Raj al Issa East",
+            "point": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                35.900560445898,
+                35.021918232008,
+                0
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "Raj al Issa West",
+            "name": "Raj al Issa West",
+            "point": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        "type": "Feature"
+    },
+    {
+        "geometry": {
+            "coordinates": [
+                38.614884032103,
+                33.506450284054,
+                710.00073242188
+            ],
+            "type": "Point"
+        },
+        "properties": {
+            "category": "AIRDROME",
+            "id": "At Tanf",
+            "name": "At Tanf",
+            "point": {
+                "x": -172365.28125,
+                "y": 710.00073242188,
+                "z": 247031.90625
+            }
+        },
+        "type": "Feature"
+    }
+]

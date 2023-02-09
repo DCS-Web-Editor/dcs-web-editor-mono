@@ -1,0 +1,443 @@
+[
+    {
+      "geometry": {
+        "coordinates": [
+          37.359783477556,
+          45.013174733772,
+          43.00004196167
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Anapa-Vityazevo",
+        "name": "Anapa-Vityazevo",
+        "point": {
+          "x": -4447.7905273438,
+          "y": 43.00004196167,
+          "z": 244021.984375
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          38.925202300775,
+          45.087429883845,
+          30.01003074646
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Krasnodar-Center",
+        "name": "Krasnodar-Center",
+        "point": {
+          "x": 11652.913085938,
+          "y": 30.01003074646,
+          "z": 366766.3125
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          37.78622606048,
+          44.673329604127,
+          40.010040283203
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Novorossiysk",
+        "name": "Novorossiysk",
+        "point": {
+          "x": -40299.0234375,
+          "y": 40.010040283203,
+          "z": 279853.5
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          37.985886938697,
+          44.961383022734,
+          20.010303497314
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Krymsk",
+        "name": "Krymsk",
+        "point": {
+          "x": -7349.0327148438,
+          "y": 20.010303497314,
+          "z": 293711.96875
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          40.021427482236,
+          44.671440257355,
+          180.01019287109
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Maykop-Khanskaya",
+        "name": "Maykop-Khanskaya",
+        "point": {
+          "x": -27625.943359375,
+          "y": 180.01019287109,
+          "z": 457047.6875
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          38.004146350528,
+          44.567674586004,
+          22.009923934937
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Gelendzhik",
+        "name": "Gelendzhik",
+        "point": {
+          "x": -50995.6328125,
+          "y": 22.009923934937,
+          "z": 297848.84375
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          39.924231880466,
+          43.439378434051,
+          30.010034561157
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Sochi-Adler",
+        "name": "Sochi-Adler",
+        "point": {
+          "x": -165163.28125,
+          "y": 30.010034561157,
+          "z": 460901.53125
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          39.203066906325,
+          45.046099641543,
+          34.010036468506
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Krasnodar-Pashkovsky",
+        "name": "Krasnodar-Pashkovsky",
+        "point": {
+          "x": 8706.8193359375,
+          "y": 34.010036468506,
+          "z": 388985.71875
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          41.142447588488,
+          42.852741071635,
+          13.338506698608
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Sukhumi-Babushara",
+        "name": "Sukhumi-Babushara",
+        "point": {
+          "x": -221381.6875,
+          "y": 13.338506698608,
+          "z": 565908.75
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          40.564175768401,
+          43.124233340197,
+          21.01003074646
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Gudauta",
+        "name": "Gudauta",
+        "point": {
+          "x": -195650.515625,
+          "y": 21.01003074646,
+          "z": 515898.75
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          41.60927548351,
+          41.603279859649,
+          10.044037818909
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Batumi",
+        "name": "Batumi",
+        "point": {
+          "x": -356437.15625,
+          "y": 10.044037818909,
+          "z": 618210.875
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          42.061021312856,
+          42.238728081573,
+          13.239942550659
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Senaki-Kolkhi",
+        "name": "Senaki-Kolkhi",
+        "point": {
+          "x": -281903.125,
+          "y": 13.239942550659,
+          "z": 648379.125
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          41.876483823101,
+          41.932105353453,
+          18.01001739502
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Kobuleti",
+        "name": "Kobuleti",
+        "point": {
+          "x": -317604.90625,
+          "y": 18.01001739502,
+          "z": 636704.125
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          42.4956840774,
+          42.17915393769,
+          45.010047912598
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Kutaisi",
+        "name": "Kutaisi",
+        "point": {
+          "x": -284582.8125,
+          "y": 45.010047912598,
+          "z": 685029.625
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          43.100679733081,
+          44.218646823807,
+          320.01031494141
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Mineralnye Vody",
+        "name": "Mineralnye Vody",
+        "point": {
+          "x": -52089.546875,
+          "y": 320.01031494141,
+          "z": 707418.0625
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          43.625108736098,
+          43.51007143853,
+          430.01040649414
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Nalchik",
+        "name": "Nalchik",
+        "point": {
+          "x": -125487.578125,
+          "y": 430.01040649414,
+          "z": 759560.125
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          44.620327262102,
+          43.791303250938,
+          154.61184692383
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Mozdok",
+        "name": "Mozdok",
+        "point": {
+          "x": -83329.7890625,
+          "y": 154.61184692383,
+          "z": 835634.6875
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          44.946875226153,
+          41.674720064437,
+          479.69479370117
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Tbilisi-Lochini",
+        "name": "Tbilisi-Lochini",
+        "point": {
+          "x": -314926.25,
+          "y": 479.69479370117,
+          "z": 895724
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          44.947183065317,
+          41.641163266787,
+          449.41024780273
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Soganlug",
+        "name": "Soganlug",
+        "point": {
+          "x": -318656.96875,
+          "y": 449.41024780273,
+          "z": 896274.9375
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          45.01909093846,
+          41.637735936262,
+          464.50045776367
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Vaziani",
+        "name": "Vaziani",
+        "point": {
+          "x": -318191.71875,
+          "y": 464.50045776367,
+          "z": 902331.75
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          44.588922553543,
+          43.208500987381,
+          524.00579833984
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "category": "AIRDROME",
+        "id": "Beslan",
+        "name": "Beslan",
+        "point": {
+          "x": -148472.40625,
+          "y": 524.00579833984,
+          "z": 842251.75
+        }
+      },
+      "type": "Feature"
+    }
+  ]
