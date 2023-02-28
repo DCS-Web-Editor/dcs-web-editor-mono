@@ -6,7 +6,12 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "tsc": "tsc",
-    "build": "tsc && vite build",
+    "mergeNevada": "node src/mergeNevada.mjs > dist/NevadaMerged.json",
+    "mergeSyria": "node src/mergeSyria.mjs > dist/SyriaMerged.json",
+    "mergeCaucasus": "node src/mergeCaucasus.mjs > dist/CaucasusMerged.json",
+    "mergeMarianaIslands": "node src/mergeMarianaIslands.mjs > dist/MarianaIslandsMerged.json",
+    "mergePersianGulf": "node src/mergePersianGulf.mjs > dist/PersianGulfMerged.json",
+    "build": "npm run mergeNevada && npm run mergeSyria && npm run mergeCaucasus && npm run mergeMarianaIslands && npm run mergePersianGulf && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

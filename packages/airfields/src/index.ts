@@ -1,21 +1,20 @@
-import caucasus from './caucasus.json'
-import syria from './syria.json'
-import marianas from './marianas.json'
-import nevada from './nevada.json'
-import persian_gulf from './persian_gulf.json'
-
-// airports json is an object for some reason
-const caucasusToArray: any[] = []
-Object.values(caucasus).forEach(airport => {
-    caucasusToArray.push(airport);
-});
+/* @ts-ignore path */
+import Caucasus from './CaucasusMerged.json'
+/* @ts-ignore path */
+import Syria from './SyriaMerged.json'
+/* @ts-ignore path */
+import MarianaIslands from './MarianaIslandsMerged.json'
+/* @ts-ignore path */
+import Nevada from './NevadaMerged.json'
+/* @ts-ignore path */
+import PersianGulf from './PersianGulfMerged.json'
 
 const toExport: any = {
-    Caucasus: caucasusToArray,
-    Syria: syria,
-    MarianaIslands: marianas,
-    Nevada: nevada,
-    PersianGulf: persian_gulf,
+    Caucasus,
+    Syria,
+    MarianaIslands,
+    Nevada,
+    PersianGulf,
 }
 
 export default toExport;

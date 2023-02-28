@@ -1,8 +1,4 @@
 {
-    "airdrome_class_1": "airdrome_class_1",
-    "airdrome_class_2": "airdrome_class_2",
-    "airdrome_class_3": "airdrome_class_3",
-    "airdrome_class_0": "airdrome_class_none",
     "S-60_Type59_Artillery": "P0091000015",
     "F-16C bl.50": "P0091000024",
     "MTLB": "P0091000004",
@@ -503,5 +499,10 @@
     "SA-18 Igla manpad": "P0091000202",
     "Coach a tank blue": "P0091000212",
     "Patriot AMG": "P0091000046",
-    "tt_DSHK": "P0091000004"
+    "tt_DSHK": "P0091000004",
+    "airdrome_class_1": "airdrome_class_1",
+    "airdrome_class_2": "airdrome_class_2",
+    "airdrome_class_3": "airdrome_class_3",
+    "airdrome_class_4": "airdrome_class_4",
+    "airdrome_class_0": "airdrome_class_none"
   }
