@@ -26,7 +26,7 @@ function toDegreesMinutes(coordinate) {
     var absolute = Math.abs(coordinate);
     var degrees = Math.floor(absolute);
     var minutesNotTruncated = (absolute - degrees) * 60;
-    var minutes = minutesNotTruncated.toPrecision(4);
+    var minutes = minutesNotTruncated.toFixed(4);
     return degrees + "° " + minutes + "'";
 }
 export function convertDMS(lat, lon) {
@@ -56,12 +56,15 @@ export function toHHMMSS(s) {
     date.setSeconds(s); // specify value for SECONDS here
     return date.toISOString().slice(11, 19);
 }
-export function LLtoAll(lat, lng) {
+export function LLtoAll(lat, lon) {
     return {
-        MGRS: MGRS.forward([lng, lat], 5),
-        DMS: convertDMS(lat, lng),
-        DMM: convertDMM(lat, lng),
+        MGRS: MGRS.forward([lon, lat], 5),
+        DMS: convertDMS(lat, lon),
+        DMM: convertDMM(lat, lon),
     };
+}
+export function LLtoMGRS(lat, lon) {
+    return MGRS.forward([lon, lat], 5);
 }
 export function calcBearing(start, end) {
     const a = {
@@ -86,6 +89,31 @@ export function calcDistance(start, end) {
     return convertDistance(getDistance(a, b), 'sm');
 }
 export const M_TO_FEET = 3.28084;
+export const M_TO_NM = 0.000539957;
+export function toFeet(meters = 0) {
+    return (meters * M_TO_FEET).toFixed(0);
+}
+export function toNm(meters = 0) {
+    return (meters * M_TO_NM).toFixed(1);
+}
+export function toDeg(rad = 0) {
+    return (rad / (Math.PI / 180)).toFixed(0);
+}
+export function toRad(deg = 0) {
+    return (deg * (Math.PI / 180));
+}
 export function rgbToInt(r, g, b) {
     return (r * 255 << 16) + (g * 255 << 8) + (b * 255);
 }
+export const MORSE = {
+    'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..',
+    'e': '.', 'f': '..-.', 'g': '--.', 'h': '....',
+    'i': '..', 'j': '.---', 'k': '-.-', 'l': '.-..',
+    'm': '--', 'n': '-.', 'o': '---', 'p': '.--.',
+    'q': '--.-', 'r': '.-.', 's': '...', 't': '-',
+    'u': '..-', 'v': '...-', 'w': '.--', 'x': '-..-',
+    'y': '-.--', 'z': '--..', ' ': '/',
+    '1': '.----', '2': '..---', '3': '...--', '4': '....-',
+    '5': '.....', '6': '-....', '7': '--...', '8': '---..',
+    '9': '----.', '0': '-----',
+};

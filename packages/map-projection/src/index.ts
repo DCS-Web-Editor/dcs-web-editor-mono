@@ -90,6 +90,7 @@ export function activeMap(mapName: string) {
  * @returns {{ lat: number; lon: number; }}
  */
 export function mizToLL(y: number, x: number) {
+    if (!projector) throw new Error('Projector not defined, call activeMap')
     const [xa, ya] = projector.inverse([y, x]);
     return {
         lat: ya,

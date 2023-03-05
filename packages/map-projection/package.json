@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "coordinate conversion DCS <-> lat, lon",
   "main": "dist/index.js",
-  "module": "dist/map-projection.mjs",
   "scripts": {
     "build": "tsc",
     "test": "jest"

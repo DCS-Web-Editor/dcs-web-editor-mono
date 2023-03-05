@@ -1,10 +1,8 @@
-
-import * as MGRS from '../lib/mgrs.esm';
+import * as MGRS from '../lib/mgrs.esm'
 import { convertDistance, getDistance, getRhumbLineBearing } from 'geolib';
-
 export interface LatLon {
-    lat: number;
-    lon: number;
+  lat: number;
+  lon: number;
 }
 
 export function ConvertDMSToDD(degrees: number, minutes: number, seconds: number, direction: string) {
@@ -40,7 +38,7 @@ function toDegreesMinutes(coordinate: number) {
     var absolute = Math.abs(coordinate);
     var degrees = Math.floor(absolute);
     var minutesNotTruncated = (absolute - degrees) * 60;
-    var minutes = minutesNotTruncated.toPrecision(4);
+    var minutes = minutesNotTruncated.toFixed(4);
 
     return degrees + "° " + minutes + "'";
 }
@@ -82,12 +80,16 @@ export function toHHMMSS(s:number) {
     return date.toISOString().slice(11, 19);
 }
 
-export function LLtoAll(lat: number, lng: number) {
+export function LLtoAll(lat: number, lon: number) {
     return {
-        MGRS: MGRS.forward([lng, lat], 5),
-        DMS: convertDMS(lat, lng),
-        DMM: convertDMM(lat, lng),
+        MGRS: MGRS.forward([lon, lat], 5),
+        DMS: convertDMS(lat, lon),
+        DMM: convertDMM(lat, lon),
     }
+}
+
+export function LLtoMGRS(lat: number, lon: number) {
+  return MGRS.forward([lon, lat], 5);
 }
 
 export function calcBearing(start: LatLon, end: LatLon) {
@@ -115,35 +117,38 @@ export function calcDistance(start: LatLon, end: LatLon) {
 }
 
 export const M_TO_FEET = 3.28084;
+export const M_TO_NM = 0.000539957;
+
+
+export function toFeet(meters = 0) {
+    return (meters * M_TO_FEET).toFixed(0)    
+}
+
+export function toNm(meters = 0) {
+    return (meters * M_TO_NM).toFixed(1)    
+}
+export function toDeg(rad = 0) {
+    return (rad / (Math.PI / 180)).toFixed(0)    
+}
+
+export function toRad(deg = 0) {
+    return (deg * (Math.PI / 180))    
+}
+
 
 export function rgbToInt(r:number, g:number, b:number) {
     return (r * 255 << 16) + (g * 255 << 8) + (b * 255);
 }
 
 export const MORSE = {
-    "A": ".-",
-    "B": "-...",
-    "C": "-.-.",
-    "D": "-..",
-    "E": ".",
-    "F": "..-.",
-    "G": "--.",
-    "H": "....",
-    "I": "..",
-    "J": ".---",
-    "K": "-.-",
-    "L": ".-..",
-    "M": "--",
-    "N": "-.",
-    "O": "---",
-    "P": ".--.",
-    "Q": "--.-",
-    "R": ".-.",
-    "S": "...",
-    "T": "-",
-    "U": "..-",
-    "W": ".--",
-    "X": "-..-",
-    "Y": "-.--",
-    "Z": "--.."
+    'a': '.-',    'b': '-...',  'c': '-.-.', 'd': '-..',
+    'e': '.',     'f': '..-.',  'g': '--.',  'h': '....',
+    'i': '..',    'j': '.---',  'k': '-.-',  'l': '.-..',
+    'm': '--',    'n': '-.',    'o': '---',  'p': '.--.',
+    'q': '--.-',  'r': '.-.',   's': '...',  't': '-',
+    'u': '..-',   'v': '...-',  'w': '.--',  'x': '-..-',
+    'y': '-.--',  'z': '--..',  ' ': '/',
+    '1': '.----', '2': '..---', '3': '...--', '4': '....-', 
+    '5': '.....', '6': '-....', '7': '--...', '8': '---..', 
+    '9': '----.', '0': '-----', 
  }

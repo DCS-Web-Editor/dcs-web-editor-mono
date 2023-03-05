@@ -1,8 +1,11 @@
-import { mizToLL } from "@dcs-web-editor-mono/map-projection";
+import { activeMap, mizToLL } from "../../map-projection";
 import { convertDMshort, M_TO_FEET } from "@dcs-web-editor-mono/utils";
 
-export function toFlightPlan(data:any) {
-    const waypoints = data.group?.route.points;
+export function toFlightPlan(data:any, theater: string) {
+    const waypoints = data.group?.route?.points;
+    if (!waypoints?.length) return;
+
+    activeMap(theater);
 
     const coordinates: string[] = [];
 
@@ -31,27 +34,26 @@ export function toPoint(lat: number, lon: number, zoom = 5) {
 }
 
 export const skyVectorZoom: Record<number, number> = {
-    22: 1,
-    21: 1,
-    20: 1,
-    19: 1,
-    18: 1,
-    17: 1,
-    16: 1,
-    15: 1,
-    14: 1,
-    13: 1,
-    12: 1,
-    11: 1,
-    10: 3,
-    9: 5,
-    8: 7,
-    7: 9,
-    6: 11,
-    5: 13,
-    4: 15,
-    3: 17,
-    2: 19,
-    1: 21,
-  };
-  
+  22: 1,
+  21: 1,
+  20: 1,
+  19: 1,
+  18: 1,
+  17: 1,
+  16: 1,
+  15: 1,
+  14: 1,
+  13: 1,
+  12: 1,
+  11: 1,
+  10: 3,
+  9: 5,
+  8: 7,
+  7: 9,
+  6: 11,
+  5: 13,
+  4: 15,
+  3: 17,
+  2: 19,
+  1: 21,
+};

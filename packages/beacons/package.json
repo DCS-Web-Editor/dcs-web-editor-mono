@@ -7,9 +7,8 @@
   "scripts": {
     "clean": "rimraf dist/ && mkdir dist",
     "tsc": "tsc",
-    "build": "npm run copy-assets && tsc && vite build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "copy-assets": "npm run clean" 
+    "build": "npm run clean && tsc && vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
