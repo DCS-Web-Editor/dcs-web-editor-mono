@@ -50,6 +50,7 @@ import P0091000023 from './small/P91000023.png';
 import P0091000075 from './small/P91000075.png';
 import P0091000082 from './small/P91000082.png';
 import P0091000205 from './small/P91000205.png';
+import P0091000207 from './small/P91000207.png';
 import P0091000216 from './small/P91000216.png';
 import P0091000064 from './small/P91000064.png';
 import P0091000060 from './small/P91000060.png';
@@ -139,6 +140,7 @@ const toExport: any = {
         P0091000075,
         P0091000082,
         P0091000205,
+        P0091000207,
         P0091000216,
         P0091000064,
         P0091000060,
