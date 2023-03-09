@@ -12,7 +12,7 @@ export function toFlightPlan(data, theater) {
     });
     const speed = Math.round(data.unit?.speed);
     const speedString = speed ? speed.toString().padStart(4, '0') : '0200';
-    const alt = Math.round((data.unit?.alt || 0) * M_TO_FEET / 1000);
+    const alt = Math.round((data.unit?.alt || 0) * M_TO_FEET / 100);
     const altString = alt ? alt.toString().padStart(3, '0') : '010';
     const params = coordinates.map(wp => `${wp}`).join(' ');
     const zoom = 5;
