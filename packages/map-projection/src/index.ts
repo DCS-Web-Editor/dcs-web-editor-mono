@@ -111,3 +111,5 @@ export function LLToMiz(lon: number, lat: number) {
     const [y, x] = projector.forward([lon, lat]);
     return [x, y];
 }
+
+export { COORDINATES } from './mapCoordinates'
