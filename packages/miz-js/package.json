@@ -1,0 +1,23 @@
+{
+  "name": "@dcs-web-editor-mono/miz-js",
+  "version": "1.0.0",
+  "description": "DCS .miz file editor",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCS-Web-Editor/dcs-web-editor-mono.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono/issues"
+  },
+  "homepage": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono#readme",
+  "dependencies": {
+  }
+}
