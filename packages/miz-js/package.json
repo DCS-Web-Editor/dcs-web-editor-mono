@@ -4,6 +4,7 @@
   "description": "DCS .miz file editor",
   "main": "index.html",
   "scripts": {
+    "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },

@@ -17,8 +17,15 @@
 				return parent.addDirectory(name);
 			},
 			addFile(name, blob, parent) {
-        console.log('addFile', name);
-				return parent.addBlob(name, blob);
+        const exists = fs.getChildByName(name);
+        
+        if (exists) {
+          const overwrite = confirm(`File ${name} already exists, overwrite ?`)
+          if(overwrite) this.remove(exists);
+          else return;
+        } 
+
+        return parent.addBlob(name, blob);
 			},
 			addFileSystemEntry(directoryEntry, parent) {
         console.log('addFileSystemEntry', directoryEntry);
@@ -80,7 +87,6 @@
 				const li = target.parentElement;
 				if (!li.classList.contains("selected")) {
 					selectFile(target.parentElement);
-          editFile(target.parentElement);
 				} else {
 					li.draggable = false;
 					let state;
@@ -150,6 +156,7 @@
 					if (item && file && !item.type.includes("miz") && !file.name.endsWith(".miz") && item.webkitGetAsEntry !== undefined) {
 						const fileEntry = await item.webkitGetAsEntry();
 						const entry = await model.addFileSystemEntry(fileEntry, targetNode);
+            console.log('drop', entry);
 						if (fileEntry.isDirectory) {
 							selectDirectory(target);
 							expandTree(targetNode);
@@ -203,6 +210,7 @@
 		listing.addEventListener("drop", event => {
 			if (event.dataTransfer && event.dataTransfer.files && event.dataTransfer.files.length) {
 				const entries = Array.from(event.dataTransfer.files).map(file => model.addFile(file.name, file, getFileNode(selectedDirectory)));
+
 				refreshListing();
 				selectFile(findFileElement(entries[0].id));
 			}
@@ -333,9 +341,15 @@
 
     async function editFile() {
 			const node = getFileNode(selectedFile);
+      
       const entry = await model.getData(node);
       const textWriter = new zip.TextWriter();
-      const text = await entry.getData(textWriter);
+
+      // Entry or Blob
+      let text = entry.getData ?
+       await entry.getData(textWriter)
+       :
+       await entry.text()
 
       editor.session.setValue(text);
     }
@@ -362,11 +376,17 @@
 		}
 
 		function selectFile(fileElement) {
-			resetSelectedFile();
+      
+      resetSelectedFile();
 			resetSelectedLabel(true);
 			fileElement.className = "selected";
 			fileElement.draggable = true;
 			selectedFile = fileElement;
+
+      // open selected file in editor
+      setTimeout(() => {
+        editFile(fileElement);
+      }, 100)
 		}
 
 		function selectDirectory(directoryElement) {
