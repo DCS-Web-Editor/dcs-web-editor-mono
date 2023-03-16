@@ -1,4 +1,4 @@
-import * as MGRS from '../lib/mgrs.esm'
+import * as MGRS from '../lib/mgrs'
 import { convertDistance, getDistance, getRhumbLineBearing } from 'geolib';
 export interface LatLon {
   lat: number;
