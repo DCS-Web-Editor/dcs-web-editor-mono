@@ -33,7 +33,7 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-*.Zone.Identifier
+*Zone.Identifier
 
 # docs
 /docs
