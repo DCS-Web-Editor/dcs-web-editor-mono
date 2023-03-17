@@ -17,11 +17,11 @@
 				return parent.addDirectory(name);
 			},
 			addFile(name, blob, parent) {
-        const exists = fs.getChildByName(name);
+        const exists = parent.getChildByName(name);
         
         if (exists) {
           const overwrite = confirm(`File ${name} already exists, overwrite ?`)
-          if(overwrite) this.remove(exists);
+          if (overwrite) this.remove(exists);
           else return;
         } 
 
@@ -36,8 +36,8 @@
 			getById(id) {
 				return fs.getById(id);
 			},
-			remove(entry) {
-				fs.remove(entry);
+			async remove(entry) {
+				await fs.remove(entry);
 			},
 			move(entry, target) {
         console.log('move', target);
