@@ -21,6 +21,14 @@
 
 }
 
+#image-preview {
+  position: relative;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  display: none;
+}
+
 .directories, .files {
 	position: relative;
 	background-color: white;
@@ -129,8 +137,9 @@ summary {
 .tree, .listing {
 	padding: 5px;
 	height: calc(100% - 10px);
-	overflow: auto;
 	margin: 0;
+  overflow: hidden;
+
 }
 .tree {
   background-color: #23313f;

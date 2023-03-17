@@ -63,10 +63,13 @@
         const data = await entry.getData();
         return data;
       },
-			async getBlobURL(entry, options) {
-				const blob = await entry.getBlob(zip.getMimeType(entry.filename), options);
+			async getBlob(entry, options) {
+				return await entry.getBlob(zip.getMimeType(entry.filename), options);
+			},
+			async getBlobURL(entry, options, type) {
+				const blob = await entry.getBlob(type ?? zip.getMimeType(entry.filename), options);
 				return URL.createObjectURL(blob);
-			}
+			},
 		};
 	})();
 
@@ -77,6 +80,7 @@
 		const editorWindow = document.getElementById("editor");
 		const separator = document.getElementById("separator");
 		const separator2 = document.getElementById("separator2");
+		const imagePreview = document.getElementById("image-preview");
 		let selectedDirectory, selectedFile, selectedLabel, selectedLabelValue, selectedDrag, hoveredElement, movingSeparator, movingSeparator2;
 
     // files
@@ -344,6 +348,22 @@
       
       const entry = await model.getData(node);
       const textWriter = new zip.TextWriter();
+
+      if (entry.filename.match(/(\.jpg|\.png)$/i)) {
+        const blob = await model.getBlobURL(node, {}, 'image/png')
+        imagePreview.src = blob;
+        editorWindow.style.display = 'none';
+        imagePreview.style.display = 'block';
+        // console.log(blob);
+        // window.open(blob, '_blank');
+        
+        return;
+      }
+
+      imagePreview.src = "";
+      imagePreview.style.display = 'none';
+      editorWindow.style.display = 'block';
+
 
       // Entry or Blob
       let text = entry.getData ?
