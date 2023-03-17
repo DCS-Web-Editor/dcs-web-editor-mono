@@ -168,7 +168,7 @@ summary {
 	padding: 5px;
 	height: calc(100% - 10px);
 	margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 
 }
 .tree {
