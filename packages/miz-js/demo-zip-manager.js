@@ -81,6 +81,7 @@
 		const separator = document.getElementById("separator");
 		const separator2 = document.getElementById("separator2");
 		const imagePreview = document.getElementById("image-preview");
+		// const imageEdit = document.getElementById("image-edit");
 		const audioPreview = document.getElementById("audio-preview");
 		let selectedDirectory, selectedFile, selectedLabel, selectedLabelValue, selectedDrag, hoveredElement, movingSeparator, movingSeparator2;
 
@@ -382,7 +383,10 @@
         imagePreview.src = blob;
         editorWindow.style.display = 'none';
         audioPreview.style.display = 'none';
+        saveEditor.style.display = 'none';
         imagePreview.style.display = 'block';
+        // imageEdit.children[0].href=`https://www.photopea.com#%7B%22files%22:%5B%22${blob}%22%5D%7D`
+        
         // console.log(blob);
         // window.open(blob, '_blank');
         return;
@@ -393,6 +397,7 @@
         audioPreview.src = blob;
         editorWindow.style.display = 'none';
         imagePreview.style.display = 'none';
+        saveEditor.style.display = 'none';
         audioPreview.style.display = 'block';
         // console.log(blob);
         // window.open(blob, '_blank');
@@ -402,6 +407,7 @@
       imagePreview.src = "";
       audioPreview.style.display = 'none';
       imagePreview.style.display = 'none';
+      saveEditor.style.display = 'block';
       editorWindow.style.display = 'block';
 
       const textWriter = new zip.TextWriter();

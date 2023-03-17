@@ -31,7 +31,18 @@
   width: 4rem;
   height: 1.5rem;
   border-radius: 10px;
+  display: none;
 }
+#image-edit {
+  float: right;
+  background-color: #23313f;
+  color: #89bed7;
+  border: 1px solid #89bed7;
+  width: 10rem;
+  height: 1.5rem;
+  border-radius: 10px;
+}
+
 #save-editor:hover {
   background-color: #4f6c89;
   color: #fefefe;
