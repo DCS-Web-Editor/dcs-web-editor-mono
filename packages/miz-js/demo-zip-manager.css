@@ -125,6 +125,7 @@ summary {
 
 .listing:empty::after {
 	font-family: sans-serif;
+  font-size: 10px;
 	color: #bbb;
 	content: "Drag and drop uncompressed files here";
 	display: block;
@@ -136,6 +137,7 @@ summary {
 
 .directories.empty::after {
 	font-family: sans-serif;
+  font-size: 10px;
 	color: #bbb;
 	content: "Drag and drop .miz file";
 	display: block;
@@ -181,6 +183,7 @@ summary {
 }
 
 .description {
+  font-size: 1em;
 }
 
 .button {
