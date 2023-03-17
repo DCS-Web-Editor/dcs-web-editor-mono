@@ -184,6 +184,8 @@ summary {
 
 .description {
   font-size: 1em;
+  text-align: left;
+  margin-top: -1rem;
 }
 
 .button {
