@@ -28,7 +28,6 @@
         return parent.addBlob(name, blob);
 			},
 			addFileSystemEntry(directoryEntry, parent) {
-        console.log('addFileSystemEntry', directoryEntry);
 				return parent.addFileSystemEntry(directoryEntry);
 			},
 			getRoot() {
@@ -78,6 +77,7 @@
 		const tree = document.getElementById("tree");
 		const listing = document.getElementById("listing");
 		const editorWindow = document.getElementById("editor");
+    const saveEditor = document.getElementById("save-editor");
 		const separator = document.getElementById("separator");
 		const separator2 = document.getElementById("separator2");
 		const imagePreview = document.getElementById("image-preview");
@@ -270,6 +270,12 @@
 			movingSeparator2 = false;
 		}, false);
 
+    saveEditor.addEventListener("click", () => {
+      const content = editor.getValue();
+      const node = getFileNode(selectedFile);
+      node?.replaceText && node.replaceText(content)
+    })
+
 		progressExport.style.opacity = 0;
 		expandTree();
 		refreshTree();
@@ -315,14 +321,16 @@
 						progressExport.value = 0;
 						progressExport.max = 0;
 						let blobURL;
-						try {
+
+            try {
 							blobURL = isFile ?
 								await model.getBlobURL(node, { onprogress, bufferedWrite: true }) :
 								await model.exportZip(node, { onprogress, relativePath: true, bufferedWrite: true });
 						} catch (error) {
 							alert(error);
 						}
-						if (blobURL) {
+
+            if (blobURL) {
 							const clickEvent = new MouseEvent("click");
 							progressExport.style.opacity = 0;
 							target.href = blobURL;
@@ -337,20 +345,39 @@
 				}
 			};
 
+
 			function onprogress(index, end) {
 				progressExport.value = index;
 				progressExport.max = end;
 			}
 		}
 
+    function ondelete(isFile) {
+			return async event => {
+        const node = getFileNode(isFile ? selectedFile : selectedDirectory);
+        const confirmed = confirm("Remove " + ( isFile ? node.name : node.parent ? node.name : "file") + " ?");
+
+        if (confirmed) {
+          let blobURL;
+          try {
+            blobURL = isFile ?
+              await model.remove(node) :
+              await model.remove(node);
+          } catch (error) {
+            alert(error);
+          }
+          refreshTree()
+        }
+			}
+    }
+
 
     async function editFile() {
 			const node = getFileNode(selectedFile);
-      
       const entry = await model.getData(node);
-      const textWriter = new zip.TextWriter();
+      const name = entry.name ?? entry.filename ?? node.name;
 
-      if (entry.filename.match(/(\.jpg|\.png)$/i)) {
+      if (name.match(/(\.jpg|\.png)$/i)) {
         const blob = await model.getBlobURL(node, {}, 'image/png')
         imagePreview.src = blob;
         editorWindow.style.display = 'none';
@@ -360,8 +387,8 @@
         // window.open(blob, '_blank');
         return;
       }
-      
-      if (entry.filename.match(/(\.ogg|\.mp3)$/i)) {
+
+      if (name.match(/(\.ogg|\.mp3)$/i)) {
         const blob = await model.getBlobURL(node, {}, 'audio/mpeg')
         audioPreview.src = blob;
         editorWindow.style.display = 'none';
@@ -377,12 +404,13 @@
       imagePreview.style.display = 'none';
       editorWindow.style.display = 'block';
 
+      const textWriter = new zip.TextWriter();
 
       // Entry or Blob
       let text = entry.getData ?
        await entry.getData(textWriter)
        :
-       await entry.text()
+       await entry.text ? entry.text() : entry
 
       editor.session.setValue(text);
     }
@@ -521,15 +549,18 @@
 					label.textContent = "<mission>";
 				}
 				label.className = "dir-label";
+
 				newDirectory.className = "newdir-button button";
 				newDirectory.title = "Create a new folder";
 				newDirectory.textContent = "+";
 				newDirectory.addEventListener("click", onnewDirectory, false);
-				exportDirectory.className = "save-button button";
+
+        exportDirectory.className = "save-button button";
 				exportDirectory.title = "Download .miz";
-				exportDirectory.textContent = "⇩";
+				exportDirectory.textContent = "⏬";
 				exportDirectory.addEventListener("click", onexport(false), false);
-				summary.appendChild(summaryContent);
+
+        summary.appendChild(summaryContent);
 				summaryContent.appendChild(label);
 				summaryContent.appendChild(newDirectory);
 				summaryContent.appendChild(exportDirectory);
@@ -559,19 +590,28 @@
 					if (!child.directory) {
 						const li = document.createElement("li");
 						const label = document.createElement("span");
-						const exportFile = document.createElement("a");
 						li.dataset.fileId = child.id;
 						if (selectedFile && selectedFile.dataset.fileId == child.id) {
-							selectFile(li);
+              selectFile(li);
 						}
 						label.className = "file-label";
 						label.textContent = child.name;
+            li.appendChild(label);
+            
+            const exportFile = document.createElement("a");
 						exportFile.className = "save-button button";
 						exportFile.title = "Download this file";
-						exportFile.textContent = "⇩";
+						exportFile.textContent = "⏬";
 						exportFile.addEventListener("click", onexport(true), false);
-						li.appendChild(label);
 						li.appendChild(exportFile);
+            
+            const deleteFile = document.createElement("a");
+            deleteFile.className = "delete-button button";
+						deleteFile.title = "Remove this file";
+						deleteFile.textContent = "❎";
+						deleteFile.addEventListener("click", ondelete(true), false);
+						li.appendChild(deleteFile);
+
 						listing.appendChild(li);
 					}
 				});

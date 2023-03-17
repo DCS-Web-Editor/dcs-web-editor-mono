@@ -21,6 +21,24 @@
 
 }
 
+#save-editor {
+  float: right;
+  background-color: #23313f;
+  color: #89bed7;
+  border: 1px solid #89bed7;
+  width: 4rem;
+  height: 1.5rem;
+  border-radius: 10px;
+}
+#save-editor:hover {
+  background-color: #4f6c89;
+  color: #fefefe;
+}
+#save-editor:active {
+  background-color: #89bed7;
+  color: #fefefe;
+}
+
 #image-preview {
   position: relative;
   left: 0;
@@ -168,21 +186,23 @@ summary {
 .button {
 	cursor: pointer;
 	opacity: 0;
+  display: none;
 	margin-left: 7px;
 	width: 0px;
 	background-size: contain;
 	transition: opacity .1s ease-in;
-  color: #222
+  color: #111
 }
 
 .selected>summary .button, .selected>.button {
 	min-width: 16px;
-	opacity: .75;
+	opacity: .65;
+  display: block;
 }
 
-.selected>summary:hover .button, .selected:hover>.button {
+/* .selected>summary:hover .button, .selected:hover>.button {
 	opacity: 1;
-}
+} */
 
 .selected>summary .button:hover, .selected>.button:hover {
 	opacity: 1;
@@ -213,6 +233,7 @@ summary {
 		background-color: #23313f;
 	}
 	.selected>summary .button, .selected>.button {
-		filter: invert();
+		/* filter: invert(); */
+    color: #89bed7;
 	}
 }
