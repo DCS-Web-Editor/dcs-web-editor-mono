@@ -555,21 +555,21 @@
 					label.textContent = "<mission>";
 				}
 				label.className = "dir-label";
+				summaryContent.appendChild(label);
 
 				newDirectory.className = "newdir-button button";
 				newDirectory.title = "Create a new folder";
-				newDirectory.textContent = "+";
+				newDirectory.textContent = "✅";
 				newDirectory.addEventListener("click", onnewDirectory, false);
+				summaryContent.appendChild(newDirectory);
 
         exportDirectory.className = "save-button button";
 				exportDirectory.title = "Download .miz";
 				exportDirectory.textContent = "⏬";
 				exportDirectory.addEventListener("click", onexport(false), false);
+				summaryContent.appendChild(exportDirectory);
 
         summary.appendChild(summaryContent);
-				summaryContent.appendChild(label);
-				summaryContent.appendChild(newDirectory);
-				summaryContent.appendChild(exportDirectory);
 				details.appendChild(summary);
 				element.appendChild(details);
 			}
@@ -604,19 +604,21 @@
 						label.textContent = child.name;
             li.appendChild(label);
             
+
+            const deleteFile = document.createElement("a");
+            deleteFile.className = "delete-button button";
+						deleteFile.title = "Remove this file";
+						deleteFile.textContent = "❌";
+						deleteFile.addEventListener("click", ondelete(true), false);
+						li.appendChild(deleteFile);
+
             const exportFile = document.createElement("a");
 						exportFile.className = "save-button button";
 						exportFile.title = "Download this file";
 						exportFile.textContent = "⏬";
 						exportFile.addEventListener("click", onexport(true), false);
 						li.appendChild(exportFile);
-            
-            const deleteFile = document.createElement("a");
-            deleteFile.className = "delete-button button";
-						deleteFile.title = "Remove this file";
-						deleteFile.textContent = "❎";
-						deleteFile.addEventListener("click", ondelete(true), false);
-						li.appendChild(deleteFile);
+
 
 						listing.appendChild(li);
 					}
