@@ -85,6 +85,8 @@ export function activeMap(mapName) {
  * @returns {{ lat: number; lon: number; }}
  */
 export function mizToLL(y, x) {
+    if (!projector)
+        throw new Error('Projector not defined, call activeMap');
     const [xa, ya] = projector.inverse([y, x]);
     return {
         lat: ya,
@@ -104,3 +106,4 @@ export function LLToMiz(lon, lat) {
     const [y, x] = projector.forward([lon, lat]);
     return [x, y];
 }
+export { COORDINATES } from './mapCoordinates';

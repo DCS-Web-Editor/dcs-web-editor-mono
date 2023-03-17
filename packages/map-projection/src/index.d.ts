@@ -30,3 +30,4 @@ export declare function mizToLL(y: number, x: number): {
  * @returns {{x, y}}
  */
 export declare function LLToMiz(lon: number, lat: number): any[];
+export { COORDINATES } from './mapCoordinates';
