@@ -29,6 +29,14 @@
   display: none;
 }
 
+#audio-preview {
+  position: relative;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  display: none;
+}
+
 .directories, .files {
 	position: relative;
 	background-color: white;

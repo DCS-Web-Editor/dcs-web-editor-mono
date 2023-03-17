@@ -81,6 +81,7 @@
 		const separator = document.getElementById("separator");
 		const separator2 = document.getElementById("separator2");
 		const imagePreview = document.getElementById("image-preview");
+		const audioPreview = document.getElementById("audio-preview");
 		let selectedDirectory, selectedFile, selectedLabel, selectedLabelValue, selectedDrag, hoveredElement, movingSeparator, movingSeparator2;
 
     // files
@@ -353,14 +354,26 @@
         const blob = await model.getBlobURL(node, {}, 'image/png')
         imagePreview.src = blob;
         editorWindow.style.display = 'none';
+        audioPreview.style.display = 'none';
         imagePreview.style.display = 'block';
         // console.log(blob);
         // window.open(blob, '_blank');
-        
+        return;
+      }
+      
+      if (entry.filename.match(/(\.ogg|\.mp3)$/i)) {
+        const blob = await model.getBlobURL(node, {}, 'audio/mpeg')
+        audioPreview.src = blob;
+        editorWindow.style.display = 'none';
+        imagePreview.style.display = 'none';
+        audioPreview.style.display = 'block';
+        // console.log(blob);
+        // window.open(blob, '_blank');
         return;
       }
 
       imagePreview.src = "";
+      audioPreview.style.display = 'none';
       imagePreview.style.display = 'none';
       editorWindow.style.display = 'block';
 
