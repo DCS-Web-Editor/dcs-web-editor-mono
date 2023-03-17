@@ -1,7 +1,10 @@
-import { mizToLL } from "@dcs-web-editor-mono/map-projection";
+import { activeMap, mizToLL } from "../../map-projection";
 import { convertDMshort, M_TO_FEET } from "@dcs-web-editor-mono/utils";
-export function toFlightPlan(data) {
-    const waypoints = data.group?.route.points;
+export function toFlightPlan(data, theater) {
+    const waypoints = data.group?.route?.points;
+    if (!waypoints?.length)
+        return;
+    activeMap(theater);
     const coordinates = [];
     waypoints.forEach((point) => {
         const latLon = mizToLL(point.y, point.x);
@@ -9,7 +12,7 @@ export function toFlightPlan(data) {
     });
     const speed = Math.round(data.unit?.speed);
     const speedString = speed ? speed.toString().padStart(4, '0') : '0200';
-    const alt = Math.round((data.unit?.alt || 0) * M_TO_FEET / 1000);
+    const alt = Math.round((data.unit?.alt || 0) * M_TO_FEET / 100);
     const altString = alt ? alt.toString().padStart(3, '0') : '010';
     const params = coordinates.map(wp => `${wp}`).join(' ');
     const zoom = 5;
