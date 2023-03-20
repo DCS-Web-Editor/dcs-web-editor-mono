@@ -197,20 +197,20 @@ export const COORDINATES = {
   ],
   "Sinai": [
       {
-          lat: 33,
-          lon: 29,
+          lat: 34.55404881,
+          lon: 25.44864200,
       },
       {
-          lat: 27,
-          lon: 29,
+          lat: 25.06909856,
+          lon: 25.44864200,
       },
       {
-          lat: 27,
-          lon: 36,
+          lat: 25.06909856,
+          lon: 41.69756169,
       },
       {
-          lat: 33,
-          lon: 36,
+          lat: 34.55404881,
+          lon: 41.69756169,
       }
   ],
   "Kola Peninsula": [
