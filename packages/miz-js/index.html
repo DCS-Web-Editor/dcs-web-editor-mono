@@ -2,27 +2,27 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>DCS mission file manager</title>
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="default.css">
-	<link rel="stylesheet" href="ace.css">
-	<link rel="stylesheet" href="demo-zip-manager.css">
-	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web" rel="stylesheet"
-		type="text/css">
+  <meta charset="utf-8">
+  <title>DCS mission file manager</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="src/default.css">
+  <link rel="stylesheet" href="src/ace.css">
+  <link rel="stylesheet" href="src/miz-manager.css">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web" rel="stylesheet"
+    type="text/css">
 </head>
 
 <body>
-	<div id="container">
+  <div id="container">
     <a href="https://www.patreon.com/DcsWebEditor" target="_blank">
-      <img class="dcs-logo" src="dcs web miz.png" width="200" />
+      <img class="dcs-logo" src="img/dcs web miz.png" width="200" />
     </a>
-		
 
-		<div class="description">
-			DCS mission file manager
-      <a href="https://discord.com/invite/3VudyeRa9h" class="href" target="_blank">discord</a>
-      <a href="https://github.com/DCS-Web-Editor/dcs-web-editor-mono" class="href" target="_blank">source code</a>
+    <div class="description">
+      DCS mission file manager
+      <a href="https://discord.com/invite/3VudyeRa9h" class="href" target="_blank">Discord</a>
+      <a href="https://www.patreon.com/DcsWebEditor" class="href" target="_blank">Patreon</a>
+      <a href="https://github.com/DCS-Web-Editor/dcs-web-editor-mono" class="href" target="_blank">Github</a>
       <ul>
         <li>
           Drag & drop a mission on the left panel.
@@ -31,58 +31,45 @@
           Drag & drop files you want to add to the mission on the center panel.
         </li>
         <li>
-          Edit files in the right panel. Click save. See <a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">editor keyboard shortcuts</a>
+          Edit files in the right panel. Click save. See <a
+            href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">editor keyboard
+            shortcuts</a>
         </li>
       </ul>
-		</div>
-		<div class="explorer">
-			<div class="directories">
-				<div id="tree" class="tree" data-file-id="0"></div>
-			</div>
-			<div id="separator" draggable="false"></div>
-			<div class="files">
+    </div>
+    <div class="explorer">
+      <div class="directories">
+        <div id="tree" class="tree" data-file-id="0"></div>
+      </div>
+      <div id="separator" draggable="false"></div>
+      <div class="files">
         <ul id="listing" class="listing"></ul>
-			</div>
+      </div>
       <div id="separator2" draggable="false"></div>
-      <img id="image-preview" src="" alt="">
-      <div id="editor" class="listing"></div>
-      <audio id="audio-preview"
-      controls
-      src="">
-      <a href="">
-        Download audio
-      </a>
-    </audio>
-  </div>
-  <button id="save-editor">Save</button>
+      <div id="previews" class="previews">
+        <div id="editor" class="listing"></div>
+        <img id="image-preview" src="" alt="" />
+        <iframe id="html-preview" src="" alt=""></iframe>
+        <audio id="audio-preview" controls src="">
+          <a href="">
+            Download audio
+          </a>
+        </audio>
+      </div>
+    </div>
+    <button id="save-editor">Save</button>
 
-  <!-- <button id="image-edit">
+    <!-- <button id="image-edit">
     <a href="" class="href" target="_blank">
       Edit in photopea
     </a>
   </button> -->
-		<progress id="progress-export-zip" class="progress-export-zip"></progress>
-    
-  </div>
-  
-      
-  <script src="lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-  <script>
-    editor = ace.edit("editor");
-       ace.config.set("basePath", "https://dcs-web-editor.github.io/dcs-web-editor-mono/lib/ace");
-      ace.require("ace/ext-searchbox");
-      ace.require("ace/ext-themelist");
-      ace.require("ace/ext-modelist");
-      editor.setTheme("ace/theme/cobalt");
-      editor.session.setMode("ace/mode/lua");
-      editor.setOptions({
-          enableBasicAutocompletion: true,
-          enableSnippets: true,
-      });
-  </script>
+    <progress id="progress-export-zip" class="progress-export-zip"></progress>
 
-	<script type="text/javascript" src="lib/zip-fs.js"></script>
-	<script type="text/javascript" src="demo-zip-manager.js"></script>
+  </div>
+
+
+  <script type="module" src="demo.js"></script>
 </body>
 
 </html>

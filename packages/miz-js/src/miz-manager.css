@@ -5,22 +5,22 @@
 
 .explorer {
 	display: flex;
+  flex-wrap: nowrap;
 	min-height: 600px;
   height: 80%;
+  width: 100%;
 }
 
 #separator {
 	width: 1rem;
 	cursor: ew-resize;
   background-color:  #4f6c89;
-
 }
 
 #separator2 {
 	width: 1rem;
 	cursor: ew-resize;
   background-color:  #4f6c89;
-
 }
 
 #save-editor {
@@ -55,31 +55,32 @@
 #image-preview {
   position: relative;
   left: 0;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  /* height: 50%; */
   display: none;
 }
 
 #audio-preview {
   position: relative;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 50%;
   display: none;
+}
+
+#html-preview {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .directories, .files {
 	position: relative;
 	background-color: white;
 	font-family: 'Droid Sans Mono', courier;
-	
-	flex: 1;
-	max-width: calc(30% - 1rem);
+	/* max-width: calc(20% - 1rem); */
 	min-width: 200px;
 	border: #4f6c89 1px solid;
-}
-
-.directories {
 }
 
 details>details {
@@ -175,12 +176,19 @@ summary {
 	border-width: 0;
 }
 
-.tree, .listing {
+.tree, .listing, .previews {
 	padding: 5px;
 	height: calc(100% - 10px);
 	margin: 0;
+  min-width: 200px;
+  /* flex: 1; */
+  /* flex-grow: 1; */
   overflow-x: hidden;
-
+}
+.previews {
+  flex: 1;
+	height: 100%;
+  padding: 0;
 }
 .tree {
   background-color: #23313f;
@@ -243,15 +251,13 @@ summary {
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-	.drag-over>summary {
-		border-color: whitesmoke;
-	}
-	.directories, .files {
-		background-color: #23313f;
-	}
-	.selected>summary .button, .selected>.button {
-		/* filter: invert(); */
-    color: #89bed7;
-	}
+.drag-over>summary {
+  border-color: whitesmoke;
+}
+.directories, .files, .previews {
+  background-color: #23313f;
+}
+.selected>summary .button, .selected>.button {
+  /* filter: invert(); */
+  color: #89bed7;
 }

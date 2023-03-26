@@ -19,7 +19,6 @@ body {
 	padding: 40px;
 	padding-top: 10px;
 	border-radius: 5px;
-	box-shadow: 3px 3px 5px #444;
 }
 
 #container.container-home {
@@ -126,7 +125,6 @@ p {
 	}
 	#container {
 		background: #293949;
-		box-shadow: 3px 3px 5px #171717;
 	}
 	a {
 		color: #80afc6;

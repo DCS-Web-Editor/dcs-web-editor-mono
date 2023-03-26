@@ -1,7 +1,0 @@
-#editor { 
-	height: calc(100% - 10px);
-  margin: 0;
-  width: 100%;
-	min-width: calc(30% - 1rem);
-  overflow: hidden;
-}

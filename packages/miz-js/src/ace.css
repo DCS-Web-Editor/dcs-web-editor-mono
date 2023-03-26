@@ -1,0 +1,8 @@
+#editor { 
+	height: calc(100% - 10px);
+  margin: 0;
+	/* min-width: calc(30% - 1rem); */
+  overflow: hidden;
+  min-width: 100%;
+  /* max-width: 80%; */
+}
