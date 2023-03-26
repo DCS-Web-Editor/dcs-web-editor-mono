@@ -16,11 +16,11 @@ export function toFlightPlan(data, theater) {
     const altString = alt ? alt.toString().padStart(3, '0') : '010';
     const params = coordinates.map(wp => `${wp}`).join(' ');
     const zoom = 5;
-    const SKYVECTOR_URL = `https://skyvector.com/?ll=${data.lat},${data.lon}&chart=301&zoom=${zoom}&fpl=N${speedString}A${altString} ${params}`;
+    const SKYVECTOR_URL = `https://skyvector.com/?ll=${data.lat},${data.lon}&chart=301&zoom=${zoom}&fpl=N${speedString}A${altString} ${params}$´&referrer=DCS_Web_Editor`;
     return SKYVECTOR_URL;
 }
 export function toPoint(lat, lon, zoom = 5) {
-    const SKYVECTOR_URL = `https://skyvector.com/?ll=${lat},${lon}&chart=301&zoom=${skyVectorZoom[zoom]}`;
+    const SKYVECTOR_URL = `https://skyvector.com/?ll=${lat},${lon}&chart=301&zoom=${skyVectorZoom[zoom]}&referrer=DCS_Web_Editor`;
     return SKYVECTOR_URL;
 }
 export const skyVectorZoom = {
