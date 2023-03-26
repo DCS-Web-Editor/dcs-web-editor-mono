@@ -1,4 +1,4 @@
-import { initialize } from "./src/miz-manager";
+import { initialize } from "./src/miz-manager.js";
 
 const aceEditor = ace.edit("editor");
 ace.config.set("basePath", "https://dcs-web-editor.github.io/dcs-web-editor-mono/lib/ace");
