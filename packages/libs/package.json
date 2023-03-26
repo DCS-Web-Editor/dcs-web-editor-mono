@@ -1,0 +1,24 @@
+{
+  "name": "@dcs-web-editor-mono/libs",
+  "version": "1.0.0",
+  "description": "3rd party libs",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCS-Web-Editor/dcs-web-editor-mono.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono/issues"
+  },
+  "homepage": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono#readme",
+  "dependencies": {
+    "leaflet": "^1.9.3"
+  }
+}

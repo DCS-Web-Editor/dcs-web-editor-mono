@@ -1,0 +1,23 @@
+.leaflet-grid-label .grid-label-100k {
+    background-color: yellow;
+    font-size: 13px;
+    opacity: 0.6;
+    color: red;
+    position: relative;
+    display: inline;
+    padding: 1.75px;
+    border: 1px black solid;
+    border-radius: 2px;
+}
+.leaflet-grid-label .grid-label-1000m {
+    background-color: yellow;
+    font-size: larger;
+    font-weight: bold;
+    opacity: 0.5;
+    color: black;
+    text-align: center;
+    position: relative;
+    display: inline;
+    padding: 5px;
+    border-radius: 50%;
+}

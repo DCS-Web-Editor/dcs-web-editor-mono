@@ -1,0 +1,22 @@
+.leaflet-grid-label .lng {
+	margin-left: 8px;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	cursor: crosshair;
+  pointer-events: none;
+}
+
+.leaflet-grid-label .lat,
+.leaflet-grid-label .lng {
+	color: #08f;
+	/* text-shadow: -2px 0 #FFFFFF, 0 2px #FFFFFF, 2px 0 #FFFFFF, 0 -2px #FFFFFF; */
+}
+
+.leaflet-grid-line {
+	cursor: crosshair;
+  pointer-events: none;
+}
+
+.leaflet-marker-icon.leaflet-interactive, .leaflet-image-layer.leaflet-interactive, .leaflet-pane > svg path.leaflet-interactive, svg.leaflet-image-layer.leaflet-interactive path {
+  pointer-events: none;
+}
