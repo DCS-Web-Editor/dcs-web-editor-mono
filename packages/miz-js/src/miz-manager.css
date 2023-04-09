@@ -25,6 +25,7 @@
 
 #save-editor {
   float: right;
+  
   background-color: #23313f;
   color: #89bed7;
   border: 1px solid #89bed7;
@@ -178,6 +179,7 @@ summary {
 
 .tree, .listing, .previews {
 	padding: 5px;
+	overflow: auto;
 	height: calc(100% - 10px);
 	margin: 0;
   min-width: 200px;
