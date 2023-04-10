@@ -12,13 +12,13 @@
 }
 
 #separator {
-	width: 1rem;
+	width: 0.5rem;
 	cursor: ew-resize;
   background-color:  #4f6c89;
 }
 
 #separator2 {
-	width: 1rem;
+	width: 0.5rem;
 	cursor: ew-resize;
   background-color:  #4f6c89;
 }

@@ -5,12 +5,12 @@
 import '../lib/zip-fs.js';
 import '../lib/ace/ace.js';
 
-export const fs = new zip.fs.FS();
+let fs = new zip.fs.FS();
+export const fileSystem = fs;
 
 let aceEditor;
 let selectedDirectory, selectedFile, selectedLabel, selectedLabelValue, selectedDrag, hoveredElement, movingSeparator, movingSeparator2;
 let progressExport, tree, listing, editorWindow, previews, saveEditor, separator, separator2, imagePreview, imageEdit, audioPreview, htmlPreview;
-
 export const model = {
 
   addDirectory(name, parent) {
@@ -71,7 +71,23 @@ export const model = {
   },
 };
 
+export function reset() {
+  fs = new zip.fs.FS();
+  setTimeout(() => {
+    selectedFile = null;
+    selectedDirectory = null;
+    showPreview(null)
+    refreshTree();
+    refreshListing();
+  }, 100)
+  return fs;
+}
+
 export function initialize(_aceEditor, editorId) {
+  if (aceEditor) {
+    console.warn('ACE already initialized');
+    return;
+  }
   aceEditor = _aceEditor;
 
   // polyfill
@@ -338,12 +354,14 @@ function expandTree(node) {
 }
 
 // Download miz
-function onexport(isFile) {
+export function onexport(isFile, setName = "example.miz" ) {
   return async event => {
     const target = event.target;
+    console.log("🚀 ~ file: miz-manager.js:360 ~ onexport ~ target:", target)
+    
     if (!target.download) {
-      const node = getFileNode(isFile ? selectedFile : selectedDirectory);
-      const filename = prompt("Filename", isFile ? node.name : node.parent ? node.name + ".miz" : "example.miz");
+      const node = isFile ? getFileNode(selectedFile) : model.getRoot();
+      const filename = prompt("Filename", isFile ? node.name : node.parent ? node.name + ".miz" : setName);
       if (filename) {
         progressExport.style.opacity = 1;
         progressExport.value = 0;
@@ -441,6 +459,13 @@ async function editFile() {
     showPreview(audioPreview);
     return;
   }
+
+  if (name.match(/(\.wav)$/i)) {
+    const blob = await model.getBlobURL(node, {}, 'audio/wav')
+    audioPreview.src = blob;
+    showPreview(audioPreview);
+    return;
+  }
   
   if (name.match(/(\.html)$/i)) {
     let doc; 
@@ -468,7 +493,7 @@ function showPreview(preview) {
   imagePreview.style.display = 'none';
   saveEditor.style.display = 'none';
   editorWindow.style.display = 'none';
-  preview.style.display = 'block';
+  if (preview) preview.style.display = 'block';
 }
 
 function onnewDirectory() {
@@ -578,12 +603,12 @@ async function editName(labelElement, nodeElement) {
 
 
   // directories
-  function refreshTree(node, element) {
+export function refreshTree(node, element) {
     let details;
     if (!node) {
       node = model.getRoot();
       element = tree;
-      element.innerHTML = "";
+      element && (element.innerHTML = "");
     }
     if (node.directory) {
       details = document.createElement("details");
@@ -605,7 +630,7 @@ async function editName(labelElement, nodeElement) {
       if (node.parent) {
         label.textContent = '🗀' + node.name;
       } else {
-        label.textContent = "<mission>";
+        label.textContent = `.miz`;
       }
       label.className = "dir-label";
       summaryContent.appendChild(label);
