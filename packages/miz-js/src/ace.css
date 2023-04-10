@@ -2,7 +2,7 @@
 	height: calc(100% - 10px);
   margin: 0;
 	/* min-width: calc(30% - 1rem); */
-  overflow: hidden;
-  min-width: 100%;
+  overflow: auto;
+  min-width: fit-content;
   /* max-width: 80%; */
 }
