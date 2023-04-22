@@ -90,6 +90,7 @@
 <script lang="ts">
 import { NFormItem, NInputNumber, NDivider } from 'naive-ui'
 import { computed, ref, watch } from 'vue'
+import { MToft, ftToM } from '../libs/convert'
 import { useWeatherStore } from '../stores/state'
 
 const windDir = (wind: number | null): string => {
@@ -114,7 +115,7 @@ export default {
   setup() {
     const Weather = computed(() => useWeatherStore())
 
-    const turbulence = ref(Weather.value.wx.groundTurbulence)
+    const turbulence = ref(MToft(Weather.value.wx.groundTurbulence))
     const sfcwind = ref(Weather.value.wx.wind.atGround.speed)
     const sfcwinddir = ref(Weather.value.wx.wind.atGround.dir)
     const twokwind = ref(Weather.value.wx.wind.at2000.speed)
@@ -123,7 +124,7 @@ export default {
     const eightkwinddir = ref(Weather.value.wx.wind.at8000.dir)
 
     const updateTurbulence = (value: number) => {
-      Weather.value.wx.groundTurbulence = value
+      Weather.value.wx.groundTurbulence = ftToM(value)
     }
 
     const updateSfcWind = (value: number) => {

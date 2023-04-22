@@ -15,3 +15,7 @@ export const ftToM = (value: number) => {
 export const MToft = (value: number) => {
   return Math.round(value * 3.28084)
 }
+
+export const RoundTo100 = (value: number) => {
+  return Math.round(value / 100) * 100
+}
