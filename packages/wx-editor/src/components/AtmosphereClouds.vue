@@ -170,7 +170,9 @@ export default {
   setup() {
     const Weather = computed(() => useWeatherStore())
 
-    const cloud_preset = ref('Nothing')
+    const cloud_preset = ref(Weather.value.wx.clouds.preset)
+      ? ref(Weather.value.wx.clouds.preset)
+      : ref('Nothing')
     const cloud_base = ref(MToft(Weather.value.wx.clouds.base))
     const cloud_thickness = ref(
       MToft(
