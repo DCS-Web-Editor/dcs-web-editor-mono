@@ -170,9 +170,7 @@ export default {
   setup() {
     const Weather = computed(() => useWeatherStore())
 
-    const cloud_preset = Weather.value.wx.clouds.preset
-      ? ref(Weather.value.wx.clouds.preset)
-      : ref('Nothing')
+    const cloud_preset = ref('Nothing')
     const cloud_base = ref(MToft(Weather.value.wx.clouds.base))
     const cloud_thickness = ref(
       MToft(
@@ -200,7 +198,7 @@ export default {
     const halo_crystal_preset = ref(Weather.value.wx.halo.crystalsPreset)
     const tooltip = ref('Nothing')
     const preset_min = ref(0)
-    const preset_max = ref(0)
+    const preset_max = ref(18000)
 
     const updateTemp = (value: number) => {
       Weather.value.wx.season.temperature = value
