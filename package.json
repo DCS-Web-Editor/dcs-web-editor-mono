@@ -21,7 +21,8 @@
     "packages/icons",
     "packages/map-projection",
     "packages/sky-vector",
-    "packages/utils"
+    "packages/utils",
+    "packages/wx-editor"
   ],
   "dependencies": {
     "typescript": "^4.9.5",

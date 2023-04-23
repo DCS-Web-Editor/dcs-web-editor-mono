@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["naive-ui/volar"],
+    "declaration": false,
+  },
+  "include": ["src/vite-env.d.ts", "src/**/*", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
