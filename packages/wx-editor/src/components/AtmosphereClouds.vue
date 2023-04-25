@@ -391,7 +391,7 @@ export default {
           preset_max.value = 8268
           tooltip.value = 'Overcast with Rain'
           break
-        case 'RainyPreset2':
+        case 'RainyPreset3':
           preset_min.value = 2756
           preset_max.value = 8268
           tooltip.value = 'Overcast with Rain'

@@ -1,11 +1,13 @@
 {
-  "name": "weathereditor",
+  "name": "@dcs-web-editor-mono/wx-editor",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/wx-editor.es.js",
+  "module": "dist/wx-editor.umd.js",
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && npm run format && vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint ./src --ext .vue,.ts --fix --ignore-path .gitignore",
