@@ -8,6 +8,7 @@
     padding: 1.75px;
     border: 1px black solid;
     border-radius: 2px;
+    -moz-user-focus: ignore;
 }
 .leaflet-grid-label .grid-label-1000m {
     background-color: yellow;
@@ -20,4 +21,5 @@
     display: inline;
     padding: 5px;
     border-radius: 50%;
+    -moz-user-focus: ignore;
 }
