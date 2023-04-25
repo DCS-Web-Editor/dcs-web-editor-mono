@@ -7,15 +7,17 @@
       <div
         class="flex justify-center flex-col w-1/2 h-full overflow-hidden pl-10"
       >
-        <h3 class="border-b border-white border-solid border-1 mb-12">
+        <n-h3 class="border-b border-white border-solid border-1 mb-12">
           Clouds & Atmosphere
-        </h3>
+        </n-h3>
         <AtmosphereClouds />
       </div>
       <div
         class="flex justify-center flex-col w-1/2 h-full overflow-hidden pl-8 pr-10 ml-8"
       >
-        <h3 class="border-b border-white border-solid border-1 mb-12">Wind</h3>
+        <n-h3 class="border-b border-white border-solid border-1 mb-12"
+          >Wind</n-h3
+        >
         <WindConditions />
       </div>
     </div>
@@ -26,7 +28,7 @@
 import AtmosphereClouds from './components/AtmosphereClouds.vue'
 import WindConditions from './components/WindConditions.vue'
 import type { GlobalTheme, GlobalThemeOverrides } from 'naive-ui'
-import { NConfigProvider } from 'naive-ui'
+import { NConfigProvider, NH3 } from 'naive-ui'
 import { useThemeStore } from './stores/state'
 import { ref } from 'vue'
 
@@ -34,7 +36,8 @@ export default {
   components: {
     AtmosphereClouds,
     WindConditions,
-    NConfigProvider
+    NConfigProvider,
+    NH3
   },
   setup() {
     const themeStore = useThemeStore()
