@@ -5,7 +5,6 @@
         <n-input-number
           id="sfc-winds-input"
           class="w-3/5"
-          @update:value="updateSfcWind"
           v-model:value="sfcwind"
           :min="0"
         >
@@ -15,7 +14,6 @@
           class="ml-4 w-1/2"
           id="sfc-winds-dir-input"
           v-model:value="sfcwinddir"
-          @update:value="updateSfcWindDir"
           :min="0"
           :format="windDir"
         >
@@ -29,7 +27,6 @@
           class="w-3/5"
           id="twok-wind-input"
           v-model:value="twokwind"
-          @update:value="updateTwokWind"
           :min="0"
         >
           <template #suffix>kts</template>
@@ -38,7 +35,6 @@
           class="ml-4 w-1/2"
           id="twok-wind-dir-input"
           v-model:value="twokwinddir"
-          @update:value="updateTwokWindDir"
           :min="0"
           :format="windDir"
         >
@@ -52,7 +48,6 @@
           class="w-3/5"
           id="eightk-wind-input"
           v-model:value="eightkwind"
-          @update:value="updateEightkWind"
           :min="0"
         >
           <template #suffix>kts</template>
@@ -61,7 +56,6 @@
           class="ml-4 w-1/2"
           id="eightk-wind-dir-input"
           v-model:value="eightkwinddir"
-          @update:value="updateEightkWindDir"
           :min="0"
           :format="windDir"
         >
@@ -75,7 +69,6 @@
         id="turbulence-input"
         class="w-1/2 min-w-24"
         v-model:value="turbulence"
-        @update:value="updateTurbulence"
         size="small"
         :step="3"
         :min="0"
@@ -89,7 +82,7 @@
 
 <script lang="ts">
 import { NFormItem, NInputNumber, NDivider } from 'naive-ui'
-import { computed, ref, watch } from 'vue'
+import { computed } from 'vue'
 import { MToft, ftToM } from '../libs/convert'
 import { useWeatherStore } from '../stores/state'
 
@@ -115,99 +108,56 @@ export default {
   setup() {
     const Weather = computed(() => useWeatherStore())
 
-    const turbulence = ref(MToft(Weather.value.wx.groundTurbulence))
-    const sfcwind = ref(Weather.value.wx.wind.atGround.speed)
-    const sfcwinddir = ref(Weather.value.wx.wind.atGround.dir)
-    const twokwind = ref(Weather.value.wx.wind.at2000.speed)
-    const twokwinddir = ref(Weather.value.wx.wind.at2000.dir)
-    const eightkwind = ref(Weather.value.wx.wind.at8000.speed)
-    const eightkwinddir = ref(Weather.value.wx.wind.at8000.dir)
-
-    const updateTurbulence = (value: number) => {
-      Weather.value.wx.groundTurbulence = ftToM(value)
-    }
-
-    const updateSfcWind = (value: number) => {
-      Weather.value.wx.wind.atGround.speed = value
-    }
-
-    const updateSfcWindDir = (value: number) => {
-      Weather.value.wx.wind.atGround.dir = value
-    }
-
-    const updateTwokWind = (value: number) => {
-      Weather.value.wx.wind.at2000.speed = value
-    }
-
-    const updateTwokWindDir = (value: number) => {
-      Weather.value.wx.wind.at2000.dir = value
-    }
-
-    const updateEightkWind = (value: number) => {
-      Weather.value.wx.wind.at8000.speed = value
-    }
-
-    const updateEightkWindDir = (value: number) => {
-      Weather.value.wx.wind.at8000.dir = value
-    }
-
-    watch(
-      () => Weather.value.wx.groundTurbulence,
-      (newValue) => {
-        turbulence.value = newValue
+    const turbulence = computed({
+      get: () => MToft(Weather.value.wx.groundTurbulence),
+      set: (value) => {
+        Weather.value.wx.groundTurbulence = ftToM(value)
       }
-    )
+    })
 
-    watch(
-      () => Weather.value.wx.wind.atGround.speed,
-      (newValue) => {
-        sfcwind.value = newValue
+    const sfcwind = computed({
+      get: () => Weather.value.wx.wind.atGround.speed,
+      set: (value) => {
+        Weather.value.wx.wind.atGround.speed = value
       }
-    )
+    })
 
-    watch(
-      () => Weather.value.wx.wind.atGround.dir,
-      (newValue) => {
-        sfcwinddir.value = newValue
+    const sfcwinddir = computed({
+      get: () => Weather.value.wx.wind.atGround.dir,
+      set: (value) => {
+        Weather.value.wx.wind.atGround.dir = value
       }
-    )
+    })
 
-    watch(
-      () => Weather.value.wx.wind.at2000.speed,
-      (newValue) => {
-        twokwind.value = newValue
+    const twokwind = computed({
+      get: () => Weather.value.wx.wind.at2000.speed,
+      set: (value) => {
+        Weather.value.wx.wind.at2000.speed = value
       }
-    )
+    })
 
-    watch(
-      () => Weather.value.wx.wind.at2000.dir,
-      (newValue) => {
-        twokwinddir.value = newValue
+    const twokwinddir = computed({
+      get: () => Weather.value.wx.wind.at2000.dir,
+      set: (value) => {
+        Weather.value.wx.wind.at2000.dir = value
       }
-    )
+    })
 
-    watch(
-      () => Weather.value.wx.wind.at8000.speed,
-      (newValue) => {
-        eightkwind.value = newValue
+    const eightkwind = computed({
+      get: () => Weather.value.wx.wind.at8000.speed,
+      set: (value) => {
+        Weather.value.wx.wind.at8000.speed = value
       }
-    )
+    })
 
-    watch(
-      () => Weather.value.wx.wind.at8000.dir,
-      (newValue) => {
-        eightkwinddir.value = newValue
+    const eightkwinddir = computed({
+      get: () => Weather.value.wx.wind.at8000.dir,
+      set: (value) => {
+        Weather.value.wx.wind.at8000.dir = value
       }
-    )
+    })
 
     return {
-      updateTurbulence,
-      updateSfcWind,
-      updateSfcWindDir,
-      updateTwokWind,
-      updateTwokWindDir,
-      updateEightkWind,
-      updateEightkWindDir,
       windDir,
       turbulence,
       sfcwind,

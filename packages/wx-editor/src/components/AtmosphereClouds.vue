@@ -4,7 +4,6 @@
       <n-form-item label="Temperature" label-style="color: white">
         <n-input-number
           id="temperature-input"
-          @update:value="updateTemp"
           :min="8.4"
           :max="50"
           v-model:value="temp"
@@ -19,7 +18,6 @@
         <n-input-number
           id="pressure-input"
           v-model:value="pressure"
-          @update:value="updatePressure"
           class="w-full min-w-24"
           size="small"
           :step="0.01"
@@ -36,29 +34,22 @@
           class="w-full"
           v-model:value="halo_preset"
           :options="halo_options"
-          @update:value="updateHaloPreset"
         />
       </n-form-item>
       <div v-if="halo_preset !== 'off' && halo_preset !== 'auto'">
         <n-form-item label="Halo Preset" label-style="color: white">
           <n-select
             class="w-full"
-            @update:value="updateHaloCrystalPreset"
             v-model:value="halo_crystal_preset"
             :options="crystal_options"
           />
         </n-form-item>
       </div>
       <n-divider class="divider" />
-      <n-checkbox
-        v-model:checked="isFogEnabled"
-        @update:checked="updateToggleFog"
-        >Toggle Fog</n-checkbox
-      >
+      <n-checkbox v-model:checked="isFogEnabled">Toggle Fog</n-checkbox>
       <SliderComponent
         labelText="Fog Visibility"
         v-model:value="fog_visibility"
-        @update-value="updateFogVis"
         class="mt-2 w-full"
         suffix="ft"
         :max="19685"
@@ -67,7 +58,6 @@
       <SliderComponent
         labelText="Fog Thickness"
         v-model:value="fog_thickness"
-        @update-value="updateFogThickness"
         class="w-full"
         suffix="ft"
         :max="3281"
@@ -81,7 +71,6 @@
             <n-select
               class="w-full"
               v-model:value="cloud_preset"
-              @update:value="updateCloudPreset"
               :options="cloud_options"
             />
           </template>
@@ -95,12 +84,10 @@
         :min="preset_min"
         :max="preset_max"
         suffix="ft"
-        @update-value="updateCloudBase"
       />
       <div v-if="cloud_preset === 'Nothing'">
         <SliderComponent
           labelText="Cloud Thickness"
-          @update-value="updateCloudThickness"
           :val="cloud_thickness"
           suffix="ft"
         />
@@ -109,7 +96,6 @@
             id="cloud-thickness-input"
             class="w-full min-w-24"
             v-model:value="cloud_density"
-            @update:value="updateCloudDensity"
             size="small"
             :min="0"
             :max="10"
@@ -120,23 +106,18 @@
             <n-select
               class="w-full"
               v-model:value="precip"
-              @update:value="updatePrecip"
               :options="precip_options"
             />
           </n-form-item>
         </div>
         <n-divider class="divider" />
       </div>
-      <n-checkbox
-        v-model:checked="isDustSmokeEnabled"
-        @update:checked="updateToggleDust"
-      >
+      <n-checkbox v-model:checked="isDustSmokeEnabled">
         Toggle Dust/Smoke
       </n-checkbox>
       <SliderComponent
         labelText="Dust Smoke Visibility"
         :val="dust_smoke_visibility"
-        @update-value="updateDustVis"
         suffix="ft"
         class="mt-2"
         :min="984"
@@ -148,7 +129,7 @@
 </template>
 
 <script lang="ts">
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 import SliderComponent from './SliderComponent.vue'
 import {
   NFormItem,
@@ -159,326 +140,302 @@ import {
   NSpace,
   NTooltip
 } from 'naive-ui'
-import { mmHgToinHG, inHgTommHG, MToft } from '../libs/convert'
+import {
+  mmHgToinHG,
+  inHgTommHG,
+  MToft,
+  ftToM,
+  RoundTo100
+} from '../libs/convert'
 import { useWeatherStore } from '../stores/state'
 import { computed } from 'vue'
 
 export default {
-  data() {
-    return {}
-  },
   setup() {
     const Weather = computed(() => useWeatherStore())
 
-    const cloud_preset = ref(Weather.value.wx.clouds.preset)
-      ? ref(Weather.value.wx.clouds.preset)
-      : ref('Nothing')
-    const cloud_base = ref(MToft(Weather.value.wx.clouds.base))
-    const cloud_thickness = ref(
-      MToft(
-        Weather.value.wx.clouds.thickness
-          ? Weather.value.wx.clouds.thickness
-          : 0
-      )
-    )
-    const cloud_density = ref(
-      Weather.value.wx.clouds.density
-        ? ref(Weather.value.wx.clouds.density)
-        : ref(0)
-    )
-    const precip = ref(Weather.value.wx.clouds.iprecptns)
-      ? ref(Weather.value.wx.clouds.iprecptns)
-      : ref(0)
-    const isDustSmokeEnabled = ref(Weather.value.wx.enable_dust)
-    const dust_smoke_visibility = ref(MToft(Weather.value.wx.dust_density))
-    const isFogEnabled = ref(Weather.value.wx.enable_fog)
-    const fog_thickness = ref(MToft(Weather.value.wx.fog.thickness))
-    const fog_visibility = ref(MToft(Weather.value.wx.fog.visibility))
-    const temp = ref(Weather.value.wx.season.temperature)
-    const pressure = ref(mmHgToinHG(Weather.value.wx.qnh))
-    const halo_preset = ref(Weather.value.wx.halo.preset)
-    const halo_crystal_preset = ref(Weather.value.wx.halo.crystalsPreset)
+    const cloud_preset = computed({
+      get: () => Weather.value.wx.clouds.preset || 'Nothing',
+      set: (value) => {
+        Weather.value.wx.clouds.preset = value === 'Nothing' ? undefined : value
+        updateCloudBaseMinMax(value === undefined ? 'Nothing' : value)
+      }
+    })
+
+    const cloud_base = computed({
+      get: () => MToft(Weather.value.wx.clouds.base),
+      set: (value) => {
+        Weather.value.wx.clouds.base = ftToM(RoundTo100(value))
+      }
+    })
+
+    const cloud_thickness = computed({
+      get: () => MToft(Weather.value.wx.clouds.thickness || 0),
+      set: (value) => {
+        Weather.value.wx.clouds.thickness = ftToM(RoundTo100(value))
+      }
+    })
+
+    const cloud_density = computed({
+      get: () => Weather.value.wx.clouds.density || 0,
+      set: (value) => {
+        Weather.value.wx.clouds.density = value
+      }
+    })
+
+    const precip = computed({
+      get: () => Weather.value.wx.clouds.iprecptns || 0,
+      set: (value) => {
+        Weather.value.wx.clouds.iprecptns = value
+      }
+    })
+
+    const isDustSmokeEnabled = computed({
+      get: () => Weather.value.wx.enable_dust,
+      set: (value) => {
+        Weather.value.wx.enable_dust = value
+      }
+    })
+
+    const dust_smoke_visibility = computed({
+      get: () => MToft(Weather.value.wx.dust_density),
+      set: (value) => {
+        Weather.value.wx.dust_density = ftToM(RoundTo100(value))
+      }
+    })
+
+    const isFogEnabled = computed({
+      get: () => Weather.value.wx.enable_fog,
+      set: (value) => {
+        Weather.value.wx.enable_fog = value
+      }
+    })
+
+    const fog_thickness = computed({
+      get: () => MToft(Weather.value.wx.fog.thickness),
+      set: (value) => {
+        Weather.value.wx.fog.thickness = ftToM(RoundTo100(value))
+      }
+    })
+
+    const fog_visibility = computed({
+      get: () => MToft(Weather.value.wx.fog.visibility),
+      set: (value) => {
+        Weather.value.wx.fog.visibility = ftToM(RoundTo100(value))
+      }
+    })
+
+    const temp = computed({
+      get: () => Math.round(Weather.value.wx.season.temperature),
+      set: (value) => {
+        Weather.value.wx.season.temperature = value
+      }
+    })
+
+    const pressure = computed({
+      get: () => mmHgToinHG(Weather.value.wx.qnh),
+      set: (value) => {
+        Weather.value.wx.qnh = inHgTommHG(value)
+      }
+    })
+
+    const halo_preset = computed({
+      get: () => Weather.value.wx.halo?.preset ?? 'off',
+      set: (value) => {
+        if (Weather.value.wx.halo) {
+          Weather.value.wx.halo.preset = value
+        }
+      }
+    })
+
+    const halo_crystal_preset = computed({
+      get: () => Weather.value.wx.halo?.crystalsPreset ?? 'AllKinds',
+      set: (value) => {
+        if (Weather.value.wx.halo) {
+          Weather.value.wx.halo.crystalsPreset = value
+        }
+      }
+    })
+
     const tooltip = ref('Nothing')
     const preset_min = ref(0)
-    const preset_max = ref(18000)
-
-    const updateTemp = (value: number) => {
-      Weather.value.wx.season.temperature = value
-    }
-
-    const updateHaloPreset = (value: string) => {
-      Weather.value.wx.halo.preset = value
-    }
-
-    const updateHaloCrystalPreset = (value: string) => {
-      Weather.value.wx.halo.crystalsPreset = value
-    }
-    const updateCloudPreset = (value: string) => {
-      Weather.value.wx.clouds.preset = value === 'Nothing' ? undefined : value
-      updateCloudBaseMinMax(value === undefined ? 'Nothing' : value)
-    }
-
-    const updateCloudDensity = (value: number) => {
-      Weather.value.wx.clouds.density =
-        Weather.value.wx.clouds.density !== undefined ? value : 0
-    }
-
-    const updateToggleDust = (value: boolean) => {
-      Weather.value.wx.enable_dust = value
-    }
-
-    const updateToggleFog = (value: boolean) => {
-      Weather.value.wx.enable_fog = value
-    }
-
-    const updatePressure = (value: number) => {
-      Weather.value.wx.qnh = inHgTommHG(value)
-    }
-
-    const updatePrecip = (value: number) => {
-      Weather.value.wx.clouds.iprecptns = value
-    }
+    const preset_max = ref(0)
 
     function updateCloudBaseMinMax(value: string) {
+      let min = 0
+      let max = 0
+      let ttip = 'Nothing'
+
       switch (value) {
         case 'Nothing':
-          preset_min.value = 984
-          preset_max.value = 16404
-          tooltip.value = 'Nothing'
+          min = 984
+          max = 16404
+          ttip = 'Nothing'
           break
         case 'Preset1':
-          preset_min.value = 2756
-          preset_max.value = 13780
-          tooltip.value = 'Few Scattered'
+          min = 2756
+          max = 13780
+          ttip = 'Few Scattered'
           break
         case 'Preset2':
-          preset_min.value = 4134
-          preset_max.value = 8268
-          tooltip.value = 'Two Layers Few Scattered'
+          min = 4134
+          max = 8268
+          ttip = 'Two Layers Few Scattered'
           break
         case 'Preset3':
-          preset_min.value = 2756
-          preset_max.value = 8268
-          tooltip.value = 'Two Layers Scattered'
+          min = 2756
+          max = 8268
+          ttip = 'Two Layers Scattered'
           break
         case 'Preset4':
-          preset_min.value = 4134
-          preset_max.value = 8268
-          tooltip.value = 'Two Layers Scattered'
+          min = 4134
+          max = 8268
+          ttip = 'Two Layers Scattered'
           break
         case 'Preset5':
-          preset_min.value = 4134
-          preset_max.value = 15157
-          tooltip.value = 'Three Layers High Scattered'
+          min = 4134
+          max = 15157
+          ttip = 'Three Layers High Scattered'
           break
         case 'Preset6':
-          preset_min.value = 4134
-          preset_max.value = 13780
-          tooltip.value = 'One Layer Scattered/Broken'
+          min = 4134
+          max = 13780
+          ttip = 'One Layer Scattered/Broken'
           break
         case 'Preset7':
-          preset_min.value = 5512
-          preset_max.value = 16535
-          tooltip.value = 'Two Layers Scattered/Broken'
+          min = 5512
+          max = 16535
+          ttip = 'Two Layers Scattered/Broken'
           break
         case 'Preset8':
-          preset_min.value = 12402
-          preset_max.value = 17913
-          tooltip.value = 'Two High Layers Scattered/Broken'
+          min = 12402
+          max = 17913
+          ttip = 'Two High Layers Scattered/Broken'
           break
         case 'Preset9':
-          preset_min.value = 5512
-          preset_max.value = 12402
-          tooltip.value = 'Two Layers Scattered/Broken'
+          min = 5512
+          max = 12402
+          ttip = 'Two Layers Scattered/Broken'
           break
         case 'Preset10':
-          preset_min.value = 4134
-          preset_max.value = 13780
-          tooltip.value = 'Two Layers Large Thick Clouds'
+          min = 4134
+          max = 13780
+          ttip = 'Two Layers Large Thick Clouds'
           break
         case 'Preset11':
-          preset_min.value = 8268
-          preset_max.value = 17913
-          tooltip.value = 'Two Layers Large Clouds High Ceiling'
+          min = 8268
+          max = 17913
+          ttip = 'Two Layers Large Clouds High Ceiling'
           break
         case 'Preset12':
-          preset_min.value = 5512
-          preset_max.value = 11024
-          tooltip.value = 'Two Layers Scattered Large Clouds High Ceiling'
+          min = 5512
+          max = 11024
+          ttip = 'Two Layers Scattered Large Clouds High Ceiling'
           break
         case 'Preset13':
-          preset_min.value = 5512
-          preset_max.value = 11024
-          tooltip.value = 'Two Layers Broken'
+          min = 5512
+          max = 11024
+          ttip = 'Two Layers Broken'
           break
         case 'Preset14':
-          preset_min.value = 5512
-          preset_max.value = 11024
-          tooltip.value = 'Broken Thick Low Layer with Few High Layer'
+          min = 5512
+          max = 11024
+          ttip = 'Broken Thick Low Layer with Few High Layer'
           break
         case 'Preset15':
-          preset_min.value = 2756
-          preset_max.value = 16535
-          tooltip.value = 'Broken Layers Broken Large Clouds'
+          min = 2756
+          max = 16535
+          ttip = 'Broken Layers Broken Large Clouds'
           break
         case 'Preset16':
-          preset_min.value = 4134
-          preset_max.value = 13780
-          tooltip.value = 'Two Layers Broken Large Clouds'
+          min = 4134
+          max = 13780
+          ttip = 'Two Layers Broken Large Clouds'
           break
         case 'Preset17':
-          preset_min.value = 0
-          preset_max.value = 8268
-          tooltip.value = 'Two Layers Broken/Overcast'
+          min = 0
+          max = 8268
+          ttip = 'Two Layers Broken/Overcast'
           break
         case 'Preset18':
-          preset_min.value = 0
-          preset_max.value = 12402
-          tooltip.value = 'Three Layers Broken/Overcast'
+          min = 0
+          max = 12402
+          ttip = 'Three Layers Broken/Overcast'
           break
         case 'Preset19':
-          preset_min.value = 0
-          preset_max.value = 12402
-          tooltip.value = 'Three Layers Overcast at Low Level'
+          min = 0
+          max = 12402
+          ttip = 'Three Layers Overcast at Low Level'
           break
         case 'Preset20':
-          preset_min.value = 0
-          preset_max.value = 12402
-          tooltip.value = 'Three Layers Overcast at Low Level'
+          min = 0
+          max = 12402
+          ttip = 'Three Layers Overcast at Low Level'
           break
         case 'Preset21':
-          preset_min.value = 4134
-          preset_max.value = 13780
-          tooltip.value = 'Overcast at Low Level'
+          min = 4134
+          max = 13780
+          ttip = 'Overcast at Low Level'
           break
         case 'Preset22':
-          preset_min.value = 1378
-          preset_max.value = 13780
-          tooltip.value = 'Overcast at Low Level'
+          min = 1378
+          max = 13780
+          ttip = 'Overcast at Low Level'
           break
         case 'Preset23':
-          preset_min.value = 2756
-          preset_max.value = 11024
-          tooltip.value = 'Three Layers Broken Low Level Scattered High Level'
+          min = 2756
+          max = 11024
+          ttip = 'Three Layers Broken Low Level Scattered High Level'
           break
         case 'Preset24':
-          preset_min.value = 1378
-          preset_max.value = 8268
-          tooltip.value = 'Three Layers Overcast'
+          min = 1378
+          max = 8268
+          ttip = 'Three Layers Overcast'
           break
         case 'Preset25':
-          preset_min.value = 1378
-          preset_max.value = 11024
-          tooltip.value = 'Three Layers Overcast'
+          min = 1378
+          max = 11024
+          ttip = 'Three Layers Overcast'
           break
         case 'Preset26':
-          preset_min.value = 1378
-          preset_max.value = 9646
-          tooltip.value = 'Three Layers Overcast'
+          min = 1378
+          max = 9646
+          ttip = 'Three Layers Overcast'
           break
         case 'Preset27':
-          preset_min.value = 1378
-          preset_max.value = 8268
-          tooltip.value = 'Three Layers Overcast'
+          min = 1378
+          max = 8268
+          ttip = 'Three Layers Overcast'
           break
         case 'RainyPreset1':
-          preset_min.value = 1378
-          preset_max.value = 9646
-          tooltip.value = 'Overcast with Rain'
+          min = 1378
+          max = 9646
+          ttip = 'Overcast with Rain'
           break
         case 'RainyPreset2':
-          preset_min.value = 2756
-          preset_max.value = 8268
-          tooltip.value = 'Overcast with Rain'
+          min = 2756
+          max = 8268
+          ttip = 'Overcast with Rain'
           break
         case 'RainyPreset3':
-          preset_min.value = 2756
-          preset_max.value = 8268
-          tooltip.value = 'Overcast with Rain'
+          min = 2756
+          max = 8268
+          ttip = 'Overcast with Rain'
           break
       }
+      return { min, max, ttip }
     }
 
-    watch(
-      () => Weather.value.wx.enable_dust,
-      (newValue) => {
-        isDustSmokeEnabled.value = newValue
-      }
+    const { min, max, ttip } = updateCloudBaseMinMax(
+      Weather.value.wx.clouds.preset === undefined
+        ? 'Nothing'
+        : Weather.value.wx.clouds.preset
     )
-
-    watch(
-      () => Weather.value.wx.halo.preset,
-      (newValue) => {
-        halo_preset.value = newValue
-      }
-    )
-
-    watch(
-      () => Weather.value.wx.halo.crystalsPreset,
-      (newValue) => {
-        halo_crystal_preset.value =
-          newValue === undefined ? 'Tangents' : newValue
-      }
-    )
-
-    watch(
-      () => Weather.value.wx.clouds.preset,
-      (newValue) => {
-        cloud_preset.value = newValue === undefined ? 'Nothing' : newValue
-        updateCloudBaseMinMax(newValue === undefined ? 'Nothing' : newValue)
-      }
-    )
-
-    watch(
-      () => Weather.value.wx.clouds.density,
-      (newValue) => {
-        cloud_density.value = newValue === undefined ? 0 : newValue
-      }
-    )
-
-    watch(
-      () => Weather.value.wx.clouds.iprecptns,
-      (newValue) => {
-        precip.value = newValue
-      }
-    )
-
-    watch(
-      () => Weather.value.wx.season.temperature,
-      (newValue) => {
-        temp.value = newValue
-      }
-    )
-
-    watch(
-      () => Weather.value.wx.enable_fog,
-      (newValue) => {
-        isFogEnabled.value = newValue
-      }
-    )
-
-    watch(
-      () => Weather.value.wx.qnh,
-      (newValue) => {
-        pressure.value = mmHgToinHG(newValue)
-      }
-    )
+    preset_min.value = min
+    preset_max.value = max
+    tooltip.value = ttip
 
     return {
-      updatePressure,
-      updateTemp,
-      updateHaloPreset,
-      updateHaloCrystalPreset,
-      updateCloudPreset,
-      updateCloudDensity,
-      updatePrecip,
-      updateToggleDust,
-      updateToggleFog,
-      updateFogVis: Weather.value.updateFogVis,
-      updateFogThickness: Weather.value.updateFogThickness,
-      updateCloudBase: Weather.value.updateCloudBase,
-      updateCloudThickness: Weather.value.updateCloudThickness,
-      updateDustVis: Weather.value.updateDustVis,
       cloud_preset,
       tooltip,
       cloud_base,

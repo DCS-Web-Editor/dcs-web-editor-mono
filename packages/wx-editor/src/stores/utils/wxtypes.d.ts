@@ -25,7 +25,7 @@ export type TWeather = {
     visibility: number
   }
   groundTurbulence: number
-  halo: {
+  halo?: {
     crystalsPreset?: string
     preset: string
   }
