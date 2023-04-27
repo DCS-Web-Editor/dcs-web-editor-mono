@@ -78,12 +78,13 @@ import FARP_Tent from './small/FARP_Tent.png';
 import Artillery from './small/Artillery.png';
 import Ammo from './small/Ammo.png';
 import Tower from './small/Tower.png';
+import Question from './small/question.png';
 
 import iconMap from './iconMap.json'
 
 export const getIcon = function geticon(unitType: string) {
     const iconName: string = (iconMap as any)[unitType];
-    const icon = toExport[iconName];
+    const icon = toExport.icons[iconName] || toExport.icons.Question;
     return icon;
 }
 export const getIconName = function geticon(unitType: string) {
@@ -174,6 +175,7 @@ const toExport: any = {
         Artillery,
         Ammo,
         Tower,
+        Question,
     }
 
 }
