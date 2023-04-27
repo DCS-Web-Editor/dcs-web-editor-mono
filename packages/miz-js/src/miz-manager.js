@@ -488,11 +488,11 @@ async function editFile() {
 }
 
 function showPreview(preview) {
-  audioPreview.style.display = 'none';
-  htmlPreview.style.display = 'none';
-  imagePreview.style.display = 'none';
-  saveEditor.style.display = 'none';
-  editorWindow.style.display = 'none';
+  if (audioPreview) audioPreview.style.display = 'none';
+  if (htmlPreview) htmlPreview.style.display = 'none';
+  if (imagePreview) imagePreview.style.display = 'none';
+  if (saveEditor) saveEditor.style.display = 'none';
+  if (editorWindow) editorWindow.style.display = 'none';
   if (preview) preview.style.display = 'block';
 }
 
