@@ -3,7 +3,6 @@
     <n-form-item :label="labelText" label-style="color: white">
       <n-slider
         v-model:value="value"
-        :on-update:value="update"
         :step="1"
         :min="min"
         :max="max"
@@ -23,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, watch } from 'vue'
 import { NInputNumber, NSlider, NSpace, NFormItem } from 'naive-ui'
 
 export default defineComponent({
@@ -56,6 +55,13 @@ export default defineComponent({
   setup(props) {
     const value = ref(props.val)
 
+    watch(
+      () => props.val,
+      (newVal) => {
+        value.value = newVal
+      }
+    )
+
     return {
       value
     }
@@ -65,13 +71,6 @@ export default defineComponent({
     NSlider,
     NSpace,
     NFormItem
-  },
-  methods: {
-    update(newValue: number) {
-      this.value = newValue
-      this.$emit('update-value', newValue)
-    }
-  },
-  emits: ['update-value']
+  }
 })
 </script>
