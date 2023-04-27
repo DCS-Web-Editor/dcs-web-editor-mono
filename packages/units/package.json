@@ -1,0 +1,17 @@
+{
+  "name": "@dcs-web-editor-mono/units",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "tsc": "tsc",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite-plugin-singlefile": "^0.13.2"
+  }
+}
