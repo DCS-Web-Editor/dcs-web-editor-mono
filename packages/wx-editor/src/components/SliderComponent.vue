@@ -34,7 +34,7 @@ export default defineComponent({
   props: {
     labelText: {
       type: String,
-      default: 'Give it a name'
+      default: ''
     },
     suffix: {
       type: String,

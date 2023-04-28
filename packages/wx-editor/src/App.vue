@@ -25,38 +25,38 @@
 </template>
 
 <script lang="ts">
-import AtmosphereClouds from './components/AtmosphereClouds.vue'
-import WindConditions from './components/WindConditions.vue'
-import type { GlobalTheme, GlobalThemeOverrides } from 'naive-ui'
-import { NConfigProvider, NH3 } from 'naive-ui'
-import { useThemeStore } from './stores/state'
-import { ref } from 'vue'
+import AtmosphereClouds from "./components/AtmosphereClouds.vue";
+import WindConditions from "./components/WindConditions.vue";
+import type { GlobalTheme, GlobalThemeOverrides } from "naive-ui";
+import { NConfigProvider, NH3 } from "naive-ui";
+import { useThemeStore } from "./stores/state";
+import { ref } from "vue";
 
 export default {
   components: {
     AtmosphereClouds,
     WindConditions,
     NConfigProvider,
-    NH3
+    NH3,
   },
   setup() {
-    const themeStore = useThemeStore()
-    const theme = ref<GlobalTheme>(themeStore.theme)
-    const selectedTheme = ref<string>(themeStore.getSelectedTheme)
+    const themeStore = useThemeStore();
+    const theme = ref<GlobalTheme>(themeStore.theme);
+    const selectedTheme = ref<string>(themeStore.getSelectedTheme);
     const themeOverrides = ref<GlobalThemeOverrides>(
       themeStore.getThemeOverrides
-    )
+    );
 
     const setThemeOverrides = (overrides: GlobalThemeOverrides) => {
-      themeStore.setThemeOverrides(overrides)
-    }
+      themeStore.setThemeOverrides(overrides);
+    };
 
     return {
       theme,
       selectedTheme,
       themeOverrides,
-      setThemeOverrides
-    }
-  }
-}
+      setThemeOverrides,
+    };
+  },
+};
 </script>
