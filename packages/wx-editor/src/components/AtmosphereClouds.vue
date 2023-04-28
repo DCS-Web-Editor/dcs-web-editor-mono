@@ -250,10 +250,9 @@ export default {
     const temp = computed({
       get: () => Math.round(Weather.value.wx.season.temperature),
       set: (value) => {
-        Weather.value.wx.season.temperature = value
+        Weather.value.wx.season.temperature = Math.round(value)
       }
     })
-
 
     const pressure = computed({
       get: () => mmHgToinHG(Weather.value.wx.qnh),

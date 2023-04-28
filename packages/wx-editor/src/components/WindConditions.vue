@@ -116,44 +116,44 @@ export default {
     })
 
     const sfcwind = computed({
-      get: () => Weather.value.wx.wind.atGround.speed,
+      get: () => Math.round(Weather.value.wx.wind.atGround.speed),
       set: (value) => {
-        Weather.value.wx.wind.atGround.speed = value
+        Weather.value.wx.wind.atGround.speed = Math.round(value)
       }
     })
 
     const sfcwinddir = computed({
-      get: () => Weather.value.wx.wind.atGround.dir,
+      get: () => Math.round(Weather.value.wx.wind.atGround.dir),
       set: (value) => {
-        Weather.value.wx.wind.atGround.dir = value
+        Weather.value.wx.wind.atGround.dir = Math.round(value)
       }
     })
 
     const twokwind = computed({
-      get: () => Weather.value.wx.wind.at2000.speed,
+      get: () => Math.round(Weather.value.wx.wind.at2000.speed),
       set: (value) => {
-        Weather.value.wx.wind.at2000.speed = value
+        Weather.value.wx.wind.at2000.speed = Math.round(value)
       }
     })
 
     const twokwinddir = computed({
-      get: () => Weather.value.wx.wind.at2000.dir,
+      get: () => Math.round(Weather.value.wx.wind.at2000.dir),
       set: (value) => {
-        Weather.value.wx.wind.at2000.dir = value
+        Weather.value.wx.wind.at2000.dir = Math.round(value)
       }
     })
 
     const eightkwind = computed({
-      get: () => Weather.value.wx.wind.at8000.speed,
+      get: () => Math.round(Weather.value.wx.wind.at8000.speed),
       set: (value) => {
-        Weather.value.wx.wind.at8000.speed = value
+        Weather.value.wx.wind.at8000.speed = Math.round(value)
       }
     })
 
     const eightkwinddir = computed({
-      get: () => Weather.value.wx.wind.at8000.dir,
+      get: () => Math.round(Weather.value.wx.wind.at8000.dir),
       set: (value) => {
-        Weather.value.wx.wind.at8000.dir = value
+        Weather.value.wx.wind.at8000.dir = Math.round(value)
       }
     })
 
