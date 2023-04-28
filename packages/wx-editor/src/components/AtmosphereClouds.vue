@@ -90,15 +90,13 @@
       />
       <div v-if="cloud_preset === 'Nothing'">
         <SliderComponent
-          labelText="Fog Thickness"
+          labelText="Cloud Thickness"
           @update="updateCloudThickness"
-          :val="fog_thickness"
+          :val="cloud_thickness"
           class="w-full"
           suffix="ft"
           :max="3281"
-          :disabled="!isFogEnabled"
         />
-
         <n-form-item label="Density" label-style="color: white">
           <n-input-number
             id="cloud-thickness-input"
