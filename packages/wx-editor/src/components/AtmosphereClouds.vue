@@ -262,16 +262,29 @@ export default {
 
     const halo_preset = computed({
       get: () => Weather.value.wx.halo?.preset ?? "off",
-      set: (value) => {
+      set: (value: string) => {
         if (Weather.value.wx.halo) {
           Weather.value.wx.halo.preset = value;
+        } else {
+          Weather.value.wx.halo = {
+            preset: value !== "off" ? value : "off",
+          };
+        }
+
+        if (
+          value !== "off" &&
+          value !== "auto" &&
+          Weather.value.wx.halo &&
+          !Weather.value.wx.halo.crystalsPreset
+        ) {
+          Weather.value.wx.halo.crystalsPreset = "AllKinds";
         }
       },
     });
 
     const halo_crystal_preset = computed({
       get: () => Weather.value.wx.halo?.crystalsPreset ?? "AllKinds",
-      set: (value) => {
+      set: (value: string) => {
         if (Weather.value.wx.halo) {
           Weather.value.wx.halo.crystalsPreset = value;
         }
