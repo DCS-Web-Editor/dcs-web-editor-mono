@@ -8,12 +8,17 @@
         :max="max"
         :disabled="disabled"
         class="mr-4 ml-0 w-52"
+        @update:value="onInput"
       />
       <n-input-number
         v-model:value="value"
+        :step="1"
+        :min="min"
+        :max="max"
         size="small"
         class="min-w-44 w-52"
         :disabled="disabled"
+        @update:value="onInput"
       >
         <template #suffix>{{ suffix }}</template>
       </n-input-number>
@@ -52,7 +57,7 @@ export default defineComponent({
       default: false
     }
   },
-  setup(props) {
+  setup(props, { emit }) {
     const value = ref(props.val)
 
     watch(
@@ -62,8 +67,13 @@ export default defineComponent({
       }
     )
 
+    const onInput = () => {
+      emit('update', value.value)
+    }
+
     return {
-      value
+      value,
+      onInput
     }
   },
   components: {
@@ -71,6 +81,7 @@ export default defineComponent({
     NSlider,
     NSpace,
     NFormItem
-  }
+  },
+  emits: ['update']
 })
 </script>

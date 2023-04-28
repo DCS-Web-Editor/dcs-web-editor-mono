@@ -49,7 +49,8 @@
       <n-checkbox v-model:checked="isFogEnabled">Toggle Fog</n-checkbox>
       <SliderComponent
         labelText="Fog Visibility"
-        v-model:value="fog_visibility"
+        @update="updateFogVisibility"
+        :val="fog_visibility"
         class="mt-2 w-full"
         suffix="ft"
         :max="19685"
@@ -57,7 +58,8 @@
       />
       <SliderComponent
         labelText="Fog Thickness"
-        v-model:value="fog_thickness"
+        @update="updateFogThickness"
+        :val="fog_thickness"
         class="w-full"
         suffix="ft"
         :max="3281"
@@ -80,6 +82,7 @@
       <n-divider class="divider" />
       <SliderComponent
         labelText="Cloud Base"
+        @update="updateCloudBase"
         :val="cloud_base"
         :min="preset_min"
         :max="preset_max"
@@ -87,10 +90,15 @@
       />
       <div v-if="cloud_preset === 'Nothing'">
         <SliderComponent
-          labelText="Cloud Thickness"
-          :val="cloud_thickness"
+          labelText="Fog Thickness"
+          @update="updateCloudThickness"
+          :val="fog_thickness"
+          class="w-full"
           suffix="ft"
+          :max="3281"
+          :disabled="!isFogEnabled"
         />
+
         <n-form-item label="Density" label-style="color: white">
           <n-input-number
             id="cloud-thickness-input"
@@ -117,6 +125,7 @@
       </n-checkbox>
       <SliderComponent
         labelText="Dust Smoke Visibility"
+        @update="updateDustSmokeVisibility"
         :val="dust_smoke_visibility"
         suffix="ft"
         class="mt-2"
@@ -129,7 +138,7 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import SliderComponent from './SliderComponent.vue'
 import {
   NFormItem,
@@ -140,13 +149,7 @@ import {
   NSpace,
   NTooltip
 } from 'naive-ui'
-import {
-  mmHgToinHG,
-  inHgTommHG,
-  MToft,
-  ftToM,
-  RoundTo100
-} from '../libs/convert'
+import { mmHgToinHG, inHgTommHG, MToft, ftToM } from '../libs/convert'
 import { useWeatherStore } from '../stores/state'
 import { computed } from 'vue'
 
@@ -158,23 +161,30 @@ export default {
       get: () => Weather.value.wx.clouds.preset || 'Nothing',
       set: (value) => {
         Weather.value.wx.clouds.preset = value === 'Nothing' ? undefined : value
-        updateCloudBaseMinMax(value === undefined ? 'Nothing' : value)
       }
     })
 
     const cloud_base = computed({
       get: () => MToft(Weather.value.wx.clouds.base),
       set: (value) => {
-        Weather.value.wx.clouds.base = ftToM(RoundTo100(value))
+        Weather.value.wx.clouds.base = ftToM(value)
       }
     })
+
+    const updateCloudBase = (value: number) => {
+      Weather.value.wx.clouds.base = ftToM(value)
+    }
 
     const cloud_thickness = computed({
       get: () => MToft(Weather.value.wx.clouds.thickness || 0),
       set: (value) => {
-        Weather.value.wx.clouds.thickness = ftToM(RoundTo100(value))
+        Weather.value.wx.clouds.thickness = ftToM(value)
       }
     })
+
+    const updateCloudThickness = (value: number) => {
+      Weather.value.wx.clouds.thickness = ftToM(value)
+    }
 
     const cloud_density = computed({
       get: () => Weather.value.wx.clouds.density || 0,
@@ -200,9 +210,13 @@ export default {
     const dust_smoke_visibility = computed({
       get: () => MToft(Weather.value.wx.dust_density),
       set: (value) => {
-        Weather.value.wx.dust_density = ftToM(RoundTo100(value))
+        Weather.value.wx.dust_density = ftToM(value)
       }
     })
+
+    const updateDustSmokeVisibility = (value: number) => {
+      Weather.value.wx.dust_density = ftToM(value)
+    }
 
     const isFogEnabled = computed({
       get: () => Weather.value.wx.enable_fog,
@@ -214,16 +228,24 @@ export default {
     const fog_thickness = computed({
       get: () => MToft(Weather.value.wx.fog.thickness),
       set: (value) => {
-        Weather.value.wx.fog.thickness = ftToM(RoundTo100(value))
+        Weather.value.wx.fog.thickness = ftToM(value)
       }
     })
+
+    const updateFogThickness = (value: number) => {
+      Weather.value.wx.fog.thickness = ftToM(value)
+    }
 
     const fog_visibility = computed({
       get: () => MToft(Weather.value.wx.fog.visibility),
       set: (value) => {
-        Weather.value.wx.fog.visibility = ftToM(RoundTo100(value))
+        Weather.value.wx.fog.visibility = ftToM(value)
       }
     })
+
+    const updateFogVisibility = (value: number) => {
+      Weather.value.wx.fog.visibility = ftToM(value)
+    }
 
     const temp = computed({
       get: () => Math.round(Weather.value.wx.season.temperature),
@@ -231,6 +253,7 @@ export default {
         Weather.value.wx.season.temperature = value
       }
     })
+
 
     const pressure = computed({
       get: () => mmHgToinHG(Weather.value.wx.qnh),
@@ -435,7 +458,22 @@ export default {
     preset_max.value = max
     tooltip.value = ttip
 
+    watch(
+      () => Weather.value.wx.clouds.preset ?? 'Nothing',
+      (value) => {
+        const { min, max, ttip } = updateCloudBaseMinMax(value)
+        preset_min.value = min
+        preset_max.value = max
+        tooltip.value = ttip
+      }
+    )
+
     return {
+      updateFogThickness,
+      updateFogVisibility,
+      updateDustSmokeVisibility,
+      updateCloudBase,
+      updateCloudThickness,
       cloud_preset,
       tooltip,
       cloud_base,
