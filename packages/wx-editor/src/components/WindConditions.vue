@@ -81,81 +81,81 @@
 </template>
 
 <script lang="ts">
-import { NFormItem, NInputNumber, NDivider } from 'naive-ui'
-import { computed } from 'vue'
-import { MToft, ftToM } from '../libs/convert'
-import { useWeatherStore } from '../stores/state'
+import { NFormItem, NInputNumber, NDivider } from "naive-ui";
+import { computed } from "vue";
+import { MToft, ftToM } from "../libs/convert";
+import { useWeatherStore } from "../stores/state";
 
 const windDir = (wind: number | null): string => {
   if (wind === null) {
-    return ''
+    return "";
   } else if (wind > 359) {
-    return '000'
+    return "000";
   } else if (wind < 100) {
-    let result = wind.toString().padStart(3, '0')
-    return result
+    let result = wind.toString().padStart(3, "0");
+    return result;
   } else {
-    return wind.toString()
+    return wind.toString();
   }
-}
+};
 
 export default {
   components: {
     NFormItem,
     NInputNumber,
-    NDivider
+    NDivider,
   },
   setup() {
-    const Weather = computed(() => useWeatherStore())
+    const Weather = computed(() => useWeatherStore());
 
     const turbulence = computed({
       get: () => MToft(Weather.value.wx.groundTurbulence),
       set: (value) => {
-        Weather.value.wx.groundTurbulence = ftToM(value)
-      }
-    })
+        Weather.value.wx.groundTurbulence = ftToM(value);
+      },
+    });
 
     const sfcwind = computed({
       get: () => Math.round(Weather.value.wx.wind.atGround.speed),
       set: (value) => {
-        Weather.value.wx.wind.atGround.speed = Math.round(value)
-      }
-    })
+        Weather.value.wx.wind.atGround.speed = Math.round(value);
+      },
+    });
 
     const sfcwinddir = computed({
       get: () => Math.round(Weather.value.wx.wind.atGround.dir),
       set: (value) => {
-        Weather.value.wx.wind.atGround.dir = Math.round(value)
-      }
-    })
+        Weather.value.wx.wind.atGround.dir = Math.round(value);
+      },
+    });
 
     const twokwind = computed({
       get: () => Math.round(Weather.value.wx.wind.at2000.speed),
       set: (value) => {
-        Weather.value.wx.wind.at2000.speed = Math.round(value)
-      }
-    })
+        Weather.value.wx.wind.at2000.speed = Math.round(value);
+      },
+    });
 
     const twokwinddir = computed({
       get: () => Math.round(Weather.value.wx.wind.at2000.dir),
       set: (value) => {
-        Weather.value.wx.wind.at2000.dir = Math.round(value)
-      }
-    })
+        Weather.value.wx.wind.at2000.dir = Math.round(value);
+      },
+    });
 
     const eightkwind = computed({
       get: () => Math.round(Weather.value.wx.wind.at8000.speed),
       set: (value) => {
-        Weather.value.wx.wind.at8000.speed = Math.round(value)
-      }
-    })
+        Weather.value.wx.wind.at8000.speed = Math.round(value);
+      },
+    });
 
     const eightkwinddir = computed({
       get: () => Math.round(Weather.value.wx.wind.at8000.dir),
       set: (value) => {
-        Weather.value.wx.wind.at8000.dir = Math.round(value)
-      }
-    })
+        Weather.value.wx.wind.at8000.dir = Math.round(value);
+      },
+    });
 
     return {
       windDir,
@@ -165,8 +165,8 @@ export default {
       twokwind,
       twokwinddir,
       eightkwind,
-      eightkwinddir
-    }
-  }
-}
+      eightkwinddir,
+    };
+  },
+};
 </script>

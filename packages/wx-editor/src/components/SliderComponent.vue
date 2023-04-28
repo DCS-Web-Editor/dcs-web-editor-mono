@@ -27,61 +27,61 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from 'vue'
-import { NInputNumber, NSlider, NSpace, NFormItem } from 'naive-ui'
+import { defineComponent, ref, watch } from "vue";
+import { NInputNumber, NSlider, NSpace, NFormItem } from "naive-ui";
 
 export default defineComponent({
   props: {
     labelText: {
       type: String,
-      default: 'Give it a name'
+      default: "",
     },
     suffix: {
       type: String,
-      default: ''
+      default: "",
     },
     max: {
       type: Number,
-      default: 18000
+      default: 18000,
     },
     min: {
       type: Number,
-      default: 0
+      default: 0,
     },
     val: {
       type: Number,
-      default: 0
+      default: 0,
     },
     disabled: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   setup(props, { emit }) {
-    const value = ref(props.val)
+    const value = ref(props.val);
 
     watch(
       () => props.val,
       (newVal) => {
-        value.value = newVal
+        value.value = newVal;
       }
-    )
+    );
 
     const onInput = () => {
-      emit('update', value.value)
-    }
+      emit("update", value.value);
+    };
 
     return {
       value,
-      onInput
-    }
+      onInput,
+    };
   },
   components: {
     NInputNumber,
     NSlider,
     NSpace,
-    NFormItem
+    NFormItem,
   },
-  emits: ['update']
-})
+  emits: ["update"],
+});
 </script>
