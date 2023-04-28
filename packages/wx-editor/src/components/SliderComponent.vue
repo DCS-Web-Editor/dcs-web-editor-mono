@@ -34,7 +34,11 @@ export default defineComponent({
   props: {
     labelText: {
       type: String,
+<<<<<<< HEAD
       default: "",
+=======
+      default: ''
+>>>>>>> 3283755bc5a02f5bc4d12d7fb36c940865dd8ba1
     },
     suffix: {
       type: String,
