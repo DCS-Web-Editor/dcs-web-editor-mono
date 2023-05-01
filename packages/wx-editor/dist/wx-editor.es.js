@@ -17576,7 +17576,9 @@ const nP = /* @__PURE__ */ En(oP, [["render", rP]]), iP = (e) => {
         return ((C = e.value.wx.halo) == null ? void 0 : C.preset) ?? "off";
       },
       set: (C) => {
-        e.value.wx.halo && (e.value.wx.halo.preset = C);
+        e.value.wx.halo ? e.value.wx.halo.preset = C : e.value.wx.halo = {
+          preset: C !== "off" ? C : "off"
+        }, C !== "off" && C !== "auto" && e.value.wx.halo && !e.value.wx.halo.crystalsPreset && (e.value.wx.halo.crystalsPreset = "AllKinds");
       }
     }), E = R({
       get: () => {
@@ -17949,14 +17951,13 @@ function fP(e, t, o, r, n, i) {
         }, null, 8, ["onUpdate", "val", "min", "max"]),
         r.cloud_preset === "Nothing" ? (yo(), sr("div", cP, [
           we(f, {
-            labelText: "Fog Thickness",
+            labelText: "Cloud Thickness",
             onUpdate: r.updateCloudThickness,
-            val: r.fog_thickness,
+            val: r.cloud_thickness,
             class: "w-full",
             suffix: "ft",
-            max: 3281,
-            disabled: !r.isFogEnabled
-          }, null, 8, ["onUpdate", "val", "disabled"]),
+            max: 3281
+          }, null, 8, ["onUpdate", "val"]),
           we(l, {
             label: "Density",
             "label-style": "color: white"
