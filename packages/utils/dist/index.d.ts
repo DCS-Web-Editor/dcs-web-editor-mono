@@ -61,3 +61,5 @@ export declare const MORSE: {
     '9': string;
     '0': string;
 };
+export declare function downloadJson(json: any, name: string): void;
+export declare function downloadBlob(url: string, fileName: string): void;
