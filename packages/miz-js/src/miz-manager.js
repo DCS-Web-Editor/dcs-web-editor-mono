@@ -4,6 +4,7 @@
 
 import '../lib/zip-fs.js';
 import '../lib/ace/ace.js';
+import { downloadBlob } from '@dcs-web-editor-mono/utils';
 
 let fs = new zip.fs.FS();
 export const fileSystem = fs;
@@ -283,8 +284,8 @@ export function initialize(_aceEditor, editorId) {
     if (movingSeparator) {
       const treeWidth = event.clientX - tree.parentElement.offsetLeft;
       const explorerWidth = tree.parentElement.parentElement.offsetWidth;
-      console.log('explorerWidth', explorerWidth);
-      console.log('treeWidth', treeWidth);
+      // console.log('explorerWidth', explorerWidth);
+      // console.log('treeWidth', treeWidth);
 
       tree.parentElement.style.setProperty("min-width", (treeWidth - 4) + "px");
       listing.parentElement.style.setProperty("max-width", (explorerWidth - treeWidth - 4) + "px");
@@ -294,8 +295,8 @@ export function initialize(_aceEditor, editorId) {
     if (movingSeparator2) {
       const listingWidth = event.clientX - listing.parentElement.offsetLeft;
       const explorerWidth = tree.parentElement.parentElement.offsetWidth;
-      console.log('explorerWidth', explorerWidth);
-      console.log('listingWidth', listingWidth, listing.innerHTML.width);
+      // console.log('explorerWidth', explorerWidth);
+      // console.log('listingWidth', listingWidth, listing.innerHTML.width);
       const width = (explorerWidth - listingWidth - 4);
       if (listingWidth > listing.clientWidth * 2) return;
       listing.parentElement.style.setProperty("max-width", (listingWidth - 4) + "px");
@@ -357,12 +358,11 @@ function expandTree(node) {
 export function onexport(isFile, setName = "example.miz" ) {
   return async event => {
     const target = event.target;
-    console.log("🚀 ~ file: miz-manager.js:360 ~ onexport ~ target:", target)
     
     if (!target.download) {
       const node = isFile ? getFileNode(selectedFile) : model.getRoot();
-      const filename = prompt("Filename", isFile ? node.name : node.parent ? node.name + ".miz" : setName);
-      if (filename) {
+      const fileName = prompt("Filename", isFile ? node.name : node.parent ? node.name + ".miz" : setName);
+      if (fileName) {
         progressExport.style.opacity = 1;
         progressExport.value = 0;
         progressExport.max = 0;
@@ -377,14 +377,11 @@ export function onexport(isFile, setName = "example.miz" ) {
         }
 
         if (blobURL) {
-          const clickEvent = new MouseEvent("click");
           progressExport.style.opacity = 0;
-          target.href = blobURL;
-          target.download = filename;
-          target.dispatchEvent(clickEvent);
+
+          downloadBlob(blobURL, fileName)
+
           URL.revokeObjectURL(blobURL);
-          target.href = "";
-          target.download = "";
           event.preventDefault();
         }
       }
