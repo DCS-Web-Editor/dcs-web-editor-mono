@@ -355,13 +355,20 @@ function expandTree(node) {
 }
 
 // Download miz
-export function onexport(isFile, setName = "example.miz" ) {
+export function onexport(isFile, setName = "example.miz", options = {} ) {
   return async event => {
     const target = event.target;
     
     if (!target.download) {
       const node = isFile ? getFileNode(selectedFile) : model.getRoot();
-      const fileName = prompt("Filename", isFile ? node.name : node.parent ? node.name + ".miz" : setName);
+      let fileName = '';
+
+      if (options.instant) {
+        fileName = setName;
+      } else {
+        fileName = prompt("Filename", isFile ? node.name : node.parent ? node.name + ".miz" : setName);
+      }
+
       if (fileName) {
         progressExport.style.opacity = 1;
         progressExport.value = 0;
