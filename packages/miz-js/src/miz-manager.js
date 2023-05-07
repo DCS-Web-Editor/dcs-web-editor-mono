@@ -671,7 +671,7 @@ export function refreshTree(node, element) {
 
 
 // files
-function refreshListing() {
+export function refreshListing() {
   const node = getFileNode(selectedDirectory);
   listing.innerHTML = "";
   node.children

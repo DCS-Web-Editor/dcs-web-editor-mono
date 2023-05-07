@@ -103,6 +103,8 @@ export function mizToLL(y, x) {
  * @returns {{x, y}}
  */
 export function LLToMiz(lon, lat) {
+    if (!projector)
+        throw new Error('Projector not defined, call activeMap');
     const [y, x] = projector.forward([lon, lat]);
     return [x, y];
 }
