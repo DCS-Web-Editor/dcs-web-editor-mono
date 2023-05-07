@@ -13,17 +13,17 @@
       </n-tooltip>
       <button @click="handleLeftArrowClick">
         <n-icon size="35">
-          <img src="../assets/leftarrow.svg" />
+          <img src="../../public/leftarrow.svg" />
         </n-icon>
       </button>
       <button @click="handleCircleClick">
         <n-icon size="35">
-          <img src="../assets/circle.svg" />
+          <img src="../../public/circle.svg" />
         </n-icon>
       </button>
       <button @click="handleRightArrowClick">
         <n-icon size="35">
-          <img src="../assets/rightarrow.svg" />
+          <img src="../../public/rightarrow.svg" />
         </n-icon>
       </button>
     </div>

@@ -7,7 +7,6 @@ export default defineConfig({
     lib: {
       entry: "src/main.ts",
       name: "CoaEditor",
-
       fileName: (format) => `coa-editor.${format}.js`,
     },
     rollupOptions: {
@@ -18,5 +17,6 @@ export default defineConfig({
         },
       },
     },
+    copyPublicDir: true,
   },
 });
