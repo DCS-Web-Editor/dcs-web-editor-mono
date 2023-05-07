@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-secondary font-sans;
+  }
+}
+
+@layer components {
+  .divider {
+    @apply mt-0 mb-1 ml-0 !important;
+  }
+}
