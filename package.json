@@ -22,7 +22,8 @@
     "packages/map-projection",
     "packages/sky-vector",
     "packages/utils",
-    "packages/wx-editor"
+    "packages/wx-editor",
+    "packages/coalition-editor"
   ],
   "dependencies": {
     "typescript": "^4.9.5",
