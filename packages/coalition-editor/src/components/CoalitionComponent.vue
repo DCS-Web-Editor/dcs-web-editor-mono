@@ -13,17 +13,17 @@
       </n-tooltip>
       <button @click="handleLeftArrowClick">
         <n-icon size="35">
-          <img src="../../public/leftarrow.svg" />
+          <img src="/leftarrow.svg" />
         </n-icon>
       </button>
       <button @click="handleCircleClick">
         <n-icon size="35">
-          <img src="../../public/circle.svg" />
+          <img src="/circle.svg" />
         </n-icon>
       </button>
       <button @click="handleRightArrowClick">
         <n-icon size="35">
-          <img src="../../public/rightarrow.svg" />
+          <img src="/rightarrow.svg" />
         </n-icon>
       </button>
     </div>
@@ -108,9 +108,9 @@ export default defineComponent({
 
     const tooltip = "Select a coalition preset";
 
-    const red = computed(() => coaStore.coa.coalitions.red);
-    const blue = computed(() => coaStore.coa.coalitions.blue);
-    const neutral = computed(() => coaStore.coa.coalitions.neutrals);
+    const red = computed(() => coaStore.coa.red);
+    const blue = computed(() => coaStore.coa.blue);
+    const neutral = computed(() => coaStore.coa.neutrals);
 
     const currentSelection = ref<{ list: string; index: number }>({
       list: "red",
@@ -221,11 +221,9 @@ export default defineComponent({
     const sorted_neutral = computed(() => sorted(neutral));
 
     const customCoalitions = computed<TCoalitions>(() => ({
-      coalitions: {
-        red: sorted_red.value,
-        neutrals: sorted_neutral.value,
-        blue: sorted_blue.value,
-      },
+      red: sorted_red.value,
+      neutrals: sorted_neutral.value,
+      blue: sorted_blue.value,
     }));
 
     const preset = computed({

@@ -14,7 +14,7 @@ export const useCoalitionStore = defineStore("coa", {
       this.coa = v;
     },
     getAll() {
-      return this.coa.coalitions;
+      return this.coa;
     },
   },
 });
