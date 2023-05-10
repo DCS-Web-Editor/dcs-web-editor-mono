@@ -29,5 +29,5 @@ export declare function mizToLL(y: number, x: number): {
  * @param {number} lat
  * @returns {{x, y}}
  */
-export declare function LLToMiz(lon: number, lat: number): any[];
+export declare function LLToMiz(lon: number, lat: number): number[];
 export { COORDINATES } from './mapCoordinates';
