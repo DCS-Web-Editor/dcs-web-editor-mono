@@ -118,7 +118,12 @@ export function calcDistance(start: LatLon, end: LatLon) {
 
 export const M_TO_FEET = 3.28084;
 export const M_TO_NM = 0.000539957;
+export const MS_TO_KTS = 1.94384;
 
+
+export function msToKts(metersPerSecond = 0) {
+  return (metersPerSecond * MS_TO_KTS).toFixed(0)    
+}
 
 export function toFeet(meters = 0) {
     return (meters * M_TO_FEET).toFixed(0)    
