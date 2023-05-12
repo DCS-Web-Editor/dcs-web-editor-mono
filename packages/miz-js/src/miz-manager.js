@@ -4,7 +4,7 @@
 
 import '../lib/zip-fs.js';
 import '../lib/ace/ace.js';
-import { downloadBlob } from '@dcs-web-editor-mono/utils';
+import { downloadBlob } from '../../utils';
 
 let fs = new zip.fs.FS();
 export const fileSystem = fs;
