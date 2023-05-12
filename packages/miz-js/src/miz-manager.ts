@@ -2,8 +2,8 @@
 // adapted from zip.js demo
 // TODO: needs complete rewrite
 
-import '../lib/zip-fs.js';
-import '../lib/ace/ace.js';
+import * as zip from "@zip.js/zip.js";
+import * as ace from '../lib/ace/ace.js';
 import { downloadBlob } from '@dcs-web-editor-mono/utils';
 
 let fs = new zip.fs.FS();

@@ -17,14 +17,15 @@
   "workspaces": [
     "packages/airfields",
     "packages/beacons",
-    "packages/briefing",
+    "packages/coalition-editor",
     "packages/icons",
+    "packages/libs",
     "packages/map-projection",
     "packages/miz-js",
     "packages/sky-vector",
+    "packages/units",
     "packages/utils",
-    "packages/wx-editor",
-    "packages/coalition-editor"
+    "packages/wx-editor"
   ],
   "dependencies": {
     "typescript": "^4.9.5",
