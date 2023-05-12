@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build",
+    "build": "vite build && cp -r ./lib ./dist/lib",
     "preview": "vite preview"
   },
   "repository": {
