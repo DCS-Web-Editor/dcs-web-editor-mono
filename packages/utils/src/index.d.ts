@@ -17,6 +17,8 @@ export declare function calcBearing(start: LatLon, end: LatLon): number;
 export declare function calcDistance(start: LatLon, end: LatLon): number;
 export declare const M_TO_FEET = 3.28084;
 export declare const M_TO_NM = 0.000539957;
+export declare const MS_TO_KTS = 1.94384;
+export declare function msToKts(metersPerSecond?: number): string;
 export declare function toFeet(meters?: number): string;
 export declare function toNm(meters?: number): string;
 export declare function toDeg(rad?: number): string;
@@ -61,3 +63,5 @@ export declare const MORSE: {
     '9': string;
     '0': string;
 };
+export declare function downloadJson(json: any, name: string): void;
+export declare function downloadBlob(url: string, fileName: string): void;

@@ -20,5 +20,6 @@
   },
   "homepage": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono#readme",
   "dependencies": {
+    "@dcs-web-editor-mono/utils": "^1.0.0"
   }
 }

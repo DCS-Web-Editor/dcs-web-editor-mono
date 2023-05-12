@@ -20,6 +20,7 @@
     "packages/briefing",
     "packages/icons",
     "packages/map-projection",
+    "packages/miz-js",
     "packages/sky-vector",
     "packages/utils",
     "packages/wx-editor",

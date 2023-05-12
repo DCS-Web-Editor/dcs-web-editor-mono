@@ -90,6 +90,10 @@ export function calcDistance(start, end) {
 }
 export const M_TO_FEET = 3.28084;
 export const M_TO_NM = 0.000539957;
+export const MS_TO_KTS = 1.94384;
+export function msToKts(metersPerSecond = 0) {
+    return (metersPerSecond * MS_TO_KTS).toFixed(0);
+}
 export function toFeet(meters = 0) {
     return (meters * M_TO_FEET).toFixed(0);
 }
@@ -117,3 +121,41 @@ export const MORSE = {
     '5': '.....', '6': '-....', '7': '--...', '8': '---..',
     '9': '----.', '0': '-----',
 };
+export function downloadJson(json, name) {
+    const jsonString = JSON.stringify(json, null, 2);
+    const blob = new Blob([jsonString], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    downloadBlob(url, `${name}.json`);
+}
+export function downloadBlob(url, fileName) {
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', fileName);
+    const event = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        screenX: 0,
+        screenY: 0,
+        clientX: 0,
+        clientY: 0,
+        ctrlKey: false,
+        shiftKey: false,
+    });
+    link.dispatchEvent(event);
+}
+// safely handles circular references
+// JSON.safeStringify = (obj, indent = 2) => {
+//   let cache = [];
+//   const retVal = JSON.stringify(
+//     obj,
+//     (key, value) =>
+//       typeof value === "object" && value !== null
+//         ? cache.includes(value)
+//           ? undefined // Duplicate reference found, discard key
+//           : cache.push(value) && value // Store value in our collection
+//         : value,
+//     indent
+//   );
+//   cache = null;
+//   return retVal;
+// };

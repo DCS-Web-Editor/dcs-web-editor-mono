@@ -1,0 +1,11 @@
+import UnitPlanes from './UnitPlanes.json';
+import UnitCars from './UnitCars.json';
+import UnitHelicopters from './UnitHelicopters.json';
+import UnitShips from './UnitShips.json';
+import UnitCargo from './UnitCargo.json';
+import UnitFortifications from './UnitFortifications.json';
+import UnitWarehouses from './UnitWarehouses.json';
+import Weapons from './Weapons.json';
+declare const toExport: any;
+export { UnitPlanes, UnitCars, UnitHelicopters, UnitShips, UnitCargo, UnitFortifications, UnitWarehouses, Weapons };
+export default toExport;

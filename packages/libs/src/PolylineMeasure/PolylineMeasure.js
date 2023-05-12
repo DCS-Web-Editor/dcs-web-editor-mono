@@ -13,7 +13,7 @@ import './polyline.css';
     }
     else if (typeof module !== 'undefined') {
         // Node/CommonJS
-        module.exports = factory(L);
+        module.exports = factory(require('leaflet'));
     }
     else {
         // Browser globals
