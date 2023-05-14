@@ -26,62 +26,49 @@
   </n-space>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, watch } from "vue";
+<script setup lang="ts">
+import { ref, watch } from "vue";
 import { NInputNumber, NSlider, NSpace, NFormItem } from "naive-ui";
 
-export default defineComponent({
-  props: {
-    labelText: {
-      type: String,
-      default: "",
-    },
-    suffix: {
-      type: String,
-      default: "",
-    },
-    max: {
-      type: Number,
-      default: 18000,
-    },
-    min: {
-      type: Number,
-      default: 0,
-    },
-    val: {
-      type: Number,
-      default: 0,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  setup(props, { emit }) {
-    const value = ref(props.val);
+const emit = defineEmits(["update"]);
 
-    watch(
-      () => props.val,
-      (newVal) => {
-        value.value = newVal;
-      }
-    );
-
-    const onInput = () => {
-      emit("update", value.value);
-    };
-
-    return {
-      value,
-      onInput,
-    };
+const props = defineProps({
+  labelText: {
+    type: String,
+    default: "",
   },
-  components: {
-    NInputNumber,
-    NSlider,
-    NSpace,
-    NFormItem,
+  suffix: {
+    type: String,
+    default: "",
   },
-  emits: ["update"],
+  max: {
+    type: Number,
+    default: 18000,
+  },
+  min: {
+    type: Number,
+    default: 0,
+  },
+  val: {
+    type: Number,
+    default: 0,
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 });
+
+const value = ref(props.val);
+
+watch(
+  () => props.val,
+  (newVal) => {
+    value.value = newVal;
+  }
+);
+
+const onInput = () => {
+  emit("update", value.value);
+};
 </script>
