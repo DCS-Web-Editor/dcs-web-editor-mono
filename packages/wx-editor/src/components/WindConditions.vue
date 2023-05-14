@@ -115,7 +115,7 @@ function createWindComputed(level: WindLevel, property: WindProperty) {
   return computed({
     get: () => Math.round(Weather.value.wx.wind[level][property]),
     set: (value: number) => {
-      Weather.value.wx.wind[level][property] = Math.round(value);
+      Weather.value.wx.wind[level][property] = Math.round(value / 100) * 100;
     },
   });
 }
