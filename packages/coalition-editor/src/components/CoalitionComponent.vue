@@ -88,8 +88,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { ref, Ref, computed, defineComponent } from "vue";
+<script setup lang="ts">
+import { ref, Ref, computed } from "vue";
 import { NIcon, NSelect, NTooltip } from "naive-ui";
 import { ColdWar, Modern, WW2, countries } from "../stores/lib";
 import type TCoalitions from "../types";
@@ -102,185 +102,158 @@ interface ListMapping {
   };
 }
 
-export default defineComponent({
-  setup() {
-    const coaStore = useCoalitionStore();
+const coaStore = useCoalitionStore();
 
-    const tooltip = "Select a coalition preset";
+const tooltip = "Select a coalition preset";
 
-    const red = computed(() => coaStore.coa.red);
-    const blue = computed(() => coaStore.coa.blue);
-    const neutral = computed(() => coaStore.coa.neutrals);
+const red = computed(() => coaStore.coa.red);
+const blue = computed(() => coaStore.coa.blue);
+const neutral = computed(() => coaStore.coa.neutrals);
 
-    const currentSelection = ref<{ list: string; index: number }>({
-      list: "red",
-      index: 0,
-    });
+const currentSelection = ref<{ list: string; index: number }>({
+  list: "red",
+  index: 0,
+});
 
-    const findCountryByValue = (value: number): string | null => {
-      const country = countries.find((country) => country.value === value);
-      return country ? country.label : null;
-    };
+const findCountryByValue = (value: number): string | null => {
+  const country = countries.find((country) => country.value === value);
+  return country ? country.label : null;
+};
 
-    const handleItemClick = (list: string, index: number) => {
-      currentSelection.value.list = list;
-      currentSelection.value.index = index;
-    };
+const handleItemClick = (list: string, index: number) => {
+  currentSelection.value.list = list;
+  currentSelection.value.index = index;
+};
 
-    const moveItem = (fromList: string, toList: string, condition: boolean) => {
-      if (!condition) {
-        return;
-      }
+const moveItem = (fromList: string, toList: string, condition: boolean) => {
+  if (!condition) {
+    return;
+  }
 
-      const listMapping: ListMapping = {
-        red: {
-          list: red,
-          sortedList: sorted_red,
-        },
-        blue: {
-          list: blue,
-          sortedList: sorted_blue,
-        },
-        neutral: {
-          list: neutral,
-          sortedList: sorted_neutral,
-        },
-      };
+  const listMapping: ListMapping = {
+    red: {
+      list: red,
+      sortedList: sorted_red,
+    },
+    blue: {
+      list: blue,
+      sortedList: sorted_blue,
+    },
+    neutral: {
+      list: neutral,
+      sortedList: sorted_neutral,
+    },
+  };
 
-      const fromListData = listMapping[fromList];
-      const toListData = listMapping[toList];
+  const fromListData = listMapping[fromList];
+  const toListData = listMapping[toList];
 
-      const selectedItem =
-        fromListData.sortedList.value[currentSelection.value.index];
-      const originalIndex = fromListData.list.value.indexOf(selectedItem);
+  const selectedItem =
+    fromListData.sortedList.value[currentSelection.value.index];
+  const originalIndex = fromListData.list.value.indexOf(selectedItem);
 
-      const option = fromListData.list.value.splice(originalIndex, 1)[0];
-      toListData.list.value.push(option);
+  const option = fromListData.list.value.splice(originalIndex, 1)[0];
+  toListData.list.value.push(option);
 
-      currentSelection.value.list = toList;
-      currentSelection.value.index = -1;
-    };
+  currentSelection.value.list = toList;
+  currentSelection.value.index = -1;
+};
 
-    const handleLeftArrowClick = () => {
-      moveItem(
-        "blue",
-        "red",
-        currentSelection.value.list === "blue" &&
-          currentSelection.value.index >= 0 &&
-          blue.value.length > 0
-      );
-      moveItem(
-        "neutral",
-        "red",
-        currentSelection.value.list === "neutral" &&
-          currentSelection.value.index >= 0 &&
-          neutral.value.length > 0
-      );
-    };
+const handleLeftArrowClick = () => {
+  moveItem(
+    "blue",
+    "red",
+    currentSelection.value.list === "blue" &&
+      currentSelection.value.index >= 0 &&
+      blue.value.length > 0
+  );
+  moveItem(
+    "neutral",
+    "red",
+    currentSelection.value.list === "neutral" &&
+      currentSelection.value.index >= 0 &&
+      neutral.value.length > 0
+  );
+};
 
-    const handleRightArrowClick = () => {
-      moveItem(
-        "red",
-        "blue",
-        currentSelection.value.list === "red" &&
-          currentSelection.value.index >= 0 &&
-          red.value.length > 0
-      );
-      moveItem(
-        "neutral",
-        "blue",
-        currentSelection.value.list === "neutral" &&
-          currentSelection.value.index >= 0 &&
-          neutral.value.length > 0
-      );
-    };
+const handleRightArrowClick = () => {
+  moveItem(
+    "red",
+    "blue",
+    currentSelection.value.list === "red" &&
+      currentSelection.value.index >= 0 &&
+      red.value.length > 0
+  );
+  moveItem(
+    "neutral",
+    "blue",
+    currentSelection.value.list === "neutral" &&
+      currentSelection.value.index >= 0 &&
+      neutral.value.length > 0
+  );
+};
 
-    const handleCircleClick = () => {
-      moveItem(
-        "red",
-        "neutral",
-        currentSelection.value.list === "red" &&
-          currentSelection.value.index >= 0 &&
-          red.value.length > 0
-      );
-      moveItem(
-        "blue",
-        "neutral",
-        currentSelection.value.list === "blue" &&
-          currentSelection.value.index >= 0 &&
-          blue.value.length > 0
-      );
-    };
+const handleCircleClick = () => {
+  moveItem(
+    "red",
+    "neutral",
+    currentSelection.value.list === "red" &&
+      currentSelection.value.index >= 0 &&
+      red.value.length > 0
+  );
+  moveItem(
+    "blue",
+    "neutral",
+    currentSelection.value.list === "blue" &&
+      currentSelection.value.index >= 0 &&
+      blue.value.length > 0
+  );
+};
 
-    const sorted = (src: Ref<number[]>) => {
-      return src.value.slice().sort((a, b) => a - b);
-    };
+const sorted = (src: Ref<number[]>) => {
+  return src.value.slice().sort((a, b) => a - b);
+};
 
-    const sorted_red = computed(() => sorted(red));
-    const sorted_blue = computed(() => sorted(blue));
-    const sorted_neutral = computed(() => sorted(neutral));
+const sorted_red = computed(() => sorted(red));
+const sorted_blue = computed(() => sorted(blue));
+const sorted_neutral = computed(() => sorted(neutral));
 
-    const customCoalitions = computed<TCoalitions>(() => ({
-      red: sorted_red.value,
-      neutrals: sorted_neutral.value,
-      blue: sorted_blue.value,
-    }));
+const customCoalitions = computed<TCoalitions>(() => ({
+  red: sorted_red.value,
+  neutrals: sorted_neutral.value,
+  blue: sorted_blue.value,
+}));
 
-    const preset = computed({
-      get() {
-        if (JSON.stringify(coaStore.coa) === JSON.stringify(Modern)) {
-          return "Modern";
-        } else if (JSON.stringify(coaStore.coa) === JSON.stringify(ColdWar)) {
-          return "ColdWar";
-        } else if (JSON.stringify(coaStore.coa) === JSON.stringify(WW2)) {
-          return "WW2";
-        } else {
-          return "Custom";
-        }
-      },
-      set(val) {
-        if (val === "Modern") {
-          coaStore.setAll(structuredClone(Modern));
-        } else if (val === "ColdWar") {
-          coaStore.setAll(structuredClone(ColdWar));
-        } else if (val === "WW2") {
-          coaStore.setAll(structuredClone(WW2));
-        } else {
-          preset.value = "Custom";
-          coaStore.setAll(structuredClone(customCoalitions.value));
-        }
-      },
-    });
-
-    const preset_options = [
-      { label: "Modern", value: "Modern" },
-      { label: "Cold War 1947-1991", value: "ColdWar" },
-      { label: "WWII", value: "WW2" },
-      { label: "Custom", value: "Custom" },
-    ];
-
-    return {
-      tooltip,
-      sorted_red,
-      sorted_blue,
-      sorted_neutral,
-      red,
-      blue,
-      neutral,
-      currentSelection,
-      preset_options,
-      preset,
-      findCountryByValue,
-      handleLeftArrowClick,
-      handleRightArrowClick,
-      handleCircleClick,
-      handleItemClick,
-    };
+const preset = computed({
+  get() {
+    if (JSON.stringify(coaStore.coa) === JSON.stringify(Modern)) {
+      return "Modern";
+    } else if (JSON.stringify(coaStore.coa) === JSON.stringify(ColdWar)) {
+      return "ColdWar";
+    } else if (JSON.stringify(coaStore.coa) === JSON.stringify(WW2)) {
+      return "WW2";
+    } else {
+      return "Custom";
+    }
   },
-  components: {
-    NTooltip,
-    NSelect,
-    NIcon,
+  set(val) {
+    if (val === "Modern") {
+      coaStore.setAll(structuredClone(Modern));
+    } else if (val === "ColdWar") {
+      coaStore.setAll(structuredClone(ColdWar));
+    } else if (val === "WW2") {
+      coaStore.setAll(structuredClone(WW2));
+    } else {
+      preset.value = "Custom";
+      coaStore.setAll(structuredClone(customCoalitions.value));
+    }
   },
 });
+
+const preset_options = [
+  { label: "Modern", value: "Modern" },
+  { label: "Cold War 1947-1991", value: "ColdWar" },
+  { label: "WWII", value: "WW2" },
+  { label: "Custom", value: "Custom" },
+];
 </script>
