@@ -11,17 +11,17 @@
         </template>
         {{ tooltip }}
       </n-tooltip>
-      <button @click="handleLeftArrowClick">
+      <button @click="handleLeftArrowClick" :disabled="leftDisabled">
         <n-icon size="35">
           <img src="/leftarrow.svg" />
         </n-icon>
       </button>
-      <button @click="handleCircleClick">
+      <button @click="handleCircleClick" :disabled="circleDisabled">
         <n-icon size="35">
           <img src="/circle.svg" />
         </n-icon>
       </button>
-      <button @click="handleRightArrowClick">
+      <button @click="handleRightArrowClick" :disabled="rightDisabled">
         <n-icon size="35">
           <img src="/rightarrow.svg" />
         </n-icon>
@@ -30,14 +30,16 @@
     <div class="m-5">
       <div class="flex">
         <div class="w-1/2 mr-4">
-          <h3 class="mb-3 text-lg font-semibold">Red</h3>
-          <ul class="list-none border border-gray-300 p-6 pl-4 rounded-lg">
+          <n-h3 class="mb-3 text-lg">Red</n-h3>
+          <ul
+            class="list-none border border-gray-300 p-6 pl-4 rounded-lg overflow-y-auto max-h-80"
+          >
             <li
               v-for="(option, index) in sorted_red"
               :key="index"
-              class="mb-2 cursor-pointer rounded"
+              class="mb-2 cursor-pointer rounded text-sm"
               :class="{
-                'bg-blue-200 pl-2 text-black':
+                'bg-blue-200 pl-2 text-black text-sm':
                   currentSelection.list === 'red' &&
                   currentSelection.index === index,
               }"
@@ -47,15 +49,17 @@
             </li>
           </ul>
         </div>
-        <div class="w-1/3 mr-4">
-          <h3 class="mb-3 text-lg font-semibold">Neutral</h3>
-          <ul class="list-none border border-gray-300 p-6 rounded-lg">
+        <div class="w-1/3 mr-4 text-sm">
+          <n-h3 class="mb-3 text-lg">Neutral</n-h3>
+          <ul
+            class="list-none border border-gray-300 p-6 pl-4 rounded-lg overflow-y-auto max-h-80"
+          >
             <li
               v-for="(option, index) in sorted_neutral"
               :key="index"
-              class="mb-2 cursor-pointer rounded"
+              class="mb-2 cursor-pointer rounded text-sm"
               :class="{
-                'bg-blue-200 pl-2 text-black':
+                'bg-blue-200 pl-2 text-black text-sm':
                   currentSelection.list === 'neutral' &&
                   currentSelection.index === index,
               }"
@@ -66,14 +70,16 @@
           </ul>
         </div>
         <div class="w-1/2">
-          <h3 class="mb-3 text-lg font-semibold">Blue</h3>
-          <ul class="list-none border border-gray-300 p-6 rounded-lg">
+          <n-h3 class="mb-3 text-lg">Blue</n-h3>
+          <ul
+            class="list-none border border-gray-300 p-6 pl-4 rounded-lg overflow-y-auto max-h-80"
+          >
             <li
               v-for="(option, index) in sorted_blue"
               :key="index"
-              class="mb-2 cursor-pointer rounded"
+              class="mb-2 cursor-pointer rounded text-sm"
               :class="{
-                'bg-blue-200 pl-2 text-black':
+                'bg-blue-200 pl-2 text-black text-sm':
                   currentSelection.list === 'blue' &&
                   currentSelection.index === index,
               }"
@@ -90,10 +96,11 @@
 
 <script setup lang="ts">
 import { ref, Ref, computed } from "vue";
-import { NIcon, NSelect, NTooltip } from "naive-ui";
+import { NIcon, NSelect, NTooltip, NH3 } from "naive-ui";
 import { ColdWar, Modern, WW2, countries } from "../stores/lib";
 import type TCoalitions from "../types";
 import { useCoalitionStore } from "../stores/state";
+import { watch } from "vue";
 
 interface ListMapping {
   [key: string]: {
@@ -256,4 +263,26 @@ const preset_options = [
   { label: "WWII", value: "WW2" },
   { label: "Custom", value: "Custom" },
 ];
+
+const leftDisabled = ref(true);
+const circleDisabled = ref(false);
+const rightDisabled = ref(false);
+
+const checkDisabledButton = (value: string) => {
+  if (value === "red") {
+    leftDisabled.value = true;
+    circleDisabled.value = false;
+    rightDisabled.value = false;
+  } else if (value === "neutral") {
+    leftDisabled.value = false;
+    circleDisabled.value = true;
+    rightDisabled.value = false;
+  } else if (value === "blue") {
+    leftDisabled.value = false;
+    circleDisabled.value = false;
+    rightDisabled.value = true;
+  }
+};
+
+watch(() => currentSelection.value.list, checkDisabledButton);
 </script>
