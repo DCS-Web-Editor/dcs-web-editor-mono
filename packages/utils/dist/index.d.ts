@@ -24,6 +24,14 @@ export declare function toNm(meters?: number): string;
 export declare function toDeg(rad?: number): string;
 export declare function toRad(deg?: number): number;
 export declare function rgbToInt(r: number, g: number, b: number): number;
+export declare function toRgba(r: number, g: number, b: number, a: number): string;
+export declare function rgbaToHex(r: number, g: number, b: number, a: number): string;
+export declare function hexaToRgb(hex: string): {
+    r: number;
+    g: number;
+    b: number;
+    a: number;
+} | null;
 export declare const MORSE: {
     a: string;
     b: string;
