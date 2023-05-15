@@ -14,7 +14,7 @@ import './polyline.css';
         define(['leaflet'], factory);
     } else if (typeof module !== 'undefined') {
         // Node/CommonJS
-        module.exports = factory(require('leaflet'));
+        module.exports = factory(L);
     } else {
         // Browser globals
         if (typeof window.L === 'undefined') {

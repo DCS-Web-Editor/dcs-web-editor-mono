@@ -12920,7 +12920,7 @@ ${o}
     Typography: g1,
     Upload: x1,
     Watermark: y1
-  }, D1 = "/leftarrow.svg", H1 = "/circle.svg", B1 = "/rightarrow.svg", Pl = {
+  }, D1 = "/editor/leftarrow.svg", H1 = "/editor/circle.svg", B1 = "/editor/rightarrow.svg", Pl = {
     blue: [21, 23, 11, 8, 13, 5, 6, 31, 15, 20, 36, 12, 45, 9, 46, 10, 3, 4, 2],
     neutrals: [
       18,

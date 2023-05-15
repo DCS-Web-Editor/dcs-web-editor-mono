@@ -119,6 +119,9 @@ function componentToHex(c) {
 export function rgbaToHex(r, g, b, a) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b) + componentToHex(a);
 }
+export function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
 export function hexaToRgb(hex) {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -145,6 +148,9 @@ export const MORSE = {
     '5': '.....', '6': '-....', '7': '--...', '8': '---..',
     '9': '----.', '0': '-----',
 };
+export const truncateString = (string = '', maxLength = 50) => string.length > maxLength
+    ? `${string.substring(0, maxLength)}…`
+    : string;
 export function downloadJson(json, name) {
     const jsonString = JSON.stringify(json, null, 2);
     const blob = new Blob([jsonString], { type: "application/json" });

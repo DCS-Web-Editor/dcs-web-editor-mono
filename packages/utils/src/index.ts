@@ -156,6 +156,9 @@ function componentToHex(c) {
 export function rgbaToHex(r:number, g:number, b:number, a: number) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b) + componentToHex(a);
 }
+export function rgbToHex(r:number, g:number, b:number) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
 
 export function hexaToRgb(hex: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
@@ -185,6 +188,11 @@ export const MORSE = {
     '5': '.....', '6': '-....', '7': '--...', '8': '---..', 
     '9': '----.', '0': '-----', 
  }
+
+ export const truncateString = (string = '', maxLength = 50) => 
+  string.length > maxLength 
+    ? `${string.substring(0, maxLength)}…`
+    : string
 
 
  export function downloadJson(json:any, name: string) {
