@@ -7,9 +7,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/main.ts",
-      name: "CoaEditor",
+      name: "BriefingEditor",
 
-      fileName: (format) => `coa-editor.${format}.js`,
+      fileName: (format) => `bf-editor.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],
