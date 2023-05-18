@@ -4,3 +4,4 @@ NPM workspaces repository for DCS Web Editor. Split into small packages installa
 
 `npm i -ws` -- install node modules for workspaces
 `npm run build` -- builds each package in the repository
+`cd packages/abc && npm run dev` -- (if available) runs a package in development mode on localhost
