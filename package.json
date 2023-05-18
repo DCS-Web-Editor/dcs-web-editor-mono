@@ -17,6 +17,7 @@
   "workspaces": [
     "packages/airfields",
     "packages/beacons",
+    "packages/briefing-editor",
     "packages/coalition-editor",
     "packages/icons",
     "packages/libs",
