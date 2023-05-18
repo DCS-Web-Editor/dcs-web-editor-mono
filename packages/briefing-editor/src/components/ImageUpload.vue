@@ -31,8 +31,8 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, onBeforeUnmount, onMounted, ref } from "vue";
-import { useMapRescStore } from "../stores/mapResourceState";
+import { Ref, ref, watch } from "vue";
+import { useMapRescStore, useImgDataStore } from "../stores/mapResourceState";
 import { useImgStore } from "../stores/imgState";
 import { useTxtState } from "../stores/txtState";
 import {
@@ -46,6 +46,7 @@ import { IBriefingImages } from "../types";
 
 const map = useMapRescStore();
 const img = useImgStore();
+const img_data = useImgDataStore();
 const txt = useTxtState();
 
 let id_num = 6; // image id's start at 6, 1-5 are for descriptions
@@ -83,23 +84,21 @@ const setData = (key: string, name: string, coa: Coalitions) => {
 };
 
 const findKeys = (keys: string[], coa: Coalitions): UploadFileInfo[] => {
-  return keys
-    .filter((key) => key.includes("ResKey_ImageBriefing_"))
-    .map((key) => {
-      const item = localStorage.getItem(key);
-      if (item !== null) {
-        const data: UploadFileInfo = JSON.parse(item);
-        setData(key, data.name, coa);
-        return {
-          id: key,
-          name: data.name as string,
-          status: "finished",
-          url: data.url as string,
-        };
-      } else {
-        return placeholder;
-      }
-    });
+  return keys.map((key) => {
+    const item = img_data.getOneImage(key);
+    if (item !== null) {
+      const data: UploadFileInfo = item;
+      setData(key, data.name, coa);
+      return {
+        id: key,
+        name: data.name as string,
+        status: "finished",
+        url: data.url as string,
+      };
+    } else {
+      return placeholder;
+    }
+  });
 };
 
 const customRequest = (
@@ -113,22 +112,15 @@ const customRequest = (
     const id = changeId();
     txt.txt.maxDictId = id_num;
     file.id = id;
-    const file_data = {
+    const file_data: UploadFileInfo = {
+      id: file.id,
       name: file.name,
+      status: "finished",
       url: dataUrl as string,
     };
     setData(file.id, file.name, coa);
-    localStorage.setItem(file.id, JSON.stringify(file_data));
-    window.dispatchEvent(new Event("localStorageChange"));
-    previewFile.value = [
-      {
-        id: file.id,
-        name: file.name,
-        status: "finished",
-        url: dataUrl as string,
-      },
-      ...previewFile.value,
-    ];
+    img_data.setOneImage(file.id, file_data);
+    previewFile.value = [file_data, ...previewFile.value];
     onFinish();
   };
   reader.readAsDataURL(file.file as Blob);
@@ -150,11 +142,10 @@ const onRemove = (data: {
   file: UploadFileInfo;
   fileList: UploadFileInfo[];
 }) => {
-  localStorage.removeItem(data.file.id);
+  img_data.deleteOneImage(data.file.id);
   delete map.map[data.file.id];
   img.briefing = removeIdFromBriefingImages(img.briefing, data.file.id);
 
-  // refactor to watch state instead of manually filtering it
   previewFileListRed.value = previewFileListRed.value.filter(
     (file) => file.id !== data.file.id
   );
@@ -191,27 +182,24 @@ const previewFileListNeutral = ref<UploadFileInfo[]>(
   findKeys(img.briefing.pictureFileNameN, Coalitions.neutral)
 );
 
-onMounted(() => {
-  window.addEventListener("localStorageChange", () => {
-    const data = Object.keys(localStorage)
-      .filter((key) => key.includes("ResKey_ImageBriefing_"))
-      .map((key) => {
-        const item = localStorage.getItem(key) ?? JSON.stringify(placeholder);
-        const data = JSON.parse(item);
-        return {
-          id: key,
-          name: data.name,
-          status: "finished",
-          url: data.url,
-        };
-      });
-    map.setAll(data);
-  });
-});
+watch(
+  () => previewFileListBlue.value,
+  (value) => {
+    img.briefing.pictureFileNameB = value.map((item) => item.id);
+  }
+);
 
-onBeforeUnmount(() => {
-  Object.keys(localStorage)
-    .filter((key) => key.includes("ResKey_ImageBriefing_"))
-    .forEach((key) => localStorage.removeItem(key));
-});
+watch(
+  () => previewFileListRed.value,
+  (value) => {
+    img.briefing.pictureFileNameR = value.map((item) => item.id);
+  }
+);
+
+watch(
+  () => previewFileListNeutral.value,
+  (value) => {
+    img.briefing.pictureFileNameN = value.map((item) => item.id);
+  }
+);
 </script>
