@@ -10,7 +10,7 @@ Clone the repo ( make sure you have at least node version >= 16 and npm >= 8 )
 ## Plugin development
 
 Regarding plugin development check out these examples. You can use any framework of your choice as long as it compiles to a esm module.
-**miz-js:** Vanilla Javascript
-**briefing-editor:** Vue3 + Naive ui
-**wx-editor:** Vue3 + Naive ui
-**coalition editor:** Vue3 + Naive ui
+- **miz-js:** Vanilla Javascript
+- **briefing-editor:** Vue3 + Naive ui
+- **wx-editor:** Vue3 + Naive ui
+- **coalition editor:** Vue3 + Naive ui
