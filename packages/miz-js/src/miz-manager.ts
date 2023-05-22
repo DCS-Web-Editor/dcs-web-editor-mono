@@ -324,11 +324,11 @@ export function initialize(_aceEditor, editorId) {
 
 
 
-function getFileNode(element) {
+export function getFileNode(element) {
   return element ? model.getById(element.dataset.fileId) : model.getRoot();
 }
 
-function findFileElement(id) {
+export function findFileElement(id) {
   return document.querySelector("[data-file-id=\"" + id + "\"]");
 }
 

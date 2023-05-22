@@ -203,10 +203,4 @@ watch(
     img.briefing.pictureFileNameN = value.map((item) => item.id);
   }
 );
-
-watch(img_data.img,
-  (val) => {
-    console.log(val);
-  }
-);
 </script>
