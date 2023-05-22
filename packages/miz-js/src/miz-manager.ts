@@ -368,8 +368,9 @@ export function onexport(isFile, setName = "example.miz", options = {} ) {
       } else {
         fileName = prompt("Filename", isFile ? node.name : node.parent ? node.name + ".miz" : setName);
       }
-
+      
       if (fileName) {
+        fileName = fileName.match(/.miz$/) ? fileName : fileName + '.miz';
         progressExport.style.opacity = 1;
         progressExport.value = 0;
         progressExport.max = 0;

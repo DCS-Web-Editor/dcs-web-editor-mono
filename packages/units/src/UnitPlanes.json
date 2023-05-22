@@ -22820,6 +22820,14 @@
     "frequency": 251,
     "modulation": 0
   },
+  "specificCallnames": {
+    "USA": [
+      ["Heavy","Heavy"],
+      ["Trash","Trash"],
+      ["Cargo","Cargo"],
+      ["Ascot","Ascot"]
+    ]
+  },
   "maxAlt": 9315,
   "cruiseSpeed": 174,
   "shape": "c-130",
@@ -23141,6 +23149,14 @@
   "radio": {
     "frequency": 251,
     "modulation": 0
+  },
+  "specificCallnames": {
+    "USA": [
+      ["Heavy","Heavy"],
+      ["Trash","Trash"],
+      ["Cargo","Cargo"],
+      ["Ascot","Ascot"]
+    ]
   },
   "maxAlt": 13715,
   "cruiseSpeed": 147.2,
