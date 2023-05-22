@@ -32,7 +32,8 @@
 
 <script setup lang="ts">
 import { Ref, ref, watch } from "vue";
-import { useMapRescStore, useImgDataStore } from "../stores/mapResourceState";
+import { useMapRescStore } from "../stores/mapResourceState";
+import { useImgDataStore } from "../stores/imgDataState";
 import { useImgStore } from "../stores/imgState";
 import { useTxtState } from "../stores/txtState";
 import {
@@ -200,6 +201,12 @@ watch(
   () => previewFileListNeutral.value,
   (value) => {
     img.briefing.pictureFileNameN = value.map((item) => item.id);
+  }
+);
+
+watch(img_data.img,
+  (val) => {
+    console.log(val);
   }
 );
 </script>
