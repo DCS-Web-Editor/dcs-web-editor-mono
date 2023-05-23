@@ -14,6 +14,13 @@ const config: Record<string, any> = {
         false_northing: -3879865.9999999935,
         scale_factor: 0.9996,
     },
+    SouthEastAsia: {
+        // guesstimate to be adjusted, but should not affect projection
+        central_meridian: 107,
+        false_easting: 200000,
+        false_northing: -1800000,
+        scale_factor: 0.9996,
+    },
     Caucasus: {
         central_meridian: 33,
         false_easting: -99516.9999999732,
@@ -75,7 +82,9 @@ let projector: any;
  * @returns {*}
  */
 export function activeMap(mapName: string) {
-    const mapConfig = config[mapName]
+    const mapConfig = config[mapName];
+    // console.log(mapName, mapConfig);
+    
     projector = proj4(`+proj=tmerc +lat_0=0 +lon_0=${mapConfig.central_meridian} +k_0=${mapConfig.scale_factor} +x_0=${mapConfig.false_easting} +y_0=${mapConfig.false_northing} +towgs84=0,0,0,0,0,0,0 +units=m +vunits=m +ellps=WGS84 +no_defs +axis=neu`);
     return projector;
 }
