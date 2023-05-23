@@ -109,6 +109,33 @@ export function toRad(deg = 0) {
 export function rgbToInt(r, g, b) {
     return (r * 255 << 16) + (g * 255 << 8) + (b * 255);
 }
+export function toRgba(r, g, b, a) {
+    return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(a * 255)})`;
+}
+function componentToHex(c) {
+    var hex = Math.round(c).toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+export function rgbaToHex(r, g, b, a) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b) + componentToHex(a);
+}
+export function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+export function hexaToRgb(hex) {
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function (m, r, g, b, a) {
+        return r + r + g + g + b + b + a + a;
+    });
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+        a: parseInt(result[4], 16),
+    } : null;
+}
 export const MORSE = {
     'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..',
     'e': '.', 'f': '..-.', 'g': '--.', 'h': '....',
@@ -121,6 +148,9 @@ export const MORSE = {
     '5': '.....', '6': '-....', '7': '--...', '8': '---..',
     '9': '----.', '0': '-----',
 };
+export const truncateString = (string = '', maxLength = 50) => string.length > maxLength
+    ? `${string.substring(0, maxLength)}…`
+    : string;
 export function downloadJson(json, name) {
     const jsonString = JSON.stringify(json, null, 2);
     const blob = new Blob([jsonString], { type: "application/json" });
