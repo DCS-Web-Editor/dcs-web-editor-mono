@@ -1,3 +1,5 @@
+<!-- Replace all inputs in prod with translated input from dcs-web-editor -->
+
 <template>
   <n-input
     v-model:value="sortie"

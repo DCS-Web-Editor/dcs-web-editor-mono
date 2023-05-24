@@ -6,7 +6,7 @@ import * as zip from "@zip.js/zip.js";
 import * as ace from '../lib/ace/ace.js';
 import { downloadBlob } from '@dcs-web-editor-mono/utils';
 
-let fs = new zip.fs.FS();
+export let fs = new zip.fs.FS();
 export const fileSystem = fs;
 
 let aceEditor;
@@ -324,11 +324,11 @@ export function initialize(_aceEditor, editorId) {
 
 
 
-function getFileNode(element) {
+export function getFileNode(element) {
   return element ? model.getById(element.dataset.fileId) : model.getRoot();
 }
 
-function findFileElement(id) {
+export function findFileElement(id) {
   return document.querySelector("[data-file-id=\"" + id + "\"]");
 }
 

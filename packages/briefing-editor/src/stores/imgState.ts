@@ -6,6 +6,7 @@ const defaultBriefing: IBriefingImages = {
   pictureFileNameN: [],
   pictureFileNameR: [],
 };
+
 export const useImgStore = defineStore("bf", {
   state: () => ({
     briefing: defaultBriefing,
