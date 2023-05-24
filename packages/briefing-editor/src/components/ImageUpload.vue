@@ -53,11 +53,16 @@ const txt = useTxtState();
 let id_num = 6; // image id's start at 6, 1-5 are for descriptions
 
 const changeId = () => {
-  if (txt.txt.maxDictId > id_num) {
-    return `ResKey_ImageBriefing_${txt.txt.maxDictId}`;
-  }
   return `ResKey_ImageBriefing_${id_num++}`;
 };
+
+const changeMaxId = () => {
+  if (txt.txt.maxDictId > id_num) {
+    return txt.txt.maxDictId;
+  } else {
+    return id_num;
+  }
+}
 
 const placeholder: UploadFileInfo = {
   id: "none",
@@ -112,7 +117,7 @@ const customRequest = (
   reader.onloadend = function () {
     const dataUrl = reader.result;
     const id = changeId();
-    txt.txt.maxDictId = id_num;
+    txt.txt.maxDictId = changeMaxId();
     file.id = id;
     const file_data: UploadFileInfo = {
       id: file.id,
