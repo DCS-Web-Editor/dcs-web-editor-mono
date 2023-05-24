@@ -6,7 +6,7 @@ import * as zip from "@zip.js/zip.js";
 import * as ace from '../lib/ace/ace.js';
 import { downloadBlob } from '@dcs-web-editor-mono/utils';
 
-let fs = new zip.fs.FS();
+export let fs = new zip.fs.FS();
 export const fileSystem = fs;
 
 let aceEditor;
