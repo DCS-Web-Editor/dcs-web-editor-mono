@@ -4,6 +4,7 @@
       <n-upload
         accept=".png, .jpeg, .jpg"
         :default-file-list="previewFileListBlue"
+        :file-list="previewFileListBlue"
         list-type="image-card"
         :custom-request="customRequestBlue"
         :on-remove="onRemove"
@@ -13,6 +14,7 @@
       <n-upload
         accept=".png, .jpeg, .jpg"
         :default-file-list="previewFileListNeutral"
+        :file-list="previewFileListNeutral"
         list-type="image-card"
         :custom-request="customRequestNeutral"
         :on-remove="onRemove"
@@ -22,6 +24,7 @@
       <n-upload
         accept=".png, .jpeg, .jpg"
         :default-file-list="previewFileListRed"
+        :file-list="previewFileListRed"
         list-type="image-card"
         :custom-request="customRequestRed"
         :on-remove="onRemove"
