@@ -2,9 +2,9 @@
   <n-tabs type="segment">
     <n-tab-pane name="blue" tab="Blue">
       <n-upload
+        :key="componentKey"
         accept=".png, .jpeg, .jpg"
         :default-file-list="previewFileListBlue"
-        :file-list="previewFileListBlue"
         list-type="image-card"
         :custom-request="customRequestBlue"
         :on-remove="onRemove"
@@ -12,9 +12,9 @@
     </n-tab-pane>
     <n-tab-pane name="neutral" tab="Neutral">
       <n-upload
+        :key="componentKey"
         accept=".png, .jpeg, .jpg"
         :default-file-list="previewFileListNeutral"
-        :file-list="previewFileListNeutral"
         list-type="image-card"
         :custom-request="customRequestNeutral"
         :on-remove="onRemove"
@@ -22,9 +22,9 @@
     </n-tab-pane>
     <n-tab-pane name="red" tab="Red">
       <n-upload
+        :key="componentKey"
         accept=".png, .jpeg, .jpg"
         :default-file-list="previewFileListRed"
-        :file-list="previewFileListRed"
         list-type="image-card"
         :custom-request="customRequestRed"
         :on-remove="onRemove"
@@ -47,6 +47,7 @@ import {
   UploadCustomRequestOptions,
 } from "naive-ui";
 import { IBriefingImages } from "../types";
+import { watch, ref } from "vue";
 
 const map = useMapRescStore();
 const img = useImgStore();
@@ -54,6 +55,11 @@ const img_data = useImgDataStore();
 const txt = useTxtState();
 
 let id_num = 6; // image id's start at 6, 1-5 are for descriptions
+const componentKey = ref(0);
+
+const forceRerender = () => {
+  componentKey.value += 1;
+};
 
 const changeId = () => {
   return `ResKey_ImageBriefing_${id_num++}`;
@@ -65,7 +71,7 @@ const changeMaxId = () => {
   } else {
     return id_num;
   }
-}
+};
 
 const placeholder: UploadFileInfo = {
   id: "none",
@@ -98,7 +104,7 @@ const setData = (key: string, name: string, coa: Coalitions) => {
 const findKeys = (keys: string[]): UploadFileInfo[] => {
   return keys.map((key) => {
     const item = img_data.getOneImage(key);
-    if (item !== null) {
+    if (item !== null && item !== undefined) {
       const data: UploadFileInfo = item;
       return {
         id: key,
@@ -154,6 +160,10 @@ const onRemove = (data: {
   img_data.deleteOneImage(data.file.id);
   delete map.map[data.file.id];
   img.briefing = removeIdFromBriefingImages(img.briefing, data.file.id);
+  const event = new CustomEvent("deleteImage", {
+    detail: { id: data.file.id, name: data.file.name },
+  });
+  window.dispatchEvent(event);
   return true;
 };
 
@@ -179,5 +189,26 @@ const previewFileListBlue = computed(() =>
 
 const previewFileListNeutral = computed(() =>
   findKeys(img.briefing.pictureFileNameN)
+);
+
+watch(
+  () => previewFileListNeutral.value,
+  () => {
+    forceRerender();
+  }
+);
+
+watch(
+  () => previewFileListBlue.value,
+  () => {
+    forceRerender();
+  }
+);
+
+watch(
+  () => previewFileListRed.value,
+  () => {
+    forceRerender();
+  }
 );
 </script>
