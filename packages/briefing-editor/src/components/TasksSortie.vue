@@ -1,5 +1,3 @@
-<!-- Replace all inputs in prod with translated input from dcs-web-editor -->
-
 <template>
   <n-input
     v-model:value="sortie"
@@ -8,7 +6,7 @@
   />
   <n-grid :x-gap="14" :y-gap="50" :cols="2" class="pb-20">
     <n-grid-item>
-      <n-h4>Situation</n-h4>
+      <n-h4 class="mb-2">Situation</n-h4>
       <n-input
         v-model:value="situation"
         class="h-full"
@@ -18,7 +16,7 @@
       />
     </n-grid-item>
     <n-grid-item>
-      <n-h4>Blue Coalition Tasks</n-h4>
+      <n-h4 class="mb-2">Blue Coalition Tasks</n-h4>
       <n-input
         v-model:value="blueTasks"
         class="h-full"
@@ -28,7 +26,7 @@
       />
     </n-grid-item>
     <n-grid-item>
-      <n-h4>Red Coalition Tasks</n-h4>
+      <n-h4 class="mb-2">Red Coalition Tasks</n-h4>
       <n-input
         v-model:value="redTasks"
         class="h-full"
@@ -38,7 +36,7 @@
       />
     </n-grid-item>
     <n-grid-item>
-      <n-h4>Neutral Coalition Tasks</n-h4>
+      <n-h4 class="mb-2">Neutral Coalition Tasks</n-h4>
       <n-input
         v-model:value="neutralTasks"
         class="h-full"
