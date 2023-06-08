@@ -328,153 +328,165 @@ interface PresetDetails {
   ttip: string;
 }
 
-const tooltip = ref("Nothing");
+const tooltip = ref("Nothing (984ft - 16404ft)");
 const preset_min = ref(0);
 const preset_max = ref(0);
 
 const PresetValues: Record<CloudPresets, PresetDetails> = {
-  [CloudPresets.Nothing]: { min: 984, max: 16404, ttip: "Nothing" },
-  [CloudPresets.Preset1]: { min: 2756, max: 13780, ttip: "Few Scattered" },
+  [CloudPresets.Nothing]: {
+    min: 984,
+    max: 16404,
+    ttip: "Nothing (984ft - 16404ft)",
+  },
+  [CloudPresets.Preset1]: {
+    min: 2756,
+    max: 13780,
+    ttip: "Few Scattered (2756ft - 13780ft)",
+  },
   [CloudPresets.Preset2]: {
     min: 4134,
     max: 8268,
-    ttip: "Two Layers Few Scattered",
+    ttip: "Two Layers Few Scattered (4134ft - 8268ft)",
   },
   [CloudPresets.Preset3]: {
     min: 2756,
     max: 8268,
-    ttip: "Two Layers Scattered",
+    ttip: "Two Layers Scattered (2756ft - 8268ft)",
   },
   [CloudPresets.Preset4]: {
     min: 4134,
     max: 8268,
-    ttip: "Two Layers Scattered",
+    ttip: "Two Layers Scattered (4134ft - 8268ft)",
   },
   [CloudPresets.Preset5]: {
     min: 4134,
     max: 15157,
-    ttip: "Three Layers High Scattered",
+    ttip: "Three Layers High Scattered (4134ft - 15157ft)",
   },
   [CloudPresets.Preset6]: {
     min: 4134,
     max: 13780,
-    ttip: "One Layer Scattered/Broken",
+    ttip: "One Layer Scattered/Broken (4134ft - 13780ft)",
   },
   [CloudPresets.Preset7]: {
     min: 5512,
     max: 16535,
-    ttip: "Two Layers Scattered/Broken",
+    ttip: "Two Layers Scattered/Broken (5512ft - 16535ft)",
   },
   [CloudPresets.Preset8]: {
     min: 12402,
     max: 17913,
-    ttip: "Two High Layers Scattered/Broken",
+    ttip: "Two High Layers Scattered/Broken (12402ft - 17913ft)",
   },
   [CloudPresets.Preset9]: {
     min: 5512,
     max: 12402,
-    ttip: "Two Layers Scattered/Broken",
+    ttip: "Two Layers Scattered/Broken (5512ft - 12402ft)",
   },
   [CloudPresets.Preset10]: {
     min: 4134,
     max: 13780,
-    ttip: "Two Layers Large Thick Clouds",
+    ttip: "Two Layers Large Thick Clouds (4134ft - 13780ft)",
   },
   [CloudPresets.Preset11]: {
     min: 8268,
     max: 17913,
-    ttip: "Two Layers Large Clouds High Ceiling",
+    ttip: "Two Layers Large Clouds High Ceiling (8268ft - 17913ft)",
   },
   [CloudPresets.Preset12]: {
     min: 5512,
     max: 11024,
-    ttip: "Two Layers Scattered Large Clouds High Ceiling",
+    ttip: "Two Layers Scattered Large Clouds High Ceiling (5512ft - 11024ft)",
   },
-  [CloudPresets.Preset13]: { min: 5512, max: 11024, ttip: "Two Layers Broken" },
+  [CloudPresets.Preset13]: {
+    min: 5512,
+    max: 11024,
+    ttip: "Two Layers Broken (5512ft - 11024ft)",
+  },
   [CloudPresets.Preset14]: {
     min: 5512,
     max: 11024,
-    ttip: "Broken Thick Low Layer with Few High Layer",
+    ttip: "Broken Thick Low Layer with Few High Layer (5512ft - 11024ft)",
   },
   [CloudPresets.Preset15]: {
     min: 2756,
     max: 16535,
-    ttip: "Broken Layers Broken Large Clouds",
+    ttip: "Broken Layers Broken Large Clouds (2756ft - 16535ft)",
   },
   [CloudPresets.Preset16]: {
     min: 4134,
     max: 13780,
-    ttip: "Two Layers Broken Large Clouds",
+    ttip: "Two Layers Broken Large Clouds (4134ft - 13780ft)",
   },
   [CloudPresets.Preset17]: {
     min: 0,
     max: 8268,
-    ttip: "Two Layers Broken/Overcast",
+    ttip: "Two Layers Broken/Overcast (0ft - 8268ft)",
   },
   [CloudPresets.Preset18]: {
     min: 0,
     max: 12402,
-    ttip: "Three Layers Broken/Overcast",
+    ttip: "Three Layers Broken/Overcast (0ft - 12402ft)",
   },
   [CloudPresets.Preset19]: {
     min: 0,
     max: 12402,
-    ttip: "Three Layers Overcast at Low Level",
+    ttip: "Three Layers Overcast at Low Level (0ft - 12402ft)",
   },
   [CloudPresets.Preset20]: {
     min: 0,
     max: 12402,
-    ttip: "Three Layers Overcast at Low Level",
+    ttip: "Three Layers Overcast at Low Level (0ft - 12402ft)",
   },
   [CloudPresets.Preset21]: {
     min: 4134,
     max: 13780,
-    ttip: "Overcast at Low Level",
+    ttip: "Overcast at Low Level (4134ft - 13780ft)",
   },
   [CloudPresets.Preset22]: {
     min: 1378,
     max: 13780,
-    ttip: "Overcast at Low Level",
+    ttip: "Overcast at Low Level (1378ft - 13780ft)",
   },
   [CloudPresets.Preset23]: {
     min: 2756,
     max: 11024,
-    ttip: "Three Layers Broken Low Level Scattered High Level",
+    ttip: "Three Layers Broken Low Level Scattered High Level (2756ft - 11024ft)",
   },
   [CloudPresets.Preset24]: {
     min: 1378,
     max: 8268,
-    ttip: "Three Layers Overcast",
+    ttip: "Three Layers Overcast (1378ft - 8268ft)",
   },
   [CloudPresets.Preset25]: {
     min: 1378,
     max: 11024,
-    ttip: "Three Layers Overcast",
+    ttip: "Three Layers Overcast (1378ft - 11024ft)",
   },
   [CloudPresets.Preset26]: {
     min: 1378,
     max: 9646,
-    ttip: "Three Layers Overcast",
+    ttip: "Three Layers Overcast (1378ft - 9646ft)",
   },
   [CloudPresets.Preset27]: {
     min: 1378,
     max: 8268,
-    ttip: "Three Layers Overcast",
+    ttip: "Three Layers Overcast (1378ft - 8268ft)",
   },
   [CloudPresets.RainyPreset1]: {
     min: 1378,
     max: 9646,
-    ttip: "Overcast with Rain",
+    ttip: "Overcast with Rain (1378ft - 9646ft)",
   },
   [CloudPresets.RainyPreset2]: {
     min: 2756,
     max: 8268,
-    ttip: "Overcast with Rain",
+    ttip: "Overcast with Rain (2756ft - 8268ft)",
   },
   [CloudPresets.RainyPreset3]: {
     min: 2756,
     max: 8268,
-    ttip: "Overcast with Rain",
+    ttip: "Overcast with Rain (2756ft - 8268ft)",
   },
 };
 
