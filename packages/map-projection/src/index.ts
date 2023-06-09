@@ -14,6 +14,12 @@ const config: Record<string, any> = {
         false_northing: -3879865.9999999935,
         scale_factor: 0.9996,
     },
+    Sinai: {
+        central_meridian: 33,
+        false_easting: 169222,
+        false_northing: -3325313,
+        scale_factor: 0.9996,
+    },
     SouthEastAsia: {
         // guesstimate to be adjusted, but should not affect projection
         central_meridian: 107,
