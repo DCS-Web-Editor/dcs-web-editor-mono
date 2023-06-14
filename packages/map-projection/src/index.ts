@@ -14,7 +14,7 @@ const config: Record<string, any> = {
         false_northing: -3879865.9999999935,
         scale_factor: 0.9996,
     },
-    Sinai: {
+    SinaiMap: {
         central_meridian: 33,
         false_easting: 169222,
         false_northing: -3325313,
@@ -68,6 +68,12 @@ const config: Record<string, any> = {
         false_easting: 99376.00000000288,
         false_northing: -5636889.00000001,
         scale_factor: 0.9996,
+    },
+    TopEndAustralia: {
+      central_meridian: 135,
+      false_easting: 500000,
+      false_northing: 10000000,
+      scale_factor: 0.9996
     }
 }
 
