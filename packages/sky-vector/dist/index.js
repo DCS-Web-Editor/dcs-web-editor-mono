@@ -23,6 +23,10 @@ export function toPoint(lat, lon, zoom = 5) {
     const SKYVECTOR_URL = `https://skyvector.com/?ll=${lat},${lon}&chart=301&zoom=${skyVectorZoom[zoom]}&referrer=DCS_Web_Editor`;
     return SKYVECTOR_URL;
 }
+export function airport(code) {
+    const SKYVECTOR_URL = `https://skyvector.com/search/site/${code}?referrer=DCS_Web_Editor`;
+    return SKYVECTOR_URL;
+}
 export const skyVectorZoom = {
     22: 1,
     21: 1,

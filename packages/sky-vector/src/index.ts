@@ -32,6 +32,10 @@ export function toPoint(lat: number, lon: number, zoom = 5) {
     const SKYVECTOR_URL = `https://skyvector.com/?ll=${lat},${lon}&chart=301&zoom=${skyVectorZoom[zoom]}&referrer=DCS_Web_Editor`
     return SKYVECTOR_URL;    
 }
+export function airport(code: string) {
+    const SKYVECTOR_URL = `https://skyvector.com/search/site/${code}?referrer=DCS_Web_Editor`
+    return SKYVECTOR_URL;    
+}
 
 export const skyVectorZoom: Record<number, number> = {
   22: 1,
