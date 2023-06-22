@@ -15,7 +15,7 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
-    Normandy: {
+    Normandy2: {
         lat: number;
         lon: number;
     }[];
