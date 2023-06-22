@@ -21,6 +21,7 @@
     "packages/coalition-editor",
     "packages/icons",
     "packages/libs",
+    "packages/map-controls",
     "packages/map-projection",
     "packages/miz-js",
     "packages/sky-vector",
