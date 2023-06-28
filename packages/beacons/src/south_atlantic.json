@@ -1,0 +1,568 @@
+[
+  {
+    "beaconId": "airfield14_0",
+    "callsign": "EC",
+    "direction": 73.854863,
+    "display_name": "ELCALACAFE",
+    "frequency": 108900000.0,
+    "position": [
+      136527.359375,
+      199.844286,
+      -921495.0625
+    ],
+    "positionGeo": {
+      "latitude": -50.280529,
+      "longitude": -72.03895
+    },
+    "sceneObjects": [
+      "t:84967424"
+    ]
+  },
+  {
+    "beaconId": "airfield14_1",
+    "callsign": "ec",
+    "chartOffsetX": 2924.0,
+    "direction": 72.999995,
+    "display_name": "ELCALAFATE",
+    "frequency": 108900000.0,
+    "position": [
+      135880.75,
+      194.959973,
+      -924036.875
+    ],
+    "positionGeo": {
+      "latitude": -50.281576,
+      "longitude": -72.075212
+    },
+    "sceneObjects": [
+      "t:57442346"
+    ]
+  },
+  {
+    "beaconId": "airfield14_2",
+    "callsign": "ECA",
+    "channel": 94,
+    "direction": 0.0,
+    "display_name": "ECA",
+    "frequency": 114700000.0,
+    "position": [
+      136666.3125,
+      200.612963,
+      -921982.75
+    ],
+    "positionGeo": {
+      "latitude": -50.278446,
+      "longitude": -72.04517
+    },
+    "sceneObjects": [
+      "t:33161303"
+    ]
+  },
+  {
+    "beaconId": "airfield2_0",
+    "callsign": "imp",
+    "chartOffsetX": 2967.0,
+    "direction": 104.099978,
+    "display_name": "MTPLEASANT",
+    "frequency": 111900000.0,
+    "position": [
+      73666.453125,
+      74.138075,
+      45783.363281
+    ],
+    "positionGeo": {
+      "latitude": -51.817299,
+      "longitude": -58.477728
+    },
+    "sceneObjects": [
+      "t:50168961"
+    ]
+  },
+  {
+    "beaconId": "airfield2_1",
+    "callsign": "MP",
+    "direction": 0.0,
+    "display_name": "MP",
+    "frequency": 380000.0,
+    "position": [
+      72305.148438,
+      74.137983,
+      45747.414062
+    ],
+    "positionGeo": {
+      "latitude": -51.829528,
+      "longitude": -58.47865
+    },
+    "sceneObjects": [
+      "t:15599993"
+    ]
+  },
+  {
+    "beaconId": "airfield2_2",
+    "callsign": "MPA",
+    "channel": 59,
+    "direction": 0.0,
+    "display_name": "MPA",
+    "frequency": 112200000.0,
+    "position": [
+      72940.390625,
+      74.137174,
+      47230.632812
+    ],
+    "positionGeo": {
+      "latitude": -51.824087,
+      "longitude": -58.456949
+    },
+    "sceneObjects": [
+      "t:50168714"
+    ]
+  },
+  {
+    "beaconId": "airfield2_3",
+    "callsign": "MTP",
+    "channel": 94,
+    "direction": 17.188745,
+    "display_name": "MTP",
+    "frequency": 114700000.0,
+    "position": [
+      72714.851562,
+      65.110195,
+      49580.492188
+    ],
+    "positionGeo": {
+      "latitude": -51.826531,
+      "longitude": -58.422928
+    },
+    "sceneObjects": [
+      "t:29164043"
+    ]
+  },
+  {
+    "beaconId": "airfield2_4",
+    "callsign": "IMP",
+    "direction": 106.217857,
+    "display_name": "MTPLEASANT",
+    "frequency": 111900000.0,
+    "position": [
+      72931.070312,
+      74.138075,
+      48172.796875
+    ],
+    "positionGeo": {
+      "latitude": -51.824339,
+      "longitude": -58.443285
+    },
+    "sceneObjects": [
+      "t:75695092"
+    ]
+  },
+  {
+    "beaconId": "airfield1_0",
+    "callsign": "SA",
+    "direction": 0.0,
+    "display_name": "stanleyairport",
+    "frequency": 305000.0,
+    "position": [
+      89159.585938,
+      20.55607,
+      94201.484375
+    ],
+    "positionGeo": {
+      "latitude": -51.684736,
+      "longitude": -57.773001
+    },
+    "sceneObjects": [
+      "t:197787648"
+    ]
+  },
+  {
+    "beaconId": "airfield1_1",
+    "callsign": "DFO",
+    "direction": 0.0,
+    "display_name": "DFO",
+    "frequency": 113300000.0,
+    "position": [
+      89159.497356,
+      20.556072,
+      94167.834159
+    ],
+    "positionGeo": {
+      "latitude": -51.684733,
+      "longitude": -57.773487
+    },
+    "sceneObjects": [
+      "t:30508624"
+    ]
+  },
+  {
+    "beaconId": "airfield13_0",
+    "callsign": "PNT",
+    "channel": 106,
+    "direction": 0.0,
+    "display_name": "PUERTO NATALES",
+    "frequency": 115900000.0,
+    "position": [
+      -29898.896534,
+      101.43661,
+      -914126.195727
+    ],
+    "positionGeo": {
+      "latitude": -51.738041,
+      "longitude": -72.422021
+    },
+    "sceneObjects": [
+      "t:25559834"
+    ]
+  },
+  {
+    "beaconId": "airfield12_0",
+    "callsign": "PWL",
+    "channel": 96,
+    "direction": 0.0,
+    "display_name": "Puerto Williams",
+    "frequency": 114900000.0,
+    "position": [
+      -323309.40132,
+      12.073689,
+      -531621.976824
+    ],
+    "positionGeo": {
+      "latitude": -54.929549,
+      "longitude": -67.621059
+    },
+    "sceneObjects": [
+      "t:19333691"
+    ]
+  },
+  {
+    "beaconId": "airfield9_0",
+    "callsign": "inas",
+    "direction": 76.747471,
+    "display_name": "ptarenas",
+    "frequency": 109900000.0,
+    "position": [
+      -146880.036713,
+      37.207671,
+      -778463.993454
+    ],
+    "positionGeo": {
+      "latitude": -52.9996,
+      "longitude": -70.837778
+    },
+    "sceneObjects": [
+      "t:65241311"
+    ]
+  },
+  {
+    "beaconId": "airfield9_1",
+    "callsign": "INAS",
+    "chartOffsetX": 3396.0,
+    "direction": 77.637503,
+    "display_name": "",
+    "frequency": 109900000.0,
+    "position": [
+      -147614.546875,
+      41.658905,
+      -781243.4375
+    ],
+    "positionGeo": {
+      "latitude": -53.001231,
+      "longitude": -70.880082
+    },
+    "sceneObjects": [
+      "t:41746690"
+    ]
+  },
+  {
+    "beaconId": "airfield9_2",
+    "callsign": "NAS",
+    "direction": 0.0,
+    "display_name": "NAS",
+    "frequency": 114100000.0,
+    "position": [
+      -147603.078125,
+      38.113205,
+      -779535.1875
+    ],
+    "positionGeo": {
+      "latitude": -53.00407,
+      "longitude": -70.855336
+    },
+    "sceneObjects": [
+      "t:23140521"
+    ]
+  },
+  {
+    "beaconId": "airfield9_3",
+    "callsign": "NAS",
+    "direction": -162.875779,
+    "display_name": "NAS",
+    "frequency": 270000.0,
+    "position": [
+      -149244.9375,
+      33.399913,
+      -780144.75
+    ],
+    "positionGeo": {
+      "latitude": -53.017351,
+      "longitude": -70.868839
+    },
+    "sceneObjects": [
+      "t:41746687"
+    ]
+  },
+  {
+    "beaconId": "airfield5_0",
+    "callsign": "GAL",
+    "channel": 114,
+    "direction": 0.0,
+    "display_name": "GAL",
+    "frequency": 116700000.0,
+    "position": [
+      25281.628906,
+      15.454749,
+      -704622.125
+    ],
+    "positionGeo": {
+      "latitude": -51.610861,
+      "longitude": -69.330441
+    },
+    "sceneObjects": [
+      "t:26804224"
+    ]
+  },
+  {
+    "beaconId": "airfield5_1",
+    "callsign": "gl",
+    "chartOffsetX": 3835.0,
+    "direction": 75.799991,
+    "display_name": "RIOGALLEGOS",
+    "frequency": 110300000.0,
+    "position": [
+      25207.816406,
+      15.454749,
+      -705419.25
+    ],
+    "positionGeo": {
+      "latitude": -51.610309,
+      "longitude": -69.341866
+    },
+    "sceneObjects": [
+      "t:45450007"
+    ]
+  },
+  {
+    "beaconId": "airfield5_2",
+    "callsign": "gl",
+    "direction": 75.799998,
+    "display_name": "RIOGALLEGOS",
+    "frequency": 110300000.0,
+    "position": [
+      25920.679688,
+      15.45475,
+      -701994.5625
+    ],
+    "positionGeo": {
+      "latitude": -51.609196,
+      "longitude": -69.291827
+    },
+    "sceneObjects": [
+      "t:70092157"
+    ]
+  },
+  {
+    "beaconId": "airfield6_0",
+    "callsign": "gr",
+    "chartOffsetX": 2450.0,
+    "direction": 78.809318,
+    "display_name": "RIOGRANDE",
+    "frequency": 109500000.0,
+    "position": [
+      -197423.84375,
+      18.521791,
+      -560901.375
+    ],
+    "positionGeo": {
+      "latitude": -53.778151,
+      "longitude": -67.771597
+    },
+    "sceneObjects": [
+      "t:39911605"
+    ]
+  },
+  {
+    "beaconId": "airfield6_1",
+    "callsign": "GRA",
+    "channel": 120,
+    "direction": -12.944603,
+    "display_name": "GRA",
+    "frequency": 117300000.0,
+    "position": [
+      -196830.34375,
+      18.521791,
+      -559258.625
+    ],
+    "positionGeo": {
+      "latitude": -53.775134,
+      "longitude": -67.745751
+    },
+    "sceneObjects": [
+      "t:21892031"
+    ]
+  },
+  {
+    "beaconId": "airfield6_2",
+    "callsign": "gr",
+    "direction": 80.311714,
+    "display_name": "RIOGRANDE",
+    "frequency": 109500000.0,
+    "position": [
+      -197128.037595,
+      18.521791,
+      -558753.278777
+    ],
+    "positionGeo": {
+      "latitude": -53.778446,
+      "longitude": -67.738896
+    },
+    "sceneObjects": [
+      "t:63178364"
+    ]
+  },
+  {
+    "beaconId": "airfield6_3",
+    "callsign": "P",
+    "direction": -59.842259,
+    "display_name": "riograndendb",
+    "frequency": 265000.0,
+    "position": [
+      -197913.953125,
+      9.708014,
+      -557863.5625
+    ],
+    "positionGeo": {
+      "latitude": -53.786588,
+      "longitude": -67.727422
+    },
+    "sceneObjects": [
+      "t:10715338"
+    ]
+  },
+  {
+    "beaconId": "airfield6_4",
+    "callsign": "gra",
+    "channel": 31,
+    "direction": 0.0,
+    "display_name": "riogrande",
+    "frequency": 1000000.0,
+    "position": [
+      -197286.59375,
+      18.521793,
+      -559337.9375
+    ],
+    "positionGeo": {
+      "latitude": -53.779056,
+      "longitude": -67.747975
+    },
+    "sceneObjects": [
+      "t:39912717"
+    ]
+  },
+  {
+    "beaconId": "airfield20_0",
+    "callsign": "BIO",
+    "direction": 0.0,
+    "display_name": "BIO",
+    "frequency": 205000000.0,
+    "position": [
+      -12635.218321,
+      275.999849,
+      -903425.963493
+    ],
+    "positionGeo": {
+      "latitude": -51.608282,
+      "longitude": -72.221032
+    },
+    "sceneObjects": [
+      "t:13631527"
+    ]
+  },
+  {
+    "beaconId": "airfield11_0",
+    "callsign": "",
+    "direction": -13.581222,
+    "display_name": "San Julian",
+    "frequency": 117700000.0,
+    "position": [
+      297049.809571,
+      44.000044,
+      -637612.540034
+    ],
+    "positionGeo": {
+      "latitude": -49.309587,
+      "longitude": -67.812946
+    },
+    "sceneObjects": [
+      "t:34971204"
+    ]
+  },
+  {
+    "beaconId": "airfield7_0",
+    "callsign": "us",
+    "chartOffsetX": 2724.0,
+    "direction": 76.89946,
+    "display_name": "RIOGRANDE",
+    "frequency": 111300000.0,
+    "position": [
+      -320923.90625,
+      18.499269,
+      -577591.8125
+    ],
+    "positionGeo": {
+      "latitude": -54.844195,
+      "longitude": -68.318784
+    },
+    "sceneObjects": [
+      "t:36670615"
+    ]
+  },
+  {
+    "beaconId": "airfield7_1",
+    "callsign": "us",
+    "direction": 76.394382,
+    "display_name": "Ushuaia",
+    "frequency": 111300000.0,
+    "position": [
+      -320262.59375,
+      23.035338,
+      -575219.625
+    ],
+    "positionGeo": {
+      "latitude": -54.841782,
+      "longitude": -68.280912
+    },
+    "sceneObjects": [
+      "t:60391529"
+    ]
+  },
+  {
+    "beaconId": "airfield7_2",
+    "callsign": "USU",
+    "channel": 84,
+    "direction": 1.061029,
+    "display_name": "USU",
+    "frequency": 113700000.0,
+    "position": [
+      -319978.8125,
+      27.620942,
+      -575360.0
+    ],
+    "positionGeo": {
+      "latitude": -54.83908,
+      "longitude": -68.282349
+    },
+    "sceneObjects": [
+      "t:19137794"
+    ]
+  }
+]
