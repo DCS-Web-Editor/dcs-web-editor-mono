@@ -1,10 +1,16 @@
 
 local magvar = require('magvar')
+local miss = nil
 
-local month = env.mission.date.Month
-local year = env.mission.date.Year
-magvar.init(month,year)
+if (env) then
+  miss = env.mission
+else 
+  miss = _current_mission.mission
+end
 
+local month = miss.date.Month
+local year = miss.date.Year
+magvar.init(month, year)
 
 --[[
 DCS World Airbase & Parking export script.
