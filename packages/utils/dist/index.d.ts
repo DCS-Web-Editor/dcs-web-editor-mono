@@ -18,6 +18,7 @@ export declare function calcDistance(start: LatLon, end: LatLon): number;
 export declare const M_TO_FEET = 3.28084;
 export declare const M_TO_NM = 0.000539957;
 export declare const MS_TO_KTS = 1.94384;
+export declare const KG_TO_LBS = 2.20462;
 export declare function msToKts(metersPerSecond?: number): string;
 export declare function toFeet(meters?: number): string;
 export declare function toNm(meters?: number): string;
