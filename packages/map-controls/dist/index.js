@@ -103,7 +103,7 @@ function enablePaintControl(anchor) {
     context.paintInitialized = true;
 }
 function paintStarted(e) {
-    console.log('paintStarted', e);
+    // console.log('paintStarted', e);
     // if (e.target !== mapElement) return;
     if (!context.paintMode)
         return;
@@ -116,7 +116,7 @@ function disablePaintControl(anchor) {
 function doPaint(e) {
     map.lastPointX = Math.floor(e.layerX);
     map.lastPointY = Math.floor(e.layerY);
-    console.log(e);
+    // console.log(e);
     if (e.which === 1) {
         paintMode = true;
         const config = {
@@ -125,7 +125,7 @@ function doPaint(e) {
             weight: 4,
             className: 'leaflet-drawline'
         };
-        if (e.shiftKey)
+        if (e.ctrlKey)
             config.dashArray = [5, 10];
         myPolyline = L.polyline([], config).addTo(map);
         myPolyline.on('click', (e) => e.target?.remove());
