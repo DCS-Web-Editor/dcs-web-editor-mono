@@ -2,7 +2,8 @@ import { activeMap, mizToLL } from "../../map-projection";
 import { convertDMshort, M_TO_FEET } from "@dcs-web-editor-mono/utils";
 
 export function toFlightPlan(data:any, theater: string) {
-    const waypoints = data.group?.route?.points;
+    const group = data.group || data.$group.leaflet.group;
+    const waypoints = group?.route?.points;
     if (!waypoints?.length) return;
 
     activeMap(theater);
