@@ -211,7 +211,7 @@ summary {
   margin-top: -1rem;
 }
 
-.button {
+.explorer .button {
 	cursor: pointer;
 	opacity: 0;
   display: none;
@@ -258,6 +258,8 @@ summary {
 }
 .directories, .files, .previews {
   background-color: #23313f;
+  text-align: left;
+
 }
 .selected>summary .button, .selected>.button {
   /* filter: invert(); */
