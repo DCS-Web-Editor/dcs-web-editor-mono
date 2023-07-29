@@ -522,7 +522,7 @@ function onnewDirectory() {
   }
 }
 
-function selectFile(fileElement) {
+export function selectFile(fileElement) {
 
   resetSelectedFile();
   resetSelectedLabel(true);
@@ -536,7 +536,7 @@ function selectFile(fileElement) {
   }, 100)
 }
 
-function selectDirectory(directoryElement) {
+export function selectDirectory(directoryElement) {
   resetSelectedDir();
   resetSelectedLabel(true);
   directoryElement.className = "selected";
@@ -544,6 +544,21 @@ function selectDirectory(directoryElement) {
   selectedDirectory = directoryElement;
   refreshListing();
 }
+
+export function findFileNode(name:string) {
+  return [].slice.call(document.querySelectorAll(".file-label"))
+     .find(e => e.textContent.match(name));
+}
+
+export function selectRoot() {
+  selectDirectory(document.querySelector('#tree details[data-file-id="0"]'));
+}
+
+export function selectMissionLua() {
+  const missionLua = findFileNode('mission')!;
+  selectFile(missionLua.parentElement);
+}
+
 
 function resetSelectedFile() {
   if (selectedFile) {
