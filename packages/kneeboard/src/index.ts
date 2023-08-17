@@ -78,7 +78,8 @@ export function createBriefing(unitName: string, groupName: string, countryName:
   
   const data = getWaypoints(group, mission, dictionary);
   const { weather } = mission;
-  console.log(weather);
+  // console.log(weather);
+  // console.log(dictionary);
   
 
   change('#title', translate(mission.sortie, dictionary) || 'BRIEFING');
@@ -121,7 +122,7 @@ CLOUD BASE: ${weather.clouds.base}m THICKNESS: ${weather.clouds.thickness}
 
 function toggleHandler(e:InputEvent) {
   const {name, checked} = e.target;
-  console.log('e', checked, name);
+  // console.log('e', checked, name);
   const section = document.getElementById(name)!;
   if (checked) section.classList.remove('hidden');
   else section.classList.add('hidden');

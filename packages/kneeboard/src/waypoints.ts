@@ -2,7 +2,7 @@
 import Handsontable from "handsontable";
 // import { log } from "handsontable/helpers";
 import "handsontable/dist/handsontable.min.css";
-// import "pikaday/css/pikaday.css";
+import './waypoints.css';
 
 // import {addClassesToRows,changeCheckboxCell} from "./hooksCallbacks";
 import { speedFormat, distanceFormat, latLonFormat } from "./formats";
