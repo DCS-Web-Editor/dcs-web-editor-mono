@@ -8,7 +8,7 @@ import { getWaypoints } from "./converter";
 import { translate } from '@dcs-web-editor-mono/utils'
 import { createWaypointTable } from "./waypoints";
 
-const toggles = ['title', 'main-task', 'coalition-task', 'group', 'unit', 'weather', 'waypoints', 'notes'];
+const toggles = ['title', 'main-task', 'coalition-task', 'group', 'unit', 'weather',  'loadout', 'waypoints', 'notes'];
 
 export const HTML = `
 <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
@@ -25,6 +25,8 @@ export const HTML = `
 
     <div id="weather"><h4 class="center">W E A T H E R</h4></div>
     
+    <div id="loadout"><h4 class="center">L O A D O U T</h4><div id="loadout-content"></div></div>
+
     <div id="waypoints">
       <h4 class="center">W A Y P O I N T S</h4>
       <div id="waypoints-table"></div>
@@ -58,7 +60,6 @@ export const HTML = `
         <input name="${toggle}" id="checkbox-${toggle}" checked="true" type="checkbox" />
         ${_.startCase(toggle)}
       </label>
-      
       `
     }).join('')
   }
@@ -66,12 +67,12 @@ export const HTML = `
 </div>
 `
 
-export function createBriefing(unitName: string, groupName: string, countryName: string, coalitionName: string, mission: any, dictionary: any) {
+export function createBriefing(unitName: string, groupName: string, category: string, countryName: string, coalitionName: string, mission: any, dictionary: any) {
 
 
   const countries = mission.coalition[coalitionName].country;
   const country = countries.find(c => c.name === countryName)!;
-  const groups = country.plane.group;
+  const groups = country[category].group;
   const group = groups.find(g => g.name === groupName)!;
   const unit = group.units.find(u => u.name === unitName);
   
@@ -100,6 +101,20 @@ export function createBriefing(unitName: string, groupName: string, countryName:
 CLOUD BASE: ${weather.clouds.base}m THICKNESS: ${weather.clouds.thickness}
 <b>WIND GND</b> ${weather.wind?.atGround?.dir} / ${weather.wind?.atGround?.speed} <b>WIND 2k</b> ${weather.wind?.at2000?.dir} / ${weather.wind?.at2000?.speed} <b>WIND 8k</b> ${weather.wind?.at8000?.dir} / ${weather.wind?.at8000?.speed}
 `);
+
+// console.log(unit.payload);
+
+  if (unit.payload) change('#loadout',
+  `<b>FUEL</b> ${unit.payload.fuel}kg <b>CHAFF</b> ${unit.payload.chaff} <b>FLARES</b> ${unit.payload.flare} <b>GUN</b> ${unit.payload.gun}%
+
+<ul>${
+  unit.payload.pylons?.map((pylon, i) => {
+    if(!pylon) return `<li>${i + 1}.</li>`;
+    const weapon = window.JSON_DATA.Weapons.find(w => w.CLSID === pylon.CLSID);
+    return `<li>${i + 1}. ${weapon.displayName}</li>`;
+  }).join('\n')
+  }
+</ul>`)
 
   createWaypointTable(data, 'waypoints-table');
   

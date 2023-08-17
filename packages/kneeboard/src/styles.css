@@ -37,8 +37,20 @@
   white-space: break-spaces;
 }
 
+
 #content #coalition-task {
   white-space: break-spaces;
+}
+
+#content #loadout {
+  white-space: break-spaces;
+  text-align: left;
+}
+
+#content #loadout ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 
 .kneeboard #logo {
@@ -68,7 +80,7 @@
   height: 150px;
   padding: 12px 20px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
   background-color: transparent;
   font-size: 13px;

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono#readme",
   "dependencies": {
     "@dcs-web-editor-mono/utils": "^1.0.0",
+    "axios": "^1.4.0",
     "handsontable": "^13.0.0",
     "html2canvas": "^1.4.1"
   }
