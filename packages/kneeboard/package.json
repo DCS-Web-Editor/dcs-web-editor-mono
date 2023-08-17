@@ -1,0 +1,28 @@
+{
+  "name": "@dcs-web-editor-mono/kneeboard",
+  "version": "1.0.0",
+  "description": "DCS flight path to kneeboard",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCS-Web-Editor/dcs-web-editor-mono.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono/issues"
+  },
+  "homepage": "https://github.com/DCS-Web-Editor/dcs-web-editor-mono#readme",
+  "dependencies": {
+    "@dcs-web-editor-mono/utils": "^1.0.0",
+    "handsontable": "^13.0.0",
+    "html2canvas": "^1.4.1"
+  }
+}

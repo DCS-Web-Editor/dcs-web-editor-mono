@@ -15,19 +15,7 @@
   "author": "fyyyy",
   "license": "GNU GPL v3.0 Affero",
   "workspaces": [
-    "packages/airfields",
-    "packages/beacons",
-    "packages/briefing-editor",
-    "packages/coalition-editor",
-    "packages/icons",
-    "packages/libs",
-    "packages/map-controls",
-    "packages/map-projection",
-    "packages/miz-js",
-    "packages/sky-vector",
-    "packages/units",
-    "packages/utils",
-    "packages/wx-editor"
+    "packages/*"
   ],
   "dependencies": {
     "typescript": "^4.9.5",

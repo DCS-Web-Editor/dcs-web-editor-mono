@@ -219,7 +219,16 @@ export function downloadBlob(url:string, fileName: string) {
   });
 	link.dispatchEvent( event ); 
  }
- 
+
+export function isTranslation(name: string): RegExpMatchArray | null {
+  // console.log('name', name, typeof name);    
+  return name?.match && name.match(/^DictKey_/);
+} 
+
+export function translate(key:string, dictionary:Record<string, string>) {
+  return (isTranslation(key) ? dictionary[key] : key);
+}
+
 // safely handles circular references
 // JSON.safeStringify = (obj, indent = 2) => {
 //   let cache = [];

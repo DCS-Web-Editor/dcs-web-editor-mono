@@ -174,6 +174,13 @@ export function downloadBlob(url, fileName) {
     });
     link.dispatchEvent(event);
 }
+export function isTranslation(name) {
+    // console.log('name', name, typeof name);    
+    return name?.match && name.match(/^DictKey_/);
+}
+export function translate(key, dictionary) {
+    return (isTranslation(key) ? dictionary[key] : key);
+}
 // safely handles circular references
 // JSON.safeStringify = (obj, indent = 2) => {
 //   let cache = [];
