@@ -1,0 +1,7 @@
+#content #date {
+  float: left;
+  margin-bottom: -2rem;
+  margin-top: -0.5rem;
+  min-width: calc(768px - 2rem);
+  text-align: right;
+}

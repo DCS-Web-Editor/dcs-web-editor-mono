@@ -1,0 +1,17 @@
+
+#content #loadout {
+  white-space: break-spaces;
+  text-align: left;
+}
+
+#content #loadout ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  margin: 0;
+  line-height: 0.4rem;
+  list-style: numeric;
+}
+
+#content #loadout ul li {
+}

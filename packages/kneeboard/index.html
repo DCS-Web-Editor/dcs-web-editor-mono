@@ -4,11 +4,23 @@
 <head>
   <title>DCS Web Editor Kneeboard</title>
   <meta charset="UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
   <link rel="stylesheet" href="src/styles.css" />
   <script type="module" src="src/demo.ts"></script>
+
 </head>
 
-<body class="kneeboard" style="margin: 1rem;">
+<body>
+  <div class="kneeboard" id="target">
+
+  </div>
+  <select id="demo-select" style="position: fixed; right: 0; top: 0; padding: 1rem;">
+    <option value="Apache">Apache</option>
+    <option value="UH60">UH60</option>
+    <option value="Sead">Sead</option>
+    <option value="F15">F15</option>
+  </select>
 </body>
 
 </html>
