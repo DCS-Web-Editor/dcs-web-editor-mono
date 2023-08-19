@@ -9,7 +9,7 @@ const component: Component = {
   template: `<p id="coalition-task"></p>`,
   render: (c: Context) => {
     const taskName = `description${startCase(c.coalitionName)}Task`
-    return `<b>${upperCase(c.coalitionName)} TASK</b> ${translate(c.mission[taskName], c.dictionary)}`
+    return `<b>${upperCase(c.coalitionName)} TASK</b> <textarea>${translate(c.mission[taskName], c.dictionary)}</textarea>`
   },
 }
 

@@ -1,5 +1,4 @@
 import Handsontable from "handsontable";
-import "handsontable/dist/handsontable.min.css";
 
 import { Component, Context } from "..";
 import './radio.css';
@@ -12,13 +11,11 @@ const component: Component = {
   </div>`,
   render: (c: Context) => {
     const {unit} = c;
-    // console.log('Radio', unit.Radio);
-
     if (!unit.Radio) return '<span>No Channels</span>';
     
     const data = unit.Radio?.map((radio, n) => {
         return radio.channels.map((channel, i) => 
-            `${channel}${radio.modulation && radio.modulation[i] === 1 ? '∿' : ''}`)
+            `${channel.toString().match('.') ? channel.toString().replace('.', '.\n') : channel }${radio.modulation && radio.modulation[i] === 1 ? '∿' : ''}`)
     });
 
 

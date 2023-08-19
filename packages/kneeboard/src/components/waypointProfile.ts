@@ -18,6 +18,7 @@ const component: Component = {
   render: (c: Context) => {
     const {group} = c;
     
+    // delay render to make sure element is present
     setTimeout(() => createLineChart(group, 'waypoint-chart'), 0);
     
     return '';

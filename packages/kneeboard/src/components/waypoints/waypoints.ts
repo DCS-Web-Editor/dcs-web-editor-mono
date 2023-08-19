@@ -1,5 +1,4 @@
 import Handsontable from "handsontable";
-import "handsontable/dist/handsontable.min.css";
 import './waypoints.css';
 import { speedFormat, distanceFormat, latLonFormat } from "./waypointFormats";
 import { Component, Context } from "../..";
@@ -19,8 +18,13 @@ const component: Component = {
   render: (c: Context) => {
     const {group, mission, dictionary} = c;
     const waypointData = getWaypoints(group, mission, dictionary);
-    const instance: Handsontable = createWaypointTable(waypointData, '#waypoints-table');
-    csvExport(instance);
+
+    // delay render to make sure element is present
+    setTimeout(() => {
+      const instance: Handsontable = createWaypointTable(waypointData, '#waypoints-table');
+      csvExport(instance);
+    }, 10);
+
     return '';
   },
 }
@@ -110,5 +114,6 @@ function createWaypointTable(data: any[], id: string) {
   });
 
   instance.validateCells();
+  
   return instance;
 }

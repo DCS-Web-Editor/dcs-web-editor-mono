@@ -46,12 +46,12 @@ export function getWaypoints(group: any, mission: any, dictionary: any) {
     calculateHeading(point, previousPoint);
   
     previousPoint = point;
-    
+
     const picked = _.pick(point, ['name', 'type', 'altitude', 'speed', 'distance', 'heading', 'time', 'lat', 'lon', 'x', 'y'])
 
     const values = Object.values(picked);
     // Notes
-    values.push('');
+    values.push(point.type);
 
     return values;
   });

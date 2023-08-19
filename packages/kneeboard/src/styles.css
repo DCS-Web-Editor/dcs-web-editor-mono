@@ -167,6 +167,9 @@ body {
 }
 
 
+.kneeboard table td:first-child {
+  text-decoration: none;
+}
 
 
 /*

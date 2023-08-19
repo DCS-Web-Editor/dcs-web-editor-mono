@@ -1,3 +1,4 @@
+import "handsontable/dist/handsontable.min.css";
 
 import _ from 'lodash';
 

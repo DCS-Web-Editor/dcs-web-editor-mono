@@ -4,10 +4,13 @@
   list-style: none;
   /* line-height: 0.5rem; */
   /* clear: both; */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
   margin-bottom: 0.5rem;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 
 }
 #content #tanker ul li {

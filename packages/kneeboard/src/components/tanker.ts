@@ -8,11 +8,9 @@ const component: Component = {
   render: (c: Context) => {
     const {country} = c;
     const tankers = `<ul>${country.plane?.group.map((group) => {
-      console.log(group.task);
       if (group.task === 'Refueling') {
 
         const tasks = group.route?.points?.flatMap(p => p.task.params?.tasks?.filter(t => t.id === 'WrappedAction' )).filter(t => t.params?.action?.id === 'ActivateBeacon').map(t =>  t.params?.action?.params)
-        
         const task = tasks[0] || {};
         // console.log(task);
 
