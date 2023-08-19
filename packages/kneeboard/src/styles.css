@@ -8,11 +8,6 @@
   src: url('/font/Tektur.ttf');
 }
 
-body {
-  margin: 1rem;
-  padding: 0;
-}
-
 :root {
   --primary-color: #544b82;
   --secondary-color: #544b8266;
@@ -72,7 +67,9 @@ body {
   --bg-image: linear-gradient(-45deg, rgb(14, 12, 48) 0%, rgb(16, 9, 31) 100%);
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  /* --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; */
+  --font-family: acecombat !important;
+
   --opacity: 0.9;
 }
 
@@ -178,10 +175,10 @@ body {
 .kneeboard .controls {
   position: fixed !important;
   bottom: 0;
-  right: 0;
+  left: 0;
   background: var(--controls-bg-color);
   padding: 0.5rem 1rem;
-  border-radius: 1rem 0 0 0rem;
+  border-radius: 0rem 1rem 0 0rem;
   color: #fefefe;
   z-index: 10000;
   width: 10rem;

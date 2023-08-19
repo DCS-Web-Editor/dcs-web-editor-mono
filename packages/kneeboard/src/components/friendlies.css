@@ -16,7 +16,7 @@
   margin-left: 1rem;
   padding: 0;
   /* padding-left: 0.5rem; */
-  width: 10rem;
+  width: 14rem;
   text-align: left;
   white-space:break-spaces;
   
@@ -37,5 +37,10 @@
   margin-left: 0rem;
   margin-right: -2rem;
   float: left;
-  
+}
+
+#content #friendlies ul li span.callsign {
+  /* text-decoration: underline; */
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }

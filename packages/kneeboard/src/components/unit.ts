@@ -6,7 +6,9 @@ const component: Component = {
   template: `<p id="unit"></p>`,
   render: (c: Context) => {
     const {unitName, unit} = c;
-    return `<b>UNIT</b> ${unitName}. ${unit?.type}. CALLSIGN: <span class="callsign">${unit?.callsign?.name || unit.callsign}</span>`
+    
+    const callsign = unit?.callsign?.name || unit.callsign;
+    return `<b>UNIT</b> <span class="callsign">${callsign}</span> <span class="type">${unit.type}</span> TAIL: ${unit.onboard_num}`
   },
 }
 

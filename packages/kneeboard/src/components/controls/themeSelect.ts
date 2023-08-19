@@ -8,12 +8,12 @@ const component: Component = {
 
   control:
 `<select id="theme-select">
-  <option value="default">typewriter light</option>
-  <option value="dark">typewriter dark</option>
-  <option value="modern">modern light</option>
-  <option value="modern_dark">modern dark</option>
+  <option value="default">Typewriter light</option>
+  <option value="dark">Typewriter dark</option>
+  <option value="modern">Modern light</option>
+  <option value="modern_dark">Modern dark</option>
   <option value="90s">90s</option>
-  <option value="cyber">cyber</option>
+  <option value="cyber">Cyber</option>
   <option value="ace">ACE Combat</option>
 </select>`,
 

@@ -7,11 +7,20 @@ const component: Component = {
     const {country} = c;
     // console.log(country);
     const title = '<b>FRIENDLIES</b><br>';
-    const planes = `<span class="icon">🛦</span> <ul>${country.plane?.group.map((group) => `<li><span class="task">${group.task}</span> <b>${group.name}</b> <span class="freq">${group.frequency}</span></li>`).join('') || ''}</ul>`;
-    const rotary = country.helicopter ? `<span class="icon">⊗</span> <ul>${country.helicopter?.group.map((group) => `<li><span class="task">${group.task}</span> <b>${group.name}</b> <span class="freq">${group.frequency}</span></li>`).join('') || ''}</ul>` : '';
+
+    const planes = `<span class="icon">🛦</span> <ul>${country.plane?.group.map(renderGroup).join('') || ''}</ul>`;
+
+    const rotary = country.helicopter ? 
+    `<span class="icon">⊗</span> <ul>${country.helicopter?.group.map(renderGroup).join('') || ''}</ul>` : '';
     
     return title + planes + rotary;
   },
 }
 
 export default component;
+function renderGroup(group: any) {
+  const unit = group.units[0];
+  const callsign = unit.callsign?.name || unit.callsign;
+  return `<li><span class="callsign">${callsign}</span> <span class="task">${unit.type}</span> <span class="freq">${group.frequency}</span></li>`;
+}
+

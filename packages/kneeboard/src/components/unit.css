@@ -2,3 +2,7 @@
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
+
+#content #unit span.type {
+  opacity: 0.7;
+}
