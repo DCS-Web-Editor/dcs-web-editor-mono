@@ -6,7 +6,9 @@ import './mainTask.css';
 const component: Component = {
   id: 'main-task',
   template: `<p id="main-task"><b>BRIEFING </b></p>`,
-  render: (c: Context) => `<textarea>${translate(c.mission.descriptionText, c.dictionary)}</textarea>`,
+  render: (c: Context) => {
+    return `<div contenteditable>${translate(c.mission.descriptionText, c.dictionary)}</div>`
+  },
 }
 
 export default component;

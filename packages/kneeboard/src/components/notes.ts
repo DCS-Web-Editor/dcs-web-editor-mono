@@ -6,7 +6,8 @@ const component: Component = {
 
   template: `<div id="notes">
   <h4 class="center">N O T E S</h4>
-  <textarea></textarea>
+  <div contenteditable>Click to edit your notes...</div>
+  <div class="spacer"></div>
 </div>`,
 
   render: (c: Context) => {

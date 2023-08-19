@@ -2,20 +2,3 @@
 #content #main-task {
   white-space: break-spaces;
 }
-
-#content #main-task textarea {
-  width: 100%;
-  /* height: fit-content; */
-  display: inline-table;
-
-  /* padding: 12px 20px; */
-  /* box-sizing: border-box; */
-  border: none;
-  border-radius: 4px;
-  background-color: transparent;
-  font-size: 13px;
-  font-family: var(--font-family);
-  color: var(--primary-color);
-  resize: vertical;
-  margin-bottom: 2rem;
-}
