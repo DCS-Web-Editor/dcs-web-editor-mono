@@ -5,8 +5,8 @@ const component: Component = {
   template: '',
   control: `  <select name="coordinateSelect" id="coordinate-select">
   <option value="dd">DD</option>
-  <option value="ddm" disabled="true">DMM</option>
-  <option value="mgrs" disabled="true">MGRS</option>
+  <option value="ddm" disabled="true">DMM (soon)</option>
+  <option value="mgrs" disabled="true">MGRS (soon)</option>
 </select>`,
   render: (c: Context) => {
     return '';

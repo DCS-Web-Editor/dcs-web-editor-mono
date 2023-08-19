@@ -2,11 +2,12 @@
 import { MS_TO_KTS, M_TO_FEET } from '@dcs-web-editor-mono/utils'
 import { Component, Context } from "..";
 import './waypointProfile.css';
+import { primaryColor, secondaryColor } from '../colors';
 
 const typeWriter = new FontFace('typeWriter', 'url(/font/SpecialElite-Regular.ttf)');
 // document.fonts.add(typeWriter);
 Chart.defaults.font.family = 'typeWriter'
-Chart.defaults.color = '#947ba2';
+Chart.defaults.color = primaryColor();
 
 const component: Component = {
   id: 'waypoint-profile',
@@ -31,8 +32,6 @@ export default component;
 
 
 
-  
-
 function createLineChart(group: any, elementId: string) {
   const { points } = group.route;
   
@@ -46,14 +45,14 @@ function createLineChart(group: any, elementId: string) {
         {
           label : "Altitude feet",
           data : points.map(p => p.alt * M_TO_FEET),
-          borderColor : "#544b82",
+          borderColor : primaryColor(),
           borderWidth : 1,
           // pointStyle: 'triangle',
           pointStyle: false,
           yAxisID: 'y1',
           fill: {
             target: 'origin',
-            above: '#544b8266',   // Area will be red above the origin
+            above: secondaryColor(),   // Area will be red above the origin
           }
         },
         {
@@ -107,6 +106,9 @@ function createLineChart(group: any, elementId: string) {
       },
     },
   });
+
+  window.waypointChart = chart;
+  
 
 }
 

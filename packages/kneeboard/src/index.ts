@@ -25,10 +25,13 @@ export interface Context {
   unit: any;
 }
 
-import screenshot from './components/controls/screenshot';
+// Controls
+import themeSelect, { switchTheme } from './components/controls/themeSelect';
 import metricSelect from './components/controls/metricSelect';
 import coordinateSelect from './components/controls/coordinateSelect';
+import screenshot from './components/controls/screenshot';
 
+// Components
 import date from './components/date';
 import title from './components/title';
 import mainTask from './components/mainTask';
@@ -38,6 +41,7 @@ import group from './components/group';
 import unit from './components/unit';
 import weather from './components/weather';
 import loadout from './components/loadout';
+import radio from './components/radio';
 import waypoints from './components/waypoints/waypoints';
 import waypointProfile from './components/waypointProfile';
 import notes from './components/notes';
@@ -53,11 +57,14 @@ export function register(...components:Component[]) {
 
 (function init() {
   register(
-    // controls
+    
+    // Controls
+    themeSelect,
     metricSelect,
     coordinateSelect,
     screenshot,
-    // components
+    
+    // Components
     date,
     title,
     mainTask,
@@ -67,6 +74,7 @@ export function register(...components:Component[]) {
     unit,
     weather,
     loadout,
+    radio,
     waypoints,
     waypointProfile,
     notes,
@@ -77,6 +85,7 @@ export function register(...components:Component[]) {
 export function getHTML() {
   return `
   <div id="capture">
+    <img src="img/dcs web editor.png" id="logo"/>
     <div id="content">
       <span id="dwv-info">D C S &nbsp; W E B &nbsp; E D I T O R</span>
       ${
@@ -138,6 +147,9 @@ export function generateKneeboard(unitName: string, groupName: string, category:
     group,
     unit,
   }
+
+  const storedTheme = localStorage.getItem('kneeboard-theme') || 'default';
+  setTimeout(() => switchTheme({ target: {value: storedTheme }}), 10);
 
   // render all registered components
   renderRegisteredComponents(context);

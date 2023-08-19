@@ -14,7 +14,7 @@ const component: Component = {
     
     <ul>${
       unit.payload.pylons?.map((pylon, i) => {
-        if (!pylon) return `<li></li>`;
+        if (!pylon) return `<li>---</li>`;
         const weapon = window.JSON_DATA.Weapons.find(w => w.CLSID === pylon.CLSID);
         return `<li>${weapon.displayName}</li>`;
       }).join('\n')

@@ -8,9 +8,11 @@ import dictionary2 from './examples/sead/dictionary.json'
 import mission3 from './examples/apache hunting grounds/mission.json'
 import dictionary3 from './examples/apache hunting grounds/dictionary.json'
 
+import mission4 from './examples/operation/mission.json'
+
 import { generateKneeboard, getHTML } from '.';
 import './database'
-document.getElementById('target').innerHTML = getHTML();
+document.querySelector('.kneeboard').innerHTML = getHTML();
 
 
 const DEMOS = {
@@ -50,6 +52,15 @@ const DEMOS = {
     coalitionName: 'blue',
     category: 'helicopter',
   },
+  F14A: {
+    mission: mission3,
+    dictionary: dictionary3,
+    unitName: 'Nickel-3',
+    groupName: 'Nickel',
+    countryName: 'USA',
+    coalitionName: 'blue',
+    category: 'plane',
+  },
 }
 
 
@@ -60,6 +71,7 @@ const demoSelect = document.getElementById('demo-select');
 
 demoSelect?.addEventListener('change', () => {
   let demo = DEMOS[demoSelect.value];
+  document.querySelector('.kneeboard').innerHTML = getHTML();  
   generateKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary);
 })
 

@@ -3,14 +3,94 @@
   font-family: typeWriter;
   src: url('/font/SpecialElite-Regular.ttf');
 }
+@font-face {
+  font-family: aceCombat;
+  src: url('/font/Tektur.ttf');
+}
+
+body {
+  margin: 1rem;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #544b82;
+  --secondary-color: #544b8266;
+  --bg-color: rgb(243,243,240);
+  --bg-image: url('/img/paper2.png');
+  --font-family: typewriter, monospace !important;
+
+  --controls-color: rgb(223,213,213);
+  --controls-bg-color: #1d2730;
+}
+
+[data-theme="dark"] {
+  --primary-color: #d2d2d2;
+  --secondary-color: #d2d2d266;
+  --bg-color: #161625;
+  --bg-image: url('/img/paper_dark.png');
+  --font-family: typewriter, monospace !important;
+}
+
+[data-theme="modern"] {
+  --primary-color: #111;
+  --secondary-color: #11111166;
+  --bg-color: #fefefe;
+  --bg-image: linear-gradient(-30deg, rgb(223,213,213) 0%, rgb(243,243,240) 100%);
+
+  /* --font-family: 'Times New Roman', Times, serif; */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+
+[data-theme="modern_dark"] {
+  --primary-color: #b2b2b2;
+  --secondary-color: #61dd8033;
+  --bg-color: #111;
+  --bg-image: linear-gradient(-45deg, rgb(10, 10, 10) 0%, rgb(22, 22, 24) 100%);
+  /* font-family: */
+  /* --font-family: 'Times New Roman', Times, serif; */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+[data-theme="90s"] {
+  --primary-color: #56f683;
+  --secondary-color: #0eda6366;
+  --bg-color: #111;
+  --bg-image: linear-gradient(-45deg, rgb(38, 38, 38) 0%, rgb(23, 19, 2) 100%);
+  /* font-family:  */
+  --font-family: 'Courier New', Courier, monospace;
+  /* --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+}
+
+[data-theme="cyber"] {
+  --primary-color: #61dd80;
+  --secondary-color: #00b3ff33;
+  --bg-color: #111;
+  --bg-image: linear-gradient(-45deg, rgb(14, 12, 48) 0%, rgb(16, 9, 31) 100%);
+  /* font-family: */
+  /* --font-family: 'Times New Roman', Times, serif; */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+[data-theme="ace"] {
+  --primary-color: #acdfe8;
+  --secondary-color: #02b2fe33;
+  --bg-color: #111;
+  --bg-image: url('/img/acecombat.png');
+  /* font-family: */
+  /* --font-family: 'Times New Roman', Times, serif; */
+  --font-family: aceCombat;
+}
 
 .kneeboard {
-  font-family: typewriter, monospace !important;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
-  color: #544b82;
+  color: var(--primary-color);
   font-size: 13px;
 }
+
 
 .kneeboard p {
   font-size: 13px;
@@ -28,12 +108,12 @@
 }
 
 .kneeboard #logo {
-  position: relative;
+  position: absolute;
   top: 975px;
   width: 200px;
-  background-color: #293949;
-  border-radius: 2rem 0 0 0;
-  padding: 0rem 0 0 1rem;
+  /* background-color: #293949; */
+  /* border-radius: 2rem 0 0 0; */
+  padding: 1rem;
   margin: 0;
   /* margin-left: -1rem; */
   left: calc(768px - 200px);
@@ -58,9 +138,9 @@
   height: 1024px;
   margin: 0;
   padding: 0;
-  background: rgb(243,243,240);
-  background: linear-gradient(-30deg, rgb(223,213,213) 0%, rgb(243,243,240) 100%);
-  background-image: url('/img/paper2.png');
+  background: var(--bg-color);
+
+  background: var(--bg-image);
   background-size: 100% 100%;
   background-repeat: repeat;
   border: none;
@@ -89,7 +169,7 @@
 */
 
 .kneeboard .controls button {
-  background-color:  rgb(223,213,213);
+  background-color: var(--controls-color);
   /* color: rgb(243,243,240); */
   border: none;
   border-radius: 5px;
@@ -98,7 +178,7 @@
   cursor: pointer;
 }
 .kneeboard .controls select {
-  background-color:  rgb(223,213,213);
+  background-color: var(--controls-color);
   /* color: rgb(243,243,240); */
   border: none;
   border-radius: 5px;
@@ -110,7 +190,7 @@
   position: fixed !important;
   bottom: 0;
   right: 0;
-  background: #1d2730;
+  background: var(--controls-bg-color);
   padding: 0.5rem 1rem;
   border-radius: 1rem 0 0 0rem;
   color: #fefefe;

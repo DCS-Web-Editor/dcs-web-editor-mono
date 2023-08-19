@@ -3,19 +3,19 @@
 */
 
 .kneeboard #capture .handsontable {
-  font-family: typewriter, monospace !important;
+  font-family: var(--font-family);
   font-size: 11px;
   /* font-weight: 600; */
-  color: #6a609d;
+  color: var(--primary-color);
 
 }
 
 
 .kneeboard .handsontable {
-  font-family: system-ui !important;
-  touch-action: manipulation;
+  /* font-family: system-ui !important; */
+  /* touch-action: manipulation; */
   font-weight: normal;
-  color: #373737;
+  /* color: #373737; */
 }
 
 .kneeboard .handsontable table.htCore td.star {
@@ -24,7 +24,7 @@
 
 .kneeboard .handsontable table.htCore tr td {
   background: #e3e3e3;
-  color: #6a609d;
+  color: var(--primary-color);
 }
 
 .kneeboard .handsontable table.htCore td .progressBar {
@@ -36,18 +36,18 @@
 .kneeboard .handsontable .htCore tr {
   /* background: rgb(243,243,240); */
   background-color: transparent !important;
-  color: #6a609d;
+  color: var(--primary-color);
 }
 .kneeboard .handsontable .htCore tr td{
   /* background: rgb(243,243,240); */
   background-color: transparent !important;
-  color: #6a609d;
+  color: var(--primary-color);
 }
 
 .kneeboard .handsontable .htCore th{
   /* background: rgb(243,243,240); */
   background-color: transparent !important;
-  color: #6a609d;
+  color: var(--primary-color);
 }
 
 

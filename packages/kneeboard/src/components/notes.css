@@ -7,7 +7,8 @@
   border-radius: 4px;
   background-color: transparent;
   font-size: 13px;
-  font-family: typewriter;
-  color: #6a609d;
+  font-family: var(--font-family);
+  color: var(--primary-color);
   resize: vertical;
+  margin-bottom: 2rem;
 }

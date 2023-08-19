@@ -9,9 +9,10 @@
   -webkit-columns: 2;
   -moz-columns: 2;
   margin: 0;
-  line-height: 0.4rem;
+  line-height: 0.5rem;
   list-style: numeric;
 }
 
 #content #loadout ul li {
+
 }
