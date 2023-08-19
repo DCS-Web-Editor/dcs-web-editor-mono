@@ -3,6 +3,7 @@ import { MS_TO_KTS, M_TO_FEET } from '@dcs-web-editor-mono/utils'
 import { Component, Context } from "..";
 import './waypointProfile.css';
 import { fontFamily, primaryColor, secondaryColor } from '../colors';
+import { refreshChart } from './controls/themeSelect';
 
 
 const component: Component = {
@@ -49,6 +50,7 @@ function createLineChart(group: any, elementId: string) {
           borderWidth : 1,
           // pointStyle: 'triangle',
           pointStyle: false,
+          borderDash: [1,2],
           yAxisID: 'y1',
           fill: {
             target: 'origin',
@@ -111,7 +113,11 @@ function createLineChart(group: any, elementId: string) {
   });
 
   window.waypointChart = chart;
-  
+
+  // font styles take a while to update
+  setTimeout(() => {
+    refreshChart()
+  }, 1000);
 
 }
 

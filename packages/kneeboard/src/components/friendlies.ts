@@ -11,7 +11,7 @@ const component: Component = {
     const planes = `<span class="icon">🛦</span> <ul>${country.plane?.group.map(renderGroup).join('') || ''}</ul>`;
 
     const rotary = country.helicopter ? 
-    `<span class="icon">⊗</span> <ul>${country.helicopter?.group.map(renderGroup).join('') || ''}</ul>` : '';
+    `<span class="icon"><b>Ⓗ</b></span> <ul>${country.helicopter?.group.map(renderGroup).join('') || ''}</ul>` : '';
     
     return title + planes + rotary;
   },

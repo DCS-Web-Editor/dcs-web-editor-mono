@@ -4,7 +4,7 @@
 
 .kneeboard #capture .handsontable {
   font-family: var(--font-family);
-  font-size: 11px;
+  font-size: calc(var(--font-size) - 2px);
   /* font-weight: 600; */
   color: var(--primary-color);
 

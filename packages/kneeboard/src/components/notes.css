@@ -1,6 +1,6 @@
 
 .kneeboard #notes div { 
-  font-size: 13px;
+  font-size: var(--font-size);
   font-family: var(--font-family);
   color: var(--primary-color);
 }

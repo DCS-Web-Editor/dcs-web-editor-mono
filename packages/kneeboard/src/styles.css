@@ -7,6 +7,14 @@
   font-family: acecombat;
   src: url('/font/Tektur.ttf');
 }
+@font-face {
+  font-family: handjet;
+  src: url('/font/Handjet.ttf');
+}
+@font-face {
+  font-family: orbitron;
+  src: url('/font/Orbitron.ttf');
+}
 
 :root {
   --primary-color: #544b82;
@@ -15,6 +23,7 @@
   --bg-image: url('/img/paper2.png');
   --font-family: oldtypewriter, monospace !important;
   --opacity: 0.8;
+  --font-size: 13px;
 
   --controls-color: rgb(223,213,213);
   --controls-bg-color: #1d2730;
@@ -53,23 +62,25 @@
   --primary-color: #56f683;
   --secondary-color: #0eda6366;
   --bg-color: #111;
-  --bg-image: linear-gradient(-45deg, rgb(38, 38, 38) 0%, rgb(23, 19, 2) 100%);
+  --bg-image: linear-gradient(-45deg, rgb(23, 30, 24) 0%, rgb(23, 19, 2) 100%);
+  --bg-image: url('/img/terminal.png');
+
   /* font-family:  */
-  --font-family: 'Courier New', Courier, monospace !important;
+  --font-family: handjet !important;
   --opacity: 0.9;
   /* --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
 }
 
 [data-theme="cyber"] {
-  --primary-color: #61dd80;
-  --secondary-color: #00b3ff33;
+  --primary-color: #61d6f3;
+  --secondary-color: #00fde433;
   --bg-color: #111;
-  --bg-image: linear-gradient(-45deg, rgb(14, 12, 48) 0%, rgb(16, 9, 31) 100%);
+  --bg-image: linear-gradient(-45deg, rgb(10, 15, 55) 0%, rgb(25, 10, 57) 100%);
+  --bg-image: url('/img/cyber.png');
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
   /* --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; */
   --font-family: acecombat !important;
-
   --opacity: 0.9;
 }
 
@@ -89,12 +100,12 @@
   margin: 0;
   padding: 0;
   color: var(--primary-color);
-  font-size: 13px;
+  font-size: var(--font-size);
 }
 
 
 .kneeboard p {
-  font-size: 13px;
+  font-size: var(--font-size);
   text-align: left;
 }
 
