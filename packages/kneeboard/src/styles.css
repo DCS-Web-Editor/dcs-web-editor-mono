@@ -175,25 +175,6 @@ body {
 /*
   Control buttons
 */
-
-.kneeboard .controls button {
-  background-color: var(--controls-color);
-  /* color: rgb(243,243,240); */
-  border: none;
-  border-radius: 5px;
-  margin: 0;
-  padding: 0.2rem;
-  cursor: pointer;
-}
-.kneeboard .controls select {
-  background-color: var(--controls-color);
-  /* color: rgb(243,243,240); */
-  border: none;
-  border-radius: 5px;
-  margin: 0;
-  padding: 0.2rem;
-  cursor: pointer;
-}
 .kneeboard .controls {
   position: fixed !important;
   bottom: 0;
@@ -203,4 +184,30 @@ body {
   border-radius: 1rem 0 0 0rem;
   color: #fefefe;
   z-index: 10000;
+  width: 10rem;
+}
+
+.kneeboard .controls label {
+  display: block;
+}
+.kneeboard .controls button {
+  background-color: var(--controls-color);
+  background-color: #1abc9c;
+  /* color: rgb(243,243,240); */
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0.2rem;
+  cursor: pointer;
+  width: 100%;
+}
+.kneeboard .controls select {
+  background-color: var(--controls-color);
+  /* color: rgb(243,243,240); */
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0.2rem;
+  cursor: pointer;
+  width: 100%;
 }

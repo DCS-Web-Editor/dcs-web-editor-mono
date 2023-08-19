@@ -46,6 +46,7 @@ import loadout from './components/loadout';
 import radio from './components/radio';
 import awacs from './components/awacs';
 import tanker from './components/tanker';
+import carrier from './components/carrier';
 import waypoints from './components/waypoints/waypoints';
 import waypointProfile from './components/waypointProfile';
 import notes from './components/notes';
@@ -79,6 +80,7 @@ export function register(...components:Component[]) {
     unit,
     awacs,
     tanker,
+    carrier,
     weather,
     loadout,
     radio,

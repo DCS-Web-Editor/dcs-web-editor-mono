@@ -17,7 +17,8 @@ const component: Component = {
         const unit = group.units[0];
         
         const callsign = unit.callsign?.name || unit.callsign;
-        return `<li><span class="callsign">${callsign}</span> <b>${group.name}</b> <span class="type">${unit.type}</span> <span class="freq">${group.frequency}</span> <span class="tacan">TACAN ${task.callsign} ${task.channel} ${task.modeChannel}</span></li>`
+        const tacan = `<span class="tacan">TACAN ${task.callsign} ${task.channel}${task.modeChannel}</span>`;
+        return `<li><span class="callsign">${callsign}</span> <b>${group.name}</b> <span class="type">${unit.type}</span> <span class="freq">${group.frequency}</span> ${tacan}</li>`
       }
       else return false;
     }).filter(i => i).join('') || 'No tanker available'}</ul>`;
