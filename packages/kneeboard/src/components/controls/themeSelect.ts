@@ -35,26 +35,31 @@ export function switchTheme(e) {
   
   document.querySelector('.kneeboard')!.setAttribute('data-theme', theme);
   localStorage.setItem('kneeboard-theme', theme);
-
+  
   if (window.waypointChart) {
-    const color = primaryColor();
-    window.waypointChart.options.color = color;
-    window.waypointChart.options.font.family = fontFamily();
-    
-    window.waypointChart.options.scales.x.title.color = color;
-    window.waypointChart.options.scales.x.ticks.color = color;
-    
-    window.waypointChart.options.scales.y1.title.color = color;
-    window.waypointChart.options.scales.y1.ticks.color = color;
-    
-    window.waypointChart.options.scales.y2.title.color = color;
-    window.waypointChart.options.scales.y2.ticks.color = color;
+    setTimeout(() => {
+      const color = primaryColor();
+      Chart.defaults.font.family = fontFamily();
+      Chart.defaults.color = color;
 
-    window.waypointChart.data.datasets[0].borderColor = color;
-    window.waypointChart.data.datasets[0].fill.above = secondaryColor();
-    
-    window.waypointChart.data.datasets[1].borderColor = color;
-    window.waypointChart.update();
+      window.waypointChart.options.color = color;
+      window.waypointChart.options.font.family = fontFamily();
+      
+      window.waypointChart.options.scales.x.title.color = color;
+      window.waypointChart.options.scales.x.ticks.color = color;
+      
+      window.waypointChart.options.scales.y1.title.color = color;
+      window.waypointChart.options.scales.y1.ticks.color = color;
+      
+      window.waypointChart.options.scales.y2.title.color = color;
+      window.waypointChart.options.scales.y2.ticks.color = color;
+  
+      window.waypointChart.data.datasets[0].borderColor = color;
+      window.waypointChart.data.datasets[0].fill.above = secondaryColor();
+      
+      window.waypointChart.data.datasets[1].borderColor = color;
+      window.waypointChart.update();
+    }, 10);
   }
 }
 

@@ -8,7 +8,10 @@ import dictionary2 from './examples/sead/dictionary.json'
 import mission3 from './examples/apache hunting grounds/mission.json'
 import dictionary3 from './examples/apache hunting grounds/dictionary.json'
 
-import mission4 from './examples/operation/mission.json'
+import mission4 from './examples/gulf of sidra/mission.json'
+import dictionary4 from './examples/gulf of sidra/dictionary.json'
+
+
 
 import { generateKneeboard, getHTML } from '.';
 import './database'
@@ -57,6 +60,24 @@ const DEMOS = {
     dictionary: dictionary3,
     unitName: 'Nickel-3',
     groupName: 'Nickel',
+    countryName: 'USA',
+    coalitionName: 'blue',
+    category: 'plane',
+  },
+  AWACS: {
+    mission: mission4,
+    dictionary: dictionary4,
+    unitName: 'AWACS',
+    groupName: 'AWACS',
+    countryName: 'USA',
+    coalitionName: 'blue',
+    category: 'plane',
+  },
+  VF32: {
+    mission: mission4,
+    dictionary: dictionary4,
+    unitName: 'VF-32 Gypsy-202',
+    groupName: 'VF-32 Gypsy-2',
     countryName: 'USA',
     coalitionName: 'blue',
     category: 'plane',

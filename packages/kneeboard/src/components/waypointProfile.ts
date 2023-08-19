@@ -2,12 +2,8 @@
 import { MS_TO_KTS, M_TO_FEET } from '@dcs-web-editor-mono/utils'
 import { Component, Context } from "..";
 import './waypointProfile.css';
-import { primaryColor, secondaryColor } from '../colors';
+import { fontFamily, primaryColor, secondaryColor } from '../colors';
 
-const typeWriter = new FontFace('typeWriter', 'url(/font/SpecialElite-Regular.ttf)');
-// document.fonts.add(typeWriter);
-Chart.defaults.font.family = 'typeWriter'
-Chart.defaults.color = primaryColor();
 
 const component: Component = {
   id: 'waypoint-profile',
@@ -36,6 +32,9 @@ function createLineChart(group: any, elementId: string) {
   const { points } = group.route;
   
   const element = document.getElementById(elementId)!;
+  Chart.defaults.font.family = fontFamily();
+  Chart.defaults.color = primaryColor();
+
 
   const chart = new Chart(element, {
     type : 'line',
@@ -92,6 +91,9 @@ function createLineChart(group: any, elementId: string) {
           },
         }
       },
+      font: {
+        family: fontFamily()
+      }
     },
     scales: {
       y1: {

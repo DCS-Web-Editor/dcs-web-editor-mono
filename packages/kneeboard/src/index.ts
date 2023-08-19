@@ -37,11 +37,14 @@ import title from './components/title';
 import mainTask from './components/mainTask';
 import coalitionTask from './components/coalitionTask';
 import bullseye from './components/bullseye';
+import friendlies from './components/friendlies';
 import group from './components/group';
 import unit from './components/unit';
 import weather from './components/weather';
 import loadout from './components/loadout';
 import radio from './components/radio';
+import awacs from './components/awacs';
+import tanker from './components/tanker';
 import waypoints from './components/waypoints/waypoints';
 import waypointProfile from './components/waypointProfile';
 import notes from './components/notes';
@@ -70,8 +73,11 @@ export function register(...components:Component[]) {
     mainTask,
     coalitionTask,
     bullseye,
+    friendlies,
     group,
     unit,
+    awacs,
+    tanker,
     weather,
     loadout,
     radio,

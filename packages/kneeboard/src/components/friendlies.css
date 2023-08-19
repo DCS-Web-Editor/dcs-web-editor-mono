@@ -1,0 +1,41 @@
+#content #friendlies ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* line-height: 0.5rem; */
+  /* clear: both; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+
+}
+#content #friendlies ul li {
+  /* line-height: 9px; */
+  /* height: 1rem; */
+  margin-left: 1rem;
+  padding: 0;
+  /* padding-left: 0.5rem; */
+  width: 10rem;
+  text-align: left;
+  white-space:break-spaces;
+  
+
+}
+#content #friendlies span.freq {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  
+}
+#content #friendlies ul li span.task {
+  opacity: 0.7;
+}
+
+#content #friendlies span.icon {
+  margin: -1rem;
+  margin-top: 0;
+  margin-left: 0rem;
+  margin-right: -2rem;
+  float: left;
+  
+}

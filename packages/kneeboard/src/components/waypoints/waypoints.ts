@@ -104,7 +104,7 @@ function createWaypointTable(data: any[], id: string) {
     contextMenu: true,
     // multiColumnSorting: true,
     filters: false,
-    rowHeaders: false,
+    rowHeaders: true,
     manualRowMove: false,
     licenseKey: "non-commercial-and-evaluation"
   });

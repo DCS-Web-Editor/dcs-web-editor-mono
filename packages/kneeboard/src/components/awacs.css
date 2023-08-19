@@ -1,0 +1,44 @@
+#content #awacs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* line-height: 0.5rem; */
+  /* clear: both; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+
+}
+#content #awacs ul li {
+  /* line-height: 9px; */
+  /* height: 1rem; */
+  margin-left: 1rem;
+  padding: 0;
+  /* padding-left: 0.5rem; */
+  text-align: left;
+  white-space:break-spaces;
+  
+
+}
+#content #awacs span.freq {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  
+}
+#content #awacs ul li span.type {
+  opacity: 0.7;
+}
+#content #awacs ul li span.callsign {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+#content #awacs span.icon {
+  margin: -1rem;
+  margin-top: 0;
+  margin-left: 0rem;
+  margin-right: -2rem;
+  float: left;
+  
+}

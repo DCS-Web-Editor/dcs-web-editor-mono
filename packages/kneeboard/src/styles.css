@@ -1,10 +1,10 @@
 
 @font-face {
-  font-family: typeWriter;
+  font-family: oldtypewriter;
   src: url('/font/SpecialElite-Regular.ttf');
 }
 @font-face {
-  font-family: aceCombat;
+  font-family: acecombat;
   src: url('/font/Tektur.ttf');
 }
 
@@ -18,7 +18,8 @@ body {
   --secondary-color: #544b8266;
   --bg-color: rgb(243,243,240);
   --bg-image: url('/img/paper2.png');
-  --font-family: typewriter, monospace !important;
+  --font-family: oldtypewriter, monospace !important;
+  --opacity: 0.8;
 
   --controls-color: rgb(223,213,213);
   --controls-bg-color: #1d2730;
@@ -29,7 +30,7 @@ body {
   --secondary-color: #d2d2d266;
   --bg-color: #161625;
   --bg-image: url('/img/paper_dark.png');
-  --font-family: typewriter, monospace !important;
+  --font-family: oldtypewriter, monospace !important;
 }
 
 [data-theme="modern"] {
@@ -39,7 +40,7 @@ body {
   --bg-image: linear-gradient(-30deg, rgb(223,213,213) 0%, rgb(243,243,240) 100%);
 
   /* --font-family: 'Times New Roman', Times, serif; */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
 
 }
 
@@ -50,7 +51,7 @@ body {
   --bg-image: linear-gradient(-45deg, rgb(10, 10, 10) 0%, rgb(22, 22, 24) 100%);
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
 }
 
 [data-theme="90s"] {
@@ -59,7 +60,8 @@ body {
   --bg-color: #111;
   --bg-image: linear-gradient(-45deg, rgb(38, 38, 38) 0%, rgb(23, 19, 2) 100%);
   /* font-family:  */
-  --font-family: 'Courier New', Courier, monospace;
+  --font-family: 'Courier New', Courier, monospace !important;
+  --opacity: 0.9;
   /* --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
 }
 
@@ -70,7 +72,8 @@ body {
   --bg-image: linear-gradient(-45deg, rgb(14, 12, 48) 0%, rgb(16, 9, 31) 100%);
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  --opacity: 0.9;
 }
 
 [data-theme="ace"] {
@@ -80,11 +83,12 @@ body {
   --bg-image: url('/img/acecombat.png');
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
-  --font-family: aceCombat;
+  --font-family: acecombat !important;
+  --opacity: 0.9;
 }
 
 .kneeboard {
-  font-family: var(--font-family);
+  font-family: var(--font-family) !important;
   margin: 0;
   padding: 0;
   color: var(--primary-color);
@@ -117,6 +121,7 @@ body {
   margin: 0;
   /* margin-left: -1rem; */
   left: calc(768px - 200px);
+  opacity: 0.8;
 }
 
 .kneeboard #content h4.center {
@@ -150,7 +155,7 @@ body {
 .kneeboard #content {
   margin: 1rem;
   padding: 0;
-  opacity: 0.8;
+  opacity: var(--opacity);
 }
 
 .kneeboard #capture {
