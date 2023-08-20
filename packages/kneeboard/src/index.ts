@@ -50,6 +50,7 @@ import carrier from './components/carrier';
 import waypoints from './components/waypoints/waypoints';
 import waypointProfile from './components/waypointProfile';
 import notes from './components/notes';
+import { load } from "./cache";
 
 
 
@@ -90,9 +91,13 @@ export function register(...components:Component[]) {
   )
 })();
 
+let _root;
+let context: Context;
 
-export function getHTML() {
-  return `
+export function createKneeboard(element) {
+  _root = element;
+
+  const HTML = `
   <div id="capture">
   <img src="img/dcs web editor.png" id="logo"/>
     <div id="mask"></div>
@@ -100,14 +105,14 @@ export function getHTML() {
       <span id="dwv-info">D C S &nbsp; W E B &nbsp; E D I T O R</span>
       ${
         // Add component templates
-        registeredComponents.map(component => component.template).join('\n')
+        registeredComponents.map(component => `<div class="kneeboard-section" id="${component.id}"></div>`).join('\n')
       }          
       
     </div>
   </div>
   
   <div class="controls">
-  
+      
     ${
       // Add control buttons
       registeredComponents.map(component => component.control).join('\n')
@@ -116,8 +121,8 @@ export function getHTML() {
     ${
       // Add control checkbox toggles
       registeredComponents.map(component => {
-        const { id, template} = component;
-        if (!template) return '';
+        const { id, control} = component;
+        if (control) return '';
         
         return `
           <label for="checkbox-${id}">
@@ -130,11 +135,13 @@ export function getHTML() {
 
   </div>
   `
+  _root.innerHTML = HTML;
+  
 }
 
 
-export function generateKneeboard(unitName: string, groupName: string, category: string, countryName: string, coalitionName: string, mission: any, dictionary: any) {
-
+export function renderKneeboard(unitName: string, groupName: string, category: string, countryName: string, coalitionName: string, mission: any, dictionary: any) {
+  
   const coalition = mission.coalition[coalitionName]
   const countries = coalition.country;
   const country = countries.find(c => c.name === countryName)!;
@@ -143,7 +150,7 @@ export function generateKneeboard(unitName: string, groupName: string, category:
   const unit = group.units.find(u => u.name === unitName);
   
   
-  const context: Context = {
+  context = {
     unitName,
     groupName,
     category,
@@ -159,25 +166,34 @@ export function generateKneeboard(unitName: string, groupName: string, category:
     unit,
   }
 
-  const storedTheme = localStorage.getItem('kneeboard-theme') || 'default';
+  const storedTheme = load('theme') || 'default';
   setTimeout(() => switchTheme({ target: {value: storedTheme }}), 10);
 
   // render all registered components
-  renderRegisteredComponents(context);
+  setTimeout(() => renderRegisteredComponents(context), 10);
+
+  return refresh;
 }
 
-function renderRegisteredComponents(context: Context) {
-  registeredComponents.forEach(component => {
-    render(component.id, component.render(context));
+export function refresh() {
+  // console.log('refresh');
+  
+  // createKneeboard(_root);
+  setTimeout(() => renderRegisteredComponents(context), 10);
+}
 
-    if (component.template) {
+function renderRegisteredComponents(c: Context) {
+  registeredComponents.forEach(component => {
+    render(component.id, component.render(c));
+
+    if (!component.control) {
       const toggle = document.querySelector(`input[name="${component.id}"]`)!;
-      toggle?.addEventListener('change', toggleHandler);
+      toggle.addEventListener('change', toggleHandler);
     }
   });
 }
 
-function toggleHandler(e:InputEvent) {
+function toggleHandler(e: Event) {
   const { name, checked } = e.target;
   const section = document.getElementById(name)!;
 
@@ -186,7 +202,7 @@ function toggleHandler(e:InputEvent) {
 }
 
 function render(id: string, value: string) {
-  document.getElementById(id)!.innerHTML += value;
+  document.getElementById(id)!.innerHTML = value;
 }
 
 

@@ -1,15 +1,15 @@
 import { Component, Context } from "../..";
 import { fontFamily, primaryColor, secondaryColor } from "../../colors";
+import { load, save } from '../../cache';
 
 const component: Component = {
   id: 'theme-select',
 
-  template: '',
+  template: '<div id="theme-select"></div>',
 
-  control:
-`<div>
+  control: `<div>
 <label>Theme</label>
-<select id="theme-select">
+<select id="theme-select-control">
   <option value="default">Xerox light</option>
   <option value="dark">Xerox dark</option>
   <option value="modern">Modern light</option>
@@ -24,8 +24,8 @@ const component: Component = {
 `,
 
   render: (c: Context) => {
-    const kneeboardSelect = document.getElementById('theme-select')!;
-    const storedTheme = localStorage.getItem('kneeboard-theme') || 'default';
+    const kneeboardSelect = document.getElementById('theme-select-control')!;
+    const storedTheme = load('theme') || 'default';
     
     kneeboardSelect.addEventListener('change', switchTheme)
     setTimeout(() => kneeboardSelect.value = storedTheme, 0);
@@ -40,7 +40,7 @@ export function switchTheme(e) {
   const theme = e.target.value;
   
   document.querySelector('.kneeboard')!.setAttribute('data-theme', theme);
-  localStorage.setItem('kneeboard-theme', theme);
+  save('theme', theme);
 
   refreshChart();
 

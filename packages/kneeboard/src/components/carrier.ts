@@ -3,12 +3,10 @@ import { Component, Context } from "..";
 import './carrier.css'
 const component: Component = {
   id: 'carrier',
-  template: `<div id="carrier">
-  <h4 class="center">C A R R I E R</h4>
-  </div>`,
+
   render: (c: Context) => {
     const {country, dictionary} = c;
-    
+    const title = `<h4 class="center">C A R R I E R</h4>`;
     const carriers = `<ul>${country.ship?.group.map((group) => {
       
       if (group.route) {
@@ -31,7 +29,7 @@ const component: Component = {
       else return false;
     }).filter(i => i).join('') || 'No carrier available'}</ul>`;
     
-    return carriers;
+    return title + carriers;
   },
 }
 

@@ -3,7 +3,6 @@ import './group.css';
 
 const component: Component = {
   id: 'group',
-  template: `<p id="group"></p>`,
   render: (c: Context) => {
     const {groupName, group} = c;
     const unit = group.units[0]

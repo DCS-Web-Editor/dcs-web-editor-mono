@@ -18,10 +18,8 @@ import missionNam from './examples/nam/mission.json'
 import dictionaryNam from './examples/nam/dictionary.json'
 
 
-import { generateKneeboard, getHTML } from '.';
+import { renderKneeboard, createKneeboard } from '.';
 import './database'
-document.querySelector('.kneeboard').innerHTML = getHTML();
-
 
 const DEMOS = {
   F15: {
@@ -116,18 +114,18 @@ const DEMOS = {
   },
 }
 
+createKneeboard(document.querySelector('.kneeboard'));
 
-let demo = DEMOS.VF14;
-generateKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary);
+
+let demo = DEMOS.Apache;
+const refresh = renderKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary);
+
 
 const demoSelect = document.getElementById('demo-select')!;
-
 demoSelect?.addEventListener('change', () => {
-  let demo = DEMOS[demoSelect.value];
+  demo = DEMOS[demoSelect.value];
+
+  renderKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary);  
   
-  // Re-render
-  document.querySelector('.kneeboard')!.innerHTML = getHTML();  
-  
-  generateKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary);
 })
 

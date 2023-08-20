@@ -3,11 +3,9 @@ import { Component, Context } from "..";
 import './awacs.css'
 const component: Component = {
   id: 'awacs',
-  template: `<div id="awacs">
-  <h4 class="center">A W A C S</h4>
-  </div>`,
   render: (c: Context) => {
     const {country, dictionary} = c;
+    const title = `<h4 class="center">A W A C S</h4>`;
     const awacs = `<ul>${country.plane?.group.map((group) => {
       if (group.task === 'AWACS') {
         
@@ -20,7 +18,7 @@ const component: Component = {
       else return false;
     }).filter(i => i).join('') || 'No AWACS support'}</ul>`;
     
-    return awacs;
+    return title + awacs;
   },
 }
 

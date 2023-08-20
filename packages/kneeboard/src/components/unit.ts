@@ -3,7 +3,6 @@ import './unit.css';
 
 const component: Component = {
   id: 'unit',
-  template: `<p id="unit"></p>`,
   render: (c: Context) => {
     const {unitName, unit} = c;
     

@@ -4,15 +4,11 @@ import { Component, Context } from "..";
 import './waypointProfile.css';
 import { fontFamily, primaryColor, secondaryColor } from '../colors';
 import { refreshChart } from './controls/themeSelect';
+import calculator from '../calculator';
 
 
 const component: Component = {
   id: 'waypoint-profile',
-
-  template: `<div id="waypoint-profile">
-  <h4 class="center">W A Y P O I N T &nbsp; P R O F I L E</h4>
-  <canvas id="waypoint-chart"></canvas>
-</div>`,
 
   control: ``,
 
@@ -20,9 +16,10 @@ const component: Component = {
     const {group} = c;
     
     // delay render to make sure element is present
-    setTimeout(() => createLineChart(group, 'waypoint-chart'), 0);
+    setTimeout(() => createLineChart(group, 'waypoint-chart'), 10);
     
-    return '';
+    return `<h4 class="center">W A Y P O I N T &nbsp; P R O F I L E</h4>
+    <canvas id="waypoint-chart"></canvas>`;
   },
 }
 
@@ -44,8 +41,8 @@ function createLineChart(group: any, elementId: string) {
       labels : points.map((p, i: number) => `${i + 1}: ${p.name}`),
       datasets : [
         {
-          label : "Altitude feet",
-          data : points.map(p => p.alt * M_TO_FEET),
+          label : "Altitude " + calculator.altitudeUnit(),
+          data : points.map(p => calculator.altitude(p.alt)),
           borderColor : primaryColor(),
           borderWidth : 1,
           // pointStyle: 'triangle',
@@ -58,8 +55,8 @@ function createLineChart(group: any, elementId: string) {
           }
         },
         {
-          label : "Speed knots",
-          data : points.map(p => p.speed * MS_TO_KTS),
+          label : "Speed " + calculator.speedUnit(),
+          data : points.map(p => calculator.speed(p.speed)),
           borderColor : "#222222",
           pointStyle: false,
           borderWidth: 1,
@@ -88,7 +85,7 @@ function createLineChart(group: any, elementId: string) {
           position: 'right',
           min: 0,
           title: {
-            text: '- - - speed in knots - - -',
+            text: `- - - speed in ${calculator.speedUnit()} - - -`,
             display: true,
             padding: 0,
           },

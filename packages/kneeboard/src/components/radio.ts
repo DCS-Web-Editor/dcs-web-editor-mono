@@ -5,13 +5,13 @@ import './radio.css';
 
 const component: Component = {
   id: 'radio',
-  template: `<div id="radio">
-    <h4 class="center">R A D I O</h4>
-    <div id="radio-table"></div>
-  </div>`,
+
   render: (c: Context) => {
     const {unit} = c;
-    if (!unit.Radio) return '<span>No Channels</span>';
+    const title = `<h4 class="center">R A D I O</h4>`;
+    const table = `<div id="radio-table"></div>`;
+    if (!unit.Radio) return title + '<span>No Channels</span>';
+
     
     const data = unit.Radio?.map((radio, n) => {
         return radio.channels.map((channel, i) => 
@@ -19,7 +19,7 @@ const component: Component = {
     });
 
 
-    createRadioTable(data, '#radio-table');
+    setTimeout(() => createRadioTable(data, '#radio-table'), 10);
     // return `<h4 class="center">R A D I O</h4>${
     //   unit.Radio?.map((radio, n) => {
     //     return  `<ul>Radio ${n + 1})
@@ -30,7 +30,7 @@ const component: Component = {
     //     </ul>`;
     //   }).join('<br>') || 'No Channels'
     // }`
-    return 'AM, ∿ = FM';
+    return title + table + 'AM, ∿ = FM';
   },
 }
 

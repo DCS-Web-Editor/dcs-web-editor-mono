@@ -50,7 +50,7 @@ export function convertDMS(lat: number, lon: number) {
     var longitude = toDegreesMinutesAndSeconds(lon);
     var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-    return latitude + " " + latitudeCardinal + "\n" + longitude + " " + longitudeCardinal;
+    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
 }
 
 // returns i.e. 4210N04228E
@@ -71,7 +71,7 @@ export function convertDMM(lat: number, lon: number) {
     var longitude = toDegreesMinutes(lon);
     var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-    return latitude + " " + latitudeCardinal + "\n" + longitude + " " + longitudeCardinal;
+    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
 }
 
 export function toHHMMSS(s:number) {
@@ -80,8 +80,19 @@ export function toHHMMSS(s:number) {
     return date.toISOString().slice(11, 19);
 }
 
+export function convertDD(lat: number, lon:number) {
+  var latitude = lat.toFixed(4);
+  var latitudeCardinal = lat >= 0 ? "N" : "S";
+
+  var longitude = lon.toFixed(4);
+  var longitudeCardinal = lon >= 0 ? "E" : "W";
+
+  return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
+}
+
 export function LLtoAll(lat: number, lon: number) {
     return {
+        DD: convertDD(lat, lon),
         MGRS: MGRS.forward([lon, lat], 5),
         DMS: convertDMS(lat, lon),
         DMM: convertDMM(lat, lon),
@@ -118,7 +129,9 @@ export function calcDistance(start: LatLon, end: LatLon) {
 
 export const M_TO_FEET = 3.28084;
 export const M_TO_NM = 0.000539957;
+export const KM_TO_NM = 0.000539957 * 1000;
 export const MS_TO_KTS = 1.94384;
+export const MS_TO_KMH = 3.6;
 export const KG_TO_LBS = 2.20462;
 
 export function msToKts(metersPerSecond = 0) {
@@ -174,6 +187,10 @@ export function hexaToRgb(hex: string) {
     b: parseInt(result[3], 16),
     a: parseInt(result[4], 16),
   } : null;
+}
+
+export function toFahrenheit(celsius: number) {
+  return (celsius * 9 / 5) + 32  
 }
 
 export const MORSE = {

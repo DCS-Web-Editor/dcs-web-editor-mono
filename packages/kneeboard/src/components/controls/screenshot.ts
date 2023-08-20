@@ -6,9 +6,9 @@ import { downloadBlob } from "@dcs-web-editor-mono/utils";
 const component: Component = {
   id: 'screenshot',
   template: '',
-  control: `<button id="screenshot">Download PNG</button>`,
+  control: `<button id="screenshot-button">Download PNG</button>`,
   render: (c: Context) => {
-    const screenshotButton = document.querySelector("#screenshot")!;
+    const screenshotButton = document.querySelector("#screenshot-button")!;
     
     screenshotButton.addEventListener('click', () => {
       const capture = document.querySelector("#capture")!;

@@ -8,11 +8,6 @@ import { getWaypoints } from "./waypointConverter";
 const component: Component = {
   id: 'waypoints',
 
-  template: `<div id="waypoints">
-<h4 class="center">W A Y P O I N T S</h4>
-<div id="waypoints-table"></div>
-</div>`,
-
   control: `<button id="export-file">Waypoints .csv</button>`,
 
   render: (c: Context) => {
@@ -25,7 +20,8 @@ const component: Component = {
       csvExport(instance);
     }, 10);
 
-    return '';
+    return `<h4 class="center">W A Y P O I N T S</h4>
+    <div id="waypoints-table"></div>`;
   },
 }
 
@@ -58,18 +54,19 @@ function createWaypointTable(data: any[], id: string) {
 
   const instance = new Handsontable(table, {
     data,
-    colWidths: [140, 50, 70, 40, 50, 30, 55, 50, 60, 50, 50, 150],
+    colWidths: [120, 50, 70, 40, 35, 25, 55, 180, 60, 50, 50, 50, 110],
     height: 'auto',
     colHeaders: [
       "Name / Action",
       "Type",
-      "Alt m",
-      "m/s",
-      "DIST nm",
+      "Altitude",
+      "SPD",
+      "DIST",
       "HDG",
       "ETA",
-      "Lat",
-      "Lon",
+      "Coords",
+      'Lat',
+      'Lon',
       'X',
       'Y',
       'Notes'
@@ -90,6 +87,7 @@ function createWaypointTable(data: any[], id: string) {
         readOnly: false,
       },
       { type: "time", timeFormat: 'hh:mm:ss', correctFormat: true },
+      { type: "text" },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
@@ -102,7 +100,7 @@ function createWaypointTable(data: any[], id: string) {
     preventOverflow: 'vertical',
     dropdownMenu: false,
     hiddenColumns: {
-      columns: [1, 9, 10],
+      columns: [1, 8, 9, 10, 11],
       indicators: false,
     },
     contextMenu: true,

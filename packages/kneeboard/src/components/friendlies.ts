@@ -2,7 +2,6 @@ import { Component, Context } from "..";
 import './friendlies.css'
 const component: Component = {
   id: 'friendlies',
-  template: `<p id="friendlies"></p>`,
   render: (c: Context) => {
     const {country} = c;
     // console.log(country);

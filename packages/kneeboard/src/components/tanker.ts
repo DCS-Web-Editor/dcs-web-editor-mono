@@ -3,11 +3,9 @@ import { Component, Context } from "..";
 import './tanker.css'
 const component: Component = {
   id: 'tanker',
-  template: `<div id="tanker">
-  <h4 class="center">T A N K E R</h4>
-  </div>`,
   render: (c: Context) => {
     const {country, dictionary} = c;
+    const title = `<h4 class="center">T A N K E R</h4>`;
     const tankers = `<ul>${country.plane?.group.map((group) => {
       if (group.task === 'Refueling') {
 
@@ -24,7 +22,7 @@ const component: Component = {
       else return false;
     }).filter(i => i).join('') || 'No tanker available'}</ul>`;
     
-    return tankers;
+    return title + tankers;
   },
 }
 

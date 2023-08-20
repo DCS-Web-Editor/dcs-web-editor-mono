@@ -1,6 +1,7 @@
-import { calcDistance, calcBearing, LatLon, isTranslation, translate } from '@dcs-web-editor-mono/utils'
+import { calcDistance, calcBearing, LatLon, isTranslation, translate, M_TO_NM, KM_TO_NM } from '@dcs-web-editor-mono/utils'
 import { mizToLL, activeMap } from '@dcs-web-editor-mono/map-projection'
 import _ from 'lodash';
+import calculator from '../../calculator';
 
 interface Point {
   // original DCS properties
@@ -19,12 +20,14 @@ interface Point {
   airdromeId?: any;
   
   // calculated or converted by this script
+  coords?: string;
   lat?: number;
   lon?: number;
   altitude?: string;
   heading?: number;
   distance?: number;
   time?: number;
+  cspeed?: number;
 }
 
 export function getWaypoints(group: any, mission: any, dictionary: any) {
@@ -42,12 +45,13 @@ export function getWaypoints(group: any, mission: any, dictionary: any) {
     convertCoordinates(point);
     convertTime(point, mission.start_time);
     convertAlt(point);
+    convertSpeed(point);
     calculateDistance(point, previousPoint);
     calculateHeading(point, previousPoint);
   
     previousPoint = point;
 
-    const picked = _.pick(point, ['name', 'type', 'altitude', 'speed', 'distance', 'heading', 'time', 'lat', 'lon', 'x', 'y'])
+    const picked = _.pick(point, ['name', 'type', 'altitude', 'cspeed', 'distance', 'heading', 'time', 'coords', 'lat', 'lon', 'x', 'y'])
 
     const values = Object.values(picked);
     // Notes
@@ -75,9 +79,12 @@ function setDefaults(point: Point, dictionary: any) {
 }
 
 export function convertCoordinates(point: Point) {
-  const latLng = mizToLL(point.y, point.x);
-  point.lat = latLng.lat;
-  point.lon = latLng.lon;
+  const latLon = mizToLL(point.y, point.x);
+  point.lat = latLon.lat;
+  point.lon = latLon.lon;
+  
+  const coords = calculator.coordinates(latLon);
+  point.coords = coords;
   return point;
 }
 
@@ -86,13 +93,20 @@ function convertTime(point: Point, start_time: number) {
 }
 
 function convertAlt(point: Point) {
-  const alt = Math.round(point.alt);
+  const alt = Math.round(calculator.altitude(point.alt));
   point.altitude = alt + (point.alt_type === 'BARO' ? ' MSL' : ' AGL');
+}
+
+function convertSpeed(point: Point) {
+  const cspeed = Math.round(calculator.speed(point.speed));
+  point.cspeed = cspeed;
 }
 
 function calculateDistance(point: Point, prevPoint:Point) {
   if (!prevPoint) return;
-  point.distance = calcDistance(point as LatLon, prevPoint as LatLon); // nm
+  const nm = calcDistance(point as LatLon, prevPoint as LatLon); // nm
+  const distances = calculator.distance(nm / KM_TO_NM);
+  point.distance = distances;
 }
 
 function calculateHeading(point: Point, prevPoint:Point) {

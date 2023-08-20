@@ -3,10 +3,10 @@ import { convertCoordinates } from "./waypoints/waypointConverter";
 
 import { Component, Context } from "..";
 import { activeMap } from "@dcs-web-editor-mono/map-projection";
+import calculator from "../calculator";
 
 const component: Component = {
   id: 'bullseye',
-  template: `<p id="bullseye"></p>`,
   render: (c: Context) => {
     const {coalition, mission} = c;
     
@@ -14,8 +14,9 @@ const component: Component = {
     activeMap(mission.theatre);
 
     const bullseye = coalition.bullseye;
-    const coords = convertCoordinates(bullseye);
-    return `<b>BULLSEYE</b> LAT: ${coords.lat?.toFixed(4)} LON: ${coords.lon?.toFixed(4)}`
+    const latLon = convertCoordinates(bullseye);
+    const coords = calculator.coordinates(latLon)
+    return `<b>BULLSEYE</b> ${coords}`
   },
 }
 

@@ -7,7 +7,9 @@ export declare function convertDMS(lat: number, lon: number): string;
 export declare function convertDMshort(lat: number, lon: number): string;
 export declare function convertDMM(lat: number, lon: number): string;
 export declare function toHHMMSS(s: number): string;
+export declare function convertDD(lat: number, lon: number): string;
 export declare function LLtoAll(lat: number, lon: number): {
+    DD: string;
     MGRS: any;
     DMS: string;
     DMM: string;
@@ -17,7 +19,9 @@ export declare function calcBearing(start: LatLon, end: LatLon): number;
 export declare function calcDistance(start: LatLon, end: LatLon): number;
 export declare const M_TO_FEET = 3.28084;
 export declare const M_TO_NM = 0.000539957;
+export declare const KM_TO_NM: number;
 export declare const MS_TO_KTS = 1.94384;
+export declare const MS_TO_KMH = 3.6;
 export declare const KG_TO_LBS = 2.20462;
 export declare function msToKts(metersPerSecond?: number): string;
 export declare function toFeet(meters?: number): string;
@@ -34,6 +38,7 @@ export declare function hexaToRgb(hex: string): {
     b: number;
     a: number;
 } | null;
+export declare function toFahrenheit(celsius: number): number;
 export declare const MORSE: {
     a: string;
     b: string;
