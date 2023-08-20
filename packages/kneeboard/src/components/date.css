@@ -2,6 +2,6 @@
   float: left;
   margin-bottom: -2rem;
   margin-top: -0.5rem;
-  min-width: calc(768px - 2rem);
+  min-width: calc(768px - var(--margin) * 2);
   text-align: right;
 }

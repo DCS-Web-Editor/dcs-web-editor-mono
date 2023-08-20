@@ -7,15 +7,21 @@ const component: Component = {
   template: '',
 
   control:
-`<select id="theme-select">
-  <option value="default">Typewriter light</option>
-  <option value="dark">Typewriter dark</option>
+`<div>
+<label>Theme</label>
+<select id="theme-select">
+  <option value="default">Xerox light</option>
+  <option value="dark">Xerox dark</option>
   <option value="modern">Modern light</option>
   <option value="modern_dark">Modern dark</option>
+  <option value="ww2">WW II</option>
+  <option value="nam">Nam 70s</option>
   <option value="90s">90s</option>
   <option value="cyber">Cyber</option>
   <option value="ace">ACE Combat</option>
-</select>`,
+</select>
+</div>
+`,
 
   render: (c: Context) => {
     const kneeboardSelect = document.getElementById('theme-select')!;

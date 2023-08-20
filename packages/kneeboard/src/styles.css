@@ -21,12 +21,35 @@
   --secondary-color: #544b8266;
   --bg-color: rgb(243,243,240);
   --bg-image: url('/img/paper2.png');
+  --bg-mask: none;
   --font-family: oldtypewriter, monospace !important;
   --opacity: 0.8;
   --font-size: 13px;
+  --logo: 0.9;
+  --margin: 1rem;
 
   --controls-color: rgb(223,213,213);
   --controls-bg-color: #1d2730;
+}
+
+[data-theme="ww2"] {
+  --primary-color: #211e1d;
+  --secondary-color: #d2d2d266;
+  --bg-color: #161625;
+  --bg-image: url('/img/ww2_us2.png');
+  --font-family: oldtypewriter, monospace !important;
+  --logo: 0;
+}
+
+[data-theme="nam"] {
+  --primary-color: #211e1d;
+  --secondary-color: #6d6b6466;
+  --bg-color: #161625;
+  --bg-image: url('/img/nam.png');
+  --bg-mask: url('/img/nam_mask.png');
+  --font-family: oldtypewriter, monospace !important;
+  --logo: 0;
+  --margin: 2rem;
 }
 
 [data-theme="dark"] {
@@ -129,7 +152,7 @@
   margin: 0;
   /* margin-left: -1rem; */
   left: calc(768px - 200px);
-  opacity: 0.8;
+  opacity: var(--logo);
 }
 
 .kneeboard #content h4.center {
@@ -154,6 +177,7 @@
   background: var(--bg-color);
 
   background: var(--bg-image);
+
   background-size: 100% 100%;
   background-repeat: repeat;
   border: none;
@@ -161,9 +185,29 @@
 }
 
 .kneeboard #content {
-  margin: 1rem;
+  margin: var(--margin);
+  padding: 0rem;
+  opacity: var(--opacity);
+
+}
+
+.kneeboard #mask {
+  margin: var(--margin);
   padding: 0;
   opacity: var(--opacity);
+  background: var(--bg-mask);
+  background-size: 100% 100%; 
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 100000;
+  height: 1024px;
+  width: 768px;
+  pointer-events: none;
+
+
 }
 
 .kneeboard #capture {

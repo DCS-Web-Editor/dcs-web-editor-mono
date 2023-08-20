@@ -94,13 +94,15 @@ export function register(...components:Component[]) {
 export function getHTML() {
   return `
   <div id="capture">
-    <img src="img/dcs web editor.png" id="logo"/>
+  <img src="img/dcs web editor.png" id="logo"/>
+    <div id="mask"></div>
     <div id="content">
       <span id="dwv-info">D C S &nbsp; W E B &nbsp; E D I T O R</span>
       ${
         // Add component templates
         registeredComponents.map(component => component.template).join('\n')
       }          
+      
     </div>
   </div>
   

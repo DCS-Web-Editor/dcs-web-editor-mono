@@ -1,4 +1,4 @@
-import { toDeg, toRad } from "@dcs-web-editor-mono/utils";
+import { toDeg, toRad, translate } from "@dcs-web-editor-mono/utils";
 import { Component, Context } from "..";
 import './carrier.css'
 const component: Component = {
@@ -7,7 +7,7 @@ const component: Component = {
   <h4 class="center">C A R R I E R</h4>
   </div>`,
   render: (c: Context) => {
-    const {country} = c;
+    const {country, dictionary} = c;
     
     const carriers = `<ul>${country.ship?.group.map((group) => {
       
@@ -26,7 +26,7 @@ const component: Component = {
         const iclsTask = iclsTasks[0];
         const icls = iclsTask ? `<span class="ils">ICLS CHAN ${iclsTask.channel} </span>` : '';
         
-        return `<li><b>${group.name}</b> <span class="type">${unit.type}</span> BRC <span class="course">${toDeg(unit.heading - toRad(10))}°</span>  ${frequency.toLocaleString()}, ${tacan} ${icls}</li>`
+        return `<li><b>${translate(group.name, dictionary)}</b> <span class="type">${unit.type}</span> BRC <span class="course">${toDeg(unit.heading - toRad(10))}°</span>  ${frequency.toLocaleString()}, ${tacan} ${icls}</li>`
       }
       else return false;
     }).filter(i => i).join('') || 'No carrier available'}</ul>`;

@@ -1,3 +1,4 @@
+import { translate } from "@dcs-web-editor-mono/utils";
 import { Component, Context } from "..";
 import './tanker.css'
 const component: Component = {
@@ -6,7 +7,7 @@ const component: Component = {
   <h4 class="center">T A N K E R</h4>
   </div>`,
   render: (c: Context) => {
-    const {country} = c;
+    const {country, dictionary} = c;
     const tankers = `<ul>${country.plane?.group.map((group) => {
       if (group.task === 'Refueling') {
 
@@ -18,7 +19,7 @@ const component: Component = {
         
         const callsign = unit.callsign?.name || unit.callsign;
         const tacan = `<span class="tacan">TACAN ${task.callsign} ${task.channel}${task.modeChannel}</span>`;
-        return `<li><span class="callsign">${callsign}</span> <b>${group.name}</b> <span class="type">${unit.type}</span> <span class="freq">${group.frequency}</span> ${tacan}</li>`
+        return `<li><span class="callsign">${callsign}</span> <b>${translate(group.name, dictionary)}</b> <span class="type">${unit.type}</span> <span class="freq">${group.frequency}</span> ${tacan}</li>`
       }
       else return false;
     }).filter(i => i).join('') || 'No tanker available'}</ul>`;

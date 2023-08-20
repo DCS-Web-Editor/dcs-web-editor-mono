@@ -1,3 +1,4 @@
+import { translate } from "@dcs-web-editor-mono/utils";
 import { Component, Context } from "..";
 import './awacs.css'
 const component: Component = {
@@ -6,7 +7,7 @@ const component: Component = {
   <h4 class="center">A W A C S</h4>
   </div>`,
   render: (c: Context) => {
-    const {country} = c;
+    const {country, dictionary} = c;
     const awacs = `<ul>${country.plane?.group.map((group) => {
       if (group.task === 'AWACS') {
         
@@ -14,7 +15,7 @@ const component: Component = {
         // console.log(group);
         
         const callsign = unit.callsign?.name || unit.callsign;
-        return `<li><span class="callsign">${callsign}</span> <b>${group.name}</b> <span class="type">${unit.type}</span> <span class="freq">${group.frequency}</span></li>`
+        return `<li><span class="callsign">${callsign}</span> <b>${translate(group.name, dictionary)}</b> <span class="type">${unit.type}</span> <span class="freq">${group.frequency}</span></li>`
       }
       else return false;
     }).filter(i => i).join('') || 'No AWACS support'}</ul>`;

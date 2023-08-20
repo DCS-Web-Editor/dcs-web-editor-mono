@@ -14,6 +14,9 @@ import dictionarySidra from './examples/gulf of sidra/dictionary.json'
 import missionKhameni from './examples/khameni/mission.json'
 import dictionaryKhameni from './examples/khameni/dictionary.json'
 
+import missionNam from './examples/nam/mission.json'
+import dictionaryNam from './examples/nam/dictionary.json'
+
 
 import { generateKneeboard, getHTML } from '.';
 import './database'
@@ -101,6 +104,15 @@ const DEMOS = {
     countryName: 'USA',
     coalitionName: 'blue',
     category: 'plane',
+  },
+  UH1: {
+    mission: missionNam,
+    dictionary: dictionaryNam,
+    unitName: 'Player',
+    groupName: 'Player',
+    countryName: 'USA',
+    coalitionName: 'blue',
+    category: 'helicopter',
   },
 }
 
