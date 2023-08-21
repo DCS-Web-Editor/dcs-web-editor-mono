@@ -27,9 +27,20 @@
   --font-size: 13px;
   --logo: 0.9;
   --margin: 1rem;
+  --spacing: 2rem;
 
   --controls-color: rgb(223,213,213);
   --controls-bg-color: #1d2730;
+}
+
+[data-spacing="CONDENSED"] {
+  --spacing: 0rem;
+}
+[data-spacing="NORMAL"] {
+  --spacing: 1rem;
+}
+[data-spacing="WIDE"] {
+  --spacing: 2rem;
 }
 
 [data-theme="ww2"] {
@@ -156,12 +167,12 @@
 }
 
 .kneeboard #content h4.center {
-  margin: 1rem;
+  margin: var(--spacing);
 }
 
 .kneeboard #content .kneeboard-section {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
 }
 
 
@@ -211,8 +222,6 @@
   height: 1024px;
   width: 768px;
   pointer-events: none;
-
-
 }
 
 .kneeboard #capture {

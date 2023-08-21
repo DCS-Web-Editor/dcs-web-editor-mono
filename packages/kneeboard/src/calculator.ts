@@ -1,4 +1,4 @@
-import { LLtoAll, MS_TO_KMH, MS_TO_KTS, M_TO_FEET, KM_TO_NM, msToKts } from "@dcs-web-editor-mono/utils"
+import { LLtoAll, MS_TO_KMH, MS_TO_KTS, M_TO_FEET, KM_TO_NM, msToKts, MMHG_TO_INHG } from "@dcs-web-editor-mono/utils"
 import { load } from './cache';
 
 export const config = {
@@ -36,6 +36,14 @@ export function distanceUnit() {
   return config.system === 'IMPERIAL' ? 'nm' : 'km'
 }
 
+export function pressure(mmHg: number) {
+  return config.system === 'IMPERIAL' ?
+    MMHG_TO_INHG * mmHg : mmHg;
+}
+export function pressureUnit() {
+  return config.system === 'IMPERIAL' ? 'inHg' : 'mmHg'
+}
+
 
 export default {
   config,
@@ -46,4 +54,6 @@ export default {
   altitudeUnit,
   distance,
   distanceUnit,
+  pressure,
+  pressureUnit,
 }

@@ -19,6 +19,7 @@ import dictionaryNam from './examples/nam/dictionary.json'
 
 
 import { renderKneeboard, createKneeboard } from '.';
+import { load, save } from './cache'
 import './database'
 
 const DEMOS = {
@@ -115,15 +116,19 @@ const DEMOS = {
 }
 
 createKneeboard(document.querySelector('.kneeboard'));
+const demoSelect = document.getElementById('demo-select')!;
 
+const val = load('demo') || 'Apache';
+demoSelect.value = val;
 
-let demo = DEMOS.Apache;
+let demo = DEMOS[val];
 const refresh = renderKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary);
 
 
-const demoSelect = document.getElementById('demo-select')!;
+
 demoSelect?.addEventListener('change', () => {
   demo = DEMOS[demoSelect.value];
+  save('demo', demoSelect.value);
 
   renderKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary);  
   

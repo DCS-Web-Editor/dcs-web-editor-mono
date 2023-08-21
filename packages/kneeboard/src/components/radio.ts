@@ -13,23 +13,13 @@ const component: Component = {
     if (!unit.Radio) return title + '<span>No Channels</span>';
 
     
-    const data = unit.Radio?.map((radio, n) => {
-        return radio.channels.map((channel, i) => 
-            `${channel.toString().match('.') ? channel.toString().replace('.', '.\n') : channel }${radio.modulation && radio.modulation[i] === 1 ? '∿' : ''}`)
+    const data = unit.Radio.map((radio, n) => {
+        return radio.channels.map((channel, i) => [channel, radio.modulation?.[i]])
     });
 
-
+    
     setTimeout(() => createRadioTable(data, '#radio-table'), 10);
-    // return `<h4 class="center">R A D I O</h4>${
-    //   unit.Radio?.map((radio, n) => {
-    //     return  `<ul>Radio ${n + 1})
-    //       ${
-    //         radio.channels.map((channel, i) => 
-    //         `<li>${channel}${radio.modulation && radio.modulation[i] === 1 ? ' FM' : ' AM'}</li>`).join('')
-    //       }
-    //     </ul>`;
-    //   }).join('<br>') || 'No Channels'
-    // }`
+
     return title + table + 'AM, ∿ = FM';
   },
 }
@@ -42,6 +32,20 @@ export const radioFormat = {
   }
 };
 
+function customRenderer(hotInstance, td, row, column, prop, value, cellProperties) {
+  if (!value) return;
+  let [channel, modulation] = value;
+  
+  Handsontable.renderers.BaseRenderer.apply(this, arguments);
+  channel = channel.toString().match('.') ? channel.toString().replace('.', '.\n<span class="comma-freq">') + '</span>' : channel;
+  const mod = modulation === 1 ? '∿' : '';
+
+  td.innerHTML = `${mod}${channel}`
+}
+
+// Register an alias
+Handsontable.renderers.registerRenderer('radio', customRenderer);
+
 function createRadioTable(data: any[], id: string) {
   const table = document.querySelector(id)!;
   if (!table) throw new Error('Could not find table element: ' + id);
@@ -53,26 +57,26 @@ function createRadioTable(data: any[], id: string) {
     height: 'auto',
     colHeaders: [1,2,3,4,5,6,7,8,9,10,11, 12, 13, 14, 15, 16, 17, 18, 19,20],
     columns: [
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
-      { type: "numeric", numericFormat: radioFormat },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
+      { type: "numeric", renderer: 'radio' },
     ],
     preventOverflow: 'vertical',
     dropdownMenu: false,

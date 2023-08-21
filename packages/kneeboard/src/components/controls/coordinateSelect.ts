@@ -24,7 +24,7 @@ const options = [
 const component: Component = {
   id: 'coordinate-select',
   template: '<div id="coordinate-select"></div>',
-  control: `<select name="coordinateSelect" id="coordinate-select-control" title="Warning: changing units will reset user input">
+  control: `<select name="coordinateSelect" id="coordinate-select-control" title="Warning: changing coordinate system will reset user input">
   ${
     options.map(o => {
       return `<option value="${o.value}" ${calculator.config.coordinates === o.value ? 'selected' : ''}>${o.label}</option>`

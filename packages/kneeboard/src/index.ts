@@ -30,6 +30,7 @@ export interface Context {
 import themeSelect, { switchTheme } from './components/controls/themeSelect';
 import metricSelect from './components/controls/metricSelect';
 import coordinateSelect from './components/controls/coordinateSelect';
+import spacingSelect from './components/controls/spacingSelect';
 import screenshot from './components/controls/screenshot';
 
 // Components
@@ -68,6 +69,7 @@ export function register(...components:Component[]) {
     themeSelect,
     metricSelect,
     coordinateSelect,
+    spacingSelect,
     screenshot,
     
     // Components

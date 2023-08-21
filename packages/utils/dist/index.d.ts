@@ -23,6 +23,7 @@ export declare const KM_TO_NM: number;
 export declare const MS_TO_KTS = 1.94384;
 export declare const MS_TO_KMH = 3.6;
 export declare const KG_TO_LBS = 2.20462;
+export declare const MMHG_TO_INHG = 0.0393701;
 export declare function msToKts(metersPerSecond?: number): string;
 export declare function toFeet(meters?: number): string;
 export declare function toNm(meters?: number): string;

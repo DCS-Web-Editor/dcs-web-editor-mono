@@ -11,10 +11,14 @@
   /* margin: 0; */
   /* padding-top: 0.1rem; */
   line-height: 100%;
-
   text-align: left;
-  /* font-size: 10px; */
-  white-space: pre-line;
-  /* word-wrap: calc('.'); */
+  white-space:pre;
+  text-align: center;
+}
+
+
+#content #radio-table .htCore tr td .comma-freq {
+  opacity: 0.7;
+  font-style: italic;
 }
 

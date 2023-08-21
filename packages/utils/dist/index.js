@@ -102,6 +102,7 @@ export const KM_TO_NM = 0.000539957 * 1000;
 export const MS_TO_KTS = 1.94384;
 export const MS_TO_KMH = 3.6;
 export const KG_TO_LBS = 2.20462;
+export const MMHG_TO_INHG = 0.0393701;
 export function msToKts(metersPerSecond = 0) {
     return (metersPerSecond * MS_TO_KTS).toFixed(0);
 }
