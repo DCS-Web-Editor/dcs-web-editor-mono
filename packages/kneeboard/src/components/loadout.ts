@@ -1,4 +1,5 @@
 import { Component, Context } from "..";
+import calculator from "../calculator";
 import './loadout.css';
 
 const component: Component = {
@@ -9,7 +10,10 @@ const component: Component = {
     const title = `<h4 class="center">L O A D O U T</h4>`;
     if (!unit.payload) return title;
 
-    return title + `<span class="label">FUEL</span> ${unit.payload.fuel}kg <span class="label">CHAFF</span> ${unit.payload.chaff} <span class="label">FLARES</span> ${unit.payload.flare} <span class="label">GUN</span> ${unit.payload.gun}%
+    const fuel = calculator.weight(unit.payload.fuel).toFixed(0);
+    const fuelUnit = calculator.weightUnit();
+
+    return title + `<span class="label">FUEL</span> ${fuel}${fuelUnit} <span class="label">CHAFF</span> ${unit.payload.chaff} <span class="label">FLARES</span> ${unit.payload.flare} <span class="label">GUN</span> ${unit.payload.gun}%
     
     <ul>${
       unit.payload.pylons?.map((pylon, i) => {

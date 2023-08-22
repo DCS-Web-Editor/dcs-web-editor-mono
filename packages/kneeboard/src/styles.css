@@ -61,6 +61,14 @@
   font-family: orbitron;
   src: url('/font/Orbitron.ttf');
 }
+@font-face {
+  font-family: handwriting;
+  src: url('/font/Caveat.ttf');
+}
+@font-face {
+  font-family: chalk;
+  src: url('/font/EraserRegular.ttf');
+}
 
 :root {
   --primary-color: #544b82;
@@ -72,7 +80,7 @@
   --opacity: 0.8;
   --font-size: 13px;
   --logo: 0.6;
-  /* --margin: 1rem; */
+  /* --margin-mask: 1rem; */
   --spacing: 1rem;
   --width: 768px;
 
@@ -116,6 +124,26 @@
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
+[data-theme="ww2hand"] {
+  --primary-color: #332a1c;
+  --secondary-color: #79633f75;
+  --bg-color: #161625;
+  --bg-image: url('/img/ww2hand.png');
+  --font-family: handwriting, monospace !important;
+  --logo: 0;
+  --opacity: 0.7;
+  --font-size: 18px;
+}
+[data-theme="ww2dark"] {
+  --primary-color: #eaeae0;
+  --secondary-color: #b7b5b12f;
+  --bg-color: #161625;
+  --bg-image: url('/img/ww2dark.png');
+  --font-family: chalk, monospace !important;
+  --logo: 0;
+  --opacity: 0.8;
+  --font-size: 15px;
+}
 
 [data-theme="nam"] {
   --primary-color: #211e1d;
@@ -125,7 +153,7 @@
   --bg-mask: url('/img/nam_mask.png');
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
-  --margin: 2rem;
+  --margin-mask: 2rem;
 }
 [data-theme="namnoframe"] {
   --primary-color: #211e1d;
@@ -134,13 +162,23 @@
   --bg-image: url('/img/namnoframe.png');
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
-  --margin: 2rem;
+}
+[data-theme="namhand"] {
+  --primary-color: #020d82;
+  --secondary-color: #38436c66;
+  --bg-color: #161625;
+  --bg-image: url('/img/namhand.png');
+  --font-family: handwriting, monospace !important;
+  --logo: 0;
+  --opacity: 0.7;
+  --font-size: 18px;
 }
 
 [data-theme="dark"] {
-  --primary-color: #d2d2d2;
-  --secondary-color: #d2d2d266;
+  --primary-color: #efd7bc;
+  --secondary-color: #efd7bc46;
   --bg-color: #161625;
+  --opacity: 0.5;
   --bg-image: url('/img/paper_dark.png');
   --font-family: oldtypewriter, monospace !important;
 }
@@ -312,7 +350,7 @@
 
 
 .kneeboard #mask {
-  margin: var(--margin);
+  margin: var(--margin-mask);
   padding: 0;
   opacity: var(--opacity);
   background: var(--bg-mask);

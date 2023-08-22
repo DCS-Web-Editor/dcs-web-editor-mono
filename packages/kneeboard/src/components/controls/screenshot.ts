@@ -9,9 +9,9 @@ const component: Component = {
   control: `<button id="screenshot-button">Download PNG</button>
   <button id="pdf-button">Download PDF</button>`,
   render: (c: Context) => {
-    const screenshotButton = document.querySelector("#screenshot-button")!;
+    const pngButton = document.querySelector("#screenshot-button")!;
     
-    screenshotButton.addEventListener('click', () => {
+    pngButton.addEventListener('click', () => {
       const capture = document.querySelector("#capture")!;
       html2canvas(capture).then(canvas => {
         canvas.toBlob(blob => window.open(URL.createObjectURL(blob), '_blank'));

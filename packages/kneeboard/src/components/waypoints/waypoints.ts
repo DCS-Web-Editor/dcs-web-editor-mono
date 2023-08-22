@@ -54,7 +54,7 @@ function createWaypointTable(data: any[], id: string) {
 
   const instance = new Handsontable(table, {
     data,
-    colWidths: [120, 50, 70, 40, 35, 25, 55, 180, 60, 50, 50, 50, 110],
+    colWidths: [120, 50, 70, 40, 35, 25, 55, 180, 60, 50, 50, 50, 170],
     height: 'auto',
     colHeaders: [
       "Name / Action",
@@ -106,7 +106,7 @@ function createWaypointTable(data: any[], id: string) {
     contextMenu: true,
     // multiColumnSorting: true,
     filters: false,
-    rowHeaders: true,
+    rowHeaders: false,
     manualRowMove: false,
     licenseKey: "non-commercial-and-evaluation"
   });

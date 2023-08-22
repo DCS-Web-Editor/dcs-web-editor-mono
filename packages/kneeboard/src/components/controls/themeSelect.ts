@@ -1,6 +1,7 @@
 import { Component, Context } from "../..";
 import { fontFamily, primaryColor, secondaryColor } from "../../colors";
 import { load, save } from '../../cache';
+import './themeSelect.css';
 
 const component: Component = {
   id: 'theme-select',
@@ -14,11 +15,16 @@ const component: Component = {
   <option value="dark">Xerox dark</option>
   <option value="modern">Modern light</option>
   <option value="modern_dark">Modern dark</option>
-  <option value="ww2">WW II USAF</option>
-  <option value="ww2army">WW II ARMY CORPS</option>
-  <option value="ww2luftwaffe">WW II LUFTWAFFE</option>
-  <option value="nam">Nam 70s</option>
-  <option value="namnoframe">Nam No Frame</option>
+  <option class="ww2" value="" disabled="true">WW II</option>
+  <option class="ww2" value="ww2">&nbsp;&nbsp;USAF</option>
+  <option class="ww2" value="ww2army">&nbsp;&nbsp;ARMY CORPS</option>
+  <option class="ww2" value="ww2luftwaffe">&nbsp;&nbsp;LUFTWAFFE</option>
+  <option class="ww2" value="ww2hand">&nbsp;&nbsp;Handwritten</option>
+  <option class="ww2" value="ww2dark">&nbsp;&nbsp;Dark</option>
+  <option class="seventies" disabled="true">70s</option>
+  <option class="seventies" value="nam">&nbsp;&nbsp;Nam</option>
+  <option class="seventies" value="namnoframe">&nbsp;&nbsp;No Frame</option>
+  <option class="seventies" value="namhand">&nbsp;&nbsp;Handwritten</option>
   <option value="90s">90s</option>
   <option value="cyber">Cyber</option>
   <option value="ace">ACE Combat</option>
