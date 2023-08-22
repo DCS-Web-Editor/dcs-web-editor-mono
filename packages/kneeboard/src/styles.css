@@ -1,4 +1,50 @@
 
+@media print
+{    
+    .no-print, .no-print *
+    {
+      display: none !important;
+    }
+    .print, .print *
+    {
+      /* display: block !important;
+      --height: auto;
+      overflow: visible; */
+    }
+    .demo {
+      position: initial;
+      left: 0px;
+      top: 0px;
+      /* margin: 0; */
+      /* margin: -2rem; */
+    }
+    .kneeboard #content {
+      
+    }
+    .kneeboard, #capture {
+      display: block !important;
+      /* left: 0; */
+      --width: 880px;
+      height: auto !important;
+      overflow: visible !important;
+      /* margin: 0 !important; */
+    }
+}
+
+@media screen
+{    
+    .print, .print *
+    {
+      /* display: none !important; */
+    }
+    .demo {
+      position: absolute;
+      left: 12rem;
+      padding: 2rem;
+    }
+}
+
+
 @font-face {
   font-family: oldtypewriter;
   src: url('/font/SpecialElite-Regular.ttf');
@@ -25,9 +71,10 @@
   --font-family: oldtypewriter, monospace !important;
   --opacity: 0.8;
   --font-size: 13px;
-  --logo: 0.9;
-  --margin: 1rem;
-  --spacing: 2rem;
+  --logo: 0.6;
+  /* --margin: 1rem; */
+  --spacing: 1rem;
+  --width: 768px;
 
   --controls-color: rgb(223,213,213);
   --controls-bg-color: #1d2730;
@@ -45,9 +92,27 @@
 
 [data-theme="ww2"] {
   --primary-color: #211e1d;
-  --secondary-color: #d2d2d266;
+  --secondary-color: #57463066;
   --bg-color: #161625;
-  --bg-image: url('/img/ww2_us2.png');
+  --bg-image: url('/img/ww2usaf.png');
+  --font-family: oldtypewriter, monospace !important;
+  --logo: 0;
+}
+
+[data-theme="ww2army"] {
+  --primary-color: #211e1d;
+  --secondary-color: #57463066;
+  --bg-color: #161625;
+  --bg-image: url('/img/ww2army.png');
+  --font-family: oldtypewriter, monospace !important;
+  --logo: 0;
+}
+
+[data-theme="ww2luftwaffe"] {
+  --primary-color: #79633f;
+  --secondary-color: #79633f75;
+  --bg-color: #161625;
+  --bg-image: url('/img/ww2luftwaffe.png');
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -58,6 +123,15 @@
   --bg-color: #161625;
   --bg-image: url('/img/nam.png');
   --bg-mask: url('/img/nam_mask.png');
+  --font-family: oldtypewriter, monospace !important;
+  --logo: 0;
+  --margin: 2rem;
+}
+[data-theme="namnoframe"] {
+  --primary-color: #211e1d;
+  --secondary-color: #6d6b6466;
+  --bg-color: #161625;
+  --bg-image: url('/img/namnoframe.png');
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
   --margin: 2rem;
@@ -129,6 +203,8 @@
   --opacity: 0.9;
 }
 
+
+
 .kneeboard {
   font-family: var(--font-family) !important;
   margin: 0;
@@ -144,26 +220,36 @@
 }
 
 #content #dwv-info {
-  float: left;
-  margin-top: -0.7rem;
-  margin-bottom: -2rem;
-  min-width: calc(768px - 2rem);
-  glyph-orientation-vertical: 90deg;
+  /* float: left; */
+  /* min-width: calc(768px - 2rem); */
   text-align: left;
+  position: relative;
+  /* top: 0rem; */
   opacity: 0.5;
+  padding: 0;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
 }
 
 .kneeboard #logo {
-  position: absolute;
-  top: 975px;
+  position: fixed;
+  transform: translateY(calc(1024px - 60px));
+  /* left: calc(var(--width) - 200px); */
   width: 200px;
   /* background-color: #293949; */
   /* border-radius: 2rem 0 0 0; */
-  padding: 1rem;
+  /* padding: 1rem; */
   margin: 0;
+  margin-left: calc(var(--width) - 220px);
   /* margin-left: -1rem; */
-  left: calc(768px - 200px);
+  /* left: calc(768px - 200px); */
   opacity: var(--logo);
+}
+
+.kneeboard #content {
+  margin: 0;
+  padding: var(--spacing);
+  opacity: var(--opacity);
 }
 
 .kneeboard #content h4.center {
@@ -171,11 +257,27 @@
 }
 
 .kneeboard #content .kneeboard-section {
-  margin-top: var(--spacing);
-  margin-bottom: var(--spacing);
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
+  clear: both;
+  page-break-before: auto;
+  page-break-after: auto;
+  page-break-inside: avoid;
+  break-before: auto;
+  break-after: auto;
+  break-inside: avoid;
 }
 
+.kneeboard div.spacer { 
+  padding-bottom: 5rem;
+}
 
+.kneeboard #content > .kneeboard-section:nth-child(0) {
+  margin: 5rem !important;
+  padding: 5rem;
+  background-color: red;
+}
+/* document.querySelector("#friendlies > ul:nth-child(4) > li:nth-child(2)") */
 .kneeboard #content .center {
   text-align: center;
   font-weight: 600;
@@ -186,26 +288,28 @@
 
 
 .kneeboard #capture {
-  width: 768px;
+  width: var(--width);
   height: 1024px;
   margin: 0;
   padding: 0;
+  display: block;
   background: var(--bg-color);
 
   background: var(--bg-image);
 
-  background-size: 100% 100%;
+  background-size: var(--width) 1024px;
   background-repeat: repeat;
   border: none;
-  overflow: hidden;
-}
-
-.kneeboard #content {
-  margin: var(--margin);
-  padding: 0rem;
-  opacity: var(--opacity);
+  overflow-y: scroll;
 
 }
+
+.kneeboard .render-pdf {
+  height: auto !important;
+  overflow-y: visible !important;
+}
+
+
 
 .kneeboard #mask {
   margin: var(--margin);
@@ -220,12 +324,8 @@
   opacity: 1;
   z-index: 100000;
   height: 1024px;
-  width: 768px;
+  width: var(--width);
   pointer-events: none;
-}
-
-.kneeboard #capture {
-  overflow-y: scroll;
 }
 
 .kneeboard #content .hidden {

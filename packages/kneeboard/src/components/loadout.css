@@ -1,6 +1,6 @@
 
 #content #loadout {
-  white-space: break-spaces;
+  /* white-space: break-spaces; */
   text-align: left;
 }
 
@@ -9,7 +9,7 @@
   -webkit-columns: 2;
   -moz-columns: 2;
   margin: 0;
-  line-height: 0.5rem;
+  margin-top: 0.5rem;
   list-style: numeric;
 }
 

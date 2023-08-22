@@ -102,18 +102,18 @@ export function createKneeboard(element) {
   const HTML = `
   <div id="capture">
   <img src="img/dcs web editor.png" id="logo"/>
-    <div id="mask"></div>
-    <div id="content">
+    <div id="mask" class="no-print"></div>
+    <div id="content" name="">
       <span id="dwv-info">D C S &nbsp; W E B &nbsp; E D I T O R</span>
-      ${
-        // Add component templates
-        registeredComponents.map(component => `<div class="kneeboard-section" id="${component.id}"></div>`).join('\n')
-      }          
-      
+        ${
+          // Add component templates
+          registeredComponents.map(component => `<div class="${component.template === false ? '' : 'kneeboard-section' }" id="${component.id}"></div>`).join('\n')
+        }          
+        <div class="spacer kneeboard-section"></div>  
     </div>
   </div>
   
-  <div class="controls">
+  <div class="controls no-print">
       
     ${
       // Add control buttons
@@ -167,6 +167,8 @@ export function renderKneeboard(unitName: string, groupName: string, category: s
     group,
     unit,
   }
+
+  document.querySelector('#content')?.setAttribute('name', unitName);
 
   const storedTheme = load('theme') || 'default';
   setTimeout(() => switchTheme({ target: {value: storedTheme }}), 10);

@@ -18,16 +18,17 @@ const options = [
 
 const component: Component = {
   id: 'spacing-select',
+  template: false,
   control: `<label for="spacingSelect">Spacing</label><select name="spacingSelect" id="spacing-select-control">
   ${
     options.map(o => {
-      return `<option value="${o.value}" ${load('spacing') || 'NORMAL'  === o.value ? 'selected' : ''}>${o.label}</option>`
+      return `<option value="${o.value}" ${(load('spacing') || 'NORMAL')  === o.value ? 'selected' : ''}>${o.label}</option>`
     })
   }
 </select>`,
   render: (c: Context) => {
     const select = document.getElementById('spacing-select-control')!;
-    document.querySelector('.kneeboard')!.setAttribute('data-spacing', load('spacing') || 'NORMAL');
+    document.querySelector('.kneeboard')!.setAttribute('data-spacing', (load('spacing') || 'NORMAL'));
 
     select.addEventListener('change', selectionHandler)
     return '';

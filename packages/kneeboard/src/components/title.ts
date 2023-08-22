@@ -1,6 +1,7 @@
 import { translate } from '@dcs-web-editor-mono/utils'
 
 import { Component, Context } from "..";
+import './title.css'
 
 const component: Component = {
   id: 'title',

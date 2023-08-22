@@ -1,14 +1,12 @@
-#content #date {
+#content #title {
   /* float: left; */
   /* margin-bottom: -1rem;
   margin-top: 2rem; */
   /* min-width: calc(768px - var(--margin) * 2); */
-  text-align: right;
-  position: relative;
   margin: 0 !important;
   padding: 0 !important;
   
-  margin-bottom: -1rem;
-  margin-top: -1rem;
+  /* margin-bottom: -1rem; */
+  margin-top: -1rem !important;
 
 }

@@ -23,7 +23,7 @@ const options = [
 
 const component: Component = {
   id: 'coordinate-select',
-  template: '<div id="coordinate-select"></div>',
+  template: false,
   control: `<select name="coordinateSelect" id="coordinate-select-control" title="Warning: changing coordinate system will reset user input">
   ${
     options.map(o => {

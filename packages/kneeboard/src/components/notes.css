@@ -4,7 +4,3 @@
   font-family: var(--font-family);
   color: var(--primary-color);
 }
-
-.kneeboard #notes div.spacer { 
-  margin-bottom: 3rem;
-}

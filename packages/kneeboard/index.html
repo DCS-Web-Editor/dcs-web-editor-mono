@@ -5,19 +5,21 @@
   <title>DEMO: DCS Web Editor Kneeboard</title>
   <meta charset="UTF-8" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" type="text/css" href="src/styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script type="module" src="src/demo.ts"></script>
 </head>
 
-<body style="margin: 0; padding: 0;">
-  <div class="center" style="position: absolute; left: 12rem; padding: 2rem;">
+<body style="margin: 0; padding: 0;" class="">
+  <div class="center demo">
     <div class="kneeboard">
       <!-- injected -->
     </div>
 
   </div>
 
-  <select id="demo-select" style="position: fixed; right: 0; top: 0; padding: 1rem; background-color:gold;">
+  <select id="demo-select" style="position: fixed; right: 0; top: 0; padding: 1rem; background-color:gold;" class="no-print">
     <option value="Apache">Apache</option>
     <option value="UH60">UH-60</option>
     <option value="Sead">Sead</option>

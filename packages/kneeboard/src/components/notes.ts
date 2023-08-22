@@ -6,8 +6,7 @@ const component: Component = {
 
   render: (c: Context) => {
     return `<h4 class="center">N O T E S</h4>
-    <div contenteditable>Click to edit your notes...</div>
-    <div class="spacer"></div>`
+    <div contenteditable>Click to edit your notes...<br><br></div>`
   },
 }
 

@@ -5,7 +5,7 @@ import { load, save } from '../../cache';
 const component: Component = {
   id: 'theme-select',
 
-  template: '<div id="theme-select"></div>',
+  template: false,
 
   control: `<div>
 <label>Theme</label>
@@ -14,8 +14,11 @@ const component: Component = {
   <option value="dark">Xerox dark</option>
   <option value="modern">Modern light</option>
   <option value="modern_dark">Modern dark</option>
-  <option value="ww2">WW II</option>
+  <option value="ww2">WW II USAF</option>
+  <option value="ww2army">WW II ARMY CORPS</option>
+  <option value="ww2luftwaffe">WW II LUFTWAFFE</option>
   <option value="nam">Nam 70s</option>
+  <option value="namnoframe">Nam No Frame</option>
   <option value="90s">90s</option>
   <option value="cyber">Cyber</option>
   <option value="ace">ACE Combat</option>

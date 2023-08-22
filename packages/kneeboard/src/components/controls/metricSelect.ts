@@ -15,7 +15,7 @@ const options = [
 
 const component: Component = {
   id: 'metric-select',
-  template: '<div id="metric-select"></div>',
+  template: false,
   control: `<select name="metricSelect" id="metric-select-control" title="Warning: changing units will reset user input">
   ${
     options.map(o => {
