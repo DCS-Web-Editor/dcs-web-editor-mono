@@ -51,6 +51,7 @@ import tanker from './components/tanker';
 import carrier from './components/carrier';
 import waypoints from './components/waypoints/waypoints';
 import waypointProfile from './components/waypointProfile';
+import waypointDistanceProfile from './components/waypointDistanceProfile';
 import notes from './components/notes';
 import { load } from "./cache";
 
@@ -91,6 +92,7 @@ export function register(...components:Component[]) {
     radio,
     waypoints,
     waypointProfile,
+    waypointDistanceProfile,
     notes,
   )
 })();

@@ -61,31 +61,34 @@ export function switchTheme(e) {
 }
 
 export function refreshChart() {
-  if (window.waypointChart) {
-      const color = primaryColor();
-      Chart.defaults.font.family = fontFamily();
-      Chart.defaults.color = color;
-
-      window.waypointChart.options.color = color;
-      window.waypointChart.options.font.family = fontFamily();
-
-      window.waypointChart.options.scales.x.title.color = color;
-      window.waypointChart.options.scales.x.ticks.color = color;
-
-      window.waypointChart.options.scales.y1.title.color = color;
-      window.waypointChart.options.scales.y1.ticks.color = color;
-
-      window.waypointChart.options.scales.y2.title.color = color;
-      window.waypointChart.options.scales.y2.ticks.color = color;
-
-      window.waypointChart.data.datasets[0].borderColor = color;
-      window.waypointChart.data.datasets[0].fill.above = secondaryColor();
-
-      window.waypointChart.data.datasets[1].borderColor = color;
-      window.waypointChart.update();
-  }
+  if (window.waypointChart) updateChartColors(window.waypointChart);
+  if (window.distanceChart) updateChartColors(window.distanceChart);
 }
 
 
 
 
+
+function updateChartColors(c) {
+  const color = primaryColor();
+  Chart.defaults.font.family = fontFamily();
+  Chart.defaults.color = color;
+
+  c.options.color = color;
+  c.options.font.family = fontFamily();
+
+  c.options.scales.x.title.color = color;
+  c.options.scales.x.ticks.color = color;
+
+  c.options.scales.y1.title.color = color;
+  c.options.scales.y1.ticks.color = color;
+
+  c.options.scales.y2.title.color = color;
+  c.options.scales.y2.ticks.color = color;
+
+  c.data.datasets[0].borderColor = color;
+  c.data.datasets[0].fill.above = secondaryColor();
+
+  c.data.datasets[1].borderColor = color;
+  c.update();
+}

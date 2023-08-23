@@ -26,9 +26,12 @@ interface Point {
   altitude?: string;
   heading?: number;
   distance?: number;
+  track?: number;
   time?: number;
   cspeed?: number;
 }
+
+let track = 0;
 
 export function getWaypoints(group: any, mission: any, dictionary: any) {
   
@@ -38,7 +41,8 @@ export function getWaypoints(group: any, mission: any, dictionary: any) {
   const points = group.route.points;
 
   let previousPoint: Point;
-  
+  track = 0;
+
   // convert all waypoints
   return points.map((point: Point) => {
     setDefaults(point, dictionary);
@@ -103,10 +107,16 @@ function convertSpeed(point: Point) {
 }
 
 function calculateDistance(point: Point, prevPoint:Point) {
-  if (!prevPoint) return;
+  if (!prevPoint) {
+    point.distance = 0;
+    point.track = 0;
+    return;
+  };
   const nm = calcDistance(point as LatLon, prevPoint as LatLon); // nm
-  const distances = calculator.distance(nm / KM_TO_NM);
-  point.distance = distances;
+  const distance = calculator.distance(nm / KM_TO_NM);
+  point.distance = distance;
+  track += distance;
+  point.track = track;
 }
 
 function calculateHeading(point: Point, prevPoint:Point) {
