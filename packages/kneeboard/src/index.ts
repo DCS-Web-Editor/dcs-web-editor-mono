@@ -4,8 +4,8 @@ import _ from 'lodash';
 
 
 export interface Component {
-  template: string,
-  render: (c: Context) => string,
+  template?: boolean,
+  render: (c: Context) => string | Promise<any>,
   id: string,
   control?: string,
 }
@@ -32,6 +32,7 @@ import metricSelect from './components/controls/metricSelect';
 import coordinateSelect from './components/controls/coordinateSelect';
 import spacingSelect from './components/controls/spacingSelect';
 import screenshot from './components/controls/screenshot';
+import downloadAll from './components/controls/downloadAll';
 
 // Components
 import date from './components/date';
@@ -71,6 +72,7 @@ export function register(...components:Component[]) {
     coordinateSelect,
     spacingSelect,
     screenshot,
+    downloadAll,
     
     // Components
     date,
@@ -123,8 +125,8 @@ export function createKneeboard(element) {
     ${
       // Add control checkbox toggles
       registeredComponents.map(component => {
-        const { id, control} = component;
-        if (control) return '';
+        const { id, control, template} = component;
+        if (template === false) return '';
         
         return `
           <label for="checkbox-${id}">
@@ -142,7 +144,9 @@ export function createKneeboard(element) {
 }
 
 
-export function renderKneeboard(unitName: string, groupName: string, category: string, countryName: string, coalitionName: string, mission: any, dictionary: any) {
+export function renderKneeboard(unitName: string, groupName: string, category: string, countryName: string, coalitionName: string, mission: any, dictionary: any, options = {}) {
+  // console.log(unitName, groupName, category, countryName, coalitionName, !!mission, !!dictionary);
+  
   
   const coalition = mission.coalition[coalitionName]
   const countries = coalition.country;
@@ -174,23 +178,25 @@ export function renderKneeboard(unitName: string, groupName: string, category: s
   setTimeout(() => switchTheme({ target: {value: storedTheme }}), 10);
 
   // render all registered components
-  setTimeout(() => renderRegisteredComponents(context), 10);
+  setTimeout(() => renderRegisteredComponents(context, options.noControls), 10);
 
   return refresh;
 }
 
 export function refresh() {
-  // console.log('refresh');
+  // console.debug('refresh');
   
-  // createKneeboard(_root);
   setTimeout(() => renderRegisteredComponents(context), 10);
 }
 
-function renderRegisteredComponents(c: Context) {
+function renderRegisteredComponents(c: Context, noControls = false) {
   registeredComponents.forEach(component => {
-    render(component.id, component.render(c));
+    if (component.template !== false || noControls === false) {
+      render(component.id, component.render(c));
+    }
 
-    if (!component.control) {
+    // add toggle event listeners
+    if (component.template !== false) {
       const toggle = document.querySelector(`input[name="${component.id}"]`)!;
       toggle.addEventListener('change', toggleHandler);
     }
@@ -205,8 +211,9 @@ function toggleHandler(e: Event) {
   else section.classList.add('hidden');
 }
 
-function render(id: string, value: string) {
-  document.getElementById(id)!.innerHTML = value;
+async function render(id: string, value: string | Promise<any>) {
+  if ((value as Promise<any>)?.then) value = await value;
+  document.getElementById(id)!.innerHTML = value as string;
 }
 
 

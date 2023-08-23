@@ -1,0 +1,9 @@
+.controls .button-group {
+  background-color: #555;
+  padding: 0.3rem 0.5rem 0.3rem 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.controls #download-all-button {
+  background-color: goldenrod;
+}

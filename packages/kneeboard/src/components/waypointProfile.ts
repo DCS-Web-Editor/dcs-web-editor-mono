@@ -1,5 +1,4 @@
 
-import { MS_TO_KTS, M_TO_FEET } from '@dcs-web-editor-mono/utils'
 import { Component, Context } from "..";
 import './waypointProfile.css';
 import { fontFamily, primaryColor, secondaryColor } from '../colors';
@@ -14,9 +13,13 @@ const component: Component = {
 
   render: (c: Context) => {
     const {group} = c;
+    const id = 'waypoint-chart';
+
+    // remove previous
+    destroyChart(id);
     
     // delay render to make sure element is present
-    setTimeout(() => createLineChart(group, 'waypoint-chart'), 10);
+    setTimeout(() => createLineChart(group, id), 1000);
     
     return `<h4 class="center">W A Y P O I N T &nbsp; P R O F I L E</h4>
     <canvas id="waypoint-chart"></canvas>`;
@@ -26,6 +29,19 @@ const component: Component = {
 export default component;
 
 
+
+function destroyChart(id: string) {
+  // console.log('destroyChart', id);
+  
+  
+  const chart = Chart.getChart(id);
+  if (chart) chart.destroy();
+
+  window.waypointChart?.destroy();
+  delete window.waypointChart;
+
+  document.getElementById(id)?.remove();
+}
 
 function createLineChart(group: any, elementId: string) {
   const { points } = group.route;

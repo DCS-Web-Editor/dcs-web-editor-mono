@@ -41,6 +41,15 @@ const DEMOS = {
     coalitionName: 'blue',
     category: 'plane',
   },
+  SeadMig: {
+    mission: missionSead,
+    dictionary: dictionarySead,
+    unitName: 'Bandit-1-1',
+    groupName: 'Bandit-1',
+    countryName: 'CJTF Red',
+    coalitionName: 'red',
+    category: 'plane',
+  },
   UH60: {
     mission: missionApache,
     dictionary: dictionaryApache,
