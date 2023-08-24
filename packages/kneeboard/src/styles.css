@@ -104,18 +104,16 @@
   text-align: left !important;
   overflow: hidden;
 }
-[data-spacing="TABLE"] #date {
-  background-color: var(--secondary-color);
-  position: relative !important;
-  float: right;
-  width: 6rem;
-  right: 0rem !important;
-  text-align: left !important;
-  font-style: bold;
-}
+
 [data-spacing="TABLE"] .kneeboard-section {
   border-top: 1px dotted var(--primary-color);
   margin-bottom: 1px;
+}
+[data-spacing="TABLE"] #title.kneeboard-section {
+  border-top: none;
+  top: -0.6rem;
+  height: 1rem !important;
+  margin-bottom: -0.6rem;
 }
 [data-spacing="TABLE"] .kneeboard-section ul {
   margin-bottom: 1px !important;
@@ -309,9 +307,11 @@
   /* top: 0rem; */
   opacity: 0.5;
   padding: 0;
-  margin-top: -1rem;
-  margin-bottom: -1rem;
+  top: 0;
+  margin-bottom: -1rem !important;
 }
+
+
 
 .kneeboard #logo {
   position: fixed;

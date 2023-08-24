@@ -11,7 +11,7 @@ const options = [
     value: 'CONDENSED',
   },
   {
-    label: 'Normal',
+    label: 'Spaced',
     value: 'NORMAL',
   },
   {
@@ -26,13 +26,13 @@ const component: Component = {
   control: `<label for="spacingSelect">Layout</label><select name="spacingSelect" id="spacing-select-control">
   ${
     options.map(o => {
-      return `<option value="${o.value}" ${(load('spacing') || 'NORMAL')  === o.value ? 'selected' : ''}>${o.label}</option>`
+      return `<option value="${o.value}" ${(load('spacing') || 'TABLE')  === o.value ? 'selected' : ''}>${o.label}</option>`
     })
   }
 </select>`,
   render: (c: Context) => {
     const select = document.getElementById('spacing-select-control')!;
-    document.querySelector('.kneeboard')!.setAttribute('data-spacing', (load('spacing') || 'NORMAL'));
+    document.querySelector('.kneeboard')!.setAttribute('data-spacing', (load('spacing') || 'TABLE'));
 
     select.addEventListener('change', selectionHandler)
     return '';

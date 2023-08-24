@@ -6,6 +6,7 @@
   margin: 0 !important;
   padding: 0 !important;
   width: auto;
+  position: relative;
   
   
   /* margin-top: -4rem !important; */
@@ -14,8 +15,8 @@
 }
 
 #content #title span.title {
-  position: relative;
-  top: -0.5rem;
+  /* position: relative; */
+  /* top: -0.5rem; */
   /* margin-bottom: -2rem !important; */
   /* width: auto; */
   text-align: center;

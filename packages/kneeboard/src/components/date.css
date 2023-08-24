@@ -8,8 +8,17 @@
   top: 0;
   margin: 0 !important;
   padding: 0 !important;
+  font-weight: bold;
   
-  margin-bottom: -1rem !important;
-  margin-top: -1rem;
+  height: var(--font-size);
+  margin-top: calc(var(--font-size) * -1) !important;
+}
 
+
+[data-spacing="TABLE"] #content #date {
+  background-color: var(--secondary-color);
+  float: right;
+  width: 5.8rem;
+  padding-left: 0.2rem !important;
+  text-align: left !important;
 }
