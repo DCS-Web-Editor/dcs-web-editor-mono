@@ -35,6 +35,7 @@
 .kneeboard .handsontable .htCore tr {
   background-color: transparent !important;
   color: var(--primary-color);
+
 }
 .kneeboard #waypoints-table.handsontable .htCore tr:last-child {
   background-color: transparent !important;
@@ -45,6 +46,7 @@
 
 .kneeboard .handsontable .htCore tr td{
   background-color: transparent !important;
+  border-color: var(--secondary-color) !important;
   color: var(--primary-color);
   padding: 0px 2px;
   margin: 0;
@@ -54,6 +56,7 @@
 .kneeboard .handsontable .htCore th{
   font-weight: 600;
   background-color: transparent !important;
+  border-color: var(--secondary-color) !important;
   color: var(--primary-color);
   padding: 0;
   margin: 0;
