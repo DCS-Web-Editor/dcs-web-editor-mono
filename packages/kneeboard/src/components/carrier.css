@@ -1,3 +1,8 @@
+#content #carrier.kneeboard-section {
+  flex-shrink: 4;
+  flex-basis: 40%;
+  flex-grow: 2;
+}
 #content #carrier ul {
   margin: 0;
   padding: 0;
@@ -8,16 +13,16 @@
   /* flex-direction: row; */
   /* flex-wrap: wrap; */
   margin-bottom: 0.5rem;
-
+  
 }
 #content #carrier ul li {
   /* line-height: 9px; */
   /* height: 1rem; */
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   padding: 0;
   /* padding-left: 0.5rem; */
   text-align: left;
-  white-space:break-spaces;
+  
   
 
 }

@@ -1,24 +1,11 @@
 #content #title {
-  /* float: left; */
-  /* margin-bottom: -1rem;
-  margin-top: 2rem; */
-  /* min-width: calc(768px - var(--margin) * 2); */
   margin: 0 !important;
   padding: 0 !important;
   width: auto;
   position: relative;
-  
-  
-  /* margin-top: -4rem !important; */
-  /* margin-bottom: -1rem; */
-  
 }
 
 #content #title span.title {
-  /* position: relative; */
-  /* top: -0.5rem; */
-  /* margin-bottom: -2rem !important; */
-  /* width: auto; */
   text-align: center;
   font-size: calc(var(--font-size) * 1.3);
 }

@@ -3,6 +3,10 @@ import { load, save } from "../../cache";
 
 const options = [
   {
+    label: 'Flex',
+    value: 'FLEX',
+  },
+  {
     label: 'Table',
     value: 'TABLE',
   },

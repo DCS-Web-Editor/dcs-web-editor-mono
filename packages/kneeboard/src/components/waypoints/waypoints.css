@@ -1,3 +1,9 @@
+
+.kneeboard #waypoints.kneeboard-section {
+  flex-basis: 100%;
+}
+
+
 /*
   A stylesheet customizing Handsontable style
 */
@@ -7,7 +13,6 @@
   font-size: calc(var(--font-size) - 2px);
   /* font-weight: 600; */
   color: var(--primary-color);
-
 }
 
 

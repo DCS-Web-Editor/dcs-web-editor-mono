@@ -1,7 +1,10 @@
 
 .kneeboard #weather {
-  white-space: pre-wrap;
+  white-space: break-spaces;
   text-align: left;
+  flex-basis: 40%;
+  flex-shrink: 2;
+  flex-grow: 1;
 }
 
 .kneeboard #weather span.label {

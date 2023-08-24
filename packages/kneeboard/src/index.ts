@@ -53,7 +53,7 @@ import waypoints from './components/waypoints/waypoints';
 import waypointProfile from './components/waypointProfile';
 import waypointDistanceProfile from './components/waypointDistanceProfile';
 import notes from './components/notes';
-import { load } from "./cache";
+import { load, save } from "./cache";
 
 
 
@@ -82,8 +82,8 @@ export function register(...components:Component[]) {
     coalitionTask,
     unit,
     group,
-    friendlies,
     bullseye,
+    friendlies,
     awacs,
     tanker,
     carrier,
@@ -129,10 +129,12 @@ export function createKneeboard(element) {
       registeredComponents.map(component => {
         const { id, control, template} = component;
         if (template === false) return '';
+
+        const checked = load('hidden-'+ id) ? '' : 'checked';
         
         return `
           <label for="checkbox-${id}">
-            <input name="${id}" id="checkbox-${id}" checked="true" type="checkbox" />
+            <input name="${id}" id="checkbox-${id}" ${checked} type="checkbox" />
             ${_.startCase(id)}
           </label>
         `
@@ -188,7 +190,7 @@ export function renderKneeboard(unitName: string, groupName: string, category: s
 export function refresh() {
   // console.debug('refresh');
   
-  setTimeout(() => renderRegisteredComponents(context), 10);
+  setTimeout(() => renderRegisteredComponents(context, true), 10);
 }
 
 function renderRegisteredComponents(c: Context, noControls = false) {
@@ -201,6 +203,7 @@ function renderRegisteredComponents(c: Context, noControls = false) {
     if (component.template !== false) {
       const toggle = document.querySelector(`input[name="${component.id}"]`)!;
       toggle.addEventListener('change', toggleHandler);
+      if (load('hidden-'+ component.id)) document.getElementById(component.id)?.classList.add('hidden');
     }
   });
 }
@@ -211,6 +214,8 @@ function toggleHandler(e: Event) {
 
   if (checked) section.classList.remove('hidden');
   else section.classList.add('hidden');
+
+  save('hidden-' + name, !checked);
 }
 
 async function render(id: string, value: string | Promise<any>) {

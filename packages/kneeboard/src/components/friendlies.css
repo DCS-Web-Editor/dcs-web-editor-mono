@@ -1,3 +1,9 @@
+#content #friendlies.kneeboard-section {
+  flex-basis: 70%;
+  flex-shrink: 0;
+  flex-grow: 100;
+}
+
 #content #friendlies ul {
   margin: 0;
   padding: 0;

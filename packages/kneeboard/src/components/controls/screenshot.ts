@@ -11,12 +11,15 @@ const component: Component = {
   render: (c: Context) => {
     const pngButton = document.querySelector("#screenshot-button")!;
     
-    pngButton.addEventListener('click', () => {
+    pngButton.addEventListener('click', downloadPng);
+    pngButton.addEventListener('click', downloadPng);
+    
+    function downloadPng() {
       const capture = document.querySelector("#capture")!;
       html2canvas(capture).then(canvas => {
         canvas.toBlob(blob => window.open(URL.createObjectURL(blob), '_blank'));
       });
-    });
+    }
 
     const pdfButton = document.querySelector("#pdf-button")!;
     pdfButton.addEventListener("click", () => makePdf());

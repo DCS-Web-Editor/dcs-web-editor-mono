@@ -1,3 +1,9 @@
+#content #tanker.kneeboard-section {
+  flex-basis: 20%;
+  flex-grow: 4;
+  flex-shrink: 4;
+}
+
 #content #tanker ul {
   margin: 0;
   padding: 0;
@@ -8,9 +14,9 @@
   /* flex-direction: row; */
   /* flex-wrap: wrap; */
   margin-bottom: 0.5rem;
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+  columns: auto;
+  -webkit-columns: auto;
+  -moz-columns: auto;
 
 }
 #content #tanker ul li {

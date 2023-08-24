@@ -139,7 +139,7 @@ demoSelect?.addEventListener('change', () => {
   demo = DEMOS[demoSelect.value];
   save('demo', demoSelect.value);
 
-  renderKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary);  
+  renderKneeboard(demo.unitName, demo.groupName, demo.category, demo.countryName, demo.coalitionName, demo.mission, demo.dictionary,  {noControls: true});  
   
 })
 

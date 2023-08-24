@@ -4,6 +4,7 @@ import { convertCoordinates } from "./waypoints/waypointConverter";
 import { Component, Context } from "..";
 import { activeMap } from "@dcs-web-editor-mono/map-projection";
 import calculator from "../calculator";
+import './bullseye.css';
 
 const component: Component = {
   id: 'bullseye',

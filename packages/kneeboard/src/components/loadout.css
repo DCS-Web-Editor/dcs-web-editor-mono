@@ -1,4 +1,9 @@
 
+#content #loadout.kneeboard-section {
+  flex-basis: 40%;
+  flex-grow: 100;
+  flex-shrink: 2;
+}
 #content #loadout {
   /* white-space: break-spaces; */
   text-align: left;

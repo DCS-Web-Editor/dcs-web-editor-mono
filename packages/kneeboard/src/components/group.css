@@ -1,3 +1,7 @@
+#content #group.kneeboard-section {
+  flex-basis: 30%;
+  flex-grow: 1;
+}
 #content #group span.callsign {
   letter-spacing: 0.1rem;
   text-transform: uppercase;

@@ -1,3 +1,7 @@
+#content #awacs.kneeboard-section {
+  flex-basis: 20%;
+}
+
 #content #awacs ul {
   margin: 0;
   padding: 0;

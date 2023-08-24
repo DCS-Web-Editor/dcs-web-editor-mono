@@ -1,8 +1,4 @@
 #content #date {
-  /* float: left; */
-  /* margin-bottom: -1rem;
-  margin-top: 2rem; */
-  /* min-width: calc(768px - var(--margin) * 2); */
   text-align: right;
   position: relative;
   top: 0;
@@ -11,7 +7,7 @@
   font-weight: bold;
   
   height: var(--font-size);
-  margin-top: calc(var(--font-size) * -1) !important;
+  margin-bottom: calc(var(--font-size) * -1) !important;
 }
 
 
@@ -21,4 +17,14 @@
   width: 5.8rem;
   padding-left: 0.2rem !important;
   text-align: left !important;
+}
+
+[data-spacing="FLEX"] #content #date {
+  /* position: static !important; */
+  background-color: var(--secondary-color);
+  width: 0;
+  min-width: 5rem;
+  height: auto;
+  text-align: left;
+  margin: 0 !important;
 }

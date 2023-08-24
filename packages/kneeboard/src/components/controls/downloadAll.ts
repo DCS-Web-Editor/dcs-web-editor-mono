@@ -79,6 +79,7 @@ const component: Component = {
 
     const downloadAll = document.querySelector("#download-all-button")!;
     
+    downloadAll.removeEventListener("click", () => allClients());
     downloadAll.addEventListener("click", () => allClients());
     
     

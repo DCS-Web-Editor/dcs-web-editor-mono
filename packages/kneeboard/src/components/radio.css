@@ -1,3 +1,9 @@
+#content #radio.kneeboard-section {
+  flex-basis: 10%;
+  flex-grow: 100;
+  flex-shrink: 3;
+}
+
 #content div#radio {
   /* white-space: break-spaces; */
   text-align: left;
