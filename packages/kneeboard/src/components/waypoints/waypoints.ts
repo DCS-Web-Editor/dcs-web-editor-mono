@@ -1,9 +1,10 @@
 import Handsontable from "handsontable";
-import './waypoints.css';
+import { HyperFormula } from 'hyperformula';
 import { speedFormat, distanceFormat, latLonFormat } from "./waypointFormats";
 import { Component, Context } from "../..";
 import { getWaypoints } from "./waypointConverter";
 
+import './waypoints.css';
 
 const component: Component = {
   id: 'waypoints',
@@ -16,7 +17,7 @@ const component: Component = {
 
     // delay render to make sure element is present
     setTimeout(() => {
-      const instance: Handsontable = createWaypointTable(waypointData, '#waypoints-table');
+      const instance: Handsontable = createWaypointTable(waypointData, '#waypoints-table', group.route?.points);
       csvExport(instance);
     }, 10);
 
@@ -48,9 +49,30 @@ function csvExport(instance: Handsontable) {
   });
 }
 
-function createWaypointTable(data: any[], id: string) {
+function createWaypointTable(data: any[], id: string, points: any[]) {
   const table = document.querySelector(id)!;
   if (!table) throw new Error('Could not find table element: ' + id);
+  const {maxAltitude, ETA} = points[points.length - 1];
+  
+  const totalTime =  new Date(Math.round(ETA * 1000)).toISOString().split('T')[1].slice(0,8);;
+
+
+  data.push([
+    "",
+    "",
+    maxAltitude + ' MAX',
+    null,
+    null,
+    '🢤∑',
+    totalTime,
+    "🢤 Duration",
+    null,
+    null,
+    null,
+    null,
+    ""
+])
+  
 
   const instance = new Handsontable(table, {
     data,
@@ -86,7 +108,7 @@ function createWaypointTable(data: any[], id: string) {
         numericFormat: speedFormat,
         readOnly: false,
       },
-      { type: "time", timeFormat: 'hh:mm:ss', correctFormat: true },
+      { type: "text"},
       { type: "text" },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
@@ -108,7 +130,34 @@ function createWaypointTable(data: any[], id: string) {
     filters: false,
     rowHeaders: false,
     manualRowMove: false,
-    licenseKey: "non-commercial-and-evaluation"
+    licenseKey: "non-commercial-and-evaluation",
+    columnSummary: [
+      {
+        //speed
+        sourceColumn: 3,
+        destinationRow: 0,
+        destinationColumn: 3,
+        reversedRowCoords: true,
+        type: 'max',
+        forceNumeric: true,
+      },
+      {
+        // distance
+        sourceColumn: 4,
+        destinationRow: 0,
+        destinationColumn: 4,
+        reversedRowCoords: true,
+        type: 'sum',
+        forceNumeric: true
+      },
+      // {
+      //   // heading
+      //   destinationRow: 0,
+      //   destinationColumn: 5,
+      //   reversedRowCoords: true,
+      //   type: 'average',
+      // },
+    ]
   });
 
   instance.validateCells();

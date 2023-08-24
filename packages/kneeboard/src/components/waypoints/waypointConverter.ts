@@ -24,6 +24,7 @@ interface Point {
   lat?: number;
   lon?: number;
   altitude?: string;
+  maxAltitude?: number;
   heading?: number;
   distance?: number;
   track?: number;
@@ -32,6 +33,7 @@ interface Point {
 }
 
 let track = 0;
+let maxAltitude = 0;
 
 export function getWaypoints(group: any, mission: any, dictionary: any) {
   
@@ -42,6 +44,7 @@ export function getWaypoints(group: any, mission: any, dictionary: any) {
 
   let previousPoint: Point;
   track = 0;
+  maxAltitude = 0;
 
   // convert all waypoints
   return points.map((point: Point) => {
@@ -93,11 +96,13 @@ export function convertCoordinates(point: Point) {
 }
 
 function convertTime(point: Point, start_time: number) {
-  point.time = Math.round(point.ETA * 1000) + (start_time * 1000) + 1;
+  const s = Math.round(point.ETA + start_time  ) * 1000 + 1
+  point.time = new Date(s).toISOString().split('T')[1].slice(0,8);
 }
 
 function convertAlt(point: Point) {
   const alt = Math.round(calculator.altitude(point.alt));
+  point.maxAltitude = maxAltitude = alt > maxAltitude ? alt : maxAltitude;
   point.altitude = alt + (point.alt_type === 'BARO' ? ' MSL' : ' AGL');
 }
 

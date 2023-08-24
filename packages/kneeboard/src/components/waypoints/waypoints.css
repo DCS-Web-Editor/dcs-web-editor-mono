@@ -37,6 +37,12 @@
   background-color: transparent !important;
   color: var(--primary-color);
 }
+.kneeboard #waypoints-table.handsontable .htCore tr:last-child {
+  background-color: transparent !important;
+  /* color: var(--primary-color); */
+  /* opacity: 0.7; */
+  font-weight: bold;
+}
 
 .kneeboard .handsontable .htCore tr td{
   background-color: transparent !important;
