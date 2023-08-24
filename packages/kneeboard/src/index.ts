@@ -69,9 +69,9 @@ export function register(...components:Component[]) {
     
     // Controls
     themeSelect,
+    spacingSelect,
     metricSelect,
     coordinateSelect,
-    spacingSelect,
     screenshot,
     downloadAll,
     

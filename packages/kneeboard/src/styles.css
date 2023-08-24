@@ -126,8 +126,12 @@
 }
 
 [data-spacing="CONDENSED"] {
-  --spacing: 0rem;
+  --spacing: 0.1rem;
   --letter-spacing: 0.3rem;
+}
+[data-spacing="CONDENSED"] h4.center{
+  background-color: var(--secondary-color);
+  text-align: left !important;
 }
 
 [data-spacing="NORMAL"] {
