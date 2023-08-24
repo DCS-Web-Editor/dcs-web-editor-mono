@@ -8,7 +8,7 @@ const component: Component = {
 
   render: (c: Context) => {
     const {unit} = c;
-    const title = `<h4 class="center">R A D I O</h4>`;
+    const title = `<h4 class="center">RADIO</h4>`;
     const table = `<div id="radio-table"></div>`;
     if (!unit.Radio) return title + '<span>No Channels</span>';
 
@@ -20,7 +20,7 @@ const component: Component = {
     
     setTimeout(() => createRadioTable(data, '#radio-table'), 10);
 
-    return title + table + 'AM, ∿ = FM';
+    return title + 'AM, ∿ = FM' + table ;
   },
 }
 

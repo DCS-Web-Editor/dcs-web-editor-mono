@@ -9,8 +9,8 @@
   -webkit-columns: 2;
   -moz-columns: 2;
   margin: 0;
-  margin-top: 0.5rem;
-  list-style: numeric;
+  /* margin-top: 0.5rem; */
+  list-style: none;
 }
 
 #content #loadout ul li {

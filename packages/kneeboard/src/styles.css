@@ -72,6 +72,7 @@
 
 :root {
   --primary-color: #544b82;
+  --primary-rgb: 84, 75, 130;
   --secondary-color: #544b8266;
   --bg-color: rgb(243,243,240);
   --bg-image: url('/img/paper2.png');
@@ -83,13 +84,15 @@
   /* --margin-mask: 1rem; */
   --spacing: 1rem;
   --width: 768px;
-
+  --letter-spacing: 1rem;
+  
   --controls-color: rgb(223,213,213);
   --controls-bg-color: #1d2730;
 }
 
 [data-spacing="TABLE"] {
   --spacing: 0rem;
+  --letter-spacing: 3px;
 }
 [data-spacing="TABLE"] h4.left, [data-spacing="TABLE"] h4.center {
   background-color: var(--secondary-color);
@@ -115,12 +118,16 @@
   margin-bottom: 1px;
 }
 [data-spacing="TABLE"] .kneeboard-section ul {
-  
   margin-bottom: 1px !important;
+}
+[data-spacing="TABLE"] .kneeboard-section ul li {
+  /* border-left: 1px solid var(--primary-color); */
+  border-right: 1px solid var(--secondary-color);
 }
 
 [data-spacing="CONDENSED"] {
   --spacing: 0rem;
+  --letter-spacing: 0.3rem;
 }
 
 [data-spacing="NORMAL"] {
@@ -326,11 +333,14 @@
 .kneeboard #content h4 {
   margin-top: var(--spacing) !important;
   margin-bottom: var(--spacing) !important;
-  height: var(--font-size);
+  /* height: calc(var(--font-size) + 2px); */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .kneeboard #content h4.center {
   text-align: center;
+  letter-spacing: var(--letter-spacing);
 }
 
 .kneeboard #content h4.left {

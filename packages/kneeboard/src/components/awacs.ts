@@ -5,7 +5,7 @@ const component: Component = {
   id: 'awacs',
   render: (c: Context) => {
     const {country, dictionary} = c;
-    const title = `<h4 class="center">A W A C S</h4>`;
+    const title = `<h4 class="center">AWACS</h4>`;
     const awacs = `<ul>${country.plane?.group.map((group) => {
       if (group.task === 'AWACS') {
         

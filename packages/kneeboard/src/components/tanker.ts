@@ -5,7 +5,7 @@ const component: Component = {
   id: 'tanker',
   render: (c: Context) => {
     const {country, dictionary} = c;
-    const title = `<h4 class="center">T A N K E R</h4>`;
+    const title = `<h4 class="center">TANKER</h4>`;
     const tankers = `<ul>${country.plane?.group.map((group) => {
       if (group.task === 'Refueling') {
 

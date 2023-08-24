@@ -2,3 +2,7 @@
 #content #coalition-task {
   white-space: break-spaces;
 }
+
+#content #coalition-task div {
+  min-width: 6rem;
+}

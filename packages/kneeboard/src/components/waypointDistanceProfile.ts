@@ -20,7 +20,7 @@ const component: Component = {
     // delay render to make sure element is present
     setTimeout(() => createLineChart(group, id), 1000);
     
-    return `<h4 class="center">D I S T A N C E &nbsp; P R O F I L E</h4>
+    return `<h4 class="center">D-PROFILE</h4>
     <canvas id="${id}"></canvas>`;
   },
 }

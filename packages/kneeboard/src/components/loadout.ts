@@ -7,7 +7,7 @@ const component: Component = {
 
   render: (c: Context) => {
     const {unit} = c;
-    const title = `<h4 class="center">L O A D O U T</h4>`;
+    const title = `<h4 class="center">LOADOUT</h4>`;
     if (!unit.payload) return title;
 
     const fuel = calculator.weight(unit.payload.fuel).toFixed(0);
@@ -19,7 +19,7 @@ const component: Component = {
       unit.payload.pylons?.map((pylon, i) => {
         if (!pylon) return `<li>---</li>`;
         const weapon = window.JSON_DATA.Weapons.find(w => w.CLSID === pylon.CLSID);
-        return `<li>${weapon?.displayName || '???'}</li>`;
+        return `<li>${i+1}★ ${weapon?.displayName || '???'}</li>`;
       }).join('\n')
     }
     </ul>`

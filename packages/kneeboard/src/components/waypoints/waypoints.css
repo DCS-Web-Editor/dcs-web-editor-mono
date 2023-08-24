@@ -19,14 +19,7 @@
   /* color: #373737; */
 }
 
-.kneeboard .handsontable table.htCore td.star {
-  color: #fcb515;
-}
 
-.kneeboard .handsontable table.htCore tr td {
-  background: #e3e3e3;
-  color: var(--primary-color);
-}
 
 .kneeboard .handsontable table.htCore td .progressBar {
   background: #37bc6c;
@@ -48,12 +41,17 @@
 .kneeboard .handsontable .htCore tr td{
   background-color: transparent !important;
   color: var(--primary-color);
+  padding: 0px 2px;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .kneeboard .handsontable .htCore th{
   font-weight: 600;
   background-color: transparent !important;
   color: var(--primary-color);
+  padding: 0;
+  margin: 0;
 }
 
 .kneeboard .handsontable .wtHider {

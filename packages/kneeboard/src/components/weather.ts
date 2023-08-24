@@ -9,7 +9,7 @@ const component: Component = {
 
   render: (c: Context) => {
     const {weather} = c.mission;
-    const title = `<h4 class="center">W E A T H E R</h4>`;
+    const title = `<h4 class="center">WEATHER</h4>`;
     const visibility = Math.round(calculator.distance(weather.visibility.distance / 1000)).toLocaleString();
     const base = calculator.altitude(weather.clouds.base).toFixed(0);
     const thickness = calculator.altitude(weather.clouds.thickness).toFixed(0);
@@ -29,8 +29,7 @@ const component: Component = {
     const gndDir = weather.wind?.atGround?.dir.toFixed(0);
     const k2Dir = weather.wind?.at2000?.dir.toFixed(0);
     const k8Dir = weather.wind?.at8000?.dir.toFixed(0);
-    return title + `<span class="label">QNH</span> ${pressure}${pressureUnit} <span class="label">TEMP</span> ${weather.season.temperature.toFixed(1)}°C ${toFahrenheit(weather.season.temperature).toFixed(1)}°F <span class="label">VISIBILITY</span> ${visibility + dunit}
-<span class="label">CLOUD</span> <span class="label">BASE</span> <span class="value">${base + aunit}</span> <span class="label">THICKNESS</span> ${thickness + aunit}
+    return title + `<span class="label">QNH</span> ${pressure}${pressureUnit} <span class="label">TEMP</span> ${weather.season.temperature.toFixed(1)}°C ${toFahrenheit(weather.season.temperature).toFixed(1)}°F <span class="label">VISIBILITY</span> ${visibility + dunit} <span class="label">CLOUD</span> <span class="label">BASE</span> <span class="value">${base + aunit}</span> <span class="label">THICKNESS</span> ${thickness + aunit}
 <span class="label">WIND</span> <span class="label">GND</span> ${gndDir}/${gndSpd} <span class="label">${k2}</span> ${k2Dir}/${k2Spd} <span class="label">${k8}</span> ${k8Dir}/${k8Spd}`
   },
 }

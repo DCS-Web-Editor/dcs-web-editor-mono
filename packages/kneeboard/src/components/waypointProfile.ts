@@ -21,7 +21,7 @@ const component: Component = {
     // delay render to make sure element is present
     setTimeout(() => createLineChart(group, id), 1000);
     
-    return `<h4 class="center">W A Y P O I N T &nbsp; P R O F I L E</h4>
+    return `<h4 class="center">W-PROFILE</h4>
     <canvas id="waypoint-chart"></canvas>`;
   },
 }

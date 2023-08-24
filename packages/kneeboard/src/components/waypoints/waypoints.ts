@@ -21,7 +21,7 @@ const component: Component = {
       csvExport(instance);
     }, 10);
 
-    return `<h4 class="center">W A Y P O I N T S</h4>
+    return `<h4 class="center">WAYPOINTS</h4>
     <div id="waypoints-table"></div>`;
   },
 }

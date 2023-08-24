@@ -6,7 +6,7 @@ const component: Component = {
 
   render: (c: Context) => {
     const {country, dictionary} = c;
-    const title = `<h4 class="center">C A R R I E R</h4>`;
+    const title = `<h4 class="center">CARRIER</h4>`;
     const carriers = `<ul>${country.ship?.group.map((group) => {
       
       if (group.route) {
