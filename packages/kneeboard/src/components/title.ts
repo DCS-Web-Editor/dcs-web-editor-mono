@@ -5,7 +5,7 @@ import './title.css'
 
 const component: Component = {
   id: 'title',
-  render: (c: Context) => `<h2 class="center"><div contenteditable>${translate(c.mission.sortie, c.dictionary) || 'BRIEFING'}</h2></div>`,
+  render: (c: Context) => `<span class="title"><div contenteditable>${translate(c.mission.sortie, c.dictionary) || 'BRIEFING'}</span></div>`,
 }
 
 export default component;

@@ -123,8 +123,11 @@ function createLineChart(group: any, elementId: string) {
         family: fontFamily()
       },
       plugins: {
-        datalabels: {
-          rotation: 90
+        // datalabels: {
+        //   rotation: 90
+        // },
+        legend: {
+          position: 'chartArea',
         }
       }
     },

@@ -6,7 +6,7 @@ import './mainTask.css';
 const component: Component = {
   id: 'main-task',
   render: (c: Context) => {
-    return `<b>BRIEFING </b><div contenteditable>${translate(c.mission.descriptionText, c.dictionary)}</div>`
+    return `<h4 class="center">BRIEFING </h4><div contenteditable>${translate(c.mission.descriptionText, c.dictionary)}</div>`
   },
 }
 

@@ -8,7 +8,7 @@ const component: Component = {
   id: 'coalition-task',
   render: (c: Context) => {
     const taskName = `description${startCase(c.coalitionName)}Task`
-    return `<b>${upperCase(c.coalitionName)} TASK</b> <div contenteditable>${translate(c.mission[taskName], c.dictionary)}</div>`
+    return `<h4 class="center">${upperCase(c.coalitionName)} TASK</h4> <div contenteditable>${translate(c.mission[taskName], c.dictionary)}</div>`
   },
 }
 

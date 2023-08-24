@@ -8,6 +8,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 0.5rem;
+  clear: both;
 
 }
 #content #friendlies ul li {
@@ -34,9 +35,11 @@
 #content #friendlies span.icon {
   margin: -1rem;
   margin-top: 0;
+  text-align: left;
   margin-left: 0rem;
   margin-right: -2rem;
   float: left;
+  clear:both;
 }
 
 #content #friendlies ul li span.callsign {

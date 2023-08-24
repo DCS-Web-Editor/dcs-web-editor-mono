@@ -5,7 +5,7 @@ const component: Component = {
   render: (c: Context) => {
     const {country} = c;
     // console.log(country);
-    const title = '<b>FRIENDLIES</b><br>';
+    const title = '<h4 class="center">FRIENDLIES</h4><br>';
 
     const planes = `<span class="icon">🛦</span> <ul>${country.plane?.group.map(renderGroup).join('') || ''}</ul>`;
 

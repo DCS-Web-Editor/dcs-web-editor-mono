@@ -3,6 +3,10 @@ import { load, save } from "../../cache";
 
 const options = [
   {
+    label: 'Table',
+    value: 'TABLE',
+  },
+  {
     label: 'Condensed',
     value: 'CONDENSED',
   },
@@ -19,7 +23,7 @@ const options = [
 const component: Component = {
   id: 'spacing-select',
   template: false,
-  control: `<label for="spacingSelect">Spacing</label><select name="spacingSelect" id="spacing-select-control">
+  control: `<label for="spacingSelect">Layout</label><select name="spacingSelect" id="spacing-select-control">
   ${
     options.map(o => {
       return `<option value="${o.value}" ${(load('spacing') || 'NORMAL')  === o.value ? 'selected' : ''}>${o.label}</option>`

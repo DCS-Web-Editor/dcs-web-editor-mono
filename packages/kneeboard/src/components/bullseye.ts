@@ -16,7 +16,7 @@ const component: Component = {
     const bullseye = coalition.bullseye;
     const latLon = convertCoordinates(bullseye);
     const coords = calculator.coordinates(latLon)
-    return `<b>BULLSEYE</b> ${coords}`
+    return `<h4 class="center">BULLSEYE</h4> ${coords}`
   },
 }
 

@@ -109,6 +109,11 @@ function createLineChart(group: any, elementId: string) {
       },
       font: {
         family: fontFamily()
+      },
+      plugins: {
+        legend: {
+          position: 'chartArea',
+        }
       }
     },
     scales: {
