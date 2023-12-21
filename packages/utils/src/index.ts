@@ -162,7 +162,7 @@ export function toRgba(r:number, g:number, b:number, a: number) {
     return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(a * 255)})`;
 }
 
-function componentToHex(c) {
+function componentToHex(c: number) {
   var hex = Math.round(c).toString(16);
   return hex.length == 1 ? "0" + hex : hex;
 }
@@ -263,3 +263,16 @@ export function translate(key:string, dictionary:Record<string, string>) {
 //   cache = null;
 //   return retVal;
 // };
+
+
+
+export async function getElevationFeet(lat: any, lng: any) {
+  const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`, {
+      method: 'GET',
+  });
+
+  const { results } = await elevationData.json();
+  const elevation = (results[0].elevation * M_TO_FEET).toFixed(0);
+  return elevation;
+}
+
