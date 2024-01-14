@@ -43,6 +43,10 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
+    SinaiDetail: {
+        lat: number;
+        lon: number;
+    }[];
     "Kola Peninsula": {
         lat: number;
         lon: number;
