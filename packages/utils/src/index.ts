@@ -272,7 +272,7 @@ export async function getElevationFeet(lat: any, lng: any) {
   });
 
   const { results } = await elevationData.json();
-  const elevation = (results?.[0]?.elevation ?? 0 * M_TO_FEET).toFixed(0);
+  const elevation = ((results?.[0]?.elevation ?? 0) * M_TO_FEET).toFixed(0);
   return elevation;
 }
 

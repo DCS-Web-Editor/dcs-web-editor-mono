@@ -211,3 +211,11 @@ export function translate(key, dictionary) {
 //   cache = null;
 //   return retVal;
 // };
+export async function getElevationFeet(lat, lng) {
+    const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`, {
+        method: 'GET',
+    });
+    const { results } = await elevationData.json();
+    const elevation = ((results?.[0]?.elevation ?? 0) * M_TO_FEET).toFixed(0);
+    return elevation;
+}
