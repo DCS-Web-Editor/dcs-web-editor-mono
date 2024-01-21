@@ -1,0 +1,3422 @@
+[
+    {
+        "lat": 13.623752786844895,
+        "lon": 143.0311417167774,
+        "json": {
+            "callsignStr": "ACRON",
+            "comment": "",
+            "id": 1000,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 17784.654296875,
+            "y": -191177.78125
+        }
+    },
+    {
+        "lat": 13.59222499629486,
+        "lon": 144.95507221799352,
+        "json": {
+            "callsignStr": "ACUYU",
+            "comment": "",
+            "id": 1001,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 11717.380859375,
+            "y": 17158.76171875
+        }
+    },
+    {
+        "lat": 13.572472222775167,
+        "lon": 144.97084443568616,
+        "json": {
+            "callsignStr": "ADAYI",
+            "comment": "",
+            "id": 1002,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9517.3984375,
+            "y": 18847.755859375
+        }
+    },
+    {
+        "lat": 13.441391664901381,
+        "lon": 144.7020027784175,
+        "json": {
+            "callsignStr": "ADEDE",
+            "comment": "",
+            "id": 1003,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -4731.3095703125,
+            "y": -10392.110351563
+        }
+    },
+    {
+        "lat": 13.457488889262187,
+        "lon": 144.6898583349532,
+        "json": {
+            "callsignStr": "ADTIN",
+            "comment": "",
+            "id": 1004,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -2937.51171875,
+            "y": -11690.943359375
+        }
+    },
+    {
+        "lat": 13.484666666664566,
+        "lon": 144.7965777777905,
+        "json": {
+            "callsignStr": "ALEYE",
+            "comment": "",
+            "id": 1005,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -35.932453155518,
+            "y": -104.69878387451
+        }
+    },
+    {
+        "lat": 12.76712780853242,
+        "lon": 143.56070273245467,
+        "json": {
+            "callsignStr": "ALMEH",
+            "comment": "",
+            "id": 1006,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -77976.9453125,
+            "y": -135092.5625
+        }
+    },
+    {
+        "lat": 15.433475028354875,
+        "lon": 146.2740193900901,
+        "json": {
+            "callsignStr": "ANEVY",
+            "comment": "",
+            "id": 1007,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 214562.5,
+            "y": 160527.3125
+        }
+    },
+    {
+        "lat": 13.543055554372746,
+        "lon": 144.8429194458256,
+        "json": {
+            "callsignStr": "ANIKA",
+            "comment": "",
+            "id": 1008,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 6380.8862304688,
+            "y": 4970.8564453125
+        }
+    },
+    {
+        "lat": 13.815400006998077,
+        "lon": 144.7673027773128,
+        "json": {
+            "callsignStr": "ARKEE",
+            "comment": "",
+            "id": 1009,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 36593.984375,
+            "y": -2938.4167480469
+        }
+    },
+    {
+        "lat": 12.79316665617115,
+        "lon": 144.8400388894953,
+        "json": {
+            "callsignStr": "ASADE",
+            "comment": "",
+            "id": 1010,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -76598.03125,
+            "y": 3945.9907226563
+        }
+    },
+    {
+        "lat": 13.654308337570129,
+        "lon": 145.29628612172237,
+        "json": {
+            "callsignStr": "BAGBE",
+            "comment": "",
+            "id": 1011,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 18301.98046875,
+            "y": 54136.625
+        }
+    },
+    {
+        "lat": 13.532202779566846,
+        "lon": 144.84480277963362,
+        "json": {
+            "callsignStr": "BANNI",
+            "comment": "",
+            "id": 1012,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 5178.1088867188,
+            "y": 5164.1840820313
+        }
+    },
+    {
+        "lat": 13.592958331134179,
+        "lon": 144.9549499915567,
+        "json": {
+            "callsignStr": "BAVAC",
+            "comment": "",
+            "id": 1013,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 11798.638671875,
+            "y": 17146.212890625
+        }
+    },
+    {
+        "lat": 13.462694443635137,
+        "lon": 144.74854166468046,
+        "json": {
+            "callsignStr": "BOJEL",
+            "comment": "",
+            "id": 1014,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -2420.3471679688,
+            "y": -5329.30859375
+        }
+    },
+    {
+        "lat": 13.45551388793121,
+        "lon": 144.73285277827955,
+        "json": {
+            "callsignStr": "BOLFY",
+            "comment": "",
+            "id": 1015,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -3199.3962402344,
+            "y": -7035.9340820313
+        }
+    },
+    {
+        "lat": 13.615522217992135,
+        "lon": 144.58401111293205,
+        "json": {
+            "callsignStr": "BRTNE",
+            "comment": "",
+            "id": 1016,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 14663.583984375,
+            "y": -22983.7890625
+        }
+    },
+    {
+        "lat": 13.240013893929488,
+        "lon": 144.6657583359815,
+        "json": {
+            "callsignStr": "BURLE",
+            "comment": "",
+            "id": 1017,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -26981.23046875,
+            "y": -14527.94921875
+        }
+    },
+    {
+        "lat": 13.724119451604706,
+        "lon": 144.9209194449831,
+        "json": {
+            "callsignStr": "CADUK",
+            "comment": "",
+            "id": 1018,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 26343.720703125,
+            "y": 13587.134765625
+        }
+    },
+    {
+        "lat": 13.481758333314932,
+        "lon": 144.7948583332959,
+        "json": {
+            "callsignStr": "CATEN",
+            "comment": "",
+            "id": 1019,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -356.10870361328,
+            "y": -293.8024597168
+        }
+    },
+    {
+        "lat": 13.575236108317286,
+        "lon": 144.9163249971782,
+        "json": {
+            "callsignStr": "CCOOK",
+            "comment": "",
+            "id": 1020,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9872.9716796875,
+            "y": 12948.64453125
+        }
+    },
+    {
+        "lat": 13.439605556891175,
+        "lon": 144.70271666408644,
+        "json": {
+            "callsignStr": "CEGMU",
+            "comment": "",
+            "id": 1021,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -4929.69921875,
+            "y": -10316.622070313
+        }
+    },
+    {
+        "lat": 13.589955556506567,
+        "lon": 144.66578888567108,
+        "json": {
+            "callsignStr": "CETAS",
+            "comment": "",
+            "id": 1022,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 11747.590820313,
+            "y": -14158.377929688
+        }
+    },
+    {
+        "lat": 13.481102777971007,
+        "lon": 144.91006666633385,
+        "json": {
+            "callsignStr": "CFCRN",
+            "comment": "",
+            "id": 1023,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -537.72717285156,
+            "y": 12182.256835938
+        }
+    },
+    {
+        "lat": 13.417200001256331,
+        "lon": 144.77026666630726,
+        "json": {
+            "callsignStr": "CFCTG",
+            "comment": "",
+            "id": 1024,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -7476.4360351563,
+            "y": -3021.8083496094
+        }
+    },
+    {
+        "lat": 13.620963888408033,
+        "lon": 144.88421111556357,
+        "json": {
+            "callsignStr": "CFCWC",
+            "comment": "",
+            "id": 1025,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 14963.078125,
+            "y": 9516.228515625
+        }
+    },
+    {
+        "lat": 13.44135833216803,
+        "lon": 144.92901666836784,
+        "json": {
+            "callsignStr": "CFCWN",
+            "comment": "",
+            "id": 1026,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -4953.0317382813,
+            "y": 14197.3828125
+        }
+    },
+    {
+        "lat": 13.477286111303474,
+        "lon": 144.90636944712983,
+        "json": {
+            "callsignStr": "CFDBR",
+            "comment": "",
+            "id": 1027,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -956.65753173828,
+            "y": 11778.2734375
+        }
+    },
+    {
+        "lat": 13.414005555864954,
+        "lon": 144.76788333437526,
+        "json": {
+            "callsignStr": "CFDJT",
+            "comment": "",
+            "id": 1028,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -7827.6162109375,
+            "y": -3283.1943359375
+        }
+    },
+    {
+        "lat": 13.428288887606039,
+        "lon": 144.92972777893385,
+        "json": {
+            "callsignStr": "CFDNN",
+            "comment": "",
+            "id": 1029,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -6399.8764648438,
+            "y": 14262.256835938
+        }
+    },
+    {
+        "lat": 13.621102778346872,
+        "lon": 144.8786611134815,
+        "json": {
+            "callsignStr": "CFGFN",
+            "comment": "",
+            "id": 1030,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 14983.680664063,
+            "y": 8915.6767578125
+        }
+    },
+    {
+        "lat": 13.526611113145817,
+        "lon": 144.88836388559824,
+        "json": {
+            "callsignStr": "CHOLO",
+            "comment": "",
+            "id": 1031,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 4518.232421875,
+            "y": 9875.3349609375
+        }
+    },
+    {
+        "lat": 13.57243055747728,
+        "lon": 144.99330833969728,
+        "json": {
+            "callsignStr": "CIBOL",
+            "comment": "",
+            "id": 1032,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9492.681640625,
+            "y": 21279.380859375
+        }
+    },
+    {
+        "lat": 13.538127778238275,
+        "lon": 144.91824721825327,
+        "json": {
+            "callsignStr": "CIMON",
+            "comment": "",
+            "id": 1033,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 5764.9174804688,
+            "y": 13121.737304688
+        }
+    },
+    {
+        "lat": 13.539330554254175,
+        "lon": 144.84687777895746,
+        "json": {
+            "callsignStr": "COLMA",
+            "comment": "",
+            "id": 1034,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 5964.8974609375,
+            "y": 5395.7939453125
+        }
+    },
+    {
+        "lat": 14.659175015269657,
+        "lon": 144.13411391727095,
+        "json": {
+            "callsignStr": "CORUL",
+            "comment": "",
+            "id": 1035,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 130744.7890625,
+            "y": -70281.7578125
+        }
+    },
+    {
+        "lat": 13.637605558919633,
+        "lon": 145.01368611086264,
+        "json": {
+            "callsignStr": "CREET",
+            "comment": "",
+            "id": 1036,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 16686.31640625,
+            "y": 23544.033203125
+        }
+    },
+    {
+        "lat": 13.443474999839868,
+        "lon": 144.7102972178944,
+        "json": {
+            "callsignStr": "CUDID",
+            "comment": "",
+            "id": 1037,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -4509.1142578125,
+            "y": -9491.4765625
+        }
+    },
+    {
+        "lat": 13.389908334442776,
+        "lon": 144.59428611442198,
+        "json": {
+            "callsignStr": "DALPE",
+            "comment": "",
+            "id": 1038,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -10317.951171875,
+            "y": -22116.43359375
+        }
+    },
+    {
+        "lat": 13.57922222151793,
+        "lon": 145.04874444627166,
+        "json": {
+            "callsignStr": "DELAC",
+            "comment": "",
+            "id": 1039,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 10195.51171875,
+            "y": 27286.087890625
+        }
+    },
+    {
+        "lat": 13.724000008710503,
+        "lon": 145.1665500158524,
+        "json": {
+            "callsignStr": "DWAFF",
+            "comment": "",
+            "id": 1040,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 26115.18359375,
+            "y": 40158.0625
+        }
+    },
+    {
+        "lat": 13.858950002865974,
+        "lon": 145.13953332781207,
+        "json": {
+            "callsignStr": "EDIAZ",
+            "comment": "",
+            "id": 1041,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 41069.109375,
+            "y": 37351.328125
+        }
+    },
+    {
+        "lat": 13.592102774486236,
+        "lon": 144.94391111228416,
+        "json": {
+            "callsignStr": "ENWHY",
+            "comment": "",
+            "id": 1042,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 11714.021484375,
+            "y": 15950.563476563
+        }
+    },
+    {
+        "lat": 14.168319431168692,
+        "lon": 145.02891665899602,
+        "json": {
+            "callsignStr": "ERTTS",
+            "comment": "",
+            "id": 1043,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 75397.6875,
+            "y": 25677.830078125
+        }
+    },
+    {
+        "lat": 13.431774998343785,
+        "lon": 144.92805833578333,
+        "json": {
+            "callsignStr": "ETOME",
+            "comment": "",
+            "id": 1044,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -6012.6025390625,
+            "y": 14084.670898438
+        }
+    },
+    {
+        "lat": 13.641580546740437,
+        "lon": 145.0149305547092,
+        "json": {
+            "callsignStr": "EVEBE",
+            "comment": "",
+            "id": 1045,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 17125.052734375,
+            "y": 23682.296875
+        }
+    },
+    {
+        "lat": 13.709494449446197,
+        "lon": 145.21124721454063,
+        "json": {
+            "callsignStr": "FABED",
+            "comment": "",
+            "id": 1046,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 24474.009765625,
+            "y": 44980.92578125
+        }
+    },
+    {
+        "lat": 14.04378056084802,
+        "lon": 145.56277778618121,
+        "json": {
+            "callsignStr": "FABHA",
+            "comment": "",
+            "id": 1047,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 61200.62890625,
+            "y": 83226.2265625
+        }
+    },
+    {
+        "lat": 13.42389444336244,
+        "lon": 145.06801111421456,
+        "json": {
+            "callsignStr": "FAPAM",
+            "comment": "",
+            "id": 1048,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -7007.638671875,
+            "y": 29236.158203125
+        }
+    },
+    {
+        "lat": 13.571569446529027,
+        "lon": 144.90880833080524,
+        "json": {
+            "callsignStr": "FAXEL",
+            "comment": "",
+            "id": 1049,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9474.1904296875,
+            "y": 12131.484375
+        }
+    },
+    {
+        "lat": 13.580719440133588,
+        "lon": 144.91452777812694,
+        "json": {
+            "callsignStr": "FAYZR",
+            "comment": "",
+            "id": 1050,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 10481.40234375,
+            "y": 12759.282226563
+        }
+    },
+    {
+        "lat": 13.368505556113979,
+        "lon": 144.78959166638302,
+        "json": {
+            "callsignStr": "FEGUT",
+            "comment": "",
+            "id": 1051,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -12883.971679688,
+            "y": -976.50042724609
+        }
+    },
+    {
+        "lat": 13.567827776348553,
+        "lon": 144.97338611636079,
+        "json": {
+            "callsignStr": "FIBEE",
+            "comment": "",
+            "id": 1052,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9001.189453125,
+            "y": 19118.62109375
+        }
+    },
+    {
+        "lat": 13.30575000281531,
+        "lon": 144.75736944269988,
+        "json": {
+            "callsignStr": "FIGOR",
+            "comment": "",
+            "id": 1053,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -19797.453125,
+            "y": -4530.603515625
+        }
+    },
+    {
+        "lat": 13.439588888212336,
+        "lon": 144.70271666961273,
+        "json": {
+            "callsignStr": "FISON",
+            "comment": "",
+            "id": 1054,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -4931.5439453125,
+            "y": -10316.638671875
+        }
+    },
+    {
+        "lat": 13.402872220903982,
+        "lon": 144.62586943861086,
+        "json": {
+            "callsignStr": "FLAKE",
+            "comment": "",
+            "id": 1055,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -8916.2490234375,
+            "y": -18680.462890625
+        }
+    },
+    {
+        "lat": 13.55303888745727,
+        "lon": 145.27799444991302,
+        "json": {
+            "callsignStr": "FOKAI",
+            "comment": "",
+            "id": 1056,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 7111.8828125,
+            "y": 52078.359375
+        }
+    },
+    {
+        "lat": 13.300197228052824,
+        "lon": 144.44926943732386,
+        "json": {
+            "callsignStr": "FOLAP",
+            "comment": "",
+            "id": 1057,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -20090.380859375,
+            "y": -37932.64453125
+        }
+    },
+    {
+        "lat": 13.5473000018564,
+        "lon": 144.83553333314978,
+        "json": {
+            "callsignStr": "FOMOD",
+            "comment": "",
+            "id": 1058,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 6857.6499023438,
+            "y": 4175.3217773438
+        }
+    },
+    {
+        "lat": 13.762369438047129,
+        "lon": 145.1790861104734,
+        "json": {
+            "callsignStr": "FOVEM",
+            "comment": "",
+            "id": 1059,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 30350.21484375,
+            "y": 41546.125
+        }
+    },
+    {
+        "lat": 13.658783333201127,
+        "lon": 144.9645638802886,
+        "json": {
+            "callsignStr": "GAVDE",
+            "comment": "",
+            "id": 1060,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 19073.736328125,
+            "y": 18247.80078125
+        }
+    },
+    {
+        "lat": 13.085411119766855,
+        "lon": 145.19780834378602,
+        "json": {
+            "callsignStr": "GUMGE",
+            "comment": "",
+            "id": 1061,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -44563.05078125,
+            "y": 43023.81640625
+        }
+    },
+    {
+        "lat": 13.716411117400067,
+        "lon": 145.1098972315526,
+        "json": {
+            "callsignStr": "HAAMR",
+            "comment": "",
+            "id": 1062,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 25322.759765625,
+            "y": 34023.390625
+        }
+    },
+    {
+        "lat": 13.727319443110002,
+        "lon": 144.92337500161096,
+        "json": {
+            "callsignStr": "HAGIX",
+            "comment": "",
+            "id": 1063,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 26695.537109375,
+            "y": 13855.828125
+        }
+    },
+    {
+        "lat": 13.567544447360271,
+        "lon": 144.7025972216203,
+        "json": {
+            "callsignStr": "HAMAL",
+            "comment": "",
+            "id": 1064,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9229.466796875,
+            "y": -10196.91796875
+        }
+    },
+    {
+        "lat": 13.440950000885836,
+        "lon": 144.70103888991108,
+        "json": {
+            "callsignStr": "HARLO",
+            "comment": "",
+            "id": 1065,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -4779.2143554688,
+            "y": -10496.979492188
+        }
+    },
+    {
+        "lat": 13.435594442316502,
+        "lon": 144.93176388710194,
+        "json": {
+            "callsignStr": "HASAK",
+            "comment": "",
+            "id": 1066,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -5593.3330078125,
+            "y": 14489.581054688
+        }
+    },
+    {
+        "lat": 13.624950003952204,
+        "lon": 145.01757777663158,
+        "json": {
+            "callsignStr": "HASRA",
+            "comment": "",
+            "id": 1067,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 15282.526367188,
+            "y": 23953.75
+        }
+    },
+    {
+        "lat": 13.40459722429476,
+        "lon": 144.4124111151468,
+        "json": {
+            "callsignStr": "HESNA",
+            "comment": "",
+            "id": 1068,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -8493.0185546875,
+            "y": -41807.7578125
+        }
+    },
+    {
+        "lat": 14.791555518972595,
+        "lon": 144.81033888929903,
+        "json": {
+            "callsignStr": "HEXOR",
+            "comment": "",
+            "id": 1069,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 144581.484375,
+            "y": 2736.3542480469
+        }
+    },
+    {
+        "lat": 13.472480555967548,
+        "lon": 144.68226110683437,
+        "json": {
+            "callsignStr": "HILRI",
+            "comment": "",
+            "id": 1070,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -1270.6225585938,
+            "y": -12498.227539063
+        }
+    },
+    {
+        "lat": 13.631575002582483,
+        "lon": 145.0176972164761,
+        "json": {
+            "callsignStr": "HIPRI",
+            "comment": "",
+            "id": 1071,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 16015.483398438,
+            "y": 23972.654296875
+        }
+    },
+    {
+        "lat": 15.168113843528788,
+        "lon": 145.85316663208783,
+        "json": {
+            "callsignStr": "HOGOS",
+            "comment": "",
+            "id": 1072,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 185402.921875,
+            "y": 115214.5546875
+        }
+    },
+    {
+        "lat": 14.021861103786913,
+        "lon": 146.3443333635323,
+        "json": {
+            "callsignStr": "HOPPY",
+            "comment": "",
+            "id": 1073,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 58402.1953125,
+            "y": 167617.375
+        }
+    },
+    {
+        "lat": 13.452347223223674,
+        "lon": 144.73058611024953,
+        "json": {
+            "callsignStr": "HUKES",
+            "comment": "",
+            "id": 1074,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -3547.58203125,
+            "y": -7284.6826171875
+        }
+    },
+    {
+        "lat": 13.484469444424585,
+        "lon": 144.67696388753882,
+        "json": {
+            "callsignStr": "HURUG",
+            "comment": "",
+            "id": 1075,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 61.628044128418,
+            "y": -13059.435546875
+        }
+    },
+    {
+        "lat": 13.371702778038935,
+        "lon": 144.79198611092338,
+        "json": {
+            "callsignStr": "ICAKE",
+            "comment": "",
+            "id": 1076,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -12532.470703125,
+            "y": -713.90411376953
+        }
+    },
+    {
+        "lat": 13.405908336024659,
+        "lon": 144.62460000331438,
+        "json": {
+            "callsignStr": "IKOVY",
+            "comment": "",
+            "id": 1077,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -8578.904296875,
+            "y": -18814.771484375
+        }
+    },
+    {
+        "lat": 14.4720610855623,
+        "lon": 143.8418361260711,
+        "json": {
+            "callsignStr": "IMEDE",
+            "comment": "",
+            "id": 1078,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 110441.8515625,
+            "y": -102078.8125
+        }
+    },
+    {
+        "lat": 13.596716667204587,
+        "lon": 144.95303333539147,
+        "json": {
+            "callsignStr": "INIME",
+            "comment": "",
+            "id": 1079,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 12216.2578125,
+            "y": 16942.248046875
+        }
+    },
+    {
+        "lat": 13.696594451578662,
+        "lon": 145.18124168220396,
+        "json": {
+            "callsignStr": "ISLAA",
+            "comment": "",
+            "id": 1080,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 23070.951171875,
+            "y": 41724.40234375
+        }
+    },
+    {
+        "lat": 13.575538884697643,
+        "lon": 144.9069166659063,
+        "json": {
+            "callsignStr": "ITUME",
+            "comment": "",
+            "id": 1081,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9915.193359375,
+            "y": 11930.474609375
+        }
+    },
+    {
+        "lat": 13.473463889443401,
+        "lon": 145.0499444533895,
+        "json": {
+            "callsignStr": "JADKA",
+            "comment": "",
+            "id": 1082,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -1507.5007324219,
+            "y": 27322.787109375
+        }
+    },
+    {
+        "lat": 13.529411112764622,
+        "lon": 144.84679166493734,
+        "json": {
+            "callsignStr": "JALOB",
+            "comment": "",
+            "id": 1083,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 4867.28515625,
+            "y": 5376.8115234375
+        }
+    },
+    {
+        "lat": 14.76506113849929,
+        "lon": 144.45119443329165,
+        "json": {
+            "callsignStr": "JARIN",
+            "comment": "",
+            "id": 1084,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 142057.15625,
+            "y": -35973.80859375
+        }
+    },
+    {
+        "lat": 13.557588889862906,
+        "lon": 144.9454611099108,
+        "json": {
+            "callsignStr": "JEVER",
+            "comment": "",
+            "id": 1085,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 7893.474609375,
+            "y": 16086.178710938
+        }
+    },
+    {
+        "lat": 13.596255556292103,
+        "lon": 144.95341388799937,
+        "json": {
+            "callsignStr": "JIPRO",
+            "comment": "",
+            "id": 1086,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 12164.887695313,
+            "y": 16983.009765625
+        }
+    },
+    {
+        "lat": 13.511683333848286,
+        "lon": 144.59085555936173,
+        "json": {
+            "callsignStr": "JITNO",
+            "comment": "",
+            "id": 1087,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 3163.4753417969,
+            "y": -22356.251953125
+        }
+    },
+    {
+        "lat": 13.523894442477332,
+        "lon": 144.88701111178852,
+        "json": {
+            "callsignStr": "JOMAX",
+            "comment": "",
+            "id": 1088,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 4218.8740234375,
+            "y": 9726.2705078125
+        }
+    },
+    {
+        "lat": 13.545655555296594,
+        "lon": 144.8364472210051,
+        "json": {
+            "callsignStr": "JORUN",
+            "comment": "",
+            "id": 1089,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 6674.796875,
+            "y": 4272.65625
+        }
+    },
+    {
+        "lat": 11.547400004516827,
+        "lon": 147.10791941221282,
+        "json": {
+            "callsignStr": "JUNIE",
+            "comment": "",
+            "id": 1090,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -215330.96875,
+            "y": 250185.25
+        }
+    },
+    {
+        "lat": 13.524169444504658,
+        "lon": 144.88076944702686,
+        "json": {
+            "callsignStr": "JUVNI",
+            "comment": "",
+            "id": 1091,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 4255.1450195313,
+            "y": 9050.7138671875
+        }
+    },
+    {
+        "lat": 13.624894441713495,
+        "lon": 145.01742221957187,
+        "json": {
+            "callsignStr": "JWILL",
+            "comment": "",
+            "id": 1092,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 15276.515625,
+            "y": 23936.865234375
+        }
+    },
+    {
+        "lat": 11.8009416705563,
+        "lon": 144.999105547204,
+        "json": {
+            "callsignStr": "KAPOK",
+            "comment": "",
+            "id": 1093,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -186518.921875,
+            "y": 20403.0546875
+        }
+    },
+    {
+        "lat": 13.576383329509012,
+        "lon": 144.90657778048347,
+        "json": {
+            "callsignStr": "KATNE",
+            "comment": "",
+            "id": 1094,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 10008.952148438,
+            "y": 11894.591796875
+        }
+    },
+    {
+        "lat": 14.615936093737307,
+        "lon": 145.63322220006205,
+        "json": {
+            "callsignStr": "KATQO",
+            "comment": "",
+            "id": 1095,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 124450.65625,
+            "y": 91207.9296875
+        }
+    },
+    {
+        "lat": 15.078022186423048,
+        "lon": 145.62605003052417,
+        "json": {
+            "callsignStr": "KORDY",
+            "comment": "",
+            "id": 1096,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 175576.265625,
+            "y": 90749.4921875
+        }
+    },
+    {
+        "lat": 13.513897223002123,
+        "lon": 144.99058332987678,
+        "json": {
+            "callsignStr": "LAMYN",
+            "comment": "",
+            "id": 1097,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 3018.2824707031,
+            "y": 20931.19140625
+        }
+    },
+    {
+        "lat": 13.477058333351788,
+        "lon": 144.6801611081768,
+        "json": {
+            "callsignStr": "LOGLE",
+            "comment": "",
+            "id": 1098,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -761.84619140625,
+            "y": -12720.900390625
+        }
+    },
+    {
+        "lat": 13.691705548489747,
+        "lon": 145.1824472251283,
+        "json": {
+            "callsignStr": "LUAAP",
+            "comment": "",
+            "id": 1099,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 22529.052734375,
+            "y": 41850.75390625
+        }
+    },
+    {
+        "lat": 14.804150068527433,
+        "lon": 145.2939722192971,
+        "json": {
+            "callsignStr": "LULJY",
+            "comment": "",
+            "id": 1100,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 145522.890625,
+            "y": 54817.65234375
+        }
+    },
+    {
+        "lat": 13.518505556315807,
+        "lon": 144.98403611043332,
+        "json": {
+            "callsignStr": "MADRY",
+            "comment": "",
+            "id": 1101,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 3534.0258789063,
+            "y": 20226.494140625
+        }
+    },
+    {
+        "lat": 13.733191664089913,
+        "lon": 145.16042501692903,
+        "json": {
+            "callsignStr": "MDBUG",
+            "comment": "",
+            "id": 1102,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 27137.220703125,
+            "y": 39503.28515625
+        }
+    },
+    {
+        "lat": 13.389941669798084,
+        "lon": 144.59426945233682,
+        "json": {
+            "callsignStr": "MEMKE",
+            "comment": "",
+            "id": 1103,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -10314.244140625,
+            "y": -22118.203125
+        }
+    },
+    {
+        "lat": 13.557536110633103,
+        "lon": 144.9460388869464,
+        "json": {
+            "callsignStr": "MIWZO",
+            "comment": "",
+            "id": 1104,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 7887.1083984375,
+            "y": 16148.677734375
+        }
+    },
+    {
+        "lat": 13.45203888795271,
+        "lon": 144.72526111088965,
+        "json": {
+            "callsignStr": "MOBKE",
+            "comment": "",
+            "id": 1105,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -3576.3811035156,
+            "y": -7861.7915039063
+        }
+    },
+    {
+        "lat": 13.526175000651918,
+        "lon": 144.87974166402012,
+        "json": {
+            "callsignStr": "MOGOE",
+            "comment": "",
+            "id": 1106,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 4478.0405273438,
+            "y": 8941.3515625
+        }
+    },
+    {
+        "lat": 13.464147221262177,
+        "lon": 144.7532777783264,
+        "json": {
+            "callsignStr": "MOMRE",
+            "comment": "",
+            "id": 1107,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -2264.263671875,
+            "y": -4814.8627929688
+        }
+    },
+    {
+        "lat": 13.735336102635562,
+        "lon": 145.35166665279903,
+        "json": {
+            "callsignStr": "NARKS",
+            "comment": "",
+            "id": 1108,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 27224.955078125,
+            "y": 60189.41015625
+        }
+    },
+    {
+        "lat": 13.661908329927472,
+        "lon": 145.29115000322943,
+        "json": {
+            "callsignStr": "NERIC",
+            "comment": "",
+            "id": 1109,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 19146.720703125,
+            "y": 53586.85546875
+        }
+    },
+    {
+        "lat": 13.491758333111541,
+        "lon": 144.81207222190056,
+        "json": {
+            "callsignStr": "NOVKE",
+            "comment": "",
+            "id": 1110,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 733.84906005859,
+            "y": 1580.318359375
+        }
+    },
+    {
+        "lat": 13.391655559267475,
+        "lon": 144.5934527806303,
+        "json": {
+            "callsignStr": "OBALE",
+            "comment": "",
+            "id": 1111,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -10123.694335938,
+            "y": -22204.84765625
+        }
+    },
+    {
+        "lat": 13.731422228975374,
+        "lon": 144.92881944640905,
+        "json": {
+            "callsignStr": "OBSAE",
+            "comment": "",
+            "id": 1112,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 27144.478515625,
+            "y": 14448.706054688
+        }
+    },
+    {
+        "lat": 13.60860833405667,
+        "lon": 145.03028056312914,
+        "json": {
+            "callsignStr": "OKIBE",
+            "comment": "",
+            "id": 1113,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 13463.145507813,
+            "y": 25313.8203125
+        }
+    },
+    {
+        "lat": 15.205408333235972,
+        "lon": 145.94732219216152,
+        "json": {
+            "callsignStr": "OPIHY",
+            "comment": "",
+            "id": 1114,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 189477.71875,
+            "y": 125350.5078125
+        }
+    },
+    {
+        "lat": 13.909247204990747,
+        "lon": 146.0215083635211,
+        "json": {
+            "callsignStr": "OPING",
+            "comment": "",
+            "id": 1115,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 46066.54296875,
+            "y": 132704.015625
+        }
+    },
+    {
+        "lat": 12.397633366822888,
+        "lon": 146.05682217988598,
+        "json": {
+            "callsignStr": "OPLAR",
+            "comment": "",
+            "id": 1116,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -121135.03125,
+            "y": 135893.234375
+        }
+    },
+    {
+        "lat": 13.691655563555686,
+        "lon": 145.18204446134007,
+        "json": {
+            "callsignStr": "OSKKR",
+            "comment": "",
+            "id": 1117,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 22523.849609375,
+            "y": 41807.140625
+        }
+    },
+    {
+        "lat": 13.623372224213051,
+        "lon": 145.02618332556563,
+        "json": {
+            "callsignStr": "OWEND",
+            "comment": "",
+            "id": 1118,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 15100.3671875,
+            "y": 24883.63671875
+        }
+    },
+    {
+        "lat": 13.705094443432573,
+        "lon": 145.21325556037152,
+        "json": {
+            "callsignStr": "PANNS",
+            "comment": "",
+            "id": 1119,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 23985.583984375,
+            "y": 45194.57421875
+        }
+    },
+    {
+        "lat": 13.53444444287826,
+        "lon": 144.90551666549325,
+        "json": {
+            "callsignStr": "PAVYI",
+            "comment": "",
+            "id": 1120,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 5369.0942382813,
+            "y": 11739.944335938
+        }
+    },
+    {
+        "lat": 13.711047214998395,
+        "lon": 145.10929999915643,
+        "json": {
+            "callsignStr": "PEGIY",
+            "comment": "",
+            "id": 1121,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 24729.76953125,
+            "y": 33954.140625
+        }
+    },
+    {
+        "lat": 13.541933333029531,
+        "lon": 144.92191666798192,
+        "json": {
+            "callsignStr": "PIKAY",
+            "comment": "",
+            "id": 1122,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 6182.6479492188,
+            "y": 13522.594726563
+        }
+    },
+    {
+        "lat": 15.136477827081725,
+        "lon": 145.77339996585286,
+        "json": {
+            "callsignStr": "PIRTY",
+            "comment": "",
+            "id": 1123,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 181949.546875,
+            "y": 106624.59375
+        }
+    },
+    {
+        "lat": 15.014308395078478,
+        "lon": 145.46574996647107,
+        "json": {
+            "callsignStr": "PONOI",
+            "comment": "",
+            "id": 1124,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 168640.796875,
+            "y": 73468.453125
+        }
+    },
+    {
+        "lat": 13.523625000929751,
+        "lon": 144.05273057168966,
+        "json": {
+            "callsignStr": "PULEE",
+            "comment": "",
+            "id": 1125,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 5122.771484375,
+            "y": -80630.7734375
+        }
+    },
+    {
+        "lat": 13.467522221747396,
+        "lon": 144.55723611732049,
+        "json": {
+            "callsignStr": "RASPE",
+            "comment": "",
+            "id": 1126,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -1688.2657470703,
+            "y": -26045.943359375
+        }
+    },
+    {
+        "lat": 13.660311107834298,
+        "lon": 144.96327222278734,
+        "json": {
+            "callsignStr": "REMDE",
+            "comment": "",
+            "id": 1127,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 19243.96484375,
+            "y": 18109.451171875
+        }
+    },
+    {
+        "lat": 13.693280563702402,
+        "lon": 145.17366390193627,
+        "json": {
+            "callsignStr": "ROUDY",
+            "comment": "",
+            "id": 1128,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 22710.470703125,
+            "y": 40901.87109375
+        }
+    },
+    {
+        "lat": 14.162488864614676,
+        "lon": 145.28046665641196,
+        "json": {
+            "callsignStr": "SANDO",
+            "comment": "",
+            "id": 1129,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 74538.421875,
+            "y": 52830.78125
+        }
+    },
+    {
+        "lat": 15.1273305455856,
+        "lon": 145.75034443443943,
+        "json": {
+            "callsignStr": "SEQKO",
+            "comment": "",
+            "id": 1130,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 180951.578125,
+            "y": 104141.265625
+        }
+    },
+    {
+        "lat": 15.09290279571648,
+        "lon": 145.66360277269385,
+        "json": {
+            "callsignStr": "SHAKA",
+            "comment": "",
+            "id": 1131,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 177197.6875,
+            "y": 94796.203125
+        }
+    },
+    {
+        "lat": 15.142694444076799,
+        "lon": 145.78790836634613,
+        "json": {
+            "callsignStr": "SHODA",
+            "comment": "",
+            "id": 1132,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 182628.609375,
+            "y": 108187.46875
+        }
+    },
+    {
+        "lat": 13.496577778252087,
+        "lon": 145.0294694372505,
+        "json": {
+            "callsignStr": "SIDPE",
+            "comment": "",
+            "id": 1133,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 1067.712890625,
+            "y": 25126.087890625
+        }
+    },
+    {
+        "lat": 13.522794446201424,
+        "lon": 144.884663887067,
+        "json": {
+            "callsignStr": "SLEPT",
+            "comment": "",
+            "id": 1134,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 4099.3442382813,
+            "y": 9471.072265625
+        }
+    },
+    {
+        "lat": 15.85343883904211,
+        "lon": 146.60578337152072,
+        "json": {
+            "callsignStr": "SNAPP",
+            "comment": "",
+            "id": 1135,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 260923.375,
+            "y": 196209.25
+        }
+    },
+    {
+        "lat": 13.31475556229384,
+        "lon": 144.72203333744434,
+        "json": {
+            "callsignStr": "SNOYL",
+            "comment": "",
+            "id": 1136,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -18766.0390625,
+            "y": -8351.30859375
+        }
+    },
+    {
+        "lat": 14.46795558396529,
+        "lon": 147.63880829536268,
+        "json": {
+            "callsignStr": "STINE",
+            "comment": "",
+            "id": 1137,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 107736.765625,
+            "y": 307262.78125
+        }
+    },
+    {
+        "lat": 13.571877781280502,
+        "lon": 144.9086444488268,
+        "json": {
+            "callsignStr": "SULUE",
+            "comment": "",
+            "id": 1138,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9508.4619140625,
+            "y": 12114.036132813
+        }
+    },
+    {
+        "lat": 13.688119444035852,
+        "lon": 145.1087305433768,
+        "json": {
+            "callsignStr": "TIMAE",
+            "comment": "",
+            "id": 1139,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 22193.380859375,
+            "y": 33872.69921875
+        }
+    },
+    {
+        "lat": 13.435833333393655,
+        "lon": 144.70495000171502,
+        "json": {
+            "callsignStr": "TOCOG",
+            "comment": "",
+            "id": 1140,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -5349.4248046875,
+            "y": -10078.583007813
+        }
+    },
+    {
+        "lat": 13.459508334063825,
+        "lon": 144.74617222273227,
+        "json": {
+            "callsignStr": "TYPOS",
+            "comment": "",
+            "id": 1141,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -2770.5942382813,
+            "y": -5589.1782226563
+        }
+    },
+    {
+        "lat": 13.435149999917499,
+        "lon": 144.70543332888045,
+        "json": {
+            "callsignStr": "VEAGA",
+            "comment": "",
+            "id": 1142,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -5425.5366210938,
+            "y": -10026.9296875
+        }
+    },
+    {
+        "lat": 13.575619445466666,
+        "lon": 144.99573889430425,
+        "json": {
+            "callsignStr": "WABOX",
+            "comment": "",
+            "id": 1143,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 9843.3759765625,
+            "y": 21545.37890625
+        }
+    },
+    {
+        "lat": 15.289891644927932,
+        "lon": 146.16105834107714,
+        "json": {
+            "callsignStr": "WAKRI",
+            "comment": "",
+            "id": 1144,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 198723.609375,
+            "y": 148345.375
+        }
+    },
+    {
+        "lat": 13.68832222799323,
+        "lon": 145.08813055502912,
+        "json": {
+            "callsignStr": "WAMAB",
+            "comment": "",
+            "id": 1145,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 22233.328125,
+            "y": 31644.203125
+        }
+    },
+    {
+        "lat": 13.650222215404185,
+        "lon": 145.2312138844555,
+        "json": {
+            "callsignStr": "WELKU",
+            "comment": "",
+            "id": 1146,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 17900.275390625,
+            "y": 47092.859375
+        }
+    },
+    {
+        "lat": 12.609558329762475,
+        "lon": 145.7930027540399,
+        "json": {
+            "callsignStr": "WENOV",
+            "comment": "",
+            "id": 1147,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -97579.625,
+            "y": 107319.15625
+        }
+    },
+    {
+        "lat": 13.620947222756957,
+        "lon": 145.02068055107455,
+        "json": {
+            "callsignStr": "WESOK",
+            "comment": "",
+            "id": 1148,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 14836.879882813,
+            "y": 24285.931640625
+        }
+    },
+    {
+        "lat": 13.587574996623701,
+        "lon": 144.94692500341236,
+        "json": {
+            "callsignStr": "WEVUS",
+            "comment": "",
+            "id": 1149,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 11210.25,
+            "y": 16272.569335938
+        }
+    },
+    {
+        "lat": 14.97416672669489,
+        "lon": 145.36508610111773,
+        "json": {
+            "callsignStr": "WILLE",
+            "comment": "",
+            "id": 1150,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 164276.953125,
+            "y": 62610.6484375
+        }
+    },
+    {
+        "lat": 14.056186125979346,
+        "lon": 144.43264168181102,
+        "json": {
+            "callsignStr": "WUVEN",
+            "comment": "",
+            "id": 1151,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 63609.69140625,
+            "y": -38847.9296875
+        }
+    },
+    {
+        "lat": 15.035886156358627,
+        "lon": 145.52011112992253,
+        "json": {
+            "callsignStr": "YAMMA",
+            "comment": "",
+            "id": 1152,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 170988.25,
+            "y": 79330.046875
+        }
+    },
+    {
+        "lat": 13.470258333348959,
+        "lon": 144.5802111170695,
+        "json": {
+            "callsignStr": "YASSU",
+            "comment": "",
+            "id": 1153,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -1410.0458984375,
+            "y": -23554.2578125
+        }
+    },
+    {
+        "lat": 13.473005555506656,
+        "lon": 144.77170000057018,
+        "json": {
+            "callsignStr": "ZADEK",
+            "comment": "",
+            "id": 1154,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -1302.1049804688,
+            "y": -2810.6596679688
+        }
+    },
+    {
+        "lat": 13.451797222782876,
+        "lon": 144.72935833267786,
+        "json": {
+            "callsignStr": "ZAXUS",
+            "comment": "",
+            "id": 1155,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -3607.2231445313,
+            "y": -7418.234375
+        }
+    },
+    {
+        "lat": 13.33862500067685,
+        "lon": 144.75231666726793,
+        "json": {
+            "callsignStr": "ZEEKE",
+            "comment": "",
+            "id": 1156,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -16154.379882813,
+            "y": -5045.3291015625
+        }
+    },
+    {
+        "lat": 12.93684167040966,
+        "lon": 145.993852803593,
+        "json": {
+            "callsignStr": "ZEGAR",
+            "comment": "",
+            "id": 1157,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -61474.1484375,
+            "y": 129277.421875
+        }
+    },
+    {
+        "lat": 15.142808391623252,
+        "lon": 145.78935001451774,
+        "json": {
+            "callsignStr": "ZEKUR",
+            "comment": "",
+            "id": 1158,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 182640.359375,
+            "y": 108342.453125
+        }
+    },
+    {
+        "lat": 13.696077773921704,
+        "lon": 145.1034361079462,
+        "json": {
+            "callsignStr": "ZUKIE",
+            "comment": "",
+            "id": 1159,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 23078.423828125,
+            "y": 33306.80859375
+        }
+    },
+    {
+        "lat": 15.061119500550625,
+        "lon": 145.4051111226707,
+        "json": {
+            "callsignStr": "CENOR",
+            "comment": "",
+            "id": 1160,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 173866.21875,
+            "y": 66985.0546875
+        }
+    },
+    {
+        "lat": 14.168827772320224,
+        "lon": 145.3022277652821,
+        "json": {
+            "callsignStr": "CEPOS",
+            "comment": "",
+            "id": 1161,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 75222.609375,
+            "y": 55185.1328125
+        }
+    },
+    {
+        "lat": 7.520310954806659,
+        "lon": 151.89014723997295,
+        "json": {
+            "callsignStr": "CHENG",
+            "comment": "",
+            "id": 1162,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -657549.625,
+            "y": 778557.3125
+        }
+    },
+    {
+        "lat": 14.880386127103103,
+        "lon": 145.44124996435872,
+        "json": {
+            "callsignStr": "COVHI",
+            "comment": "",
+            "id": 1163,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 153842.109375,
+            "y": 70729.859375
+        }
+    },
+    {
+        "lat": 13.997672238552052,
+        "lon": 144.9580611168305,
+        "json": {
+            "callsignStr": "CULPS",
+            "comment": "",
+            "id": 1164,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 56579.7890625,
+            "y": 17863.705078125
+        }
+    },
+    {
+        "lat": 14.962538926686074,
+        "lon": 145.42483052893178,
+        "json": {
+            "callsignStr": "DAMQY",
+            "comment": "",
+            "id": 1165,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 162943.921875,
+            "y": 69027.453125
+        }
+    },
+    {
+        "lat": 15.016069413905896,
+        "lon": 145.7091278072097,
+        "json": {
+            "callsignStr": "DUCFI",
+            "comment": "",
+            "id": 1166,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 168668.4375,
+            "y": 99639.734375
+        }
+    },
+    {
+        "lat": 14.98197505500688,
+        "lon": 145.52783335659785,
+        "json": {
+            "callsignStr": "ELOXE",
+            "comment": "",
+            "id": 1167,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 165018.171875,
+            "y": 80120.6484375
+        }
+    },
+    {
+        "lat": 14.22925833311994,
+        "lon": 145.0542305479042,
+        "json": {
+            "callsignStr": "EPCAX",
+            "comment": "",
+            "id": 1168,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 82117.90625,
+            "y": 28467.1015625
+        }
+    },
+    {
+        "lat": 15.155869460450491,
+        "lon": 145.8224472235417,
+        "json": {
+            "callsignStr": "FIHVY",
+            "comment": "",
+            "id": 1169,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 184065.890625,
+            "y": 111906.7109375
+        }
+    },
+    {
+        "lat": 14.80283329941178,
+        "lon": 145.84076946320857,
+        "json": {
+            "callsignStr": "GAFWY",
+            "comment": "",
+            "id": 1170,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 145001.125,
+            "y": 113671.1484375
+        }
+    },
+    {
+        "lat": 14.789197263703239,
+        "lon": 145.7685222134254,
+        "json": {
+            "callsignStr": "HIRCH",
+            "comment": "",
+            "id": 1171,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 143534.09375,
+            "y": 105887.1953125
+        }
+    },
+    {
+        "lat": 15.106252760220551,
+        "lon": 145.69719997190586,
+        "json": {
+            "callsignStr": "JIDSU",
+            "comment": "",
+            "id": 1172,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 178652.9375,
+            "y": 98416.171875
+        }
+    },
+    {
+        "lat": 14.189063860648236,
+        "lon": 145.05498611114106,
+        "json": {
+            "callsignStr": "JIRGI",
+            "comment": "",
+            "id": 1173,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 77669.5703125,
+            "y": 28511.580078125
+        }
+    },
+    {
+        "lat": 13.761927779394522,
+        "lon": 144.97034722010994,
+        "json": {
+            "callsignStr": "KAQTU",
+            "comment": "",
+            "id": 1174,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 30481.884765625,
+            "y": 18969.478515625
+        }
+    },
+    {
+        "lat": 14.369963904667072,
+        "lon": 145.11278890199654,
+        "json": {
+            "callsignStr": "MONIE",
+            "comment": "",
+            "id": 1175,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 97635.109375,
+            "y": 34914.3828125
+        }
+    },
+    {
+        "lat": 14.180686105272178,
+        "lon": 145.15773887175638,
+        "json": {
+            "callsignStr": "ONSUW",
+            "comment": "",
+            "id": 1176,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 76652.6953125,
+            "y": 39596.859375
+        }
+    },
+    {
+        "lat": 14.17145275340547,
+        "lon": 145.33434165348737,
+        "json": {
+            "callsignStr": "OPBUL",
+            "comment": "",
+            "id": 1177,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 75488.1171875,
+            "y": 58653.98046875
+        }
+    },
+    {
+        "lat": 14.001672212414825,
+        "lon": 145.4758222396106,
+        "json": {
+            "callsignStr": "REWJU",
+            "comment": "",
+            "id": 1178,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 56601.08984375,
+            "y": 73804.7890625
+        }
+    },
+    {
+        "lat": 15.036344419199823,
+        "lon": 145.81731666262465,
+        "json": {
+            "callsignStr": "SADVE",
+            "comment": "",
+            "id": 1179,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 170846.296875,
+            "y": 111284.34375
+        }
+    },
+    {
+        "lat": 14.167952764253286,
+        "lon": 145.44579444938037,
+        "json": {
+            "callsignStr": "TOXPA",
+            "comment": "",
+            "id": 1180,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 75018.1171875,
+            "y": 70682.515625
+        }
+    },
+    {
+        "lat": 15.251922283418022,
+        "lon": 146.0122444192689,
+        "json": {
+            "callsignStr": "UKUGY",
+            "comment": "",
+            "id": 1181,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 194590.5625,
+            "y": 132347.6875
+        }
+    },
+    {
+        "lat": 14.970633374066102,
+        "lon": 146.03949437328112,
+        "json": {
+            "callsignStr": "YEYNU",
+            "comment": "",
+            "id": 1182,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 163461.5625,
+            "y": 135138.171875
+        }
+    },
+    {
+        "lat": 15.134905494183597,
+        "lon": 145.7694944501051,
+        "json": {
+            "callsignStr": "ZILUK",
+            "comment": "",
+            "id": 1183,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 181777.953125,
+            "y": 106203.9296875
+        }
+    },
+    {
+        "lat": 14.311580560845726,
+        "lon": 145.02690000243666,
+        "json": {
+            "callsignStr": "ZOVIK",
+            "comment": "",
+            "id": 1184,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 91252.125,
+            "y": 25594.435546875
+        }
+    },
+    {
+        "lat": 13.591229543010547,
+        "lon": 144.94654424291443,
+        "json": {
+            "callsignStr": "UAM",
+            "comment": "",
+            "id": 20,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 11614.990921815,
+            "y": 16234.761608197
+        }
+    },
+    {
+        "lat": 13.454522940828605,
+        "lon": 144.73331247966283,
+        "json": {
+            "callsignStr": "UNZ",
+            "comment": "",
+            "id": 21,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -3309.5209333492,
+            "y": -6987.1509698054
+        }
+    },
+    {
+        "lat": 13.453401361387694,
+        "lon": 144.73685868984484,
+        "json": {
+            "callsignStr": "ARJ",
+            "comment": "",
+            "id": 22,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -3437.1782991892,
+            "y": -6604.1788722855
+        }
+    },
+    {
+        "lat": 14.171642748405493,
+        "lon": 145.2398632779855,
+        "json": {
+            "callsignStr": "GRO",
+            "comment": "",
+            "id": 23,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 75583.811560895,
+            "y": 48454.915829216
+        }
+    },
+    {
+        "lat": 15.111309220297592,
+        "lon": 145.71043642265988,
+        "json": {
+            "callsignStr": "SN",
+            "comment": "",
+            "id": 24,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 179203.94419998,
+            "y": 99842.083056895
+        }
+    }
+]

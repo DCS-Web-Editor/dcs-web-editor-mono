@@ -1,0 +1,5222 @@
+[
+    {
+        "lat": 37.01027180243171,
+        "lon": 35.439625069994406,
+        "json": {
+            "callsignStr": "RW23",
+            "comment": "",
+            "id": 59,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 222075.35948332,
+            "y": -34001.136542766
+        }
+    },
+    {
+        "lat": 36.993818072232095,
+        "lon": 35.412553730130405,
+        "json": {
+            "callsignStr": "RW05",
+            "comment": "",
+            "id": 60,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 220339.69685884,
+            "y": -36479.72333364
+        }
+    },
+    {
+        "lat": 37.0156113678095,
+        "lon": 35.44819382220325,
+        "json": {
+            "callsignStr": "DAN",
+            "comment": "",
+            "id": 61,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 222639.47897226,
+            "y": -33216.272697572
+        }
+    },
+    {
+        "lat": 36.9708893175981,
+        "lon": 35.26161107777888,
+        "json": {
+            "callsignStr": "ADNNB",
+            "comment": "",
+            "id": 62,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 218312.32655009,
+            "y": -50018.761182686
+        }
+    },
+    {
+        "lat": 36.940583041667466,
+        "lon": 35.210388753698425,
+        "json": {
+            "callsignStr": "ADA",
+            "comment": "",
+            "id": 63,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 215128.8292275,
+            "y": -54714.763274483
+        }
+    },
+    {
+        "lat": 36.3629721667903,
+        "lon": 36.29011327116373,
+        "json": {
+            "callsignStr": "HTY",
+            "comment": "",
+            "id": 64,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 147753.11472209,
+            "y": 39662.310689508
+        }
+    },
+    {
+        "lat": 36.36314793546099,
+        "lon": 36.2904575577177,
+        "json": {
+            "callsignStr": "HTYNB",
+            "comment": "",
+            "id": 65,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 147771.75073172,
+            "y": 39693.755191217
+        }
+    },
+    {
+        "lat": 37.54037151190379,
+        "lon": 36.953480559710435,
+        "json": {
+            "callsignStr": "KHM",
+            "comment": "",
+            "id": 66,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 276922.27158151,
+            "y": 101996.4355037
+        }
+    },
+    {
+        "lat": 37.54019630368922,
+        "lon": 36.952345784887996,
+        "json": {
+            "callsignStr": "KHMNB",
+            "comment": "",
+            "id": 67,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 276905.01387955,
+            "y": 101895.74653174
+        }
+    },
+    {
+        "lat": 36.95155664635458,
+        "lon": 37.47293652841868,
+        "json": {
+            "callsignStr": "GAZ",
+            "comment": "",
+            "id": 68,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 210721.74199552,
+            "y": 146838.24365595
+        }
+    },
+    {
+        "lat": 36.95326520558684,
+        "lon": 37.46854605591848,
+        "json": {
+            "callsignStr": "GAZNB",
+            "comment": "",
+            "id": 69,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 210917.56939573,
+            "y": 146450.35652385
+        }
+    },
+    {
+        "lat": 36.17921032067259,
+        "lon": 37.20946787356459,
+        "json": {
+            "callsignStr": "ALE",
+            "comment": "",
+            "id": 70,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 125445.28486943,
+            "y": 121782.48777657
+        }
+    },
+    {
+        "lat": 36.18599741305435,
+        "lon": 37.223296930023594,
+        "json": {
+            "callsignStr": "ALENB",
+            "comment": "",
+            "id": 71,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 126175.34331569,
+            "y": 123040.01389528
+        }
+    },
+    {
+        "lat": 36.17311456916237,
+        "lon": 37.30755268580585,
+        "json": {
+            "callsignStr": "MERNB",
+            "comment": "",
+            "id": 72,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 124610.74131922,
+            "y": 130592.04669377
+        }
+    },
+    {
+        "lat": 35.29194416917718,
+        "lon": 40.15377787580935,
+        "json": {
+            "callsignStr": "DRZ",
+            "comment": "",
+            "id": 131,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 26163.668206172,
+            "y": 387712.20519567
+        }
+    },
+    {
+        "lat": 35.289111438556986,
+        "lon": 40.18741700509877,
+        "json": {
+            "callsignStr": "DRZNB",
+            "comment": "",
+            "id": 132,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 25885.602927245,
+            "y": 390774.86516938
+        }
+    },
+    {
+        "lat": 35.48033097271228,
+        "lon": 35.944991746813045,
+        "json": {
+            "callsignStr": "LTKNB",
+            "comment": "",
+            "id": 191,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 50737.532599313,
+            "y": 5622.1110990397
+        }
+    },
+    {
+        "lat": 35.39675825166794,
+        "lon": 35.95204097296075,
+        "json": {
+            "callsignStr": "LTK",
+            "comment": "",
+            "id": 192,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 41444.837212316,
+            "y": 5975.5848692977
+        }
+    },
+    {
+        "lat": 34.5861117857081,
+        "lon": 36.00277751188653,
+        "json": {
+            "callsignStr": "RANB",
+            "comment": "",
+            "id": 251,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -48636.065090903,
+            "y": 7884.5467749812
+        }
+    },
+    {
+        "lat": 34.227181376445195,
+        "lon": 37.23366684199882,
+        "json": {
+            "callsignStr": "KTNNB",
+            "comment": "",
+            "id": 252,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -91109.321898144,
+            "y": 120109.94260934
+        }
+    },
+    {
+        "lat": 34.21328337083716,
+        "lon": 37.264208257667065,
+        "json": {
+            "callsignStr": "KTN",
+            "comment": "",
+            "id": 253,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -92699.000703504,
+            "y": 122897.0642499
+        }
+    },
+    {
+        "lat": 34.55573990184573,
+        "lon": 38.26691624307442,
+        "json": {
+            "callsignStr": "PLRNB",
+            "comment": "",
+            "id": 254,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -55843.835868754,
+            "y": 215545.69650889
+        }
+    },
+    {
+        "lat": 34.552847670628864,
+        "lon": 38.29826747666821,
+        "json": {
+            "callsignStr": "PALNB",
+            "comment": "",
+            "id": 255,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -56184.987307974,
+            "y": 218419.77756459
+        }
+    },
+    {
+        "lat": 33.48238329297884,
+        "lon": 38.65406388706275,
+        "json": {
+            "callsignStr": "TAN",
+            "comment": "",
+            "id": 256,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -175046.39760559,
+            "y": 250662.01025369
+        }
+    },
+    {
+        "lat": 35.228286490788946,
+        "lon": 35.95791876133388,
+        "json": {
+            "callsignStr": "BANNB",
+            "comment": "",
+            "id": 257,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 22735.734656845,
+            "y": 5935.3610210565
+        }
+    },
+    {
+        "lat": 34.30048898769618,
+        "lon": 35.69994579768416,
+        "json": {
+            "callsignStr": "CAK",
+            "comment": "",
+            "id": 258,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -79459.019076589,
+            "y": -20936.319415565
+        }
+    },
+    {
+        "lat": 33.807389769944876,
+        "lon": 35.48599103519237,
+        "json": {
+            "callsignStr": "KAD",
+            "comment": "",
+            "id": 259,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -133511.01111448,
+            "y": -42518.955851964
+        }
+    },
+    {
+        "lat": 33.769444122779014,
+        "lon": 35.5555559132602,
+        "json": {
+            "callsignStr": "BAR",
+            "comment": "",
+            "id": 260,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -137939.09195366,
+            "y": -36216.699819548
+        }
+    },
+    {
+        "lat": 33.4872621072851,
+        "lon": 36.602245888116485,
+        "json": {
+            "callsignStr": "DALNB",
+            "comment": "",
+            "id": 261,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -171986.16734196,
+            "y": 60026.461440492
+        }
+    },
+    {
+        "lat": 33.365130750218846,
+        "lon": 36.46806617000892,
+        "json": {
+            "callsignStr": "DAM",
+            "comment": "",
+            "id": 262,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -185235.66000923,
+            "y": 47226.797023779
+        }
+    },
+    {
+        "lat": 33.335300153079935,
+        "lon": 36.42829527809182,
+        "json": {
+            "callsignStr": "ABDNB",
+            "comment": "",
+            "id": 263,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -188453.47470917,
+            "y": 43443.787881254
+        }
+    },
+    {
+        "lat": 33.4859177573165,
+        "lon": 36.22672196148664,
+        "json": {
+            "callsignStr": "MEZNB",
+            "comment": "",
+            "id": 264,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -171265.7390882,
+            "y": 25122.662059135
+        }
+    },
+    {
+        "lat": 32.98252799655926,
+        "lon": 35.57277786312712,
+        "json": {
+            "callsignStr": "ROP",
+            "comment": "",
+            "id": 265,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -225297.28253022,
+            "y": -37497.271234968
+        }
+    },
+    {
+        "lat": 32.6662741708345,
+        "lon": 35.18546071632677,
+        "json": {
+            "callsignStr": "RMDNB",
+            "comment": "",
+            "id": 266,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -259140.78466529,
+            "y": -74983.917128823
+        }
+    },
+    {
+        "lat": 32.3338894986314,
+        "lon": 34.968889165545484,
+        "json": {
+            "callsignStr": "NAT",
+            "comment": "",
+            "id": 267,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -295272.48554796,
+            "y": -96707.592189527
+        }
+    },
+    {
+        "lat": 37.166502081984596,
+        "lon": 35.697742497929916,
+        "json": {
+            "callsignStr": "TOSIE",
+            "comment": "",
+            "id": 326,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 238585.42766759,
+            "y": -10423.192127197
+        }
+    },
+    {
+        "lat": 36.98535160214504,
+        "lon": 35.3986565646736,
+        "json": {
+            "callsignStr": "GECEG",
+            "comment": "",
+            "id": 327,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 219446.73780174,
+            "y": -37752.60084729
+        }
+    },
+    {
+        "lat": 36.928881420001325,
+        "lon": 35.305944113981674,
+        "json": {
+            "callsignStr": "GOMSE",
+            "comment": "",
+            "id": 328,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 213495.35199969,
+            "y": -46251.327957986
+        }
+    },
+    {
+        "lat": 36.864167425660845,
+        "lon": 35.200050309576156,
+        "json": {
+            "callsignStr": "JAKUP",
+            "comment": "",
+            "id": 329,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 206683.41875281,
+            "y": -55974.201783101
+        }
+    },
+    {
+        "lat": 36.76546393600814,
+        "lon": 35.43041274806027,
+        "json": {
+            "callsignStr": "OSLUP",
+            "comment": "",
+            "id": 330,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 194934.45725328,
+            "y": -35838.5876512
+        }
+    },
+    {
+        "lat": 37.265277990387524,
+        "lon": 35.465489850073375,
+        "json": {
+            "callsignStr": "OGBON",
+            "comment": "",
+            "id": 331,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 250293.4671637,
+            "y": -30643.382396153
+        }
+    },
+    {
+        "lat": 37.13617775542241,
+        "lon": 35.64751610904691,
+        "json": {
+            "callsignStr": "GURLE",
+            "comment": "",
+            "id": 332,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 235376.49141527,
+            "y": -15003.4892469
+        }
+    },
+    {
+        "lat": 37.03261393592348,
+        "lon": 35.476421245032526,
+        "json": {
+            "callsignStr": "WUNSO",
+            "comment": "",
+            "id": 333,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 224433.11422917,
+            "y": -30633.922260752
+        }
+    },
+    {
+        "lat": 37.04571550058126,
+        "lon": 35.498015015351996,
+        "json": {
+            "callsignStr": "HABIM",
+            "comment": "",
+            "id": 334,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 225816.23223317,
+            "y": -28658.810796839
+        }
+    },
+    {
+        "lat": 37.07292531932256,
+        "lon": 35.54292225816446,
+        "json": {
+            "callsignStr": "JAYBY",
+            "comment": "",
+            "id": 335,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 228689.89552921,
+            "y": -24553.552436684
+        }
+    },
+    {
+        "lat": 37.02054558641724,
+        "lon": 35.456543774686395,
+        "json": {
+            "callsignStr": "WAGIB",
+            "comment": "",
+            "id": 336,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 223159.40037373,
+            "y": -32452.665681997
+        }
+    },
+    {
+        "lat": 36.98535718307195,
+        "lon": 35.39865119644797,
+        "json": {
+            "callsignStr": "CUROS",
+            "comment": "",
+            "id": 337,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 219447.37535008,
+            "y": -37753.05538975
+        }
+    },
+    {
+        "lat": 37.02056915987333,
+        "lon": 35.4565216626733,
+        "json": {
+            "callsignStr": "EMLET",
+            "comment": "",
+            "id": 338,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 223162.09022356,
+            "y": -32454.536078967
+        }
+    },
+    {
+        "lat": 33.90341618375711,
+        "lon": 35.48181382669004,
+        "json": {
+            "callsignStr": "BODNB",
+            "comment": "",
+            "id": 397,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -122843.14723711,
+            "y": -42540.922127915
+        }
+    },
+    {
+        "lat": 36.45581753267529,
+        "lon": 36.11856469509645,
+        "json": {
+            "callsignStr": "D300J",
+            "comment": "",
+            "id": 456,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 158501.35288344,
+            "y": 24574.511083518
+        }
+    },
+    {
+        "lat": 36.52448862002025,
+        "lon": 36.34068526801508,
+        "json": {
+            "callsignStr": "D010J",
+            "comment": "",
+            "id": 457,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 165548.53509182,
+            "y": 44695.237726056
+        }
+    },
+    {
+        "lat": 36.95270145891702,
+        "lon": 36.47799769545651,
+        "json": {
+            "callsignStr": "MILBA",
+            "comment": "",
+            "id": 458,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 212731.53814577,
+            "y": 58243.95087565
+        }
+    },
+    {
+        "lat": 36.340482834797704,
+        "lon": 36.26251516188801,
+        "json": {
+            "callsignStr": "MI04",
+            "comment": "",
+            "id": 517,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 145327.57815643,
+            "y": 37114.845310808
+        }
+    },
+    {
+        "lat": 36.26692168658895,
+        "lon": 36.178758950385635,
+        "json": {
+            "callsignStr": "FI04",
+            "comment": "",
+            "id": 518,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 137381.48001644,
+            "y": 29357.869910018
+        }
+    },
+    {
+        "lat": 36.21645667941132,
+        "lon": 36.121405483708536,
+        "json": {
+            "callsignStr": "D219L",
+            "comment": "",
+            "id": 519,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 131933.56769992,
+            "y": 24037.821861561
+        }
+    },
+    {
+        "lat": 36.19165330153942,
+        "lon": 36.0939051095677,
+        "json": {
+            "callsignStr": "CI04",
+            "comment": "",
+            "id": 520,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 129255.15279554,
+            "y": 21482.585827676
+        }
+    },
+    {
+        "lat": 36.338041915974244,
+        "lon": 36.25973320785467,
+        "json": {
+            "callsignStr": "MA04",
+            "comment": "",
+            "id": 579,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 145063.81587384,
+            "y": 36857.429318999
+        }
+    },
+    {
+        "lat": 36.27770927912149,
+        "lon": 36.191027328787506,
+        "json": {
+            "callsignStr": "70DME",
+            "comment": "",
+            "id": 580,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 138546.40490389,
+            "y": 30495.000677215
+        }
+    },
+    {
+        "lat": 36.30229655635098,
+        "lon": 36.219011010847964,
+        "json": {
+            "callsignStr": "FF04",
+            "comment": "",
+            "id": 581,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 141201.96912635,
+            "y": 33087.57246081
+        }
+    },
+    {
+        "lat": 36.19165339248805,
+        "lon": 36.093904668663356,
+        "json": {
+            "callsignStr": "CF04",
+            "comment": "",
+            "id": 582,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 129255.16407611,
+            "y": 21482.546473342
+        }
+    },
+    {
+        "lat": 36.38579306643997,
+        "lon": 36.31421343432461,
+        "json": {
+            "callsignStr": "MA22",
+            "comment": "",
+            "id": 583,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 150224.85150815,
+            "y": 41895.568021625
+        }
+    },
+    {
+        "lat": 36.44937724546666,
+        "lon": 36.38690252135871,
+        "json": {
+            "callsignStr": "FF22",
+            "comment": "",
+            "id": 584,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 157100.9253213,
+            "y": 48608.040324097
+        }
+    },
+    {
+        "lat": 36.51080654917232,
+        "lon": 36.457283742589816,
+        "json": {
+            "callsignStr": "D036L",
+            "comment": "",
+            "id": 585,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 163748.1040016,
+            "y": 55097.001373843
+        }
+    },
+    {
+        "lat": 36.53534328520348,
+        "lon": 36.485093502117095,
+        "json": {
+            "callsignStr": "CF22",
+            "comment": "",
+            "id": 586,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 166405.14337365,
+            "y": 57659.045688426
+        }
+    },
+    {
+        "lat": 36.94298202149359,
+        "lon": 35.41896456910302,
+        "json": {
+            "callsignStr": "D086J",
+            "comment": "",
+            "id": 645,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 214675.73456298,
+            "y": -36121.314027393
+        }
+    },
+    {
+        "lat": 36.944852354382995,
+        "lon": 35.62521415795757,
+        "json": {
+            "callsignStr": "D086T",
+            "comment": "",
+            "id": 646,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 214212.13755573,
+            "y": -17739.520527233
+        }
+    },
+    {
+        "lat": 36.616546062147336,
+        "lon": 34.535629719955736,
+        "json": {
+            "callsignStr": "TARSU",
+            "comment": "",
+            "id": 647,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 181760.06299578,
+            "y": -116524.28241222
+        }
+    },
+    {
+        "lat": 36.89992242228331,
+        "lon": 34.4237813864178,
+        "json": {
+            "callsignStr": "MANAZ",
+            "comment": "",
+            "id": 648,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 213695.31951802,
+            "y": -125027.80100788
+        }
+    },
+    {
+        "lat": 36.92030085274167,
+        "lon": 34.795916613272986,
+        "json": {
+            "callsignStr": "D264T",
+            "comment": "",
+            "id": 649,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 214428.05980775,
+            "y": -91746.113667814
+        }
+    },
+    {
+        "lat": 36.930015158407734,
+        "lon": 35.00328590528492,
+        "json": {
+            "callsignStr": "D264J",
+            "comment": "",
+            "id": 650,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 214710.45391178,
+            "y": -73217.448904585
+        }
+    },
+    {
+        "lat": 37.597356965770125,
+        "lon": 34.71712758614602,
+        "json": {
+            "callsignStr": "KEMER",
+            "comment": "",
+            "id": 651,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 289908.79525933,
+            "y": -95361.054533408
+        }
+    },
+    {
+        "lat": 37.29750158137288,
+        "lon": 34.94194015981583,
+        "json": {
+            "callsignStr": "D326Y",
+            "comment": "",
+            "id": 652,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 255736.965412,
+            "y": -76938.133517544
+        }
+    },
+    {
+        "lat": 37.2239160036543,
+        "lon": 34.99135216587883,
+        "json": {
+            "callsignStr": "D326T",
+            "comment": "",
+            "id": 653,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 247380.90850829,
+            "y": -72902.528522039
+        }
+    },
+    {
+        "lat": 37.11396140531044,
+        "lon": 35.15491924761284,
+        "json": {
+            "callsignStr": "D326J",
+            "comment": "",
+            "id": 654,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 234572.51954886,
+            "y": -58878.179470274
+        }
+    },
+    {
+        "lat": 36.855713386864764,
+        "lon": 35.03189150283137,
+        "json": {
+            "callsignStr": "D237J",
+            "comment": "",
+            "id": 655,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 206355.87190757,
+            "y": -71011.653600705
+        }
+    },
+    {
+        "lat": 35.88999153750303,
+        "lon": 36.054678972895644,
+        "json": {
+            "callsignStr": "TUNLA",
+            "comment": "",
+            "id": 714,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 95888.990943675,
+            "y": 16941.117707074
+        }
+    },
+    {
+        "lat": 36.90196370858175,
+        "lon": 35.145337167295814,
+        "json": {
+            "callsignStr": "FF05Z",
+            "comment": "",
+            "id": 773,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 211074.72269018,
+            "y": -60684.41499542
+        }
+    },
+    {
+        "lat": 36.86126107987582,
+        "lon": 35.07691900201701,
+        "json": {
+            "callsignStr": "CF05Z",
+            "comment": "",
+            "id": 774,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 206805.51879848,
+            "y": -66969.705785719
+        }
+    },
+    {
+        "lat": 36.83753843706266,
+        "lon": 35.10488072776765,
+        "json": {
+            "callsignStr": "D217H",
+            "comment": "",
+            "id": 775,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 204069.99986776,
+            "y": -64583.157318509
+        }
+    },
+    {
+        "lat": 36.821140137961976,
+        "lon": 35.13616073923419,
+        "json": {
+            "callsignStr": "D204H",
+            "comment": "",
+            "id": 776,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 202136.29175341,
+            "y": -61865.958531334
+        }
+    },
+    {
+        "lat": 37.01966783742075,
+        "lon": 35.34376593540279,
+        "json": {
+            "callsignStr": "D051H",
+            "comment": "",
+            "id": 835,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 223442.18500621,
+            "y": -42493.727654618
+        }
+    },
+    {
+        "lat": 36.9654391887024,
+        "lon": 35.25225063312516,
+        "json": {
+            "callsignStr": "MA05",
+            "comment": "",
+            "id": 894,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 217740.17015705,
+            "y": -50876.26044783
+        }
+    },
+    {
+        "lat": 36.885110491648895,
+        "lon": 35.11700521830366,
+        "json": {
+            "callsignStr": "FF05Y",
+            "comment": "",
+            "id": 895,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 209306.52794423,
+            "y": -63286.358974824
+        }
+    },
+    {
+        "lat": 36.92800666997241,
+        "lon": 34.96140970236294,
+        "json": {
+            "callsignStr": "D264L",
+            "comment": "",
+            "id": 896,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 214644.98719699,
+            "y": -76958.865452034
+        }
+    },
+    {
+        "lat": 36.928994785632206,
+        "lon": 34.98236509651296,
+        "json": {
+            "callsignStr": "D264K",
+            "comment": "",
+            "id": 897,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 214675.65975244,
+            "y": -75086.660363299
+        }
+    },
+    {
+        "lat": 36.86294500027872,
+        "lon": 35.00376827404638,
+        "json": {
+            "callsignStr": "D242K",
+            "comment": "",
+            "id": 898,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 207263.382484,
+            "y": -73486.737312096
+        }
+    },
+    {
+        "lat": 36.899941336705794,
+        "lon": 35.141936633458755,
+        "json": {
+            "callsignStr": "FS05",
+            "comment": "",
+            "id": 899,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 210862.50528614,
+            "y": -60996.651948005
+        }
+    },
+    {
+        "lat": 36.90196375509603,
+        "lon": 35.14533669118493,
+        "json": {
+            "callsignStr": "FD05",
+            "comment": "",
+            "id": 900,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 211074.72957053,
+            "y": -60684.457230295
+        }
+    },
+    {
+        "lat": 36.86126093335538,
+        "lon": 35.07691933057755,
+        "json": {
+            "callsignStr": "CD05",
+            "comment": "",
+            "id": 901,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 206805.50132848,
+            "y": -66969.677148386
+        }
+    },
+    {
+        "lat": 36.965439387937586,
+        "lon": 35.252250983831644,
+        "json": {
+            "callsignStr": "MD05",
+            "comment": "",
+            "id": 960,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 217740.19104147,
+            "y": -50876.228339499
+        }
+    },
+    {
+        "lat": 37.10867735109892,
+        "lon": 35.346199159935814,
+        "json": {
+            "callsignStr": "D030L",
+            "comment": "",
+            "id": 961,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 233313.60937662,
+            "y": -41896.911812374
+        }
+    },
+    {
+        "lat": 37.02527741927533,
+        "lon": 35.33878168087622,
+        "json": {
+            "callsignStr": "MA23",
+            "comment": "",
+            "id": 962,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 224081.90767437,
+            "y": -42913.353317233
+        }
+    },
+    {
+        "lat": 37.06759630754406,
+        "lon": 35.40343700766886,
+        "json": {
+            "callsignStr": "FF23",
+            "comment": "",
+            "id": 963,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 228559.32022809,
+            "y": -36981.416724481
+        }
+    },
+    {
+        "lat": 36.90795817524872,
+        "lon": 35.15956267550244,
+        "json": {
+            "callsignStr": "FF05",
+            "comment": "",
+            "id": 964,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 211688.90560346,
+            "y": -59389.43682719
+        }
+    },
+    {
+        "lat": 32.83257786663238,
+        "lon": 34.9702644685246,
+        "json": {
+            "callsignStr": "GALIM",
+            "comment": "",
+            "id": 1023,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -239938.58817387,
+            "y": -94478.542865184
+        }
+    },
+    {
+        "lat": 32.80927715307023,
+        "lon": 34.814265253042265,
+        "json": {
+            "callsignStr": "ZAHAV",
+            "comment": "",
+            "id": 1024,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -241955.37499992,
+            "y": -109196.94910404
+        }
+    },
+    {
+        "lat": 32.770215995028174,
+        "lon": 34.549055792057416,
+        "json": {
+            "callsignStr": "MERVA",
+            "comment": "",
+            "id": 1025,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -245273.9122207,
+            "y": -134236.9664677
+        }
+    },
+    {
+        "lat": 32.79298676083242,
+        "lon": 35.049365956018626,
+        "json": {
+            "callsignStr": "HAV07",
+            "comment": "",
+            "id": 1026,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -244612.14386903,
+            "y": -87232.253597789
+        }
+    },
+    {
+        "lat": 32.780311605685085,
+        "lon": 35.05998045238125,
+        "json": {
+            "callsignStr": "HAV06",
+            "comment": "",
+            "id": 1027,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -246055.80998301,
+            "y": -86289.860440049
+        }
+    },
+    {
+        "lat": 32.794596117783605,
+        "lon": 35.075608867962096,
+        "json": {
+            "callsignStr": "HAV05",
+            "comment": "",
+            "id": 1028,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -244525.25655661,
+            "y": -84765.990653066
+        }
+    },
+    {
+        "lat": 32.8060768964111,
+        "lon": 35.057629885890655,
+        "json": {
+            "callsignStr": "HAV03",
+            "comment": "",
+            "id": 1029,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -243188.5286733,
+            "y": -86403.482310131
+        }
+    },
+    {
+        "lat": 32.802650922550384,
+        "lon": 35.046947158159085,
+        "json": {
+            "callsignStr": "HAV04",
+            "comment": "",
+            "id": 1030,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -243531.26539932,
+            "y": -87418.815766795
+        }
+    },
+    {
+        "lat": 32.82938469212615,
+        "lon": 35.04803798632543,
+        "json": {
+            "callsignStr": "HAV02",
+            "comment": "",
+            "id": 1032,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -240568.54202199,
+            "y": -87205.519040123
+        }
+    },
+    {
+        "lat": 32.8263608381629,
+        "lon": 35.03687489611366,
+        "json": {
+            "callsignStr": "HAV01",
+            "comment": "",
+            "id": 1033,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -240864.86383399,
+            "y": -88263.968048635
+        }
+    },
+    {
+        "lat": 33.58246982751818,
+        "lon": 35.31496599174579,
+        "json": {
+            "callsignStr": "RAMLA",
+            "comment": "",
+            "id": 1092,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -157913.94991545,
+            "y": -59252.027331155
+        }
+    },
+    {
+        "lat": 34.06768142679425,
+        "lon": 35.41517784189472,
+        "json": {
+            "callsignStr": "ZALKA",
+            "comment": "",
+            "id": 1093,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -104402.88073495,
+            "y": -48067.765446279
+        }
+    },
+    {
+        "lat": 34.16297433668984,
+        "lon": 35.37612309705195,
+        "json": {
+            "callsignStr": "D343V",
+            "comment": "",
+            "id": 1094,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -93701.641417406,
+            "y": -51298.595098222
+        }
+    },
+    {
+        "lat": 34.404585372021494,
+        "lon": 35.30155291054123,
+        "json": {
+            "callsignStr": "D106N",
+            "comment": "",
+            "id": 1095,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -66643.351565787,
+            "y": -57200.794798809
+        }
+    },
+    {
+        "lat": 34.46133004693208,
+        "lon": 35.026424698190816,
+        "json": {
+            "callsignStr": "BALMA",
+            "comment": "",
+            "id": 1096,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -59386.873070724,
+            "y": -82260.477474934
+        }
+    },
+    {
+        "lat": 34.23432795408751,
+        "lon": 34.745681545319194,
+        "json": {
+            "callsignStr": "KUKLA",
+            "comment": "",
+            "id": 1097,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -83532.796877384,
+            "y": -109127.1196596
+        }
+    },
+    {
+        "lat": 33.81819701805607,
+        "lon": 34.58813089746537,
+        "json": {
+            "callsignStr": "ELIKA",
+            "comment": "",
+            "id": 1098,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -129105.06844927,
+            "y": -125646.11277197
+        }
+    },
+    {
+        "lat": 34.14144965097429,
+        "lon": 35.466609592537075,
+        "json": {
+            "callsignStr": "BYBLO",
+            "comment": "",
+            "id": 1157,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -96383.125711371,
+            "y": -43035.096294879
+        }
+    },
+    {
+        "lat": 33.60105171829761,
+        "lon": 35.21750747464352,
+        "json": {
+            "callsignStr": "BA402",
+            "comment": "",
+            "id": 1158,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -155525.27692981,
+            "y": -68227.987037005
+        }
+    },
+    {
+        "lat": 33.90602404401945,
+        "lon": 35.149335159379966,
+        "json": {
+            "callsignStr": "BA401",
+            "comment": "",
+            "id": 1159,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -121448.77778214,
+            "y": -73292.641537949
+        }
+    },
+    {
+        "lat": 34.28767761331371,
+        "lon": 36.00078964934202,
+        "json": {
+            "callsignStr": "CEDAR",
+            "comment": "",
+            "id": 1160,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -81739.259555455,
+            "y": 6721.1806726806
+        }
+    },
+    {
+        "lat": 34.259543578756826,
+        "lon": 36.61196235676473,
+        "json": {
+            "callsignStr": "LEBOR",
+            "comment": "",
+            "id": 1161,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -86351.319731874,
+            "y": 62920.374877734
+        }
+    },
+    {
+        "lat": 34.16296855911685,
+        "lon": 35.37616142939888,
+        "json": {
+            "callsignStr": "BA411",
+            "comment": "",
+            "id": 1220,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -93702.408265858,
+            "y": -51295.082135433
+        }
+    },
+    {
+        "lat": 34.091473439287995,
+        "lon": 35.31943231081444,
+        "json": {
+            "callsignStr": "BA412",
+            "comment": "",
+            "id": 1221,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -101448.35181379,
+            "y": -56814.137228533
+        }
+    },
+    {
+        "lat": 34.158969509730994,
+        "lon": 35.328184169893674,
+        "json": {
+            "callsignStr": "BA420",
+            "comment": "",
+            "id": 1222,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -93987.730907453,
+            "y": -55736.52377075
+        }
+    },
+    {
+        "lat": 34.08539859226661,
+        "lon": 35.44480145298676,
+        "json": {
+            "callsignStr": "BA416",
+            "comment": "",
+            "id": 1223,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -102532.59762449,
+            "y": -45263.834493694
+        }
+    },
+    {
+        "lat": 34.06451312332802,
+        "lon": 35.541483382152926,
+        "json": {
+            "callsignStr": "BA417",
+            "comment": "",
+            "id": 1224,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -105156.49938798,
+            "y": -36416.622814546
+        }
+    },
+    {
+        "lat": 34.25548914118301,
+        "lon": 35.592223280005385,
+        "json": {
+            "callsignStr": "BA415",
+            "comment": "",
+            "id": 1225,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -84124.408348123,
+            "y": -31022.791780978
+        }
+    },
+    {
+        "lat": 34.0415531929574,
+        "lon": 36.39547385312249,
+        "json": {
+            "callsignStr": "LATEB",
+            "comment": "",
+            "id": 1227,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -110042.23301332,
+            "y": 42364.681253833
+        }
+    },
+    {
+        "lat": 33.77716606611154,
+        "lon": 35.46460339038048,
+        "json": {
+            "callsignStr": "ML03",
+            "comment": "",
+            "id": 1228,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -136796.59966601,
+            "y": -44615.177623784
+        }
+    },
+    {
+        "lat": 33.718396273034216,
+        "lon": 35.41919972290453,
+        "json": {
+            "callsignStr": "FF03",
+            "comment": "",
+            "id": 1229,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -143172.07939208,
+            "y": -49048.841984942
+        }
+    },
+    {
+        "lat": 33.65265906980118,
+        "lon": 35.3684950670323,
+        "json": {
+            "callsignStr": "D209K",
+            "comment": "",
+            "id": 1230,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -150301.71087812,
+            "y": -54007.060048257
+        }
+    },
+    {
+        "lat": 33.856615335324314,
+        "lon": 35.47427893746176,
+        "json": {
+            "callsignStr": "MF16",
+            "comment": "",
+            "id": 1231,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -128012.04387889,
+            "y": -43416.398500975
+        }
+    },
+    {
+        "lat": 33.93776466674224,
+        "lon": 35.45166726659845,
+        "json": {
+            "callsignStr": "FF16",
+            "comment": "",
+            "id": 1232,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -118935.86788865,
+            "y": -45198.170123424
+        }
+    },
+    {
+        "lat": 33.986355561538474,
+        "lon": 35.438102553233534,
+        "json": {
+            "callsignStr": "D343K",
+            "comment": "",
+            "id": 1233,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -113500.78422053,
+            "y": -46265.18186961
+        }
+    },
+    {
+        "lat": 33.847402971601,
+        "lon": 35.4863844120246,
+        "json": {
+            "callsignStr": "MM17",
+            "comment": "",
+            "id": 1235,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -129072.60144882,
+            "y": -42330.764044028
+        }
+    },
+    {
+        "lat": 33.6526590112855,
+        "lon": 35.36849505064513,
+        "json": {
+            "callsignStr": "BA403",
+            "comment": "",
+            "id": 1236,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -150301.71731744,
+            "y": -54007.061797253
+        }
+    },
+    {
+        "lat": 33.71839654858765,
+        "lon": 35.419199751550934,
+        "json": {
+            "callsignStr": "BA404",
+            "comment": "",
+            "id": 1237,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -143172.04890987,
+            "y": -49048.8382667
+        }
+    },
+    {
+        "lat": 33.77716616150279,
+        "lon": 35.46460364704567,
+        "json": {
+            "callsignStr": "BA405",
+            "comment": "",
+            "id": 1238,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -136796.58989874,
+            "y": -44615.15347864
+        }
+    },
+    {
+        "lat": 33.98635560519743,
+        "lon": 35.43810287434082,
+        "json": {
+            "callsignStr": "BA406",
+            "comment": "",
+            "id": 1242,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -113500.78040894,
+            "y": -46265.152021092
+        }
+    },
+    {
+        "lat": 33.9377645328764,
+        "lon": 35.45166728936869,
+        "json": {
+            "callsignStr": "BA413",
+            "comment": "",
+            "id": 1243,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -118935.88281498,
+            "y": -45198.168531801
+        }
+    },
+    {
+        "lat": 33.85661510732374,
+        "lon": 35.47427939194144,
+        "json": {
+            "callsignStr": "BA414",
+            "comment": "",
+            "id": 1244,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -128012.07062097,
+            "y": -43416.357298351
+        }
+    },
+    {
+        "lat": 33.84740318831231,
+        "lon": 35.48638515575398,
+        "json": {
+            "callsignStr": "BA421",
+            "comment": "",
+            "id": 1303,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -129072.57975841,
+            "y": -42330.694367862
+        }
+    },
+    {
+        "lat": 33.928350941688215,
+        "lon": 35.55640322123352,
+        "json": {
+            "callsignStr": "BA418",
+            "comment": "",
+            "id": 1304,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -120310.71375332,
+            "y": -35547.233307709
+        }
+    },
+    {
+        "lat": 33.850331203447055,
+        "lon": 35.52121565845357,
+        "json": {
+            "callsignStr": "BA419",
+            "comment": "",
+            "id": 1305,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -128857.43764787,
+            "y": -39095.138675159
+        }
+    },
+    {
+        "lat": 33.718396333864895,
+        "lon": 35.419199630388086,
+        "json": {
+            "callsignStr": "FD03",
+            "comment": "",
+            "id": 1306,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -143172.07234452,
+            "y": -49048.850328725
+        }
+    },
+    {
+        "lat": 33.98635582573318,
+        "lon": 35.43810272422701,
+        "json": {
+            "callsignStr": "CD16",
+            "comment": "",
+            "id": 1307,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -113500.75545578,
+            "y": -46265.165044639
+        }
+    },
+    {
+        "lat": 33.93776477492571,
+        "lon": 35.45166732838558,
+        "json": {
+            "callsignStr": "FD16",
+            "comment": "",
+            "id": 1308,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -118935.8560827,
+            "y": -45198.163993637
+        }
+    },
+    {
+        "lat": 33.85661583297051,
+        "lon": 35.47427910949424,
+        "json": {
+            "callsignStr": "MD16",
+            "comment": "",
+            "id": 1309,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -128011.98920889,
+            "y": -43416.38068062
+        }
+    },
+    {
+        "lat": 33.90398609621453,
+        "lon": 35.47885786779532,
+        "json": {
+            "callsignStr": "FD17",
+            "comment": "",
+            "id": 1368,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -122770.52926658,
+            "y": -42812.232825214
+        }
+    },
+    {
+        "lat": 33.848658719695464,
+        "lon": 35.483007627387636,
+        "json": {
+            "callsignStr": "MD17",
+            "comment": "",
+            "id": 1369,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -128922.57306227,
+            "y": -42638.614288516
+        }
+    },
+    {
+        "lat": 33.84840885906112,
+        "lon": 35.48627047559165,
+        "json": {
+            "callsignStr": "MN17",
+            "comment": "",
+            "id": 1428,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -128960.63247634,
+            "y": -42337.495027515
+        }
+    },
+    {
+        "lat": 34.5559666478968,
+        "lon": 38.30106131665708,
+        "json": {
+            "callsignStr": "R08PR",
+            "comment": "",
+            "id": 1487,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -55840.897797543,
+            "y": 218678.4992452
+        }
+    },
+    {
+        "lat": 34.558614671932276,
+        "lon": 38.33238597634941,
+        "json": {
+            "callsignStr": "R26PR",
+            "comment": "",
+            "id": 1488,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -55566.696579464,
+            "y": 221554.29590456
+        }
+    },
+    {
+        "lat": 37.539011707589964,
+        "lon": 36.95468144053432,
+        "json": {
+            "callsignStr": "LTCN",
+            "comment": "",
+            "id": 1547,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 276769.07568649,
+            "y": 102099.25853396
+        }
+    },
+    {
+        "lat": 36.948171062598,
+        "lon": 37.47760136641525,
+        "json": {
+            "callsignStr": "LTAG",
+            "comment": "",
+            "id": 1548,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 210339.48798511,
+            "y": 147247.60622409
+        }
+    },
+    {
+        "lat": 36.52210351917239,
+        "lon": 37.037185505257725,
+        "json": {
+            "callsignStr": "0S71",
+            "comment": "",
+            "id": 1549,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 163785.78290964,
+            "y": 107060.48681062
+        }
+    },
+    {
+        "lat": 36.18733773650761,
+        "lon": 37.58243814939624,
+        "json": {
+            "callsignStr": "OS66",
+            "comment": "",
+            "id": 1550,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 125792.35860834,
+            "y": 155338.40180232
+        }
+    },
+    {
+        "lat": 36.096790267533436,
+        "lon": 37.93741510715622,
+        "json": {
+            "callsignStr": "OS62",
+            "comment": "",
+            "id": 1551,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 115340.58941877,
+            "y": 187148.22011856
+        }
+    },
+    {
+        "lat": 32.80834406381606,
+        "lon": 35.043349415563206,
+        "json": {
+            "callsignStr": "LLHA",
+            "comment": "",
+            "id": 1610,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -242886.88880723,
+            "y": -87732.307534603
+        }
+    },
+    {
+        "lat": 36.982129472900674,
+        "lon": 35.280419092212234,
+        "json": {
+            "callsignStr": "LTAF",
+            "comment": "",
+            "id": 1611,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 219494.30115178,
+            "y": -48294.885686704
+        }
+    },
+    {
+        "lat": 37.00221073884152,
+        "lon": 35.42633013718809,
+        "json": {
+            "callsignStr": "LTAG",
+            "comment": "",
+            "id": 1612,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 221225.04269861,
+            "y": -35218.17772884
+        }
+    },
+    {
+        "lat": 36.37251351179891,
+        "lon": 36.29905179727347,
+        "json": {
+            "callsignStr": "LTDA",
+            "comment": "",
+            "id": 1613,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 148789.33227941,
+            "y": 40494.093977588
+        }
+    },
+    {
+        "lat": 33.81883668396817,
+        "lon": 35.48984958541353,
+        "json": {
+            "callsignStr": "OLBA",
+            "comment": "",
+            "id": 1614,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -132253.12987674,
+            "y": -42118.212492333
+        }
+    },
+    {
+        "lat": 36.18040066418803,
+        "lon": 37.226669911227745,
+        "json": {
+            "callsignStr": "OSAP",
+            "comment": "",
+            "id": 1615,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 125548.92226827,
+            "y": 123331.99335936
+        }
+    },
+    {
+        "lat": 33.41167007423201,
+        "lon": 36.513342005730415,
+        "json": {
+            "callsignStr": "OSDI",
+            "comment": "",
+            "id": 1616,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -180175.60783305,
+            "y": 51563.734862943
+        }
+    },
+    {
+        "lat": 35.40997078815168,
+        "lon": 35.947741739609285,
+        "json": {
+            "callsignStr": "OSLK",
+            "comment": "",
+            "id": 1617,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 42922.899478293,
+            "y": 5630.2794990823
+        }
+    },
+    {
+        "lat": 34.55593219986877,
+        "lon": 38.300652302105135,
+        "json": {
+            "callsignStr": "OSPR",
+            "comment": "",
+            "id": 1618,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -55844.458042674,
+            "y": 218640.94804002
+        }
+    },
+    {
+        "lat": 35.73441902167357,
+        "lon": 37.10976201958152,
+        "json": {
+            "callsignStr": "OS57",
+            "comment": "",
+            "id": 1677,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 76273.466069968,
+            "y": 111859.02630543
+        }
+    },
+    {
+        "lat": 35.7551656756939,
+        "lon": 38.55555670955878,
+        "json": {
+            "callsignStr": "OS59",
+            "comment": "",
+            "id": 1736,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 77018.364133984,
+            "y": 242620.80594085
+        }
+    },
+    {
+        "lat": 36.259799774847814,
+        "lon": 37.2338458795319,
+        "json": {
+            "callsignStr": "D012E",
+            "comment": "",
+            "id": 1795,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 134345.27066931,
+            "y": 124137.8489104
+        }
+    },
+    {
+        "lat": 36.40629296357468,
+        "lon": 37.278280692176665,
+        "json": {
+            "callsignStr": "GOLF",
+            "comment": "",
+            "id": 1796,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 150524.72763339,
+            "y": 128419.4595863
+        }
+    },
+    {
+        "lat": 36.15358737869725,
+        "lon": 37.307480656300505,
+        "json": {
+            "callsignStr": "D106E",
+            "comment": "",
+            "id": 1798,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 122444.65481942,
+            "y": 130547.7975288
+        }
+    },
+    {
+        "lat": 36.10151990533665,
+        "lon": 37.50252601518616,
+        "json": {
+            "callsignStr": "DELT1",
+            "comment": "",
+            "id": 1799,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 116380.63198052,
+            "y": 148005.68892605
+        }
+    },
+    {
+        "lat": 36.10308593166965,
+        "lon": 37.251760065977024,
+        "json": {
+            "callsignStr": "D154E",
+            "comment": "",
+            "id": 1800,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 116931.21000657,
+            "y": 125434.07928865
+        }
+    },
+    {
+        "lat": 35.95081721721468,
+        "lon": 37.33619204868602,
+        "json": {
+            "callsignStr": "TANGO",
+            "comment": "",
+            "id": 1801,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 99906.698252155,
+            "y": 132746.27922081
+        }
+    },
+    {
+        "lat": 35.87454805975646,
+        "lon": 37.37816735167338,
+        "json": {
+            "callsignStr": "D154T",
+            "comment": "",
+            "id": 1802,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 91382.642242176,
+            "y": 136391.74351563
+        }
+    },
+    {
+        "lat": 35.56943982500022,
+        "lon": 37.54563213299665,
+        "json": {
+            "callsignStr": "D1544",
+            "comment": "",
+            "id": 1803,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 57301.849539656,
+            "y": 151008.8697021
+        }
+    },
+    {
+        "lat": 36.09525801759481,
+        "lon": 37.211901889092864,
+        "json": {
+            "callsignStr": "D176E",
+            "comment": "",
+            "id": 1806,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 116128.10384304,
+            "y": 121829.93849531
+        }
+    },
+    {
+        "lat": 35.978397535635274,
+        "lon": 37.215279155783996,
+        "json": {
+            "callsignStr": "KILO",
+            "comment": "",
+            "id": 1807,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 103158.94884414,
+            "y": 121896.36429733
+        }
+    },
+    {
+        "lat": 35.84490803267725,
+        "lon": 37.2191134077903,
+        "json": {
+            "callsignStr": "D176T",
+            "comment": "",
+            "id": 1808,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 88344.657637956,
+            "y": 121972.03192007
+        }
+    },
+    {
+        "lat": 35.51126223087749,
+        "lon": 37.228598683104174,
+        "json": {
+            "callsignStr": "D1764",
+            "comment": "",
+            "id": 1809,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 51319.187827572,
+            "y": 122161.15626873
+        }
+    },
+    {
+        "lat": 36.122109125428224,
+        "lon": 37.133867375127366,
+        "json": {
+            "callsignStr": "D225E",
+            "comment": "",
+            "id": 1810,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 119238.86099429,
+            "y": 114861.43343917
+        }
+    },
+    {
+        "lat": 36.036631534725565,
+        "lon": 37.021015531508915,
+        "json": {
+            "callsignStr": "LIMA",
+            "comment": "",
+            "id": 1811,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 109957.26663559,
+            "y": 104511.34907861
+        }
+    },
+    {
+        "lat": 35.951314964606006,
+        "lon": 36.90875882359463,
+        "json": {
+            "callsignStr": "D225T",
+            "comment": "",
+            "id": 1812,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 100703.90430994,
+            "y": 94193.502939065
+        }
+    },
+    {
+        "lat": 35.72266912095178,
+        "lon": 36.60971709157455,
+        "json": {
+            "callsignStr": "D2254",
+            "comment": "",
+            "id": 1813,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 75957.112669961,
+            "y": 66598.609931764
+        }
+    },
+    {
+        "lat": 35.665381183264195,
+        "lon": 36.53519995839398,
+        "json": {
+            "callsignStr": "LUBAM",
+            "comment": "",
+            "id": 1814,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 69768.341613114,
+            "y": 59697.557494443
+        }
+    },
+    {
+        "lat": 36.12756392734097,
+        "lon": 37.40537831026539,
+        "json": {
+            "callsignStr": "D106J",
+            "comment": "",
+            "id": 1873,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 119408.7744064,
+            "y": 139307.65501155
+        }
+    },
+    {
+        "lat": 36.067834336084466,
+        "lon": 37.36279532211194,
+        "json": {
+            "callsignStr": "D130J",
+            "comment": "",
+            "id": 1875,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 112846.68585731,
+            "y": 135363.89597372
+        }
+    },
+    {
+        "lat": 35.99669488582056,
+        "lon": 37.310806083894235,
+        "json": {
+            "callsignStr": "D154L",
+            "comment": "",
+            "id": 1877,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 105035.21648007,
+            "y": 130544.7364391
+        }
+    },
+    {
+        "lat": 36.04277189002336,
+        "lon": 37.02907057720052,
+        "json": {
+            "callsignStr": "D225L",
+            "comment": "",
+            "id": 1879,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 110623.72777965,
+            "y": 105250.92088546
+        }
+    },
+    {
+        "lat": 36.263363748310994,
+        "lon": 37.38786703347452,
+        "json": {
+            "callsignStr": "D058J",
+            "comment": "",
+            "id": 1880,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 134499.2797082,
+            "y": 137982.14083568
+        }
+    },
+    {
+        "lat": 36.20203314824646,
+        "lon": 37.413737532299145,
+        "json": {
+            "callsignStr": "D080J",
+            "comment": "",
+            "id": 1881,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 127657.38189455,
+            "y": 140194.92321908
+        }
+    },
+    {
+        "lat": 36.19694401941909,
+        "lon": 37.41440884998867,
+        "json": {
+            "callsignStr": "D082J",
+            "comment": "",
+            "id": 1882,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 127091.85133568,
+            "y": 140246.05050651
+        }
+    },
+    {
+        "lat": 36.37350250470569,
+        "lon": 37.268316882872185,
+        "json": {
+            "callsignStr": "D012L",
+            "comment": "",
+            "id": 1883,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 146903.03916487,
+            "y": 127460.70604438
+        }
+    },
+    {
+        "lat": 36.17045716048842,
+        "lon": 37.31196411210197,
+        "json": {
+            "callsignStr": "D094E",
+            "comment": "",
+            "id": 1884,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 124309.03765193,
+            "y": 130983.6925738
+        }
+    },
+    {
+        "lat": 36.17284705259248,
+        "lon": 37.34097135832684,
+        "json": {
+            "callsignStr": "D091F",
+            "comment": "",
+            "id": 1885,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 124529.16374219,
+            "y": 133597.28167582
+        }
+    },
+    {
+        "lat": 36.168792471749335,
+        "lon": 37.34827626869794,
+        "json": {
+            "callsignStr": "D55I",
+            "comment": "",
+            "id": 1886,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 124068.17440657,
+            "y": 134246.64529491
+        }
+    },
+    {
+        "lat": 36.17753384384464,
+        "lon": 37.258903573900824,
+        "json": {
+            "callsignStr": "D091B",
+            "comment": "",
+            "id": 1889,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 125178.39411644,
+            "y": 126225.21591227
+        }
+    },
+    {
+        "lat": 36.227655928846154,
+        "lon": 37.363326639992344,
+        "json": {
+            "callsignStr": "D067H",
+            "comment": "",
+            "id": 1891,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 130575.08871924,
+            "y": 135710.56325824
+        }
+    },
+    {
+        "lat": 36.148451216806656,
+        "lon": 37.07687213205791,
+        "json": {
+            "callsignStr": "D252F",
+            "comment": "",
+            "id": 1892,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 122261.19021111,
+            "y": 109789.51857969
+        }
+    },
+    {
+        "lat": 36.16131052405925,
+        "lon": 37.07319956806317,
+        "json": {
+            "callsignStr": "D259F",
+            "comment": "",
+            "id": 1893,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 123694.31063862,
+            "y": 109487.39744001
+        }
+    },
+    {
+        "lat": 36.19015245462558,
+        "lon": 37.07222487840442,
+        "json": {
+            "callsignStr": "D274F",
+            "comment": "",
+            "id": 1894,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 126895.69118089,
+            "y": 109463.2841678
+        }
+    },
+    {
+        "lat": 36.187233203305595,
+        "lon": 37.109043648297906,
+        "json": {
+            "callsignStr": "D274D",
+            "comment": "",
+            "id": 1895,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 126506.6647807,
+            "y": 112767.93599234
+        }
+    },
+    {
+        "lat": 36.18332812923091,
+        "lon": 37.15805251971266,
+        "json": {
+            "callsignStr": "D274B",
+            "comment": "",
+            "id": 1896,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 125988.65481605,
+            "y": 117167.01343141
+        }
+    },
+    {
+        "lat": 36.18102019195246,
+        "lon": 37.1869068239694,
+        "json": {
+            "callsignStr": "D274A",
+            "comment": "",
+            "id": 1897,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 125683.74280827,
+            "y": 119757.16966501
+        }
+    },
+    {
+        "lat": 36.1229376112049,
+        "lon": 37.11991954864951,
+        "json": {
+            "callsignStr": "D230E",
+            "comment": "",
+            "id": 1901,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 119354.97123965,
+            "y": 113607.86196517
+        }
+    },
+    {
+        "lat": 36.17797803597288,
+        "lon": 37.25214601270254,
+        "json": {
+            "callsignStr": "D08I",
+            "comment": "",
+            "id": 1902,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 125238.59634589,
+            "y": 125618.34245503
+        }
+    },
+    {
+        "lat": 35.973742419378425,
+        "lon": 36.78411002364015,
+        "json": {
+            "callsignStr": "OSZZ",
+            "comment": "",
+            "id": 1904,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 103440.2374116,
+            "y": 83006.351229164
+        }
+    },
+    {
+        "lat": 35.119418220996,
+        "lon": 36.701591121428855,
+        "json": {
+            "callsignStr": "OS58",
+            "comment": "",
+            "id": 1905,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 8837.7338629625,
+            "y": 73353.398709223
+        }
+    },
+    {
+        "lat": 34.56706334573604,
+        "lon": 36.58600115671715,
+        "json": {
+            "callsignStr": "OS70",
+            "comment": "",
+            "id": 1906,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -52184.380425523,
+            "y": 61342.158820822
+        }
+    },
+    {
+        "lat": 34.589316416704925,
+        "lon": 36.01148671262265,
+        "json": {
+            "callsignStr": "OLKA",
+            "comment": "",
+            "id": 1907,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -48304.25063418,
+            "y": 8694.1836938932
+        }
+    },
+    {
+        "lat": 34.282550217221015,
+        "lon": 35.680869376988774,
+        "json": {
+            "callsignStr": "Z190",
+            "comment": "",
+            "id": 1908,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -81392.115269168,
+            "y": -22757.868440103
+        }
+    },
+    {
+        "lat": 33.86008890158814,
+        "lon": 35.998156542104695,
+        "json": {
+            "callsignStr": "OLRA",
+            "comment": "",
+            "id": 1909,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -129167.26419087,
+            "y": 5085.058791662
+        }
+    },
+    {
+        "lat": 33.928481724451004,
+        "lon": 36.87706972088626,
+        "json": {
+            "callsignStr": "OS64",
+            "comment": "",
+            "id": 1910,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -123610.12274663,
+            "y": 86571.783008688
+        }
+    },
+    {
+        "lat": 33.48722853717819,
+        "lon": 36.475333871411316,
+        "json": {
+            "callsignStr": "AG4486",
+            "comment": "",
+            "id": 1911,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -171710.17845403,
+            "y": 48232.085492802
+        }
+    },
+    {
+        "lat": 33.50028297164507,
+        "lon": 36.46708583717445,
+        "json": {
+            "callsignStr": "AG4485",
+            "comment": "",
+            "id": 1912,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -170243.61164519,
+            "y": 47500.90278132
+        }
+    },
+    {
+        "lat": 33.45878120962123,
+        "lon": 36.35776508723989,
+        "json": {
+            "callsignStr": "AG4487",
+            "comment": "",
+            "id": 1913,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -174593.39891693,
+            "y": 37225.373921565
+        }
+    },
+    {
+        "lat": 33.48015981356722,
+        "lon": 36.22910464830937,
+        "json": {
+            "callsignStr": "OS67",
+            "comment": "",
+            "id": 1914,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -171910.32542589,
+            "y": 25327.063352281
+        }
+    },
+    {
+        "lat": 33.286684307398716,
+        "lon": 36.45751185091831,
+        "json": {
+            "callsignStr": "OS63",
+            "comment": "",
+            "id": 1915,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -193912.17827896,
+            "y": 46032.30051086
+        }
+    },
+    {
+        "lat": 33.061788695587424,
+        "lon": 36.552622633981585,
+        "json": {
+            "callsignStr": "OS69",
+            "comment": "",
+            "id": 1916,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -219065.88308552,
+            "y": 54308.349780341
+        }
+    },
+    {
+        "lat": 33.21393126868648,
+        "lon": 35.59418672375672,
+        "json": {
+            "callsignStr": "LLKS",
+            "comment": "",
+            "id": 1917,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -199690.1210746,
+            "y": -34661.17370775
+        }
+    },
+    {
+        "lat": 32.66671666155521,
+        "lon": 35.1838997076949,
+        "json": {
+            "callsignStr": "LLRD",
+            "comment": "",
+            "id": 1918,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -259086.41346799,
+            "y": -75128.655289885
+        }
+    },
+    {
+        "lat": 32.59701408803152,
+        "lon": 35.234595573628994,
+        "json": {
+            "callsignStr": "LLMG",
+            "comment": "",
+            "id": 1919,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -266990.38205928,
+            "y": -70645.231873852
+        }
+    },
+    {
+        "lat": 32.441338134397114,
+        "lon": 35.00347851004798,
+        "json": {
+            "callsignStr": "LLES",
+            "comment": "",
+            "id": 1920,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -283471.75050936,
+            "y": -93002.691405811
+        }
+    },
+    {
+        "lat": 32.3593106728261,
+        "lon": 36.25625483670592,
+        "json": {
+            "callsignStr": "OJMF",
+            "comment": "",
+            "id": 1921,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -296291.98635265,
+            "y": 24612.901728775
+        }
+    },
+    {
+        "lat": 33.61266841656657,
+        "lon": 36.50763274527165,
+        "json": {
+            "callsignStr": "ADRA",
+            "comment": "",
+            "id": 1980,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -157870.06628545,
+            "y": 51568.438551866
+        }
+    },
+    {
+        "lat": 33.86106834189379,
+        "lon": 36.54752039617289,
+        "json": {
+            "callsignStr": "MALLA",
+            "comment": "",
+            "id": 1981,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -130407.88792898,
+            "y": 55925.303529958
+        }
+    },
+    {
+        "lat": 33.02888399596396,
+        "lon": 36.51563125462488,
+        "json": {
+            "callsignStr": "RDIMA",
+            "comment": "",
+            "id": 2041,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -222633.97055929,
+            "y": 50767.536000931
+        }
+    },
+    {
+        "lat": 32.71353666472247,
+        "lon": 36.55982942083442,
+        "json": {
+            "callsignStr": "SWIDA",
+            "comment": "",
+            "id": 2042,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -257702.58841661,
+            "y": 54087.680074569
+        }
+    },
+    {
+        "lat": 32.365263190180244,
+        "lon": 36.60818961345025,
+        "json": {
+            "callsignStr": "BUSRA",
+            "comment": "",
+            "id": 2043,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -296427.04266313,
+            "y": 57753.822343174
+        }
+    },
+    {
+        "lat": 33.460044074771645,
+        "lon": 38.176538252050484,
+        "json": {
+            "callsignStr": "SULAF",
+            "comment": "",
+            "id": 2102,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -177273.43447373,
+            "y": 206277.28433819
+        }
+    },
+    {
+        "lat": 33.4379578052527,
+        "lon": 37.73829939709702,
+        "json": {
+            "callsignStr": "ABBAS",
+            "comment": "",
+            "id": 2103,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -179313.6774329,
+            "y": 165520.17979954
+        }
+    },
+    {
+        "lat": 33.55770025215751,
+        "lon": 37.665709200970674,
+        "json": {
+            "callsignStr": "BASEM",
+            "comment": "",
+            "id": 2104,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -165952.28321213,
+            "y": 158942.79801838
+        }
+    },
+    {
+        "lat": 33.387468574757115,
+        "lon": 36.82584435465449,
+        "json": {
+            "callsignStr": "SOFIA",
+            "comment": "",
+            "id": 2105,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -183510.87501015,
+            "y": 80573.536444849
+        }
+    },
+    {
+        "lat": 33.20001119094234,
+        "lon": 38.25659789871092,
+        "json": {
+            "callsignStr": "RAFIF",
+            "comment": "",
+            "id": 2106,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -206159.29816459,
+            "y": 213511.80109132
+        }
+    },
+    {
+        "lat": 33.119003321469954,
+        "lon": 38.281431867770706,
+        "json": {
+            "callsignStr": "SOKAN",
+            "comment": "",
+            "id": 2107,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -215156.52555592,
+            "y": 215764.90324291
+        }
+    },
+    {
+        "lat": 33.868907353570314,
+        "lon": 37.92582935585361,
+        "json": {
+            "callsignStr": "FIRAS",
+            "comment": "",
+            "id": 2108,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -131726.1076052,
+            "y": 183449.32362608
+        }
+    },
+    {
+        "lat": 33.37667728580103,
+        "lon": 36.48505470870418,
+        "json": {
+            "callsignStr": "D225A",
+            "comment": "",
+            "id": 2109,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -183993.3639253,
+            "y": 48838.776334577
+        }
+    },
+    {
+        "lat": 33.293860306374214,
+        "lon": 36.37319938379106,
+        "json": {
+            "callsignStr": "CI05R",
+            "comment": "",
+            "id": 2110,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -192921.69815569,
+            "y": 38198.593260668
+        }
+    },
+    {
+        "lat": 33.26526873961256,
+        "lon": 36.42292014351536,
+        "json": {
+            "callsignStr": "D180H",
+            "comment": "",
+            "id": 2111,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -196208.31737262,
+            "y": 42751.434117826
+        }
+    },
+    {
+        "lat": 33.28123474444304,
+        "lon": 36.394726568049194,
+        "json": {
+            "callsignStr": "D204H",
+            "comment": "",
+            "id": 2112,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -194372.30417627,
+            "y": 40168.746017849
+        }
+    },
+    {
+        "lat": 33.442026591047146,
+        "lon": 36.540895470049,
+        "json": {
+            "callsignStr": "D045A",
+            "comment": "",
+            "id": 2113,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -176869.76946525,
+            "y": 54206.242180362
+        }
+    },
+    {
+        "lat": 33.50382404659157,
+        "lon": 36.624731089148945,
+        "json": {
+            "callsignStr": "D045F",
+            "comment": "",
+            "id": 2114,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -170197.39116694,
+            "y": 62158.076180306
+        }
+    },
+    {
+        "lat": 33.50476432805182,
+        "lon": 36.670018120585844,
+        "json": {
+            "callsignStr": "D069H",
+            "comment": "",
+            "id": 2115,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -170188.53277172,
+            "y": 66368.132285575
+        }
+    },
+    {
+        "lat": 33.4745624897456,
+        "lon": 36.6860800539538,
+        "json": {
+            "callsignStr": "D097H",
+            "comment": "",
+            "id": 2116,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -173571.45402561,
+            "y": 67785.769185065
+        }
+    },
+    {
+        "lat": 33.54422994874609,
+        "lon": 36.614025443320664,
+        "json": {
+            "callsignStr": "D006M",
+            "comment": "",
+            "id": 2176,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -165693.25763031,
+            "y": 61266.509564952
+        }
+    },
+    {
+        "lat": 33.458490297943364,
+        "lon": 36.759841947006606,
+        "json": {
+            "callsignStr": "SD523",
+            "comment": "",
+            "id": 2235,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -175504.24568248,
+            "y": 74602.859265829
+        }
+    },
+    {
+        "lat": 33.43632434740225,
+        "lon": 36.533174436087286,
+        "json": {
+            "callsignStr": "RW23R",
+            "comment": "",
+            "id": 2236,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -177485.17959279,
+            "y": 53473.317231992
+        }
+    },
+    {
+        "lat": 33.4921815150574,
+        "lon": 36.608921593519625,
+        "json": {
+            "callsignStr": "SD525",
+            "comment": "",
+            "id": 2237,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -171454.88422791,
+            "y": 60659.412097033
+        }
+    },
+    {
+        "lat": 33.53627861135655,
+        "lon": 36.66883565272466,
+        "json": {
+            "callsignStr": "SD524",
+            "comment": "",
+            "id": 2238,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -166690.95825043,
+            "y": 66336.842255516
+        }
+    },
+    {
+        "lat": 33.36513094740677,
+        "lon": 36.4680659058803,
+        "json": {
+            "callsignStr": "SD526",
+            "comment": "",
+            "id": 2239,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -185235.63754137,
+            "y": 47226.772974435
+        }
+    },
+    {
+        "lat": 33.39725767762575,
+        "lon": 36.48448599054274,
+        "json": {
+            "callsignStr": "MS05L",
+            "comment": "",
+            "id": 2240,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -181709.52480466,
+            "y": 48841.038072041
+        }
+    },
+    {
+        "lat": 33.28947694004987,
+        "lon": 36.367279831092624,
+        "json": {
+            "callsignStr": "D225G",
+            "comment": "",
+            "id": 2241,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -193393.96517232,
+            "y": 37634.95048312
+        }
+    },
+    {
+        "lat": 33.33529978835241,
+        "lon": 36.428295066001006,
+        "json": {
+            "callsignStr": "D225C",
+            "comment": "",
+            "id": 2242,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -188453.51467397,
+            "y": 43443.767137496
+        }
+    },
+    {
+        "lat": 33.335299537256155,
+        "lon": 36.42829538027977,
+        "json": {
+            "callsignStr": "FD05R",
+            "comment": "",
+            "id": 2243,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -188453.5432454,
+            "y": 43443.795708924
+        }
+    },
+    {
+        "lat": 33.42003466258326,
+        "lon": 36.54254939576616,
+        "json": {
+            "callsignStr": "MD23L",
+            "comment": "",
+            "id": 2244,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -179312.49244821,
+            "y": 54302.35510456
+        }
+    },
+    {
+        "lat": 33.44213548180277,
+        "lon": 36.572572235269696,
+        "json": {
+            "callsignStr": "FD23L",
+            "comment": "",
+            "id": 2245,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -176926.95108931,
+            "y": 57151.851517046
+        }
+    },
+    {
+        "lat": 33.464184561450544,
+        "lon": 36.60255304297966,
+        "json": {
+            "callsignStr": "CD23L",
+            "comment": "",
+            "id": 2246,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -174546.28548743,
+            "y": 59995.898253939
+        }
+    },
+    {
+        "lat": 33.42877311629693,
+        "lon": 36.554416141517194,
+        "json": {
+            "callsignStr": "MA23L",
+            "comment": "",
+            "id": 2248,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -178369.35559119,
+            "y": 55428.815453066
+        }
+    },
+    {
+        "lat": 33.47283734553295,
+        "lon": 36.61432547358069,
+        "json": {
+            "callsignStr": "FF23L",
+            "comment": "",
+            "id": 2249,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -173611.83828826,
+            "y": 61112.260073786
+        }
+    },
+    {
+        "lat": 33.45123681006455,
+        "lon": 36.66116828070768,
+        "json": {
+            "callsignStr": "D058K",
+            "comment": "",
+            "id": 2250,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -176106.5029071,
+            "y": 65412.140469091
+        }
+    },
+    {
+        "lat": 33.44211148401105,
+        "lon": 36.5445715069279,
+        "json": {
+            "callsignStr": "MD23R",
+            "comment": "",
+            "id": 2251,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -176868.4376045,
+            "y": 54548.266504665
+        }
+    },
+    {
+        "lat": 33.48071290393591,
+        "lon": 36.5830023478029,
+        "json": {
+            "callsignStr": "FD23R",
+            "comment": "",
+            "id": 2253,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -172671.04099473,
+            "y": 58221.219260942
+        }
+    },
+    {
+        "lat": 33.50586398168621,
+        "lon": 36.608065294748386,
+        "json": {
+            "callsignStr": "CD23R",
+            "comment": "",
+            "id": 2254,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -169935.56831553,
+            "y": 60614.825136462
+        }
+    },
+    {
+        "lat": 33.362563479673035,
+        "lon": 36.46562208480648,
+        "json": {
+            "callsignStr": "MN05R",
+            "comment": "",
+            "id": 2255,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -185514.8609941,
+            "y": 46992.406253406
+        }
+    },
+    {
+        "lat": 33.315586942075505,
+        "lon": 36.401410551318705,
+        "json": {
+            "callsignStr": "D225B",
+            "comment": "",
+            "id": 2256,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -190577.79309455,
+            "y": 40886.337712484
+        }
+    },
+    {
+        "lat": 33.442134575886065,
+        "lon": 36.57257359186627,
+        "json": {
+            "callsignStr": "70DME",
+            "comment": "",
+            "id": 2257,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -176927.05450895,
+            "y": 57151.975306318
+        }
+    },
+    {
+        "lat": 33.442132215355,
+        "lon": 36.57257378576371,
+        "json": {
+            "callsignStr": "D045J",
+            "comment": "",
+            "id": 2258,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -176927.31673039,
+            "y": 57151.987218722
+        }
+    },
+    {
+        "lat": 33.42003479131481,
+        "lon": 36.542549130209665,
+        "json": {
+            "callsignStr": "MQ23L",
+            "comment": "",
+            "id": 2259,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -179312.47758705,
+            "y": 54302.330744072
+        }
+    },
+    {
+        "lat": 33.45329006819699,
+        "lon": 36.58773783854218,
+        "json": {
+            "callsignStr": "FQ23L",
+            "comment": "",
+            "id": 2260,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -175722.66979916,
+            "y": 58590.673417954
+        }
+    },
+    {
+        "lat": 33.38546280169458,
+        "lon": 36.78604605816676,
+        "json": {
+            "callsignStr": "D083P",
+            "comment": "",
+            "id": 2261,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -183655.25359906,
+            "y": 76866.269841832
+        }
+    },
+    {
+        "lat": 33.46693351148641,
+        "lon": 36.76483255892373,
+        "json": {
+            "callsignStr": "D065P",
+            "comment": "",
+            "id": 2262,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -174577.8733148,
+            "y": 75086.927010551
+        }
+    },
+    {
+        "lat": 33.52579910010839,
+        "lon": 36.72718815289876,
+        "json": {
+            "callsignStr": "D050P",
+            "comment": "",
+            "id": 2263,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -167973.5369316,
+            "y": 71730.910859281
+        }
+    },
+    {
+        "lat": 33.55442119797311,
+        "lon": 36.69351435674062,
+        "json": {
+            "callsignStr": "16DAM",
+            "comment": "",
+            "id": 2264,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -164730.12961392,
+            "y": 68673.697181351
+        }
+    },
+    {
+        "lat": 35.49998237339642,
+        "lon": 36.31855767768378,
+        "json": {
+            "callsignStr": "SALIM",
+            "comment": "",
+            "id": 2323,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 51931.864924674,
+            "y": 39583.483397639
+        }
+    },
+    {
+        "lat": 35.19000073770995,
+        "lon": 35.71526345556545,
+        "json": {
+            "callsignStr": "NIKAS",
+            "comment": "",
+            "id": 2324,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 19191.813168359,
+            "y": -16297.591531845
+        }
+    },
+    {
+        "lat": 34.6953006173509,
+        "lon": 36.65031280777093,
+        "json": {
+            "callsignStr": "BRAVO",
+            "comment": "",
+            "id": 2325,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -38099.215371828,
+            "y": 67574.970898628
+        }
+    },
+    {
+        "lat": 34.93515613418584,
+        "lon": 36.340533754925886,
+        "json": {
+            "callsignStr": "LIMA",
+            "comment": "",
+            "id": 2326,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -10784.252596273,
+            "y": 39898.750709224
+        }
+    },
+    {
+        "lat": 35.42382472748819,
+        "lon": 35.94680684426063,
+        "json": {
+            "callsignStr": "D353A",
+            "comment": "",
+            "id": 2327,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 44462.700699914,
+            "y": 5592.8725761996
+        }
+    },
+    {
+        "lat": 35.55399568802759,
+        "lon": 35.90082479944304,
+        "json": {
+            "callsignStr": "D331H",
+            "comment": "",
+            "id": 2330,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 59036.357847895,
+            "y": 1870.70186752
+        }
+    },
+    {
+        "lat": 35.53865862499737,
+        "lon": 35.857081500162856,
+        "json": {
+            "callsignStr": "D306H",
+            "comment": "",
+            "id": 2331,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 57460.306608621,
+            "y": -2150.1021443184
+        }
+    },
+    {
+        "lat": 35.55877238309188,
+        "lon": 35.937522609818636,
+        "json": {
+            "callsignStr": "CI17R",
+            "comment": "",
+            "id": 2332,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 59462.229641305,
+            "y": 5214.7697193083
+        }
+    },
+    {
+        "lat": 35.459829020454386,
+        "lon": 35.946407479754264,
+        "json": {
+            "callsignStr": "38VOR",
+            "comment": "",
+            "id": 2333,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 48458.724989187,
+            "y": 5680.1808765489
+        }
+    },
+    {
+        "lat": 35.50962835908075,
+        "lon": 35.94193984308505,
+        "json": {
+            "callsignStr": "FD17R",
+            "comment": "",
+            "id": 2334,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 53996.871567322,
+            "y": 5445.9655957385
+        }
+    },
+    {
+        "lat": 35.41361621751771,
+        "lon": 35.94749313049895,
+        "json": {
+            "callsignStr": "RW17R",
+            "comment": "",
+            "id": 2335,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 43328.078985231,
+            "y": 5620.1952779526
+        }
+    },
+    {
+        "lat": 35.41371226261601,
+        "lon": 35.949567574585615,
+        "json": {
+            "callsignStr": "RW17L",
+            "comment": "",
+            "id": 2336,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 43332.914988283,
+            "y": 5808.9517512029
+        }
+    },
+    {
+        "lat": 35.39132867440922,
+        "lon": 35.951100119419316,
+        "json": {
+            "callsignStr": "RW35R",
+            "comment": "",
+            "id": 2337,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 40845.032539876,
+            "y": 5871.5212689084
+        }
+    },
+    {
+        "lat": 35.388549362005485,
+        "lon": 35.949208186100414,
+        "json": {
+            "callsignStr": "RW35L",
+            "comment": "",
+            "id": 2338,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": 40541.956882692,
+            "y": 5690.1058425042
+        }
+    },
+    {
+        "lat": 34.48983747405719,
+        "lon": 36.908763687333725,
+        "json": {
+            "callsignStr": "OS65",
+            "comment": "",
+            "id": 2399,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -61410.78334607,
+            "y": 90780.006223215
+        }
+    },
+    {
+        "lat": 34.52258649915113,
+        "lon": 37.626990456585744,
+        "json": {
+            "callsignStr": "OS72",
+            "comment": "",
+            "id": 2460,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -58908.38722433,
+            "y": 156783.92212433
+        }
+    },
+    {
+        "lat": 33.67984243025228,
+        "lon": 37.217605360980755,
+        "json": {
+            "callsignStr": "OS68",
+            "comment": "",
+            "id": 2521,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -151782.07552388,
+            "y": 117575.43219749
+        }
+    },
+    {
+        "lat": 32.53926009183226,
+        "lon": 38.195195958309064,
+        "json": {
+            "callsignStr": "H4",
+            "comment": "",
+            "id": 2582,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -279369.35213529,
+            "y": 207230.18438034
+        }
+    },
+    {
+        "lat": 32.70389348212552,
+        "lon": 36.41358020548981,
+        "json": {
+            "callsignStr": "OSXX",
+            "comment": "",
+            "id": 2643,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -258446.77649271,
+            "y": 40350.077298962
+        }
+    },
+    {
+        "lat": 33.10731560393528,
+        "lon": 35.12632203953878,
+        "json": {
+            "callsignStr": "LLXX",
+            "comment": "",
+            "id": 2704,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -210000.29780511,
+            "y": -78735.028205923
+        }
+    },
+    {
+        "lat": 32.980896667275495,
+        "lon": 35.571928087657305,
+        "json": {
+            "callsignStr": "LLIB",
+            "comment": "",
+            "id": 2705,
+            "properties": {
+                "angle": 0,
+                "scale": 0,
+                "steer": 2,
+                "vangle": 0,
+                "vnav": 1
+            },
+            "x": -225475.67334828,
+            "y": -37582.629401335
+        }
+    }
+]

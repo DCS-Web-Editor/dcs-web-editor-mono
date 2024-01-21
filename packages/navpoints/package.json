@@ -1,0 +1,21 @@
+{
+  "name": "@dcs-web-editor-mono/navpoints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/navpoints.umd.js",
+  "module": "dist/navpoints.mjs",
+  "scripts": {
+    "clean": "rimraf dist/ && mkdir dist",
+    "tsc": "tsc",
+    "build": "npm run clean && tsc && vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite-plugin-singlefile": "^0.13.2"
+  },
+  "devDependencies": {
+    "rimraf": "^4.1.2"
+  }
+}
