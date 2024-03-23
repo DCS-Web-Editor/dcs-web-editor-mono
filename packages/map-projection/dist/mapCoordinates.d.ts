@@ -51,4 +51,8 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
+    Afghanistan: {
+        lat: number;
+        lon: number;
+    }[];
 };

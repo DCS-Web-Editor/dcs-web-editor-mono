@@ -272,4 +272,22 @@ export const COORDINATES = {
             lon: 44,
         }
     ],
+    "Afghanistan": [
+        {
+            lat: 36.1,
+            lon: 60.2,
+        },
+        {
+            lat: 29.50,
+            lon: 60.2,
+        },
+        {
+            lat: 29.50,
+            lon: 66,
+        },
+        {
+            lat: 36.1,
+            lon: 66,
+        },
+    ],
 };
