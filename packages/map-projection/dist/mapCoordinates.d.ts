@@ -3,11 +3,19 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
+    "Detail ": {
+        lat: number;
+        lon: number;
+    }[];
     Syria: {
         lat: number;
         lon: number;
     }[];
     "Persian Gulf": {
+        lat: number;
+        lon: number;
+    }[];
+    Detail: {
         lat: number;
         lon: number;
     }[];
@@ -43,7 +51,7 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
-    SinaiDetail: {
+    " Detail": {
         lat: number;
         lon: number;
     }[];
@@ -51,11 +59,11 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
-    ____________Full: {
+    ________________Full: {
         lat: number;
         lon: number;
     }[];
-    Afghanistan: {
+    Afghanistan_EA: {
         lat: number;
         lon: number;
     }[];

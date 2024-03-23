@@ -21,6 +21,14 @@ export const COORDINATES = {
             lon: 49.309787386754,
         },
     ],
+    "Detail ": [
+        { lat: 45.4986468, lon: 36.6394043},
+        { lat: 42.1308213, lon: 36.5899658},
+        { lat: 42.0824014, lon: 40.9452375},
+        { lat: 40.8685176, lon: 40.9289216},
+        { lat: 40.7971774, lon: 45.0769043},
+        { lat: 45.201393, lon: 45.2471924},
+    ],
     "Syria": [
         // top left
         {
@@ -59,6 +67,24 @@ export const COORDINATES = {
         {
             lat: 33.150981840679,
             lon: 64.756585025318,
+        },
+    ],
+    "Detail": [
+        {
+            lat: 30.7559985,
+            lon: 52.3493045,
+        },
+        {
+            lat: 23.533773,
+            lon: 52.3493045,
+        },
+        {
+            lat: 23.533773,
+            lon: 58.8949585,
+        },
+        {
+            lat: 30.7559985,
+            lon: 58.8949585,
         },
     ],
     "Channel": [
@@ -236,7 +262,7 @@ export const COORDINATES = {
             lon: 41.69756169,
         }
     ],
-    "SinaiDetail": [
+    " Detail": [
         {
             lat: 34.471602458161,
             lon: 28.11049268118,
@@ -273,7 +299,7 @@ export const COORDINATES = {
         }
     ],
     // temp coordinates
-    "____________Full": [
+    "________________Full": [
         {
             lat: 36.1,
             lon: 60.2,
@@ -291,7 +317,7 @@ export const COORDINATES = {
             lon: 66,
         },
     ],
-    "Afghanistan": [
+    "Afghanistan_EA": [
         {
             lat: 36.1,
             lon: 60.2,
