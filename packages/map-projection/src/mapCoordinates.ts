@@ -273,6 +273,24 @@ export const COORDINATES = {
       }
   ],
   // temp coordinates
+  "____________Full": [
+      {
+          lat: 36.1,
+          lon: 60.2,
+      },
+      {
+          lat: 29.50,
+          lon: 60.2,
+      },
+      {
+          lat: 29.50,
+          lon: 66,
+      },
+      {
+          lat: 36.1,
+          lon: 66,
+      },
+  ],
   "Afghanistan": [
       {
           lat: 36.1,
@@ -283,12 +301,12 @@ export const COORDINATES = {
           lon: 60.2,
       },
       {
-          lat: 29.50,
-          lon: 66,
+          lat: 29.22,
+          lon: 71.8,
       },
       {
-          lat: 36.1,
-          lon: 66,
+          lat: 35.8,
+          lon: 71.8,
       },
   ],
 };
