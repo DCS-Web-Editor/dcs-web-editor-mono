@@ -59,4 +59,8 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
+    Korea: {
+        lat: number;
+        lon: number;
+    }[];
 };
