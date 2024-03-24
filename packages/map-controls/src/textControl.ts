@@ -1,5 +1,13 @@
 import { context } from ".";
 let map: any;
+interface TextSave {
+  text: string;
+  style: string;
+  latLng: any;
+  _leaflet_id: string;
+}
+
+export const texts: TextSave[] = [];
 
 // Create Text Control
 
@@ -50,24 +58,57 @@ function enableTextControl(anchor) {
     const text = prompt("Text ?");
     if (!text) return;
     const style = `color: ${drawColor}; font-weight: bold; font-family: sans-serif; pointer-events: auto;`;
-    const icon: L.DivIcon = L.divIcon({
-      iconSize: [0, 0],
-      className: "dwe-map-label",
-      html: `<div style="${style}">${text}</div>`,
-    });
+    const icon: L.DivIcon = createIcon(text, style);
 
     const marker: L.Marker = new L.marker(e.latlng, { icon });
+
     map.addLayer(marker);
-    marker.on("click", (e) => {
-      if (context.writeMode) e.target.remove();
-    });
+    marker.on("click", removeText);
     // L.DomEvent.disableClickPropagation(marker.getElement());
+
+    texts.push({
+      text,
+      style,
+      latLng: e.latlng,
+      _leaflet_id: marker._leaflet_id,
+    });
   });
 
   context.writeInitialized = true;
 }
 
+function removeText(e): any {
+  if (!context.writeMode) return;
+
+  const found = texts.findIndex(
+    (d) => d._leaflet_id === e.sourceTarget._leaflet_id
+  );
+  if (found > -1) texts.splice(found, 1);
+
+  e.sourceTarget.remove();
+  e.target.remove();
+}
+
+function createIcon(text: string, style: string) {
+  const icon = L.divIcon({
+    iconSize: [0, 0],
+    className: "dwe-map-label",
+    html: `<div style="${style}">${text}</div>`,
+  });
+  return icon;
+}
+
 function disableTextControl(anchor) {
   map.dragging.enable();
   anchor.classList.remove("polyline-measure-controlOnBgColor");
+}
+
+export function loadText(_texts: TextSave[]) {
+  // console.log("loadDraw", array);
+  _texts.forEach((text: TextSave) => {
+    const icon = createIcon(text.text, text.style);
+    const marker: L.Marker = new L.marker(text.latLng, { icon });
+    map.addLayer(marker);
+    marker.on("click", removeText);
+  });
 }
