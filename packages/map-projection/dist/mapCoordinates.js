@@ -1,5 +1,5 @@
 export const COORDINATES = {
-    "Caucasus": [
+    Caucasus: [
         // top left
         {
             lat: 48.387663480938,
@@ -8,7 +8,7 @@ export const COORDINATES = {
         // bottom left
         {
             lat: 39.608931903399,
-            lon: 27.637331401126
+            lon: 27.637331401126,
         },
         // bottom right
         {
@@ -29,7 +29,7 @@ export const COORDINATES = {
         { lat: 40.7971774, lon: 45.0769043 },
         { lat: 45.201393, lon: 45.2471924 },
     ],
-    "Syria": [
+    Syria: [
         // top left
         {
             lat: 37.470301761465,
@@ -38,7 +38,7 @@ export const COORDINATES = {
         // bottom left
         {
             lat: 31.683960285685,
-            lon: 30.123622480902
+            lon: 30.123622480902,
         },
         // bottom right
         {
@@ -58,7 +58,7 @@ export const COORDINATES = {
         },
         {
             lat: 21.749230188233,
-            lon: 47.594358099874
+            lon: 47.594358099874,
         },
         {
             lat: 21.869681127563,
@@ -69,7 +69,7 @@ export const COORDINATES = {
             lon: 64.756585025318,
         },
     ],
-    "Detail": [
+    Detail: [
         {
             lat: 30.7559985,
             lon: 52.3493045,
@@ -87,26 +87,26 @@ export const COORDINATES = {
             lon: 58.8949585,
         },
     ],
-    "Channel": [
+    Channel: [
         // top left
         {
             lat: 51.5174,
-            lon: -0.08918
+            lon: -0.08918,
         },
         // bottom left
         {
             lat: 49.6773349,
-            lon: 0.0290759
+            lon: 0.0290759,
         },
         // bottom right
         {
             lat: 49.7137467,
-            lon: 3.4207356
+            lon: 3.4207356,
         },
         // top right
         {
             lat: 51.5572647,
-            lon: 3.4399315
+            lon: 3.4399315,
         },
     ],
     // "Normandy": [
@@ -131,7 +131,7 @@ export const COORDINATES = {
     //         lon: 2.5322495
     //     },
     // ],
-    "Normandy2": [
+    Normandy2: [
         // top left
         {
             lat: 51.853053209954,
@@ -152,16 +152,16 @@ export const COORDINATES = {
         {
             lat: 51.853053209954,
             lon: -3.5005307234326,
-        }
+        },
     ],
-    "Nevada": [
+    Nevada: [
         {
             lat: 39.801712624973,
             lon: -119.9902311096,
         },
         {
             lat: 34.400025213159,
-            lon: -119.78488669575
+            lon: -119.78488669575,
         },
         {
             lat: 34.346907399159,
@@ -172,14 +172,14 @@ export const COORDINATES = {
             lon: -112.11118674647,
         },
     ],
-    "Marianas": [
+    Marianas: [
         {
             lat: 22.220143285088,
             lon: 136.96126049266,
         },
         {
             lat: 10.637681299806,
-            lon: 137.54638410345
+            lon: 137.54638410345,
         },
         {
             lat: 10.739229846557,
@@ -188,7 +188,7 @@ export const COORDINATES = {
         {
             lat: 22.44081213808,
             lon: 152.4517401234,
-        }
+        },
     ],
     "South Atlantic": [
         {
@@ -197,7 +197,7 @@ export const COORDINATES = {
         },
         {
             lat: -53.241290032056,
-            lon: -89.780310307149
+            lon: -89.780310307149,
         },
         {
             lat: -56.442360340952,
@@ -206,7 +206,7 @@ export const COORDINATES = {
         {
             lat: -48.278746783249,
             lon: -41.444185881767,
-        }
+        },
     ],
     "South East Asia": [
         {
@@ -224,7 +224,7 @@ export const COORDINATES = {
         {
             lat: 23.684774166883756,
             lon: 112,
-        }
+        },
     ],
     "Top End Australia": [
         {
@@ -242,16 +242,16 @@ export const COORDINATES = {
         {
             lat: -9.099167,
             lon: 135.061111,
-        }
+        },
     ],
-    "Sinai": [
+    Sinai: [
         {
             lat: 34.55404881,
-            lon: 25.44864200,
+            lon: 25.448642,
         },
         {
             lat: 25.06909856,
-            lon: 25.44864200,
+            lon: 25.448642,
         },
         {
             lat: 25.06909856,
@@ -260,7 +260,7 @@ export const COORDINATES = {
         {
             lat: 34.55404881,
             lon: 41.69756169,
-        }
+        },
     ],
     " Detail": [
         {
@@ -278,7 +278,7 @@ export const COORDINATES = {
         {
             lat: 34.495390726672,
             lon: 37.255043470431,
-        }
+        },
     ],
     "Kola Peninsula": [
         {
@@ -296,34 +296,34 @@ export const COORDINATES = {
         {
             lat: 70.85908719717143,
             lon: 44,
-        }
+        },
     ],
     // temp coordinates
-    "________________Full": [
-        {
-            lat: 36.1,
-            lon: 60.2,
-        },
-        {
-            lat: 29.50,
-            lon: 60.2,
-        },
-        {
-            lat: 29.50,
-            lon: 66,
-        },
+    Full: [
         {
             lat: 36.1,
             lon: 66,
+        },
+        {
+            lat: 29.5,
+            lon: 66,
+        },
+        {
+            lat: 29.22,
+            lon: 71.8,
+        },
+        {
+            lat: 35.8,
+            lon: 71.8,
         },
     ],
-    "Afghanistan_EA": [
+    "Afghanistan Early_Access": [
         {
             lat: 36.1,
             lon: 60.2,
         },
         {
-            lat: 29.50,
+            lat: 29.5,
             lon: 60.2,
         },
         {
@@ -335,22 +335,22 @@ export const COORDINATES = {
             lon: 71.8,
         },
     ],
-    "Korea": [
+    Korea: [
         {
             lat: 42.71473219999999,
-            lon: 122.980957
+            lon: 122.980957,
         },
         {
             lat: 33.9615863,
-            lon: 122.980957
+            lon: 122.980957,
         },
         {
             lat: 33.9615863,
-            lon: 132.6708984
+            lon: 132.6708984,
         },
         {
             lat: 42.7308743,
-            lon: 132.6049805
-        }
+            lon: 132.6049805,
+        },
     ],
 };
