@@ -59,11 +59,19 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
-    Full: {
+    Afghanistan: {
         lat: number;
         lon: number;
     }[];
-    "Afghanistan Early_Access": {
+    "Afg North": {
+        lat: number;
+        lon: number;
+    }[];
+    "Afg Southwest": {
+        lat: number;
+        lon: number;
+    }[];
+    "Afg East": {
         lat: number;
         lon: number;
     }[];

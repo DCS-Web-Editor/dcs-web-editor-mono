@@ -299,40 +299,76 @@ export const COORDINATES = {
     },
   ],
   // temp coordinates
-  Full: [
+  Afghanistan: [
     {
-      lat: 36.1,
-      lon: 66,
+      lat: 39,
+      lon: 60,
     },
     {
-      lat: 29.5,
-      lon: 66,
+      lat: 29.4,
+      lon: 60.2,
     },
     {
-      lat: 29.22,
-      lon: 71.8,
+      lat: 29,
+      lon: 74.5,
     },
     {
-      lat: 35.8,
-      lon: 71.8,
+      lat: 38.6,
+      lon: 75.34,
     },
   ],
-  "Afghanistan Early_Access": [
+  "Afg North": [
     {
-      lat: 36.1,
+      lat: 39.08,
+      lon: 63.8,
+    },
+    {
+      lat: 35.06,
+      lon: 63.8,
+    },
+    {
+      lat: 34.6,
+      lon: 74.96,
+    },
+    {
+      lat: 38.6,
+      lon: 75.34,
+    },
+  ],
+  "Afg Southwest": [
+    {
+      lat: 36,
+      lon: 60.1,
+    },
+    {
+      lat: 29.4,
       lon: 60.2,
     },
     {
-      lat: 29.5,
-      lon: 60.2,
+      lat: 29.4,
+      lon: 66.6,
     },
     {
-      lat: 29.22,
-      lon: 71.8,
+      lat: 36,
+      lon: 66.9,
+    },
+  ],
+  "Afg East": [
+    {
+      lat: 36.05,
+      lon: 65.27,
     },
     {
-      lat: 35.8,
-      lon: 71.8,
+      lat: 31.3,
+      lon: 65.2,
+    },
+    {
+      lat: 31.14,
+      lon: 71.58,
+    },
+    {
+      lat: 36,
+      lon: 72.1,
     },
   ],
   Korea: [
