@@ -12,10 +12,10 @@ export function toFlightPlan(data, theater) {
         coordinates.push(convertDMshort(latLon.lat, latLon.lon));
     });
     const speed = Math.round(data.unit?.speed);
-    const speedString = speed ? speed.toString().padStart(4, '0') : '0200';
-    const alt = Math.round((data.unit?.alt || 0) * M_TO_FEET / 100);
-    const altString = alt ? alt.toString().padStart(3, '0') : '010';
-    const params = coordinates.map(wp => `${wp}`).join(' ');
+    const speedString = speed ? speed.toString().padStart(4, "0") : "0200";
+    const alt = Math.round(((data.unit?.alt || 0) * M_TO_FEET) / 100);
+    const altString = alt ? alt.toString().padStart(3, "0") : "010";
+    const params = coordinates.map((wp) => `${wp}`).join(" ");
     const zoom = 5;
     const SKYVECTOR_URL = `https://skyvector.com/?ll=${data.lat},${data.lon}&chart=301&zoom=${zoom}&fpl=N${speedString}A${altString} ${params}$´&referrer=DCS_Web_Editor`;
     return SKYVECTOR_URL;
@@ -52,3 +52,11 @@ export const skyVectorZoom = {
     2: 19,
     1: 21,
 };
+export function yearMonth() {
+    const skyDate = new Date();
+    // wait 10 days
+    skyDate.setDate(skyDate.getDate() - 10);
+    let yearMonth = skyDate.toISOString().slice(2, 7);
+    yearMonth = yearMonth?.replace("-", "");
+    return yearMonth;
+}
