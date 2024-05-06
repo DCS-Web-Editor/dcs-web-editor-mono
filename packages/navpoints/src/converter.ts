@@ -25,10 +25,10 @@ function onClick(e: Event) {
   const geoJson = JSON.parse(geoInput.value);
   console.log("geoJson", geoJson);
 
-  const json = [];
+  const json: any[] = [];
   const startIndex = parseInt(start.value) || 0;
 
-  geoJson.features.forEach((feature, i) => {
+  geoJson.features.forEach((feature: any, i: number) => {
     const coords = feature.geometry.coordinates;
     const miz = LLToMiz(coords[1], coords[0]);
     json.push({
