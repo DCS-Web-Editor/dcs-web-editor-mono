@@ -74,6 +74,12 @@ const config: Record<string, any> = {
       false_easting: 500000,
       false_northing: 10000000,
       scale_factor: 0.9996
+    },
+    Kola: {
+        central_meridian: 21,
+        false_easting: -62702,
+        false_northing: -7543625,
+        scale_factor: 0.9996
     }
 }
 
