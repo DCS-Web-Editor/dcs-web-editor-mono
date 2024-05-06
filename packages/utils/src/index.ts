@@ -1,102 +1,134 @@
-import * as MGRS from '../lib/mgrs'
-import { convertDistance, getDistance, getRhumbLineBearing } from 'geolib';
+import * as MGRS from "../lib/mgrs";
+import { convertDistance, getDistance, getRhumbLineBearing } from "geolib";
+import { js2Lua } from "./js2lua";
 export interface LatLon {
   lat: number;
   lon: number;
 }
 
-export function ConvertDMSToDD(degrees: number, minutes: number, seconds: number, direction: string) {
-    var dd = degrees + minutes / 60 + seconds / (60 * 60);
+export function ConvertDMSToDD(
+  degrees: number,
+  minutes: number,
+  seconds: number,
+  direction: string
+) {
+  var dd = degrees + minutes / 60 + seconds / (60 * 60);
 
-    if (direction == "S" || direction == "W") {
-        dd = dd * -1;
-    } // Don't do anything for N or E
-    return dd;
+  if (direction == "S" || direction == "W") {
+    dd = dd * -1;
+  } // Don't do anything for N or E
+  return dd;
 }
 
 function toDegreesMinutesAndSeconds(coordinate: number) {
-    const absolute = Math.abs(coordinate);
-    const degrees = Math.floor(absolute);
-    const minutesNotTruncated = (absolute - degrees) * 60;
-    const minutes = Math.floor(minutesNotTruncated);
-    const seconds = ((minutesNotTruncated - minutes) * 60).toPrecision(4);
-    
-    return degrees + "° " + minutes + "' " + seconds;
+  const absolute = Math.abs(coordinate);
+  const degrees = Math.floor(absolute);
+  const minutesNotTruncated = (absolute - degrees) * 60;
+  const minutes = Math.floor(minutesNotTruncated);
+  const seconds = ((minutesNotTruncated - minutes) * 60).toPrecision(4);
+
+  return degrees + "° " + minutes + "' " + seconds;
 }
 
 function toDegreesMinutesShort(coordinate: number, longitude = false) {
-    const absolute = Math.abs(coordinate);
-    const degrees = Math.floor(absolute);
-    const minutesNotTruncated = (absolute - degrees) * 60;
-    const minutes = Math.floor(minutesNotTruncated);
+  const absolute = Math.abs(coordinate);
+  const degrees = Math.floor(absolute);
+  const minutesNotTruncated = (absolute - degrees) * 60;
+  const minutes = Math.floor(minutesNotTruncated);
 
-    return degrees.toString().padStart(longitude ? 3 : 2, '0') + minutes.toString().padStart(2, '0');
+  return (
+    degrees.toString().padStart(longitude ? 3 : 2, "0") +
+    minutes.toString().padStart(2, "0")
+  );
 }
 
-
 function toDegreesMinutes(coordinate: number) {
-    var absolute = Math.abs(coordinate);
-    var degrees = Math.floor(absolute);
-    var minutesNotTruncated = (absolute - degrees) * 60;
-    var minutes = minutesNotTruncated.toFixed(4);
+  var absolute = Math.abs(coordinate);
+  var degrees = Math.floor(absolute);
+  var minutesNotTruncated = (absolute - degrees) * 60;
+  var minutes = minutesNotTruncated.toFixed(4);
 
-    return degrees + "° " + minutes + "'";
+  return degrees + "° " + minutes + "'";
 }
 
 export function convertDMS(lat: number, lon: number) {
-    var latitude = toDegreesMinutesAndSeconds(lat);
-    var latitudeCardinal = lat >= 0 ? "N" : "S";
+  var latitude = toDegreesMinutesAndSeconds(lat);
+  var latitudeCardinal = lat >= 0 ? "N" : "S";
 
-    var longitude = toDegreesMinutesAndSeconds(lon);
-    var longitudeCardinal = lon >= 0 ? "E" : "W";
+  var longitude = toDegreesMinutesAndSeconds(lon);
+  var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
+  return (
+    latitude +
+    " " +
+    latitudeCardinal +
+    ", " +
+    longitude +
+    " " +
+    longitudeCardinal
+  );
 }
 
 // returns i.e. 4210N04228E
 export function convertDMshort(lat: number, lon: number) {
-    var latitude = toDegreesMinutesShort(lat);
-    var latitudeCardinal = lat >= 0 ? "N" : "S";
+  var latitude = toDegreesMinutesShort(lat);
+  var latitudeCardinal = lat >= 0 ? "N" : "S";
 
-    var longitude = toDegreesMinutesShort(lon, true);
-    var longitudeCardinal = lon >= 0 ? "E" : "W";
+  var longitude = toDegreesMinutesShort(lon, true);
+  var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-    return latitude + latitudeCardinal + longitude + longitudeCardinal;
+  return latitude + latitudeCardinal + longitude + longitudeCardinal;
 }
 
 export function convertDMM(lat: number, lon: number) {
-    var latitude = toDegreesMinutes(lat);
-    var latitudeCardinal = lat >= 0 ? "N" : "S";
+  var latitude = toDegreesMinutes(lat);
+  var latitudeCardinal = lat >= 0 ? "N" : "S";
 
-    var longitude = toDegreesMinutes(lon);
-    var longitudeCardinal = lon >= 0 ? "E" : "W";
+  var longitude = toDegreesMinutes(lon);
+  var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
+  return (
+    latitude +
+    " " +
+    latitudeCardinal +
+    ", " +
+    longitude +
+    " " +
+    longitudeCardinal
+  );
 }
 
-export function toHHMMSS(s:number) {
-    const date = new Date(0);
-    date.setSeconds(s); // specify value for SECONDS here
-    return date.toISOString().slice(11, 19);
+export function toHHMMSS(s: number) {
+  const date = new Date(0);
+  date.setSeconds(s); // specify value for SECONDS here
+  return date.toISOString().slice(11, 19);
 }
 
-export function convertDD(lat: number, lon:number) {
+export function convertDD(lat: number, lon: number) {
   var latitude = lat.toFixed(4);
   var latitudeCardinal = lat >= 0 ? "N" : "S";
 
   var longitude = lon.toFixed(4);
   var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-  return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
+  return (
+    latitude +
+    " " +
+    latitudeCardinal +
+    ", " +
+    longitude +
+    " " +
+    longitudeCardinal
+  );
 }
 
 export function LLtoAll(lat: number, lon: number) {
-    return {
-        DD: convertDD(lat, lon),
-        MGRS: MGRS.forward([lon, lat], 5),
-        DMS: convertDMS(lat, lon),
-        DMM: convertDMM(lat, lon),
-    }
+  return {
+    DD: convertDD(lat, lon),
+    MGRS: MGRS.forward([lon, lat], 5),
+    DMS: convertDMS(lat, lon),
+    DMM: convertDMM(lat, lon),
+  };
 }
 
 export function LLtoMGRS(lat: number, lon: number) {
@@ -104,27 +136,27 @@ export function LLtoMGRS(lat: number, lon: number) {
 }
 
 export function calcBearing(start: LatLon, end: LatLon) {
-    const a = {
-        latitude: start.lat,
-        longitude: start.lon,
-    }
-    const b = {
-        latitude: end.lat,
-        longitude: end.lon,
-    }
-    return getRhumbLineBearing(a, b)
+  const a = {
+    latitude: start.lat,
+    longitude: start.lon,
+  };
+  const b = {
+    latitude: end.lat,
+    longitude: end.lon,
+  };
+  return getRhumbLineBearing(a, b);
 }
 
 export function calcDistance(start: LatLon, end: LatLon) {
-    const a = {
-        latitude: start.lat,
-        longitude: start.lon,
-    }
-    const b = {
-        latitude: end.lat,
-        longitude: end.lon,
-    }
-    return convertDistance(getDistance(a, b), 'sm');
+  const a = {
+    latitude: start.lat,
+    longitude: start.lon,
+  };
+  const b = {
+    latitude: end.lat,
+    longitude: end.lon,
+  };
+  return convertDistance(getDistance(a, b), "sm");
 }
 
 export const M_TO_FEET = 3.28084;
@@ -136,30 +168,31 @@ export const KG_TO_LBS = 2.20462;
 export const MMHG_TO_INHG = 0.0393701;
 
 export function msToKts(metersPerSecond = 0) {
-  return (metersPerSecond * MS_TO_KTS).toFixed(0)    
+  return (metersPerSecond * MS_TO_KTS).toFixed(0);
 }
 
 export function toFeet(meters = 0) {
-    return (meters * M_TO_FEET).toFixed(0)    
+  return (meters * M_TO_FEET).toFixed(0);
 }
 
 export function toNm(meters = 0) {
-    return (meters * M_TO_NM).toFixed(1)    
+  return (meters * M_TO_NM).toFixed(1);
 }
 export function toDeg(rad = 0) {
-    return (rad / (Math.PI / 180)).toFixed(0)    
+  return (rad / (Math.PI / 180)).toFixed(0);
 }
 
 export function toRad(deg = 0) {
-    return (deg * (Math.PI / 180))    
+  return deg * (Math.PI / 180);
 }
 
-
-export function rgbToInt(r:number, g:number, b:number) {
-    return (r * 255 << 16) + (g * 255 << 8) + (b * 255);
+export function rgbToInt(r: number, g: number, b: number) {
+  return ((r * 255) << 16) + ((g * 255) << 8) + b * 255;
 }
-export function toRgba(r:number, g:number, b:number, a: number) {
-    return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(a * 255)})`;
+export function toRgba(r: number, g: number, b: number, a: number) {
+  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(
+    b * 255
+  )},${Math.round(a * 255)})`;
 }
 
 function componentToHex(c: number) {
@@ -167,67 +200,101 @@ function componentToHex(c: number) {
   return hex.length == 1 ? "0" + hex : hex;
 }
 
-export function rgbaToHex(r:number, g:number, b:number, a: number) {
-  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b) + componentToHex(a);
+export function rgbaToHex(r: number, g: number, b: number, a: number) {
+  return (
+    "#" +
+    componentToHex(r) +
+    componentToHex(g) +
+    componentToHex(b) +
+    componentToHex(a)
+  );
 }
-export function rgbToHex(r:number, g:number, b:number) {
+export function rgbToHex(r: number, g: number, b: number) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
 export function hexaToRgb(hex: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function(m, r, g, b, a) {
+  hex = hex.replace(shorthandRegex, function (m, r, g, b, a) {
     return r + r + g + g + b + b + a + a;
   });
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16),
-    a: parseInt(result[4], 16),
-  } : null;
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
+    hex
+  );
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+        a: parseInt(result[4], 16),
+      }
+    : null;
 }
 
 export function toFahrenheit(celsius: number) {
-  return (celsius * 9 / 5) + 32  
+  return (celsius * 9) / 5 + 32;
 }
 
 export const MORSE = {
-    'a': '.-',    'b': '-...',  'c': '-.-.', 'd': '-..',
-    'e': '.',     'f': '..-.',  'g': '--.',  'h': '....',
-    'i': '..',    'j': '.---',  'k': '-.-',  'l': '.-..',
-    'm': '--',    'n': '-.',    'o': '---',  'p': '.--.',
-    'q': '--.-',  'r': '.-.',   's': '...',  't': '-',
-    'u': '..-',   'v': '...-',  'w': '.--',  'x': '-..-',
-    'y': '-.--',  'z': '--..',  ' ': '/',
-    '1': '.----', '2': '..---', '3': '...--', '4': '....-', 
-    '5': '.....', '6': '-....', '7': '--...', '8': '---..', 
-    '9': '----.', '0': '-----', 
- }
+  a: ".-",
+  b: "-...",
+  c: "-.-.",
+  d: "-..",
+  e: ".",
+  f: "..-.",
+  g: "--.",
+  h: "....",
+  i: "..",
+  j: ".---",
+  k: "-.-",
+  l: ".-..",
+  m: "--",
+  n: "-.",
+  o: "---",
+  p: ".--.",
+  q: "--.-",
+  r: ".-.",
+  s: "...",
+  t: "-",
+  u: "..-",
+  v: "...-",
+  w: ".--",
+  x: "-..-",
+  y: "-.--",
+  z: "--..",
+  " ": "/",
+  "1": ".----",
+  "2": "..---",
+  "3": "...--",
+  "4": "....-",
+  "5": ".....",
+  "6": "-....",
+  "7": "--...",
+  "8": "---..",
+  "9": "----.",
+  "0": "-----",
+};
 
- export const truncateString = (string = '', maxLength = 50) => 
-  string.length > maxLength 
-    ? `${string.substring(0, maxLength)}…`
-    : string
+export const truncateString = (string = "", maxLength = 50) =>
+  string.length > maxLength ? `${string.substring(0, maxLength)}…` : string;
 
+export function downloadJson(json: any, name: string) {
+  const jsonString = JSON.stringify(json, null, 2);
+  const blob = new Blob([jsonString], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
 
- export function downloadJson(json:any, name: string) {
-  const jsonString = JSON.stringify(json, null, 2)
-  const blob = new Blob([jsonString], {type: "application/json"});
-  const url  = URL.createObjectURL(blob);
+  downloadBlob(url, `${name}.json`);
+}
 
-  downloadBlob(url, `${name}.json`)
- }
-
-export function downloadBlob(url:string, fileName: string) {
-  const link = document.createElement( 'a' );
-	link.setAttribute( 'href', url );
-	link.setAttribute( 'download', fileName );
-	const event = new MouseEvent( 'click', {
+export function downloadBlob(url: string, fileName: string) {
+  const link = document.createElement("a");
+  link.setAttribute("href", url);
+  link.setAttribute("download", fileName);
+  const event = new MouseEvent("click", {
     bubbles: true,
-    cancelable: true, 
+    cancelable: true,
     screenX: 0,
     screenY: 0,
     clientX: 0,
@@ -235,16 +302,16 @@ export function downloadBlob(url:string, fileName: string) {
     ctrlKey: false,
     shiftKey: false,
   });
-	link.dispatchEvent( event ); 
- }
+  link.dispatchEvent(event);
+}
 
 export function isTranslation(name: string): RegExpMatchArray | null {
-  // console.log('name', name, typeof name);    
+  // console.log('name', name, typeof name);
   return name?.match && name.match(/^DictKey_/);
-} 
+}
 
-export function translate(key:string, dictionary:Record<string, string>) {
-  return (isTranslation(key) ? dictionary[key] : key);
+export function translate(key: string, dictionary: Record<string, string>) {
+  return isTranslation(key) ? dictionary[key] : key;
 }
 
 // safely handles circular references
@@ -264,15 +331,19 @@ export function translate(key:string, dictionary:Record<string, string>) {
 //   return retVal;
 // };
 
-
-
 export async function getElevationFeet(lat: any, lng: any) {
-  const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`, {
-      method: 'GET',
-  });
+  const elevationData = await fetch(
+    `https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(
+      6
+    )},${lng.toFixed(6)}|`,
+    {
+      method: "GET",
+    }
+  );
 
   const { results } = await elevationData.json();
   const elevation = ((results?.[0]?.elevation ?? 0) * M_TO_FEET).toFixed(0);
   return elevation;
 }
 
+export { js2Lua } from "./js2lua";

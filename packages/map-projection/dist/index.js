@@ -71,14 +71,14 @@ const config = {
         central_meridian: 135,
         false_easting: 500000,
         false_northing: 10000000,
-        scale_factor: 0.9996
+        scale_factor: 0.9996,
     },
     Kola: {
         central_meridian: 21,
         false_easting: -62702,
         false_northing: -7543625,
-        scale_factor: 0.9996
-    }
+        scale_factor: 0.9996,
+    },
 };
 /**
  * proj4 projector
@@ -112,11 +112,11 @@ export function activeMap(mapName) {
  */
 export function mizToLL(y, x) {
     if (!projector)
-        throw new Error('Projector not defined, call activeMap');
+        throw new Error("Projector not defined, call activeMap");
     const [xa, ya] = projector.inverse([y, x]);
     return {
         lat: ya,
-        lon: xa
+        lon: xa,
     };
 }
 /**
@@ -130,8 +130,9 @@ export function mizToLL(y, x) {
  */
 export function LLToMiz(lon, lat) {
     if (!projector)
-        throw new Error('Projector not defined, call activeMap');
+        throw new Error("Projector not defined, call activeMap");
     const [y, x] = projector.forward([lon, lat]);
     return [x, y];
 }
-export { COORDINATES } from './mapCoordinates';
+export { COORDINATES } from "./mapCoordinates";
+export const mapNames = Object.keys(config);

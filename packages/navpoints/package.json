@@ -2,9 +2,10 @@
   "name": "@dcs-web-editor-mono/navpoints",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/navpoints.umd.js",
-  "module": "dist/navpoints.mjs",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
+    "dev": "vite",
     "clean": "rimraf dist/ && mkdir dist",
     "tsc": "tsc",
     "build": "npm run clean && tsc && vite build",

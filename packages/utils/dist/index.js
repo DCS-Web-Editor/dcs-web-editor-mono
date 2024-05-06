@@ -1,5 +1,5 @@
-import * as MGRS from '../lib/mgrs';
-import { convertDistance, getDistance, getRhumbLineBearing } from 'geolib';
+import * as MGRS from "../lib/mgrs";
+import { convertDistance, getDistance, getRhumbLineBearing } from "geolib";
 export function ConvertDMSToDD(degrees, minutes, seconds, direction) {
     var dd = degrees + minutes / 60 + seconds / (60 * 60);
     if (direction == "S" || direction == "W") {
@@ -20,7 +20,8 @@ function toDegreesMinutesShort(coordinate, longitude = false) {
     const degrees = Math.floor(absolute);
     const minutesNotTruncated = (absolute - degrees) * 60;
     const minutes = Math.floor(minutesNotTruncated);
-    return degrees.toString().padStart(longitude ? 3 : 2, '0') + minutes.toString().padStart(2, '0');
+    return (degrees.toString().padStart(longitude ? 3 : 2, "0") +
+        minutes.toString().padStart(2, "0"));
 }
 function toDegreesMinutes(coordinate) {
     var absolute = Math.abs(coordinate);
@@ -34,7 +35,13 @@ export function convertDMS(lat, lon) {
     var latitudeCardinal = lat >= 0 ? "N" : "S";
     var longitude = toDegreesMinutesAndSeconds(lon);
     var longitudeCardinal = lon >= 0 ? "E" : "W";
-    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
+    return (latitude +
+        " " +
+        latitudeCardinal +
+        ", " +
+        longitude +
+        " " +
+        longitudeCardinal);
 }
 // returns i.e. 4210N04228E
 export function convertDMshort(lat, lon) {
@@ -49,7 +56,13 @@ export function convertDMM(lat, lon) {
     var latitudeCardinal = lat >= 0 ? "N" : "S";
     var longitude = toDegreesMinutes(lon);
     var longitudeCardinal = lon >= 0 ? "E" : "W";
-    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
+    return (latitude +
+        " " +
+        latitudeCardinal +
+        ", " +
+        longitude +
+        " " +
+        longitudeCardinal);
 }
 export function toHHMMSS(s) {
     const date = new Date(0);
@@ -61,7 +74,13 @@ export function convertDD(lat, lon) {
     var latitudeCardinal = lat >= 0 ? "N" : "S";
     var longitude = lon.toFixed(4);
     var longitudeCardinal = lon >= 0 ? "E" : "W";
-    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
+    return (latitude +
+        " " +
+        latitudeCardinal +
+        ", " +
+        longitude +
+        " " +
+        longitudeCardinal);
 }
 export function LLtoAll(lat, lon) {
     return {
@@ -94,7 +113,7 @@ export function calcDistance(start, end) {
         latitude: end.lat,
         longitude: end.lon,
     };
-    return convertDistance(getDistance(a, b), 'sm');
+    return convertDistance(getDistance(a, b), "sm");
 }
 export const M_TO_FEET = 3.28084;
 export const M_TO_NM = 0.000539957;
@@ -116,10 +135,10 @@ export function toDeg(rad = 0) {
     return (rad / (Math.PI / 180)).toFixed(0);
 }
 export function toRad(deg = 0) {
-    return (deg * (Math.PI / 180));
+    return deg * (Math.PI / 180);
 }
 export function rgbToInt(r, g, b) {
-    return (r * 255 << 16) + (g * 255 << 8) + (b * 255);
+    return ((r * 255) << 16) + ((g * 255) << 8) + b * 255;
 }
 export function toRgba(r, g, b, a) {
     return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(a * 255)})`;
@@ -129,7 +148,11 @@ function componentToHex(c) {
     return hex.length == 1 ? "0" + hex : hex;
 }
 export function rgbaToHex(r, g, b, a) {
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b) + componentToHex(a);
+    return ("#" +
+        componentToHex(r) +
+        componentToHex(g) +
+        componentToHex(b) +
+        componentToHex(a));
 }
 export function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
@@ -141,31 +164,58 @@ export function hexaToRgb(hex) {
         return r + r + g + g + b + b + a + a;
     });
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-        a: parseInt(result[4], 16),
-    } : null;
+    return result
+        ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16),
+            a: parseInt(result[4], 16),
+        }
+        : null;
 }
 export function toFahrenheit(celsius) {
-    return (celsius * 9 / 5) + 32;
+    return (celsius * 9) / 5 + 32;
 }
 export const MORSE = {
-    'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..',
-    'e': '.', 'f': '..-.', 'g': '--.', 'h': '....',
-    'i': '..', 'j': '.---', 'k': '-.-', 'l': '.-..',
-    'm': '--', 'n': '-.', 'o': '---', 'p': '.--.',
-    'q': '--.-', 'r': '.-.', 's': '...', 't': '-',
-    'u': '..-', 'v': '...-', 'w': '.--', 'x': '-..-',
-    'y': '-.--', 'z': '--..', ' ': '/',
-    '1': '.----', '2': '..---', '3': '...--', '4': '....-',
-    '5': '.....', '6': '-....', '7': '--...', '8': '---..',
-    '9': '----.', '0': '-----',
+    a: ".-",
+    b: "-...",
+    c: "-.-.",
+    d: "-..",
+    e: ".",
+    f: "..-.",
+    g: "--.",
+    h: "....",
+    i: "..",
+    j: ".---",
+    k: "-.-",
+    l: ".-..",
+    m: "--",
+    n: "-.",
+    o: "---",
+    p: ".--.",
+    q: "--.-",
+    r: ".-.",
+    s: "...",
+    t: "-",
+    u: "..-",
+    v: "...-",
+    w: ".--",
+    x: "-..-",
+    y: "-.--",
+    z: "--..",
+    " ": "/",
+    "1": ".----",
+    "2": "..---",
+    "3": "...--",
+    "4": "....-",
+    "5": ".....",
+    "6": "-....",
+    "7": "--...",
+    "8": "---..",
+    "9": "----.",
+    "0": "-----",
 };
-export const truncateString = (string = '', maxLength = 50) => string.length > maxLength
-    ? `${string.substring(0, maxLength)}…`
-    : string;
+export const truncateString = (string = "", maxLength = 50) => string.length > maxLength ? `${string.substring(0, maxLength)}…` : string;
 export function downloadJson(json, name) {
     const jsonString = JSON.stringify(json, null, 2);
     const blob = new Blob([jsonString], { type: "application/json" });
@@ -173,10 +223,10 @@ export function downloadJson(json, name) {
     downloadBlob(url, `${name}.json`);
 }
 export function downloadBlob(url, fileName) {
-    const link = document.createElement('a');
-    link.setAttribute('href', url);
-    link.setAttribute('download', fileName);
-    const event = new MouseEvent('click', {
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", fileName);
+    const event = new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
         screenX: 0,
@@ -189,11 +239,11 @@ export function downloadBlob(url, fileName) {
     link.dispatchEvent(event);
 }
 export function isTranslation(name) {
-    // console.log('name', name, typeof name);    
+    // console.log('name', name, typeof name);
     return name?.match && name.match(/^DictKey_/);
 }
 export function translate(key, dictionary) {
-    return (isTranslation(key) ? dictionary[key] : key);
+    return isTranslation(key) ? dictionary[key] : key;
 }
 // safely handles circular references
 // JSON.safeStringify = (obj, indent = 2) => {
@@ -213,9 +263,10 @@ export function translate(key, dictionary) {
 // };
 export async function getElevationFeet(lat, lng) {
     const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`, {
-        method: 'GET',
+        method: "GET",
     });
     const { results } = await elevationData.json();
     const elevation = ((results?.[0]?.elevation ?? 0) * M_TO_FEET).toFixed(0);
     return elevation;
 }
+export { js2Lua } from "./js2lua";
