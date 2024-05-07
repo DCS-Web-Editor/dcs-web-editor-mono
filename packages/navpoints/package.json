@@ -2,14 +2,14 @@
   "name": "@dcs-web-editor-mono/navpoints",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "index.html",
   "scripts": {
     "dev": "vite",
     "clean": "rimraf dist/ && mkdir dist",
     "tsc": "tsc",
     "build": "npm run clean && tsc && vite build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "ISC",

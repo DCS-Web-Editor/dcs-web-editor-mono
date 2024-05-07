@@ -3,7 +3,12 @@
     "compilerOptions": {
       "noEmit": false,
       "rootDir": "./src",
-      "outDir": "./dist"
+      "outDir": "./dist",
+      "lib": [
+        "ESNext",
+        "DOM"
+      ],
+      "skipLibCheck": true,
     },
-    "include": ["./src/*"],
+    "include": ["./src/*", "lib"],
 }

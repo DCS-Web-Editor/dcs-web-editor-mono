@@ -1,13 +1,11 @@
-console.log("converter");
-
 import { LLToMiz, activeMap, mapNames } from "../../map-projection";
 import { js2Lua } from "../../utils";
 
 const btn = document.getElementById("execute")!;
-const geoInput = document.getElementById("geojson")!;
-const mapSelect = document.getElementById("mapselect")!;
+const geoInput = (<HTMLInputElement>document.getElementById("geojson"))!;
+const mapSelect = (<HTMLInputElement>document.getElementById("mapselect"))!;
 const output = document.getElementById("output")!;
-const start = document.getElementById("start")!;
+const start = (<HTMLInputElement>document.getElementById("start"))!;
 
 mapNames.forEach((name) => {
   const o = document.createElement("option");
@@ -18,7 +16,7 @@ mapNames.forEach((name) => {
 
 btn?.addEventListener("click", onClick);
 
-function onClick(e: Event) {
+function onClick() {
   const mapName = mapSelect.value;
   activeMap(mapName);
 
