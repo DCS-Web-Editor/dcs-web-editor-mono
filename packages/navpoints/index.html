@@ -15,7 +15,6 @@
     </a>
     <p>
       <h3>Geojson lua converter by
-        
         <a href="https://www.patreon.com/DcsWebEditor" class="href" target="_blank">DCS Web Editor</a>
       </h3>
       <a href="https://discord.com/invite/3VudyeRa9h" class="href" target="_blank">Discord</a>
@@ -44,10 +43,16 @@
       <label for="input">Paste GeoJson:</label>
       <textarea name="input" id="geojson" placeholder="Paste GeoJson..."></textarea>
     </div>
-
-    <div id="output"></div>
-    
     <button id="execute">Convert</button>
+
+	<hr>
+
+	Output json:
+    <textarea id="output"></textarea>
+    
+	Output lua:
+    <textarea id="outputlua"></textarea>
+
 
   </div>
 
@@ -80,6 +85,12 @@ body {
 	padding: 40px;
 	padding-top: 10px;
 	border-radius: 5px;
+}
+
+textarea {
+	margin: 1rem;
+	width: 100%;
+	min-height: 5rem;
 }
 
 #container.container-home {

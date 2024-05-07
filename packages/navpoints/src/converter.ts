@@ -4,7 +4,8 @@ import { js2Lua } from "../../utils";
 const btn = document.getElementById("execute")!;
 const geoInput = (<HTMLInputElement>document.getElementById("geojson"))!;
 const mapSelect = (<HTMLInputElement>document.getElementById("mapselect"))!;
-const output = document.getElementById("output")!;
+const output = (<HTMLInputElement>document.getElementById("output"))!;
+const outputlua = (<HTMLInputElement>document.getElementById("outputlua"))!;
 const start = (<HTMLInputElement>document.getElementById("start"))!;
 
 mapNames.forEach((name) => {
@@ -48,10 +49,10 @@ function onClick() {
 
   console.log("json", json);
 
-  const pre = document.createElement("pre");
-  pre.innerHTML = JSON.stringify(json, null, 2);
-  output.append(pre);
+  output.value = JSON.stringify(json, null, 2);
 
   const lua = js2Lua(json);
+  outputlua.value = lua;
+
   console.log(lua);
 }
