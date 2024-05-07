@@ -35,6 +35,7 @@ function onClick() {
       id: startIndex + i,
       callsignStr: feature.properties.Name,
       comment: feature.properties.description,
+      type: "Default",
       properties: {
         angle: 0,
         scale: 0,
