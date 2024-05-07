@@ -29,7 +29,11 @@ function onClick() {
 
   geoJson.features.forEach((feature: any, i: number) => {
     const coords = feature.geometry.coordinates;
-    const miz = LLToMiz(coords[1], coords[0]);
+
+    const lon = coords[0];
+    const lat = coords[1];
+    const miz = LLToMiz(lon, lat);
+
     json.push({
       x: miz[0],
       y: miz[1],
