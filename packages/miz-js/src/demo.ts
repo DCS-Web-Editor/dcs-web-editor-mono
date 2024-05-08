@@ -1,8 +1,8 @@
 import { initialize } from "./miz-manager.js";
-import '../lib/ace/ace.js';
+import "../lib/ace/ace.js";
 
 const aceEditor = ace.edit("editor");
-ace.config.set("basePath", "./lib/ace");
+ace.config.set("basePath", "lib/ace");
 ace.require("ace/ext-searchbox");
 ace.require("ace/ext-themelist");
 ace.require("ace/ext-modelist");
@@ -13,4 +13,4 @@ aceEditor.setOptions({
   enableSnippets: true,
 });
 
-initialize(aceEditor, 'editor');
+initialize(aceEditor, "editor");

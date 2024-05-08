@@ -8,7 +8,7 @@
     "npm": "^8.19.2"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite ./packages",
     "build": "npm run build -ws",
     "test": "jest",
     "lint": "npm run lint -ws"
