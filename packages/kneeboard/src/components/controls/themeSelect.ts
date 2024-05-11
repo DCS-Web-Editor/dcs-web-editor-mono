@@ -42,7 +42,7 @@ const component: Component = {
     const storedTheme = load("theme") || DEFAULT_THEME;
 
     kneeboardSelect.addEventListener("change", switchTheme);
-    console.log(storedTheme, DEFAULT_THEME);
+    // console.log(storedTheme, DEFAULT_THEME);
 
     setTimeout(() => (kneeboardSelect.value = storedTheme), 20);
     return "";
