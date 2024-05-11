@@ -74,6 +74,7 @@
     LAYOUTS ********** LAYOUTS ********** LAYOUTS ********** LAYOUTS ********** LAYOUTS **********
 */
 
+/* default theme is xerox light */
 :root {
   --primary-color: #544b82;
   --primary-rgb: 84, 75, 130;
@@ -114,7 +115,7 @@
 }
 [data-spacing="TABLE"] #title.kneeboard-section {
   border-top: none;
-  top: -0.4rem;
+  top: -0.1rem;
   height: 1rem !important;
   margin-bottom: -0.6rem;
 }
@@ -289,7 +290,7 @@
   --primary-color: #0a0a0a;
   --secondary-color: #11111122;
   --bg-color: #fefefe;
-  --bg-image: linear-gradient(-30deg, #fefefe 0%, rgb(244, 244, 238) #fefeff);
+  --bg-image: linear-gradient(-30deg, #fefefe 0%, #fefeff 100%);
 
   /* --font-family: 'Times New Roman', Times, serif; */
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important

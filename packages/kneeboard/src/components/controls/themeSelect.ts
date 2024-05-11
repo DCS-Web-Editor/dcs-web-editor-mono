@@ -3,7 +3,7 @@ import { fontFamily, primaryColor, secondaryColor } from "../../colors";
 import { load, save } from "../../cache";
 import "./themeSelect.css";
 
-const DEFAULT_THEME = "modern_bright";
+export const DEFAULT_THEME = "modern_bright";
 
 const component: Component = {
   id: "theme-select",
@@ -13,7 +13,7 @@ const component: Component = {
   control: `<div>
 <label>Theme</label>
 <select id="theme-select-control">
-  <option value="modern_bright">Modern bright</option>
+  <option value="modern_bright" selected>Modern bright</option>
   <option value="modern">Modern light</option>
   <option value="modern_dark">Modern dark</option>
   <option value="xlight">Xerox light</option>
@@ -21,12 +21,14 @@ const component: Component = {
   <option value="80s">80s green</option>
   <option value="cyber">Cyber</option>
   <option value="ace">ACE Combat</option>
+  
   <option class="ww2" disabled="true">WW II</option>
   <option value="ww2" class="ww2">&nbsp;&nbsp;USAF</option>
   <option value="ww2army" class="ww2">&nbsp;&nbsp;ARMY CORPS</option>
   <option value="ww2luftwaffe" class="ww2">&nbsp;&nbsp;LUFTWAFFE</option>
   <option value="ww2hand" class="ww2">&nbsp;&nbsp;Handwritten</option>
   <option value="ww2dark" class="ww2">&nbsp;&nbsp;Dark</option>
+
   <option disabled="true" class="seventies">70s</option>
   <option value="nam" class="seventies">&nbsp;&nbsp;Nam</option>
   <option value="namnoframe" class="seventies">&nbsp;&nbsp;No Frame</option>
@@ -40,7 +42,9 @@ const component: Component = {
     const storedTheme = load("theme") || DEFAULT_THEME;
 
     kneeboardSelect.addEventListener("change", switchTheme);
-    setTimeout(() => (kneeboardSelect.value = storedTheme), 0);
+    console.log(storedTheme, DEFAULT_THEME);
+
+    setTimeout(() => (kneeboardSelect.value = storedTheme), 20);
     return "";
   },
 };
