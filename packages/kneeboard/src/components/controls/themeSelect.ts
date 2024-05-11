@@ -1,55 +1,57 @@
 import { Component, Context } from "../..";
 import { fontFamily, primaryColor, secondaryColor } from "../../colors";
-import { load, save } from '../../cache';
-import './themeSelect.css';
+import { load, save } from "../../cache";
+import "./themeSelect.css";
+
+const DEFAULT_THEME = "modern_bright";
 
 const component: Component = {
-  id: 'theme-select',
+  id: "theme-select",
 
   template: false,
 
   control: `<div>
 <label>Theme</label>
 <select id="theme-select-control">
-  <option value="default">Xerox light</option>
-  <option value="dark">Xerox dark</option>
+  <option value="modern_bright">Modern bright</option>
   <option value="modern">Modern light</option>
   <option value="modern_dark">Modern dark</option>
-  <option class="ww2" value="" disabled="true">WW II</option>
-  <option class="ww2" value="ww2">&nbsp;&nbsp;USAF</option>
-  <option class="ww2" value="ww2army">&nbsp;&nbsp;ARMY CORPS</option>
-  <option class="ww2" value="ww2luftwaffe">&nbsp;&nbsp;LUFTWAFFE</option>
-  <option class="ww2" value="ww2hand">&nbsp;&nbsp;Handwritten</option>
-  <option class="ww2" value="ww2dark">&nbsp;&nbsp;Dark</option>
-  <option class="seventies" disabled="true">70s</option>
-  <option class="seventies" value="nam">&nbsp;&nbsp;Nam</option>
-  <option class="seventies" value="namnoframe">&nbsp;&nbsp;No Frame</option>
-  <option class="seventies" value="namhand">&nbsp;&nbsp;Handwritten</option>
-  <option value="90s">90s</option>
+  <option value="xlight">Xerox light</option>
+  <option value="dark">Xerox dark</option>
+  <option value="80s">80s green</option>
   <option value="cyber">Cyber</option>
   <option value="ace">ACE Combat</option>
+  <option class="ww2" disabled="true">WW II</option>
+  <option value="ww2" class="ww2">&nbsp;&nbsp;USAF</option>
+  <option value="ww2army" class="ww2">&nbsp;&nbsp;ARMY CORPS</option>
+  <option value="ww2luftwaffe" class="ww2">&nbsp;&nbsp;LUFTWAFFE</option>
+  <option value="ww2hand" class="ww2">&nbsp;&nbsp;Handwritten</option>
+  <option value="ww2dark" class="ww2">&nbsp;&nbsp;Dark</option>
+  <option disabled="true" class="seventies">70s</option>
+  <option value="nam" class="seventies">&nbsp;&nbsp;Nam</option>
+  <option value="namnoframe" class="seventies">&nbsp;&nbsp;No Frame</option>
+  <option value="namhand" class="seventies">&nbsp;&nbsp;Handwritten</option>
 </select>
 </div>
 `,
 
   render: (c: Context) => {
-    const kneeboardSelect = document.getElementById('theme-select-control')!;
-    const storedTheme = load('theme') || 'default';
-    
-    kneeboardSelect.addEventListener('change', switchTheme)
-    setTimeout(() => kneeboardSelect.value = storedTheme, 0);
-    return '';
+    const kneeboardSelect = document.getElementById("theme-select-control")!;
+    const storedTheme = load("theme") || DEFAULT_THEME;
+
+    kneeboardSelect.addEventListener("change", switchTheme);
+    setTimeout(() => (kneeboardSelect.value = storedTheme), 0);
+    return "";
   },
-}
+};
 
 export default component;
 
-
 export function switchTheme(e) {
   const theme = e.target.value;
-  
-  document.querySelector('.kneeboard')!.setAttribute('data-theme', theme);
-  save('theme', theme);
+
+  document.querySelector(".kneeboard")!.setAttribute("data-theme", theme);
+  save("theme", theme);
 
   refreshChart();
 
@@ -57,17 +59,12 @@ export function switchTheme(e) {
   setTimeout(() => {
     refreshChart();
   }, 1000);
-
 }
 
 export function refreshChart() {
   if (window.waypointChart) updateChartColors(window.waypointChart);
   if (window.distanceChart) updateChartColors(window.distanceChart);
 }
-
-
-
-
 
 function updateChartColors(c) {
   const color = primaryColor();

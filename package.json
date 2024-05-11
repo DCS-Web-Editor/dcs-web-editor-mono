@@ -1,6 +1,6 @@
 {
   "name": "dcs-web-editor-mono",
-  "version": "1.0.0",
+  "version": "0.4.12",
   "description": "dcs web editor mono repository",
   "main": "index.js",
   "engines": {

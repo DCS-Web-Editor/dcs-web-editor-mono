@@ -114,7 +114,7 @@
 }
 [data-spacing="TABLE"] #title.kneeboard-section {
   border-top: none;
-  top: -0.6rem;
+  top: -0.4rem;
   height: 1rem !important;
   margin-bottom: -0.6rem;
 }
@@ -285,6 +285,16 @@
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
 }
 
+[data-theme="modern_bright"] {
+  --primary-color: #0a0a0a;
+  --secondary-color: #11111122;
+  --bg-color: #fefefe;
+  --bg-image: linear-gradient(-30deg, #fefefe 0%, rgb(244, 244, 238) #fefeff);
+
+  /* --font-family: 'Times New Roman', Times, serif; */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
+}
+
 [data-theme="modern_dark"] {
   --primary-color: #b2b2b2;
   --secondary-color: #61dd8033;
@@ -295,7 +305,7 @@
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
 }
 
-[data-theme="90s"] {
+[data-theme="80s"] {
   --primary-color: #56f683;
   --secondary-color: #0eda6366;
   --bg-color: #111;
