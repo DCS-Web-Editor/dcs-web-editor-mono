@@ -14,3 +14,9 @@ Regarding plugin development check out these examples. You can use any framework
 - **briefing-editor:** Vue3 + Naive ui
 - **wx-editor:** Vue3 + Naive ui
 - **coalition editor:** Vue3 + Naive ui
+
+
+## Kneeboard generator
+To run the kneeboard generator standalone, pull this repo, and follow the installation steps above.
+`cd packages/kneeboard`
+`npm run dev`
