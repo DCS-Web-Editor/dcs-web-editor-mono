@@ -495,10 +495,13 @@
   left: 0;
   background: var(--controls-bg-color);
   padding: 0.5rem 1rem;
+  padding-bottom: 2rem;
   border-radius: 0rem 1rem 0 0rem;
   color: #fefefe;
   z-index: 10000;
   width: 10rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: small !important;
 }
 
 .kneeboard .controls label {
@@ -506,7 +509,7 @@
 }
 .kneeboard .controls button {
   background-color: var(--controls-color);
-  background-color: #1abc9c;
+  background-color: #63e2b7;
   /* color: rgb(243,243,240); */
   border: none;
   border-radius: 5px;

@@ -67,8 +67,6 @@ export function register(...components: Component[]) {
     spacingSelect,
     metricSelect,
     coordinateSelect,
-    screenshot,
-    downloadAll,
 
     // Components
     date,
@@ -85,9 +83,11 @@ export function register(...components: Component[]) {
     weather,
     loadout,
     radio,
+    screenshot,
     waypoints,
     waypointProfile,
     waypointDistanceProfile,
+    downloadAll,
     notes
   );
 })();
@@ -125,6 +125,9 @@ export function createKneeboard(element) {
       // Add control buttons
       registeredComponents.map((component) => component.control).join("\n")
     }
+
+    <hr>
+    <label>Sections</label>
 
     ${
       // Add control checkbox toggles

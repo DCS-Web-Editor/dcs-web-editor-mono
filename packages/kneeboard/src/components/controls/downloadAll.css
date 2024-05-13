@@ -1,9 +1,13 @@
 .controls .button-group {
-  background-color: #555;
+  /* background-color:#4d4e55; */
   padding: 0.3rem 0.5rem 0.3rem 0.3rem;
+  border: 1px solid #61bc9e;
+  margin-left: 0.15rem;
+  margin-right: 0;
+  width: 9.1rem;
   border-radius: 0.5rem;
 }
 
 .controls #download-all-button {
-  background-color: goldenrod;
+  background-color: #f2c97d;
 }
