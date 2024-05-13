@@ -127,7 +127,7 @@ export function createKneeboard(element) {
     }
 
     <hr>
-    <label>Sections</label>
+    <label>Kneeboard Sections</label>
 
     ${
       // Add control checkbox toggles
