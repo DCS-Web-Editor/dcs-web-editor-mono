@@ -119,35 +119,51 @@ export function createKneeboard(element) {
     </div>
   </div>
   
-  <div class="controls no-print">
-      
-    ${
-      // Add control buttons
-      registeredComponents.map((component) => component.control).join("\n")
-    }
+  <div class="controls no-print accordion">
+    <div class="tab">
+      <input class="hidden" type="checkbox" checked name="accordion-1" id="cb1">
+
+      <div class="tab__label" style="width: 100%">
+        <label for="cb1" style="width: 100%">Settings</label>
+      </div>
+      <div class="tab__content">
+        ${
+          // Add control buttons
+          registeredComponents.map((component) => component.control).join("\n")
+        }
+      </div>
+    </div>
 
     <hr>
-    <label>Kneeboard Sections</label>
+    <div class="kneeboard-sections tab">
+      <input class="hidden" type="checkbox" checked name="accordion-2" id="cb2">
 
-    ${
-      // Add control checkbox toggles
-      registeredComponents
-        .map((component) => {
-          const { id, control, template } = component;
-          if (template === false) return "";
+      <div class="tab__label" style="width: 100%">
+        <label for="cb2" style="width: 100%">Kneeboard Sections</label>
+      </div>
+      <div class="tab__content">
 
-          const checked = load("hidden-" + id) ? "" : "checked";
+      ${
+        // Add control checkbox toggles
+        registeredComponents
+          .map((component) => {
+            const { id, control, template } = component;
+            if (template === false) return "";
 
-          return `
-          <label for="checkbox-${id}">
-            <input name="${id}" id="checkbox-${id}" ${checked} type="checkbox" />
-            ${_.startCase(id)}
-          </label>
-        `;
-        })
-        .join("\n")
-    }
+            const checked = load("hidden-" + id) ? "" : "checked";
 
+            return `
+            <label for="checkbox-${id}">
+              <input name="${id}" id="checkbox-${id}" ${checked} type="checkbox" />
+              ${_.startCase(id)}
+            </label>
+          `;
+          })
+          .join("\n")
+      }
+
+    </div>
+    </div>
   </div>
   `;
   _root.innerHTML = HTML;

@@ -7,7 +7,6 @@ const component: Component = {
   id: "screenshot",
   template: false,
   control: `
-  <hr>
   <label>Downloads</label>
 
   <button id="screenshot-button">Download PNG</button>

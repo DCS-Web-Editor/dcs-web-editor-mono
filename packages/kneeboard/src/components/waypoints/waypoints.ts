@@ -1,83 +1,84 @@
 import Handsontable from "handsontable";
-import { HyperFormula } from 'hyperformula';
+import { HyperFormula } from "hyperformula";
 import { speedFormat, distanceFormat, latLonFormat } from "./waypointFormats";
 import { Component, Context } from "../..";
 import { getWaypoints } from "./waypointConverter";
 
-import './waypoints.css';
+import "./waypoints.css";
 
 const component: Component = {
-  id: 'waypoints',
+  id: "waypoints",
 
   control: `<button id="export-file">Waypoints .csv</button>`,
 
   render: (c: Context) => {
-    const {group, mission, dictionary} = c;
+    const { group, mission, dictionary } = c;
     const waypointData = getWaypoints(group, mission, dictionary);
 
     // delay render to make sure element is present
     setTimeout(() => {
-      const instance: Handsontable = createWaypointTable(waypointData, '#waypoints-table', group.route?.points);
+      const instance: Handsontable = createWaypointTable(
+        waypointData,
+        "#waypoints-table",
+        group.route?.points
+      );
       csvExport(instance);
     }, 10);
 
-    return `<h4 class="center">WAYPOINTS</h4>
+    return `<h4 class="center">NAVLOG</h4>
     <div id="waypoints-table"></div>`;
   },
-}
+};
 
 export default component;
 
-  
 function csvExport(instance: Handsontable) {
-  const exportPlugin = instance.getPlugin('exportFile');
-  const csvButton = document.querySelector('#export-file')!;
+  const exportPlugin = instance.getPlugin("exportFile");
+  const csvButton = document.querySelector("#export-file")!;
 
-  csvButton.addEventListener('click', () => {
-    exportPlugin.downloadFile('csv', {
+  csvButton.addEventListener("click", () => {
+    exportPlugin.downloadFile("csv", {
       bom: false,
-      columnDelimiter: ',',
+      columnDelimiter: ",",
       columnHeaders: true,
       exportHiddenColumns: true,
       exportHiddenRows: true,
-      fileExtension: 'csv',
-      filename: 'DCS-Web-Viewer-Waypoint-CSV_[YYYY]-[MM]-[DD]',
-      mimeType: 'text/csv',
-      rowDelimiter: '\r\n',
-      rowHeaders: true
+      fileExtension: "csv",
+      filename: "DCS-Web-Viewer-Waypoint-CSV_[YYYY]-[MM]-[DD]",
+      mimeType: "text/csv",
+      rowDelimiter: "\r\n",
+      rowHeaders: true,
     });
   });
 }
 
 function createWaypointTable(data: any[], id: string, points: any[]) {
   const table = document.querySelector(id)!;
-  if (!table) throw new Error('Could not find table element: ' + id);
-  const {maxAltitude, ETA} = points[points.length - 1];
-  
-  const totalTime =  new Date(Math.round(ETA * 1000)).toISOString().split('T')[1].slice(0,8);;
+  if (!table) throw new Error("Could not find table element: " + id);
+  const { maxAltitude, ETA } = points[points.length - 1];
 
+  const totalTime = new Date(Math.round(ETA * 1000)).toISOString().split("T")[1].slice(0, 8);
 
   data.push([
     "",
     "",
-    maxAltitude + ' MAX',
+    maxAltitude + " MAX",
     null,
     null,
-    '🢤∑',
+    "🢤∑",
     totalTime,
     "🢤 Duration",
     null,
     null,
     null,
     null,
-    ""
-])
-  
+    "",
+  ]);
 
   const instance = new Handsontable(table, {
     data,
     colWidths: [120, 50, 70, 40, 35, 25, 55, 180, 60, 50, 50, 50, 170],
-    height: 'auto',
+    height: "auto",
     colHeaders: [
       "Name / Action",
       "Type",
@@ -87,11 +88,11 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
       "HDG",
       "ETA",
       "Coords",
-      'Lat',
-      'Lon',
-      'X',
-      'Y',
-      'Notes'
+      "Lat",
+      "Lon",
+      "X",
+      "Y",
+      "Notes",
     ],
     columns: [
       { type: "text" },
@@ -108,7 +109,7 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
         numericFormat: speedFormat,
         readOnly: false,
       },
-      { type: "text"},
+      { type: "text" },
       { type: "text" },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
@@ -119,7 +120,7 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
         readOnly: false,
       },
     ],
-    preventOverflow: 'vertical',
+    preventOverflow: "vertical",
     dropdownMenu: false,
     hiddenColumns: {
       columns: [1, 8, 9, 10, 11],
@@ -138,7 +139,7 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
         destinationRow: 0,
         destinationColumn: 3,
         reversedRowCoords: true,
-        type: 'max',
+        type: "max",
         forceNumeric: true,
       },
       {
@@ -147,8 +148,8 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
         destinationRow: 0,
         destinationColumn: 4,
         reversedRowCoords: true,
-        type: 'sum',
-        forceNumeric: true
+        type: "sum",
+        forceNumeric: true,
       },
       // {
       //   // heading
@@ -157,10 +158,10 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
       //   reversedRowCoords: true,
       //   type: 'average',
       // },
-    ]
+    ],
   });
 
   instance.validateCells();
-  
+
   return instance;
 }

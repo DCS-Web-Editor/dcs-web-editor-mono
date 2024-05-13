@@ -1,10 +1,10 @@
 .controls .button-group {
   /* background-color:#4d4e55; */
-  padding: 0.3rem 0.5rem 0.3rem 0.3rem;
+  padding: 0.3rem;
+  padding-right: 0;
   border: 1px solid #61bc9e;
-  margin-left: 0.15rem;
-  margin-right: 0;
-  width: 9.1rem;
+  margin: 0.1rem;
+  width: calc(90% - 0.6rem);
   border-radius: 0.5rem;
 }
 

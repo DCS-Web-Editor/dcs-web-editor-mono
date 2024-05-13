@@ -1,38 +1,34 @@
-
 import { Component, Context } from "..";
-import { fontFamily, primaryColor, secondaryColor } from '../colors';
-import { refreshChart } from './controls/themeSelect';
-import calculator from '../calculator';
-import './waypointProfile.css';
+import { fontFamily, primaryColor, secondaryColor } from "../colors";
+import { refreshChart } from "./controls/themeSelect";
+import calculator from "../calculator";
+import "./waypointProfile.css";
 
 const component: Component = {
-  id: 'distance-profile',
+  id: "d-profile",
 
   control: ``,
 
   render: (c: Context) => {
-    const {group} = c;
-    const id = 'waypoint-distance-chart';
+    const { group } = c;
+    const id = "waypoint-distance-chart";
 
     // remove previous
     destroyChart(id);
-    
+
     // delay render to make sure element is present
     setTimeout(() => createLineChart(group, id), 1000);
-    
+
     return `<h4 class="center">D-PROFILE</h4>
     <canvas id="${id}"></canvas>`;
   },
-}
+};
 
 export default component;
 
-
-
 function destroyChart(id: string) {
   // console.log('destroyChart', id);
-  
-  
+
   const chart = Chart.getChart(id);
   if (chart) chart.destroy();
 
@@ -44,99 +40,96 @@ function destroyChart(id: string) {
 
 function createLineChart(group: any, elementId: string) {
   const { points } = group.route;
-  
+
   const element = document.getElementById(elementId)!;
   Chart.defaults.font.family = fontFamily();
   Chart.defaults.color = primaryColor();
 
-  const altitudeDistance = points.map(p => ({y: calculator.altitude(p.alt), x: p.track}));
-  const speedDistance = points.map(p => ({ y: calculator.speed(p.speed), x: p.track }));
+  const altitudeDistance = points.map((p) => ({ y: calculator.altitude(p.alt), x: p.track }));
+  const speedDistance = points.map((p) => ({ y: calculator.speed(p.speed), x: p.track }));
 
-
-  
   const chart = new Chart(element, {
-    type : 'scatter',
-    data : {
-      datasets : [
+    type: "scatter",
+    data: {
+      datasets: [
         {
-          label : "Altitude " + calculator.altitudeUnit(),
-          data : altitudeDistance,
-          borderColor : primaryColor(),
-          borderWidth : 1,
+          label: "Altitude " + calculator.altitudeUnit(),
+          data: altitudeDistance,
+          borderColor: primaryColor(),
+          borderWidth: 1,
           showLine: true,
           pointStyle: false,
-          borderDash: [1,2],
-          yAxisID: 'y1',
+          borderDash: [1, 2],
+          yAxisID: "y1",
           fill: {
-            target: 'origin',
-            above: secondaryColor(),   // Area will be red above the origin
-          }
+            target: "origin",
+            above: secondaryColor(), // Area will be red above the origin
+          },
         },
         {
-          label : "Speed " + calculator.speedUnit(),
-          data : speedDistance,
+          label: "Speed " + calculator.speedUnit(),
+          data: speedDistance,
           showLine: true,
 
-          borderColor : "#222222",
+          borderColor: "#222222",
           pointStyle: false,
           borderWidth: 1,
           borderDash: [5, 5],
           stepped: false,
-          yAxisID: 'y2',
-
+          yAxisID: "y2",
         },
-      ]
+      ],
     },
-    options : {
+    options: {
       animation: false,
       stacked: false,
       scales: {
         x: {
           min: 1,
-          title:{
+          title: {
             text: calculator.distanceUnit(),
             display: true,
-            padding: 0
-          },          
+            padding: 0,
+          },
         },
         y1: {
           display: true,
-          position: 'left',
+          position: "left",
           min: 0,
           title: {
-            text: 'ft',
+            text: "ft",
             display: false,
           },
         },
         y2: {
           display: true,
-          position: 'right',
+          position: "right",
           min: 0,
           title: {
             text: `- - - speed in ${calculator.speedUnit()} - - -`,
             display: true,
             padding: 0,
           },
-        }
+        },
       },
       font: {
-        family: fontFamily()
+        family: fontFamily(),
       },
       plugins: {
         // datalabels: {
         //   rotation: 90
         // },
         legend: {
-          position: 'chartArea',
-        }
-      }
+          position: "chartArea",
+        },
+      },
     },
     scales: {
       y1: {
-        type: 'linear',
+        type: "linear",
       },
       y2: {
-        type: 'linear',
+        type: "linear",
         // grid line settings
         grid: {
           drawOnChartArea: false, // only want the grid lines for one axis to show up
@@ -149,8 +142,6 @@ function createLineChart(group: any, elementId: string) {
 
   // font styles take a while to update
   setTimeout(() => {
-    refreshChart()
+    refreshChart();
   }, 1000);
-
 }
-

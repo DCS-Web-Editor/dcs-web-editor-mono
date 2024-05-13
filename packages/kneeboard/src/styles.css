@@ -74,6 +74,10 @@
     LAYOUTS ********** LAYOUTS ********** LAYOUTS ********** LAYOUTS ********** LAYOUTS **********
 */
 
+body {
+background-color: #293949
+}
+
 /* default theme is xerox light */
 :root {
   --primary-color: #544b82;
@@ -97,7 +101,7 @@
 
 [data-spacing="TABLE"] {
   --spacing: 0rem;
-  --letter-spacing: 3px;
+  --letter-spacing: 2px;
 }
 [data-spacing="TABLE"] h4.center {
   background-color: var(--secondary-color);
@@ -372,7 +376,9 @@
   margin-bottom: -1rem !important;
 }
 
-
+.kneeboard input[type="checkbox"] {
+  accent-color: #1abc9c;
+}
 
 .kneeboard #logo {
   position: fixed;
@@ -495,7 +501,6 @@
   left: 0;
   background: var(--controls-bg-color);
   padding: 0.5rem 1rem;
-  padding-bottom: 2rem;
   border-radius: 0rem 1rem 0 0rem;
   color: #fefefe;
   z-index: 10000;
@@ -505,26 +510,31 @@
 }
 
 .kneeboard .controls label {
-  display: block;
+  display: inline-flex;
+  color: #dedede;
 }
+.kneeboard .controls label:hover {
+  color: #fefefe;
+}
+
 .kneeboard .controls button {
   background-color: var(--controls-color);
   background-color: #63e2b7;
   /* color: rgb(243,243,240); */
   border: none;
   border-radius: 5px;
-  margin: 0.2rem;
-  padding: 0.2rem;
+  margin: 0.1rem;
+  padding: 0.1rem;
   cursor: pointer;
-  width: 100%;
+  width: 90%;
 }
 .kneeboard .controls select {
   background-color: var(--controls-color);
   /* color: rgb(243,243,240); */
   border: none;
   border-radius: 5px;
-  margin: 0.2rem;
-  padding: 0.2rem;
+  margin: 0.1rem;
+  padding: 0.1rem;
   cursor: pointer;
-  width: 100%;
+  width: 90%;
 }
