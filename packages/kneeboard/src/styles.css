@@ -348,6 +348,10 @@ background-color: #293949
 }
 
 
+#briefing-content {
+  overflow-y: scroll;
+  height: 100%;
+}
 
 .kneeboard {
   font-family: var(--font-family) !important;
@@ -455,7 +459,7 @@ background-color: #293949
   background-size: var(--width) 1024px;
   background-repeat: repeat;
   border: none;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .kneeboard .render-pdf {
