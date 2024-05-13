@@ -1,4 +1,9 @@
 
+#content #notes.kneeboard-section {
+  flex-basis: 20%;
+  flex-grow: 1;
+}
+
 .kneeboard #notes div { 
   font-size: var(--font-size);
   font-family: var(--font-family);

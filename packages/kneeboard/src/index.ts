@@ -40,6 +40,7 @@ import mainTask from "./components/mainTask";
 import coalitionTask from "./components/coalitionTask";
 import bullseye from "./components/bullseye";
 import friendlies from "./components/friendlies";
+import packages from "./components/packages";
 import group from "./components/group";
 import unit from "./components/unit";
 import weather from "./components/weather";
@@ -78,6 +79,7 @@ export function register(...components: Component[]) {
     group,
     bullseye,
     friendlies,
+    packages,
     awacs,
     tanker,
     carrier,
@@ -100,10 +102,12 @@ export function createKneeboard(element) {
   _root = element;
 
   const HTML = `
+
   <div id="capture">
+  <div id="mask" class="no-print"></div>
   <img src="img/dcs web editor.png" id="logo"/>
-    <div id="mask" class="no-print"></div>
-    <div id="content" name="">
+  <div id="content" name="">
+
       <span id="dwv-info">D C S &nbsp; W E B &nbsp; E D I T O R</span>
         ${
           // Add component templates
@@ -185,7 +189,13 @@ export function renderKneeboard(
   const coalition = mission.coalition[coalitionName];
   const countries = coalition.country;
   const country = countries.find((c) => c.name === countryName)!;
-  const groups = country[category].group;
+
+  const groups = country[category]?.group;
+
+  if (!groups) {
+    console.error("no groups found in country", countryName, category, country);
+    return;
+  }
   const group = groups.find((g) => g.name === groupName)!;
   const unit = group.units.find((u) => u.name === unitName);
 
@@ -216,14 +226,17 @@ export function renderKneeboard(
   return refresh;
 }
 
-export function refresh() {
+export function refresh(only = null) {
   // console.debug('refresh');
 
-  setTimeout(() => renderRegisteredComponents(context, true), 10);
+  setTimeout(() => renderRegisteredComponents(context, true, only), 10);
 }
 
-function renderRegisteredComponents(c: Context, noControls = false) {
+function renderRegisteredComponents(c: Context, noControls = false, only: null | string = null) {
   registeredComponents.forEach((component) => {
+    if (only && component.id !== only) return;
+    console.log(component.id, only);
+
     if (component.template !== false || noControls === false) {
       render(component.id, component.render(c));
     }

@@ -1,5 +1,6 @@
 #content #awacs.kneeboard-section {
   flex-basis: 20%;
+  flex-grow: 1;
 }
 
 #content #awacs ul {
@@ -12,6 +13,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 0.5rem;
+  display: inline-block;
+
 
 }
 #content #awacs ul li {

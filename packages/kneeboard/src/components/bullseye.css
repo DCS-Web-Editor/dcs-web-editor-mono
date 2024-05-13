@@ -1,4 +1,9 @@
 #content #bullseye.kneeboard-section {
-  flex-basis: 10%;
+  flex-basis: 40%;
   flex-grow: 1;
+}
+
+#content #bullseye.kneeboard-section .bullseye-coords {
+  display: inline-block;
+  margin-right: 1rem;
 }

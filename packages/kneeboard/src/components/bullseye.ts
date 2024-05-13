@@ -1,25 +1,29 @@
-
 import { convertCoordinates } from "./waypoints/waypointConverter";
 
 import { Component, Context } from "..";
 import { activeMap } from "@dcs-web-editor-mono/map-projection";
 import calculator from "../calculator";
-import './bullseye.css';
+import "./bullseye.css";
 
 const component: Component = {
-  id: 'bullseye',
+  id: "bullseye",
   render: (c: Context) => {
-    const {coalition, mission} = c;
-    
+    const { coalition, mission } = c;
+
     // set map for projection
     activeMap(mission.theatre);
 
     const bullseye = coalition.bullseye;
     const latLon = convertCoordinates(bullseye);
-    const coords = calculator.coordinates(latLon)
-    return `<h4 class="center">BULLSEYE</h4> ${coords}`
+    const coords = calculator.coordinates(latLon);
+
+    return `<h4 class="center">BULLSEYE</h4> ${coords
+      ?.split(",")
+      .map((c) => {
+        return `<span class="bullseye-coords">${c}</span>`;
+      })
+      .join("")}`;
   },
-}
+};
 
 export default component;
-

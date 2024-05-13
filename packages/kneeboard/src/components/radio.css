@@ -1,7 +1,6 @@
 #content #radio.kneeboard-section {
-  flex-basis: 10%;
-  flex-grow: 100;
-  flex-shrink: 3;
+  flex-basis: 50%;
+  flex-grow: 8;
 }
 
 #content div#radio {
@@ -9,6 +8,16 @@
   text-align: left;
 }
 
+#content #radio-table {
+  width: 100%;
+}
+#content #radio-table .htCore  {
+  page-break-inside: auto !important;
+}
+#content #radio-table .htCore tr {
+  page-break-inside:avoid;
+  page-break-after:auto;
+}
 #content #radio-table .htCore tr td {
 }
 

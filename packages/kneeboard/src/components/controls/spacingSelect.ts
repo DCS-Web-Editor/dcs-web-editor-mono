@@ -1,57 +1,60 @@
 import { Component, Context, refresh } from "../..";
 import { load, save } from "../../cache";
 
+const DEFAULT_LAYOUT = "FLEX";
+
 const options = [
   {
-    label: 'Flex',
-    value: 'FLEX',
+    label: "Flex (smallest)",
+    value: "FLEX",
   },
   {
-    label: 'Table',
-    value: 'TABLE',
+    label: "Table",
+    value: "TABLE",
   },
   {
-    label: 'Condensed',
-    value: 'CONDENSED',
+    label: "Rows",
+    value: "CONDENSED",
   },
   {
-    label: 'Spaced',
-    value: 'NORMAL',
+    label: "Spaced",
+    value: "NORMAL",
   },
   {
-    label: 'Wide',
-    value: 'WIDE',
+    label: "Wide",
+    value: "WIDE",
   },
-]
+];
 
 const component: Component = {
-  id: 'spacing-select',
+  id: "spacing-select",
   template: false,
   control: `<label for="spacingSelect">Layout</label><select name="spacingSelect" id="spacing-select-control">
-  ${
-    options.map(o => {
-      return `<option value="${o.value}" ${(load('spacing') || 'TABLE')  === o.value ? 'selected' : ''}>${o.label}</option>`
-    })
-  }
+  ${options.map((o) => {
+    return `<option value="${o.value}" ${
+      (load("spacing") || DEFAULT_LAYOUT) === o.value ? "selected" : ""
+    }>${o.label}</option>`;
+  })}
 </select>`,
   render: (c: Context) => {
-    const select = document.getElementById('spacing-select-control')!;
-    document.querySelector('.kneeboard')!.setAttribute('data-spacing', (load('spacing') || 'TABLE'));
+    const select = document.getElementById("spacing-select-control")!;
+    document
+      .querySelector(".kneeboard")!
+      .setAttribute("data-spacing", load("spacing") || DEFAULT_LAYOUT);
 
-    select.addEventListener('change', selectionHandler)
-    return '';
+    select.addEventListener("change", selectionHandler);
+    return "";
   },
-}
+};
 
 export default component;
 
-
-function selectionHandler(e:Event) {
+function selectionHandler(e: Event) {
   const value = e.target.value;
 
-  document.querySelector('.kneeboard')!.setAttribute('data-spacing', value);
-  
-  save('spacing', value);
+  document.querySelector(".kneeboard")!.setAttribute("data-spacing", value);
+
+  save("spacing", value);
 
   setTimeout(refresh, 100);
 }

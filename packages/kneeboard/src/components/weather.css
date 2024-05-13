@@ -2,8 +2,7 @@
 .kneeboard #weather {
   white-space: break-spaces;
   text-align: left;
-  flex-basis: 40%;
-  flex-shrink: 2;
+  flex-basis: 30%;
   flex-grow: 1;
 }
 

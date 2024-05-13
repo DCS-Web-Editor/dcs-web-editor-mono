@@ -1,7 +1,6 @@
 #content #tanker.kneeboard-section {
-  flex-basis: 20%;
-  flex-grow: 4;
-  flex-shrink: 4;
+  flex-basis: 30%;
+  flex-grow: 1;
 }
 
 #content #tanker ul {

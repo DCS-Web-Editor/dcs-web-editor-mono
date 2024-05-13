@@ -1,7 +1,6 @@
 #content #friendlies.kneeboard-section {
-  flex-basis: 70%;
-  flex-shrink: 0;
-  flex-grow: 100;
+  flex-basis: 60%;
+  flex-grow: 4;
 }
 
 #content #friendlies ul {
@@ -15,8 +14,8 @@
   flex-wrap: wrap;
   margin-bottom: 0.5rem;
   clear: both;
-
 }
+
 #content #friendlies ul li {
   /* line-height: 9px; */
   /* height: 1rem; */
@@ -26,9 +25,15 @@
   width: 14rem;
   text-align: left;
   white-space:break-spaces;
-  
-
 }
+#content #friendlies ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+#content #friendlies ul li a:hover{
+  background-color: var(--secondary-color);
+}
+
 #content #friendlies span.freq {
   text-decoration: underline;
   text-decoration-style: dotted;

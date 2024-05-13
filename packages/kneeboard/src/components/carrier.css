@@ -1,8 +1,8 @@
 #content #carrier.kneeboard-section {
-  flex-shrink: 4;
-  flex-basis: 40%;
-  flex-grow: 2;
+  flex-basis: 30%;
+  flex-grow: 1;
 }
+
 #content #carrier ul {
   margin: 0;
   padding: 0;

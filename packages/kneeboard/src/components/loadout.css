@@ -1,8 +1,7 @@
 
 #content #loadout.kneeboard-section {
-  flex-basis: 40%;
-  flex-grow: 100;
-  flex-shrink: 2;
+  flex-basis: 50%;
+  flex-grow: 1;
 }
 #content #loadout {
   /* white-space: break-spaces; */
@@ -16,6 +15,7 @@
   margin: 0;
   /* margin-top: 0.5rem; */
   list-style: none;
+  clear: both;
 }
 
 #content #loadout ul li {

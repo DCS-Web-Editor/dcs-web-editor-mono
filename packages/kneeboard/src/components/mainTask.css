@@ -1,3 +1,6 @@
+#content #main-task.kneeboard-section {
+  flex-basis: 100%;
+}
 
 #content #main-task {
   white-space: break-spaces;

@@ -1,11 +1,11 @@
 
   /* Core styles/functionality */
- #briefing-content .tab input.hidden {
+ .kneeboard .tab input.hidden {
     position: absolute;
     opacity: 0;
     z-index: -1;
   }
- #briefing-content .tab__content {
+ .kneeboard .tab__content {
     overflow: hidden;
     transition: all 0.35s;
     max-height: 0;
@@ -15,7 +15,7 @@
     width: 100%;
     background-color: transparent;
   }
- #briefing-content .tab input:checked ~ .tab__content {
+ .kneeboard .tab input:checked ~ .tab__content {
     max-height: 100%;
   }
 
@@ -23,13 +23,13 @@
   .accordion {
     overflow: hidden;
   }
- #briefing-content .tab__label,
- #briefing-content .tab__close {
+ .kneeboard .tab__label,
+ .kneeboard .tab__close {
     display: flex;
     color: white;
     cursor: pointer;
   }
- #briefing-content .tab__label {
+ .kneeboard .tab__label {
     justify-content: space-between;
     padding: 0.3rem;
     padding-left: 0;
@@ -38,10 +38,10 @@
     color: #dedede;
 
   }
- #briefing-content .tab__label:hover {
+ .kneeboard .tab__label:hover {
     color: #fefefe;
   }
- #briefing-content .tab__label::after {
+ .kneeboard .tab__label::after {
     content: "\276F";
     width: 1em;
     height: 1em;
@@ -50,11 +50,11 @@
     transition: all 0.35s;
     pointer-events: revert;
   }
- #briefing-content .tab input:checked + .tab__label::after {
+ .kneeboard .tab input:checked + .tab__label::after {
     transform: rotate(270deg);
   }
 
- #briefing-content .tab__close {
+ .kneeboard .tab__close {
     justify-content: flex-end;
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
@@ -63,7 +63,7 @@
   }
   
   /* Arrow animation */
- #briefing-content .tab input:not(:checked) + .tab__label:hover::after {
+ .kneeboard .tab input:not(:checked) + .tab__label:hover::after {
     animation: bounce .5s infinite;
   }
   @keyframes bounce {
