@@ -20,8 +20,7 @@ function toDegreesMinutesShort(coordinate, longitude = false) {
     const degrees = Math.floor(absolute);
     const minutesNotTruncated = (absolute - degrees) * 60;
     const minutes = Math.floor(minutesNotTruncated);
-    return (degrees.toString().padStart(longitude ? 3 : 2, "0") +
-        minutes.toString().padStart(2, "0"));
+    return degrees.toString().padStart(longitude ? 3 : 2, "0") + minutes.toString().padStart(2, "0");
 }
 function toDegreesMinutes(coordinate) {
     var absolute = Math.abs(coordinate);
@@ -35,13 +34,7 @@ export function convertDMS(lat, lon) {
     var latitudeCardinal = lat >= 0 ? "N" : "S";
     var longitude = toDegreesMinutesAndSeconds(lon);
     var longitudeCardinal = lon >= 0 ? "E" : "W";
-    return (latitude +
-        " " +
-        latitudeCardinal +
-        ", " +
-        longitude +
-        " " +
-        longitudeCardinal);
+    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
 }
 // returns i.e. 4210N04228E
 export function convertDMshort(lat, lon) {
@@ -56,13 +49,7 @@ export function convertDMM(lat, lon) {
     var latitudeCardinal = lat >= 0 ? "N" : "S";
     var longitude = toDegreesMinutes(lon);
     var longitudeCardinal = lon >= 0 ? "E" : "W";
-    return (latitude +
-        " " +
-        latitudeCardinal +
-        ", " +
-        longitude +
-        " " +
-        longitudeCardinal);
+    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
 }
 export function toHHMMSS(s) {
     const date = new Date(0);
@@ -74,13 +61,7 @@ export function convertDD(lat, lon) {
     var latitudeCardinal = lat >= 0 ? "N" : "S";
     var longitude = lon.toFixed(4);
     var longitudeCardinal = lon >= 0 ? "E" : "W";
-    return (latitude +
-        " " +
-        latitudeCardinal +
-        ", " +
-        longitude +
-        " " +
-        longitudeCardinal);
+    return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
 }
 export function LLtoAll(lat, lon) {
     return {
@@ -148,11 +129,7 @@ function componentToHex(c) {
     return hex.length == 1 ? "0" + hex : hex;
 }
 export function rgbaToHex(r, g, b, a) {
-    return ("#" +
-        componentToHex(r) +
-        componentToHex(g) +
-        componentToHex(b) +
-        componentToHex(a));
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b) + componentToHex(a);
 }
 export function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
@@ -262,11 +239,17 @@ export function translate(key, dictionary) {
 //   return retVal;
 // };
 export async function getElevationFeet(lat, lng) {
-    const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`, {
-        method: "GET",
-    });
-    const { results } = await elevationData.json();
-    const elevation = ((results?.[0]?.elevation ?? 0) * M_TO_FEET).toFixed(0);
-    return elevation;
+    try {
+        const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`, {
+            method: "GET",
+        });
+        const { results } = await elevationData.json();
+        const elevation = ((results?.[0]?.elevation ?? 0) * M_TO_FEET).toFixed(0);
+        return elevation;
+    }
+    catch (error) {
+        console.error(error);
+        return "N/A";
+    }
 }
 export { js2Lua } from "./js2lua";

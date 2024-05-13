@@ -53,6 +53,7 @@ import waypointProfile from "./components/waypointProfile";
 import waypointDistanceProfile from "./components/waypointDistanceProfile";
 import notes from "./components/notes";
 import { load, save } from "./cache";
+import "./accordion.css";
 
 const registeredComponents: Component[] = [];
 
@@ -121,10 +122,10 @@ export function createKneeboard(element) {
   
   <div class="controls no-print accordion">
     <div class="tab">
-      <input class="hidden" type="checkbox" checked name="accordion-1" id="cb1">
+      <input class="hidden" type="checkbox" checked name="accordion-knb-1" id="knb1">
 
       <div class="tab__label" style="width: 100%">
-        <label for="cb1" style="width: 100%">Settings</label>
+        <label for="knb1" style="width: 100%">Settings & Downloads</label>
       </div>
       <div class="tab__content">
         ${
@@ -136,10 +137,10 @@ export function createKneeboard(element) {
 
     <hr>
     <div class="kneeboard-sections tab">
-      <input class="hidden" type="checkbox" checked name="accordion-2" id="cb2">
+      <input class="hidden" type="checkbox" checked name="accordion-knb-2" id="knb2">
 
       <div class="tab__label" style="width: 100%">
-        <label for="cb2" style="width: 100%">Kneeboard Sections</label>
+        <label for="knb2" style="width: 100%">Kneeboard Sections</label>
       </div>
       <div class="tab__content">
 

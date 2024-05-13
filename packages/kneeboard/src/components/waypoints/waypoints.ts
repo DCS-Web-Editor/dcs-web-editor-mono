@@ -25,7 +25,7 @@ const component: Component = {
       csvExport(instance);
     }, 10);
 
-    return `<h4 class="center">NAVLOG</h4>
+    return `<h4 class="center">WAYPOINT</h4>
     <div id="waypoints-table"></div>`;
   },
 };

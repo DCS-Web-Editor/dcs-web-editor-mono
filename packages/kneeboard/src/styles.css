@@ -526,7 +526,7 @@ background-color: #293949
   margin: 0.1rem;
   padding: 0.1rem;
   cursor: pointer;
-  width: 90%;
+  width: 95%;
 }
 .kneeboard .controls select {
   background-color: var(--controls-color);
@@ -536,5 +536,5 @@ background-color: #293949
   margin: 0.1rem;
   padding: 0.1rem;
   cursor: pointer;
-  width: 90%;
+  width: 95%;
 }

@@ -1,19 +1,21 @@
 
   /* Core styles/functionality */
-  .tab input.hidden {
+ #briefing-content .tab input.hidden {
     position: absolute;
     opacity: 0;
     z-index: -1;
   }
-  .tab__content {
+ #briefing-content .tab__content {
     overflow: hidden;
     transition: all 0.35s;
     max-height: 0;
     margin: 0;
     padding: 0;
-    width: 110%;
+    border-radius: 0;
+    width: 100%;
+    background-color: transparent;
   }
-  .tab input:checked ~ .tab__content {
+ #briefing-content .tab input:checked ~ .tab__content {
     max-height: 100%;
   }
 
@@ -21,24 +23,25 @@
   .accordion {
     overflow: hidden;
   }
-  .tab__label,
-  .tab__close {
+ #briefing-content .tab__label,
+ #briefing-content .tab__close {
     display: flex;
     color: white;
     cursor: pointer;
   }
-  .tab__label {
+ #briefing-content .tab__label {
     justify-content: space-between;
     padding: 0.3rem;
+    padding-left: 0;
     cursor: pointer;
     pointer-events: all;
     color: #dedede;
 
   }
-  .tab__label:hover {
+ #briefing-content .tab__label:hover {
     color: #fefefe;
   }
-  .tab__label::after {
+ #briefing-content .tab__label::after {
     content: "\276F";
     width: 1em;
     height: 1em;
@@ -47,11 +50,11 @@
     transition: all 0.35s;
     pointer-events: revert;
   }
-  .tab input:checked + .tab__label::after {
+ #briefing-content .tab input:checked + .tab__label::after {
     transform: rotate(270deg);
   }
 
-  .tab__close {
+ #briefing-content .tab__close {
     justify-content: flex-end;
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
@@ -60,7 +63,7 @@
   }
   
   /* Arrow animation */
-  .tab input:not(:checked) + .tab__label:hover::after {
+ #briefing-content .tab input:not(:checked) + .tab__label:hover::after {
     animation: bounce .5s infinite;
   }
   @keyframes bounce {
