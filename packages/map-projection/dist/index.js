@@ -97,7 +97,6 @@ let projector;
  */
 export function activeMap(mapName) {
     const mapConfig = config[mapName];
-    // console.log(mapName, mapConfig);
     projector = proj4(`+proj=tmerc +lat_0=0 +lon_0=${mapConfig.central_meridian} +k_0=${mapConfig.scale_factor} +x_0=${mapConfig.false_easting} +y_0=${mapConfig.false_northing} +towgs84=0,0,0,0,0,0,0 +units=m +vunits=m +ellps=WGS84 +no_defs +axis=neu`);
     return projector;
 }
