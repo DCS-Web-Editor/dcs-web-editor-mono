@@ -38,7 +38,8 @@ const component: Component = {
 export default component;
 function renderGroup(group: any) {
   const unit = group.units[0];
-  const callsign = unit.callsign?.name || unit.callsign;
+  const callsign = (unit.callsign?.name || unit.callsign).slice(0, -1);
+  // <span class="name">${group.name}</span>
   const content = `<span class="callsign">${callsign}</span> <span class="task">${unit.type}</span> <span class="freq">${group.frequency}</span>`;
   return `<li><a href="#" title="Click to remove from package" onclick="removeSelected('${unit.name}')">${content}</a></li>`;
 }
