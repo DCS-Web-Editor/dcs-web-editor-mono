@@ -46,7 +46,7 @@ const component: Component = {
   template: false,
   control: `
   <div id="download-all" class="button-group">
-  <button id="download-all-button" title="Download PDF document for each Client in coalition. May take some time...">All Client PDF (MP)</button>
+  <button id="download-all-button" title="Download PDF document for each multiplayer Client in coalition. May take some time...">All Client PDF (MP)</button>
   <select name="coalitionSelect" id="download-select-coalition" title="Download all PDF for coalition">
     ${options.map((o) => {
       return `<option value="${o.value}" ${coalitionName === o.value ? "selected" : ""}>${

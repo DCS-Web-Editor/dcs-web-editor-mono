@@ -12,7 +12,7 @@ const component: Component = {
     const title = '<h4 class="center">PACKAGE</h4><br>';
 
     if (!selectedFriendlies.length)
-      return title + "Select from friendlies by clicking on a friendly unit";
+      return title + "Select from F R I E N D L Y section by clicking on a friendly unit";
 
     const packagePlanes = country.plane?.group?.filter((g) =>
       selectedFriendlies.includes(g.units?.[0]?.name)

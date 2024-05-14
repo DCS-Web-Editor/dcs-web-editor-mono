@@ -5,9 +5,12 @@
 
 #content #main-task {
   white-space: break-spaces;
+  width: max-content;
+  max-width: 764px;
 }
 
 #content #main-task div {
+  word-break: keep-all;
   width: max-content;
   max-width: 764px;
 }

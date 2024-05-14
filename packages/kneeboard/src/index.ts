@@ -76,17 +76,17 @@ export function register(...components: Component[]) {
     title,
     mainTask,
     coalitionTask,
+    bullseye,
     unit,
     group,
-    bullseye,
     friendlies,
     packages,
     awacs,
     tanker,
     carrier,
     weather,
-    loadout,
     laserCodes,
+    loadout,
     radio,
     screenshot,
     waypoints,
@@ -237,7 +237,6 @@ export function refresh(only = null) {
 function renderRegisteredComponents(c: Context, noControls = false, only: null | string = null) {
   registeredComponents.forEach((component) => {
     if (only && component.id !== only) return;
-    console.log(component.id, only);
 
     if (component.template !== false || noControls === false) {
       render(component.id, component.render(c));

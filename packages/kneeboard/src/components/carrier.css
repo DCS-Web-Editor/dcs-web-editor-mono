@@ -7,6 +7,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  width: max-content;
+  clear: both;
   /* line-height: 0.5rem; */
   /* clear: both; */
   /* display: flex; */
