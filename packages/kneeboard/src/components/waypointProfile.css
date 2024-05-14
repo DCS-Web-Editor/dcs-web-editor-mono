@@ -1,3 +1,9 @@
+.kneeboard #w-profile.kneeboard-section {
+  flex-basis: 40%;
+  flex-grow: 4
+}
+
+
 #content canvas#waypoint-chart {
   opacity: 0.9;
 }

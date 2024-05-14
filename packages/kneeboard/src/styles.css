@@ -323,11 +323,11 @@ background-color: #293949
 }
 
 [data-theme="cyber"] {
-  --primary-color: #61d6f3;
-  --secondary-color: #00fde433;
+  --primary-color: #61f3cf;
+  --secondary-color: #00fd8b33;
   --bg-color: #111;
-  --bg-image: linear-gradient(-45deg, rgb(10, 15, 55) 0%, rgb(25, 10, 57) 100%);
-  --bg-image: url('/img/cyber.png');
+  --bg-image: linear-gradient(-45deg, rgb(9, 9, 32) 0%, rgb(19, 14, 40) 100%);
+  /* --bg-image: url('/img/cyber.png'); */
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
   /* --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; */
@@ -336,10 +336,11 @@ background-color: #293949
 }
 
 [data-theme="ace"] {
-  --primary-color: #acdfe8;
+  --primary-color: #99f0ff;
   --secondary-color: #02b2fe33;
   --bg-color: #111;
-  --bg-image: url('/img/acecombat.png');
+  --bg-image: linear-gradient(-45deg, rgb(13, 38, 63) 0%, rgb(11, 33, 50) 100%);
+  /* --bg-image: url('/img/acecombat.png'); */
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
   --font-family: acecombat !important;

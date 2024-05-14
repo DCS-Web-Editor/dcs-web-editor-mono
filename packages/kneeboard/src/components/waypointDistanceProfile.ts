@@ -2,7 +2,7 @@ import { Component, Context } from "..";
 import { fontFamily, primaryColor, secondaryColor } from "../colors";
 import { refreshChart } from "./controls/themeSelect";
 import calculator from "../calculator";
-import "./waypointProfile.css";
+import "./waypointDistanceProfile.css";
 
 const component: Component = {
   id: "d-profile",

@@ -5,7 +5,7 @@ const DEFAULT_LAYOUT = "FLEX";
 
 const options = [
   {
-    label: "Flex (smallest)",
+    label: "Flex (most compact)",
     value: "FLEX",
   },
   {

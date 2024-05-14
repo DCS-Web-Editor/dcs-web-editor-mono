@@ -4,6 +4,8 @@
 }
 
 #content #awacs ul {
+  width: max-content;
+  max-width: 764px;
   margin: 0;
   padding: 0;
   list-style: none;

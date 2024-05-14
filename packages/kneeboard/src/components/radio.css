@@ -1,5 +1,5 @@
 #content #radio.kneeboard-section {
-  flex-basis: 50%;
+  flex-basis: 30%;
   flex-grow: 8;
 }
 
@@ -9,7 +9,8 @@
 }
 
 #content #radio-table {
-  width: 100%;
+  width: max-content;
+  max-width: 764px;
 }
 #content #radio-table .htCore  {
   page-break-inside: auto !important;

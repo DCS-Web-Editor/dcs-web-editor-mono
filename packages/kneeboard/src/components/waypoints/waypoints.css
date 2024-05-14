@@ -1,6 +1,7 @@
 
 .kneeboard #waypoints.kneeboard-section {
-  flex-basis: 100%;
+  flex-basis: 80%;
+  flex-grow: 2;
 }
 
 

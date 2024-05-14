@@ -1,8 +1,14 @@
+#content #coalition-task.kneeboard-section {
+  flex-basis: 19%;
+  flex-grow: 10;
+}
+
 
 #content #coalition-task {
   white-space: break-spaces;
 }
 
 #content #coalition-task div {
-  min-width: 6rem;
+    width: max-content;
+    max-width: 764px;
 }

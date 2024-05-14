@@ -45,6 +45,7 @@ import group from "./components/group";
 import unit from "./components/unit";
 import weather from "./components/weather";
 import loadout from "./components/loadout";
+import laserCodes from "./components/laserCodes";
 import radio from "./components/radio";
 import awacs from "./components/awacs";
 import tanker from "./components/tanker";
@@ -85,6 +86,7 @@ export function register(...components: Component[]) {
     carrier,
     weather,
     loadout,
+    laserCodes,
     radio,
     screenshot,
     waypoints,

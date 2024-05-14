@@ -1,9 +1,12 @@
 #content #tanker.kneeboard-section {
   flex-basis: 30%;
   flex-grow: 1;
+  
 }
 
 #content #tanker ul {
+  width: max-content;
+  max-width: 764px;
   margin: 0;
   padding: 0;
   list-style: none;

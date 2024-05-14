@@ -1,6 +1,6 @@
 
 #content #loadout.kneeboard-section {
-  flex-basis: 50%;
+  flex-basis: 40%;
   flex-grow: 1;
 }
 #content #loadout {
@@ -9,6 +9,8 @@
 }
 
 #content #loadout ul {
+  width: max-content;
+  max-width: 764px;
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;

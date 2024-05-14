@@ -1,7 +1,13 @@
 #content #main-task.kneeboard-section {
-  flex-basis: 100%;
+  flex-basis: 30%;
+  flex-grow: 10;
 }
 
 #content #main-task {
   white-space: break-spaces;
+}
+
+#content #main-task div {
+  width: max-content;
+  max-width: 764px;
 }

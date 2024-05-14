@@ -1,0 +1,12 @@
+
+#content #laser-codes.kneeboard-section {
+  flex-basis: 20%;
+  flex-grow: 1;
+}
+
+.kneeboard #laser-codes div {
+    line-height: 1.2rem;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  color: var(--primary-color);
+}
