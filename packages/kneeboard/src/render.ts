@@ -1,7 +1,7 @@
 import { load, save } from "./cache";
 import { refresh } from ".";
 import { Component, Context } from "./types";
-import { initDrag } from "./drag";
+import { initDrag, setupDraggables } from "./drag";
 
 export function renderRegisteredComponents(
   registeredComponents: Component[],
@@ -24,6 +24,7 @@ export function renderRegisteredComponents(
   });
 
   initDrag();
+  setupDraggables();
 }
 
 function renderToggles(component: Component, i: number) {

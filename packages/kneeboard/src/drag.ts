@@ -1,27 +1,32 @@
 let _initialized = false;
 
+function debounce(func: Function, timeout = 300) {
+  let timer: number;
+  return (...args) => {
+    clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
+
 export function initDrag() {
   if (_initialized) return;
   _initialized = true;
-  const draggables = document.querySelectorAll(".draggable");
   const containers = document.querySelectorAll(".container");
 
-  draggables.forEach((draggable) => {
-    draggable.addEventListener("dragstart", () => {
-      draggable.classList.add("dragging");
-    });
-    draggable.addEventListener("dragend", () => {
-      draggable.classList.remove("dragging");
-    });
-  });
+  setupDraggables();
 
   containers.forEach((container) => {
     container.addEventListener("dragover", (e) => {
       e.preventDefault();
       const afterElement = getDragAfterElement(container, e.clientX, e.clientY);
       const draggable = document.querySelector(".dragging")?.parentElement!;
+      if (!draggable) return;
+
       if (afterElement == null) {
-        container.appendChild(draggable);
+        debounce(() => container.appendChild(draggable), 500);
       } else {
         container.insertBefore(draggable, afterElement);
       }
@@ -68,4 +73,21 @@ export function initDrag() {
       }
     ).element;
   }
+}
+
+// do this on re-render because new contents appear
+export function setupDraggables() {
+  const draggables = document.querySelectorAll(".draggable");
+
+  draggables.forEach((draggable) => {
+    draggable.title = "drag and drop";
+
+    draggable.ondragstart = () => {
+      draggable.classList.add("dragging");
+    };
+
+    draggable.ondragend = () => {
+      draggable.classList.remove("dragging");
+    };
+  });
 }
