@@ -12,5 +12,6 @@
 
 #content #title span.title {
   text-align: center;
-  font-size: calc(var(--font-size) * 1.3);
+  font-size: calc(var(--font-size) * 1);
+  letter-spacing: 0.2rem;
 }

@@ -1,6 +1,6 @@
 import { convertCoordinates } from "./waypoints/waypointConverter";
 
-import { Component, Context } from "..";
+import { Component, Context } from "../types";
 import { activeMap } from "@dcs-web-editor-mono/map-projection";
 import calculator from "../calculator";
 import "./bullseye.css";

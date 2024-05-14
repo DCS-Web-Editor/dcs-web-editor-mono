@@ -1,4 +1,4 @@
-import { Component, Context } from "../..";
+import { Component, Context } from "../../types";
 import { fontFamily, primaryColor, secondaryColor } from "../../colors";
 import { load, save } from "../../cache";
 import "./themeSelect.css";

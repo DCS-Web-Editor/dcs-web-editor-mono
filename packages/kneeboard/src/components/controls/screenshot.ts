@@ -1,6 +1,6 @@
 import html2canvas from "html2canvas";
 
-import { Component, Context } from "../..";
+import { Component, Context } from "../../types";
 import { downloadBlob } from "@dcs-web-editor-mono/utils";
 
 const component: Component = {

@@ -1,7 +1,7 @@
 import Handsontable from "handsontable";
-import { HyperFormula } from "hyperformula";
+// import { HyperFormula } from "hyperformula";
 import { speedFormat, distanceFormat, latLonFormat } from "./waypointFormats";
-import { Component, Context } from "../..";
+import { Component, Context } from "../../types";
 import { getWaypoints } from "./waypointConverter";
 
 import "./waypoints.css";

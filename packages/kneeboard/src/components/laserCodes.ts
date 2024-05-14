@@ -1,4 +1,4 @@
-import { Component, Context } from "..";
+import { Component, Context } from "../types";
 import "./laserCodes.css";
 
 const component: Component = {

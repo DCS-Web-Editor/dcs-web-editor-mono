@@ -1,7 +1,7 @@
 
 #content #loadout.kneeboard-section {
   flex-basis: 40%;
-  flex-grow: 1;
+  flex-grow: 2;
 }
 #content #loadout {
   /* white-space: break-spaces; */

@@ -2,29 +2,6 @@ import "handsontable/dist/handsontable.min.css";
 
 import _ from "lodash";
 
-export interface Component {
-  template?: boolean;
-  render: (c: Context) => string | Promise<any>;
-  id: string;
-  control?: string;
-}
-
-export interface Context {
-  unitName: string;
-  groupName: string;
-  category: string;
-  countryName: string;
-  coalitionName: string;
-  mission: any;
-  dictionary: any;
-  coalition: any;
-  countries: any;
-  country: any;
-  groups: any;
-  group: any;
-  unit: any;
-}
-
 // Controls
 import themeSelect, { DEFAULT_THEME, switchTheme } from "./components/controls/themeSelect";
 import metricSelect from "./components/controls/metricSelect";
@@ -32,6 +9,7 @@ import coordinateSelect from "./components/controls/coordinateSelect";
 import spacingSelect from "./components/controls/spacingSelect";
 import screenshot from "./components/controls/screenshot";
 import downloadAll from "./components/controls/downloadAll";
+import csv from "./components/controls/csv";
 
 // Components
 import date from "./components/date";
@@ -54,8 +32,10 @@ import waypoints from "./components/waypoints/waypoints";
 import waypointProfile from "./components/waypointProfile";
 import waypointDistanceProfile from "./components/waypointDistanceProfile";
 import notes from "./components/notes";
-import { load, save } from "./cache";
+import { load } from "./cache";
 import "./accordion.css";
+import { renderRegisteredComponents } from "./render";
+import { Component, Context } from "./types";
 
 const registeredComponents: Component[] = [];
 
@@ -70,6 +50,7 @@ export function register(...components: Component[]) {
     spacingSelect,
     metricSelect,
     coordinateSelect,
+    // csv,
 
     // Components
     date,
@@ -97,10 +78,10 @@ export function register(...components: Component[]) {
   );
 })();
 
-let _root;
+let _root: HTMLElement;
 let context: Context;
 
-export function createKneeboard(element) {
+export function createKneeboard(element: HTMLElement) {
   _root = element;
 
   const HTML = `
@@ -108,25 +89,20 @@ export function createKneeboard(element) {
   <div id="capture">
   <div id="mask" class="no-print"></div>
   <img src="img/dcs web editor.png" id="logo"/>
-  <div id="content" name="">
 
-      <span id="dwv-info">D C S &nbsp; W E B &nbsp; E D I T O R</span>
-        ${
-          // Add component templates
-          registeredComponents
-            .map(
-              (component) =>
-                `<div class="${component.template === false ? "" : "kneeboard-section"}" id="${
-                  component.id
-                }"></div>`
-            )
-            .join("\n")
-        }          
-        <div class="spacer kneeboard-section"></div>  
+  <!-- *********** Template Sections *********** -->
+  
+  <div id="content" name="" class="container">
+      ${createTemplateSections()}          
+      <div class="spacer kneeboard-section" style="order: 99"></div>  
     </div>
   </div>
   
+  
   <div class="controls no-print accordion">
+    
+    <!-- *********** Control Buttons *********** -->
+    
     <div class="tab">
       <input class="hidden" type="checkbox" checked name="accordion-knb-1" id="knb1">
 
@@ -134,46 +110,62 @@ export function createKneeboard(element) {
         <label for="knb1" style="width: 100%">Settings & Downloads</label>
       </div>
       <div class="tab__content">
-        ${
-          // Add control buttons
-          registeredComponents.map((component) => component.control).join("\n")
-        }
+        ${createControlButtons()}
       </div>
     </div>
+
+
+    <!-- *********** Toggle Checkboxes *********** -->
 
     <hr>
     <div class="kneeboard-sections tab">
       <input class="hidden" type="checkbox" checked name="accordion-knb-2" id="knb2">
 
       <div class="tab__label" style="width: 100%">
-        <label for="knb2" style="width: 100%">Kneeboard Sections</label>
+        <label for="knb2" style="width: 100%">Show/Hide Sections</label>
       </div>
       <div class="tab__content">
-
-      ${
-        // Add control checkbox toggles
-        registeredComponents
-          .map((component) => {
-            const { id, control, template } = component;
-            if (template === false) return "";
-
-            const checked = load("hidden-" + id) ? "" : "checked";
-
-            return `
-            <label for="checkbox-${id}">
-              <input name="${id}" id="checkbox-${id}" ${checked} type="checkbox" />
-              ${_.startCase(id)}
-            </label>
-          `;
-          })
-          .join("\n")
-      }
+      
+      ${createToggleCheckboxes()}
 
     </div>
     </div>
   </div>
   `;
   _root.innerHTML = HTML;
+}
+
+function createTemplateSections() {
+  return registeredComponents
+    .map((component) => {
+      if (component.template === false)
+        return `<div style="order:100; display: none;" id="${component.id}"></div>`;
+      const klass = "kneeboard-section";
+      return `<div class="${klass}" id="${component.id}"></div>`;
+    })
+    .join("\n");
+}
+
+function createControlButtons() {
+  return registeredComponents.map((component) => component.control).join("\n");
+}
+
+function createToggleCheckboxes() {
+  return registeredComponents
+    .map((component) => {
+      const { id, template } = component;
+      if (template === false) return "";
+
+      const checked = load("hidden-" + id) ? "" : "checked";
+
+      return `
+            <label for="checkbox-${id}">
+              <input name="${id}" id="checkbox-${id}" ${checked} type="checkbox" />
+              ${_.startCase(id)}
+            </label>
+          `;
+    })
+    .join("\n");
 }
 
 export function renderKneeboard(
@@ -219,50 +211,18 @@ export function renderKneeboard(
 
   document.querySelector("#content")?.setAttribute("name", unitName);
 
+  // load theme
   const storedTheme = load("theme") || DEFAULT_THEME;
   setTimeout(() => switchTheme({ target: { value: storedTheme } }), 10);
 
   // render all registered components
-  setTimeout(() => renderRegisteredComponents(context, options.noControls), 10);
-
+  setTimeout(
+    () => renderRegisteredComponents(registeredComponents, context, options.noControls),
+    10
+  );
   return refresh;
 }
 
 export function refresh(only = null) {
-  // console.debug('refresh');
-
-  setTimeout(() => renderRegisteredComponents(context, true, only), 10);
-}
-
-function renderRegisteredComponents(c: Context, noControls = false, only: null | string = null) {
-  registeredComponents.forEach((component) => {
-    if (only && component.id !== only) return;
-
-    if (component.template !== false || noControls === false) {
-      render(component.id, component.render(c));
-    }
-
-    // add toggle event listeners
-    if (component.template !== false) {
-      const toggle = document.querySelector(`input[name="${component.id}"]`)!;
-      toggle.addEventListener("change", toggleHandler);
-      if (load("hidden-" + component.id))
-        document.getElementById(component.id)?.classList.add("hidden");
-    }
-  });
-}
-
-function toggleHandler(e: Event) {
-  const { name, checked } = e.target;
-  const section = document.getElementById(name)!;
-
-  if (checked) section.classList.remove("hidden");
-  else section.classList.add("hidden");
-
-  save("hidden-" + name, !checked);
-}
-
-async function render(id: string, value: string | Promise<any>) {
-  if ((value as Promise<any>)?.then) value = await value;
-  document.getElementById(id)!.innerHTML = value as string;
+  setTimeout(() => renderRegisteredComponents(registeredComponents, context, true, only), 10);
 }

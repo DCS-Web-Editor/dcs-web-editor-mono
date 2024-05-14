@@ -1,4 +1,5 @@
-import { Component, Context, refresh } from "../..";
+import { refresh } from "../..";
+import { Component, Context } from "../../types";
 import { load, save } from "../../cache";
 
 const DEFAULT_LAYOUT = "FLEX";
@@ -21,7 +22,7 @@ const options = [
     value: "NORMAL",
   },
   {
-    label: "Wide",
+    label: "Wide (ridiculous)",
     value: "WIDE",
   },
 ];

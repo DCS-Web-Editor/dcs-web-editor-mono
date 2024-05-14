@@ -1,11 +1,11 @@
-import { Component, Context } from "..";
+import { Component, Context } from "../types";
 import "./waypointProfile.css";
 import { fontFamily, primaryColor, secondaryColor } from "../colors";
 import { refreshChart } from "./controls/themeSelect";
 import calculator from "../calculator";
 
 const component: Component = {
-  id: "w-profile",
+  id: "wp-profile",
 
   control: ``,
 
@@ -19,7 +19,7 @@ const component: Component = {
     // delay render to make sure element is present
     setTimeout(() => createLineChart(group, id), 1000);
 
-    return `<h4 class="center">W-PROFILE</h4>
+    return `<h4 class="center">WP-PROFILE</h4>
     <canvas id="waypoint-chart"></canvas>`;
   },
 };

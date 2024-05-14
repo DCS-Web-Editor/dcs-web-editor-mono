@@ -1,6 +1,6 @@
 import { translate } from "@dcs-web-editor-mono/utils";
 
-import { Component, Context } from "..";
+import { Component, Context } from "../types";
 import "./mainTask.css";
 
 const component: Component = {

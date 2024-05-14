@@ -1,6 +1,7 @@
 import html2canvas from "html2canvas";
 
-import { Component, Context, renderKneeboard } from "../..";
+import { renderKneeboard } from "../..";
+import { Component, Context } from "../../types";
 import "./downloadAll.css";
 
 const clients = [];

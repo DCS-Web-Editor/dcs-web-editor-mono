@@ -1,6 +1,6 @@
 #content #carrier.kneeboard-section {
   flex-basis: 30%;
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 #content #carrier ul {
@@ -15,8 +15,8 @@
   /* flex-direction: row; */
   /* flex-wrap: wrap; */
   margin-bottom: 0.5rem;
-  
 }
+
 #content #carrier ul li {
   /* line-height: 9px; */
   /* height: 1rem; */
@@ -24,21 +24,21 @@
   padding: 0;
   /* padding-left: 0.5rem; */
   text-align: left;
-  
-  
-
 }
+
 #content #carrier span.freq {
   text-decoration: underline;
-  text-decoration-style: dotted;
-  
+  text-decoration-style: dotted;  
 }
+
 #content #carrier ul li span.type {
   opacity: 0.7;
 }
+
 #content #carrier ul li span.tacan {
   /* font-style: italic; */
 }
+
 #content #carrier ul li span.callsign {
   /* text-decoration: underline; */
   letter-spacing: 0.1rem;

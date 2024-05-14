@@ -1,4 +1,5 @@
-import { Component, Context, refresh } from "../..";
+import { refresh } from "../..";
+import { Component, Context } from "../../types";
 import { save } from "../../cache";
 import calculator from "../../calculator";
 

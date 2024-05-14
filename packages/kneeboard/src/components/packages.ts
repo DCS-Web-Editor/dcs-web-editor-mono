@@ -1,5 +1,6 @@
 import _, { findIndex } from "lodash";
-import { Component, Context, refresh } from "..";
+import { refresh } from "..";
+import { Component, Context } from "../types";
 import { selectedFriendlies } from "./friendlies";
 import "./packages.css";
 let _c: Context;

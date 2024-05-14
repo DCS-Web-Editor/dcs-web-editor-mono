@@ -1,6 +1,6 @@
 import Handsontable from "handsontable";
 
-import { Component, Context } from "..";
+import { Component, Context } from "../types";
 import "./radio.css";
 
 const component: Component = {

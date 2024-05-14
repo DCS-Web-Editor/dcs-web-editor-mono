@@ -1,13 +1,13 @@
-import { Component, Context } from "..";
-import './notes.css';
+import { Component, Context } from "../types";
+import "./notes.css";
 
 const component: Component = {
-  id: 'notes',
+  id: "notes",
 
   render: (c: Context) => {
     return `<h4 class="center">NOTES</h4>
-    <div contenteditable>Click to edit your notes...<br><br></div>`
+    <div contenteditable>Click to edit your notes...<br><br></div>`;
   },
-}
+};
 
 export default component;

@@ -1,10 +1,9 @@
-
-import { Component, Context } from "..";
-import './date.css';
+import { Component, Context } from "../types";
+import "./date.css";
 
 const component: Component = {
-  id: 'date',
+  id: "date",
   render: (c: Context) => `${c.mission.date.Month}/${c.mission.date.Day}/${c.mission.date.Year}`,
-}
+};
 
 export default component;
