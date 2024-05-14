@@ -1,0 +1,13 @@
+.kneeboard #fuel.kneeboard-section {
+    flex-basis: 80%;
+    flex-grow: 2;
+  }
+  
+
+#fuel-table td.bold-cell {
+    font-weight: bold;
+  }
+#fuel-table td.editable-cell {
+    background-color: var(--secondary-color) !important;
+    /* color: green; */
+  }
