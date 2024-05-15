@@ -89,8 +89,8 @@ export function createKneeboard(element: HTMLElement) {
   const HTML = `
 
   <div id="capture">
-  <div id="mask" class="no-print"></div>
-  <img src="img/dcs web editor.png" id="logo"/>
+  <!-- <div id="mask" class="no-print"></div> -->
+  <!-- <img src="img/dcs web editor.png" id="logo"/> -->
 
   <!-- *********** Template Sections *********** -->
   
@@ -101,7 +101,7 @@ export function createKneeboard(element: HTMLElement) {
   </div>
   
   
-  <div class="controls no-print accordion">
+  <div class="controls no-print accordion" data-html2canvas-ignore>
     
     <!-- *********** Control Buttons *********** -->
     
@@ -127,10 +127,8 @@ export function createKneeboard(element: HTMLElement) {
         <label for="knb2" style="width: 100%">Show/Hide Sections</label>
       </div>
       <div class="tab__content">
-      
-      ${createToggleCheckboxes()}
-
-    </div>
+        ${createToggleCheckboxes()}
+      </div>
     </div>
   </div>
   `;
@@ -141,7 +139,7 @@ function createTemplateSections() {
   return registeredComponents
     .map((component) => {
       if (component.template === false)
-        return `<div style="order:100; display: none;" id="${component.id}"></div>`;
+        return `<div style="order:100; display: none;" class="no-print" id="${component.id}"></div>`;
       const klass = "kneeboard-section";
       return `<div class="${klass}" id="${component.id}"></div>`;
     })

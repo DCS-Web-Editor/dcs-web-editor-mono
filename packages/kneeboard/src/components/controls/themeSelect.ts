@@ -18,7 +18,7 @@ const component: Component = {
   <option value="modern_dark">Modern dark</option>
   <option value="xlight">Xerox light</option>
   <option value="dark">Xerox dark</option>
-  <option value="80s">80s green</option>
+  <option value="80s">80s terminal</option>
   <option value="cyber">Cyber</option>
   <option value="ace">ACE Combat</option>
   
@@ -54,8 +54,13 @@ export default component;
 export function switchTheme(e) {
   const theme = e.target.value;
 
-  document.querySelector(".kneeboard")!.setAttribute("data-theme", theme);
+  const kneeboard = document.querySelector(".kneeboard")!;
+  kneeboard.setAttribute("data-theme", theme);
   save("theme", theme);
+
+  const bgColor = getComputedStyle(kneeboard).getPropertyValue("--bg-color");
+  const capture = document.querySelector("#capture");
+  capture.style.background = `${bgColor}`;
 
   refreshChart();
 
@@ -66,11 +71,12 @@ export function switchTheme(e) {
 }
 
 export function refreshChart() {
-  if (window.waypointChart) updateChartColors(window.waypointChart);
-  if (window.distanceChart) updateChartColors(window.distanceChart);
+  updateChartColors(window.waypointChart);
+  updateChartColors(window.distanceChart);
 }
 
 function updateChartColors(c) {
+  if (!c) return;
   const color = primaryColor();
   Chart.defaults.font.family = fontFamily();
   Chart.defaults.color = color;
@@ -91,5 +97,6 @@ function updateChartColors(c) {
   c.data.datasets[0].fill.above = secondaryColor();
 
   c.data.datasets[1].borderColor = color;
+
   c.update();
 }

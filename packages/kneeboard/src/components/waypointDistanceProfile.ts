@@ -27,8 +27,6 @@ const component: Component = {
 export default component;
 
 function destroyChart(id: string) {
-  // console.log('destroyChart', id);
-
   const chart = Chart.getChart(id);
   if (chart) chart.destroy();
 
@@ -41,7 +39,8 @@ function destroyChart(id: string) {
 function createLineChart(group: any, elementId: string) {
   const { points } = group.route;
 
-  const element = document.getElementById(elementId)!;
+  const element = document.getElementById(elementId);
+  if (!element) return;
   Chart.defaults.font.family = fontFamily();
   Chart.defaults.color = primaryColor();
 

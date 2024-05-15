@@ -1,90 +1,82 @@
-
-@media print
-{    
-    .no-print, .no-print *
-    {
-      display: none !important;
-    }
-    .print, .print *
-    {
-      /* display: block !important;
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+  .print,
+  .print * {
+    /* display: block !important;
       --height: auto;
       overflow: visible; */
-    }
-    .demo {
-      position: initial;
-      left: 0px;
-      top: 0px;
-      /* margin: 0; */
-      /* margin: -2rem; */
-    }
-    .kneeboard #content {
-      
-    }
-    .kneeboard, #capture {
-      display: block !important;
-      /* left: 0; */
-      --width: 880px;
-      height: auto !important;
-      overflow: visible !important;
-      /* margin: 0 !important; */
-    }
+  }
+  .demo {
+    position: initial;
+    left: 0px;
+    top: 0px;
+    /* margin: 0; */
+    /* margin: -2rem; */
+  }
+  .kneeboard #content {
+  }
+  .kneeboard,
+  #capture {
+    display: block !important;
+    /* left: 0; */
+    --width: 880px;
+    height: auto !important;
+    overflow: visible !important;
+    /* margin: 0 !important; */
+  }
 }
 
-@media screen
-{    
-    .print, .print *
-    {
-      /* display: none !important; */
-    }
-    .demo {
-      position: absolute;
-      left: 12rem;
-      padding: 2rem;
-    }
+@media screen {
+  .print,
+  .print * {
+    /* display: none !important; */
+  }
+  .demo {
+    position: absolute;
+    left: 12rem;
+    padding: 2rem;
+  }
 }
-
 
 @font-face {
   font-family: oldtypewriter;
-  src: url('/font/SpecialElite-Regular.ttf');
+  src: url("/font/SpecialElite-Regular.ttf");
 }
 @font-face {
   font-family: acecombat;
-  src: url('/font/Tektur.ttf');
+  src: url("/font/Tektur.ttf");
 }
 @font-face {
   font-family: handjet;
-  src: url('/font/Handjet.ttf');
+  src: url("/font/Handjet.ttf");
 }
 @font-face {
   font-family: orbitron;
-  src: url('/font/Orbitron.ttf');
+  src: url("/font/Orbitron.ttf");
 }
 @font-face {
   font-family: handwriting;
-  src: url('/font/Caveat.ttf');
+  src: url("/font/Caveat.ttf");
 }
 @font-face {
   font-family: chalk;
-  src: url('/font/EraserRegular.ttf');
+  src: url("/font/EraserRegular.ttf");
 }
 
 /*
     LAYOUTS ********** LAYOUTS ********** LAYOUTS ********** LAYOUTS ********** LAYOUTS **********
 */
 
-body {
-background-color: #293949
-}
-
 /* default theme is xerox light */
 :root {
   --primary-color: #544b82;
   --primary-rgb: 84, 75, 130;
   --secondary-color: #544b8266;
-  --bg-color: rgb(243,243,240);
-  --bg-image: url('/img/paper2.png');
+  --bg-color: rgb(243, 243, 240);
+  --bg-image: url("/img/paper2.jpg");
   --bg-mask: none;
   --font-family: oldtypewriter, monospace !important;
   --opacity: 0.8;
@@ -95,8 +87,8 @@ background-color: #293949
   --width: 768px;
   --letter-spacing: 1rem;
   --frame: 0rem;
-  
-  --controls-color: rgb(223,213,213);
+
+  --controls-color: rgb(223, 213, 213);
   --controls-bg-color: #1d2730;
 }
 
@@ -131,7 +123,6 @@ background-color: #293949
   /* border-left: 1px solid var(--primary-color); */
   border-right: 1px solid var(--secondary-color);
 }
-
 
 [data-spacing="FLEX"] {
   --spacing: 0rem;
@@ -175,12 +166,11 @@ background-color: #293949
   /* border-right: 1px solid var(--secondary-color); */
 }
 
-
 [data-spacing="CONDENSED"] {
   --spacing: 0.1rem;
   --letter-spacing: 0.3rem;
 }
-[data-spacing="CONDENSED"] h4.center{
+[data-spacing="CONDENSED"] h4.center {
   background-color: var(--secondary-color);
   text-align: left !important;
 }
@@ -197,12 +187,11 @@ background-color: #293949
     THEMES ********** THEMES ********** THEMES ********** THEMES ********** THEMES **********
 */
 
-
 [data-theme="ww2"] {
   --primary-color: #211e1d;
   --secondary-color: #57463066;
   --bg-color: #161625;
-  --bg-image: url('/img/ww2usaf.png');
+  --bg-image: url("/img/ww2usaf.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -211,7 +200,7 @@ background-color: #293949
   --primary-color: #211e1d;
   --secondary-color: #57463066;
   --bg-color: #161625;
-  --bg-image: url('/img/ww2army.png');
+  --bg-image: url("/img/ww2army.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -220,7 +209,7 @@ background-color: #293949
   --primary-color: #79633f;
   --secondary-color: #79633f75;
   --bg-color: #161625;
-  --bg-image: url('/img/ww2luftwaffe.png');
+  --bg-image: url("/img/ww2luftwaffe.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -228,7 +217,7 @@ background-color: #293949
   --primary-color: #332a1c;
   --secondary-color: #79633f75;
   --bg-color: #161625;
-  --bg-image: url('/img/ww2hand.png');
+  --bg-image: url("/img/ww2hand.png");
   --font-family: handwriting, monospace !important;
   --logo: 0;
   --opacity: 0.7;
@@ -238,7 +227,7 @@ background-color: #293949
   --primary-color: #eaeae0;
   --secondary-color: #b7b5b12f;
   --bg-color: #161625;
-  --bg-image: url('/img/ww2dark.png');
+  --bg-image: url("/img/ww2dark.png");
   --font-family: chalk, monospace !important;
   --logo: 0;
   --opacity: 0.8;
@@ -249,18 +238,18 @@ background-color: #293949
   --primary-color: #211e1d;
   --secondary-color: #6d6b6466;
   --bg-color: #161625;
-  --bg-image: url('/img/nam.png');
-  --bg-mask: url('/img/nam_mask.png');
+  --bg-image: url("/img/nam.png");
+  /* --bg-mask: url("/img/nam_mask.png"); */
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
-  --margin-mask: 2rem;
+  /* --margin-mask: 2rem; */
   --frame: 2rem;
 }
 [data-theme="namnoframe"] {
   --primary-color: #211e1d;
   --secondary-color: #6d6b6466;
   --bg-color: #161625;
-  --bg-image: url('/img/namnoframe.png');
+  --bg-image: url("/img/namnoframe.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -268,7 +257,7 @@ background-color: #293949
   --primary-color: #020d82;
   --secondary-color: #38436c66;
   --bg-color: #161625;
-  --bg-image: url('/img/namhand.png');
+  --bg-image: url("/img/namhand.png");
   --font-family: handwriting, monospace !important;
   --logo: 0;
   --opacity: 0.7;
@@ -278,40 +267,40 @@ background-color: #293949
 [data-theme="dark"] {
   --primary-color: #efd7bc;
   --secondary-color: #efd7bc46;
-  --bg-color: #161625;
+  --bg-color: #121111;
   --opacity: 0.5;
-  --bg-image: url('/img/paper_dark.png');
+  --bg-image: url("/img/paper_dark.jpg");
   --font-family: oldtypewriter, monospace !important;
 }
 
 [data-theme="modern"] {
   --primary-color: #111;
   --secondary-color: #11111166;
-  --bg-color: #fefefe;
-  --bg-image: linear-gradient(-30deg, rgb(223,213,213) 0%, rgb(243,243,240) 100%);
+  --bg-color: rgb(243, 243, 240);
+  --bg-image: url("/img/logopage.png");
 
   /* --font-family: 'Times New Roman', Times, serif; */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 [data-theme="modern_bright"] {
   --primary-color: #040404;
   --secondary-color: #11111122;
-  --bg-color: #fefefe;
-  --bg-image: linear-gradient(-70deg, #fefefe 0%, #fff 100%);
+  --bg-color: #fff;
+  --bg-image: url("/img/logopage.png");
 
   /* --font-family: 'Times New Roman', Times, serif; */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 [data-theme="modern_dark"] {
   --primary-color: #b2b2b2;
-  --secondary-color: #61dd8033;
-  --bg-color: #111;
-  --bg-image: linear-gradient(-45deg, rgb(10, 10, 10) 0%, rgb(22, 22, 24) 100%);
+  --secondary-color: #c2c2c233;
+  --bg-color: #000;
+  --bg-image: url("/img/logopage.png");
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 [data-theme="80s"] {
@@ -319,7 +308,8 @@ background-color: #293949
   --secondary-color: #0eda6366;
   --bg-color: #111;
   --bg-image: linear-gradient(-45deg, rgb(23, 30, 24) 0%, rgb(23, 19, 2) 100%);
-  --bg-image: url('/img/terminal.png');
+  --bg-image: url("/img/terminal.jpg");
+  /* --bg-mask: url("/img/logopage.png"); */
 
   /* font-family:  */
   --font-family: handjet !important;
@@ -330,8 +320,10 @@ background-color: #293949
 [data-theme="cyber"] {
   --primary-color: #61f3cf;
   --secondary-color: #00fd8b33;
-  --bg-color: #111;
-  --bg-image: linear-gradient(-45deg, rgb(9, 9, 32) 0%, rgb(19, 14, 40) 100%);
+  --bg-color: rgb(9, 9, 32);
+  /* --bg-image: linear-gradient(-45deg, rgb(9, 9, 32) 0%, rgb(19, 14, 40) 100%); */
+  --bg-image: url("/img/logopage.png");
+
   /* --bg-image: url('/img/cyber.png'); */
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
@@ -343,8 +335,10 @@ background-color: #293949
 [data-theme="ace"] {
   --primary-color: #99f0ff;
   --secondary-color: #02b2fe33;
-  --bg-color: #111;
-  --bg-image: linear-gradient(-45deg, rgb(13, 38, 63) 0%, rgb(11, 33, 50) 100%);
+  --bg-color: rgb(5, 13, 22);
+  /* --bg-image: linear-gradient(-45deg, rgb(13, 38, 63) 0%, rgb(11, 33, 50) 100%); */
+  --bg-image: url("/img/logopage.png");
+
   /* --bg-image: url('/img/acecombat.png'); */
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
@@ -352,9 +346,12 @@ background-color: #293949
   --opacity: 0.9;
 }
 
+body {
+  background-color: #293949;
+}
 
 #briefing-content {
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   height: 100%;
 }
 
@@ -365,7 +362,6 @@ background-color: #293949
   color: var(--primary-color);
   font-size: var(--font-size);
 }
-
 
 .kneeboard p {
   font-size: var(--font-size);
@@ -391,29 +387,30 @@ background-color: #293949
 
 .kneeboard #logo {
   position: absolute;
-  top: 1000px;
+  top: 90%;
   /* left: calc(var(--width) - 200px); */
-  width: 200px;
+  width: 180px;
   /* background-color: #293949; */
   /* border-radius: 2rem 0 0 0; */
   /* padding: 1rem; */
   margin: 0;
+  padding: 0;
 
-  margin-left: calc(var(--width) - 220px);
+  /* right: 0; */
   /* margin-left: -1rem; */
-  /* left: calc(768px - 200px); */
+  left: calc(100% - 220px);
   opacity: var(--logo);
 }
 
 .kneeboard #content {
   margin: 0;
   /* margin-top: -1rem; */
-  margin: var(--frame);
-  padding: var(--spacing);
-  padding-top: var(--frame);
-  opacity: var(--opacity);
+  padding: calc(var(--frame) + var(--spacing));
+
   /* min-height: 1100px; */
   overflow-x: hidden;
+  background: var(--bg-color);
+  background: var(--bg-image);
 }
 
 .kneeboard #content h4 {
@@ -441,8 +438,11 @@ background-color: #293949
   break-inside: avoid;
 }
 
-.kneeboard div.spacer { 
-  padding-bottom: 5rem;
+.kneeboard div.spacer {
+  /* padding-bottom: 20rem; */
+  height: 1024px;
+  width: 768px;
+  border: none;
 }
 
 /* document.querySelector("#friendlies > ul:nth-child(4) > li:nth-child(2)") */
@@ -454,7 +454,6 @@ background-color: #293949
   width: auto;
 }
 
-
 .kneeboard #capture {
   width: var(--width);
   height: 1024px;
@@ -462,13 +461,16 @@ background-color: #293949
   padding: 0;
   display: block;
   background: var(--bg-color);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
 
+  background: var(--bg-color);
   background: var(--bg-image);
 
   background-size: var(--width) 1024px;
   background-repeat: repeat;
   border: none;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 }
 
 .kneeboard .render-pdf {
@@ -476,15 +478,13 @@ background-color: #293949
   overflow-y: visible !important;
 }
 
-
-
-.kneeboard #mask {
+/* .kneeboard #mask {
   margin: calc(var(--margin-mask) + var(--frame));
   margin-left: var(--margin-mask);
   padding: 0;
   opacity: var(--opacity);
   background: var(--bg-mask);
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
   background-repeat: repeat;
   position: absolute;
   top: 0;
@@ -494,17 +494,15 @@ background-color: #293949
   height: 1024px;
   width: var(--width);
   pointer-events: none;
-}
+} */
 
 .kneeboard #content .hidden {
   display: none;
 }
 
-
 .kneeboard table td:first-child {
   text-decoration: none;
 }
-
 
 /*
   Control buttons
@@ -519,7 +517,8 @@ background-color: #293949
   color: #fefefe;
   z-index: 10000;
   width: 10rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: small !important;
 }
 
@@ -552,7 +551,6 @@ background-color: #293949
   cursor: pointer;
   width: 95%;
 }
-
 
 .kneeboard .draggable {
   /* padding: 1rem; */

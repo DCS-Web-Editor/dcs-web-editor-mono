@@ -1,13 +1,29 @@
 .kneeboard #fuel.kneeboard-section {
-    flex-basis: 80%;
-    flex-grow: 2;
-  }
-  
+  flex-basis: 80%;
+  flex-grow: 2;
+}
+
+.kneeboard #fuel.kneeboard-section input,
+.kneeboard #fuel.kneeboard-section select {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.kneeboard #fuel.kneeboard-section em {
+  opacity: 0.5;
+}
 
 #fuel-table td.bold-cell {
-    font-weight: bold;
-  }
+  font-weight: bold;
+}
 #fuel-table td.editable-cell {
-    background-color: var(--secondary-color) !important;
-    /* color: green; */
-  }
+  background-color: var(--secondary-color) !important;
+  /* color: green; */
+}
+#fuel-table td.params-row {
+  border-bottom: 3px solid var(--secondary-color) !important;
+  font-style: italic;
+  opacity: 0.5;
+  /* color: green; */
+}

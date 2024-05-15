@@ -33,11 +33,14 @@ function renderToggles(component: Component, i: number) {
 
   const hidden = load("hidden-" + component.id);
 
-  const el = document.getElementById(component.id);
-  if (!el) return;
-  if (hidden) el.classList.add("hidden");
+  const section = document.getElementById(component.id);
+  if (!section) return;
+  if (hidden) {
+    section.classList.add("hidden", "no-print");
+    cleanupCharts(component.id);
+  }
 
-  const h4 = el.getElementsByTagName("h4")?.[0];
+  const h4 = section.getElementsByTagName("h4")?.[0];
   if (h4) {
     h4.draggable = true;
     h4.classList.add("draggable");
@@ -46,17 +49,35 @@ function renderToggles(component: Component, i: number) {
 
 function toggleClickHandler(e: Event) {
   const { name, checked } = e.target;
-  const section = document.getElementById(name)!;
+  const id = name;
+  const section = document.getElementById(id)!;
 
-  if (checked) section.classList.remove("hidden");
-  else section.classList.add("hidden");
+  if (checked) section.classList.remove("hidden", "no-print");
+  else {
+    section.classList.add("hidden", "no-print");
+    cleanupCharts(id);
+  }
 
-  save("hidden-" + name, !checked);
-  refresh(name);
+  save("hidden-" + id, !checked);
+  refresh(id);
 }
 
 async function updateComponentContent(id: string, value: string | Promise<any>) {
   if ((value as Promise<any>)?.then) value = await value;
   const c = document.getElementById(id);
   if (c) c.innerHTML = value as string;
+}
+
+function cleanupCharts(id: string) {
+  if (id === "wp-profile") {
+    window.waypointChart?.destroy();
+    delete window.waypointChart;
+    setTimeout(() => document.getElementById("waypoint-chart")?.remove(), 10);
+  }
+
+  if (id === "d-profile") {
+    window.distanceChart?.destroy();
+    delete window.distanceChart;
+    setTimeout(() => document.getElementById("waypoint-distance-chart")?.remove(), 10);
+  }
 }

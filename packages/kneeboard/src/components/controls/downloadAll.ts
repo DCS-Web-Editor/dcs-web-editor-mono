@@ -3,6 +3,7 @@ import html2canvas from "html2canvas";
 import { renderKneeboard } from "../..";
 import { Component, Context } from "../../types";
 import "./downloadAll.css";
+import { makePdf } from "./screenshot";
 
 const clients = [];
 
@@ -126,29 +127,6 @@ const component: Component = {
       downloadAll.innerHTML = `PDF All Clients Downloaded (${clients.length})`;
     }
 
-    function makePdf() {
-      const element = document.querySelector(".kneeboard");
-      const capture = document.querySelector("#capture");
-      const name = document.querySelector("#content")?.getAttribute("name");
-
-      capture?.classList.add("render-pdf");
-
-      const options = {
-        margin: 1,
-        filename: `${name}_DCSWebEditor.pdf`,
-        image: { type: "jpeg", quality: 0.95 },
-        // html2canvas:  { width: 768, height: 1024},
-        pagebreak: { mode: ["css"], avoid: ".kneeboard-section" },
-        jsPDF: { unit: "px", format: [768, 1026], orientation: "portrait" },
-      };
-
-      setTimeout(() => {
-        html2pdf().set(options).from(element).save();
-        setTimeout(() => {
-          capture?.classList.remove("render-pdf");
-        }, 100);
-      }, 100);
-    }
     return "";
   },
 };

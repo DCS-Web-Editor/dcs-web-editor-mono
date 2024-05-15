@@ -36,6 +36,7 @@ const component: Component = {
 };
 
 export default component;
+
 function renderGroup(group: any) {
   const unit = group.units[0];
   const callsign = (unit.callsign?.name || unit.callsign).slice(0, -1);
