@@ -33,7 +33,36 @@ const component: Component = {
     }
 
     const printButton = document.querySelector("#print-button")!;
-    printButton.addEventListener("click", () => window.print());
+    printButton.addEventListener("click", () => {
+      const map = document.getElementById("map");
+      if (map) map.classList.add("no-print");
+
+      const menu = document.getElementById("side-menu");
+      if (menu) menu.classList.add("no-print");
+
+      const panel = document.getElementById("dwe-briefing");
+      if (panel) {
+        panel.style.margin = 0;
+        panel.style.padding = 0;
+        panel.style.top = 0;
+        panel.style.display = "contents";
+      }
+
+      const briefing = document.getElementById("briefing-content");
+      if (briefing) briefing.style.padding = 0;
+
+      window.print();
+
+      if (map) map.classList.remove("no-print");
+      if (menu) menu.classList.remove("no-print");
+      if (panel) {
+        panel.style.margin = "";
+        panel.style.padding = "";
+        panel.style.top = "";
+        panel.style.display = "";
+      }
+      if (briefing) briefing.style.padding = "";
+    });
 
     const pdfButton = document.querySelector("#pdf-button")!;
     pdfButton.addEventListener("click", () => makePdf());
