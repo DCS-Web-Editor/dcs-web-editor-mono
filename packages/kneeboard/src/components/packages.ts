@@ -3,12 +3,16 @@ import { refresh } from "..";
 import { Component, Context } from "../types";
 import { selectedFriendlies } from "./friendlies";
 import "./packages.css";
+import { load } from "../cache";
 let _c: Context;
+
+let _checked = load("use-group-names");
 
 const component: Component = {
   id: "package",
   render: (c: Context = _c) => {
     _c = c;
+    _checked = load("use-group-names");
     const { country } = c;
     const title = '<h4 class="center">PACKAGE</h4><br>';
 
@@ -41,7 +45,9 @@ function renderGroup(group: any) {
   const unit = group.units[0];
   const callsign = (unit.callsign?.name || unit.callsign).slice(0, -1);
   // <span class="name">${group.name}</span>
-  const content = `<span class="callsign">${callsign}</span> <span class="task">${unit.type}</span> <span class="freq">${group.frequency}</span>`;
+  const content = `<span class="callsign">${
+    _checked ? group.name : callsign
+  }</span> <span class="task">${unit.type}</span> <span class="freq">${group.frequency}</span>`;
   return `<li><a href="#" title="Click to remove from package" onclick="removeSelected('${unit.name}')">${content}</a></li>`;
 }
 

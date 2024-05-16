@@ -25,7 +25,7 @@ const component: Component = {
 
     let type = c.unit.type;
 
-    let msg = "Gray fields are editable. Fuel Calculations by Rocketman";
+    let msg = "Gray fields are editable. Fuel data by Rocketman";
     let bingo = bingoData[type.toUpperCase()]?.[alt];
     let ffr = fuelRates[type.toUpperCase()]?.[alt];
 
@@ -79,7 +79,7 @@ const component: Component = {
     <option value="10" ${alt === "10" ? "selected" : ""}>10,000</option>
     <option value="20" ${alt === "20" ? "selected" : ""}>20,000</option>
     <option value="30" ${alt === "30" ? "selected" : ""}>30,000</option>
-    </select> feet <em class="no-print">${msg}</em>
+    </select> feet <em class="no-print" data-html2canvas-ignore>${msg}</em>
     <div id="fuel-table"></div>`;
   },
 };
