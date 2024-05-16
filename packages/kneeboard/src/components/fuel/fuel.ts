@@ -25,7 +25,7 @@ const component: Component = {
 
     let type = c.unit.type;
 
-    let msg = "gray fields are editable";
+    let msg = "Gray fields are editable. Fuel Calculations by Rocketman";
     let bingo = bingoData[type.toUpperCase()]?.[alt];
     let ffr = fuelRates[type.toUpperCase()]?.[alt];
 
