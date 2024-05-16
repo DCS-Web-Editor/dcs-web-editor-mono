@@ -6,5 +6,6 @@ export declare const context: {
     paintMode: boolean;
     getColor: () => string;
 };
-export * from './paintControl';
-export * from './textControl';
+export * from "./paintControl";
+export * from "./textControl";
+export * from "./screenshotControl";
