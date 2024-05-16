@@ -77,7 +77,7 @@ const component: Component = {
       [
         "Distance Alternate",
         99,
-        "=B4 * 10",
+        "=B4 * B1",
         "lbs",
         "Distance to Target (nm)",
         state.maxDistance / 2,
