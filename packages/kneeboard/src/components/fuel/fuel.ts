@@ -45,8 +45,7 @@ const component: Component = {
 
     if (!fuelRates[TYPE]) {
       type = TYPE = "DEFAULT";
-      msg =
-        "Fuel data not found, using default values ( change FFR to match aircraft performance )";
+      msg = "No data, using default values (change FFR to match aircraft)";
       // bingo = bingoData[TYPE]?.[alt];
     }
 

@@ -92,6 +92,7 @@ function renderInfo(phase: string) {
   if (!type) return `Select ${phase}`;
 
   const airport = state.airports.find((a) => a.typeName === type);
+  if (!airport) return "NOT FOUND";
 
   const tacan = airport.airdromeData?.TACAN?.length
     ? `TAC ${airport.airdromeData?.TACAN?.map(mapFrequency).join(", ")}`

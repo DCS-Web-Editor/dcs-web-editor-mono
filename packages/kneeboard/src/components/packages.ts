@@ -43,7 +43,7 @@ export default component;
 
 function renderGroup(group: any) {
   const unit = group.units[0];
-  const callsign = (unit.callsign?.name || unit.callsign).slice(0, -1);
+  const callsign = (unit.callsign?.name || unit.callsign)?.toString()?.slice(0, -1);
   // <span class="name">${group.name}</span>
   const content = `<span class="callsign">${
     _checked ? group.name : callsign

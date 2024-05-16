@@ -38,6 +38,7 @@ import { load } from "./cache";
 import "./accordion.css";
 import { renderRegisteredComponents } from "./render";
 import { Component, Context } from "./types";
+import state from "./state";
 
 const registeredComponents: Component[] = [];
 
@@ -87,6 +88,7 @@ let context: Context;
 
 export function createKneeboard(element: HTMLElement) {
   _root = element;
+  state.airports = null;
 
   const HTML = `
 

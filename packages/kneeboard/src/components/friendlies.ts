@@ -32,7 +32,7 @@ const component: Component = {
 export default component;
 function renderGroup(group: any) {
   const unit = group.units[0];
-  const callsign = (unit.callsign?.name || unit.callsign).slice(0, -1);
+  const callsign = (unit.callsign?.name || unit.callsign)?.toString()?.slice(0, -1);
   return `<li><a href="#" title="click to add to package" onclick="addPackage('${
     unit.name
   }')"><span class="callsign">${_checked ? group.name : callsign}</span> <span class="task">${
