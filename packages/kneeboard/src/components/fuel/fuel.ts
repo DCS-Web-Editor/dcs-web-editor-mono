@@ -7,6 +7,10 @@ import { bingoData, fuelRates } from "./fuelData";
 import { distanceFormat, speedFormat } from "../waypoints/waypointFormats";
 import { fuelFormat } from "./fuelFormats";
 import { refresh } from "../..";
+import state from "../../state";
+import { getWaypoints } from "../waypoints/waypointConverter";
+import _ from "lodash";
+import calculator from "../../calculator";
 
 const hyperformulaInstance = HyperFormula.buildEmpty({
   // to use an external HyperFormula instance,
@@ -15,7 +19,7 @@ const hyperformulaInstance = HyperFormula.buildEmpty({
 });
 
 let instance;
-let alt = "30";
+let alt = state.setAltitude || state.maxAltitude;
 
 const component: Component = {
   id: "fuel",
@@ -23,21 +27,48 @@ const component: Component = {
   render: (c: Context) => {
     // console.log("context", c);
 
+    const { group, mission, dictionary, unit } = c;
+    const waypointData = getWaypoints(group, mission, dictionary);
+    const lastRow = waypointData[waypointData.length - 1];
+
+    state.loadedFuel = calculator.weight(unit.payload.fuel);
+
+    state.maxAltitude = _.max(waypointData.map((w) => parseInt(w[2].split(" ")?.[0] || 0)));
+    alt = state.setAltitude || state.maxAltitude;
+    state.maxDistance = waypointData.reduce((a, w) => w[4] + a, 0);
+
     let type = c.unit.type;
+    let TYPE = type.toUpperCase();
 
     let msg = "Gray fields are editable. Fuel data by Rocketman";
-    let bingo = bingoData[type.toUpperCase()]?.[alt];
-    let ffr = fuelRates[type.toUpperCase()]?.[alt];
+    let ffr;
 
-    if (!bingo || !ffr) {
-      type = "DEFAULT";
+    if (!fuelRates[TYPE]) {
+      type = TYPE = "DEFAULT";
       msg =
         "Fuel data not found, using default values ( change FFR to match aircraft performance )";
-      bingo = bingoData[type.toUpperCase()]?.[alt];
-      ffr = fuelRates[type.toUpperCase()]?.[alt];
+      // bingo = bingoData[TYPE]?.[alt];
     }
 
-    const { lbs_min, lbs_nm } = ffr;
+    if (alt > 30000) {
+      ffr = fuelRates[TYPE]?.["30"];
+    } else if (alt > 20000) {
+      const l = fuelRates[TYPE]?.["20"];
+      const h = fuelRates[TYPE]?.["30"];
+      const ratio = (alt - 20000) / 10000;
+      ffr = calculateFFR(l, h, ratio);
+    } else if (alt > 10000) {
+      const l = fuelRates[TYPE]?.["10"];
+      const h = fuelRates[TYPE]?.["20"];
+      const ratio = (alt - 10000) / 10000;
+      ffr = calculateFFR(l, h, ratio);
+    } else {
+      ffr = fuelRates[TYPE]?.["10"];
+    }
+
+    // let bingo = bingoData[type.toUpperCase()]?.[alt];
+
+    const { lbs_min, lbs_nm, tas } = ffr;
     const safety = 1.5;
 
     const tableData = [
@@ -50,13 +81,13 @@ const component: Component = {
         "=B4 * 10",
         "lbs",
         "Distance to Target (nm)",
-        999,
+        state.maxDistance / 2,
         `=F4 * B1 * ${safety}`,
         "lbs",
       ],
       [
         "Distance Egress",
-        999,
+        state.maxDistance / 2,
         `=B5 * B1`,
         "lbs",
         "Time to Vul (minutes)",
@@ -66,7 +97,16 @@ const component: Component = {
       ],
       ["BINGO", , `=SUM(C1:C5)`, "lbs", "Minimum Mission Fuel", , "=SUM(G1:G5)", "lbs"],
       ["Buffer", , 1000, "lbs", "Additional Margin", , 2000, "lbs"],
-      ["JOKER", , `=SUM(C6 + C7)`, "lbs", "Required Mission Fuel", , "=(G7 + G6)", "lbs"],
+      [
+        "JOKER",
+        ,
+        `=SUM(C6 + C7)`,
+        "lbs",
+        "Loaded / Required Fuel",
+        state.loadedFuel,
+        "=(G7 + G6)",
+        "lbs",
+      ],
     ];
 
     // delay render to make sure element is present
@@ -75,21 +115,27 @@ const component: Component = {
     }, 10);
 
     return `<h4 class="center">FUEL</h4> ${type} 
-    Altitude: <select id="fuel-altitude" onchange="updateFuel()">
-    <option value="10" ${alt === "10" ? "selected" : ""}>10,000</option>
-    <option value="20" ${alt === "20" ? "selected" : ""}>20,000</option>
-    <option value="30" ${alt === "30" ? "selected" : ""}>30,000</option>
-    </select> feet <em class="no-print" data-html2canvas-ignore>${msg}</em>
+    Altitude: <input id="fuel-altitude" style="width: 3rem;" value="${alt}" onchange="updateFuel()"/>
+    feet. TAS: ${tas.toFixed(0)}kts <em class="no-print" data-html2canvas-ignore>${msg}</em>
     <div id="fuel-table"></div>`;
   },
 };
 
 export default component;
 
+function calculateFFR(l, h, ratio: number) {
+  return {
+    lbs_min: l.lbs_min * (1 - ratio) + h.lbs_min * ratio,
+    lbs_nm: l.lbs_nm * (1 - ratio) + h.lbs_nm * ratio,
+    tas: l.tas * (1 - ratio) + h.tas * ratio,
+  };
+}
+
 window.updateFuel = function updateFuel() {
   const altitude = document.getElementById("fuel-altitude")!.value;
   // console.log(altitude);
-  alt = altitude;
+  state.setAltitude = alt = altitude;
+
   setTimeout(() => refresh("fuel"), 100);
 };
 
@@ -175,6 +221,13 @@ function createFuelTable(data: any[], id: string) {
         col: 6,
         row: 7,
         className: "bold-cell",
+      },
+      // actual fuel
+      {
+        col: 5,
+        row: 7,
+        type: "numeric",
+        numericFormat: fuelFormat,
       },
       // editable
       {

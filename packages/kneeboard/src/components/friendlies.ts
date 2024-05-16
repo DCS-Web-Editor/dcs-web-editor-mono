@@ -4,7 +4,6 @@ import { Component, Context } from "../types";
 import "./friendlies.css";
 
 let _checked = load("use-group-names");
-console.log(_checked);
 
 const component: Component = {
   id: "friendlies",
