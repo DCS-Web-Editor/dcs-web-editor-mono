@@ -17,6 +17,7 @@ import title from "./components/title";
 import mainTask from "./components/mainTask";
 import coalitionTask from "./components/coalitionTask";
 import bullseye from "./components/bullseye";
+import airports from "./components/airports";
 import friendlies from "./components/friendlies";
 import packages from "./components/packages";
 import group from "./components/group";
@@ -59,6 +60,7 @@ export function register(...components: Component[]) {
     mainTask,
     coalitionTask,
     bullseye,
+    airports,
     unit,
     group,
     friendlies,

@@ -3,7 +3,7 @@ import { HyperFormula } from "hyperformula";
 import "./fuel.css";
 
 import { Component, Context } from "../../types";
-import { bingoData, fuelRates } from "./fuelData";
+import { fuelRates } from "./fuelData";
 import { distanceFormat, speedFormat } from "../waypoints/waypointFormats";
 import { fuelFormat } from "./fuelFormats";
 import { refresh } from "../..";
@@ -77,7 +77,7 @@ const component: Component = {
       ["Go-Around", , 800, "lbs", "Taxi & Departure", , 1000, "lbs"],
       [
         "Distance Alternate",
-        100,
+        99,
         "=B4 * 10",
         "lbs",
         "Distance to Target (nm)",

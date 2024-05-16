@@ -19,6 +19,7 @@ import dictionaryNam from "./examples/nam/dictionary.json";
 import { renderKneeboard, createKneeboard } from ".";
 import { load, save } from "./cache";
 import "./database";
+import state from "./state";
 
 const DEMOS = {
   F15: {
@@ -151,6 +152,11 @@ const refresh = renderKneeboard(
 demoSelect?.addEventListener("change", () => {
   demo = DEMOS[demoSelect.value];
   save("demo", demoSelect.value);
+
+  state.airports = null;
+  state.DEP = "";
+  state.ARR = "";
+  state.ALT = "";
 
   renderKneeboard(
     demo.unitName,

@@ -1,0 +1,22 @@
+#content #airports.kneeboard-section {
+  flex-basis: 30%;
+  flex-grow: 30;
+}
+
+#content #airports select {
+  max-width: 7rem;
+  display: inline-block;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+#content #airports label {
+  text-decoration: underline dotted;
+}
+
+#content #airports .airport-info {
+  display: inline-block;
+  border: 1px solid var(--secondary-color);
+  margin: 0;
+  padding: 0px 2px;
+  width: max-content;
+}
