@@ -10,4 +10,5 @@ export const context = {
 
 export * from "./paintControl";
 export * from "./textControl";
+export * from "./searchControl";
 export * from "./screenshotControl";
