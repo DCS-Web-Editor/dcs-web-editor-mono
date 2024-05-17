@@ -146,7 +146,7 @@ function createFuelTable(data: any[], id: string) {
     data,
     // colWidths: [120, 50, 70, 40, 35, 25, 55, 180, 60, 50, 50, 50, 170],
     height: "auto",
-    colHeaders: ["Bingo", "Distance", "Fuel", "", "Mission", "", "Fuel", ""],
+    colHeaders: ["Bingo", "", "Fuel", "", "Mission", "", "Fuel", ""],
     columns: [
       { type: "text" },
       { type: "numeric", numericFormat: distanceFormat },
