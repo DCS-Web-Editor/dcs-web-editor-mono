@@ -245,6 +245,33 @@ export const MORSE = {
 export const truncateString = (string = "", maxLength = 50) =>
   string.length > maxLength ? `${string.substring(0, maxLength)}…` : string;
 
+export const sortStrings = (a: string, b: string) => {
+  const nameA = a.toUpperCase(); // ignore upper and lowercase
+  const nameB = b.toUpperCase(); // ignore upper and lowercase
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
+};
+export const sortBy = (a: any, b: any, property: string) => {
+  const nameA = a[property].toUpperCase(); // ignore upper and lowercase
+  const nameB = b[property].toUpperCase(); // ignore upper and lowercase
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
+};
+
 export function downloadJson(json: any, name: string) {
   const jsonString = JSON.stringify(json, null, 2);
   const blob = new Blob([jsonString], { type: "application/json" });

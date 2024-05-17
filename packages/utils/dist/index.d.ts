@@ -80,6 +80,8 @@ export declare const MORSE: {
     "0": string;
 };
 export declare const truncateString: (string?: string, maxLength?: number) => string;
+export declare const sortStrings: (a: string, b: string) => 0 | 1 | -1;
+export declare const sortBy: (a: any, b: any, property: string) => 0 | 1 | -1;
 export declare function downloadJson(json: any, name: string): void;
 export declare function downloadBlob(url: string, fileName: string): void;
 export declare function isTranslation(name: string): RegExpMatchArray | null;
