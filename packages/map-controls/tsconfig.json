@@ -3,7 +3,8 @@
     "compilerOptions": {
       "noEmit": false,
       "rootDir": "./src",
-      "outDir": "./dist"
+      "outDir": "./dist",
+      "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },
     "include": ["./src/*", "global.d.ts"],
 }
