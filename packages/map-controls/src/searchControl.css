@@ -10,8 +10,8 @@
 .leaflet-control-zoom.leaflet-bar.leaflet-control .results {
   position: absolute;
   left: 2rem;
-  top: -10rem;
-  height: 10rem;
+  top: -50vh;
+  height: 50vh;
   width: 15rem;
   color: #1abc9c;
   background-color: #293949;
