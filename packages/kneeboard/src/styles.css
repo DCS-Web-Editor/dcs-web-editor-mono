@@ -36,7 +36,7 @@
   }
   .demo {
     position: absolute;
-    left: 12rem;
+    left: 14rem;
     padding: 2rem;
   }
 }
@@ -384,6 +384,9 @@ body {
 .kneeboard input[type="checkbox"] {
   accent-color: #1abc9c;
 }
+.kneeboard input[type="radio"] {
+  accent-color: #1abc9c;
+}
 
 .kneeboard #logo {
   position: absolute;
@@ -510,10 +513,10 @@ body {
 .kneeboard .controls {
   position: fixed !important;
   bottom: 0;
-  left: 0;
+  left: 3rem;
   background: var(--controls-bg-color);
   padding: 0.5rem 1rem;
-  border-radius: 0rem 1rem 0 0rem;
+  border-radius: 1rem 1rem 0 0rem;
   color: #fefefe;
   z-index: 10000;
   width: 10rem;

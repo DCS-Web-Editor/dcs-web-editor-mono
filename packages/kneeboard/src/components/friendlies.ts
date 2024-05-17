@@ -2,30 +2,30 @@ import { refresh } from "..";
 import { load, save } from "../cache";
 import { Component, Context } from "../types";
 import "./friendlies.css";
+import { sortGroup } from "../utils";
 
-let _checked = load("use-group-names");
+export let _checked = load("use-group-names");
 
 const component: Component = {
   id: "friendlies",
   render: (c: Context) => {
     const { country } = c;
-    // console.log(country);
+
+    _checked = load("use-group-names");
+
     const title = `<h4 class="center">FRIENDLY</h4>`;
-    const checkbox = `<input type="checkbox" class="no-print" name="use-group-names" onclick="toggleCallsigns()" ${
-      _checked ? "checked" : ""
-    } data-html2canvas-ignore><label class="no-print" for="use-group-names" data-html2canvas-ignore>Prefer group names</label>`;
 
     const planes = `<span class="icon">✈</span> <ul>${
-      country.plane?.group.map(renderGroup).join("") || ""
+      country.plane?.group.sort(sortGroup).map(renderGroup).join("") || ""
     }</ul>`;
 
     const rotary = country.helicopter
       ? `<span class="icon"><b>Ⓗ</b></span> <ul>${
-          country.helicopter?.group.map(renderGroup).join("") || ""
+          country.helicopter?.group.sort(sortGroup).map(renderGroup).join("") || ""
         }</ul>`
       : "";
 
-    return title + checkbox + planes + rotary;
+    return title + planes + rotary;
   },
 };
 
@@ -47,14 +47,4 @@ window.addPackage = function addPackage(unitName) {
     selectedFriendlies.push(unitName);
     setTimeout(() => refresh("package"), 100);
   }
-};
-
-window.toggleCallsigns = function toggleCallsigns() {
-  console.log("🚀 ~ toggleCallsigns ~ toggleCallsigns:", _checked);
-  _checked = !_checked;
-  save("use-group-names", _checked);
-  setTimeout(() => {
-    refresh("friendlies");
-    refresh("package");
-  }, 100);
 };

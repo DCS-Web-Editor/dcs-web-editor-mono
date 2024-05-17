@@ -9,6 +9,7 @@ import coordinateSelect from "./components/controls/coordinateSelect";
 import spacingSelect from "./components/controls/spacingSelect";
 import screenshot from "./components/controls/screenshot";
 import downloadAll from "./components/controls/downloadAll";
+import names from "./components/controls/names";
 import csv from "./components/controls/csv";
 
 // Components
@@ -49,6 +50,7 @@ export function register(...components: Component[]) {
 (function init() {
   register(
     // Controls
+    names,
     themeSelect,
     spacingSelect,
     metricSelect,

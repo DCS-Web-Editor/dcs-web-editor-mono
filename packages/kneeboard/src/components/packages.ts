@@ -4,6 +4,8 @@ import { Component, Context } from "../types";
 import { selectedFriendlies } from "./friendlies";
 import "./packages.css";
 import { load } from "../cache";
+import { sortGroup } from "../utils";
+
 let _c: Context;
 
 let _checked = load("use-group-names");
@@ -12,23 +14,25 @@ const component: Component = {
   id: "package",
   render: (c: Context = _c) => {
     _c = c;
-    _checked = load("use-group-names");
     const { country } = c;
+
+    _checked = load("use-group-names");
+
     const title = '<h4 class="center">PACKAGE</h4><br>';
 
     if (!selectedFriendlies.length)
       return title + "Select from F R I E N D L Y section by clicking on a friendly group";
 
-    const packagePlanes = country.plane?.group?.filter((g) =>
-      selectedFriendlies.includes(g.units?.[0]?.name)
-    );
+    const packagePlanes = country.plane?.group
+      ?.sort(sortGroup)
+      .filter((g) => selectedFriendlies.includes(g.units?.[0]?.name));
     const planes = packagePlanes?.length
       ? `<span class="icon">✈</span> <ul>${packagePlanes.map(renderGroup).join("") || ""}</ul>`
       : "";
 
-    const packageHelos = country.helicopter?.group?.filter((g) =>
-      selectedFriendlies.includes(g.units?.[0]?.name)
-    );
+    const packageHelos = country.helicopter?.group
+      ?.sort(sortGroup)
+      .filter((g) => selectedFriendlies.includes(g.units?.[0]?.name));
     const rotary = packageHelos?.length
       ? `<span class="icon"><b>Ⓗ</b></span> <ul>${
           packageHelos.map(renderGroup).join("") || ""
