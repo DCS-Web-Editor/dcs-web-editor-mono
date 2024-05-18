@@ -15,6 +15,7 @@ export declare function LLtoAll(lat: number, lon: number): {
     DMM: string;
 };
 export declare function LLtoMGRS(lat: number, lon: number): any;
+export declare function MGRStoLL(mgrs: string): any;
 export declare function calcBearing(start: LatLon, end: LatLon): number;
 export declare function calcDistance(start: LatLon, end: LatLon): number;
 export declare const M_TO_FEET = 3.28084;

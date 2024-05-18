@@ -74,6 +74,10 @@ export function LLtoAll(lat, lon) {
 export function LLtoMGRS(lat, lon) {
     return MGRS.forward([lon, lat], 5);
 }
+export function MGRStoLL(mgrs) {
+    const coords = MGRS.inverse(mgrs);
+    return coords;
+}
 export function calcBearing(start, end) {
     const a = {
         latitude: start.lat,
