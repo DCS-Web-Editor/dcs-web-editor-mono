@@ -27,7 +27,7 @@ const component: Component = {
   <option value="ww2army" class="ww2">&nbsp;&nbsp;ARMY CORPS</option>
   <option value="ww2luftwaffe" class="ww2">&nbsp;&nbsp;LUFTWAFFE</option>
   <option value="ww2hand" class="ww2">&nbsp;&nbsp;Handwritten</option>
-  <option value="ww2dark" class="ww2">&nbsp;&nbsp;Dark</option>
+  <option value="ww2dark" class="ww2">&nbsp;&nbsp;Chalk</option>
 
   <option disabled="true" class="seventies">70s</option>
   <option value="nam" class="seventies">&nbsp;&nbsp;Nam</option>

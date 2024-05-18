@@ -190,7 +190,7 @@
 [data-theme="ww2"] {
   --primary-color: #211e1d;
   --secondary-color: #57463066;
-  --bg-color: #161625;
+  --bg-color: #eaeae0;
   --bg-image: url("img/ww2usaf.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
@@ -199,7 +199,7 @@
 [data-theme="ww2army"] {
   --primary-color: #211e1d;
   --secondary-color: #57463066;
-  --bg-color: #161625;
+  --bg-color: #eaeae0;
   --bg-image: url("img/ww2army.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
@@ -208,7 +208,7 @@
 [data-theme="ww2luftwaffe"] {
   --primary-color: #79633f;
   --secondary-color: #79633f75;
-  --bg-color: #161625;
+  --bg-color: #eaeae0;
   --bg-image: url("img/ww2luftwaffe.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
@@ -216,7 +216,7 @@
 [data-theme="ww2hand"] {
   --primary-color: #332a1c;
   --secondary-color: #79633f75;
-  --bg-color: #161625;
+  --bg-color: #eaeae0;
   --bg-image: url("img/ww2hand.png");
   --font-family: handwriting, monospace !important;
   --logo: 0;
@@ -237,7 +237,7 @@
 [data-theme="nam"] {
   --primary-color: #211e1d;
   --secondary-color: #6d6b6466;
-  --bg-color: #161625;
+  --bg-color: #eaeae0;
   --bg-image: url("img/nam.png");
   /* --bg-mask: url("img/nam_mask.png"); */
   --font-family: oldtypewriter, monospace !important;
@@ -248,7 +248,7 @@
 [data-theme="namnoframe"] {
   --primary-color: #211e1d;
   --secondary-color: #6d6b6466;
-  --bg-color: #161625;
+  --bg-color: #eaeae0;
   --bg-image: url("img/namnoframe.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
@@ -256,7 +256,7 @@
 [data-theme="namhand"] {
   --primary-color: #020d82;
   --secondary-color: #38436c66;
-  --bg-color: #161625;
+  --bg-color: #eee6d7;
   --bg-image: url("img/namhand.png");
   --font-family: handwriting, monospace !important;
   --logo: 0;

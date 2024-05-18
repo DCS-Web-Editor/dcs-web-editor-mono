@@ -1,3 +1,4 @@
+import { MGRStoLL } from "@dcs-web-editor-mono/utils";
 import "./searchControl.css";
 
 /* 
@@ -17,7 +18,9 @@ export function createSearchControl(_renderContainer: Function, _items) {
   const pAnchor = document.createElement("a");
   searchField = document.createElement("input");
   searchField.className = "search-field";
-  searchField.placeholder = "Type to find unit/airport/beacon...";
+  searchField.placeholder =
+    "Type to find unit/airport/beacon or coordinates starting with MGRS:37 X ...";
+  searchField.title = "Type to find unit/airport/beacon or coordinates starting with MGRS:...";
 
   results = document.createElement("div");
   results.className = "results";
@@ -55,6 +58,27 @@ function searchControlActivate(e) {
 
 function searchChange() {
   const input = searchField.value.toUpperCase();
+
+  if (input.match(/^MGRS:/)) {
+    const coords = MGRStoLL(input.split(":")[1]);
+
+    results.innerHTML = `
+    <ul>
+      <li>lat: ${coords[1]}</li>
+      <li>lon: ${coords[0]}</li>
+      <li></li>
+      <li>lat: ${coords[3]}</li>
+      <li>lon: ${coords[2]}</li>
+      </ul>
+    `;
+
+    map.fitBounds([
+      [coords[1], coords[0]],
+      [coords[3], coords[2]],
+    ]);
+
+    return;
+  }
   const units = items.getUnits();
   const airports = items.getAirports();
 

@@ -45,5 +45,7 @@ window.toggleCallsigns = function toggleCallsigns() {
     refresh("package");
     refresh("unit");
     refresh("group");
+    refresh("awacs");
+    refresh("tanker");
   }, 10);
 };

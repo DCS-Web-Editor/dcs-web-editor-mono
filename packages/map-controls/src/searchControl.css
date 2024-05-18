@@ -6,6 +6,7 @@
 }
 .leaflet-control-zoom.leaflet-bar.leaflet-control:hover .search-field {
   display: block;
+  width: 13.5rem;
 }
 .leaflet-control-zoom.leaflet-bar.leaflet-control .results {
   position: absolute;
