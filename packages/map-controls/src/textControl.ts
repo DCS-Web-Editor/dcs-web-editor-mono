@@ -16,10 +16,7 @@ const anchor = document.createElement("a");
 
 textControl.onAdd = function (_map) {
   map = _map;
-  this._div = L.DomUtil.create(
-    "div",
-    "leaflet-control-zoom leaflet-bar leaflet-control"
-  );
+  this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
   // otherwise drawing process would instantly start at controls' container or double click would zoom-in map
   L.DomEvent.disableClickPropagation(this._div);
 
@@ -37,7 +34,7 @@ textControl.getColor = function (cb: () => string) {
 
 //Functions to either disable (onmouseover) or enable (onmouseout) the map's dragging
 function textControlActivate(e) {
-  e.preventDefault();
+  e.preventDefault && e.preventDefault();
   context.writeMode = !context.writeMode;
   context.paintMode = false;
   if (context.writeMode) enableTextControl(anchor);
@@ -50,39 +47,44 @@ function enableTextControl(anchor) {
 
   if (context.writeInitialized) return;
 
-  map.on("click", function (e) {
-    let drawColor = context.getColor();
-    if (e.target !== map) return;
-    if (!context.writeMode) return;
+  map.on("click", addText);
 
-    const text = prompt("Text ?");
-    if (!text) return;
-    const style = `color: ${drawColor}; font-weight: bold; font-family: sans-serif; pointer-events: auto;`;
-    const icon: L.DivIcon = createIcon(text, style);
-
-    const marker: L.Marker = new L.marker(e.latlng, { icon });
-
-    map.addLayer(marker);
-    marker.on("click", removeText);
-    // L.DomEvent.disableClickPropagation(marker.getElement());
-
-    texts.push({
-      text,
-      style,
-      latLng: e.latlng,
-      _leaflet_id: marker._leaflet_id,
-    });
+  // exit on right click
+  map.on("contextmenu", (e) => {
+    if (context.writeMode) textControlActivate(e);
   });
 
   context.writeInitialized = true;
 }
 
+function addText(e) {
+  if (e.target !== map) return;
+  if (!context.writeMode) return;
+
+  let drawColor = context.getColor();
+  const text = prompt("Text ?");
+  if (!text) return;
+
+  const style = `color: ${drawColor}; font-weight: bold; font-family: sans-serif; pointer-events: auto;`;
+  const icon: L.DivIcon = createIcon(text, style);
+  const marker: L.Marker = new L.marker(e.latlng, { icon });
+
+  map.addLayer(marker);
+  marker.on("click", removeText);
+  // L.DomEvent.disableClickPropagation(marker.getElement());
+
+  texts.push({
+    text,
+    style,
+    latLng: e.latlng,
+    _leaflet_id: marker._leaflet_id,
+  });
+}
+
 function removeText(e): any {
   if (!context.writeMode) return;
 
-  const found = texts.findIndex(
-    (d) => d._leaflet_id === e.sourceTarget._leaflet_id
-  );
+  const found = texts.findIndex((d) => d._leaflet_id === e.sourceTarget._leaflet_id);
   if (found > -1) texts.splice(found, 1);
 
   e.sourceTarget.remove();

@@ -18,10 +18,7 @@ export const drawLines: PolySave[] = [];
 
 paintControl.onAdd = function (_map) {
   map = _map;
-  this._div = L.DomUtil.create(
-    "div",
-    "leaflet-control-zoom leaflet-bar leaflet-control"
-  );
+  this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
 
   pAnchor.classList.add("leaflet-control-zoom-in");
   pAnchor.href = "#";
@@ -74,7 +71,8 @@ function startDraw(e: MouseEvent) {
   map.lastPointX = Math.floor(e.layerX);
   map.lastPointY = Math.floor(e.layerY);
 
-  if (e.which === 1) {
+  // LEFT
+  if (e.button === 0) {
     paintMode = true;
 
     const paintConfig = {
@@ -84,16 +82,32 @@ function startDraw(e: MouseEvent) {
       className: "leaflet-drawline",
     };
 
+    if (e.altKey) {
+      // resume
+      doDraw(e);
+      return;
+    }
+
+    // new line
     if (e.ctrlKey) paintConfig.dashArray = [5, 10];
     currentPolyLine = L.polyline([], paintConfig).addTo(map);
     currentPolyLine.on("click", removeLine);
   }
+
+  // RIGHT
+  if (e.button === 2) {
+    endDraw(e);
+
+    setTimeout(() => {
+      context.paintMode = false;
+      context.writeMode = false;
+      disablePaintControl(pAnchor);
+    }, 300);
+  }
 }
 
 function removeLine(e: any) {
-  const found = drawLines.findIndex(
-    (d) => d._leaflet_id === e.sourceTarget._leaflet_id
-  );
+  const found = drawLines.findIndex((d) => d._leaflet_id === e.sourceTarget._leaflet_id);
   if (found > -1) drawLines.splice(found, 1);
 
   e.sourceTarget.remove();
