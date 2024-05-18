@@ -346,3 +346,9 @@ export async function getElevationFeet(lat: any, lng: any) {
 }
 
 export { js2Lua } from "./js2lua";
+
+export function renderFrequency(freq: number) {
+  if (freq > 1000000) return (freq / 1000000).toFixed(1) + " Mhz";
+  if (freq > 1000) return (freq / 1000).toFixed(1) + " khz";
+  else return freq;
+}

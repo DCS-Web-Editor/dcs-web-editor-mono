@@ -94,6 +94,7 @@ function renderInfo(phase: string) {
   const airport = state.airports.find((a) => a.typeName === type);
   if (!airport) return "NOT FOUND";
 
+  const atc = airport.airdromeData?.ATC?.map(mapFrequency).join(", ") ?? "-";
   const tacan = airport.airdromeData?.TACAN?.length
     ? `TAC ${airport.airdromeData?.TACAN?.map(mapFrequency).join(", ")}`
     : "";
@@ -102,7 +103,7 @@ function renderInfo(phase: string) {
     : "";
 
   return `${airport.code}
-  ${airport.airdromeData?.ATC?.map(mapFrequency).join(", ") ?? "-"} ${tacan} ${ils}
+    ${atc} ${tacan} ${ils}
   `;
 }
 
