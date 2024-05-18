@@ -17,6 +17,9 @@ const anchor = document.createElement("a");
 textControl.onAdd = function (_map) {
   map = _map;
   this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  this._div.title =
+    "Left click to add Text. Click text to remove it. Right click to exit text mode.";
+
   // otherwise drawing process would instantly start at controls' container or double click would zoom-in map
   L.DomEvent.disableClickPropagation(this._div);
 

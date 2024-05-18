@@ -19,6 +19,8 @@ export const drawLines: PolySave[] = [];
 paintControl.onAdd = function (_map) {
   map = _map;
   this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  this._div.title =
+    "Left click to draw. Hold CTRL for dotted lines. ALT + click to draw straight line from your last drawing. Right click to exit";
 
   pAnchor.classList.add("leaflet-control-zoom-in");
   pAnchor.href = "#";
