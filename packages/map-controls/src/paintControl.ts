@@ -1,4 +1,4 @@
-import { context } from ".";
+import { context, disableTextControl } from ".";
 
 /* 
 Create Paint Control
@@ -18,11 +18,12 @@ export const drawLines: PolySave[] = [];
 
 paintControl.onAdd = function (_map) {
   map = _map;
-  this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
-  this._div.title =
-    "Left click to draw. Hold CTRL for dotted lines. ALT + click to draw straight line from your last drawing. Right click to exit";
+  context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  this._div = context.iconBar;
 
   pAnchor.classList.add("leaflet-control-zoom-in");
+  pAnchor.title =
+    "Shortcut: 'p' Left click to paint. Hold CTRL for dotted lines. ALT + click to draw straight line from your last drawing. Right click to exit";
   pAnchor.href = "#";
   pAnchor.innerHTML = '<span><i class="fa fa-pencil"></i></span>';
   L.DomEvent.on(pAnchor, "click", paintControlActivate);
@@ -34,26 +35,21 @@ paintControl.onAdd = function (_map) {
 function paintControlActivate(e) {
   e.preventDefault();
   context.paintMode = !context.paintMode;
-  context.writeMode = false;
+  disableTextControl();
   if (context.paintMode) enablePaintControl(pAnchor);
   else disablePaintControl(pAnchor);
 }
 
-let paintMode = false;
+let isPainting = false;
 function enablePaintControl(anchor) {
   anchor.classList.add("polyline-measure-controlOnBgColor");
   map.dragging.disable();
-  if (context.paintInitialized) return;
-  // map.on('mousedown', paintStarted);
-  // map.on('mousemove', doDraw);
-  // map.on('mouseup', endDraw);
+
   const mapElement = document.getElementById("map")!;
 
   mapElement.addEventListener("pointerdown", paintStarted);
   mapElement.addEventListener("pointermove", doDraw);
   mapElement.addEventListener("pointerup", endDraw);
-
-  context.paintInitialized = true;
 }
 
 function paintStarted(e: MouseEvent) {
@@ -63,9 +59,14 @@ function paintStarted(e: MouseEvent) {
   startDraw(e);
 }
 
-function disablePaintControl(anchor) {
-  anchor.classList.remove("polyline-measure-controlOnBgColor");
+export function disablePaintControl() {
+  context.paintMode = false;
+  pAnchor.classList.remove("polyline-measure-controlOnBgColor");
   map.dragging.enable();
+  const mapElement = document.getElementById("map")!;
+  mapElement.removeEventListener("pointerdown", paintStarted);
+  mapElement.removeEventListener("pointermove", doDraw);
+  mapElement.removeEventListener("pointerup", endDraw);
 }
 
 function startDraw(e: MouseEvent) {
@@ -75,7 +76,7 @@ function startDraw(e: MouseEvent) {
 
   // LEFT
   if (e.button === 0) {
-    paintMode = true;
+    isPainting = true;
 
     const paintConfig = {
       // smoothFactor: 2,
@@ -117,14 +118,14 @@ function removeLine(e: any) {
 }
 
 function doDraw(e: MouseEvent) {
-  if (paintMode) {
+  if (isPainting) {
     var pointlatlng = map.mouseEventToLatLng(e);
     currentPolyLine.addLatLng(pointlatlng);
   }
 }
 
 function endDraw(e: MouseEvent) {
-  paintMode = false;
+  isPainting = false;
 
   const latLngs = currentPolyLine.getLatLngs();
   if (latLngs.length < 2) return;

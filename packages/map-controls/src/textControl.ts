@@ -1,4 +1,4 @@
-import { context } from ".";
+import { context, disablePaintControl } from ".";
 let map: any;
 interface TextSave {
   text: string;
@@ -16,16 +16,17 @@ const anchor = document.createElement("a");
 
 textControl.onAdd = function (_map) {
   map = _map;
-  this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
-  this._div.title =
-    "Left click to add Text. Click text to remove it. Right click to exit text mode.";
+  context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  this._div = context.iconBar;
 
   // otherwise drawing process would instantly start at controls' container or double click would zoom-in map
   L.DomEvent.disableClickPropagation(this._div);
 
   anchor.classList.add("leaflet-control-zoom-in");
+  anchor.title =
+    "Shortcut: 't' Left click to add Text. Click text to remove it. Right click to exit text mode.";
   anchor.href = "#";
-  anchor.innerHTML = '<span><i class="fa fa-font"></i></span>';
+  anchor.innerHTML = `<span style="font-family: 'Courier New', Courier, monospace;">T</span>`;
   L.DomEvent.on(anchor, "click", textControlActivate);
   this._div.appendChild(anchor);
   return this._div;
@@ -39,7 +40,7 @@ textControl.getColor = function (cb: () => string) {
 function textControlActivate(e) {
   e.preventDefault && e.preventDefault();
   context.writeMode = !context.writeMode;
-  context.paintMode = false;
+  disablePaintControl();
   if (context.writeMode) enableTextControl(anchor);
   else disableTextControl(anchor);
 }
@@ -103,7 +104,8 @@ function createIcon(text: string, style: string) {
   return icon;
 }
 
-function disableTextControl(anchor) {
+export function disableTextControl() {
+  context.writeMode = false;
   map.dragging.enable();
   anchor.classList.remove("polyline-measure-controlOnBgColor");
 }

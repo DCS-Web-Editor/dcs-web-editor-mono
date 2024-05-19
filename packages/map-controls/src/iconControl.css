@@ -1,0 +1,32 @@
+#icon-drawer .image-holder {
+  display: inline-block;
+  max-height: 12rem;
+  max-width: 30rem;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+#icon-drawer h4 {
+  margin: 0;
+}
+
+#icon-drawer .image-holder img {
+  margin: 0px 5px;
+  -webkit-user-drag: element;
+  user-select: all;
+  cursor: move;
+}
+/* .panel .image-holder img:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: blue;
+  } */
+
+#map .dwe-dropicon {
+  /* border: 1px solid red; */
+  /* box-shadow: 2px 2px 2px #111; */
+  width: 50px !important;
+  height: 50px !important;
+}

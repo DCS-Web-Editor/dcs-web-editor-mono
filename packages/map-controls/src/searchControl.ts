@@ -1,5 +1,6 @@
 import { MGRStoLL } from "@dcs-web-editor-mono/utils";
 import "./searchControl.css";
+import { context } from ".";
 
 /* 
 Create Search Control
@@ -10,17 +11,24 @@ let searchField: HTMLInputElement;
 let results: HTMLElement;
 let items: any;
 let map: any;
+let pAnchor: HTMLElement;
+
+export function isSearchActive() {
+  return context.searchMode;
+}
 
 export function createSearchControl(_renderContainer: Function, _items) {
   renderContainer = _renderContainer;
   items = _items;
 
-  const pAnchor = document.createElement("a");
+  pAnchor = document.createElement("a");
   searchField = document.createElement("input");
   searchField.className = "search-field";
   searchField.placeholder =
     "Type to find unit/airport/beacon or coordinates starting with MGRS:37 X ...";
-  searchField.title = "Type to find unit/airport/beacon or coordinates starting with MGRS:...";
+
+  pAnchor.title = searchField.title =
+    "Shortcut: 'q' Type to find unit/airport/beacon or coordinates starting with MGRS:...";
 
   results = document.createElement("div");
   results.className = "results";
@@ -53,6 +61,16 @@ export function createSearchControl(_renderContainer: Function, _items) {
 function searchControlActivate(e) {
   e.preventDefault();
   e.stopPropagation();
+  context.searchMode = !context.searchMode;
+  if (context.searchMode) {
+    pAnchor.classList.add("polyline-measure-controlOnBgColor");
+    pAnchor.parentElement.classList.add("show-search-fields");
+    setTimeout(searchField.focus.bind(searchField), 10);
+  } else {
+    pAnchor.classList.remove("polyline-measure-controlOnBgColor");
+    pAnchor.parentElement.classList.remove("show-search-fields");
+  }
+
   searchChange();
 }
 

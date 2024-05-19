@@ -36,6 +36,7 @@ import waypointProfile from "./components/waypointProfile";
 import waypointDistanceProfile from "./components/waypointDistanceProfile";
 import notes from "./components/notes";
 import { load } from "./cache";
+import "./styles.css";
 import "./accordion.css";
 import { renderRegisteredComponents } from "./render";
 import { Component, Context } from "./types";

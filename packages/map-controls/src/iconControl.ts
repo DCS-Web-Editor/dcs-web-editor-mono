@@ -1,0 +1,143 @@
+import Icons from "@dcs-web-editor-mono/icons";
+import "./iconControl.css";
+import { context, disablePaintControl, disableTextControl } from ".";
+
+export const iconControl = L.control({ position: "bottomleft" });
+const anchor = document.createElement("a");
+const mapElement = document.getElementById("map");
+let map;
+
+const iconDrawer = document.getElementById("icon-drawer")!;
+
+iconControl.onAdd = function (_map) {
+  map = _map;
+  context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  this._div = context.iconBar;
+
+  // otherwise drawing process would instantly start at controls' container or double click would zoom-in map
+  L.DomEvent.disableClickPropagation(this._div);
+
+  anchor.classList.add("leaflet-control-zoom-in");
+  anchor.title = "Shortcut: 'i' Drag and drop icons for planning";
+  anchor.href = "#";
+  anchor.innerHTML = '<span><i class="fa fa-image"></i></span>';
+  L.DomEvent.on(anchor, "click", iconControlActivate);
+  this._div.appendChild(anchor);
+  renderDrawer();
+  return this._div;
+};
+
+function iconControlActivate(e: Event) {
+  //   console.log("iconControlActivate", e);
+  context.iconMode = !context.iconMode;
+  if (context.iconMode) {
+    // not necessary, works simultaneously
+    // disablePaintControl();
+    // disableTextControl();
+
+    anchor.classList.add("polyline-measure-controlOnBgColor");
+    iconDrawer.style.display = "block";
+    // renderDrawer();
+  } else {
+    anchor.classList.remove("polyline-measure-controlOnBgColor");
+    // iconDrawer.innerHTML = "";
+    iconDrawer.style.display = "none";
+  }
+}
+
+mapElement.ondragover = function (e) {
+  e.preventDefault();
+  if (!context.iconMode) return;
+  e.dataTransfer.dropEffect = "move";
+};
+
+mapElement.ondrop = function (e) {
+  if (!context.iconMode) return;
+  e.preventDefault();
+
+  const imageData = e.dataTransfer.getData("url");
+
+  const coordinates = map.containerPointToLatLng(L.point([e.clientX, e.clientY]));
+  const filter = getFilter();
+  const opts = {
+    className: "dwe-dropicon",
+    html: `<img width=50 height=50 src="${imageData}" style="filter: ${filter}"/>`,
+  };
+  const icon = L.marker(coordinates, { icon: L.divIcon(opts), draggable: true }).addTo(map);
+  icon.on("click", (e) => icon.remove());
+};
+
+function name(params: type) {}
+
+const colorPicker = document.getElementById("colorpicker")!;
+colorPicker.addEventListener("change", renderDrawer);
+
+function getFilter() {
+  const color = colorPicker.value || "#292929";
+
+  // iconDrawer.style.boxShadow = ``;
+
+  var r = parseInt(color.substr(1, 2), 16);
+  var g = parseInt(color.substr(3, 2), 16);
+  var b = parseInt(color.substr(5, 2), 16);
+
+  const [h, s, l] = rgbToHsl(r, g, b);
+
+  const filter = `brightness(${l}) contrast(0.5) sepia() hue-rotate(${Math.floor(
+    h * 360 - 50
+  )}deg) saturate(${s * 5})`;
+
+  return filter;
+}
+
+function renderDrawer() {
+  // colorize all icons on map
+  //   const icons = document.getElementsByClassName("dwe-dropicon");
+  //   Object.values(icons).forEach((e) => {
+  //     e.style.filter = filter;
+  //   });
+
+  const filter = getFilter();
+
+  if (iconDrawer)
+    iconDrawer.innerHTML = `<div class="image-holder">
+    <h4>Planning Icons drag & drop</h4>
+     ${Object.keys(Icons.icons)
+       .map((name) => {
+         return `<img class="image-holder" width=30 height=30 style="filter: ${filter}" src="${Icons.icons[name]}" alt="${name}"></img>`;
+       })
+       .join("")}
+    
+       </div>
+    `;
+}
+
+function rgbToHsl(r, g, b) {
+  (r /= 255), (g /= 255), (b /= 255);
+  var max = Math.max(r, g, b),
+    min = Math.min(r, g, b);
+  var h,
+    s,
+    l = (max + min) / 2;
+
+  if (max == min) {
+    h = s = 0; // achromatic
+  } else {
+    var d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / d + 2;
+        break;
+      case b:
+        h = (r - g) / d + 4;
+        break;
+    }
+    h /= 6;
+  }
+
+  return [h, s, l];
+}

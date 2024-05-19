@@ -18,7 +18,7 @@ export function createScreenshotControl(_renderContainer: Function) {
     map = _map;
     this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
     this._div.title =
-      "Left click to save screenshot ( hides user interface ). Resize your window to 768x1024 pixels to use them as ingame kneeboard maps.";
+      "Shortcut: '.' Left click to save screenshot ( hides user interface ). Resize your window to 768x1024 pixels to use them as ingame kneeboard maps.";
 
     pAnchor.classList.add("leaflet-control-zoom-in");
     pAnchor.href = "#";

@@ -1,10 +1,10 @@
 .leaflet-control-zoom.leaflet-bar.leaflet-control {
   pointer-events: all;
 }
-.leaflet-control-zoom.leaflet-bar.leaflet-control:hover .results {
+.leaflet-control-zoom.leaflet-bar.leaflet-control.show-search-fields .results {
   display: block;
 }
-.leaflet-control-zoom.leaflet-bar.leaflet-control:hover .search-field {
+.leaflet-control-zoom.leaflet-bar.leaflet-control.show-search-fields .search-field {
   display: block;
   width: 13.5rem;
 }
