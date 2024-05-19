@@ -16,6 +16,16 @@
   user-select: all;
   cursor: move;
 }
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* .panel .image-holder img:after {
     content: "";
     position: absolute;

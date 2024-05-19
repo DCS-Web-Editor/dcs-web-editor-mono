@@ -9,6 +9,8 @@ let map;
 
 const iconDrawer = document.getElementById("icon-drawer")!;
 
+export const icons: any[] = [];
+
 iconControl.onAdd = function (_map) {
   map = _map;
   context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
@@ -56,24 +58,32 @@ mapElement.ondrop = function (e) {
   e.preventDefault();
 
   const imageData = e.dataTransfer.getData("url");
+  const name = e.dataTransfer.getData("name");
+  const color = e.dataTransfer.getData("color");
 
   const coordinates = map.containerPointToLatLng(L.point([e.clientX, e.clientY]));
-  const filter = getFilter();
+
+  spawnIcon(name, imageData, coordinates, color);
+};
+
+function spawnIcon(name: string, imageData: string, coordinates: any, color: string = "") {
+  const filter = getFilter(color);
   const opts = {
     className: "dwe-dropicon",
     html: `<img width=50 height=50 src="${imageData}" style="filter: ${filter}"/>`,
   };
   const icon = L.marker(coordinates, { icon: L.divIcon(opts), draggable: true }).addTo(map);
+  icon.name = name;
+  icon.color = color;
   icon.on("click", (e) => icon.remove());
-};
-
-function name(params: type) {}
+  icons.push(icon);
+}
 
 const colorPicker = document.getElementById("colorpicker")!;
 colorPicker.addEventListener("change", renderDrawer);
 
-function getFilter() {
-  const color = colorPicker.value || "#292929";
+function getFilter(col = "") {
+  const color = col || colorPicker.value || "#292929";
 
   // iconDrawer.style.boxShadow = ``;
 
@@ -101,16 +111,21 @@ function renderDrawer() {
 
   if (iconDrawer)
     iconDrawer.innerHTML = `<div class="image-holder">
-    <h4>Planning Icons drag & drop</h4>
+    <h4 class="no-select">Planning Icons drag & drop</h4>
      ${Object.keys(Icons.icons)
        .map((name) => {
-         return `<img class="image-holder" width=30 height=30 style="filter: ${filter}" src="${Icons.icons[name]}" alt="${name}"></img>`;
+         return `<img class="image-holder no-select" ondragstart="onIconDrag(event, '${name}', '${colorPicker.value}')" width=30 height=30 style="filter: ${filter}" src="${Icons.icons[name]}" alt="${name}"></img>`;
        })
        .join("")}
     
        </div>
     `;
 }
+
+window.onIconDrag = function drag(e, name: string, color = "#fff") {
+  e.dataTransfer.setData("name", name);
+  e.dataTransfer.setData("color", color);
+};
 
 function rgbToHsl(r, g, b) {
   (r /= 255), (g /= 255), (b /= 255);
@@ -140,4 +155,10 @@ function rgbToHsl(r, g, b) {
   }
 
   return [h, s, l];
+}
+
+export function loadIcons(icons: any[]) {
+  icons.forEach((icon) => {
+    spawnIcon(icon.name, icon.image, icon.latLng, icon.color);
+  });
 }
