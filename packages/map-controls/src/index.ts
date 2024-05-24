@@ -8,11 +8,14 @@ export const context = {
   paintMode: false,
   searchMode: false,
   iconMode: false,
+  follow: true,
   getColor: () => "#0C8",
 };
 
 export * from "./paintControl";
+export * from "./paintNodragControl";
 export * from "./textControl";
 export * from "./searchControl";
 export * from "./screenshotControl";
 export * from "./iconControl";
+export * from "./followControl";

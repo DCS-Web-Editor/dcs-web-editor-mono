@@ -4,19 +4,19 @@ import { context, disableTextControl } from ".";
 Create Paint Control
 ********************************/
 
-export const paintControl = L.control({ position: "bottomleft" });
+export const paintNodragControl = L.control({ position: "bottomleft" });
 const pAnchor = document.createElement("a");
 let currentPolyLine: L.Polyline;
 let map: any;
 
-export interface PolySave {
+interface PolySave {
   latLngs: any[];
   options: any;
   _leaflet_id: number;
 }
-export const drawLines: PolySave[] = [];
+export const drawLinesNodrag: PolySave[] = [];
 
-paintControl.onAdd = function (_map) {
+paintNodragControl.onAdd = function (_map) {
   map = _map;
   context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
   this._div = context.iconBar;
@@ -37,7 +37,7 @@ function paintControlActivate(e) {
   context.paintMode = !context.paintMode;
   disableTextControl();
   if (context.paintMode) enablePaintControl(pAnchor);
-  else disablePaintControl(pAnchor);
+  else disableNodragPaintControl(pAnchor);
 }
 
 let isPainting = false;
@@ -59,7 +59,8 @@ function paintStarted(e: MouseEvent) {
   startDraw(e);
 }
 
-export function disablePaintControl() {
+export function disableNodragPaintControl() {
+  currentPolyLine = null;
   context.paintMode = false;
   pAnchor.classList.remove("polyline-measure-controlOnBgColor");
   if (map) map.dragging.enable();
@@ -85,9 +86,9 @@ function startDraw(e: MouseEvent) {
       className: "leaflet-drawline",
     };
 
-    if (e.altKey) {
+    if (currentPolyLine) {
       // resume
-      doDraw(e);
+      if (e.target.id === "map") doDraw(e);
       return;
     }
 
@@ -95,6 +96,7 @@ function startDraw(e: MouseEvent) {
     if (e.ctrlKey) paintConfig.dashArray = [5, 10];
     currentPolyLine = L.polyline([], paintConfig).addTo(map);
     currentPolyLine.on("click", removeLine);
+    doDraw(e);
   }
 
   // RIGHT
@@ -104,20 +106,21 @@ function startDraw(e: MouseEvent) {
     setTimeout(() => {
       context.paintMode = false;
       context.writeMode = false;
-      disablePaintControl(pAnchor);
+      disableNodragPaintControl(pAnchor);
     }, 300);
   }
 }
 
 function removeLine(e: any) {
-  const found = drawLines.findIndex((d) => d._leaflet_id === e.sourceTarget._leaflet_id);
-  if (found > -1) drawLines.splice(found, 1);
+  const found = drawLinesNodrag.findIndex((d) => d._leaflet_id === e.sourceTarget._leaflet_id);
+  if (found > -1) drawLinesNodrag.splice(found, 1);
 
   e.sourceTarget.remove();
   e.target?.remove();
 }
 
 function doDraw(e: MouseEvent) {
+  if (e.target.id !== "map") return;
   if (isPainting) {
     var pointlatlng = map.mouseEventToLatLng(e);
     currentPolyLine.addLatLng(pointlatlng);
@@ -130,14 +133,14 @@ function endDraw(e: MouseEvent) {
   const latLngs = currentPolyLine.getLatLngs();
   if (latLngs.length < 2) return;
 
-  drawLines.push({
+  drawLinesNodrag.push({
     latLngs,
     _leaflet_id: currentPolyLine._leaflet_id,
     options: structuredClone(currentPolyLine.options),
   } as PolySave);
 }
 
-export function loadDraw(array: PolySave[]) {
+export function loadNodragDraw(array: PolySave[]) {
   // console.log("loadDraw", array);
   array.forEach((draw: PolySave) => {
     currentPolyLine = L.polyline([], draw.options).addTo(map);

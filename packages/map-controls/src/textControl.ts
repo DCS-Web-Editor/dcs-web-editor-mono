@@ -1,4 +1,4 @@
-import { context, disablePaintControl } from ".";
+import { context, disableNodragPaintControl, disablePaintControl } from ".";
 let map: any;
 interface TextSave {
   text: string;
@@ -14,6 +14,17 @@ export const texts: TextSave[] = [];
 export const textControl = L.control({ position: "bottomleft" });
 const anchor = document.createElement("a");
 
+const inputIcon = L.divIcon({
+  html: makeInputHtml(1),
+  className: "divIcon",
+  iconSize: [200, 50],
+  iconAnchor: [0, 0],
+});
+
+var inputMarker = L.marker([90, 90], {
+  icon: inputIcon,
+});
+
 textControl.onAdd = function (_map) {
   map = _map;
   context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
@@ -23,12 +34,14 @@ textControl.onAdd = function (_map) {
   L.DomEvent.disableClickPropagation(this._div);
 
   anchor.classList.add("leaflet-control-zoom-in");
-  anchor.title =
-    "Shortcut: 't' Left click to add Text. Click text to remove it. Right click to exit text mode.";
+  anchor.title = "Shortcut: 't' Left click to add Text. Click text to remove it. Right click to exit text mode.";
   anchor.href = "#";
   anchor.innerHTML = `<span style="font-family: 'Courier New', Courier, monospace;">T</span>`;
   L.DomEvent.on(anchor, "click", textControlActivate);
   this._div.appendChild(anchor);
+
+  inputMarker.addTo(map);
+
   return this._div;
 };
 
@@ -41,6 +54,7 @@ function textControlActivate(e) {
   e.preventDefault && e.preventDefault();
   context.writeMode = !context.writeMode;
   disablePaintControl();
+  disableNodragPaintControl();
   if (context.writeMode) enableTextControl(anchor);
   else disableTextControl(anchor);
 }
@@ -49,9 +63,8 @@ function enableTextControl(anchor) {
   map.dragging.disable();
   anchor.classList.add("polyline-measure-controlOnBgColor");
 
+  map.on("click", addInput);
   if (context.writeInitialized) return;
-
-  map.on("click", addText);
 
   // exit on right click
   map.on("contextmenu", (e) => {
@@ -61,17 +74,47 @@ function enableTextControl(anchor) {
   context.writeInitialized = true;
 }
 
-function addText(e) {
+let _currentClickEvent;
+function addInput(e) {
+  _currentClickEvent = e;
+  map.off("click", addInput);
+  const textButton = document.getElementById("add-text-btn");
+  textButton.addEventListener("click", addText);
+
+  const inputField = document.getElementById("input_1");
+  inputField.value = "";
+  inputField.focus();
+
   if (e.target !== map) return;
   if (!context.writeMode) return;
 
+  // const text = prompt("Text ?");
+
+  inputMarker.setLatLng(e.latlng);
+}
+
+function addText() {
+  const textButton = document.getElementById("add-text-btn");
+  textButton.removeEventListener("click", addText);
+
   let drawColor = context.getColor();
-  const text = prompt("Text ?");
+
+  setTimeout(() => {
+    inputMarker.setLatLng({
+      lat: 90,
+      lon: 90,
+    });
+    map.on("click", addInput);
+  }, 10);
+
+  const inputField = document.getElementById("input_1");
+  const text = inputField?.value;
+
   if (!text) return;
 
   const style = `color: ${drawColor}; font-weight: bold; font-family: sans-serif; pointer-events: auto;`;
   const icon: L.DivIcon = createIcon(text, style);
-  const marker: L.Marker = new L.marker(e.latlng, { icon });
+  const marker: L.Marker = new L.marker(_currentClickEvent.latlng, { icon });
 
   map.addLayer(marker);
   marker.on("click", removeText);
@@ -80,9 +123,13 @@ function addText(e) {
   texts.push({
     text,
     style,
-    latLng: e.latlng,
+    latLng: _currentClickEvent.latlng,
     _leaflet_id: marker._leaflet_id,
   });
+}
+
+function makeInputHtml(id) {
+  return '<input type="text" value="" id="input_' + id + '" /><button id="add-text-btn">OK</button>';
 }
 
 function removeText(e): any {
@@ -105,9 +152,15 @@ function createIcon(text: string, style: string) {
 }
 
 export function disableTextControl() {
+  map.off("click", addInput);
+
   context.writeMode = false;
   map.dragging.enable();
   anchor.classList.remove("polyline-measure-controlOnBgColor");
+  inputMarker.setLatLng({
+    lat: 90,
+    lon: 90,
+  });
 }
 
 export function loadText(_texts: TextSave[]) {
