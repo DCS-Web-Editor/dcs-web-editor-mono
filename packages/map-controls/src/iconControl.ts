@@ -80,7 +80,7 @@ function spawnIcon(name: string, imageData: string, coordinates: any, color: str
 }
 
 const colorPicker = document.getElementById("colorpicker")!;
-colorPicker.addEventListener("change", renderDrawer);
+// colorPicker.addEventListener("change", renderDrawer);
 
 function getFilter(col = "") {
   const color = col || colorPicker.value || "#292929";
@@ -157,7 +157,8 @@ function rgbToHsl(r, g, b) {
   return [h, s, l];
 }
 
-export function loadIcons(icons: any[]) {
+export function loadIcons(icons: any[], _map?: any) {
+  map ||= _map;
   icons.forEach((icon) => {
     spawnIcon(icon.name, icon.image, icon.latLng, icon.color);
   });

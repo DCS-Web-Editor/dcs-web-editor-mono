@@ -12,14 +12,16 @@ let results: HTMLElement;
 let items: any;
 let map: any;
 let pAnchor: HTMLElement;
+let translate: Function;
 
 export function isSearchActive() {
   return context.searchMode;
 }
 
-export function createSearchControl(_renderContainer: Function, _items) {
+export function createSearchControl(_renderContainer: Function, _items, _translate: Function) {
   renderContainer = _renderContainer;
   items = _items;
+  translate = _translate;
 
   pAnchor = document.createElement("a");
   searchField = document.createElement("input");
@@ -99,10 +101,25 @@ function searchChange() {
   }
   const units = items.getUnits();
   const airports = items.getAirports();
+  const beacons = items.getBeacons();
 
+  // unit name
   let found = units.filter((u) => u?.leaflet.json.name?.toUpperCase().match(input));
+  // unit type
+  found = found.concat(units.filter((u) => u?.leaflet.json.type?.toUpperCase().match(input)));
+
+  // airport name
   found = found.concat(
-    airports.filter((u) => u?.leaflet.json.displayName?.toUpperCase().match(input))
+    airports.filter((a) => a?.leaflet.json.displayName?.toUpperCase().match(input))
+  );
+  // airport code
+  found = found.concat(airports.filter((a) => a?.leaflet.json.code?.toUpperCase().match(input)));
+
+  // beacon name
+  found = found.concat(beacons.filter((b) => b?.leaflet.json.callsign?.toUpperCase().match(input)));
+  // beacon code
+  found = found.concat(
+    beacons.filter((b) => b?.leaflet.json.display_name?.toUpperCase().match(input))
   );
 
   results.innerHTML = `
@@ -111,14 +128,25 @@ function searchChange() {
       .map((f) => {
         const name = f?.leaflet.json.name;
         const airportName = f?.leaflet.json.displayName;
+        const beaconCode = f?.leaflet.json.callsign;
 
-        const display = name || "✈" + airportName;
-        const displayInfo = f?.leaflet.json.type || f?.leaflet.json.code;
+        let display = "???";
+        let displayInfo = "";
+        if (name) {
+          display = translate(name) || name;
+          displayInfo = `(${f?.leaflet.json.type})`;
+        } else if (airportName) {
+          display = `✈ ${airportName}`;
+          displayInfo = `(${f?.leaflet.json.code})`;
+        } else if (beaconCode) {
+          display = `⊙ ${beaconCode}`;
+          displayInfo = `(${f?.leaflet.json.display_name})`;
+        }
 
         return `<li>
-              <a onclick="openMarkerPopup('${btoa(name)}', '${btoa(
-          airportName
-        )}')" href="#">${display} (${displayInfo})</a>
+              <a onclick="openMarkerPopup('${btoa(name)}', '${btoa(airportName)}', '${btoa(
+          beaconCode
+        )}')" href="#">${display} ${displayInfo}</a>
           </li>`;
       })
       .join("")}
@@ -128,14 +156,22 @@ function searchChange() {
   `;
 }
 
-window.openMarkerPopup = function (name, airportName) {
+window.openMarkerPopup = function (name, airportName, beaconCode) {
   name = atob(name).toUpperCase();
   airportName = atob(airportName).toUpperCase();
+  beaconCode = atob(beaconCode).toUpperCase();
 
   if (airportName !== "UNDEFINED") {
     const airports = items.getAirports();
     const apt = airports.find((a) => a?.leaflet.json.displayName.toUpperCase() === airportName);
     openItem(apt);
+
+    return;
+  }
+  if (beaconCode !== "UNDEFINED") {
+    const beacons = items.getBeacons();
+    const bcn = beacons.find((b) => b?.leaflet.json.callsign.toUpperCase() === beaconCode);
+    openItem(bcn);
 
     return;
   }

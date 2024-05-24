@@ -12,9 +12,8 @@ let map: any;
 export interface PolySave {
   latLngs: any[];
   options: any;
-  _leaflet_id: number;
 }
-export const drawLines: PolySave[] = [];
+export const drawLines: Record<string, PolySave> = {};
 
 paintControl.onAdd = function (_map) {
   map = _map;
@@ -110,8 +109,7 @@ function startDraw(e: MouseEvent) {
 }
 
 function removeLine(e: any) {
-  const found = drawLines.findIndex((d) => d._leaflet_id === e.sourceTarget._leaflet_id);
-  if (found > -1) drawLines.splice(found, 1);
+  delete drawLines[e.sourceTarget._leaflet_id];
 
   e.sourceTarget.remove();
   e.target?.remove();
@@ -130,11 +128,10 @@ function endDraw(e: MouseEvent) {
   const latLngs = currentPolyLine.getLatLngs();
   if (latLngs.length < 2) return;
 
-  drawLines.push({
+  drawLines[currentPolyLine._leaflet_id] = {
     latLngs,
-    _leaflet_id: currentPolyLine._leaflet_id,
     options: structuredClone(currentPolyLine.options),
-  } as PolySave);
+  };
 }
 
 export function loadDraw(array: PolySave[]) {
@@ -146,5 +143,14 @@ export function loadDraw(array: PolySave[]) {
     draw.latLngs.forEach((ll) => {
       currentPolyLine.addLatLng(ll);
     });
+  });
+}
+
+export function exportPaintings() {
+  return Object.keys(drawLines).map((key) => {
+    return {
+      ...drawLines[key],
+      _leaflet_id: key,
+    };
   });
 }
