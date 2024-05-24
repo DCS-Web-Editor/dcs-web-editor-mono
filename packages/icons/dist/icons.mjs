@@ -42,6 +42,7 @@ const Y = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAA
   VAB_Mephisto: HA,
   "Ivanov (DRY CARGO Class)": "P0000000634",
   "F-4E": "P0091000024",
+  "F-4E-45MC": "P0091000024",
   "M-109": "P0091000006",
   "LAZ Bus": "P0091000211",
   "052B": "P0091000069",
