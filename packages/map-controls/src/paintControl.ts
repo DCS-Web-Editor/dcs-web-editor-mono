@@ -135,7 +135,8 @@ function endDraw(e: MouseEvent) {
   };
 }
 
-export function loadDraw(array: PolySave[]) {
+export function loadDraw(array: PolySave[], _map?: any) {
+  map ||= _map;
   // console.log("loadDraw", array);
   array.forEach((draw: PolySave) => {
     currentPolyLine = L.polyline([], draw.options).addTo(map);

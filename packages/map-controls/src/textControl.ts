@@ -34,7 +34,8 @@ textControl.onAdd = function (_map) {
   L.DomEvent.disableClickPropagation(this._div);
 
   anchor.classList.add("leaflet-control-zoom-in");
-  anchor.title = "Shortcut: 't' Left click to add Text. Click text to remove it. Right click to exit text mode.";
+  anchor.title =
+    "Shortcut: 't' Left click to add Text. Click text to remove it. Right click to exit text mode.";
   anchor.href = "#";
   anchor.innerHTML = `<span style="font-family: 'Courier New', Courier, monospace;">T</span>`;
   L.DomEvent.on(anchor, "click", textControlActivate);
@@ -129,7 +130,9 @@ function addText() {
 }
 
 function makeInputHtml(id) {
-  return '<input type="text" value="" id="input_' + id + '" /><button id="add-text-btn">OK</button>';
+  return (
+    '<input type="text" value="" id="input_' + id + '" /><button id="add-text-btn">OK</button>'
+  );
 }
 
 function removeText(e): any {
@@ -163,7 +166,8 @@ export function disableTextControl() {
   });
 }
 
-export function loadText(_texts: TextSave[]) {
+export function loadText(_texts: TextSave[], _map?: any) {
+  map ||= _map;
   // console.log("loadDraw", array);
   _texts.forEach((text: TextSave) => {
     const icon = createIcon(text.text, text.style);

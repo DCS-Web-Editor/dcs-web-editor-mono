@@ -24,7 +24,7 @@ followControl.onAdd = function (_map) {
   return this._div;
 };
 
-function followControlToggle(params: type) {
+export function followControlToggle() {
   context.follow = !context.follow;
   if (context.follow) {
     anchor.classList.add("polyline-measure-controlOnBgColor");
