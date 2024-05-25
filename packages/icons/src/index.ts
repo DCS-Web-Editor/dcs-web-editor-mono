@@ -84,6 +84,7 @@ import iconMap from "./iconMap.json";
 
 export const getIcon = function geticon(unitType: string) {
   const iconName: string = (iconMap as any)[unitType];
+
   const icon = toExport.icons[iconName] || toExport.icons.Question;
   return icon;
 };

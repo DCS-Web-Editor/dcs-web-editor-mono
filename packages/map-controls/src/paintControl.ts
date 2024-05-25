@@ -1,5 +1,5 @@
 import { context, disableTextControl } from ".";
-import L from "leaflet";
+// import L from "leaflet";
 
 /* 
 Create Paint Control

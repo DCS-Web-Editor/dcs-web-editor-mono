@@ -466,6 +466,7 @@ const Y = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAA
   Sandbox: zC,
   RPC_5N62V: aC,
   "T-72B3": "P0091000001",
+  "OH-6A": "P0091000020",
   "Ural-375 ZU-23": "P0091000205",
   "OH-58D": "P0091000096",
   rapier_fsa_optical_tracker_unit: pC,
