@@ -521,6 +521,7 @@
   "Pz_IV_H": "P0091000001",
   "A-50": "P0091000056",
   "LARC-V": "P0091000004",
+  "BDK-775": "LC",
   "SA-18 Igla manpad": "P0091000202",
   "Coach a tank blue": "P0091000212",
   "Patriot AMG": "P0091000046",
@@ -529,5 +530,6 @@
   "airdrome_class_2": "airdrome_class_2",
   "airdrome_class_3": "airdrome_class_3",
   "airdrome_class_4": "airdrome_class_4",
-  "airdrome_class_0": "airdrome_class_none"
+  "airdrome_class_0": "airdrome_class_none",
+  "Explosion": "P0091000353"
 }
