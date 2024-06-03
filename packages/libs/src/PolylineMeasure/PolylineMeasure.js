@@ -802,7 +802,7 @@ import './polyline.css';
             // angle just an aprroximation, which could be somewhat off if Line runs near high latitudes. Use of *geographical coords* for line segment P1 to P2 is best method. Use of *Pixel coords* for just one arc segement P1 to P2 could create for short lines unexact rotation angles, and the use Use of Pixel coords between endpoints [0] to [98] (in case of 99-point-arc) results in even more rotation difference for high latitudes as with geogrpaphical coords-method
             var cssAngle = -Math.atan2(diffLat12, diffLng12) * 57.29578; // convert radiant to degree as needed for use as CSS value; cssAngle is opposite to mathematical angle.
             var iconArrow = L.divIcon({
-                className: "",
+                className: "poly-arrow",
                 iconSize: [16, 16],
                 iconAnchor: [8, 8],
                 // html : "<img src='iconArrow.png' style='background:green; height:100%; vertical-align:top; transform:rotate("+ cssAngle +"deg)'>"  <<=== alternative method by the use of an image instead of a Unicode symbol.
