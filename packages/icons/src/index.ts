@@ -73,6 +73,7 @@ import P0091000014 from "./small/P91000014.png";
 import P0091000096 from "./small/P91000096.png";
 import P0091000066 from "./small/P91000066.png";
 import P0091000072 from "./small/P91000072.png";
+import Bullseye from "./small/P0091000347.png";
 import LC from "./small/LC.png";
 import FARP from "./small/FARP.png";
 import FARP_Tent from "./small/FARP_Tent.png";
@@ -80,6 +81,8 @@ import Artillery from "./small/Artillery.png";
 import Ammo from "./small/Ammo.png";
 import Tower from "./small/Tower.png";
 import Question from "./small/question.png";
+import navigation_point from "./small/navigation_point.png";
+import Missile from "./small/missile.png";
 
 import iconMap from "./iconMap.json";
 
@@ -180,6 +183,9 @@ const toExport: any = {
     Tower,
     Question,
     LC,
+    Bullseye,
+    navigation_point,
+    Missile,
   },
 };
 
