@@ -13,7 +13,6 @@ const component: Component = {
 
   render: (c: Context) => {
     const { group, mission, dictionary, declination } = c;
-    console.log(c);
 
     const waypointData = getWaypoints(group, mission, dictionary, declination);
 
