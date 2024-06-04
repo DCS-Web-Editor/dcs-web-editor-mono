@@ -88,8 +88,10 @@ export function register(...components: Component[]) {
 
 let _root: HTMLElement;
 let context: Context;
+let declination: Function;
 
-export function createKneeboard(element: HTMLElement) {
+export function createKneeboard(element: HTMLElement, _declination: Function) {
+  declination = _declination;
   _root = element;
   state.airports = null;
 
@@ -214,6 +216,7 @@ export function renderKneeboard(
     groups,
     group,
     unit,
+    declination,
   };
 
   document.querySelector("#content")?.setAttribute("name", unitName);
@@ -223,10 +226,7 @@ export function renderKneeboard(
   setTimeout(() => switchTheme({ target: { value: storedTheme } }), 10);
 
   // render all registered components
-  setTimeout(
-    () => renderRegisteredComponents(registeredComponents, context, options.noControls),
-    10
-  );
+  setTimeout(() => renderRegisteredComponents(registeredComponents, context, options.noControls), 10);
   return refresh;
 }
 

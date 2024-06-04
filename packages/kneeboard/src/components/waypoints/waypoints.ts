@@ -12,16 +12,14 @@ const component: Component = {
   control: `<button id="export-file">Waypoints .csv</button>`,
 
   render: (c: Context) => {
-    const { group, mission, dictionary } = c;
-    const waypointData = getWaypoints(group, mission, dictionary);
+    const { group, mission, dictionary, declination } = c;
+    console.log(c);
+
+    const waypointData = getWaypoints(group, mission, dictionary, declination);
 
     // delay render to make sure element is present
     setTimeout(() => {
-      const instance: Handsontable = createWaypointTable(
-        waypointData,
-        "#waypoints-table",
-        group.route?.points
-      );
+      const instance: Handsontable = createWaypointTable(waypointData, "#waypoints-table", group.route?.points);
       csvExport(instance);
     }, 10);
 
@@ -59,21 +57,7 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
 
   const totalTime = new Date(Math.round(ETA * 1000)).toISOString().split("T")[1].slice(0, 8);
 
-  data.push([
-    "",
-    "",
-    maxAltitude + " MAX",
-    null,
-    null,
-    "∑",
-    totalTime,
-    "⧗ Duration",
-    null,
-    null,
-    null,
-    null,
-    "",
-  ]);
+  data.push(["", "", maxAltitude + " MAX", null, null, "∑", totalTime, "⧗ Duration", null, null, null, null, ""]);
 
   const instance = new Handsontable(table, {
     data,
@@ -85,7 +69,7 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
       "Altitude",
       "SPD",
       "DIST",
-      "HDG",
+      "MH",
       "ETA",
       "Coords",
       "Lat",

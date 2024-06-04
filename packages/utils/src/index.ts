@@ -6,12 +6,7 @@ export interface LatLon {
   lon: number;
 }
 
-export function ConvertDMSToDD(
-  degrees: number,
-  minutes: number,
-  seconds: number,
-  direction: string
-) {
+export function ConvertDMSToDD(degrees: number, minutes: number, seconds: number, direction: string) {
   var dd = degrees + minutes / 60 + seconds / (60 * 60);
 
   if (direction == "S" || direction == "W") {
@@ -168,9 +163,7 @@ export function rgbToInt(r: number, g: number, b: number) {
   return ((r * 255) << 16) + ((g * 255) << 8) + b * 255;
 }
 export function toRgba(r: number, g: number, b: number, a: number) {
-  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(
-    a * 255
-  )})`;
+  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(a * 255)})`;
 }
 
 function componentToHex(c: number) {
@@ -351,4 +344,9 @@ export function renderFrequency(freq: number) {
   if (freq > 1000000) return (freq / 1000000).toFixed(1) + " Mhz";
   if (freq > 1000) return (freq / 1000).toFixed(1) + " khz";
   else return freq;
+}
+
+// mission date to JS date
+export function toJsDate(missionDate: any, missionTime: number = 0) {
+  return new Date(missionDate.Year, missionDate.Month - 1, missionDate.Day, 0, 0, missionTime);
 }

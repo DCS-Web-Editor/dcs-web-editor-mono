@@ -19,4 +19,5 @@ export interface Context {
   groups: any;
   group: any;
   unit: any;
+  declination: Function;
 }

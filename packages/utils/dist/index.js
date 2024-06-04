@@ -289,3 +289,7 @@ export function renderFrequency(freq) {
     else
         return freq;
 }
+// mission date to JS date
+export function toJsDate(missionDate, missionTime = 0) {
+    return new Date(missionDate.Year, missionDate.Month - 1, missionDate.Day, 0, 0, missionTime);
+}
