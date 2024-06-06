@@ -76,7 +76,7 @@
   --primary-rgb: 84, 75, 130;
   --secondary-color: #544b8266;
   --bg-color: rgb(243, 243, 240);
-  --bg-image: url("@/img/paper2.jpg");
+  --bg-image: url("kb-backgrounds/paper2.jpg");
   --bg-mask: none;
   --font-family: oldtypewriter, monospace !important;
   --opacity: 0.8;
@@ -191,7 +191,7 @@
   --primary-color: #211e1d;
   --secondary-color: #57463066;
   --bg-color: #eaeae0;
-  --bg-image: url("@/img/ww2usaf.png");
+  --bg-image: url("kb-backgrounds/ww2usaf.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -200,7 +200,7 @@
   --primary-color: #211e1d;
   --secondary-color: #57463066;
   --bg-color: #eaeae0;
-  --bg-image: url("@/img/ww2army.png");
+  --bg-image: url("kb-backgrounds/ww2army.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -209,7 +209,7 @@
   --primary-color: #79633f;
   --secondary-color: #79633f75;
   --bg-color: #eaeae0;
-  --bg-image: url("@/img/ww2luftwaffe.png");
+  --bg-image: url("kb-backgrounds/ww2luftwaffe.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -217,7 +217,7 @@
   --primary-color: #332a1c;
   --secondary-color: #79633f75;
   --bg-color: #eaeae0;
-  --bg-image: url("@/img/ww2hand.png");
+  --bg-image: url("kb-backgrounds/ww2hand.png");
   --font-family: handwriting, monospace !important;
   --logo: 0;
   --opacity: 0.7;
@@ -227,7 +227,7 @@
   --primary-color: #eaeae0;
   --secondary-color: #b7b5b12f;
   --bg-color: #161625;
-  --bg-image: url("@/img/ww2dark.png");
+  --bg-image: url("kb-backgrounds/ww2dark.png");
   --font-family: chalk, monospace !important;
   --logo: 0;
   --opacity: 0.8;
@@ -238,8 +238,8 @@
   --primary-color: #211e1d;
   --secondary-color: #6d6b6466;
   --bg-color: #eaeae0;
-  --bg-image: url("@/img/nam.png");
-  /* --bg-mask: url("@/img/nam_mask.png"); */
+  --bg-image: url("kb-backgrounds/nam.png");
+  /* --bg-mask: url("kb-backgrounds/nam_mask.png"); */
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
   /* --margin-mask: 2rem; */
@@ -249,7 +249,7 @@
   --primary-color: #211e1d;
   --secondary-color: #6d6b6466;
   --bg-color: #eaeae0;
-  --bg-image: url("@/img/namnoframe.png");
+  --bg-image: url("kb-backgrounds/namnoframe.png");
   --font-family: oldtypewriter, monospace !important;
   --logo: 0;
 }
@@ -257,7 +257,7 @@
   --primary-color: #020d82;
   --secondary-color: #38436c66;
   --bg-color: #eee6d7;
-  --bg-image: url("@/img/namhand.png");
+  --bg-image: url("kb-backgrounds/namhand.png");
   --font-family: handwriting, monospace !important;
   --logo: 0;
   --opacity: 0.7;
@@ -269,7 +269,7 @@
   --secondary-color: #efd7bc46;
   --bg-color: #121111;
   --opacity: 0.5;
-  --bg-image: url("@/img/paper_dark.jpg");
+  --bg-image: url("kb-backgrounds/paper_dark.jpg");
   --font-family: oldtypewriter, monospace !important;
 }
 
@@ -277,7 +277,7 @@
   --primary-color: #111;
   --secondary-color: #11111166;
   --bg-color: rgb(243, 243, 240);
-  --bg-image: url("@/img/logopage.png");
+  --bg-image: url("kb-backgrounds/logopage.png");
 
   /* --font-family: 'Times New Roman', Times, serif; */
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
@@ -287,7 +287,7 @@
   --primary-color: #040404;
   --secondary-color: #11111122;
   --bg-color: #fff;
-  --bg-image: url("@/img/logopage.png");
+  --bg-image: url("kb-backgrounds/logopage.png");
 
   /* --font-family: 'Times New Roman', Times, serif; */
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
@@ -297,7 +297,7 @@
   --primary-color: #b2b2b2;
   --secondary-color: #c2c2c233;
   --bg-color: #000;
-  --bg-image: url("@/img/logopage.png");
+  --bg-image: url("kb-backgrounds/logopage.png");
   /* font-family: */
   /* --font-family: 'Times New Roman', Times, serif; */
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
@@ -308,8 +308,8 @@
   --secondary-color: #0eda6366;
   --bg-color: #111;
   --bg-image: linear-gradient(-45deg, rgb(23, 30, 24) 0%, rgb(23, 19, 2) 100%);
-  --bg-image: url("@/img/terminal.jpg");
-  /* --bg-mask: url("@/img/logopage.png"); */
+  --bg-image: url("kb-backgrounds/terminal.jpg");
+  /* --bg-mask: url("kb-backgrounds/logopage.png"); */
 
   /* font-family:  */
   --font-family: handjet !important;
@@ -322,7 +322,7 @@
   --secondary-color: #00fd8b33;
   --bg-color: rgb(9, 9, 32);
   /* --bg-image: linear-gradient(-45deg, rgb(9, 9, 32) 0%, rgb(19, 14, 40) 100%); */
-  --bg-image: url("@/img/logopage.png");
+  --bg-image: url("kb-backgrounds/logopage.png");
 
   /* --bg-image: url('/img/cyber.png'); */
   /* font-family: */
@@ -337,7 +337,7 @@
   --secondary-color: #02b2fe33;
   --bg-color: rgb(5, 13, 22);
   /* --bg-image: linear-gradient(-45deg, rgb(13, 38, 63) 0%, rgb(11, 33, 50) 100%); */
-  --bg-image: url("@/img/logopage.png");
+  --bg-image: url("kb-backgrounds/logopage.png");
 
   /* --bg-image: url('/img/acecombat.png'); */
   /* font-family: */
