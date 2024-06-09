@@ -108,6 +108,8 @@ function airportsLoaded(res) {
 
 function renderOption(airport: any, phase: string) {
   const selected = airport.ID === state[phase] ? "selected" : "";
+  console.log(selected, airport.ID, state[phase]);
+
   return `<option value="${airport.ID}" ${selected}>${airport.displayName}</option>`;
 }
 function renderRunwayOption(runway: any, phase: string) {
@@ -118,13 +120,13 @@ function renderRunwayOption(runway: any, phase: string) {
 function selectAirport(e) {
   const { target } = e;
   if (target.id === airportIds[0]) {
-    state.DEP = target.value;
+    state.DEP = parseInt(target.value);
   }
   if (target.id === airportIds[1]) {
-    state.ARR = target.value;
+    state.ARR = parseInt(target.value);
   }
   if (target.id === airportIds[2]) {
-    state.ALT = target.value;
+    state.ALT = parseInt(target.value);
   }
 
   setTimeout(() => refresh("airports"), 0);
