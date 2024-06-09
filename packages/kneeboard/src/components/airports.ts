@@ -108,8 +108,6 @@ function airportsLoaded(res) {
 
 function renderOption(airport: any, phase: string) {
   const selected = airport.ID === state[phase] ? "selected" : "";
-  console.log(selected, airport.ID, state[phase]);
-
   return `<option value="${airport.ID}" ${selected}>${airport.displayName}</option>`;
 }
 function renderRunwayOption(runway: any, phase: string) {
