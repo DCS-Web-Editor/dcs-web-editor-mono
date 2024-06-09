@@ -6,6 +6,8 @@ import { sortGroup } from "../utils";
 
 export let _checked = load("use-group-names");
 
+const notes = `<div contenteditable class="mini-notes">Enter notes or delete</div>`;
+
 const component: Component = {
   id: "friendlies",
   render: (c: Context) => {
@@ -25,7 +27,7 @@ const component: Component = {
         }</ul>`
       : "";
 
-    return title + planes + rotary;
+    return title + notes + planes + rotary;
   },
 };
 

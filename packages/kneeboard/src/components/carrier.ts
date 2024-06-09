@@ -7,7 +7,7 @@ const component: Component = {
   render: (c: Context) => {
     const { country, dictionary } = c;
     const title = `<h4 class="center">CARRIER</h4>`;
-    const carriers = `<ul>${
+    const carriers = `<div contenteditable><ul>${
       country.ship?.group
         .map((group) => {
           if (group.route) {
@@ -41,7 +41,7 @@ const component: Component = {
         })
         .filter((i) => i)
         .join("") || "No carrier available"
-    }</ul>`;
+    }</ul></div>`;
 
     return title + carriers;
   },

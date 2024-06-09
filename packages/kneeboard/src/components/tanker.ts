@@ -9,7 +9,7 @@ const component: Component = {
     const title = `<h4 class="center">TANKER</h4>`;
     const _checked = load("use-group-names");
 
-    const tankers = `<ul>${
+    const tankers = `<div contenteditable><ul>${
       country.plane?.group
         .map((group) => {
           if (group.task === "Refueling") {
@@ -33,7 +33,7 @@ const component: Component = {
         })
         .filter((i) => i)
         .join("") || "No tanker available"
-    }</ul>`;
+    }</ul></div>`;
 
     return title + tankers;
   },

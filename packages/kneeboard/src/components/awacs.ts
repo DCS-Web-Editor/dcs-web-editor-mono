@@ -9,7 +9,7 @@ const component: Component = {
     const title = `<h4 class="center">AWACS</h4>`;
     const _checked = load("use-group-names");
 
-    const awacs = `<ul>${
+    const awacs = `<div contenteditable><ul>${
       country.plane?.group
         .map((group) => {
           if (group.task === "AWACS") {
@@ -27,7 +27,7 @@ const component: Component = {
         })
         .filter((i) => i)
         .join("") || "No AWACS support"
-    }</ul>`;
+    }</ul></div>`;
 
     return title + awacs;
   },
