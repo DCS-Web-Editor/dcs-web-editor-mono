@@ -566,3 +566,8 @@ body {
 .kneeboard .draggable.dragging {
   opacity: 0.5;
 }
+
+.kneeboard .mini-notes {
+  opacity: 0.8;
+  font-style: italic;
+}

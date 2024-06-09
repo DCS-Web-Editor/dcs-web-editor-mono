@@ -8,7 +8,7 @@ import {
   KM_TO_NM,
   toJsDate,
 } from "@dcs-web-editor-mono/utils";
-import { mizToLL, activeMap } from "@dcs-web-editor-mono/map-projection";
+import { mizToLL, activeMap, TimeZones } from "@dcs-web-editor-mono/map-projection";
 import _ from "lodash";
 import calculator from "../../calculator";
 
@@ -44,10 +44,13 @@ interface Point {
 
 let track = 0;
 let maxAltitude = 0;
+let timeOffset = 0;
 
 export function getWaypoints(group: any, mission: any, dictionary: any, declination: Function) {
   // set map projection
   activeMap(mission.theatre);
+
+  timeOffset = TimeZones[mission.theatre] || 0;
 
   const points = group.route.points;
 
@@ -75,6 +78,7 @@ export function getWaypoints(group: any, mission: any, dictionary: any, declinat
       "distance",
       "heading",
       "time",
+      "ZULU",
       "coords",
       "lat",
       "lon",
@@ -102,7 +106,9 @@ function setDefaults(point: Point, dictionary: any) {
     distance: 0,
   });
 
-  point.name = isTranslation(point.name as string) ? translate(point.name as string, dictionary) : point.name;
+  point.name = isTranslation(point.name as string)
+    ? translate(point.name as string, dictionary)
+    : point.name;
   point.name = point.name || point.action;
 }
 
@@ -119,6 +125,10 @@ export function convertCoordinates(point: Point) {
 function convertTime(point: Point, start_time: number) {
   const s = Math.round(point.ETA + start_time) * 1000 + 1;
   point.time = new Date(s).toISOString().split("T")[1].slice(0, 8);
+  const zulu = new Date();
+
+  zulu.setTime(s - timeOffset * 1000 * 60 * 60);
+  point.ZULU = zulu.toISOString().split("T")[1].slice(0, 8);
 }
 
 function convertAlt(point: Point) {

@@ -31,7 +31,7 @@ const component: Component = {
     const waypointData = getWaypoints(group, mission, dictionary, declination);
     const lastRow = waypointData[waypointData.length - 1];
 
-    state.loadedFuel = calculator.weight(unit.payload.fuel);
+    state.loadedFuel = calculator.weight(unit.payload?.fuel);
 
     state.maxAltitude = _.max(waypointData.map((w) => parseInt(w[2].split(" ")?.[0] || 0)));
     alt = state.setAltitude || state.maxAltitude;
@@ -96,7 +96,16 @@ const component: Component = {
       ],
       ["BINGO", , `=SUM(C1:C5)`, "lbs", "Minimum Mission Fuel", , "=SUM(G1:G5)", "lbs"],
       ["Buffer", , 1000, "lbs", "Additional Margin", , 2000, "lbs"],
-      ["JOKER", , `=SUM(C6 + C7)`, "lbs", "Loaded / Required Fuel", state.loadedFuel, "=(G7 + G6)", "lbs"],
+      [
+        "JOKER",
+        ,
+        `=SUM(C6 + C7)`,
+        "lbs",
+        "Loaded / Required Fuel",
+        state.loadedFuel,
+        "=(G7 + G6)",
+        "lbs",
+      ],
     ];
 
     // delay render to make sure element is present

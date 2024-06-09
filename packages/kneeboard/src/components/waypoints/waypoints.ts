@@ -3,8 +3,12 @@ import Handsontable from "handsontable";
 import { speedFormat, distanceFormat, latLonFormat } from "./waypointFormats";
 import { Component, Context } from "../../types";
 import { getWaypoints } from "./waypointConverter";
+import { TimeZones } from "@dcs-web-editor-mono/map-projection";
 
 import "./waypoints.css";
+import _ from "lodash";
+
+let timeOffset = 0;
 
 const component: Component = {
   id: "waypoints",
@@ -13,12 +17,17 @@ const component: Component = {
 
   render: (c: Context) => {
     const { group, mission, dictionary, declination } = c;
+    timeOffset = TimeZones[mission.theatre] || 0;
 
     const waypointData = getWaypoints(group, mission, dictionary, declination);
 
     // delay render to make sure element is present
     setTimeout(() => {
-      const instance: Handsontable = createWaypointTable(waypointData, "#waypoints-table", group.route?.points);
+      const instance: Handsontable = createWaypointTable(
+        waypointData,
+        "#waypoints-table",
+        group.route?.points
+      );
       csvExport(instance);
     }, 10);
 
@@ -56,11 +65,28 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
 
   const totalTime = new Date(Math.round(ETA * 1000)).toISOString().split("T")[1].slice(0, 8);
 
-  data.push(["", "", maxAltitude + " MAX", null, null, "∑", totalTime, "⧗ Duration", null, null, null, null, ""]);
+  data.push([
+    "TOTAL",
+    "",
+    maxAltitude + " MAX",
+    null,
+    null,
+    "∑",
+    totalTime,
+    "GMT " + (timeOffset > 0 ? "+" : "") + timeOffset,
+    null,
+    null,
+    null,
+    null,
+    "",
+  ]);
+
+  const rowHeaders = _.range(0, points.length);
+  rowHeaders.push("");
 
   const instance = new Handsontable(table, {
     data,
-    colWidths: [120, 50, 70, 40, 35, 25, 55, 180, 60, 50, 50, 50, 170],
+    colWidths: [110, 50, 70, 40, 35, 25, 55, 50, 180, 60, 50, 50, 50, 170],
     height: "auto",
     colHeaders: [
       "Name / Action",
@@ -69,7 +95,8 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
       "SPD",
       "DIST",
       "MH",
-      "ETA",
+      "LOCAL",
+      "ZULU",
       "Coords",
       "Lat",
       "Lon",
@@ -94,6 +121,7 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
       },
       { type: "text" },
       { type: "text" },
+      { type: "text" },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
       { type: "numeric", numericFormat: latLonFormat, readOnly: true },
@@ -106,13 +134,13 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
     preventOverflow: "vertical",
     dropdownMenu: false,
     hiddenColumns: {
-      columns: [1, 8, 9, 10, 11],
+      columns: [1, 9, 10, 11, 12],
       indicators: false,
     },
     contextMenu: true,
     // multiColumnSorting: true,
     filters: false,
-    rowHeaders: false,
+    rowHeaders,
     manualRowMove: false,
     licenseKey: "non-commercial-and-evaluation",
     columnSummary: [

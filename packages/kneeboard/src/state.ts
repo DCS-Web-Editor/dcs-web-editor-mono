@@ -7,4 +7,7 @@ export default {
   DEP: "",
   ARR: "",
   ALT: "",
+  DEP_RUNWAY: "",
+  ARR_RUNWAY: "",
+  ALT_RUNWAY: "",
 };
