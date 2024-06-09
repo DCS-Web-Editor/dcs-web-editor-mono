@@ -140,6 +140,9 @@ export function LLToMiz(lon: number, lat: number): number[] {
   return [x, y];
 }
 
+import timeZones from "./TimeZones.json";
+export const TimeZones = timeZones;
+
 export { COORDINATES } from "./mapCoordinates";
 
 export const mapNames = Object.keys(config);

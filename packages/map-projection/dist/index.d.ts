@@ -30,5 +30,17 @@ export declare function mizToLL(y: number, x: number): {
  * @returns {{x, y}}
  */
 export declare function LLToMiz(lon: number, lat: number): number[];
+export declare const TimeZones: {
+    Caucasus: number;
+    PersianGulf: number;
+    MarianaIslands: number;
+    Nevada: number;
+    SinaiMap: number;
+    Syria: number;
+    TheChannel: number;
+    Normandy: number;
+    Kola: number;
+    Falklands: number;
+};
 export { COORDINATES } from "./mapCoordinates";
 export declare const mapNames: string[];

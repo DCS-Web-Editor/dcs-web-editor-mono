@@ -133,5 +133,7 @@ export function LLToMiz(lon, lat) {
     const [y, x] = projector.forward([lon, lat]);
     return [x, y];
 }
+import timeZones from "./TimeZones.json";
+export const TimeZones = timeZones;
 export { COORDINATES } from "./mapCoordinates";
 export const mapNames = Object.keys(config);
