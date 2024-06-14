@@ -1,5 +1,6 @@
 import * as MGRS from "../lib/mgrs";
 import { convertDistance, getDistance, getRhumbLineBearing } from "geolib";
+import { startCase, toLower } from "lodash";
 export function ConvertDMSToDD(degrees, minutes, seconds, direction) {
     var dd = degrees + minutes / 60 + seconds / (60 * 60);
     if (direction == "S" || direction == "W") {
@@ -266,6 +267,16 @@ export function translate(key, dictionary) {
 //   cache = null;
 //   return retVal;
 // };
+export function getTextType(type, category) {
+    let textType = "";
+    if (category === "ship") {
+        textType = startCase(toLower(type));
+    }
+    else {
+        textType = type.split("_")[0];
+    }
+    return textType;
+}
 export async function getElevationFeet(lat, lng) {
     try {
         const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`, {
@@ -292,4 +303,10 @@ export function renderFrequency(freq) {
 // mission date to JS date
 export function toJsDate(missionDate, missionTime = 0) {
     return new Date(missionDate.Year, missionDate.Month - 1, missionDate.Day, 0, 0, missionTime);
+}
+export function toLatLng(latLon) {
+    return {
+        lat: latLon.lat,
+        lng: latLon.lon,
+    };
 }

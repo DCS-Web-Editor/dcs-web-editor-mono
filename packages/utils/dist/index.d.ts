@@ -87,7 +87,12 @@ export declare function downloadJson(json: any, name: string): void;
 export declare function downloadBlob(url: string, fileName: string): void;
 export declare function isTranslation(name: string): RegExpMatchArray | null;
 export declare function translate(key: string, dictionary: Record<string, string>): string;
+export declare function getTextType(type: string, category: string): string;
 export declare function getElevationFeet(lat: any, lng: any): Promise<string>;
 export { js2Lua } from "./js2lua";
 export declare function renderFrequency(freq: number): string | number;
 export declare function toJsDate(missionDate: any, missionTime?: number): Date;
+export declare function toLatLng(latLon: LatLon): {
+    lat: number;
+    lng: number;
+};

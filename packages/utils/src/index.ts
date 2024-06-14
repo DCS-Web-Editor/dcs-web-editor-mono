@@ -1,12 +1,17 @@
 import * as MGRS from "../lib/mgrs";
 import { convertDistance, getDistance, getRhumbLineBearing } from "geolib";
-import { js2Lua } from "./js2lua";
+import { startCase, toLower } from "lodash";
 export interface LatLon {
   lat: number;
   lon: number;
 }
 
-export function ConvertDMSToDD(degrees: number, minutes: number, seconds: number, direction: string) {
+export function ConvertDMSToDD(
+  degrees: number,
+  minutes: number,
+  seconds: number,
+  direction: string
+) {
   var dd = degrees + minutes / 60 + seconds / (60 * 60);
 
   if (direction == "S" || direction == "W") {
@@ -163,7 +168,9 @@ export function rgbToInt(r: number, g: number, b: number) {
   return ((r * 255) << 16) + ((g * 255) << 8) + b * 255;
 }
 export function toRgba(r: number, g: number, b: number, a: number) {
-  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(a * 255)})`;
+  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(
+    a * 255
+  )})`;
 }
 
 function componentToHex(c: number) {
@@ -321,6 +328,16 @@ export function translate(key: string, dictionary: Record<string, string>) {
 //   return retVal;
 // };
 
+export function getTextType(type: string, category: string) {
+  let textType = "";
+  if (category === "ship") {
+    textType = startCase(toLower(type));
+  } else {
+    textType = type.split("_")[0];
+  }
+  return textType;
+}
+
 export async function getElevationFeet(lat: any, lng: any) {
   try {
     const elevationData = await fetch(
@@ -349,4 +366,11 @@ export function renderFrequency(freq: number) {
 // mission date to JS date
 export function toJsDate(missionDate: any, missionTime: number = 0) {
   return new Date(missionDate.Year, missionDate.Month - 1, missionDate.Day, 0, 0, missionTime);
+}
+
+export function toLatLng(latLon: LatLon) {
+  return {
+    lat: latLon.lat,
+    lng: latLon.lon,
+  };
 }
