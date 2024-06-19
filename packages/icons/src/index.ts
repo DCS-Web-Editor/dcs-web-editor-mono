@@ -3,7 +3,14 @@ import airdrome_class_2 from "./small/airdrome_class_2.png";
 import airdrome_class_3 from "./small/airdrome_class_3.png";
 import airdrome_class_4 from "./small/airdrome_class_none.png";
 import airdrome_class_0 from "./small/airdrome_class_none.png";
-import beacon_without_marker from "./small/beacon_without_marker.png";
+import HOMER from "./small/beacon_without_marker.png";
+import AIRPORT_HOMER_WITH_MARKER from "./small/beacon_with_marker.png";
+import VOR_DME from "./small/beacon_VOR-DME.png";
+import VOR from "./small/beacon_VOR.png";
+import VORTAC from "./small/beacon_VORTAC.png";
+import TACAN from "./small/beacon_tacan.png";
+import RSBN from "./small/beacon_RSBN.png";
+import DME from "./small/beacon_DME.png";
 import P0091000015 from "./small/P91000015.png";
 import P0091000024 from "./small/P91000024.png";
 import P0091000004 from "./small/P91000004.png";
@@ -109,7 +116,15 @@ const toExport: any = {
     airdrome_class_3,
     airdrome_class_4,
     airdrome_class_0,
-    beacon_without_marker,
+    HOMER,
+    AIRPORT_HOMER: HOMER,
+    AIRPORT_HOMER_WITH_MARKER,
+    VOR_DME,
+    DME,
+    VOR,
+    VORTAC,
+    TACAN,
+    RSBN,
     P0091000015,
     P0091000024,
     P0091000004,
