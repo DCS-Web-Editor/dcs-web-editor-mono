@@ -1,53 +1,52 @@
 .leaflet-control {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-a.polyline-measure-controlOnBgColor, a.polyline-measure-controlOnBgColor:hover {
-    background-color: #1abc9c;
+a.polyline-measure-controlOnBgColor,
+a.polyline-measure-controlOnBgColor:hover {
+  background-color: #1abc9c;
 }
 
 .polyline-measure-unicode-icon {
-    font-size: 19px;
-    font-weight: bold;
+  font-size: 19px;
+  font-weight: bold;
 }
 
 a.polyline-measure-clearControl:active {
-    background-color: #f88;
+  background-color: #f88;
 }
 
 .polyline-measure-tooltip {
-    font: 10px Arial, Helvetica, sans-serif;
-    line-height: 10px;
-    color: #cadad7;
-    background-color: #293949;
-    border-radius: 3px;
-    box-shadow: 1px 1px 4px #23313f;
-    margin: 0;
-    padding: 2px;
-    width: auto !important;
-    height: auto !important;
-    white-space: nowrap;
-    text-align: right;
+  font: 10px Arial, Helvetica, sans-serif;
+  line-height: 10px;
+  color: #cadad7;
+  background-color: #00000055;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px #00000055;
+  margin: 0;
+  padding: 2px;
+  width: auto !important;
+  height: auto !important;
+  white-space: nowrap;
+  text-align: right;
 }
 
-
-
 .polyline-measure-tooltip-end {
-    background-color: #cadad7;
-    color: #293949;
+  background-color: #cadad7;
+  color: #293949;
 }
 
 .polyline-measure-tooltip-total {
-    color: #1abc9c;
-    font-weight: bold;
+  color: #b1b6c2;
 }
 
 .polyline-measure-tooltip-difference {
-    color: #8d9199;
-    /* font-style: italic; */
+  color: #1abc9c;
+  font-weight: bold;
+  /* font-style: italic; */
 }
 
 .polyline-measure-popupTooltip {
-    font: 11px Arial, Helvetica, sans-serif;
-    line-height: 11px;
+  font: 11px Arial, Helvetica, sans-serif;
+  line-height: 11px;
 }
