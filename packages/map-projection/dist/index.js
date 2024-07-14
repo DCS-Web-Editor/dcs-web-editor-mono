@@ -79,6 +79,12 @@ const config = {
         false_northing: -7543625,
         scale_factor: 0.9996,
     },
+    Afghanistan: {
+        central_meridian: 63,
+        false_easting: -300150,
+        false_northing: -3759657,
+        scale_factor: 0.9996,
+    },
 };
 /**
  * proj4 projector
