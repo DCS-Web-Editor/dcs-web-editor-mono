@@ -226,7 +226,10 @@ export function renderKneeboard(
   setTimeout(() => switchTheme({ target: { value: storedTheme } }), 10);
 
   // render all registered components
-  setTimeout(() => renderRegisteredComponents(registeredComponents, context, options.noControls), 10);
+  setTimeout(
+    () => renderRegisteredComponents(registeredComponents, context, options.noControls),
+    10
+  );
   return refresh;
 }
 

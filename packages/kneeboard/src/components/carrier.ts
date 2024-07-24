@@ -16,9 +16,13 @@ const component: Component = {
 
             // TACAN
             const tacanTasks = group.route?.points
-              ?.flatMap((p) => p.task.params?.tasks?.filter((t) => t.id === "WrappedAction"))
-              .filter((t) => t.params?.action?.id === "ActivateBeacon")
-              .map((t) => t.params?.action?.params);
+              ?.flatMap(
+                (p) =>
+                  p?.task.params?.tasks?.filter &&
+                  p.task.params?.tasks?.filter((t) => t.id === "WrappedAction")
+              )
+              .filter((t) => t?.params?.action?.id === "ActivateBeacon")
+              .map((t) => t?.params?.action?.params);
             const tacanTask = tacanTasks[0];
             const tacan = tacanTask
               ? `<span class="tacan">TACAN ${tacanTask.callsign} ${tacanTask.channel}${tacanTask.modeChannel}</span>`
@@ -26,9 +30,13 @@ const component: Component = {
 
             // ICLS
             const iclsTasks = group.route?.points
-              ?.flatMap((p) => p.task.params?.tasks?.filter((t) => t.id === "WrappedAction"))
-              .filter((t) => t.params?.action?.id === "ActivateICLS")
-              .map((t) => t.params?.action?.params);
+              ?.flatMap(
+                (p) =>
+                  p?.task.params?.tasks?.filter &&
+                  p.task.params?.tasks?.filter((t) => t.id === "WrappedAction")
+              )
+              .filter((t) => t?.params?.action?.id === "ActivateICLS")
+              .map((t) => t?.params?.action?.params);
             const iclsTask = iclsTasks[0];
             const icls = iclsTask ? `<span class="ils">ICLS CHAN ${iclsTask.channel} </span>` : "";
 

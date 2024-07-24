@@ -21,13 +21,16 @@ const component: Component = {
         unit.payload.gun
       }%
     
-    <ul>${unit.payload.pylons
-      ?.map((pylon, i) => {
-        if (!pylon) return `<li>---</li>`;
-        const weapon = window.JSON_DATA.Weapons.find((w) => w.CLSID === pylon.CLSID);
-        return `<li>${i + 1}★ ${weapon?.displayName || "???"}</li>`;
-      })
-      .join("\n")}
+    <ul>${
+      unit.payload?.pylons?.map &&
+      unit.payload?.pylons
+        ?.map((pylon, i) => {
+          if (!pylon) return `<li>---</li>`;
+          const weapon = window.JSON_DATA.Weapons.find((w) => w.CLSID === pylon.CLSID);
+          return `<li>${i + 1}★ ${weapon?.displayName || "???"}</li>`;
+        })
+        .join("\n")
+    }
     </ul>`
     );
   },

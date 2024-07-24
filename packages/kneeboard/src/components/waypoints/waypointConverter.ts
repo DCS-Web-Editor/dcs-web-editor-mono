@@ -158,7 +158,7 @@ function calculateDistance(point: Point, prevPoint: Point) {
 function calculateHeading(point: Point, prevPoint: Point, declination: Function, missionDate: any) {
   if (!prevPoint) return;
   const date = toJsDate(missionDate, 0);
-  const dec = Math.round(declination(prevPoint.lat, prevPoint.lon, 0, date));
+  const dec = Math.round(declination ? declination(prevPoint.lat, prevPoint.lon, 0, date) : 0);
 
   point.heading = calcBearing(prevPoint as LatLon, point as LatLon) + dec; // nm
 }

@@ -14,9 +14,13 @@ const component: Component = {
         .map((group) => {
           if (group.task === "Refueling") {
             const tasks = group.route?.points
-              ?.flatMap((p) => p.task.params?.tasks?.filter((t) => t.id === "WrappedAction"))
-              .filter((t) => t.params?.action?.id === "ActivateBeacon")
-              .map((t) => t.params?.action?.params);
+              ?.flatMap(
+                (p) =>
+                  p.task?.params?.tasks?.filter &&
+                  p.task?.params?.tasks?.filter((t) => t.id === "WrappedAction")
+              )
+              .filter((t) => t?.params?.action?.id === "ActivateBeacon")
+              .map((t) => t?.params?.action?.params);
             const task = tasks[0] || {};
             // console.log(task);
 
