@@ -134,7 +134,8 @@ function convertTime(point: Point, start_time: number) {
 function convertAlt(point: Point) {
   const alt = Math.round(calculator.altitude(point.alt));
   point.maxAltitude = maxAltitude = alt > maxAltitude ? alt : maxAltitude;
-  point.altitude = alt + (point.alt_type === "BARO" ? " MSL" : " AGL");
+  point.altitude =
+    point.alt === 2000 ? "DEFAULT" : alt + (point.alt_type === "BARO" ? " MSL" : " AGL");
 }
 
 function convertSpeed(point: Point) {
