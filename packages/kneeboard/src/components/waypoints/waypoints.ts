@@ -7,6 +7,7 @@ import { TimeZones } from "@dcs-web-editor-mono/map-projection";
 
 import "./waypoints.css";
 import _ from "lodash";
+import calculator from "../../calculator";
 
 let timeOffset = 0;
 
@@ -63,12 +64,17 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
   if (!table) throw new Error("Could not find table element: " + id);
   const { maxAltitude, ETA } = points[points.length - 1];
 
-  const totalTime = new Date(Math.round(ETA * 1000)).toISOString().split("T")[1].slice(0, 8);
+  const totalTime = new Date(Math.round(ETA * 1000))
+    .toISOString()
+    .split("T")[1]
+    .slice(0, 8);
 
   data.push([
     "TOTAL",
     "",
-    maxAltitude + " MAX",
+    maxAltitude === 2000
+      ? "DEFAULT"
+      : calculator.altitude(maxAltitude) + " MAX",
     null,
     null,
     "∑",

@@ -13,11 +13,6 @@ export function renderRegisteredComponents(
     // render only specific component?
     if (only && component.id !== only) return;
 
-    if (component.hasContent && !component.hasContent(c)) {
-      const section = document.getElementById(component.id)!;
-      section.classList.add("hidden", "no-print");
-    }
-
     if (component.template !== false || noControls === false) {
       updateComponentContent(component.id, component.render(c));
     }
@@ -67,7 +62,10 @@ function toggleClickHandler(e: Event) {
   refresh(id);
 }
 
-async function updateComponentContent(id: string, value: string | Promise<any>) {
+async function updateComponentContent(
+  id: string,
+  value: string | Promise<any>
+) {
   if ((value as Promise<any>)?.then) value = await value;
   const c = document.getElementById(id);
   if (c) c.innerHTML = value as string;
@@ -83,6 +81,22 @@ function cleanupCharts(id: string) {
   if (id === "d-profile") {
     window.distanceChart?.destroy();
     delete window.distanceChart;
-    setTimeout(() => document.getElementById("waypoint-distance-chart")?.remove(), 10);
+    setTimeout(
+      () => document.getElementById("waypoint-distance-chart")?.remove(),
+      10
+    );
   }
+}
+
+export function hideEmptyComponents(
+  registeredComponents: Component[],
+  c: Context
+) {
+  registeredComponents.forEach((component, i) => {
+    if (component.hasContent && !component.hasContent(c)) {
+      const section = document.getElementById(component.id)!;
+      section.classList.add("hidden", "no-print");
+      // save("hidden-" + component.id, true);
+    }
+  });
 }

@@ -33,8 +33,10 @@ const component: Component = {
 
     state.loadedFuel = calculator.weight(unit.payload?.fuel);
 
-    state.maxAltitude = _.max(waypointData.map((w) => parseInt(w[2].split(" ")?.[0] || 0)));
-    alt = state.setAltitude || state.maxAltitude;
+    const points = group.route.points;
+    state.maxAltitude ||= Math.round(_.max(points.map((p) => p.alt)));
+
+    alt = state.setAltitude || calculator.altitude(state.maxAltitude);
     state.maxDistance = waypointData.reduce((a, w) => w[4] + a, 0);
 
     let type = c.unit.type;
@@ -71,7 +73,13 @@ const component: Component = {
     const safety = 1.5;
 
     const tableData = [
-      ["FFR fuel flow rate", lbs_nm.toFixed(1), "lbs / nm", lbs_min.toFixed(0), "lbs / min"],
+      [
+        "FFR fuel flow rate",
+        lbs_nm.toFixed(1),
+        "lbs / nm",
+        lbs_min.toFixed(0),
+        "lbs / min",
+      ],
       ["TAXI", , 500, "lbs", "Joker", , "=C8", "lbs"],
       ["Go-Around", , 800, "lbs", "Taxi & Departure", , 1000, "lbs"],
       [
@@ -94,7 +102,16 @@ const component: Component = {
         `=F5 * D1 * ${safety}`,
         "lbs",
       ],
-      ["BINGO", , `=SUM(C1:C5)`, "lbs", "Minimum Mission Fuel", , "=SUM(G1:G5)", "lbs"],
+      [
+        "BINGO",
+        ,
+        `=SUM(C1:C5)`,
+        "lbs",
+        "Minimum Mission Fuel",
+        ,
+        "=SUM(G1:G5)",
+        "lbs",
+      ],
       ["Buffer", , 1000, "lbs", "Additional Margin", , 2000, "lbs"],
       [
         "JOKER",
@@ -115,7 +132,9 @@ const component: Component = {
 
     return `<h4 class="center">FUEL</h4> ${type} 
     Altitude: <input id="fuel-altitude" style="width: 3rem;" value="${alt}" onchange="updateFuel()"/>
-    feet. TAS: ${tas.toFixed(0)}kts <em class="no-print" data-html2canvas-ignore>${msg}</em>
+    feet. TAS: ${tas.toFixed(
+      0
+    )}kts <em class="no-print" data-html2canvas-ignore>${msg}</em>
     <div id="fuel-table"></div>`;
   },
 };

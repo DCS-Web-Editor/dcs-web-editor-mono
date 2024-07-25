@@ -3,7 +3,10 @@ import "handsontable/dist/handsontable.min.css";
 import _ from "lodash";
 
 // Controls
-import themeSelect, { DEFAULT_THEME, switchTheme } from "./components/controls/themeSelect";
+import themeSelect, {
+  DEFAULT_THEME,
+  switchTheme,
+} from "./components/controls/themeSelect";
 import metricSelect from "./components/controls/metricSelect";
 import coordinateSelect from "./components/controls/coordinateSelect";
 import spacingSelect from "./components/controls/spacingSelect";
@@ -38,7 +41,7 @@ import notes from "./components/notes";
 import { load } from "./cache";
 import "./styles.css";
 import "./accordion.css";
-import { renderRegisteredComponents } from "./render";
+import { renderRegisteredComponents, hideEmptyComponents } from "./render";
 import { Component, Context } from "./types";
 import state from "./state";
 
@@ -225,14 +228,23 @@ export function renderKneeboard(
   const storedTheme = load("theme") || DEFAULT_THEME;
   setTimeout(() => switchTheme({ target: { value: storedTheme } }), 10);
 
+  // hide empty components
+  hideEmptyComponents(registeredComponents, context);
+
   // render all registered components
-  setTimeout(
-    () => renderRegisteredComponents(registeredComponents, context, options.noControls),
-    10
-  );
+  setTimeout(() => {
+    renderRegisteredComponents(
+      registeredComponents,
+      context,
+      options.noControls
+    );
+  }, 10);
   return refresh;
 }
 
 export function refresh(only = null) {
-  setTimeout(() => renderRegisteredComponents(registeredComponents, context, true, only), 10);
+  setTimeout(
+    () => renderRegisteredComponents(registeredComponents, context, true, only),
+    10
+  );
 }

@@ -1,5 +1,5 @@
 export default {
-  maxAltitude: 30000,
+  maxAltitude: 0,
   setAltitude: 0,
   maxDistance: 999,
   loadedFuel: 0,
