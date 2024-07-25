@@ -11,36 +11,44 @@ const component: Component = {
 
     const tankers = `<div contenteditable><ul>${
       country.plane?.group
-        .map((group) => {
-          if (group.task === "Refueling") {
-            const tasks = group.route?.points
-              ?.flatMap(
-                (p) =>
-                  p.task?.params?.tasks?.filter &&
-                  p.task?.params?.tasks?.filter((t) => t.id === "WrappedAction")
-              )
-              .filter((t) => t?.params?.action?.id === "ActivateBeacon")
-              .map((t) => t?.params?.action?.params);
-            const task = tasks[0] || {};
-            // console.log(task);
-
-            const unit = group.units[0];
-
-            const callsign = unit.callsign?.name || unit.callsign;
-            const tacan = `<span class="tacan">TACAN ${task.callsign} ${task.channel}${task.modeChannel}</span>`;
-            return `<li><span class="callsign">${
-              _checked ? group.name : callsign
-            }</span> <b>${translate(group.name, dictionary)}</b> <span class="type">${
-              unit.type
-            }</span> <span class="freq">${group.frequency}</span> ${tacan}</li>`;
-          } else return false;
-        })
+        .map((group) => renderTanker(group, dictionary, _checked))
         .filter((i) => i)
         .join("") || "No tanker available"
     }</ul></div>`;
 
     return title + tankers;
   },
+  hasContent: (c: Context) => {
+    const { country } = c;
+
+    country.plane?.group.filter((g) => g.task === "Refueling").length;
+  },
 };
+
+function renderTanker(group, dictionary, _checked) {
+  if (group.task === "Refueling") {
+    const tasks = group.route?.points
+      ?.flatMap(
+        (p) =>
+          p.task?.params?.tasks?.filter &&
+          p.task?.params?.tasks?.filter((t) => t.id === "WrappedAction")
+      )
+      .filter((t) => t?.params?.action?.id === "ActivateBeacon")
+      .map((t) => t?.params?.action?.params);
+    const task = tasks[0] || {};
+    // console.log(task);
+
+    const unit = group.units[0];
+
+    const callsign = unit.callsign?.name || unit.callsign;
+    const tacan = `<span class="tacan">TACAN ${task.callsign} ${task.channel}${task.modeChannel}</span>`;
+    return `<li><span class="callsign">${_checked ? group.name : callsign}</span> <b>${translate(
+      group.name,
+      dictionary
+    )}</b> <span class="type">${unit.type}</span> <span class="freq">${
+      group.frequency
+    }</span> ${tacan}</li>`;
+  } else return false;
+}
 
 export default component;

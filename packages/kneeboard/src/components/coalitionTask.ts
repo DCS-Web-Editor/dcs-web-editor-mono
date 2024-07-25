@@ -12,6 +12,10 @@ const component: Component = {
       c.coalitionName
     )} TASK</h4><div contenteditable>${translate(c.mission[taskName], c.dictionary)}</div>`;
   },
+  hasContent: (c: Context) => {
+    const taskName = `description${startCase(c.coalitionName)}Task`;
+    return translate(c.mission[taskName], c.dictionary);
+  },
 };
 
 export default component;

@@ -3,6 +3,7 @@ export interface Component {
   render: (c: Context) => string | Promise<any>;
   id: string;
   control?: string;
+  hasContent?: Function;
 }
 
 export interface Context {

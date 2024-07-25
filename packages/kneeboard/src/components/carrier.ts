@@ -9,50 +9,56 @@ const component: Component = {
     const title = `<h4 class="center">CARRIER</h4>`;
     const carriers = `<div contenteditable><ul>${
       country.ship?.group
-        .map((group) => {
-          if (group.route) {
-            const unit = group.units[0];
-            const frequency = `<span class="freq">${unit.frequency}</span>`;
-
-            // TACAN
-            const tacanTasks = group.route?.points
-              ?.flatMap(
-                (p) =>
-                  p?.task.params?.tasks?.filter &&
-                  p.task.params?.tasks?.filter((t) => t.id === "WrappedAction")
-              )
-              .filter((t) => t?.params?.action?.id === "ActivateBeacon")
-              .map((t) => t?.params?.action?.params);
-            const tacanTask = tacanTasks[0];
-            const tacan = tacanTask
-              ? `<span class="tacan">TACAN ${tacanTask.callsign} ${tacanTask.channel}${tacanTask.modeChannel}</span>`
-              : "";
-
-            // ICLS
-            const iclsTasks = group.route?.points
-              ?.flatMap(
-                (p) =>
-                  p?.task.params?.tasks?.filter &&
-                  p.task.params?.tasks?.filter((t) => t.id === "WrappedAction")
-              )
-              .filter((t) => t?.params?.action?.id === "ActivateICLS")
-              .map((t) => t?.params?.action?.params);
-            const iclsTask = iclsTasks[0];
-            const icls = iclsTask ? `<span class="ils">ICLS CHAN ${iclsTask.channel} </span>` : "";
-
-            return `<li><b>${translate(group.name, dictionary)}</b> <span class="type">${
-              unit.type
-            }</span> BRC <span class="course">${toDeg(
-              unit.heading - toRad(10)
-            )}°</span>  ${frequency.toLocaleString()}, ${tacan} ${icls}</li>`;
-          } else return false;
-        })
+        .map((group) => renderShip(group, dictionary))
         .filter((i) => i)
         .join("") || "No carrier available"
     }</ul></div>`;
 
     return title + carriers;
   },
+  hasContent: (c: Context) => {
+    const { country } = c;
+    return country.ship?.group.filter((g) => g.route).join("");
+  },
 };
+
+function renderShip(group, dictionary) {
+  if (group.route) {
+    const unit = group.units[0];
+    const frequency = `<span class="freq">${unit.frequency}</span>`;
+
+    // TACAN
+    const tacanTasks = group.route?.points
+      ?.flatMap(
+        (p) =>
+          p?.task.params?.tasks?.filter &&
+          p.task.params?.tasks?.filter((t) => t.id === "WrappedAction")
+      )
+      .filter((t) => t?.params?.action?.id === "ActivateBeacon")
+      .map((t) => t?.params?.action?.params);
+    const tacanTask = tacanTasks[0];
+    const tacan = tacanTask
+      ? `<span class="tacan">TACAN ${tacanTask.callsign} ${tacanTask.channel}${tacanTask.modeChannel}</span>`
+      : "";
+
+    // ICLS
+    const iclsTasks = group.route?.points
+      ?.flatMap(
+        (p) =>
+          p?.task.params?.tasks?.filter &&
+          p.task.params?.tasks?.filter((t) => t.id === "WrappedAction")
+      )
+      .filter((t) => t?.params?.action?.id === "ActivateICLS")
+      .map((t) => t?.params?.action?.params);
+    const iclsTask = iclsTasks[0];
+    const icls = iclsTask ? `<span class="ils">ICLS CHAN ${iclsTask.channel} </span>` : "";
+
+    return `<li><b>${translate(group.name, dictionary)}</b> <span class="type">${
+      unit.type
+    }</span> BRC <span class="course">${toDeg(
+      unit.heading - toRad(10)
+    )}°</span>  ${frequency.toLocaleString()}, ${tacan} ${icls}</li>`;
+  } else return false;
+}
 
 export default component;

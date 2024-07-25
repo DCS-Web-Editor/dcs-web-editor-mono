@@ -12,6 +12,9 @@ const component: Component = {
 
     return `<h4 class="center">BRIEFING</h4><div contenteditable>${text}</div>`;
   },
+  hasContent: (c: Context) => {
+    return translate(c.mission.descriptionText, c.dictionary);
+  },
 };
 
 export default component;

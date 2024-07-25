@@ -13,6 +13,11 @@ export function renderRegisteredComponents(
     // render only specific component?
     if (only && component.id !== only) return;
 
+    if (component.hasContent && !component.hasContent(c)) {
+      const section = document.getElementById(component.id)!;
+      section.classList.add("hidden", "no-print");
+    }
+
     if (component.template !== false || noControls === false) {
       updateComponentContent(component.id, component.render(c));
     }
