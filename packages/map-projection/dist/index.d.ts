@@ -16,9 +16,12 @@ export declare function activeMap(mapName: string): any;
  * @param {number} x
  * @returns {{ lat: number; lon: number; }}
  */
-export declare function mizToLL(y: number, x: number): {
-    lat: any;
-    lon: any;
+export declare function mizToLL(
+  y: number,
+  x: number
+): {
+  lat: any;
+  lon: any;
 };
 /**
  * Lat Lon to DCS x y mission format
@@ -31,16 +34,16 @@ export declare function mizToLL(y: number, x: number): {
  */
 export declare function LLToMiz(lon: number, lat: number): number[];
 export declare const TimeZones: {
-    Caucasus: number;
-    PersianGulf: number;
-    MarianaIslands: number;
-    Nevada: number;
-    SinaiMap: number;
-    Syria: number;
-    TheChannel: number;
-    Normandy: number;
-    Kola: number;
-    Falklands: number;
+  Caucasus: number;
+  PersianGulf: number;
+  MarianaIslands: number;
+  Nevada: number;
+  SinaiMap: number;
+  Syria: number;
+  TheChannel: number;
+  Normandy: number;
+  Kola: number;
+  Falklands: number;
 };
 export { COORDINATES } from "./mapCoordinates";
 export declare const mapNames: string[];
