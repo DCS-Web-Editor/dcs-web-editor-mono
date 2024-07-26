@@ -4,7 +4,7 @@ import "./fuel.css";
 
 import { Component, Context } from "../../types";
 import { fuelRates } from "./fuelData";
-import { distanceFormat, speedFormat } from "../waypoints/waypointFormats";
+import { distanceFormat } from "../waypoints/waypointFormats";
 import { fuelFormat } from "./fuelFormats";
 import { refresh } from "../..";
 import state from "../../state";

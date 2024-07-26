@@ -8,7 +8,6 @@ import { TimeZones } from "@dcs-web-editor-mono/map-projection";
 import "./waypoints.css";
 import _ from "lodash";
 import calculator from "../../calculator";
-import { findConfigFile } from "typescript";
 
 let timeOffset = 0;
 
