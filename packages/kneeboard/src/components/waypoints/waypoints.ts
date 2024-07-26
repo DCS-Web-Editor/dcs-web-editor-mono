@@ -1,13 +1,14 @@
 import Handsontable from "handsontable";
 // import { HyperFormula } from "hyperformula";
-import { speedFormat, distanceFormat, latLonFormat } from "./waypointFormats";
+import { speedFormat, distanceFormat, latLonFormat, hdgFormat } from "./waypointFormats";
 import { Component, Context } from "../../types";
-import { getWaypoints } from "./waypointConverter";
+import { findCol, getWaypoints } from "./waypointConverter";
 import { TimeZones } from "@dcs-web-editor-mono/map-projection";
 
 import "./waypoints.css";
 import _ from "lodash";
 import calculator from "../../calculator";
+import { findConfigFile } from "typescript";
 
 let timeOffset = 0;
 
@@ -59,25 +60,40 @@ function csvExport(instance: Handsontable) {
   });
 }
 
+const colHeaders = [
+  "Name / Action",
+  "Type",
+  "MHDG",
+  "DIST",
+  "Altitude",
+  "SPD",
+  "LOCAL",
+  "ZULU",
+  "Coords",
+  "Lat",
+  "Lon",
+  "X",
+  "Y",
+  "Notes",
+];
+
 function createWaypointTable(data: any[], id: string, points: any[]) {
   const table = document.querySelector(id)!;
   if (!table) throw new Error("Could not find table element: " + id);
   const { maxAltitude, ETA } = points[points.length - 1];
 
-  const totalTime = new Date(Math.round(ETA * 1000))
+  const totalTime = new Date(Math.round((ETA || 0) * 1000))
     .toISOString()
     .split("T")[1]
-    .slice(0, 8);
+    ?.slice(0, 8);
 
   data.push([
-    "TOTAL",
+    "TOTAL/MAX",
     "",
-    maxAltitude === 2000
-      ? "DEFAULT"
-      : calculator.altitude(maxAltitude) + " MAX",
     null,
     null,
-    "∑",
+    maxAltitude === 2000 ? "DEFAULT" : calculator.altitude(maxAltitude) + " MAX",
+    null,
     totalTime,
     "GMT " + (timeOffset > 0 ? "+" : "") + timeOffset,
     null,
@@ -92,34 +108,26 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
 
   const instance = new Handsontable(table, {
     data,
-    colWidths: [110, 50, 70, 40, 35, 25, 55, 50, 180, 60, 50, 50, 50, 170],
+    colWidths: [110, 35, 35, 40, 70, 25, 55, 50, 180, 60, 50, 50, 50, 170],
     height: "auto",
-    colHeaders: [
-      "Name / Action",
-      "Type",
-      "Altitude",
-      "SPD",
-      "DIST",
-      "MH",
-      "LOCAL",
-      "ZULU",
-      "Coords",
-      "Lat",
-      "Lon",
-      "X",
-      "Y",
-      "Notes",
-    ],
+    colHeaders,
     columns: [
       { type: "text" },
       { type: "text" },
-      { type: "text" },
-      { type: "numeric", numericFormat: speedFormat },
+      // MHDG
+      {
+        type: "numeric",
+        numericFormat: hdgFormat,
+      },
+      // DIST
       {
         type: "numeric",
         numericFormat: distanceFormat,
         readOnly: true,
       },
+      // ALT
+      { type: "text" },
+      // SPD
       {
         type: "numeric",
         numericFormat: speedFormat,
@@ -140,41 +148,35 @@ function createWaypointTable(data: any[], id: string, points: any[]) {
     preventOverflow: "vertical",
     dropdownMenu: false,
     hiddenColumns: {
-      columns: [1, 9, 10, 11, 12],
+      columns: [findCol("type"), findCol("lat"), findCol("lon"), findCol("x"), findCol("y")],
       indicators: false,
     },
     contextMenu: true,
     // multiColumnSorting: true,
     filters: false,
     rowHeaders,
+    rowHeaderWidth: 20,
     manualRowMove: false,
     licenseKey: "non-commercial-and-evaluation",
     columnSummary: [
       {
-        //speed
-        sourceColumn: 3,
+        // SPD
+        sourceColumn: findCol("cspeed"),
         destinationRow: 0,
-        destinationColumn: 3,
+        destinationColumn: findCol("cspeed"),
         reversedRowCoords: true,
         type: "max",
         forceNumeric: true,
       },
       {
-        // distance
-        sourceColumn: 4,
+        // DIST
+        sourceColumn: findCol("distance"),
         destinationRow: 0,
-        destinationColumn: 4,
+        destinationColumn: findCol("distance"),
         reversedRowCoords: true,
         type: "sum",
         forceNumeric: true,
       },
-      // {
-      //   // heading
-      //   destinationRow: 0,
-      //   destinationColumn: 5,
-      //   reversedRowCoords: true,
-      //   type: 'average',
-      // },
     ],
   });
 

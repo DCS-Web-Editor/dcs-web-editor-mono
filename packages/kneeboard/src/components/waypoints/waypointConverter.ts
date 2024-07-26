@@ -8,11 +8,7 @@ import {
   KM_TO_NM,
   toJsDate,
 } from "@dcs-web-editor-mono/utils";
-import {
-  mizToLL,
-  activeMap,
-  TimeZones,
-} from "@dcs-web-editor-mono/map-projection";
+import { mizToLL, activeMap, TimeZones } from "@dcs-web-editor-mono/map-projection";
 import _ from "lodash";
 import calculator from "../../calculator";
 
@@ -50,12 +46,29 @@ let track = 0;
 let maxAltitude = 0;
 let timeOffset = 0;
 
-export function getWaypoints(
-  group: any,
-  mission: any,
-  dictionary: any,
-  declination: Function
-) {
+export const COLUMNS = [
+  "name",
+  "type",
+  "heading",
+  "distance",
+  "altitude",
+  "cspeed",
+  "time",
+  "ZULU",
+  "coords",
+  "lat",
+  "lon",
+  "x",
+  "y",
+];
+
+export function findCol(name: string) {
+  const col = COLUMNS.findIndex((i) => i === name);
+  if (col === -1) throw new Error(`Column ${name} not found`);
+  return col;
+}
+
+export function getWaypoints(group: any, mission: any, dictionary: any, declination: Function) {
   // set map projection
   activeMap(mission.theatre);
 
@@ -79,21 +92,7 @@ export function getWaypoints(
 
     previousPoint = point;
 
-    const picked = _.pick(point, [
-      "name",
-      "type",
-      "altitude",
-      "cspeed",
-      "distance",
-      "heading",
-      "time",
-      "ZULU",
-      "coords",
-      "lat",
-      "lon",
-      "x",
-      "y",
-    ]);
+    const picked = _.pick(point, COLUMNS);
 
     const values = Object.values(picked);
     // Notes
@@ -144,13 +143,10 @@ function convertAlt(point: Point) {
   const convertedAlt = Math.round(calculator.altitude(point.alt));
   const roundedAlt = Math.round(point.alt);
 
-  point.maxAltitude = maxAltitude =
-    roundedAlt > maxAltitude ? roundedAlt : maxAltitude;
+  point.maxAltitude = maxAltitude = roundedAlt > maxAltitude ? roundedAlt : maxAltitude;
 
   point.altitude =
-    point.alt === 2000
-      ? "DEFAULT"
-      : convertedAlt + (point.alt_type === "BARO" ? " MSL" : " AGL");
+    point.alt === 2000 ? "DEFAULT" : convertedAlt + (point.alt_type === "BARO" ? " MSL" : " AGL");
 }
 
 function convertSpeed(point: Point) {
@@ -171,17 +167,10 @@ function calculateDistance(point: Point, prevPoint: Point) {
   point.track = track;
 }
 
-function calculateHeading(
-  point: Point,
-  prevPoint: Point,
-  declination: Function,
-  missionDate: any
-) {
+function calculateHeading(point: Point, prevPoint: Point, declination: Function, missionDate: any) {
   if (!prevPoint) return;
   const date = toJsDate(missionDate, 0);
-  const dec = Math.round(
-    declination ? declination(prevPoint.lat, prevPoint.lon, 0, date) : 0
-  );
+  const dec = Math.round(declination ? declination(prevPoint.lat, prevPoint.lon, 0, date) : 0);
 
   point.heading = calcBearing(prevPoint as LatLon, point as LatLon) + dec; // nm
 }

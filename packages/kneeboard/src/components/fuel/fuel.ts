@@ -8,7 +8,7 @@ import { distanceFormat, speedFormat } from "../waypoints/waypointFormats";
 import { fuelFormat } from "./fuelFormats";
 import { refresh } from "../..";
 import state from "../../state";
-import { getWaypoints } from "../waypoints/waypointConverter";
+import { getWaypoints, findCol } from "../waypoints/waypointConverter";
 import _ from "lodash";
 import calculator from "../../calculator";
 
@@ -29,7 +29,7 @@ const component: Component = {
 
     const { group, mission, dictionary, unit, declination } = c;
     const waypointData = getWaypoints(group, mission, dictionary, declination);
-    const lastRow = waypointData[waypointData.length - 1];
+    // const lastRow = waypointData[waypointData.length - 1];
 
     state.loadedFuel = calculator.weight(unit.payload?.fuel);
 
@@ -37,7 +37,7 @@ const component: Component = {
     state.maxAltitude ||= Math.round(_.max(points.map((p) => p.alt)));
 
     alt = state.setAltitude || calculator.altitude(state.maxAltitude);
-    state.maxDistance = waypointData.reduce((a, w) => w[4] + a, 0);
+    state.maxDistance = waypointData.reduce((a, w) => w[findCol("distance")] + a, 0);
 
     let type = c.unit.type;
     let TYPE = type.toUpperCase();
@@ -73,13 +73,7 @@ const component: Component = {
     const safety = 1.5;
 
     const tableData = [
-      [
-        "FFR fuel flow rate",
-        lbs_nm.toFixed(1),
-        "lbs / nm",
-        lbs_min.toFixed(0),
-        "lbs / min",
-      ],
+      ["FFR fuel flow rate", lbs_nm.toFixed(1), "lbs / nm", lbs_min.toFixed(0), "lbs / min"],
       ["TAXI", , 500, "lbs", "Joker", , "=C8", "lbs"],
       ["Go-Around", , 800, "lbs", "Taxi & Departure", , 1000, "lbs"],
       [
@@ -102,16 +96,7 @@ const component: Component = {
         `=F5 * D1 * ${safety}`,
         "lbs",
       ],
-      [
-        "BINGO",
-        ,
-        `=SUM(C1:C5)`,
-        "lbs",
-        "Minimum Mission Fuel",
-        ,
-        "=SUM(G1:G5)",
-        "lbs",
-      ],
+      ["BINGO", , `=SUM(C1:C5)`, "lbs", "Minimum Mission Fuel", , "=SUM(G1:G5)", "lbs"],
       ["Buffer", , 1000, "lbs", "Additional Margin", , 2000, "lbs"],
       [
         "JOKER",
@@ -132,9 +117,7 @@ const component: Component = {
 
     return `<h4 class="center">FUEL</h4> ${type} 
     Altitude: <input id="fuel-altitude" style="width: 3rem;" value="${alt}" onchange="updateFuel()"/>
-    feet. TAS: ${tas.toFixed(
-      0
-    )}kts <em class="no-print" data-html2canvas-ignore>${msg}</em>
+    feet. TAS: ${tas.toFixed(0)}kts <em class="no-print" data-html2canvas-ignore>${msg}</em>
     <div id="fuel-table"></div>`;
   },
 };

@@ -1,24 +1,30 @@
 const altFormat = {
   pattern: {
     thousandSeparated: true,
-    mantissa: 0
-  }
+    mantissa: 0,
+  },
 };
 export const speedFormat = {
   pattern: {
     thousandSeparated: false,
-    mantissa: 0
-  }
+    mantissa: 0,
+  },
+};
+export const hdgFormat = {
+  pattern: {
+    thousandSeparated: false,
+    mantissa: 0,
+  },
 };
 export const distanceFormat = {
   pattern: {
     thousandSeparated: false,
-    mantissa: 1
-  }
+    mantissa: 1,
+  },
 };
 export const latLonFormat = {
   pattern: {
     thousandSeparated: false,
-    mantissa: 4
-  }
+    mantissa: 4,
+  },
 };
