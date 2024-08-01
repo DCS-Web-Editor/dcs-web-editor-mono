@@ -87,10 +87,7 @@ export const model = {
     return await entry.getBlob(zip.getMimeType(entry.filename), options);
   },
   async getBlobURL(entry, options, type) {
-    const blob = await entry.getBlob(
-      type ?? zip.getMimeType(entry.filename),
-      options
-    );
+    const blob = await entry.getBlob(type ?? zip.getMimeType(entry.filename), options);
     return URL.createObjectURL(blob);
   },
 };
@@ -215,11 +212,7 @@ export function initialize(_aceEditor, editorId) {
       stopEvent(event);
       if (target) {
         const targetNode = getFileNode(target);
-        if (
-          event.dataTransfer &&
-          event.dataTransfer.files &&
-          event.dataTransfer.files.length
-        ) {
+        if (event.dataTransfer && event.dataTransfer.files && event.dataTransfer.files.length) {
           const item = event.dataTransfer.items[0];
           const file = event.dataTransfer.files[0];
 
@@ -302,11 +295,7 @@ export function initialize(_aceEditor, editorId) {
   listing.addEventListener(
     "drop",
     (event) => {
-      if (
-        event.dataTransfer &&
-        event.dataTransfer.files &&
-        event.dataTransfer.files.length
-      ) {
+      if (event.dataTransfer && event.dataTransfer.files && event.dataTransfer.files.length) {
         const entries = Array.from(event.dataTransfer.files).map((file) =>
           model.addFile(file.name, file, getFileNode(selectedDirectory))
         );
@@ -324,11 +313,7 @@ export function initialize(_aceEditor, editorId) {
     (event) => {
       event.dataTransfer.effectAllowed = "copy";
       event.dataTransfer.setData("Text", "");
-      if (
-        !event.dataTransfer ||
-        !event.dataTransfer.files ||
-        !event.dataTransfer.files.length
-      ) {
+      if (!event.dataTransfer || !event.dataTransfer.files || !event.dataTransfer.files.length) {
         selectedDrag = selectedFile;
       }
     },
@@ -370,10 +355,7 @@ export function initialize(_aceEditor, editorId) {
         // console.log('treeWidth', treeWidth);
 
         tree.parentElement.style.setProperty("min-width", treeWidth - 4 + "px");
-        listing.parentElement.style.setProperty(
-          "max-width",
-          explorerWidth - treeWidth - 4 + "px"
-        );
+        listing.parentElement.style.setProperty("max-width", explorerWidth - treeWidth - 4 + "px");
       }
     },
     false
@@ -388,10 +370,7 @@ export function initialize(_aceEditor, editorId) {
         // console.log('listingWidth', listingWidth, listing.innerHTML.width);
         const width = explorerWidth - listingWidth - 4;
         if (listingWidth > listing.clientWidth * 2) return;
-        listing.parentElement.style.setProperty(
-          "max-width",
-          listingWidth - 4 + "px"
-        );
+        listing.parentElement.style.setProperty("max-width", listingWidth - 4 + "px");
         editorWindow.style.setProperty("max-width", width + "px");
       }
     },
@@ -611,9 +590,7 @@ function onnewDirectory() {
   let name = "New Folder";
   if (getFileNode(selectedDirectory).getChildByName(name)) {
     let index = 2;
-    while (
-      getFileNode(selectedDirectory).getChildByName(name + " (" + index + ")")
-    ) {
+    while (getFileNode(selectedDirectory).getChildByName(name + " (" + index + ")")) {
       index++;
     }
     name += " (" + index + ")";
