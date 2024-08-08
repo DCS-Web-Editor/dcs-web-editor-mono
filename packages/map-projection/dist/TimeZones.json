@@ -1,13 +1,13 @@
 {
-  "Caucasus": 4,
-  "PersianGulf": 4,
-  "MarianaIslands": 10,
-  "Nevada": -8,
-  "SinaiMap": 2,
-  "Syria": 2,
-  "TheChannel": 0,
-  "Normandy": 0,
-  "Kola": 3,
-  "Falklands": -3,
-  "Afghanistan": 4
+    "Caucasus": 4,
+    "PersianGulf": 4,
+    "MarianaIslands": 10,
+    "Nevada": -8,
+    "SinaiMap": 2,
+    "Syria": 2,
+    "TheChannel": 0,
+    "Normandy": 0,
+    "Kola": 3,
+    "Falklands": -3,
+    "Afghanistan": 4
 }
