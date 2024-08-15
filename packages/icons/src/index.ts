@@ -93,6 +93,7 @@ import Missile from "./small/missile.png";
 import Bomber from "./small/bomber.png";
 import oilrig from "./small/oilrig.png";
 import HeliRecon from "./small/heli recon.png";
+import civilian from "./small/civilian.png";
 
 import iconMap from "./iconMap.json";
 
@@ -207,6 +208,7 @@ const toExport: any = {
     Bomber,
     oilrig,
     HeliRecon,
+    civilian
   },
 };
 
