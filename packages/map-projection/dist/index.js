@@ -143,11 +143,11 @@ import timeZones from "./TimeZones.json";
 export const TimeZones = timeZones;
 export { COORDINATES } from "./mapCoordinates";
 export const mapNames = Object.keys(config);
-export function calcRotationOffset(leaflet, project) {
+export function calcRotationOffset(marker, project) {
     // calculate TM -> WM projection rotation offset
-    const LLoffset = mizToLL(leaflet.json.y + 10, leaflet.json.x);
+    const LLoffset = mizToLL(marker.leaflet.json.y + 10, marker.leaflet.json.x);
     const xyOffset = project([LLoffset.lat, LLoffset.lon]);
-    const d = (leaflet.y - xyOffset.y) / (leaflet.x - xyOffset.x);
+    const d = (marker.y - xyOffset.y) / (marker.x - xyOffset.x);
     const rad = Math.tan(d);
     return rad;
 }

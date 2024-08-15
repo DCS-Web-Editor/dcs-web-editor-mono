@@ -45,4 +45,4 @@ export declare const TimeZones: {
 };
 export { COORDINATES } from "./mapCoordinates";
 export declare const mapNames: string[];
-export declare function calcRotationOffset(leaflet: any, project: Function): number;
+export declare function calcRotationOffset(marker: any, project: Function): number;
