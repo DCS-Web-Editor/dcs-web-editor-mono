@@ -1,9 +1,14 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-      "noEmit": false,
-      "rootDir": "./src",
-      "outDir": "./dist"
-    },
-    "include": ["./src/*"],
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "vite/client"
+    ],
+    "noEmit": false,
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "include": [
+    "./src/*"
+  ],
 }

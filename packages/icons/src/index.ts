@@ -95,6 +95,9 @@ import oilrig from "./small/oilrig.png";
 import HeliRecon from "./small/heli recon.png";
 import civilian from "./small/civilian.png";
 
+
+
+
 import iconMap from "./iconMap.json";
 
 export const getIcon = function geticon(unitType: string) {
@@ -213,3 +216,18 @@ const toExport: any = {
 };
 
 export default toExport;
+
+
+export const SYMBOLS = {
+  plane: import.meta.glob('./plane/symbols/*.png', { eager: true }),
+  vehicle: import.meta.glob('./vehicle/symbols/*.png', { eager: true }),
+  helicopter: import.meta.glob('./helicopter/symbols/*.png', { eager: true }),
+};
+
+export const FACTORY = {
+  plane: import.meta.glob('./plane/factory/*.png', { eager: true }),
+  vehicle: import.meta.glob('./vehicle/factory/*.png', { eager: true }),
+  ship: import.meta.glob('./ship/factory/*.png', { eager: true }),
+  helicopter: import.meta.glob('./helicopter/factory/*.png', { eager: true }),
+  fortifications: import.meta.glob('./fortifications/factory/*.png', { eager: true }),
+};

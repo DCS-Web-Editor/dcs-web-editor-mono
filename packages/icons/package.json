@@ -9,7 +9,7 @@
     "tsc": "tsc",
     "build": "npm run copy-assets && tsc && vite build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "copy-assets": "npm run clean && cp -r ./src/small/ ./dist/small" 
+    "copy-assets": "npm run clean && cp -r ./src/small/ ./dist/small && cp -r ./src/vehicle/ ./dist/vehicle && cp -r ./src/plane/ ./dist/plane && cp -r ./src/ship/ ./dist/ship && cp -r ./src/helicopter/ ./dist/helicopter && cp -r ./src/fortifications/ ./dist/fortifications" 
   },
   "author": "",
   "license": "ISC",
