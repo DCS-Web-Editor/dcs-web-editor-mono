@@ -12,9 +12,8 @@ let map: any;
 interface PolySave {
   latLngs: any[];
   options: any;
-  _leaflet_id: number;
 }
-export const drawLinesNodrag: PolySave[] = [];
+export const drawLinesNodrag: Record<string, PolySave> = {};
 
 paintNodragControl.onAdd = function (_map) {
   map = _map;
@@ -53,13 +52,13 @@ function enablePaintControl(anchor) {
 }
 
 function paintStarted(e: MouseEvent) {
-  // console.log('paintStarted', e);
-  // if (e.target !== mapElement) return;
   if (!context.paintMode) return;
   startDraw(e);
 }
 
 export function disableNodragPaintControl() {
+  currentPolyLine.on("click", removeLine);
+
   currentPolyLine = null;
   context.paintMode = false;
   pAnchor.classList.remove("polyline-measure-controlOnBgColor");
@@ -75,7 +74,7 @@ function startDraw(e: MouseEvent) {
   map.lastPointX = Math.floor(e.layerX);
   map.lastPointY = Math.floor(e.layerY);
 
-  // LEFT
+  // LEFT CLICK
   if (e.button === 0) {
     isPainting = true;
 
@@ -86,20 +85,19 @@ function startDraw(e: MouseEvent) {
       className: "leaflet-drawline",
     };
 
+    // resume ?
     if (currentPolyLine) {
-      // resume
-      if (e.target.id === "map") doDraw(e);
+      if (rightTarget(e)) doDraw(e);
       return;
     }
 
     // new line
     if (e.ctrlKey) paintConfig.dashArray = [5, 10];
     currentPolyLine = L.polyline([], paintConfig).addTo(map);
-    currentPolyLine.on("click", removeLine);
     doDraw(e);
   }
 
-  // RIGHT
+  // RIGHT CLICK
   if (e.button === 2) {
     endDraw(e);
 
@@ -112,19 +110,23 @@ function startDraw(e: MouseEvent) {
 }
 
 function removeLine(e: any) {
-  const found = drawLinesNodrag.findIndex((d) => d._leaflet_id === e.sourceTarget._leaflet_id);
-  if (found > -1) drawLinesNodrag.splice(found, 1);
+  delete drawLinesNodrag[e.sourceTarget._leaflet_id];
 
   e.sourceTarget.remove();
   e.target?.remove();
 }
 
 function doDraw(e: MouseEvent) {
-  if (e.target.id !== "map") return;
+  if (!rightTarget(e)) return;
+
   if (isPainting) {
     var pointlatlng = map.mouseEventToLatLng(e);
     currentPolyLine.addLatLng(pointlatlng);
   }
+}
+
+function rightTarget(e: MouseEvent) {
+  return e.target?.id === "map" || e.target?.tagName === "CANVAS";
 }
 
 function endDraw(e: MouseEvent) {
@@ -133,15 +135,13 @@ function endDraw(e: MouseEvent) {
   const latLngs = currentPolyLine.getLatLngs();
   if (latLngs.length < 2) return;
 
-  drawLinesNodrag.push({
+  drawLinesNodrag[currentPolyLine._leaflet_id] = {
     latLngs,
-    _leaflet_id: currentPolyLine._leaflet_id,
     options: structuredClone(currentPolyLine.options),
-  } as PolySave);
+  };
 }
 
 export function loadNodragDraw(array: PolySave[]) {
-  // console.log("loadDraw", array);
   array.forEach((draw: PolySave) => {
     currentPolyLine = L.polyline([], draw.options).addTo(map);
     currentPolyLine.on("click", removeLine);
@@ -149,5 +149,14 @@ export function loadNodragDraw(array: PolySave[]) {
     draw.latLngs.forEach((ll) => {
       currentPolyLine.addLatLng(ll);
     });
+  });
+}
+
+export function exportPaintings() {
+  return Object.keys(drawLinesNodrag).map((key) => {
+    return {
+      ...drawLinesNodrag[key],
+      _leaflet_id: key,
+    };
   });
 }
