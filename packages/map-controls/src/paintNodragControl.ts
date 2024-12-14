@@ -152,7 +152,7 @@ export function loadNodragDraw(array: PolySave[]) {
   });
 }
 
-export function exportPaintings() {
+export function exportNoDragPaintings() {
   return Object.keys(drawLinesNodrag).map((key) => {
     return {
       ...drawLinesNodrag[key],
