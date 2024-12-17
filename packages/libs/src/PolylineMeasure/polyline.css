@@ -20,7 +20,7 @@ a.polyline-measure-clearControl:active {
   font: 10px Arial, Helvetica, sans-serif;
   line-height: 10px;
   color: #cadad7;
-  background-color: #00000099;
+  background-color: #00000066;
   border-radius: 3px;
   box-shadow: 1px 1px 4px #00000055;
   margin: 0;
@@ -32,12 +32,12 @@ a.polyline-measure-clearControl:active {
 }
 
 .polyline-measure-tooltip-end {
-  background-color: #cadad7;
-  color: #293949;
+  background-color: #00007777;
+  color: #cadad7;
 }
 
 .polyline-measure-tooltip-total {
-  color: #b1b6c2;
+  color: #e83fdc;
 }
 
 .polyline-measure-tooltip-difference {
