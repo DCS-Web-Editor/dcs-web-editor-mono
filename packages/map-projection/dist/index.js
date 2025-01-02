@@ -90,7 +90,6 @@ const config = {
         false_easting: 72290,
         false_northing: -3680057,
         scale_factor: 0.9996,
-        // +x_0=72290 +y_0=-3680057 +towgs84=0,0,0,0,0,0,0 +units=m +vunits=m +ellps=WGS84 +no_defs +axis=neu
     },
 };
 /**
@@ -110,6 +109,8 @@ let projector;
  */
 export function activeMap(mapName) {
     const mapConfig = config[mapName];
+    if (!mapConfig)
+        throw new Error("Missing map config for " + mapName);
     projector = proj4(`+proj=tmerc +lat_0=0 +lon_0=${mapConfig.central_meridian} +k_0=${mapConfig.scale_factor} +x_0=${mapConfig.false_easting} +y_0=${mapConfig.false_northing} +towgs84=0,0,0,0,0,0,0 +units=m +vunits=m +ellps=WGS84 +no_defs +axis=neu`);
     return projector;
 }
