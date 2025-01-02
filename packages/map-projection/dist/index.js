@@ -85,6 +85,13 @@ const config = {
         false_northing: -3759657,
         scale_factor: 0.9996,
     },
+    Iraq: {
+        central_meridian: 45,
+        false_easting: 72290,
+        false_northing: -3680057,
+        scale_factor: 0.9996,
+        // +x_0=72290 +y_0=-3680057 +towgs84=0,0,0,0,0,0,0 +units=m +vunits=m +ellps=WGS84 +no_defs +axis=neu
+    },
 };
 /**
  * proj4 projector

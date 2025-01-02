@@ -79,4 +79,8 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
+    Iraq: {
+        lat: number;
+        lon: number;
+    }[];
 };
