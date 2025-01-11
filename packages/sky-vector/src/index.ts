@@ -63,8 +63,8 @@ export const skyVectorZoom: Record<number, number> = {
 
 export function yearMonth() {
   const skyDate = new Date();
-  // wait 10 days
-  skyDate.setDate(skyDate.getDate() - 10);
+  // wait 15 days
+  skyDate.setDate(skyDate.getDate() - 15);
 
   let yearMonth = skyDate.toISOString().slice(2, 7);
   yearMonth = yearMonth?.replace("-", "");
