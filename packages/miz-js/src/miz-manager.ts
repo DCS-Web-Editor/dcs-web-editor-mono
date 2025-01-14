@@ -434,7 +434,12 @@ function expandTree(node) {
 }
 
 // Download miz
-export function onexport(isFile, setName = "example.miz", options = {}, cb = false as boolean | Function) {
+export function onexport(
+  isFile,
+  setName = "example.miz",
+  options = {},
+  cb = false as boolean | Function
+) {
   return async (event) => {
     const target = event.target;
 
@@ -451,37 +456,42 @@ export function onexport(isFile, setName = "example.miz", options = {}, cb = fal
         );
       }
 
-      if (fileName) {
-        fileName = fileName.match(/.miz$/) ? fileName : fileName + ".miz";
-        progressExport.style.opacity = 1;
-        progressExport.value = 0;
-        progressExport.max = 0;
-        let blobURL;
+      if (!fileName) {
+        return Promise.reject({ message: "No filename entered!" });
+      }
+      fileName = fileName.match(/.miz$/) ? fileName : fileName + ".miz";
+      progressExport.style.opacity = 1;
+      progressExport.value = 0;
+      progressExport.max = 0;
+      let blobURL;
 
-        try {
-          blobURL = isFile
-            ? await model.getBlobURL(node, { onprogress, bufferedWrite: true })
-            : await model.exportZip(node, {
-                onprogress,
-                relativePath: true,
-                bufferedWrite: true,
-              });
-        } catch (error) {
-          alert(error);
+      try {
+        blobURL = isFile
+          ? await model.getBlobURL(node, { onprogress, bufferedWrite: true })
+          : await model.exportZip(node, {
+              onprogress,
+              relativePath: true,
+              bufferedWrite: true,
+            });
+      } catch (error) {
+        alert(error);
+      }
+
+      if (blobURL) {
+        if (cb) {
+          const blob = await model.getBlob(node, {
+            onprogress,
+            relativePath: true,
+            bufferedWrite: true,
+          });
+          await cb(fileName, blob);
         }
+        progressExport.style.opacity = 0;
 
-        if (blobURL) {
-          if (cb) {
-            const blob = await model.getBlob(node, { onprogress, relativePath: true, bufferedWrite: true });
-            await cb(fileName, blob)
-          }
-          progressExport.style.opacity = 0;
+        downloadBlob(blobURL, fileName);
 
-          downloadBlob(blobURL, fileName);
-
-          URL.revokeObjectURL(blobURL);
-          event.preventDefault();
-        }
+        URL.revokeObjectURL(blobURL);
+        event.preventDefault();
       }
     }
   };
