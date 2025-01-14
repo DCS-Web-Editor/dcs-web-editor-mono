@@ -84,9 +84,9 @@ export const model = {
     return data;
   },
   async getBlob(entry, options) {
-    return await entry.getBlob(zip.getMimeType(entry.filename), options);
+    return await entry.exportBlob(options);
   },
-  async getBlobURL(entry, options, type) {
+  async getBlobURL(entry, options, type?) {
     const blob = await entry.getBlob(type ?? zip.getMimeType(entry.filename), options);
     return URL.createObjectURL(blob);
   },
@@ -434,7 +434,7 @@ function expandTree(node) {
 }
 
 // Download miz
-export function onexport(isFile, setName = "example.miz", options = {}) {
+export function onexport(isFile, setName = "example.miz", options = {}, cb = false as boolean | Function) {
   return async (event) => {
     const target = event.target;
 
@@ -471,6 +471,10 @@ export function onexport(isFile, setName = "example.miz", options = {}) {
         }
 
         if (blobURL) {
+          if (cb) {
+            const blob = await model.getBlob(node, { onprogress, relativePath: true, bufferedWrite: true });
+            await cb(fileName, blob)
+          }
           progressExport.style.opacity = 0;
 
           downloadBlob(blobURL, fileName);
