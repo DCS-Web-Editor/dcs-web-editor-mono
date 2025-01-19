@@ -58,5 +58,11 @@ export function yearMonth() {
     skyDate.setDate(skyDate.getDate() - 15);
     let yearMonth = skyDate.toISOString().slice(2, 7);
     yearMonth = yearMonth?.replace("-", "");
+    const year = parseInt(yearMonth.slice(0, 2));
+    const month = parseInt(yearMonth.slice(2, 4));
+    // skyvector lagging behind new year
+    if (month === 1) {
+        return year - 1 + "13";
+    }
     return yearMonth;
 }
