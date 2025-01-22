@@ -79,6 +79,7 @@ function searchControlActivate(e) {
 function searchChange() {
   const input = searchField.value.toUpperCase();
 
+  // MGRS
   if (input.match(/^MGRS:/)) {
     const coords = MGRStoLL(input.split(":")[1]);
 
@@ -99,9 +100,32 @@ function searchChange() {
 
     return;
   }
+
+  // LAT LONG
+  if (input.match(/^LAT\:/)) {
+    const coords = input.replace("LAT:", "").replace("LON:", "").replace("LNG:", "").split(",");
+    const [lat, lng] = coords.map((c) => parseFloat(c));
+
+    results.innerHTML = `
+    <ul>
+      <li>lat: ${lat}</li>
+      <li>lon: ${lng}</li>
+      </ul>
+    `;
+
+    map.setView({
+      lat,
+      lng,
+    });
+
+    return;
+  }
+
+  // ITEMS
   const units = items.getUnits();
   const airports = items.getAirports();
   const beacons = items.getBeacons();
+  const fixes = items.getFixes && items.getFixes();
 
   // unit name
   let found = units.filter((u) => u?.leaflet.json.name?.toUpperCase().match(input));
@@ -122,25 +146,52 @@ function searchChange() {
     beacons.filter((b) => b?.leaflet.json.display_name?.toUpperCase().match(input))
   );
 
+  if (fixes) {
+    // fix name
+    found = found.concat(fixes.filter((b) => b?.name?.toUpperCase().match(input)));
+  }
+
   results.innerHTML = `
   <ul>
     ${found
+      .filter((i) => i)
       .map((f) => {
-        const name = f?.leaflet.json.name;
-        const airportName = f?.leaflet.json.displayName;
-        const beaconCode = f?.leaflet.json.callsign;
-
-        let display = "???";
+        let display = "not found";
         let displayInfo = "";
+
+        if (!f.leaflet) {
+          // FIX
+          display = "∆ " + translate(f.name) || f.name;
+          displayInfo = `(${f.lat + "/" + f.lon})`;
+          return `<li>
+          <a onclick="goto('${f.lat}', '${f.lon}')" href="#">${display} ${displayInfo}</a>
+      </li>`;
+        }
+
+        const name = f.leaflet.type === "UNIT" && f.leaflet.json.name;
+        const airportName = f.leaflet.type === "AIRPORT" && f.leaflet.json.displayName;
+        const beaconCode = f.leaflet.type === "BEACON" && f.leaflet.json.callsign;
+        // console.log(
+        //   f.leaflet.type === "AIRPORT",
+        //   f.leaflet.json.displayName,
+        //   name,
+        //   airportName,
+        //   beaconCode
+        // );
+
         if (name) {
-          display = translate(name) || name;
-          displayInfo = `(${f?.leaflet.json.type})`;
+          // UNIT
+          const cat = getCategory(f.leaflet.category);
+          display = cat + " " + translate(name) || name;
+          displayInfo = `(${f.leaflet.json.type})`;
         } else if (airportName) {
-          display = `✈ ${airportName}`;
-          displayInfo = `(${f?.leaflet.json.code})`;
+          // AIRPORT
+          display = `🅐 ${airportName}`;
+          displayInfo = `(${f.leaflet?.json.code})`;
         } else if (beaconCode) {
+          // BEACON
           display = `⊙ ${beaconCode}`;
-          displayInfo = `(${f?.leaflet.json.display_name})`;
+          displayInfo = `(${f.leaflet?.json.display_name})`;
         }
 
         return `<li>
@@ -156,19 +207,27 @@ function searchChange() {
   `;
 }
 
+window.goto = function goto(lat: number, lng: number) {
+  const latlng = {
+    lat,
+    lng,
+  };
+  map.setView(latlng);
+};
+
 window.openMarkerPopup = function (name, airportName, beaconCode) {
   name = atob(name).toUpperCase();
   airportName = atob(airportName).toUpperCase();
   beaconCode = atob(beaconCode).toUpperCase();
 
-  if (airportName !== "UNDEFINED") {
+  if (airportName !== "UNDEFINED" && airportName !== "FALSE") {
     const airports = items.getAirports();
     const apt = airports.find((a) => a?.leaflet.json.displayName.toUpperCase() === airportName);
     openItem(apt);
 
     return;
   }
-  if (beaconCode !== "UNDEFINED") {
+  if (beaconCode !== "UNDEFINED" && beaconCode !== "FALSE") {
     const beacons = items.getBeacons();
     const bcn = beacons.find((b) => b?.leaflet.json.callsign.toUpperCase() === beaconCode);
     openItem(bcn);
@@ -182,6 +241,7 @@ window.openMarkerPopup = function (name, airportName, beaconCode) {
 };
 
 function openItem(item: any) {
+  // console.debug("open", item);
   if (!item) return;
 
   item.openPopup();
@@ -190,4 +250,27 @@ function openItem(item: any) {
     lat: item.leaflet.lat,
     lng: item.leaflet.lon,
   });
+}
+function getCategory(category: string) {
+  switch (category) {
+    case "vehicle":
+      return "🚗";
+      break;
+    case "plane":
+      return "✈";
+      break;
+    case "helicopter":
+      return "🚁";
+      break;
+    case "ship":
+      return "⚓";
+      break;
+    case "static":
+      return "⌂";
+      break;
+
+    default:
+      return "?";
+      break;
+  }
 }

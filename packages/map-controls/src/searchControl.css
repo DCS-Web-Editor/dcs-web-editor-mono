@@ -6,19 +6,26 @@
 }
 .leaflet-control-zoom.leaflet-bar.leaflet-control.show-search-fields .search-field {
   display: block;
-  width: 13.5rem;
+  width: 18.7rem;
 }
 .leaflet-control-zoom.leaflet-bar.leaflet-control .results {
   position: absolute;
   left: 2rem;
   top: -50vh;
   height: 50vh;
-  width: 15rem;
+  width: 20rem;
   color: #1abc9c;
   background-color: #293949;
   overflow-y: scroll;
   display: none;
 }
+.leaflet-control-zoom.leaflet-bar.leaflet-control .results::-webkit-scrollbar {
+  width: 15px !important;
+}
+.leaflet-control-zoom.leaflet-bar.leaflet-control .results::-webkit-scrollbar-thumb {
+  cursor: ns-resize;
+}
+
 .leaflet-control-zoom.leaflet-bar.leaflet-control .search-field {
   display: none;
 
