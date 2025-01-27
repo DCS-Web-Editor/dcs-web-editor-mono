@@ -752,7 +752,7 @@ export function refreshTree(node, element) {
 
     newDirectory.className = "newdir-button button";
     newDirectory.title = "Create a new folder";
-    newDirectory.textContent = "➕";
+    newDirectory.textContent = "+";
     newDirectory.addEventListener("click", onnewDirectory, false);
     summaryContent.appendChild(newDirectory);
 
