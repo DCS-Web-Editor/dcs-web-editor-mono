@@ -66,7 +66,7 @@ export const model = {
     fs.move(entry, target);
   },
   rename(entry, name) {
-    entry.rename(name);
+    entry.name = name;
   },
   async exportZip(entry, options) {
     console.log("exportZip", entry);
@@ -743,7 +743,7 @@ export function refreshTree(node, element) {
       summary.classList.add("dir-summary-empty");
     }
     if (node.parent) {
-      label.textContent = "🗀" + node.name;
+      label.textContent = "📁 " + node.name;
     } else {
       label.textContent = `.miz`;
     }
@@ -752,7 +752,7 @@ export function refreshTree(node, element) {
 
     newDirectory.className = "newdir-button button";
     newDirectory.title = "Create a new folder";
-    newDirectory.textContent = "✅";
+    newDirectory.textContent = "➕";
     newDirectory.addEventListener("click", onnewDirectory, false);
     summaryContent.appendChild(newDirectory);
 
