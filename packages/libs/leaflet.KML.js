@@ -115,7 +115,8 @@ L.Util.extend(L.KML, {
             continue;
           }
           if (key === "color") {
-            options.opacity = parseInt(value.substring(0, 2), 16) / 255.0;
+            const optionOpacity = kmlOptions.layerOptions?.opacity || 1;
+            options.opacity = (parseInt(value.substring(0, 2), 16) / 255.0) * optionOpacity;
             options.color =
               "#" + value.substring(6, 8) + value.substring(4, 6) + value.substring(2, 4);
           } else if (key === "width") {
@@ -508,6 +509,8 @@ L.KMLIcon = L.Icon.extend({
     var options = this.options;
     var width = options.iconSize[0];
     var height = options.iconSize[1];
+
+    if (options.opacity) img.style.opacity = options.opacity;
 
     this.options.popupAnchor = [0, -0.83 * height];
     if (options.anchorType.x === "fraction")
