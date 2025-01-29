@@ -1,5 +1,5 @@
 /*!
-	Copyright (c) 2011-2015, Pavel Shramov, Bruno Bergot - MIT licence
+  Copyright (c) 2011-2015, Pavel Shramov, Bruno Bergot - MIT licence
 */
 
 L.KML = L.FeatureGroup.extend({
@@ -115,7 +115,7 @@ L.Util.extend(L.KML, {
             continue;
           }
           if (key === "color") {
-            const optionOpacity = kmlOptions.layerOptions?.opacity || 1;
+            const optionOpacity = kmlOptions?.layerOptions?.opacity || 0.5;
             options.opacity = (parseInt(value.substring(0, 2), 16) / 255.0) * optionOpacity;
             options.color =
               "#" + value.substring(6, 8) + value.substring(4, 6) + value.substring(2, 4);
