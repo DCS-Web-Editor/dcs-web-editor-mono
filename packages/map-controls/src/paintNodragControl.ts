@@ -57,7 +57,7 @@ function paintStarted(e: MouseEvent) {
 }
 
 export function disableNodragPaintControl() {
-  currentPolyLine.on("click", removeLine);
+  if (currentPolyLine) currentPolyLine.on("click", removeLine);
 
   currentPolyLine = null;
   context.paintMode = false;
