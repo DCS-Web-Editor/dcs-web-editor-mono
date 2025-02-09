@@ -36,10 +36,7 @@ function toDegreesMinutesShort(coordinate: number, longitude = false) {
   const minutesNotTruncated = (absolute - degrees) * 60;
   const minutes = Math.floor(minutesNotTruncated);
 
-  return (
-    degrees.toString().padStart(longitude ? 3 : 2, "0") +
-    minutes.toString().padStart(2, "0")
-  );
+  return degrees.toString().padStart(longitude ? 3 : 2, "0") + minutes.toString().padStart(2, "0");
 }
 
 function toDegreesMinutes(coordinate: number) {
@@ -58,15 +55,7 @@ export function convertDMS(lat: number, lon: number) {
   var longitude = toDegreesMinutesAndSeconds(lon);
   var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-  return (
-    latitude +
-    " " +
-    latitudeCardinal +
-    ", " +
-    longitude +
-    " " +
-    longitudeCardinal
-  );
+  return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
 }
 
 // returns i.e. 4210N04228E
@@ -87,15 +76,7 @@ export function convertDMM(lat: number, lon: number) {
   var longitude = toDegreesMinutes(lon);
   var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-  return (
-    latitude +
-    " " +
-    latitudeCardinal +
-    ", " +
-    longitude +
-    " " +
-    longitudeCardinal
-  );
+  return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
 }
 
 export function toHHMMSS(s: number) {
@@ -111,15 +92,7 @@ export function convertDD(lat: number, lon: number) {
   var longitude = lon.toFixed(4);
   var longitudeCardinal = lon >= 0 ? "E" : "W";
 
-  return (
-    latitude +
-    " " +
-    latitudeCardinal +
-    ", " +
-    longitude +
-    " " +
-    longitudeCardinal
-  );
+  return latitude + " " + latitudeCardinal + ", " + longitude + " " + longitudeCardinal;
 }
 
 export function LLtoAll(lat: number, lon: number) {
@@ -195,9 +168,9 @@ export function rgbToInt(r: number, g: number, b: number) {
   return ((r * 255) << 16) + ((g * 255) << 8) + b * 255;
 }
 export function toRgba(r: number, g: number, b: number, a: number) {
-  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(
-    b * 255
-  )},${Math.round(a * 255)})`;
+  return `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(b * 255)},${Math.round(
+    a * 255
+  )})`;
 }
 
 function componentToHex(c: number) {
@@ -206,13 +179,7 @@ function componentToHex(c: number) {
 }
 
 export function rgbaToHex(r: number, g: number, b: number, a: number) {
-  return (
-    "#" +
-    componentToHex(r) +
-    componentToHex(g) +
-    componentToHex(b) +
-    componentToHex(a)
-  );
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b) + componentToHex(a);
 }
 export function rgbToHex(r: number, g: number, b: number) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
@@ -225,9 +192,7 @@ export function hexaToRgb(hex: string) {
     return r + r + g + g + b + b + a + a;
   });
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(
-    hex
-  );
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),
@@ -376,9 +341,7 @@ export function getTextType(type: string, category: string) {
 export async function getElevationFeet(lat: any, lng: any) {
   try {
     const elevationData = await fetch(
-      `https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(
-        6
-      )},${lng.toFixed(6)}|`,
+      `https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`,
       {
         method: "GET",
       }
@@ -386,6 +349,29 @@ export async function getElevationFeet(lat: any, lng: any) {
     const { results } = await elevationData.json();
     const elevation = ((results?.[0]?.elevation ?? 0) * M_TO_FEET).toFixed(0);
     return elevation;
+  } catch (error) {
+    console.error(error);
+    return "N/A";
+  }
+}
+
+export async function getElevationsFeet(coords: any[]) {
+  try {
+    const flat = coords
+      .map((c) => {
+        return `${c.lat.toFixed(6)},${c.lng.toFixed(6)}`;
+      })
+      .join("|");
+
+    const elevationData = await fetch(
+      `https://api.open-elevation.com/api/v1/lookup?locations=${flat}`,
+      {
+        method: "GET",
+      }
+    );
+    const { results } = await elevationData.json();
+    const elevations = results.map((r) => ((r?.elevation ?? 0) * M_TO_FEET).toFixed(0));
+    return elevations;
   } catch (error) {
     console.error(error);
     return "N/A";
@@ -403,14 +389,7 @@ export function renderFrequency(freq: number) {
 
 // mission date to JS date
 export function toJsDate(missionDate: any, missionTime: number = 0) {
-  return new Date(
-    missionDate.Year,
-    missionDate.Month - 1,
-    missionDate.Day,
-    0,
-    0,
-    missionTime
-  );
+  return new Date(missionDate.Year, missionDate.Month - 1, missionDate.Day, 0, 0, missionTime);
 }
 
 export function toLatLng(latLon: LatLon) {
