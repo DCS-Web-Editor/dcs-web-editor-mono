@@ -142,7 +142,7 @@ export function rgbToHex(r, g, b) {
 export function hexaToRgb(hex) {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])([a-f\d])$/i;
-    hex = hex.replace(shorthandRegex, function (m, r, g, b, a) {
+    hex = hex.replace(shorthandRegex, function (_m, r, g, b, a) {
         return r + r + g + g + b + b + a + a;
     });
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -222,11 +222,11 @@ export const sortBy = (a, b, property) => {
     // names must be equal
     return 0;
 };
-export function downloadJson(json, name) {
+export function downloadJson(json, name, extension = 'json') {
     const jsonString = JSON.stringify(json, null, 2);
     const blob = new Blob([jsonString], { type: "application/json" });
     const url = URL.createObjectURL(blob);
-    downloadBlob(url, `${name}.json`);
+    downloadBlob(url, `${name}.${extension}`);
 }
 export function downloadBlob(url, fileName) {
     const link = document.createElement("a");

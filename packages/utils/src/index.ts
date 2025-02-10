@@ -188,18 +188,18 @@ export function rgbToHex(r: number, g: number, b: number) {
 export function hexaToRgb(hex: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function (m, r, g, b, a) {
+  hex = hex.replace(shorthandRegex, function (_m, r, g, b, a) {
     return r + r + g + g + b + b + a + a;
   });
 
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-        a: parseInt(result[4], 16),
-      }
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16),
+      a: parseInt(result[4], 16),
+    }
     : null;
 }
 
@@ -277,13 +277,14 @@ export const sortBy = (a: any, b: any, property: string) => {
   return 0;
 };
 
-export function downloadJson(json: any, name: string) {
+export function downloadJson(json: any, name: string, extension = 'json') {
   const jsonString = JSON.stringify(json, null, 2);
   const blob = new Blob([jsonString], { type: "application/json" });
   const url = URL.createObjectURL(blob);
 
-  downloadBlob(url, `${name}.json`);
+  downloadBlob(url, `${name}.${extension}`);
 }
+
 
 export function downloadBlob(url: string, fileName: string) {
   const link = document.createElement("a");
@@ -370,7 +371,7 @@ export async function getElevationsFeet(coords: any[]) {
       }
     );
     const { results } = await elevationData.json();
-    const elevations = results.map((r) => ((r?.elevation ?? 0) * M_TO_FEET).toFixed(0));
+    const elevations = results.map((r: { elevation: any; }) => ((r?.elevation ?? 0) * M_TO_FEET).toFixed(0));
     return elevations;
   } catch (error) {
     console.error(error);
