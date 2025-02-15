@@ -222,7 +222,7 @@ export const sortBy = (a, b, property) => {
     // names must be equal
     return 0;
 };
-export function downloadJson(json, name, extension = 'json') {
+export function downloadJson(json, name, extension = "json") {
     const jsonString = JSON.stringify(json, null, 2);
     const blob = new Blob([jsonString], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -302,7 +302,7 @@ export async function getElevationsFeet(coords) {
             method: "GET",
         });
         const { results } = await elevationData.json();
-        const elevations = results.map((r) => ((r?.elevation ?? 0) * M_TO_FEET).toFixed(0));
+        const elevations = results?.map((r) => ((r?.elevation ?? 0) * M_TO_FEET).toFixed(0));
         return elevations;
     }
     catch (error) {
