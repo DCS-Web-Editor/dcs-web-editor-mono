@@ -442,8 +442,8 @@ L.Map.PopupMovable = L.Handler.extend({
           if (typeof x === "object" && "x" in x && "y" in x) return new Point(x.x, x.y);
           return new Point(x, y, round);
         }
+        let offset = toPoint(this.options.offset);
         const pos = this._map.latLngToLayerPoint(this._latlng),
-          offset = toPoint(this.options.offset),
           anchor = this._getAnchor();
 
         if (this._zoomAnimated) {
