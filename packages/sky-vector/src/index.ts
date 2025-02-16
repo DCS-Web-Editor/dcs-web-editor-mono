@@ -63,8 +63,9 @@ export const skyVectorZoom: Record<number, number> = {
 
 export function yearMonth() {
   const skyDate = new Date();
+  const day = skyDate.getDate();
   // wait 15 days
-  skyDate.setDate(skyDate.getDate() - 15);
+  skyDate.setDate(day - 17);
 
   let yearMonth = skyDate.toISOString().slice(2, 7);
   yearMonth = yearMonth?.replace("-", "");
@@ -72,7 +73,7 @@ export function yearMonth() {
   const month = parseInt(yearMonth.slice(2, 4));
 
   // skyvector lagging behind new year
-  if (month === 1) {
+  if (month === 1 && day < 15) {
     return year - 1 + "13";
   }
 
