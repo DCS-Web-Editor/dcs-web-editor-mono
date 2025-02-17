@@ -163,7 +163,7 @@ function renderFreqInfo(phase: string) {
 }
 
 function mapFrequency(freq: number) {
-  if (freq > 1000000) return (freq / 1000000).toFixed(1); // + "Mhz";
-  if (freq > 1000) return (freq / 1000).toFixed(1); //+ "khz";
+  if (freq > 1000000) return (freq / 1000000).toFixed(2); // + "Mhz";
+  if (freq > 1000) return (freq / 1000).toFixed(2); //+ "khz";
   else return freq;
 }

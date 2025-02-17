@@ -315,9 +315,9 @@ export function renderFrequency(freq) {
     if (isNaN(freq))
         return "/";
     if (freq > 1000000)
-        return (freq / 1000000).toFixed(1) + " Mhz";
+        return (freq / 1000000).toFixed(2) + " Mhz";
     if (freq > 1000)
-        return (freq / 1000).toFixed(1) + " khz";
+        return (freq / 1000).toFixed(2) + " khz";
     else
         return freq;
 }

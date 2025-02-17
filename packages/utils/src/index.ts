@@ -384,8 +384,8 @@ export { js2Lua } from "./js2lua";
 
 export function renderFrequency(freq: number) {
   if (isNaN(freq)) return "/";
-  if (freq > 1000000) return (freq / 1000000).toFixed(1) + " Mhz";
-  if (freq > 1000) return (freq / 1000).toFixed(1) + " khz";
+  if (freq > 1000000) return (freq / 1000000).toFixed(2) + " Mhz";
+  if (freq > 1000) return (freq / 1000).toFixed(2) + " khz";
   else return freq;
 }
 
