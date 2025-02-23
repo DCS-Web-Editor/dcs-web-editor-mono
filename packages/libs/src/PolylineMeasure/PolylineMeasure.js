@@ -86,8 +86,13 @@ import "./polyline.css";
       tooltipTextDelete: "Press SHIFT-key and click to <b>delete point</b>",
       tooltipTextMove: "Click and drag to <b>move point</b><br>",
       tooltipTextResume:
-        "<br>Press " + (isMacOS ? "⌘" : "CTRL-key") + " and click to <b>resume line</b>",
-      tooltipTextAdd: "Press " + (isMacOS ? "⌘" : "CTRL-key") + " and click to <b>add point</b>",
+        "<br>Press " +
+        (isMacOS ? "⌘" : "CTRL-key") +
+        " and click to <b>resume line</b>",
+      tooltipTextAdd:
+        "Press " +
+        (isMacOS ? "⌘" : "CTRL-key") +
+        " and click to <b>add point</b>",
       /**
        * Title for the control going to be switched on
        * @type {String}
@@ -369,6 +374,7 @@ import "./polyline.css";
          */
         radius: 3,
       },
+      magVarFn: (lat, lng) => 0,
     },
     _arcpoints: 99,
     _circleNr: -1,
@@ -384,7 +390,14 @@ import "./polyline.css";
      * @returns {Element}                   Created element
      * @private
      */
-    _createControl: function (label, title, classesToAdd, container, fn, context) {
+    _createControl: function (
+      label,
+      title,
+      classesToAdd,
+      container,
+      fn,
+      context
+    ) {
       var anchor = document.createElement("a");
       anchor.innerHTML = label;
       anchor.setAttribute("title", title);
@@ -426,7 +439,8 @@ import "./polyline.css";
           this._toggleMeasure,
           this
         );
-        this._defaultControlBgColor = this._measureControl.style.backgroundColor;
+        this._defaultControlBgColor =
+          this._measureControl.style.backgroundColor;
         this._measureControl.setAttribute("id", _measureControlId);
       }
       if (this.options.showClearControl) {
@@ -444,10 +458,15 @@ import "./polyline.css";
           this._clearAllMeasurements,
           this
         );
-        this._clearMeasureControl.classList.add("polyline-measure-clearControl");
+        this._clearMeasureControl.classList.add(
+          "polyline-measure-clearControl"
+        );
       }
       // There is no point in using the unitControl if there are no units to choose from.
-      if (this.options.showUnitControl && this.options.unitControlUnits.length > 1) {
+      if (
+        this.options.showUnitControl &&
+        this.options.unitControlUnits.length > 1
+      ) {
         var label = this.options.unitControlLabel[this.options.unit];
         var title =
           this.options.unitControlTitle.text +
@@ -500,8 +519,11 @@ import "./polyline.css";
         this._mapdragging = false;
         this._saveNonpolylineEvents();
         if (this._measureControl) {
-          this._measureControl.classList.add("polyline-measure-controlOnBgColor");
-          this._measureControl.style.backgroundColor = this.options.backgroundColor;
+          this._measureControl.classList.add(
+            "polyline-measure-controlOnBgColor"
+          );
+          this._measureControl.style.backgroundColor =
+            this.options.backgroundColor;
           this._measureControl.title = this.options.measureControlTitleOff;
         }
         this._oldCursor = this._map._container.style.cursor; // save former cursor type
@@ -520,8 +542,11 @@ import "./polyline.css";
         // if measuring is going to be switched off
         this._savePolylineEvents();
         if (this._measureControl) {
-          this._measureControl.classList.remove("polyline-measure-controlOnBgColor");
-          this._measureControl.style.backgroundColor = this._defaultControlBgColor;
+          this._measureControl.classList.remove(
+            "polyline-measure-controlOnBgColor"
+          );
+          this._measureControl.style.backgroundColor =
+            this._defaultControlBgColor;
           this._measureControl.title = this.options.measureControlTitleOn;
         }
         this._map._container.style.cursor = this._oldCursor;
@@ -561,11 +586,15 @@ import "./polyline.css";
     },
     _changeUnit: function () {
       // Retrieve the index of the next available unit of measurement.
-      let indexCurrUnit = this.options.unitControlUnits.indexOf(this.options.unit);
-      let indexNextUnit = (indexCurrUnit + 1) % this.options.unitControlUnits.length;
+      let indexCurrUnit = this.options.unitControlUnits.indexOf(
+        this.options.unit
+      );
+      let indexNextUnit =
+        (indexCurrUnit + 1) % this.options.unitControlUnits.length;
       // Update the unit of measurement.
       this.options.unit = this.options.unitControlUnits[indexNextUnit];
-      this._unitControl.innerHTML = this.options.unitControlLabel[this.options.unit];
+      this._unitControl.innerHTML =
+        this.options.unitControlLabel[this.options.unit];
       this._unitControl.title =
         this.options.unitControlTitle.text +
         " [" +
@@ -614,25 +643,38 @@ import "./polyline.css";
           this._map.off("click", this._resumeFirstpointClick, this);
           this._layerPaint.removeLayer(this._rubberlinePath2);
           this._layerPaint.removeLayer(this._tooltipNew);
-          this._arrPolylines[lineNr].circleMarkers[0].setStyle(this.options.startCircle);
+          this._arrPolylines[lineNr].circleMarkers[0].setStyle(
+            this.options.startCircle
+          );
           var text = "";
           var totalDistance = 0;
           if (this.options.showBearings === true) {
-            text = this.options.bearingTextIn + ":---°<br>" + this.options.bearingTextOut + ":---°";
+            text =
+              this.options.bearingTextIn +
+              ":---°<br>" +
+              this.options.bearingTextOut +
+              ":---°";
           }
-          text = text + '<div class="polyline-measure-tooltip-difference">+' + "0</div>";
-          text = text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
+          text =
+            text +
+            '<div class="polyline-measure-tooltip-difference">+' +
+            "0</div>";
+          text =
+            text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
           this._arrPolylines[lineNr].tooltips[0]._icon.innerHTML = text;
           this._arrPolylines[lineNr].tooltips.map(
             function (item, index) {
               if (index >= 1) {
-                var distance = this._arrPolylines[lineNr].circleCoords[index - 1].distanceTo(
-                  this._arrPolylines[lineNr].circleCoords[index]
-                );
-                var lastCircleCoords = this._arrPolylines[lineNr].circleCoords[index - 1];
-                var mouseCoords = this._arrPolylines[lineNr].circleCoords[index];
+                var distance = this._arrPolylines[lineNr].circleCoords[
+                  index - 1
+                ].distanceTo(this._arrPolylines[lineNr].circleCoords[index]);
+                var lastCircleCoords =
+                  this._arrPolylines[lineNr].circleCoords[index - 1];
+                var mouseCoords =
+                  this._arrPolylines[lineNr].circleCoords[index];
                 totalDistance += distance;
-                var prevTooltip = this._arrPolylines[lineNr].tooltips[index - 1];
+                var prevTooltip =
+                  this._arrPolylines[lineNr].tooltips[index - 1];
                 this._updateTooltip(
                   item,
                   prevTooltip,
@@ -672,7 +714,7 @@ import "./polyline.css";
         } else if (dist >= 18520) {
           dist = (dist / 1852).toFixed(1);
         } else if (dist >= 1852) {
-          dist = (dist / 1852).toFixed(2);
+          dist = (dist / 1852).toFixed(1);
         } else {
           dist = (dist / 1852).toFixed(3); // there's no subunit of Nautical Miles for horizontal length measurements. "Cable length" (1/10th of 1 nm) is rarely used
         }
@@ -720,13 +762,18 @@ import "./polyline.css";
       function _GCinterpolate(f) {
         var A = Math.sin((1 - f) * d) / Math.sin(d);
         var B = Math.sin(f * d) / Math.sin(d);
-        var x = A * Math.cos(fromLat) * Math.cos(fromLng) + B * Math.cos(toLat) * Math.cos(toLng);
-        var y = A * Math.cos(fromLat) * Math.sin(fromLng) + B * Math.cos(toLat) * Math.sin(toLng);
+        var x =
+          A * Math.cos(fromLat) * Math.cos(fromLng) +
+          B * Math.cos(toLat) * Math.cos(toLng);
+        var y =
+          A * Math.cos(fromLat) * Math.sin(fromLng) +
+          B * Math.cos(toLat) * Math.sin(toLng);
         var z = A * Math.sin(fromLat) + B * Math.sin(toLat);
         // atan2 better than atan-function cause results are from -pi to +pi
         // => results of latInterpol, lngInterpol always within range -180° ... +180°  => conversion into values < -180° or > + 180° has to be done afterwards
         var latInterpol =
-          (180 / Math.PI) * Math.atan2(z, Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
+          (180 / Math.PI) *
+          Math.atan2(z, Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
         var lngInterpol = (180 / Math.PI) * Math.atan2(y, x);
         // don't split polyline if it crosses dateline ( -180° or +180°).  Without the polyline would look like: +179° ==> +180° ==> -180° ==> -179°...
         // algo: if difference lngInterpol-from.lng is > 180° there's been an unwanted split from +180 to -180 cause an arc can never span >180°
@@ -765,7 +812,9 @@ import "./polyline.css";
         Math.asin(
           Math.sqrt(
             Math.pow(Math.sin((fromLat - toLat) / 2.0), 2) +
-              Math.cos(fromLat) * Math.cos(toLat) * Math.pow(Math.sin((fromLng - toLng) / 2.0), 2)
+              Math.cos(fromLat) *
+                Math.cos(toLat) *
+                Math.pow(Math.sin((fromLng - toLng) / 2.0), 2)
           )
         );
       var arrLatLngs;
@@ -799,7 +848,8 @@ import "./polyline.css";
         var lng2 = (p2.lng / 180) * Math.PI;
         var y = Math.sin(lng2 - lng1) * Math.cos(lat2);
         var x =
-          Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1);
+          Math.cos(lat1) * Math.sin(lat2) -
+          Math.sin(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1);
         if (direction === "inbound") {
           var brng = ((Math.atan2(y, x) * 180) / Math.PI + 180).toFixed(0);
         } else {
@@ -808,26 +858,24 @@ import "./polyline.css";
         return brng % 360;
       };
       var angleIn = calcAngle(mouseCoords, lastCircleCoords, "inbound");
+      this.angleIn = angleIn;
       var angleOut = calcAngle(lastCircleCoords, mouseCoords, "outbound");
       var totalRound = this._getDistance(total);
       var differenceRound = this._getDistance(difference);
       var textCurrent = "";
       if (differenceRound.value > 0) {
         if (this.options.showBearings === true) {
-          textCurrent =
-            this.options.bearingTextIn +
-            ": " +
-            angleIn +
-            "°<br>" +
-            this.options.bearingTextOut +
-            ":---°";
+          textCurrent = this.options.bearingTextIn + ": " + angleIn + "°";
+          if (this.options.bearingTextOut) {
+            textCurrent += "<br>" + this.options.bearingTextOut + ":---°";
+          }
         }
-        textCurrent +=
-          '<div class="polyline-measure-tooltip-difference">+' +
-          differenceRound.value +
-          "&nbsp;" +
-          differenceRound.unit +
-          "</div>";
+        // textCurrent +=
+        //   '<div class="polyline-measure-tooltip-difference">+' +
+        //   differenceRound.value +
+        //   "&nbsp;" +
+        //   differenceRound.unit +
+        //   "</div>";
       }
       textCurrent +=
         '<div class="polyline-measure-tooltip-total">' +
@@ -849,7 +897,9 @@ import "./polyline.css";
         prevTooltip._icon.innerHTML = textReplace;
       }
     },
-    _drawArrow: function (arcLine) {
+    _drawArrow: function (arcLine, distance = 0) {
+      const d = this._getDistance(distance);
+
       // center of Great-circle distance, NOT of the arc on a Mercator map! reason: a) to complicated b) map not always Mercator c) good optical feature to see where real center of distance is not the "virtual" warped arc center due to Mercator projection
       // differ between even and odd pointed Arcs. If even the arrow is in the center of the middle line-segment, if odd it is on the middle point
       var midpoint = Math.trunc(arcLine.length / 2);
@@ -873,15 +923,34 @@ import "./polyline.css";
         iconSize: [16, 16],
         iconAnchor: [8, 8],
         // html : "<img src='iconArrow.png' style='background:green; height:100%; vertical-align:top; transform:rotate("+ cssAngle +"deg)'>"  <<=== alternative method by the use of an image instead of a Unicode symbol.
-        html:
-          "<div style = 'color:" +
-          this.options.arrow.color +
-          "; font-size: 16px; line-height: 16px; vertical-align:top; transform: rotate(" +
-          cssAngle +
-          "deg)'>&#x27a4;</div>", // best results if iconSize = font-size = line-height and iconAnchor font-size/2 .both values needed to position symbol in center of L.divIcon for all font-sizes.
+        html: `<div style = 'color:${
+          this.options.arrow.color
+        }; font-size: 16px; line-height: 16px; vertical-align:center; transform: rotate(${
+          this.angleIn - 90
+        }deg)'>&#x27a4; </div>`, // best results if iconSize = font-size = line-height and iconAnchor font-size/2 .both values needed to position symbol in center of L.divIcon for all font-sizes.
       });
+
+      var lastCircleCoords = this._currentLine.circleCoords.last();
+
+      const iconInfo = L.divIcon({
+        className: "poly-arrow-info",
+        iconSize: [16, 16],
+        iconAnchor: [0, 0],
+        html: `<div style = 'transform: rotate(${this.angleIn - 90}deg)'>${
+          this.angleIn +
+          parseInt(
+            this.options.magVarFn(lastCircleCoords.lat, lastCircleCoords.lng)
+          )
+        }° ${d.value}${d.unit}</div>`,
+      });
+
       var newArrowMarker = L.marker(center, {
         icon: iconArrow,
+        zIndexOffset: -50,
+        rotateWithView: true,
+      }).addTo(this._layerPaint); // zIndexOffset to draw arrows below tooltips
+      var newInfoMarker = L.marker(center, {
+        icon: iconInfo,
         zIndexOffset: -50,
         rotateWithView: true,
       }).addTo(this._layerPaint); // zIndexOffset to draw arrows below tooltips
@@ -909,7 +978,9 @@ import "./polyline.css";
         return;
       }
       var lastCircleCoords = this._currentLine.circleCoords.last();
-      this._rubberlinePath.setLatLngs(this._polylineArc(lastCircleCoords, mouseCoords));
+      this._rubberlinePath.setLatLngs(
+        this._polylineArc(lastCircleCoords, mouseCoords)
+      );
       var currentTooltip = this._currentLine.tooltips.last();
       var prevTooltip = this._currentLine.tooltips.slice(-2, -1)[0];
       currentTooltip.setLatLng(mouseCoords);
@@ -960,30 +1031,53 @@ import "./polyline.css";
           // update style on previous marker
           var lastCircleMarker = this.circleMarkers.last();
           if (lastCircleMarker) {
-            lastCircleMarker.bindTooltip(polylineState.options.tooltipTextDelete, {
-              direction: "top",
-              opacity: 0.7,
-              className: "polyline-measure-popupTooltip",
-            });
-            lastCircleMarker.off("click", polylineState._finishPolylinePath, polylineState);
+            lastCircleMarker.bindTooltip(
+              polylineState.options.tooltipTextDelete,
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
+            );
+            lastCircleMarker.off(
+              "click",
+              polylineState._finishPolylinePath,
+              polylineState
+            );
             if (this.circleMarkers.length === 1) {
               lastCircleMarker.setStyle(polylineState.options.startCircle);
             } else {
               lastCircleMarker.setStyle(polylineState.options.intermedCircle);
             }
           }
-          var newCircleMarker = new L.CircleMarker(latlng, polylineState.options.currentCircle);
+          var newCircleMarker = new L.CircleMarker(
+            latlng,
+            polylineState.options.currentCircle
+          );
           if (!polylineState.options.simple) {
             newCircleMarker.addTo(polylineState._layerPaint);
             newCircleMarker.bindTooltip(
-              polylineState.options.tooltipTextFinish + polylineState.options.tooltipTextDelete,
-              { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+              polylineState.options.tooltipTextFinish +
+                polylineState.options.tooltipTextDelete,
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
             );
             newCircleMarker.cntLine = polylineState._currentLine.id;
             newCircleMarker.cntCircle = polylineState._cntCircle;
             polylineState._cntCircle++;
-            newCircleMarker.on("mousedown", polylineState._dragCircle, polylineState);
-            newCircleMarker.on("click", polylineState._finishPolylinePath, polylineState);
+            newCircleMarker.on(
+              "mousedown",
+              polylineState._dragCircle,
+              polylineState
+            );
+            newCircleMarker.on(
+              "click",
+              polylineState._finishPolylinePath,
+              polylineState
+            );
           }
           this.circleMarkers.push(newCircleMarker);
         },
@@ -1003,22 +1097,33 @@ import "./polyline.css";
           // update polyline
           if (this.circleCoords.length > 1) {
             var arc = polylineState._polylineArc(lastCircleCoords, mouseCoords);
-            var arrowMarker;
-            if (!polylineState.options.simple) arrowMarker = polylineState._drawArrow(arc);
+
             if (this.circleCoords.length > 2) {
               arc.shift(); // remove first coordinate of the arc, cause it is identical with last coordinate of previous arc
             }
-            this.polylinePath.setLatLngs(this.polylinePath.getLatLngs().concat(arc));
+            this.polylinePath.setLatLngs(
+              this.polylinePath.getLatLngs().concat(arc)
+            );
+
+            var distanceSegment = lastCircleCoords.distanceTo(mouseCoords);
+            this.distance += distanceSegment;
+            var currentTooltip = polylineState._currentLine.tooltips.last();
+            var prevTooltip = polylineState._currentLine.tooltips.slice(
+              -1,
+              -2
+            )[0];
+
+            var arrowMarker;
+            if (!polylineState.options.simple)
+              arrowMarker = polylineState._drawArrow(arc, distanceSegment);
+
             // following lines needed especially for Mobile Browsers where we just use mouseclicks. No mousemoves, no tempLine.
             if (!polylineState.options.simple) {
               arrowMarker.cntLine = polylineState._currentLine.id;
               arrowMarker.cntArrow = polylineState._cntCircle - 1;
               polylineState._currentLine.arrowMarkers.push(arrowMarker);
             }
-            var distanceSegment = lastCircleCoords.distanceTo(mouseCoords);
-            this.distance += distanceSegment;
-            var currentTooltip = polylineState._currentLine.tooltips.last();
-            var prevTooltip = polylineState._currentLine.tooltips.slice(-1, -2)[0];
+
             polylineState._updateTooltip(
               currentTooltip,
               prevTooltip,
@@ -1034,7 +1139,8 @@ import "./polyline.css";
           }
           // add new tooltip to update on mousemove
           var tooltipNew = this.getNewToolTip(mouseCoords);
-          if (!polylineState.options.simple) tooltipNew.addTo(polylineState._layerPaint);
+          if (!polylineState.options.simple)
+            tooltipNew.addTo(polylineState._layerPaint);
           this.tooltips.push(tooltipNew);
           this.handleMarkers(mouseCoords);
         },
@@ -1045,28 +1151,43 @@ import "./polyline.css";
           // remove temporary rubberline
           polylineState._layerPaint.removeLayer(polylineState._rubberlinePath);
           if (this.circleCoords.length > 1 && !polylineState.options.simple) {
-            this.tooltips.last()._icon.classList.add("polyline-measure-tooltip-end"); // add Class e.g. another background-color to the Previous Tooltip (which is the last fixed tooltip, cause the moving tooltip is being deleted later)
+            this.tooltips
+              .last()
+              ._icon.classList.add("polyline-measure-tooltip-end"); // add Class e.g. another background-color to the Previous Tooltip (which is the last fixed tooltip, cause the moving tooltip is being deleted later)
             var lastCircleMarker = this.circleMarkers.last();
             lastCircleMarker.setStyle(polylineState.options.endCircle);
             // use Leaflet's own tooltip method to shwo a popuo tooltip if user hovers the last circle of a polyline
             lastCircleMarker.unbindTooltip(); // to close the opened Tooltip after it's been opened after click onto point to finish the line
             polylineState._currentLine.circleMarkers.map(function (circle) {
               circle.bindTooltip(
-                polylineState.options.tooltipTextMove + polylineState.options.tooltipTextDelete,
-                { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+                polylineState.options.tooltipTextMove +
+                  polylineState.options.tooltipTextDelete,
+                {
+                  direction: "top",
+                  opacity: 0.7,
+                  className: "polyline-measure-popupTooltip",
+                }
               );
             });
             polylineState._currentLine.circleMarkers[0].bindTooltip(
               polylineState.options.tooltipTextMove +
                 polylineState.options.tooltipTextDelete +
                 polylineState.options.tooltipTextResume,
-              { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
             );
             lastCircleMarker.bindTooltip(
               polylineState.options.tooltipTextMove +
                 polylineState.options.tooltipTextDelete +
                 polylineState.options.tooltipTextResume,
-              { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
             );
             polylineState._currentLine.arrowMarkers.map(function (arrow) {
               arrow.bindTooltip(polylineState.options.tooltipTextAdd, {
@@ -1075,8 +1196,16 @@ import "./polyline.css";
                 className: "polyline-measure-popupTooltip",
               });
             });
-            lastCircleMarker.off("click", polylineState._finishPolylinePath, polylineState);
-            lastCircleMarker.on("click", polylineState._resumePolylinePath, polylineState);
+            lastCircleMarker.off(
+              "click",
+              polylineState._finishPolylinePath,
+              polylineState
+            );
+            lastCircleMarker.on(
+              "click",
+              polylineState._resumePolylinePath,
+              polylineState
+            );
             polylineState._arrPolylines.push(this);
           } else {
             // if there is only one point, just clean it up
@@ -1093,14 +1222,22 @@ import "./polyline.css";
       firstTooltip.addTo(this._layerPaint);
       var text = "";
       if (this.options.showBearings === true) {
-        text = this.options.bearingTextIn + ":---°<br>" + this.options.bearingTextOut + ":---°";
+        text =
+          this.options.bearingTextIn +
+          ":---°<br>" +
+          this.options.bearingTextOut +
+          ":---°";
       }
       if (this.options.simple) {
         firstTooltip._icon.innerHTML = ""; //text;
         firstTooltip.setOpacity(0);
       } else {
-        text = text + '<div class="polyline-measure-tooltip-difference">+' + "0</div>";
-        text = text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
+        text =
+          text +
+          '<div class="polyline-measure-tooltip-difference">+' +
+          "0</div>";
+        text =
+          text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
       }
       this._currentLine.tooltips.push(firstTooltip);
       this._currentLine.circleCoords.last = last;
@@ -1118,7 +1255,8 @@ import "./polyline.css";
       // skip if there are no coords provided by the event, or this event's screen coordinates match those of finishing CircleMarker for the line we just completed
       if (
         !e.latlng ||
-        (this._finishCircleScreencoords && this._finishCircleScreencoords.equals(e.containerPoint))
+        (this._finishCircleScreencoords &&
+          this._finishCircleScreencoords.equals(e.containerPoint))
       ) {
         return;
       }
@@ -1151,7 +1289,10 @@ import "./polyline.css";
      * @private
      */
     _resumePolylinePath: function (e) {
-      if (e.originalEvent.ctrlKey === true || e.originalEvent.metaKey === true) {
+      if (
+        e.originalEvent.ctrlKey === true ||
+        e.originalEvent.metaKey === true
+      ) {
         // just resume if user pressed the CTRL-Key (or metaKey on Mac) while clicking onto the last circle
         this._currentLine = this._arrPolylines[e.target.cntLine];
         this._rubberlinePath = L.polyline([], {
@@ -1163,7 +1304,9 @@ import "./polyline.css";
         })
           .addTo(this._layerPaint)
           .bringToBack();
-        this._currentLine.tooltips.last()._icon.classList.remove("polyline-measure-tooltip-end"); // remove extra CSS-class of previous, last tooltip
+        this._currentLine.tooltips
+          .last()
+          ._icon.classList.remove("polyline-measure-tooltip-end"); // remove extra CSS-class of previous, last tooltip
         var tooltipNew = this._currentLine.getNewToolTip(e.latlng);
         if (!this.options.simple) {
           tooltipNew.addTo(this._layerPaint);
@@ -1171,12 +1314,17 @@ import "./polyline.css";
           this._currentLine.circleMarkers.last().unbindTooltip(); // remove popup-tooltip of previous, last circleMarker
           this._currentLine.circleMarkers
             .last()
-            .bindTooltip(this.options.tooltipTextMove + this.options.tooltipTextDelete, {
-              direction: "top",
-              opacity: 0.7,
-              className: "polyline-measure-popupTooltip",
-            });
-          this._currentLine.circleMarkers.last().setStyle(this.options.currentCircle);
+            .bindTooltip(
+              this.options.tooltipTextMove + this.options.tooltipTextDelete,
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
+            );
+          this._currentLine.circleMarkers
+            .last()
+            .setStyle(this.options.currentCircle);
           this._cntCircle = this._currentLine.circleCoords.length;
           this._map.fire("polylinemeasure:resume", this._currentLine);
         }
@@ -1196,24 +1344,41 @@ import "./polyline.css";
         // (metaKey for Mac)
         var lineNr = e.target.cntLine;
         var arrowNr = e.target.cntArrow;
-        this._arrPolylines[lineNr].arrowMarkers[arrowNr].removeFrom(this._layerPaint);
-        var newCircleMarker = new L.CircleMarker(e.latlng, this.options.intermedCircle).addTo(
+        this._arrPolylines[lineNr].arrowMarkers[arrowNr].removeFrom(
           this._layerPaint
         );
+        var newCircleMarker = new L.CircleMarker(
+          e.latlng,
+          this.options.intermedCircle
+        ).addTo(this._layerPaint);
         newCircleMarker.cntLine = lineNr;
         newCircleMarker.on("mousedown", this._dragCircle, this);
-        newCircleMarker.bindTooltip(this.options.tooltipTextMove + this.options.tooltipTextDelete, {
-          direction: "top",
-          opacity: 0.7,
-          className: "polyline-measure-popupTooltip",
-        });
-        this._arrPolylines[lineNr].circleMarkers.splice(arrowNr + 1, 0, newCircleMarker);
+        newCircleMarker.bindTooltip(
+          this.options.tooltipTextMove + this.options.tooltipTextDelete,
+          {
+            direction: "top",
+            opacity: 0.7,
+            className: "polyline-measure-popupTooltip",
+          }
+        );
+        this._arrPolylines[lineNr].circleMarkers.splice(
+          arrowNr + 1,
+          0,
+          newCircleMarker
+        );
         this._arrPolylines[lineNr].circleMarkers.map(function (item, index) {
           item.cntCircle = index;
         });
-        this._arrPolylines[lineNr].circleCoords.splice(arrowNr + 1, 0, e.latlng);
+        this._arrPolylines[lineNr].circleCoords.splice(
+          arrowNr + 1,
+          0,
+          e.latlng
+        );
         var lineCoords = this._arrPolylines[lineNr].polylinePath.getLatLngs(); // get Coords of each Point of the current Polyline
-        var arc1 = this._polylineArc(this._arrPolylines[lineNr].circleCoords[arrowNr], e.latlng);
+        var arc1 = this._polylineArc(
+          this._arrPolylines[lineNr].circleCoords[arrowNr],
+          e.latlng
+        );
         arc1.pop();
         var arc2 = this._polylineArc(
           e.latlng,
@@ -1227,7 +1392,11 @@ import "./polyline.css";
         var arrowMarker = this._drawArrow(arc1);
         this._arrPolylines[lineNr].arrowMarkers[arrowNr] = arrowMarker;
         arrowMarker = this._drawArrow(arc2);
-        this._arrPolylines[lineNr].arrowMarkers.splice(arrowNr + 1, 0, arrowMarker);
+        this._arrPolylines[lineNr].arrowMarkers.splice(
+          arrowNr + 1,
+          0,
+          arrowMarker
+        );
         this._arrPolylines[lineNr].arrowMarkers.map(function (item, index) {
           item.cntLine = lineNr;
           item.cntArrow = index;
@@ -1240,15 +1409,20 @@ import "./polyline.css";
           interactive: false,
         });
         this._tooltipNew.addTo(this._layerPaint);
-        this._arrPolylines[lineNr].tooltips.splice(arrowNr + 1, 0, this._tooltipNew);
+        this._arrPolylines[lineNr].tooltips.splice(
+          arrowNr + 1,
+          0,
+          this._tooltipNew
+        );
         var totalDistance = 0;
         this._arrPolylines[lineNr].tooltips.map(
           function (item, index) {
             if (index >= 1) {
-              var distance = this._arrPolylines[lineNr].circleCoords[index - 1].distanceTo(
-                this._arrPolylines[lineNr].circleCoords[index]
-              );
-              var lastCircleCoords = this._arrPolylines[lineNr].circleCoords[index - 1];
+              var distance = this._arrPolylines[lineNr].circleCoords[
+                index - 1
+              ].distanceTo(this._arrPolylines[lineNr].circleCoords[index]);
+              var lastCircleCoords =
+                this._arrPolylines[lineNr].circleCoords[index - 1];
               var mouseCoords = this._arrPolylines[lineNr].circleCoords[index];
               totalDistance += distance;
               var prevTooltip = this._arrPolylines[lineNr].tooltips[index - 1];
@@ -1264,7 +1438,10 @@ import "./polyline.css";
           }.bind(this)
         );
         this._map.fire("polylinemeasure:insert", e);
-        this._map.fire("polylinemeasure:change", this._arrPolylines[this._lineNr]);
+        this._map.fire(
+          "polylinemeasure:change",
+          this._arrPolylines[this._lineNr]
+        );
       }
     },
     _dragCircleMouseup: function () {
@@ -1272,20 +1449,28 @@ import "./polyline.css";
       // bind new popup-tooltip to the last CircleMArker if dragging finished
       if (
         this._circleNr === 0 ||
-        this._circleNr === this._arrPolylines[this._lineNr].circleCoords.length - 1
+        this._circleNr ===
+          this._arrPolylines[this._lineNr].circleCoords.length - 1
       ) {
         this._e1.target.bindTooltip(
           this.options.tooltipTextMove +
             this.options.tooltipTextDelete +
             this.options.tooltipTextResume,
-          { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+          {
+            direction: "top",
+            opacity: 0.7,
+            className: "polyline-measure-popupTooltip",
+          }
         );
       } else {
-        this._e1.target.bindTooltip(this.options.tooltipTextMove + this.options.tooltipTextDelete, {
-          direction: "top",
-          opacity: 0.7,
-          className: "polyline-measure-popupTooltip",
-        });
+        this._e1.target.bindTooltip(
+          this.options.tooltipTextMove + this.options.tooltipTextDelete,
+          {
+            direction: "top",
+            opacity: 0.7,
+            className: "polyline-measure-popupTooltip",
+          }
+        );
       }
       this._resetPathVariables();
       this._map.off("mousemove", this._dragCircleMousemove, this);
@@ -1293,7 +1478,10 @@ import "./polyline.css";
       this._map.on("mousemove", this._mouseMove, this);
       this._map.off("mouseup", this._dragCircleMouseup, this);
       this._map.fire("polylinemeasure:move", this._e1);
-      this._map.fire("polylinemeasure:change", this._arrPolylines[this._lineNr]);
+      this._map.fire(
+        "polylinemeasure:change",
+        this._arrPolylines[this._lineNr]
+      );
     },
     _dragCircleMousemove: function (e2) {
       if (this.options.simple) return;
@@ -1328,7 +1516,9 @@ import "./polyline.css";
         var arrowMarker = this._drawArrow(newLineSegment1);
         arrowMarker.cntLine = lineNr;
         arrowMarker.cntArrow = circleNr - 1;
-        this._arrPolylines[lineNr].arrowMarkers[circleNr - 1].removeFrom(this._layerPaint);
+        this._arrPolylines[lineNr].arrowMarkers[circleNr - 1].removeFrom(
+          this._layerPaint
+        );
         this._arrPolylines[lineNr].arrowMarkers[circleNr - 1] = arrowMarker;
       }
       if (circleNr < this._arrPolylines[lineNr].circleCoords.length - 1) {
@@ -1344,23 +1534,28 @@ import "./polyline.css";
         arrowMarker = this._drawArrow(newLineSegment2);
         arrowMarker.cntLine = lineNr;
         arrowMarker.cntArrow = circleNr;
-        this._arrPolylines[lineNr].arrowMarkers[circleNr].removeFrom(this._layerPaint);
+        this._arrPolylines[lineNr].arrowMarkers[circleNr].removeFrom(
+          this._layerPaint
+        );
         this._arrPolylines[lineNr].arrowMarkers[circleNr] = arrowMarker;
       }
       this._arrPolylines[lineNr].polylinePath.setLatLngs(lineCoords);
       if (circleNr >= 0) {
         // just update tooltip position if moved circle is 2nd, 3rd, 4th etc. circle of a polyline
-        this._arrPolylines[lineNr].tooltips[circleNr].setLatLng(currentCircleCoords);
+        this._arrPolylines[lineNr].tooltips[circleNr].setLatLng(
+          currentCircleCoords
+        );
       }
       var totalDistance = 0;
       // update tooltip texts of each tooltip
       this._arrPolylines[lineNr].tooltips.map(
         function (item, index) {
           if (index >= 1) {
-            var distance = this._arrPolylines[lineNr].circleCoords[index - 1].distanceTo(
-              this._arrPolylines[lineNr].circleCoords[index]
-            );
-            var lastCircleCoords = this._arrPolylines[lineNr].circleCoords[index - 1];
+            var distance = this._arrPolylines[lineNr].circleCoords[
+              index - 1
+            ].distanceTo(this._arrPolylines[lineNr].circleCoords[index]);
+            var lastCircleCoords =
+              this._arrPolylines[lineNr].circleCoords[index - 1];
             var mouseCoords = this._arrPolylines[lineNr].circleCoords[index];
             totalDistance += distance;
             this._arrPolylines[lineNr].distance = totalDistance;
@@ -1382,10 +1577,14 @@ import "./polyline.css";
       var lineNr = this._lineNr;
       this._map.on("click", this._resumeFirstpointClick, this); // necassary for _dragCircle. If switched on already within _dragCircle an unwanted click is fired at the end of the drag.
       var mouseCoords = e.latlng;
-      this._rubberlinePath2.setLatLngs(this._polylineArc(mouseCoords, currentCircleCoords));
+      this._rubberlinePath2.setLatLngs(
+        this._polylineArc(mouseCoords, currentCircleCoords)
+      );
       this._tooltipNew.setLatLng(mouseCoords);
       var totalDistance = 0;
-      var distance = mouseCoords.distanceTo(this._arrPolylines[lineNr].circleCoords[0]);
+      var distance = mouseCoords.distanceTo(
+        this._arrPolylines[lineNr].circleCoords[0]
+      );
       var lastCircleCoords = mouseCoords;
       var currentCoords = this._arrPolylines[lineNr].circleCoords[0];
       totalDistance += distance;
@@ -1402,10 +1601,11 @@ import "./polyline.css";
       this._arrPolylines[lineNr].tooltips.map(
         function (item, index) {
           if (index >= 1) {
-            var distance = this._arrPolylines[lineNr].circleCoords[index - 1].distanceTo(
-              this._arrPolylines[lineNr].circleCoords[index]
-            );
-            var lastCircleCoords = this._arrPolylines[lineNr].circleCoords[index - 1];
+            var distance = this._arrPolylines[lineNr].circleCoords[
+              index - 1
+            ].distanceTo(this._arrPolylines[lineNr].circleCoords[index]);
+            var lastCircleCoords =
+              this._arrPolylines[lineNr].circleCoords[index - 1];
             var mouseCoords = this._arrPolylines[lineNr].circleCoords[index];
             totalDistance += distance;
             var prevTooltip = this._arrPolylines[lineNr].tooltips[index - 1];
@@ -1428,15 +1628,22 @@ import "./polyline.css";
       this._map.off("mousemove", this._resumeFirstpointMousemove, this);
       this._map.off("click", this._resumeFirstpointClick, this);
       this._layerPaint.removeLayer(this._rubberlinePath2);
-      this._arrPolylines[lineNr].circleMarkers[0].setStyle(this.options.intermedCircle);
+      this._arrPolylines[lineNr].circleMarkers[0].setStyle(
+        this.options.intermedCircle
+      );
       this._arrPolylines[lineNr].circleMarkers[0].unbindTooltip();
       this._arrPolylines[lineNr].circleMarkers[0].bindTooltip(
         this.options.tooltipTextMove + this.options.tooltipTextDelete,
-        { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+        {
+          direction: "top",
+          opacity: 0.7,
+          className: "polyline-measure-popupTooltip",
+        }
       );
-      var newCircleMarker = new L.CircleMarker(e.latlng, this.options.startCircle).addTo(
-        this._layerPaint
-      );
+      var newCircleMarker = new L.CircleMarker(
+        e.latlng,
+        this.options.startCircle
+      ).addTo(this._layerPaint);
       newCircleMarker.cntLine = lineNr;
       newCircleMarker.cntCircle = 0;
       newCircleMarker.on("mousedown", this._dragCircle, this);
@@ -1444,7 +1651,11 @@ import "./polyline.css";
         this.options.tooltipTextMove +
           this.options.tooltipTextDelete +
           this.options.tooltipTextResume,
-        { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+        {
+          direction: "top",
+          opacity: 0.7,
+          className: "polyline-measure-popupTooltip",
+        }
       );
       this._arrPolylines[lineNr].circleMarkers.unshift(newCircleMarker);
       this._arrPolylines[lineNr].circleMarkers.map(function (item, index) {
@@ -1479,7 +1690,9 @@ import "./polyline.css";
           var lineNr = this._lineNr;
           this._circleNr = e1.target.cntCircle;
           currentCircleCoords = e1.latlng;
-          this._arrPolylines[lineNr].circleMarkers[0].setStyle(this.options.currentCircle);
+          this._arrPolylines[lineNr].circleMarkers[0].setStyle(
+            this.options.currentCircle
+          );
           this._rubberlinePath2 = L.polyline([], {
             // Style of temporary, rubberline while moving the mouse
             color: this.options.tempLine.color,
@@ -1506,8 +1719,12 @@ import "./polyline.css";
               this.options.bearingTextOut +
               ":---°";
           }
-          text = text + '<div class="polyline-measure-tooltip-difference">+' + "0</div>";
-          text = text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
+          text =
+            text +
+            '<div class="polyline-measure-tooltip-difference">+' +
+            "0</div>";
+          text =
+            text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
           this._tooltipNew._icon.innerHTML = text;
           this._map.off("mousemove", this._mouseMove, this);
           this._map.on("mousemove", this._resumeFirstpointMousemove, this);
@@ -1525,24 +1742,43 @@ import "./polyline.css";
         if (this._arrPolylines[lineNr]) {
           if (this._arrPolylines[lineNr].circleMarkers.length === 2) {
             // if there are just 2 remaining points, delete all these points and the remaining line, since there should not stay a lonely point the map
-            this._layerPaint.removeLayer(this._arrPolylines[lineNr].circleMarkers[1]);
-            this._layerPaint.removeLayer(this._arrPolylines[lineNr].tooltips[1]);
-            this._layerPaint.removeLayer(this._arrPolylines[lineNr].circleMarkers[0]);
-            this._layerPaint.removeLayer(this._arrPolylines[lineNr].tooltips[0]);
-            this._layerPaint.removeLayer(this._arrPolylines[lineNr].arrowMarkers[0]);
-            this._layerPaint.removeLayer(this._arrPolylines[lineNr].polylinePath);
+            this._layerPaint.removeLayer(
+              this._arrPolylines[lineNr].circleMarkers[1]
+            );
+            this._layerPaint.removeLayer(
+              this._arrPolylines[lineNr].tooltips[1]
+            );
+            this._layerPaint.removeLayer(
+              this._arrPolylines[lineNr].circleMarkers[0]
+            );
+            this._layerPaint.removeLayer(
+              this._arrPolylines[lineNr].tooltips[0]
+            );
+            this._layerPaint.removeLayer(
+              this._arrPolylines[lineNr].arrowMarkers[0]
+            );
+            this._layerPaint.removeLayer(
+              this._arrPolylines[lineNr].polylinePath
+            );
             this._map.fire("polylinemeasure:remove", e1);
-            this._map.fire("polylinemeasure:change", this._arrPolylines[this._lineNr]);
+            this._map.fire(
+              "polylinemeasure:change",
+              this._arrPolylines[this._lineNr]
+            );
             return;
           }
           this._arrPolylines[lineNr].circleCoords.splice(circleNr, 1);
-          this._arrPolylines[lineNr].circleMarkers[circleNr].removeFrom(this._layerPaint);
+          this._arrPolylines[lineNr].circleMarkers[circleNr].removeFrom(
+            this._layerPaint
+          );
           this._arrPolylines[lineNr].circleMarkers.splice(circleNr, 1);
           this._arrPolylines[lineNr].circleMarkers.map(function (item, index) {
             item.cntCircle = index;
           });
           var lineCoords = this._arrPolylines[lineNr].polylinePath.getLatLngs();
-          this._arrPolylines[lineNr].tooltips[circleNr].removeFrom(this._layerPaint);
+          this._arrPolylines[lineNr].tooltips[circleNr].removeFrom(
+            this._layerPaint
+          );
           this._arrPolylines[lineNr].tooltips.splice(circleNr, 1);
           // if the last Circle in polyline is being removed (in the code above, so length will be equal 0)
           if (!this._arrPolylines[lineNr].circleMarkers.length) {
@@ -1560,26 +1796,43 @@ import "./polyline.css";
           }
           // if first Circle is being removed
           if (circleNr === 0) {
-            this._arrPolylines[lineNr].circleMarkers[0].setStyle(this.options.startCircle);
+            this._arrPolylines[lineNr].circleMarkers[0].setStyle(
+              this.options.startCircle
+            );
             lineCoords.splice(0, arcpoints - 1);
             this._arrPolylines[lineNr].circleMarkers[0].bindTooltip(
               this.options.tooltipTextMove +
                 this.options.tooltipTextDelete +
                 this.options.tooltipTextResume,
-              { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
             );
-            this._arrPolylines[lineNr].arrowMarkers[circleNr].removeFrom(this._layerPaint);
+            this._arrPolylines[lineNr].arrowMarkers[circleNr].removeFrom(
+              this._layerPaint
+            );
             this._arrPolylines[lineNr].arrowMarkers.splice(0, 1);
             var text = "";
             if (this.options.showBearings === true) {
               text =
-                this.options.bearingTextIn + ":---°<br>" + this.options.bearingTextOut + ":---°";
+                this.options.bearingTextIn +
+                ":---°<br>" +
+                this.options.bearingTextOut +
+                ":---°";
             }
-            text = text + '<div class="polyline-measure-tooltip-difference">+' + "0</div>";
-            text = text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
+            text =
+              text +
+              '<div class="polyline-measure-tooltip-difference">+' +
+              "0</div>";
+            text =
+              text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
             this._arrPolylines[lineNr].tooltips[0]._icon.innerHTML = text;
             // if last Circle is being removed
-          } else if (circleNr === this._arrPolylines[lineNr].circleCoords.length) {
+          } else if (
+            circleNr === this._arrPolylines[lineNr].circleCoords.length
+          ) {
             this._arrPolylines[lineNr].circleMarkers[circleNr - 1].on(
               "click",
               this._resumePolylinePath,
@@ -1589,14 +1842,22 @@ import "./polyline.css";
               this.options.tooltipTextMove +
                 this.options.tooltipTextDelete +
                 this.options.tooltipTextResume,
-              { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
             );
-            this._arrPolylines[lineNr].circleMarkers.slice(-1)[0].setStyle(this.options.endCircle); // get last element of the array
+            this._arrPolylines[lineNr].circleMarkers
+              .slice(-1)[0]
+              .setStyle(this.options.endCircle); // get last element of the array
             this._arrPolylines[lineNr].tooltips
               .slice(-1)[0]
               ._icon.classList.add("polyline-measure-tooltip-end");
             lineCoords.splice(-(arcpoints - 1), arcpoints - 1);
-            this._arrPolylines[lineNr].arrowMarkers[circleNr - 1].removeFrom(this._layerPaint);
+            this._arrPolylines[lineNr].arrowMarkers[circleNr - 1].removeFrom(
+              this._layerPaint
+            );
             this._arrPolylines[lineNr].arrowMarkers.splice(-1, 1);
             // if intermediate Circle is being removed
           } else {
@@ -1606,12 +1867,22 @@ import "./polyline.css";
             );
             Array.prototype.splice.apply(
               lineCoords,
-              [(circleNr - 1) * (arcpoints - 1), 2 * arcpoints - 1].concat(newLineSegment)
+              [(circleNr - 1) * (arcpoints - 1), 2 * arcpoints - 1].concat(
+                newLineSegment
+              )
             );
-            this._arrPolylines[lineNr].arrowMarkers[circleNr - 1].removeFrom(this._layerPaint);
-            this._arrPolylines[lineNr].arrowMarkers[circleNr].removeFrom(this._layerPaint);
+            this._arrPolylines[lineNr].arrowMarkers[circleNr - 1].removeFrom(
+              this._layerPaint
+            );
+            this._arrPolylines[lineNr].arrowMarkers[circleNr].removeFrom(
+              this._layerPaint
+            );
             var arrowMarker = this._drawArrow(newLineSegment);
-            this._arrPolylines[lineNr].arrowMarkers.splice(circleNr - 1, 2, arrowMarker);
+            this._arrPolylines[lineNr].arrowMarkers.splice(
+              circleNr - 1,
+              2,
+              arrowMarker
+            );
           }
           this._arrPolylines[lineNr].polylinePath.setLatLngs(lineCoords);
           this._arrPolylines[lineNr].arrowMarkers.map(function (item, index) {
@@ -1622,14 +1893,17 @@ import "./polyline.css";
           this._arrPolylines[lineNr].tooltips.map(
             function (item, index) {
               if (index >= 1) {
-                var distance = this._arrPolylines[lineNr].circleCoords[index - 1].distanceTo(
-                  this._arrPolylines[lineNr].circleCoords[index]
-                );
-                var lastCircleCoords = this._arrPolylines[lineNr].circleCoords[index - 1];
-                var mouseCoords = this._arrPolylines[lineNr].circleCoords[index];
+                var distance = this._arrPolylines[lineNr].circleCoords[
+                  index - 1
+                ].distanceTo(this._arrPolylines[lineNr].circleCoords[index]);
+                var lastCircleCoords =
+                  this._arrPolylines[lineNr].circleCoords[index - 1];
+                var mouseCoords =
+                  this._arrPolylines[lineNr].circleCoords[index];
                 totalDistance += distance;
                 this._arrPolylines[lineNr].distance = totalDistance;
-                var prevTooltip = this._arrPolylines[lineNr].tooltips[index - 1];
+                var prevTooltip =
+                  this._arrPolylines[lineNr].tooltips[index - 1];
                 this._updateTooltip(
                   item,
                   prevTooltip,
@@ -1651,7 +1925,9 @@ import "./polyline.css";
             return;
           }
           this._currentLine.circleCoords.splice(circleNr, 1);
-          this._currentLine.circleMarkers[circleNr].removeFrom(this._layerPaint);
+          this._currentLine.circleMarkers[circleNr].removeFrom(
+            this._layerPaint
+          );
           this._currentLine.circleMarkers.splice(circleNr, 1);
           this._currentLine.circleMarkers.map(function (item, index) {
             item.cntCircle = index;
@@ -1662,26 +1938,43 @@ import "./polyline.css";
           // if first Circle is being removed
           if (circleNr === 0) {
             if (this._currentLine.circleMarkers.length === 1) {
-              this._currentLine.circleMarkers[0].setStyle(this.options.currentCircle);
+              this._currentLine.circleMarkers[0].setStyle(
+                this.options.currentCircle
+              );
             } else {
-              this._currentLine.circleMarkers[0].setStyle(this.options.startCircle);
+              this._currentLine.circleMarkers[0].setStyle(
+                this.options.startCircle
+              );
             }
             lineCoords.splice(0, arcpoints - 1);
             this._currentLine.circleMarkers[0].bindTooltip(
               this.options.tooltipTextMove +
                 this.options.tooltipTextDelete +
                 this.options.tooltipTextResume,
-              { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
             );
-            this._currentLine.arrowMarkers[circleNr].removeFrom(this._layerPaint);
+            this._currentLine.arrowMarkers[circleNr].removeFrom(
+              this._layerPaint
+            );
             this._currentLine.arrowMarkers.splice(0, 1);
             var text = "";
             if (this.options.showBearings === true) {
               text =
-                this.options.bearingTextIn + ":---°<br>" + this.options.bearingTextOut + ":---°";
+                this.options.bearingTextIn +
+                ":---°<br>" +
+                this.options.bearingTextOut +
+                ":---°";
             }
-            text = text + '<div class="polyline-measure-tooltip-difference">+' + "0</div>";
-            text = text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
+            text =
+              text +
+              '<div class="polyline-measure-tooltip-difference">+' +
+              "0</div>";
+            text =
+              text + '<div class="polyline-measure-tooltip-total">' + "0</div>";
             this._currentLine.tooltips[0]._icon.innerHTML = text;
             // if last Circle is being removed
           } else if (circleNr === this._currentLine.circleCoords.length) {
@@ -1694,14 +1987,22 @@ import "./polyline.css";
               this.options.tooltipTextMove +
                 this.options.tooltipTextDelete +
                 this.options.tooltipTextResume,
-              { direction: "top", opacity: 0.7, className: "polyline-measure-popupTooltip" }
+              {
+                direction: "top",
+                opacity: 0.7,
+                className: "polyline-measure-popupTooltip",
+              }
             );
-            this._currentLine.circleMarkers.slice(-1)[0].setStyle(this.options.currentCircle); // get last element of the array
+            this._currentLine.circleMarkers
+              .slice(-1)[0]
+              .setStyle(this.options.currentCircle); // get last element of the array
             this._currentLine.tooltips
               .slice(-1)[0]
               ._icon.classList.add("polyline-measure-tooltip-end");
             lineCoords.splice(-(arcpoints - 1), arcpoints - 1);
-            this._currentLine.arrowMarkers[circleNr - 1].removeFrom(this._layerPaint);
+            this._currentLine.arrowMarkers[circleNr - 1].removeFrom(
+              this._layerPaint
+            );
             this._currentLine.arrowMarkers.splice(-1, 1);
             // if intermediate Circle is being removed
           } else {
@@ -1711,10 +2012,16 @@ import "./polyline.css";
             );
             Array.prototype.splice.apply(
               lineCoords,
-              [(circleNr - 1) * (arcpoints - 1), 2 * arcpoints - 1].concat(newLineSegment)
+              [(circleNr - 1) * (arcpoints - 1), 2 * arcpoints - 1].concat(
+                newLineSegment
+              )
             );
-            this._currentLine.arrowMarkers[circleNr - 1].removeFrom(this._layerPaint);
-            this._currentLine.arrowMarkers[circleNr].removeFrom(this._layerPaint);
+            this._currentLine.arrowMarkers[circleNr - 1].removeFrom(
+              this._layerPaint
+            );
+            this._currentLine.arrowMarkers[circleNr].removeFrom(
+              this._layerPaint
+            );
             arrowMarker = this._drawArrow(newLineSegment);
             this._currentLine.arrowMarkers.splice(circleNr - 1, 2, arrowMarker);
           }
@@ -1729,9 +2036,12 @@ import "./polyline.css";
               if (index >= 1) {
                 var distance, mouseCoords;
                 var prevTooltip = this._currentLine.tooltips[index - 1];
-                var lastCircleCoords = this._currentLine.circleCoords[index - 1];
+                var lastCircleCoords =
+                  this._currentLine.circleCoords[index - 1];
                 if (index === arr.length - 1) {
-                  distance = this._currentLine.circleCoords[index - 1].distanceTo(e1.latlng);
+                  distance = this._currentLine.circleCoords[
+                    index - 1
+                  ].distanceTo(e1.latlng);
                   mouseCoords = e1.latlng;
                   // if this is the last Circle (mouse cursor) then don't sum the distance, but update tooltip like it was summed
                   this._updateTooltip(
@@ -1743,9 +2053,9 @@ import "./polyline.css";
                     mouseCoords
                   );
                 } else {
-                  distance = this._currentLine.circleCoords[index - 1].distanceTo(
-                    this._currentLine.circleCoords[index]
-                  );
+                  distance = this._currentLine.circleCoords[
+                    index - 1
+                  ].distanceTo(this._currentLine.circleCoords[index]);
                   mouseCoords = this._currentLine.circleCoords[index];
                   // if this is not the last Circle (mouse cursor) then sum the distance
                   totalDistanceUnfinishedLine += distance;
@@ -1765,7 +2075,10 @@ import "./polyline.css";
           this._currentLine.distance = totalDistanceUnfinishedLine;
         }
         this._map.fire("polylinemeasure:remove", e1);
-        this._map.fire("polylinemeasure:change", this._arrPolylines[this._lineNr]);
+        this._map.fire(
+          "polylinemeasure:change",
+          this._arrPolylines[this._lineNr]
+        );
         return;
       }
       this._e1 = e1;

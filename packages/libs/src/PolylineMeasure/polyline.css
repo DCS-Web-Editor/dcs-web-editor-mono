@@ -2,6 +2,19 @@
   cursor: pointer;
 }
 
+.poly-arrow-info {
+  display: inline;
+  white-space: nowrap;
+  text-shadow: 1px 1px #eee, -1px -1px #eee, -1px 1px #eee, 1px -1px #eee;
+  font-size: 12px;
+  z-index: 1000 !important;
+  color: #139278;
+  font-weight: 600;
+  font-family: monospace;
+}
+.poly-arrow {
+}
+
 a.polyline-measure-controlOnBgColor,
 a.polyline-measure-controlOnBgColor:hover {
   background-color: #1abc9c;
@@ -37,11 +50,11 @@ a.polyline-measure-clearControl:active {
 }
 
 .polyline-measure-tooltip-total {
-  color: #ffb3fa;
+  color: #1abc9c;
 }
 
 .polyline-measure-tooltip-difference {
-  color: #1abc9c;
+  color: #14ab8d;
   font-weight: bold;
   /* font-style: italic; */
 }
