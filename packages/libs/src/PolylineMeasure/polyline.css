@@ -3,7 +3,6 @@
 }
 
 .poly-arrow-info {
-  display: inline;
   white-space: nowrap;
   text-shadow: 1px 1px #eee, -1px -1px #eee, -1px 1px #eee, 1px -1px #eee;
   font-size: 12px;

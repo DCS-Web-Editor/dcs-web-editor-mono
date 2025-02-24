@@ -936,7 +936,9 @@ import "./polyline.css";
         className: "poly-arrow-info",
         iconSize: [16, 16],
         iconAnchor: [0, 0],
-        html: `<div style = 'transform: rotate(${this.angleIn - 90}deg)'>${
+        html: `<div style = 'transform: translate(3px, 3px) rotate(${
+          this.angleIn - 90
+        }deg)'>${
           this.angleIn +
           parseInt(
             this.options.magVarFn(lastCircleCoords.lat, lastCircleCoords.lng)
