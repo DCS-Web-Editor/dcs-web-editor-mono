@@ -301,20 +301,20 @@ export const COORDINATES = {
   // temp coordinates
   Afghanistan: [
     {
-      lat: 39,
-      lon: 60,
+      lat: 38.742653938378,
+      lon: 60.309333178285,
     },
     {
-      lat: 29.4,
-      lon: 60.2,
+      lat: 38.149866441933,
+      lon: 75.044599581167,
     },
     {
-      lat: 29,
-      lon: 74.5,
+      lat: 22.98950617822,
+      lon: 73.276055221979,
     },
     {
-      lat: 38.6,
-      lon: 75.34,
+      lat: 23.309750920443,
+      lon: 60.713293285782,
     },
   ],
   "Afg North": [
