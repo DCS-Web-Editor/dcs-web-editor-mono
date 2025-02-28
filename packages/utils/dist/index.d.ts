@@ -97,3 +97,4 @@ export declare function toLatLng(latLon: LatLon): {
     lat: number;
     lng: number;
 };
+export declare function sanitizeAngle(angle: number): number;

@@ -938,12 +938,12 @@ import "./polyline.css";
         iconAnchor: [0, 0],
         html: `<div style = 'transform: translate(3px, 3px) rotate(${
           this.angleIn - 90
-        }deg)'>${
+        }deg)'>${sanitizeAngle(
           this.angleIn -
-          parseInt(
-            this.options.magVarFn(lastCircleCoords.lat, lastCircleCoords.lng)
-          )
-        }° ${d.value}${d.unit}</div>`,
+            parseInt(
+              this.options.magVarFn(lastCircleCoords.lat, lastCircleCoords.lng)
+            )
+        )}° ${d.value}${d.unit}</div>`,
       });
 
       var newArrowMarker = L.marker(center, {
@@ -2144,3 +2144,9 @@ import "./polyline.css";
   // import 'leaflet.polylinemeasure';
   // const measureControl = new L.Control.PolylineMeasure();
 });
+
+function sanitizeAngle(angle) {
+  if (angle < 0) return angle + 360;
+  if (angle >= 360) return angle - 360;
+  return angle;
+}
