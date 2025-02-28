@@ -939,7 +939,7 @@ import "./polyline.css";
         html: `<div style = 'transform: translate(3px, 3px) rotate(${
           this.angleIn - 90
         }deg)'>${
-          this.angleIn +
+          this.angleIn -
           parseInt(
             this.options.magVarFn(lastCircleCoords.lat, lastCircleCoords.lng)
           )
