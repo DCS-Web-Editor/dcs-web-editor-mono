@@ -620,7 +620,8 @@ import "./polyline.css";
               totalDistance,
               distance,
               line.circleCoords[point_index - 1],
-              line.circleCoords[point_index]
+              line.circleCoords[point_index],
+              line.arrowMarkers[point_index]
             );
           }
         }.bind(this)
@@ -837,9 +838,11 @@ import "./polyline.css";
       total,
       difference,
       lastCircleCoords,
-      mouseCoords
+      mouseCoords,
+      arrowMarker
     ) {
       if (this.options.simple) return;
+
       // Explanation of formula: http://www.movable-type.co.uk/scripts/latlong.html
       var calcAngle = function (p1, p2, direction) {
         var lat1 = (p1.lat / 180) * Math.PI;
@@ -896,6 +899,8 @@ import "./polyline.css";
         );
         prevTooltip._icon.innerHTML = textReplace;
       }
+
+      // this._updateArrow(arrowMarker, angleIn, angleOut, differenceRound);
     },
     _drawArrow: function (arcLine, distance = 0) {
       const d = this._getDistance(distance);
@@ -966,6 +971,11 @@ import "./polyline.css";
       }
       newArrowMarker.on("click", this._clickedArrow, this);
       return newArrowMarker;
+    },
+    _updateArrow: function (arrowMarker, angleIn, angleOut, distance) {
+      // if (!arrowMarker) return;
+      // TODO: update arrow
+      // console.log(arrowMarker, angleIn, angleOut, distance);
     },
     /**
      * Event to fire on mouse move
@@ -1115,17 +1125,6 @@ import "./polyline.css";
               -2
             )[0];
 
-            var arrowMarker;
-            if (!polylineState.options.simple)
-              arrowMarker = polylineState._drawArrow(arc, distanceSegment);
-
-            // following lines needed especially for Mobile Browsers where we just use mouseclicks. No mousemoves, no tempLine.
-            if (!polylineState.options.simple) {
-              arrowMarker.cntLine = polylineState._currentLine.id;
-              arrowMarker.cntArrow = polylineState._cntCircle - 1;
-              polylineState._currentLine.arrowMarkers.push(arrowMarker);
-            }
-
             polylineState._updateTooltip(
               currentTooltip,
               prevTooltip,
@@ -1134,6 +1133,15 @@ import "./polyline.css";
               lastCircleCoords,
               mouseCoords
             );
+
+            var arrowMarker;
+            if (!polylineState.options.simple) {
+              arrowMarker = polylineState._drawArrow(arc, distanceSegment);
+              // following lines needed especially for Mobile Browsers where we just use mouseclicks. No mousemoves, no tempLine.
+              arrowMarker.cntLine = polylineState._currentLine.id;
+              arrowMarker.cntArrow = polylineState._cntCircle - 1;
+              polylineState._currentLine.arrowMarkers.push(arrowMarker);
+            }
           }
           // update last tooltip with final value
           if (currentTooltip) {
