@@ -13,7 +13,10 @@ export const icons: any[] = [];
 
 iconControl.onAdd = function (_map) {
   map = _map;
-  context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  context.iconBar ||= L.DomUtil.create(
+    "div",
+    "leaflet-control-zoom leaflet-bar leaflet-control"
+  );
   this._div = context.iconBar;
 
   // otherwise drawing process would instantly start at controls' container or double click would zoom-in map
@@ -54,25 +57,50 @@ mapElement.ondragover = function (e) {
 };
 
 mapElement.ondrop = function (e) {
-  if (!context.iconMode) return;
   e.preventDefault();
 
   const imageData = e.dataTransfer.getData("url");
+
+  // local icon
+  if (!imageData) {
+    dropUserImage(e);
+    return;
+  }
+
+  // web image
+  if (imageData.startsWith("http")) {
+    dropWebImage(e);
+    return;
+  }
+
+  // built in icon
+  if (!context.iconMode) return;
+
   const name = e.dataTransfer.getData("name");
   const color = e.dataTransfer.getData("color");
 
-  const coordinates = map.containerPointToLatLng(L.point([e.clientX, e.clientY]));
+  const coordinates = map.containerPointToLatLng(
+    L.point([e.clientX, e.clientY])
+  );
 
   spawnIcon(name, imageData, coordinates, color);
 };
 
-function spawnIcon(name: string, imageData: string, coordinates: any, color: string = "") {
+function spawnIcon(
+  name: string,
+  imageData: string,
+  coordinates: any,
+  color: string = ""
+) {
   const filter = getFilter(color);
   const opts = {
     className: "dwe-dropicon",
     html: `<img width=50 height=50 src="${imageData}" style="filter: ${filter}"/>`,
   };
-  const icon = L.marker(coordinates, { icon: L.divIcon(opts), draggable: true }).addTo(map);
+  const icon = L.marker(coordinates, {
+    icon: L.divIcon(opts),
+    draggable: true,
+  }).addTo(map);
   icon.name = name;
   icon.color = color;
   icon.on("click", (e) => icon.remove());
@@ -80,10 +108,10 @@ function spawnIcon(name: string, imageData: string, coordinates: any, color: str
 }
 
 const colorPicker = document.getElementById("colorpicker")!;
-// colorPicker.addEventListener("change", renderDrawer);
+if (colorPicker) colorPicker.addEventListener("change", renderDrawer);
 
 function getFilter(col = "") {
-  const color = col || colorPicker.value || "#292929";
+  const color = col || colorPicker?.value || "#292929";
 
   // iconDrawer.style.boxShadow = ``;
 
@@ -111,10 +139,10 @@ function renderDrawer() {
 
   if (iconDrawer)
     iconDrawer.innerHTML = `<div class="image-holder">
-    <h4 class="no-select">Planning Icons drag & drop</h4>
+    <h4 class="no-select">Icons drag & drop. (Or drag custom images to map)</h4>
      ${Object.keys(Icons.icons)
        .map((name) => {
-         return `<img class="image-holder no-select" ondragstart="onIconDrag(event, '${name}', '${colorPicker.value}')" width=30 height=30 style="filter: ${filter}" src="${Icons.icons[name]}" alt="${name}"></img>`;
+         return `<img class="image-holder no-select" ondragstart="onIconDrag(event, '${name}', '${colorPicker?.value}')" width=30 height=30 style="filter: ${filter}" src="${Icons.icons[name]}" alt="${name}"></img>`;
        })
        .join("")}
     
@@ -161,5 +189,54 @@ export function loadIcons(icons: any[], _map?: any) {
   map ||= _map;
   icons.forEach((icon) => {
     spawnIcon(icon.name, icon.image, icon.latLng, icon.color);
+  });
+}
+
+function dropUserImage(e) {
+  Array.prototype.forEach.call(e.dataTransfer.files, (file, i) => {
+    if (!file) return;
+    e.preventDefault();
+
+    const offset = i * 50;
+    const reader = new FileReader();
+
+    reader.onload = function (event) {
+      const src = event.target?.result as string;
+      const coordinates = map.containerPointToLatLng(
+        L.point([e.clientX + offset, e.clientY])
+      );
+
+      let className = "dropped-image";
+      if (file.type === "image/svg+xml") {
+        className = "dropped-svg";
+      }
+
+      const marker = L.marker(coordinates, {
+        icon: L.icon({ iconUrl: src, className }),
+        draggable: true,
+      }).addTo(map);
+
+      marker.on("click", function (e) {
+        marker.remove();
+      });
+    };
+
+    reader.readAsDataURL(file);
+  });
+}
+
+function dropWebImage(e: DragEvent) {
+  const imageData = e.dataTransfer.getData("url");
+  const coordinates = map.containerPointToLatLng(
+    L.point([e.clientX, e.clientY])
+  );
+
+  const marker = L.marker(coordinates, {
+    icon: L.icon({ iconUrl: imageData, className: "dropped-web-image" }),
+    draggable: true,
+  }).addTo(map);
+
+  marker.on("click", function () {
+    marker.remove();
   });
 }

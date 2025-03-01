@@ -40,3 +40,30 @@
   width: 50px !important;
   height: 50px !important;
 }
+
+/* user image */
+#map
+  > div.leaflet-pane.leaflet-map-pane
+  > div.leaflet-pane.leaflet-marker-pane
+  > img.dropped-image {
+  max-width: 15rem !important;
+  max-height: 15rem !important;
+}
+
+#map
+  > div.leaflet-pane.leaflet-map-pane
+  > div.leaflet-pane.leaflet-marker-pane
+  > img.dropped-svg {
+  max-width: 5rem !important;
+  min-width: 3rem !important;
+  max-height: 5em !important;
+}
+
+#map
+  > div.leaflet-pane.leaflet-map-pane
+  > div.leaflet-pane.leaflet-marker-pane
+  > img.dropped-web-image {
+  max-width: 20rem !important;
+  min-width: 1rem !important;
+  max-height: 20rem !important;
+}
