@@ -88,6 +88,8 @@ L.Map.PopupMovable = L.Handler.extend({
 
   //Return css for Popup's leader
   _createPopupCss(x, y, w, h) {
+    console.log(x, y, w, h);
+
     //Drawing a rectangle using SVG and Triangulate part of it.
     const svgicon = (s, width, height) => {
       const xml = `<?xml version="1.0" encoding="utf-8"?>
@@ -275,6 +277,7 @@ L.Map.PopupMovable = L.Handler.extend({
   */
   _popupMovable(mk) {
     const p = mk.popup;
+
     if (p.options.popupmovable === false) return;
     //First, Embed the original position in Popup's Object.(to be used later.)
     p._wrapper.parentNode.latlng = p.getLatLng();
@@ -311,7 +314,8 @@ L.Map.PopupMovable = L.Handler.extend({
     // redraw pointer on accordion open or popup size change
     p._container.addEventListener("click", (e) => {
       setTimeout(() => {
-        if (_t) this._drawCss(p._container, _t._newPos);
+        // make sure popup is open
+        if (_t && p.isOpen()) this._drawCss(p._container, _t._newPos);
       }, 300);
     });
 
