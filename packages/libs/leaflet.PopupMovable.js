@@ -38,8 +38,12 @@ L.Map.PopupMovable = L.Handler.extend({
       ];
     //When ZoomLeve change, all Popups's css are restore default css.
     if (e.type === "zoomstart") {
-      document.querySelectorAll(".leaflet-popup-tip-container").forEach((c) => div.push(c));
-      document.querySelectorAll(".leaflet-popup-tip").forEach((c) => tip.push(c));
+      document
+        .querySelectorAll(".leaflet-popup-tip-container")
+        .forEach((c) => div.push(c));
+      document
+        .querySelectorAll(".leaflet-popup-tip")
+        .forEach((c) => tip.push(c));
     } else if (e.type === "popupclose") {
       div.push(e.popup._tipContainer);
       tip.push(e.popup._tipContainer.children[0]);
@@ -51,7 +55,8 @@ L.Map.PopupMovable = L.Handler.extend({
     }
 
     for (const s in dic) css[dic[s]] = "";
-    for (const d in div) for (const name in css) div[d].style[this._camelize(name)] = css[name];
+    for (const d in div)
+      for (const name in css) div[d].style[this._camelize(name)] = css[name];
     //redraw default tooltip
     for (const t in tip) tip[t].style.visibility = "visible";
     //Marker, which has not been moved, shall be excluded,
@@ -73,9 +78,12 @@ L.Map.PopupMovable = L.Handler.extend({
         "background-image",
         "filter",
       ];
-    document.querySelectorAll(".leaflet-popup-tip-container").forEach((c) => div.push(c));
+    document
+      .querySelectorAll(".leaflet-popup-tip-container")
+      .forEach((c) => div.push(c));
     for (const s in dic) css[dic[s]] = "";
-    for (const d in div) for (const name in css) div[d].style[this._camelize(name)] = css[name];
+    for (const d in div)
+      for (const name in css) div[d].style[this._camelize(name)] = css[name];
   },
 
   //Return css for Popup's leader
@@ -89,7 +97,9 @@ L.Map.PopupMovable = L.Handler.extend({
 </svg>`;
       //for easyPrint.js, convert svg's xml to base64.
       const encoded = btoa(xml);
-      const uri = encodeURI(`data:image/svg+xml;charset=utf8;base64,${encoded}`);
+      const uri = encodeURI(
+        `data:image/svg+xml;charset=utf8;base64,${encoded}`
+      );
       return `url(${uri})`;
     };
     const c = {
@@ -150,7 +160,11 @@ L.Map.PopupMovable = L.Handler.extend({
         //bottom
         c["height"] = tweakH - y;
         c["top"] = h / 2 + y - tweakH;
-        c["background-image"] = svgicon("0,100 50,0 100,100", para, c["height"]);
+        c["background-image"] = svgicon(
+          "0,100 50,0 100,100",
+          para,
+          c["height"]
+        );
       }
     } else if (x >= 0 && y >= 0) {
       //left-upper
@@ -160,7 +174,11 @@ L.Map.PopupMovable = L.Handler.extend({
       c["top"] = h / 2 - tweakH;
       const width = ww(c["width"]),
         height = ww(c["height"]);
-      c["background-image"] = svgicon(`${width},0 100,100 0,${height}`, c["width"], c["height"]);
+      c["background-image"] = svgicon(
+        `${width},0 100,100 0,${height}`,
+        c["width"],
+        c["height"]
+      );
     } else if (x < 0 && y >= 0) {
       //right-upper
       c["width"] = offset * 2 - x;
@@ -169,7 +187,11 @@ L.Map.PopupMovable = L.Handler.extend({
       c["top"] = h / 2 - tweakH;
       const width = ww(c["width"], true),
         height = ww(c["height"]);
-      c["background-image"] = svgicon(`0 100,${width},0 100,${height}`, c["width"], c["height"]);
+      c["background-image"] = svgicon(
+        `0 100,${width},0 100,${height}`,
+        c["width"],
+        c["height"]
+      );
     } else if (x < 0 && y < 0) {
       //right-lower
       c["width"] = offset * 2 - x;
@@ -178,7 +200,11 @@ L.Map.PopupMovable = L.Handler.extend({
       c["top"] = h / 2 + y - tweakH;
       const width = ww(c["width"], true),
         height = ww(c["height"], true);
-      c["background-image"] = svgicon(`0,0 100,${height},${width} 100`, c["width"], c["height"]);
+      c["background-image"] = svgicon(
+        `0,0 100,${height},${width} 100`,
+        c["width"],
+        c["height"]
+      );
     } else if (x >= 0 && y < 0) {
       //left-lower
       c["width"] = x;
@@ -187,7 +213,11 @@ L.Map.PopupMovable = L.Handler.extend({
       c["top"] = h / 2 + y - tweakH;
       const width = ww(c["width"]),
         height = ww(c["height"], true);
-      c["background-image"] = svgicon(`0,${height} ${width},100 100,0`, c["width"], c["height"]);
+      c["background-image"] = svgicon(
+        `0,${height} ${width},100 100,0`,
+        c["width"],
+        c["height"]
+      );
     }
     //Apply the retrieved css's values.
     Object.keys(c).forEach(function (key) {
@@ -250,21 +280,41 @@ L.Map.PopupMovable = L.Handler.extend({
     p._wrapper.parentNode.latlng = p.getLatLng();
     //Enbed the marker option(popupAnchor) that bindding this popup.
     try {
-      p._wrapper.parentNode.popupAnchor = p._source.options.icon.options.popupAnchor;
+      p._wrapper.parentNode.popupAnchor =
+        p._source.options.icon.options.popupAnchor;
     } catch {
       p._wrapper.parentNode.popupAnchor = [0, 0];
     }
+    const dragStartTarget = this._map.options.dragStartTarget;
+    const target = dragStartTarget
+      ? p._container.querySelector(dragStartTarget)
+      : p._wrapper;
+
+    let _t;
     //Make Popup elements movable.
-    new L.Draggable(p._container, p._wrapper)
+    new L.Draggable(p._container, target)
       .on("drag", (e) => {
         this._drawCss(e.target._element, e.target._newPos);
-        p.setLatLng(this._map.layerPointToLatLng(e.target._newPos));
+        _t = e.target;
+
+        // disabled. dont store position on reopen
+        // p.setLatLng(this._map.layerPointToLatLng(e.target._newPos));
       })
       .on("dragend", (e) => {
+        this._drawCss(e.target._element, e.target._newPos);
+
         //For ZoomLevel change Event,moved or not, it shall be possible to determine.
         L.DomUtil.addClass(e.target._element, this._movedLabel);
       })
       .enable();
+
+    // redraw pointer on accordion open or popup size change
+    p._container.addEventListener("click", (e) => {
+      setTimeout(() => {
+        if (_t) this._drawCss(p._container, _t._newPos);
+      }, 300);
+    });
+
     //When binded Marker clicked, restore leadline.
     if (p._source !== undefined) {
       L.featureGroup([p._source]).on("click", () => this._restorePopup(p));
@@ -301,8 +351,14 @@ L.Map.PopupMovable = L.Handler.extend({
   */
   popupDispersion: function () {
     const getPosition = (el) => {
-      const translateString = el.style.transform.split("(")[1].split(")")[0].split(",");
-      return L.point(parseInt(translateString[0]), parseInt(translateString[1]));
+      const translateString = el.style.transform
+        .split("(")[1]
+        .split(")")[0]
+        .split(",");
+      return L.point(
+        parseInt(translateString[0]),
+        parseInt(translateString[1])
+      );
     };
     const computePositionStep = (t, mks) => {
       const normalize = (a) => {
@@ -310,7 +366,9 @@ L.Map.PopupMovable = L.Handler.extend({
         if (l === 0) return a;
         else return L.point(a.x / l, a.y / l);
       };
-      const k = Math.sqrt((window.innerWidth * window.innerHeight) / 10 / mks.length),
+      const k = Math.sqrt(
+          (window.innerWidth * window.innerHeight) / 10 / mks.length
+        ),
         fr = (x, k) => (k * k) / x;
       for (let i = 0; i < mks.length; i++) {
         const v = mks[i],
@@ -318,10 +376,14 @@ L.Map.PopupMovable = L.Handler.extend({
         v.disp = L.point(0, 0);
         for (let j = 0; j < mks.length; j++) {
           if (i !== j) {
-            const dpos = v_pos.subtract(getPosition(mks[j].getPopup()._container));
+            const dpos = v_pos.subtract(
+              getPosition(mks[j].getPopup()._container)
+            );
             if (dpos !== 0)
               v.disp = v.disp.add(
-                normalize(dpos).multiplyBy(fr(dpos.distanceTo(L.point(0, 0)), k))
+                normalize(dpos).multiplyBy(
+                  fr(dpos.distanceTo(L.point(0, 0)), k)
+                )
               );
           }
         }
@@ -331,7 +393,9 @@ L.Map.PopupMovable = L.Handler.extend({
       for (const v of mks) {
         const v_pos = getPosition(v.getPopup()._container),
           dpos = v_pos.subtract(this._map.latLngToLayerPoint(v.getLatLng()));
-        v.disp = v.disp.subtract(normalize(dpos).multiplyBy(fa(dpos.distanceTo(L.point(0, 0)), k)));
+        v.disp = v.disp.subtract(
+          normalize(dpos).multiplyBy(fa(dpos.distanceTo(L.point(0, 0)), k))
+        );
       }
 
       const scaleTo = (a, b) => L.point(a.x * b.x, a.y * b.y);
@@ -341,7 +405,10 @@ L.Map.PopupMovable = L.Handler.extend({
           p = getPosition(el).add(
             scaleTo(
               normalize(disp),
-              L.point(Math.min(Math.abs(disp.x), t), Math.min(Math.abs(disp.y), t))
+              L.point(
+                Math.min(Math.abs(disp.x), t),
+                Math.min(Math.abs(disp.y), t)
+              )
             )
           );
         L.DomUtil.setPosition(el, L.point(Math.ceil(p.x), Math.ceil(p.y)));
@@ -350,7 +417,11 @@ L.Map.PopupMovable = L.Handler.extend({
 
     const mks = [];
     this._map.eachLayer((e) => {
-      if ((e instanceof L.CircleMarker || e instanceof L.Marker) && e.isPopupOpen()) mks.push(e);
+      if (
+        (e instanceof L.CircleMarker || e instanceof L.Marker) &&
+        e.isPopupOpen()
+      )
+        mks.push(e);
     });
 
     for (let i = 0; i < mks.length; i++) {
@@ -366,11 +437,15 @@ L.Map.PopupMovable = L.Handler.extend({
     }
     const start = Math.ceil(window.innerWidth / 10),
       times = 30;
-    for (let i = 0; i < times; i += 1) computePositionStep(start * (1 - i / (times - 1)), mks);
+    for (let i = 0; i < times; i += 1)
+      computePositionStep(start * (1 - i / (times - 1)), mks);
     for (const v of mks) {
       const el = v.getPopup()._container,
         pos = getPosition(el),
-        p = L.point(Math.ceil(pos.x - el.offsetWidth / 2), Math.ceil(pos.y - el.offsetHeight / 2));
+        p = L.point(
+          Math.ceil(pos.x - el.offsetWidth / 2),
+          Math.ceil(pos.y - el.offsetHeight / 2)
+        );
       L.DomUtil.setPosition(el, p);
     }
     const bounds = this._map.getBounds(),
@@ -425,7 +500,11 @@ L.Map.PopupMovable = L.Handler.extend({
       popupmovable: true,
       _animateZoom: function (e) {
         if (!L.DomUtil.hasClass(this._container, this._movedLabel)) {
-          const pos = this._map._latLngToNewLayerPoint(this._latlng, e.zoom, e.center),
+          const pos = this._map._latLngToNewLayerPoint(
+              this._latlng,
+              e.zoom,
+              e.center
+            ),
             anchor = this._getAnchor();
           L.DomUtil.setPosition(this._container, pos.add(anchor));
         }
@@ -435,11 +514,13 @@ L.Map.PopupMovable = L.Handler.extend({
         if (!this._map) {
           return;
         }
+
         function toPoint(x, y, round) {
           if (x instanceof L.Point) return x;
           if (Array.isArray(x)) return new L.point(x[0], x[1]);
           if (x === undefined || x === null) return x;
-          if (typeof x === "object" && "x" in x && "y" in x) return new Point(x.x, x.y);
+          if (typeof x === "object" && "x" in x && "y" in x)
+            return new Point(x.x, x.y);
           return new Point(x, y, round);
         }
         let offset = toPoint(this.options.offset);
@@ -455,7 +536,8 @@ L.Map.PopupMovable = L.Handler.extend({
         }
 
         const bottom = (this._containerBottom = -offset.y),
-          left = (this._containerLeft = -Math.round(this._containerWidth / 2) + offset.x);
+          left = (this._containerLeft =
+            -Math.round(this._containerWidth / 2) + offset.x);
 
         // bottom position the overlay in case the height of the overlay changes (images loading etc)
         this._container.style.bottom = bottom + "px";
