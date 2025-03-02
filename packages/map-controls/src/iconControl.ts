@@ -109,7 +109,8 @@ function spawnIcon(
   name: string,
   imageData: string,
   coordinates: any,
-  color: string = ""
+  color: string = "",
+  type: string = "icon"
 ) {
   const filter = getFilter(color);
   const opts = {
@@ -122,6 +123,7 @@ function spawnIcon(
   }).addTo(map);
   icon.name = name;
   icon.color = color;
+  icon.type = type;
   icon.on("click", (e) => icon.remove());
   icons.push(icon);
 }
@@ -215,7 +217,12 @@ function rgbToHsl(r, g, b) {
 export function loadIcons(icons: any[], _map?: any) {
   map ||= _map;
   icons.forEach((icon) => {
-    spawnIcon(icon.name, icon.image, icon.latLng, icon.color);
+    if (!icon.type || icon.type === "icon")
+      spawnIcon(icon.name, icon.image, icon.latLng, icon.color, icon.type);
+    else if (icon.type === "image")
+      spawnUserImage(icon.name, icon.latLng, icon.image, icon.type);
+    else if (icon.type === "web-image")
+      spawnUserImage(icon.name, icon.latLng, icon.image, icon.type);
   });
 }
 
@@ -233,40 +240,53 @@ function dropUserImage(e) {
         L.point([e.clientX + _offsetX + offsetGrid, e.clientY])
       );
 
-      let className = "dropped-image";
-      if (file.type === "image/svg+xml") {
-        className = "dropped-svg";
-      }
-
-      const marker = L.marker(coordinates, {
-        icon: L.icon({ iconUrl: src, className }),
-        draggable: true,
-      }).addTo(map);
-
-      marker.on("click", function (e) {
-        marker.remove();
-      });
+      spawnUserImage(file.name, coordinates, src, "image", file.type);
     };
 
     reader.readAsDataURL(file);
   });
 }
 
+function spawnUserImage(
+  name: string,
+  coordinates: any,
+  src: string,
+  type = "image",
+  fileType = ""
+) {
+  let className = "dropped-image";
+  if (fileType === "image/svg+xml" || src.match(/^data\:image\/svg/)) {
+    className = "dropped-svg";
+  }
+
+  const marker = L.marker(coordinates, {
+    icon: L.icon({ iconUrl: src, className }),
+    draggable: true,
+  }).addTo(map);
+
+  marker.on("click", function (e) {
+    marker.remove();
+  });
+
+  marker.name = name;
+  marker.color = "#ffffff";
+  marker.type = type;
+
+  icons.push(marker);
+}
+
 export function setOffsetX(x: number) {
   _offsetX = x;
 }
 function dropWebImage(e: DragEvent) {
-  const imageData = e.dataTransfer.getData("url");
+  const url = e.dataTransfer.getData("url");
+  console.log(e.dataTransfer?.getData("text"));
+
   const coordinates = map.containerPointToLatLng(
     L.point([e.clientX + _offsetX, e.clientY])
   );
 
-  const marker = L.marker(coordinates, {
-    icon: L.icon({ iconUrl: imageData, className: "dropped-web-image" }),
-    draggable: true,
-  }).addTo(map);
+  const name = url.match(/\/\/(.*)\//)?.[1] || "web-image";
 
-  marker.on("click", function () {
-    marker.remove();
-  });
+  spawnUserImage(name, coordinates, url, "web-image");
 }
