@@ -6,8 +6,7 @@ export const iconControl = L.control({ position: "bottomleft" });
 const anchor = document.createElement("a");
 const mapElement = document.getElementById("map");
 let map;
-
-const iconDrawer = document.getElementById("icon-drawer")!;
+let _offsetX = 0;
 
 export const icons: any[] = [];
 
@@ -33,6 +32,8 @@ iconControl.onAdd = function (_map) {
 };
 
 function iconControlActivate(e: Event) {
+  const iconDrawer = document.getElementById("icon-drawer")!;
+
   //   console.log("iconControlActivate", e);
   context.iconMode = !context.iconMode;
   if (context.iconMode) {
@@ -50,41 +51,59 @@ function iconControlActivate(e: Event) {
   }
 }
 
-mapElement.ondragover = function (e) {
+mapElement.ondragover = iconsOnDragOver;
+
+export function iconsOnDragOver(e) {
   e.preventDefault();
   if (!context.iconMode) return;
   e.dataTransfer.dropEffect = "move";
-};
+}
 
-mapElement.ondrop = function (e) {
+mapElement.ondrop = iconsOnDrop;
+
+export function iconsOnDrop(e) {
   e.preventDefault();
 
   const imageData = e.dataTransfer.getData("url");
 
   // local icon
-  if (!imageData) {
+  if (!imageData && e.dataTransfer.files.length) {
+    // console.log("dropUserImage");
+
     dropUserImage(e);
-    return;
+    return true;
   }
 
-  // web image
-  if (imageData.startsWith("http")) {
+  // web image, not from editor
+  if (
+    imageData.startsWith("http") &&
+    !imageData.match(document.location.origin)
+  ) {
+    // console.log("dropWebImage", imageData);
     dropWebImage(e);
-    return;
+    return true;
   }
 
-  // built in icon
   if (!context.iconMode) return;
+  const isIcon = dropBuiltInIcon(e, imageData);
 
+  return isIcon;
+}
+
+function dropBuiltInIcon(e: any, imageData: any) {
   const name = e.dataTransfer.getData("name");
   const color = e.dataTransfer.getData("color");
+  if (!name || !color) return false;
+
+  // console.log("dropBuiltInIcon");
 
   const coordinates = map.containerPointToLatLng(
-    L.point([e.clientX, e.clientY])
+    L.point([e.clientX + _offsetX, e.clientY])
   );
 
   spawnIcon(name, imageData, coordinates, color);
-};
+  return true;
+}
 
 function spawnIcon(
   name: string,
@@ -111,7 +130,7 @@ const colorPicker = document.getElementById("colorpicker")!;
 if (colorPicker) colorPicker.addEventListener("change", renderDrawer);
 
 function getFilter(col = "") {
-  const color = col || colorPicker?.value || "#292929";
+  const color = col || _color || colorPicker?.value || "#FFFF00";
 
   // iconDrawer.style.boxShadow = ``;
 
@@ -128,21 +147,29 @@ function getFilter(col = "") {
   return filter;
 }
 
-function renderDrawer() {
+let _color;
+export function updateColor(color: string) {
+  _color = color;
+  renderDrawer(color);
+}
+
+function renderDrawer(e) {
+  const color = _color || colorPicker?.value;
   // colorize all icons on map
   //   const icons = document.getElementsByClassName("dwe-dropicon");
   //   Object.values(icons).forEach((e) => {
   //     e.style.filter = filter;
   //   });
 
-  const filter = getFilter();
+  const filter = getFilter(color);
+  const iconDrawer = document.getElementById("icon-drawer")!;
 
   if (iconDrawer)
     iconDrawer.innerHTML = `<div class="image-holder">
     <h4 class="no-select">Icons drag & drop. (Or drag custom images to map)</h4>
      ${Object.keys(Icons.icons)
        .map((name) => {
-         return `<img class="image-holder no-select" ondragstart="onIconDrag(event, '${name}', '${colorPicker?.value}')" width=30 height=30 style="filter: ${filter}" src="${Icons.icons[name]}" alt="${name}"></img>`;
+         return `<img class="image-holder no-select" ondragstart="onIconDrag(event, '${name}', '${color}')" width=30 height=30 style="filter: ${filter}" src="${Icons.icons[name]}" alt="${name}"></img>`;
        })
        .join("")}
     
@@ -197,13 +224,13 @@ function dropUserImage(e) {
     if (!file) return;
     e.preventDefault();
 
-    const offset = i * 50;
+    const offsetGrid = i * 50;
     const reader = new FileReader();
 
     reader.onload = function (event) {
       const src = event.target?.result as string;
       const coordinates = map.containerPointToLatLng(
-        L.point([e.clientX + offset, e.clientY])
+        L.point([e.clientX + _offsetX + offsetGrid, e.clientY])
       );
 
       let className = "dropped-image";
@@ -225,10 +252,13 @@ function dropUserImage(e) {
   });
 }
 
+export function setOffsetX(x: number) {
+  _offsetX = x;
+}
 function dropWebImage(e: DragEvent) {
   const imageData = e.dataTransfer.getData("url");
   const coordinates = map.containerPointToLatLng(
-    L.point([e.clientX, e.clientY])
+    L.point([e.clientX + _offsetX, e.clientY])
   );
 
   const marker = L.marker(coordinates, {
