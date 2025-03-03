@@ -17,7 +17,11 @@ export const drawLines: Record<string, PolySave> = {};
 
 paintControl.onAdd = function (_map) {
   map = _map;
-  context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  map.createPane("drawings");
+  context.iconBar ||= L.DomUtil.create(
+    "div",
+    "leaflet-control-zoom leaflet-bar leaflet-control"
+  );
   this._div = context.iconBar;
 
   pAnchor.classList.add("leaflet-control-zoom-in");
@@ -82,6 +86,7 @@ function startDraw(e: MouseEvent) {
       color: context.getColor(),
       weight: 4,
       className: "leaflet-drawline",
+      pane: "drawings",
     };
 
     if (e.altKey) {
@@ -137,14 +142,16 @@ function endDraw(e: MouseEvent) {
 export function loadDraw(array: PolySave[], _map?: any) {
   map ||= _map;
   // console.log("loadDraw", array);
-  array?.forEach && array.forEach((draw: PolySave) => {
-    currentPolyLine = L.polyline([], draw.options).addTo(map);
-    currentPolyLine.on("click", removeLine);
+  array?.forEach &&
+    array.forEach((draw: PolySave) => {
+      draw.options.pane = "drawings";
+      currentPolyLine = L.polyline([], draw.options).addTo(map);
+      currentPolyLine.on("click", removeLine);
 
-    draw.latLngs.forEach((ll) => {
-      currentPolyLine.addLatLng(ll);
+      draw.latLngs.forEach((ll) => {
+        currentPolyLine.addLatLng(ll);
+      });
     });
-  });
 }
 
 export function exportPaintings() {
