@@ -7,14 +7,18 @@ let map;
 
 followControl.onAdd = function (_map) {
   map = _map;
-  this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  this._div = L.DomUtil.create(
+    "div",
+    "leaflet-control-zoom leaflet-bar leaflet-control"
+  );
 
   // otherwise drawing process would instantly start at controls' container or double click would zoom-in map
   L.DomEvent.disableClickPropagation(this._div);
 
   anchor.classList.add("leaflet-control-zoom-in");
   anchor.classList.add("polyline-measure-controlOnBgColor");
-  anchor.title = "Shortcut: 'f' Click to follow player, click again to disable follow";
+  anchor.title =
+    "Shortcut: F. Click to follow player, click again to disable follow.";
   anchor.href = "#";
   anchor.innerHTML = `<span style="font-family: 'Courier New', Courier, monospace;"><i class="fa fa-plane"></i></span>`;
 
