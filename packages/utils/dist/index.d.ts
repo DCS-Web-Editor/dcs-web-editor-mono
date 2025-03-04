@@ -6,6 +6,7 @@ export declare function ConvertDMSToDD(degrees: number, minutes: number, seconds
 export declare function convertDMS(lat: number, lon: number): string;
 export declare function convertDMshort(lat: number, lon: number): string;
 export declare function convertDMM(lat: number, lon: number): string;
+export declare function convertDMT(lat: number, lon: number): string;
 export declare function toHHMMSS(s: number): string;
 export declare function convertDD(lat: number, lon: number): string;
 export declare function LLtoAll(lat: number, lon: number): {
@@ -13,6 +14,7 @@ export declare function LLtoAll(lat: number, lon: number): {
     MGRS: any;
     DMS: string;
     DMM: string;
+    DMT: string;
 };
 export declare function LLtoMGRS(lat: number, lon: number): any;
 export declare function MGRStoLL(mgrs: string): any;
