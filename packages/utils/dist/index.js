@@ -24,7 +24,7 @@ function toDegreesMinutesShort(coordinate, longitude = false) {
     return (degrees.toString().padStart(longitude ? 3 : 2, "0") +
         minutes.toString().padStart(2, "0"));
 }
-function toDegreesMinutes(coordinate, precision = 4, pad = 0) {
+export function toDegreesMinutes(coordinate, precision = 4, pad = 0) {
     var absolute = Math.abs(coordinate);
     let degrees = Math.floor(absolute);
     var minutesNotTruncated = (absolute - degrees) * 60;
@@ -370,4 +370,8 @@ export function sanitizeAngle(angle) {
     if (angle >= 360)
         return angle - 360;
     return angle;
+}
+export function openJsonEditor(data) {
+    const url = `https://jsoneditoronline.org/#left=json.${JSON.stringify(data)}&left_mode=table&panels=left`;
+    window.open(url, "_blank");
 }

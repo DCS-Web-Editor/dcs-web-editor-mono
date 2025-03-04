@@ -3,6 +3,7 @@ export interface LatLon {
     lon: number;
 }
 export declare function ConvertDMSToDD(degrees: number, minutes: number, seconds: number, direction: string): number;
+export declare function toDegreesMinutes(coordinate: number, precision?: number, pad?: number): string;
 export declare function convertDMS(lat: number, lon: number): string;
 export declare function convertDMshort(lat: number, lon: number): string;
 export declare function convertDMM(lat: number, lon: number): string;
@@ -100,3 +101,4 @@ export declare function toLatLng(latLon: LatLon): {
     lng: number;
 };
 export declare function sanitizeAngle(angle: number): number;
+export declare function openJsonEditor(data: any): void;
