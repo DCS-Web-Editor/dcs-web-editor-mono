@@ -14,7 +14,7 @@ iconControl.onAdd = function (_map) {
   map = _map;
   context.iconBar ||= L.DomUtil.create(
     "div",
-    "leaflet-control-zoom leaflet-bar leaflet-control"
+    "leaflet-control-zoom leaflet-bar leaflet-control leaflet-dwv"
   );
   this._div = context.iconBar;
 

@@ -1,6 +1,7 @@
 import { MGRStoLL } from "@dcs-web-editor-mono/utils";
 import "./searchControl.css";
 import { context } from ".";
+import axios from "axios";
 
 /* 
 Create Search Control
@@ -13,15 +14,22 @@ let items: any;
 let map: any;
 let pAnchor: HTMLElement;
 let translate: Function;
+let accessToken: string;
 
 export function isSearchActive() {
   return context.searchMode;
 }
 
-export function createSearchControl(_renderContainer: Function, _items, _translate: Function) {
+export function createSearchControl(
+  _renderContainer: Function,
+  _items,
+  _translate: Function,
+  _accessToken = ""
+) {
   renderContainer = _renderContainer;
   items = _items;
   translate = _translate;
+  accessToken = _accessToken;
 
   pAnchor = document.createElement("a");
   searchField = document.createElement("input");
@@ -30,7 +38,7 @@ export function createSearchControl(_renderContainer: Function, _items, _transla
     "Type to find unit/airport/beacon or coordinates starting with MGRS:37 X ...";
 
   pAnchor.title = searchField.title =
-    "Shortcut: 'q' Type to find unit/airport/beacon or coordinates starting with MGRS:...";
+    "Shortcut: 'q' Type to find unit/airport/beacon/city or coordinates starting with MGRS:...";
 
   results = document.createElement("div");
   results.className = "results";
@@ -41,7 +49,10 @@ export function createSearchControl(_renderContainer: Function, _items, _transla
 
   searchControl.onAdd = function (_map) {
     map = _map;
-    this._div = L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+    this._div = L.DomUtil.create(
+      "div",
+      "leaflet-control-zoom leaflet-bar leaflet-control"
+    );
     L.DomEvent.disableClickPropagation(this._div);
 
     pAnchor.classList.add("leaflet-control-zoom-in");
@@ -76,7 +87,7 @@ function searchControlActivate(e) {
   searchChange();
 }
 
-function searchChange() {
+async function searchChange() {
   const input = searchField.value.toUpperCase();
 
   // MGRS
@@ -103,7 +114,11 @@ function searchChange() {
 
   // LAT LONG
   if (input.match(/^LAT\:/)) {
-    const coords = input.replace("LAT:", "").replace("LON:", "").replace("LNG:", "").split(",");
+    const coords = input
+      .replace("LAT:", "")
+      .replace("LON:", "")
+      .replace("LNG:", "")
+      .split(",");
     const [lat, lng] = coords.map((c) => parseFloat(c));
 
     results.innerHTML = `
@@ -128,83 +143,85 @@ function searchChange() {
   const fixes = items.getFixes && items.getFixes();
 
   // unit name
-  let found = units.filter((u) => u?.leaflet.json.name?.toUpperCase().match(input));
+  let found = units.filter((u) =>
+    u?.leaflet.json.name?.toUpperCase().match(input)
+  );
   // unit type
-  found = found.concat(units.filter((u) => u?.leaflet.json.type?.toUpperCase().match(input)));
+  found = found.concat(
+    units.filter((u) => u?.leaflet.json.type?.toUpperCase().match(input))
+  );
 
   // airport name
   found = found.concat(
-    airports.filter((a) => a?.leaflet.json.displayName?.toUpperCase().match(input))
+    airports.filter((a) =>
+      a?.leaflet.json.displayName?.toUpperCase().match(input)
+    )
   );
   // airport code
-  found = found.concat(airports.filter((a) => a?.leaflet.json.code?.toUpperCase().match(input)));
+  found = found.concat(
+    airports.filter((a) => a?.leaflet.json.code?.toUpperCase().match(input))
+  );
 
   // beacon name
-  found = found.concat(beacons.filter((b) => b?.leaflet.json.callsign?.toUpperCase().match(input)));
+  found = found.concat(
+    beacons.filter((b) => b?.leaflet.json.callsign?.toUpperCase().match(input))
+  );
   // beacon code
   found = found.concat(
-    beacons.filter((b) => b?.leaflet.json.display_name?.toUpperCase().match(input))
+    beacons.filter((b) =>
+      b?.leaflet.json.display_name?.toUpperCase().match(input)
+    )
   );
 
   if (fixes) {
     // fix name
-    found = found.concat(fixes.filter((b) => b?.name?.toUpperCase().match(input)));
+    found = found.concat(
+      fixes.filter((b) => b?.name?.toUpperCase().match(input))
+    );
+  }
+
+  let places = [];
+  if (accessToken && input.length > 2) {
+    const { lat, lng } = map.getCenter();
+    const base = "https://api.mapbox.com/search/geocode/v6/forward";
+    const url = `?q=${input}&proximity=${lng.toFixed(4)},${lat.toFixed(4)}`;
+    const types = "&types=country,region,postcode,district,place";
+    const result = await axios.get(
+      base + url + types + `&access_token=${accessToken}`
+    );
+    places = places.concat(result.data.features.map((f) => f.properties));
+    // console.log(places);
   }
 
   results.innerHTML = `
   <ul>
     ${found
       .filter((i) => i)
-      .map((f) => {
-        let display = "not found";
-        let displayInfo = "";
-
-        if (!f.leaflet) {
-          // FIX
-          display = "∆ " + translate(f.name) || f.name;
-          displayInfo = `(${f.lat + "/" + f.lon})`;
-          return `<li>
-          <a onclick="goto('${f.lat}', '${f.lon}')" href="#">${display} ${displayInfo}</a>
-      </li>`;
-        }
-
-        const name = f.leaflet.type === "UNIT" && f.leaflet.json.name;
-        const airportName = f.leaflet.type === "AIRPORT" && f.leaflet.json.displayName;
-        const beaconCode = f.leaflet.type === "BEACON" && f.leaflet.json.callsign;
-        // console.log(
-        //   f.leaflet.type === "AIRPORT",
-        //   f.leaflet.json.displayName,
-        //   name,
-        //   airportName,
-        //   beaconCode
-        // );
-
-        if (name) {
-          // UNIT
-          const cat = getCategory(f.leaflet.category);
-          display = cat + " " + translate(name) || name;
-          displayInfo = `(${f.leaflet.json.type})`;
-        } else if (airportName) {
-          // AIRPORT
-          display = `🅐 ${airportName}`;
-          displayInfo = `(${f.leaflet?.json.code})`;
-        } else if (beaconCode) {
-          // BEACON
-          display = `⊙ ${beaconCode}`;
-          displayInfo = `(${f.leaflet?.json.display_name})`;
-        }
-
-        return `<li>
-              <a onclick="openMarkerPopup('${btoa(name)}', '${btoa(airportName)}', '${btoa(
-          beaconCode
-        )}')" href="#">${display} ${displayInfo}</a>
-          </li>`;
-      })
+      .map(renderLi)
       .join("")}
+    ${places.map(renderPlace).join("")}
   </ul>
 
 
   `;
+}
+
+function encode(s: string) {
+  return btoa(encodeURI(s));
+}
+function decode(s: string) {
+  return decodeURI(atob(s));
+}
+
+function renderPlace(place) {
+  const { latitude, longitude } = place.coordinates;
+  return `<li>
+    <a onclick="openMarkerPopup('${encode(
+      place.name
+    )}', 'FALSE', 'FALSE', ${latitude}, ${longitude})" href="#">🏘  ${
+    place.full_address
+  }</a>
+          </li>`;
 }
 
 window.goto = function goto(lat: number, lng: number) {
@@ -215,29 +232,53 @@ window.goto = function goto(lat: number, lng: number) {
   map.setView(latlng);
 };
 
-window.openMarkerPopup = function (name, airportName, beaconCode) {
-  name = atob(name).toUpperCase();
-  airportName = atob(airportName).toUpperCase();
-  beaconCode = atob(beaconCode).toUpperCase();
+window.openMarkerPopup = function (
+  name,
+  airportName = "",
+  beaconCode = "",
+  lat = 0,
+  lng = 0
+) {
+  name = decode(name).toUpperCase();
 
   if (airportName !== "UNDEFINED" && airportName !== "FALSE") {
-    const airports = items.getAirports();
-    const apt = airports.find((a) => a?.leaflet.json.displayName.toUpperCase() === airportName);
-    openItem(apt);
+    airportName = decode(airportName).toUpperCase();
+    // console.log(airportName);
 
-    return;
+    const airports = items.getAirports();
+    const apt = airports.find(
+      (a) => a?.leaflet.json.displayName.toUpperCase() === airportName
+    );
+    if (apt) {
+      openItem(apt);
+      return;
+    }
   }
   if (beaconCode !== "UNDEFINED" && beaconCode !== "FALSE") {
-    const beacons = items.getBeacons();
-    const bcn = beacons.find((b) => b?.leaflet.json.callsign.toUpperCase() === beaconCode);
-    openItem(bcn);
+    beaconCode = decode(beaconCode).toUpperCase();
+    // console.log(beaconCode);
 
-    return;
+    const beacons = items.getBeacons();
+    const bcn = beacons.find(
+      (b) => b?.leaflet.json.callsign.toUpperCase() === beaconCode
+    );
+    if (bcn) {
+      openItem(bcn);
+      return;
+    }
   }
 
   const units = items.getUnits();
   const unit = units.find((u) => u?.leaflet.json.name.toUpperCase() === name);
-  openItem(unit);
+  if (unit) {
+    openItem(unit);
+    return;
+  }
+
+  // place
+  if (lat && lng) {
+    map.setView({ lat, lng });
+  }
 };
 
 function openItem(item: any) {
@@ -273,4 +314,51 @@ function getCategory(category: string) {
       return "?";
       break;
   }
+}
+
+function renderLi(f) {
+  let display = "not found";
+  let displayInfo = "";
+
+  if (!f.leaflet) {
+    // FIX
+    display = "∆ " + translate(f.name) || f.name;
+    displayInfo = `(${f.lat + "/" + f.lon})`;
+    return `<li>
+          <a onclick="goto('${f.lat}', '${f.lon}')" href="#">${display} ${displayInfo}</a>
+      </li>`;
+  }
+
+  const name = f.leaflet.type === "UNIT" && f.leaflet.json.name;
+  const airportName =
+    f.leaflet.type === "AIRPORT" && f.leaflet.json.displayName;
+  const beaconCode = f.leaflet.type === "BEACON" && f.leaflet.json.callsign;
+  // console.log(
+  //   f.leaflet.type === "AIRPORT",
+  //   f.leaflet.json.displayName,
+  //   name,
+  //   airportName,
+  //   beaconCode
+  // );
+
+  if (name) {
+    // UNIT
+    const cat = getCategory(f.leaflet.category);
+    display = cat + " " + translate(name) || name;
+    displayInfo = `(${f.leaflet.json.type})`;
+  } else if (airportName) {
+    // AIRPORT
+    display = `🅐 ${airportName}`;
+    displayInfo = `(${f.leaflet?.json.code})`;
+  } else if (beaconCode) {
+    // BEACON
+    display = `⊙ ${beaconCode}`;
+    displayInfo = `(${f.leaflet?.json.display_name})`;
+  }
+
+  return `<li>
+              <a onclick="openMarkerPopup('${encode(name)}', '${encode(
+    airportName
+  )}', '${encode(beaconCode)}')" href="#">${display} ${displayInfo}</a>
+          </li>`;
 }

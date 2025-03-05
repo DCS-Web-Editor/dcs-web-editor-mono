@@ -17,7 +17,10 @@ export const drawLinesNodrag: Record<string, PolySave> = {};
 
 paintNodragControl.onAdd = function (_map) {
   map = _map;
-  context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  context.iconBar ||= L.DomUtil.create(
+    "div",
+    "leaflet-control-zoom leaflet-bar leaflet-control leaflet-dwv"
+  );
   this._div = context.iconBar;
 
   pAnchor.classList.add("leaflet-control-zoom-in");

@@ -1,0 +1,26 @@
+.leaflet-reticle {
+  /* border-radius: 5px;
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+
+  padding: 5px; */
+}
+
+.leaflet-reticle-center {
+  position: relative;
+  top: calc(50%);
+  left: calc(50%);
+  z-index: 2000;
+  pointer-events: none; /* pass all events through to underlying map */
+}
+
+.leaflet-reticle-center p {
+  font-size: 11px;
+  margin: 5px 0 0 5px;
+}
+
+div.leaflet-bar.leaflet-control.reticle-on > a.leaflet-control-reticle {
+  background: #1abc9c !important;
+  color: #293949 !important;
+}
