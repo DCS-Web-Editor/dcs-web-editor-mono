@@ -86,6 +86,7 @@ L.Control.Reticle = L.Control.extend({
   },
 
   update: function (doAsyncOnly) {
+    if (!this.active) return;
     let center = this.map.getCenter();
 
     if (doAsyncOnly) {
@@ -106,7 +107,7 @@ L.Control.Reticle = L.Control.extend({
   },
 
   drawElevation: function (lat, lng) {
-    if (!this.options.fetchElevation) {
+    if (!this.active || !this.options.fetchElevation) {
       return;
     }
 
