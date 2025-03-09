@@ -441,12 +441,14 @@ export function renderFrequency(freq: number) {
 // mission date to JS date
 export function toJsDate(missionDate: any, missionTime: number = 0) {
   return new Date(
-    missionDate.Year,
-    missionDate.Month - 1,
-    missionDate.Day,
-    0,
-    0,
-    missionTime
+    Date.UTC(
+      missionDate.Year,
+      missionDate.Month - 1,
+      missionDate.Day - 1,
+      0,
+      0,
+      missionTime
+    )
   );
 }
 
