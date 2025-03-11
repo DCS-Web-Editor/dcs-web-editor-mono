@@ -131,7 +131,7 @@ function spawnIcon(
 const colorPicker = document.getElementById("colorpicker")!;
 if (colorPicker) colorPicker.addEventListener("change", renderDrawer);
 
-function getFilter(col = "") {
+export function getFilter(col = "") {
   const color = col || _color || colorPicker?.value || "#FFFF00";
 
   // iconDrawer.style.boxShadow = ``;

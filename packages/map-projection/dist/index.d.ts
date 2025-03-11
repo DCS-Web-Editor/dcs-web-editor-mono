@@ -42,6 +42,8 @@ export declare const TimeZones: {
     Kola: number;
     Falklands: number;
     Afghanistan: number;
+    Iraq: number;
+    SouthEastAsia: number;
 };
 export { COORDINATES } from "./mapCoordinates";
 export declare const mapNames: string[];

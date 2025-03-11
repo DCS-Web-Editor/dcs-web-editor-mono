@@ -37,6 +37,7 @@ export declare function rgbToInt(r: number, g: number, b: number): number;
 export declare function toRgba(r: number, g: number, b: number, a: number): string;
 export declare function rgbaToHex(r: number, g: number, b: number, a: number): string;
 export declare function rgbToHex(r: number, g: number, b: number): string;
+export declare function intToCssColor(num: number): string;
 export declare function hexaToRgb(hex: string): {
     r: number;
     g: number;

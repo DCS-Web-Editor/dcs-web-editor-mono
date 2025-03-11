@@ -230,6 +230,13 @@ export function rgbToHex(r: number, g: number, b: number) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
+export function intToCssColor(num: number): string {
+  const r = (num >> 16) & 0xff;
+  const g = (num >> 8) & 0xff;
+  const b = num & 0xff;
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 export function hexaToRgb(hex: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -439,7 +446,7 @@ export function renderFrequency(freq: number) {
 }
 
 // mission date to JS date
-export function toJsDate(missionDate: any, missionTime: number = 0) {
+export function toJsDate(missionDate: any, missionTime: number = 0): Date {
   return new Date(
     Date.UTC(
       missionDate.Year,
