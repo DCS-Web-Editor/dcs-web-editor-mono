@@ -88,8 +88,6 @@ L.Map.PopupMovable = L.Handler.extend({
 
   //Return css for Popup's leader
   _createPopupCss(x, y, w, h) {
-    console.log(x, y, w, h);
-
     //Drawing a rectangle using SVG and Triangulate part of it.
     const svgicon = (s, width, height) => {
       const xml = `<?xml version="1.0" encoding="utf-8"?>
