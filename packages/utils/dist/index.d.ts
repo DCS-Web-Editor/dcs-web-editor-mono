@@ -103,3 +103,4 @@ export declare function toLatLng(latLon: LatLon): {
 };
 export declare function sanitizeAngle(angle: number): number;
 export declare function openJsonEditor(data: any): void;
+export declare function sanitizeString(input: string): string;

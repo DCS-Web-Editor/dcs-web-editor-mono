@@ -34,6 +34,11 @@ paintControl.onAdd = function (_map) {
   return this._div;
 };
 
+paintControl.peerSync = () => {};
+paintControl.setPeerSync = function name(peerSync: Function) {
+  paintControl.peerSync = peerSync;
+};
+
 //Functions to either disable (onmouseover) or enable (onmouseout) the map's dragging
 function paintControlActivate(e) {
   e.preventDefault();
@@ -99,6 +104,11 @@ function startDraw(e: MouseEvent) {
     if (e.ctrlKey) paintConfig.dashArray = [5, 10];
     currentPolyLine = L.polyline([], paintConfig).addTo(map);
     currentPolyLine.on("click", removeLine);
+
+    paintControl.peerSync({
+      _leaflet_id: currentPolyLine._leaflet_id,
+      paintConfig,
+    });
   }
 
   // RIGHT
@@ -122,8 +132,12 @@ function removeLine(e: any) {
 
 function doDraw(e: MouseEvent) {
   if (isPainting) {
-    var pointlatlng = map.mouseEventToLatLng(e);
-    currentPolyLine.addLatLng(pointlatlng);
+    const latLng = map.mouseEventToLatLng(e);
+    currentPolyLine.addLatLng(latLng);
+    paintControl.peerSync({
+      _leaflet_id: currentPolyLine._leaflet_id,
+      latLng,
+    });
   }
 }
 

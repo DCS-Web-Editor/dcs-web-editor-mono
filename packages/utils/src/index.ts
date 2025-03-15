@@ -478,3 +478,20 @@ export function openJsonEditor(data: any) {
   )}&left_mode=table&panels=left`;
   window.open(url, "_blank");
 }
+
+export function sanitizeString(input: string): string {
+  // Remove any script tags or event handlers
+
+  input = input
+    .replace(/<script.*?>.*?<\/script>/gi, "")
+    .replace(/on\w+=".*?"/gi, "")
+    .replace(/javascript:/gi, "")
+    .replace(/\\/gi, "")
+    .replace(/\"/gi, "")
+    .replace(/\(/gi, "")
+    .replace(/\)/gi, "")
+    .replace(/</gi, "")
+    .replace(/>/gi, "");
+
+  return input;
+}

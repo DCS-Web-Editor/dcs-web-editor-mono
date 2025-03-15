@@ -1,3 +1,4 @@
+import { sanitizeString } from "@dcs-web-editor-mono/utils";
 import { context, disableNodragPaintControl, disablePaintControl } from ".";
 let map: any;
 interface TextSave {
@@ -27,7 +28,10 @@ var inputMarker = L.marker([90, 90], {
 
 textControl.onAdd = function (_map) {
   map = _map;
-  context.iconBar ||= L.DomUtil.create("div", "leaflet-control-zoom leaflet-bar leaflet-control");
+  context.iconBar ||= L.DomUtil.create(
+    "div",
+    "leaflet-control-zoom leaflet-bar leaflet-control"
+  );
   this._div = context.iconBar;
 
   // otherwise drawing process would instantly start at controls' container or double click would zoom-in map
@@ -48,6 +52,11 @@ textControl.onAdd = function (_map) {
 
 textControl.getColor = function (cb: () => string) {
   context.getColor = cb;
+};
+
+textControl.peerSync = () => {};
+textControl.setPeerSync = function name(peerSync: Function) {
+  textControl.peerSync = peerSync;
 };
 
 //Functions to either disable (onmouseover) or enable (onmouseout) the map's dragging
@@ -80,9 +89,12 @@ function addInput(e) {
   _currentClickEvent = e;
   map.off("click", addInput);
   const textButton = document.getElementById("add-text-btn");
-  textButton.addEventListener("click", addText);
+  textButton.addEventListener("click", enterText);
 
   const inputField = document.getElementById("input_1");
+  inputField?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") enterText(e);
+  });
   inputField.value = "";
   inputField.focus();
 
@@ -94,9 +106,10 @@ function addInput(e) {
   inputMarker.setLatLng(e.latlng);
 }
 
-function addText() {
+function enterText(e) {
+  e.preventDefault();
   const textButton = document.getElementById("add-text-btn");
-  textButton.removeEventListener("click", addText);
+  textButton.removeEventListener("click", enterText);
 
   let drawColor = context.getColor();
 
@@ -113,32 +126,45 @@ function addText() {
 
   if (!text) return;
 
+  addTextMarker(drawColor, text, _currentClickEvent.latlng);
+}
+
+export function addTextMarker(
+  drawColor: string,
+  text: string,
+  latLng: L.LatLng,
+  _map = map
+) {
   const style = `color: ${drawColor}; font-weight: bold; font-family: sans-serif; pointer-events: auto;`;
   const icon: L.DivIcon = createIcon(text, style);
-  const marker: L.Marker = new L.marker(_currentClickEvent.latlng, { icon });
+  const marker: L.Marker = new L.marker(latLng, { icon });
+  textControl.peerSync(style, text, latLng);
 
-  map.addLayer(marker);
+  _map.addLayer(marker);
   marker.on("click", removeText);
   // L.DomEvent.disableClickPropagation(marker.getElement());
-
   texts.push({
     text,
     style,
-    latLng: _currentClickEvent.latlng,
+    latLng,
     _leaflet_id: marker._leaflet_id,
   });
 }
 
 function makeInputHtml(id) {
   return (
-    '<input type="text" value="" id="input_' + id + '" /><button id="add-text-btn">OK</button>'
+    '<input type="text" value="" id="input_' +
+    id +
+    '" /><button id="add-text-btn">OK</button>'
   );
 }
 
 function removeText(e): any {
   if (!context.writeMode) return;
 
-  const found = texts.findIndex((d) => d._leaflet_id === e.sourceTarget._leaflet_id);
+  const found = texts.findIndex(
+    (d) => d._leaflet_id === e.sourceTarget._leaflet_id
+  );
   if (found > -1) texts.splice(found, 1);
 
   e.sourceTarget.remove();
@@ -146,6 +172,8 @@ function removeText(e): any {
 }
 
 function createIcon(text: string, style: string) {
+  text = sanitizeString(text);
+  style = sanitizeString(style);
   const icon = L.divIcon({
     iconSize: [0, 0],
     className: "dwe-map-label",
@@ -167,6 +195,8 @@ export function disableTextControl() {
 }
 
 export function loadText(_texts: TextSave[], _map?: any) {
+  // console.log("loadText", _texts, _map);
+
   map ||= _map;
   // console.log("loadDraw", array);
   _texts.forEach((text: TextSave) => {

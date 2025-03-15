@@ -381,3 +381,17 @@ export function openJsonEditor(data) {
     const url = `https://jsoneditoronline.org/#left=json.${JSON.stringify(data)}&left_mode=table&panels=left`;
     window.open(url, "_blank");
 }
+export function sanitizeString(input) {
+    // Remove any script tags or event handlers
+    input = input
+        .replace(/<script.*?>.*?<\/script>/gi, "")
+        .replace(/on\w+=".*?"/gi, "")
+        .replace(/javascript:/gi, "")
+        .replace(/\\/gi, "")
+        .replace(/\"/gi, "")
+        .replace(/\(/gi, "")
+        .replace(/\)/gi, "")
+        .replace(/</gi, "")
+        .replace(/>/gi, "");
+    return input;
+}
