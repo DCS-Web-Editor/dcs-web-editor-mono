@@ -1,12 +1,4 @@
-import {
-  Path,
-  Handler,
-  DomEvent,
-  DomUtil,
-  Util,
-  point,
-  LatLngBounds,
-} from "leaflet";
+const { Path, Handler, DomEvent, DomUtil, Util, point, LatLngBounds } = L;
 
 const END = {
   mousedown: "mouseup",
