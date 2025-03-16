@@ -1,3 +1,7 @@
+#map .leaflet-pane.leaflet-icons-pane {
+  z-index: 200;
+}
+
 #icon-drawer .image-holder {
   display: inline-block;
   max-height: 12rem;
@@ -43,14 +47,24 @@
 
 /* user image */
 #map > div.leaflet-pane img.dropped-image {
-  max-width: 15rem !important;
-  max-height: 15rem !important;
+  /* max-width: 15rem !important;
+  max-height: 15rem !important; */
+  /* margin-left: -7vb !important;
+  margin-top: -7.5hb !important; */
+}
+#map > div.leaflet-pane img.dropped-image-full {
+  /* z-index: 301 !important; */
+  /* max-width: 70vw !important;
+  max-height: 70vh !important; */
 }
 
 #map > div.leaflet-pane img.dropped-svg {
   max-width: 5rem !important;
   min-width: 3rem !important;
   max-height: 5em !important;
+}
+
+#map > div.leaflet-pane img.dropped-svg-full {
 }
 
 #map > div.leaflet-pane img.dropped-web-image {
