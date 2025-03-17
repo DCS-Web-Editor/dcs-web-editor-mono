@@ -25,7 +25,7 @@ iconControl.onAdd = function (_map) {
 
     anchor.classList.add("leaflet-control-zoom-in");
     anchor.title = "Shortcut: 'i' Drag and drop icons for planning";
-    anchor.href = "#";
+    anchor.role = "button";
     anchor.innerHTML = '<span><i class="fa fa-image"></i></span>';
     L.DomEvent.on(anchor, "click", iconControlActivate);
     this._div.appendChild(anchor);

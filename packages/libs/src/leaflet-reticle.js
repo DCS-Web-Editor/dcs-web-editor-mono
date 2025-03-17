@@ -67,7 +67,7 @@ L.Control.Reticle = L.Control.extend({
 
     anchor.classList.add("leaflet-control-reticle");
     anchor.title = "Shortcut: 'n' Show center ruler";
-    anchor.href = "#";
+    anchor.role = "button";
     anchor.innerHTML = '<span><i class="fa fa-ruler-combined"></i></span>';
     L.DomEvent.on(anchor, "click", this.reticleControlActivate.bind(this));
     this.button.appendChild(anchor);

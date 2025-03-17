@@ -44,7 +44,7 @@ textControl.onAdd = function (_map) {
     anchor.classList.add("leaflet-control-zoom-in");
     anchor.title =
         "Shortcut: 't' Left click to add Text. Click text to remove it. Right click to exit text mode.";
-    anchor.href = "#";
+    anchor.role = "button";
     anchor.innerHTML = `<span style="font-family: 'Courier New', Courier, monospace;">T</span>`;
     L.DomEvent.on(anchor, "click", textControlActivate);
     this._div.appendChild(anchor);

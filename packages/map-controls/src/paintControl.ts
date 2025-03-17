@@ -27,7 +27,7 @@ paintControl.onAdd = function (_map) {
     pAnchor.classList.add("leaflet-control-zoom-in");
     pAnchor.title =
         "Shortcut: 'p' Left click to paint. Hold CTRL for dotted lines. ALT + click to draw straight line from your last drawing. Right click to exit";
-    pAnchor.href = "#";
+    pAnchor.role = "button";
     pAnchor.innerHTML = '<span><i class="fa fa-pencil"></i></span>';
     L.DomEvent.on(pAnchor, "click", paintControlActivate);
     this._div.appendChild(pAnchor);
