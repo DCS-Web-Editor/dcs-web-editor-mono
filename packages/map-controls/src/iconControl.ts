@@ -397,11 +397,12 @@ function createImageOverlay(
     imageOverlay.coordinates = coordinates;
 
     const polygon = new L.Polygon([coordinates.bounds], {
+        className: "dwe-image-overlay-polygon",
         draggable: true,
         pane: "icons",
         opacity: 0,
         fillOpacity: 0,
-        color: "#111",
+        color: "#f1f",
     }).addTo(map);
 
     imageOverlay.polygon = polygon;

@@ -12,7 +12,7 @@ interface TextSave {
     remove?: boolean;
 }
 
-export const texts: L.Marker[] = [];
+const texts: L.Marker[] = [];
 
 // Create Text Control
 
@@ -230,5 +230,15 @@ export function loadText(_texts: TextSave[], _map?: any) {
         marker.l_id = text.l_id || marker._leaflet_id;
         texts.push(marker);
         marker.on("click", removeText);
+    });
+}
+
+export function getTexts() {
+    return texts.map((marker: L.Marker) => {
+        return {
+            text: marker._icon.innerText,
+            style: marker.style,
+            latLng: marker._latlng,
+        };
     });
 }

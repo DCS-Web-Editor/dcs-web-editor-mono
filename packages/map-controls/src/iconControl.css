@@ -47,6 +47,7 @@
 
 /* user image */
 #map > div.leaflet-pane img.dropped-image {
+  pointer-events: visible !important;
   /* max-width: 15rem !important;
   max-height: 15rem !important; */
   /* margin-left: -7vb !important;
@@ -56,6 +57,10 @@
   /* z-index: 301 !important; */
   /* max-width: 70vw !important;
   max-height: 70vh !important; */
+}
+
+#map > div.leaflet-pane .dwe-image-overlay-polygon {
+  pointer-events: all;
 }
 
 #map > div.leaflet-pane img.dropped-svg {
