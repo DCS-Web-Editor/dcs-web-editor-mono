@@ -317,12 +317,18 @@ export function getTextType(type, category) {
     return textType;
 }
 export async function getElevationFeet(lat, lng) {
+    // `https://api.open-elevation.com/api/v1/lookup?locations=`
+    // const url = `https://www.elevation-api.eu/v1/elevation/`;
+    // const url = `https://api.mapbox.com/v4/mapbox.mapbox-terrain-v2/tilequery/${la},${ln}.json?access_token=${accessToken}`;
+    const la = lat.toFixed(6);
+    const lo = lng.toFixed(6);
+    const url = `https://api.open-meteo.com/v1/elevation?latitude=${la}&longitude=${lo}`;
     try {
-        const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${lat.toFixed(6)},${lng.toFixed(6)}|`, {
+        const elevationData = await fetch(url, {
             method: "GET",
         });
-        const { results } = await elevationData.json();
-        const elevation = ((results?.[0]?.elevation ?? 0) * M_TO_FEET).toFixed(0);
+        const results = await elevationData.json();
+        const elevation = ((results?.elevation ?? 0) * M_TO_FEET).toFixed(0);
         return elevation;
     }
     catch (error) {
@@ -332,12 +338,19 @@ export async function getElevationFeet(lat, lng) {
 }
 export async function getElevationsFeet(coords) {
     try {
-        const flat = coords
-            .map((c) => {
-            return `${c.lat.toFixed(6)},${c.lng.toFixed(6)}`;
-        })
-            .join("|");
-        const elevationData = await fetch(`https://api.open-elevation.com/api/v1/lookup?locations=${flat}`, {
+        // const flat = coords
+        //     .map((c) => {
+        //         const la = c.lat.toFixed(6);
+        //         const lo = c.lng.toFixed(6);
+        //         return `${la},${lo}`;
+        //     })
+        //     .join("|");
+        const las = coords.map((c) => c.lat.toFixed(6)).join(",");
+        const los = coords.map((c) => c.lng.toFixed(6)).join(",");
+        const url = `https://api.open-meteo.com/v1/elevation?latitude=[${las}]&longitude=[${los}]`;
+        const elevationData = await fetch(url, 
+        // `https://api.open-elevation.com/api/v1/lookup?locations=${flat}`,
+        {
             method: "GET",
         });
         const { results } = await elevationData.json();
