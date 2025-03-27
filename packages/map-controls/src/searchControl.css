@@ -4,7 +4,8 @@
 .leaflet-control-zoom.leaflet-bar.leaflet-control.show-search-fields .results {
   display: block;
 }
-.leaflet-control-zoom.leaflet-bar.leaflet-control.show-search-fields .search-field {
+.leaflet-control-zoom.leaflet-bar.leaflet-control.show-search-fields
+  .search-field {
   display: block;
   width: 18.7rem;
 }
@@ -22,7 +23,8 @@
 .leaflet-control-zoom.leaflet-bar.leaflet-control .results::-webkit-scrollbar {
   width: 15px !important;
 }
-.leaflet-control-zoom.leaflet-bar.leaflet-control .results::-webkit-scrollbar-thumb {
+.leaflet-control-zoom.leaflet-bar.leaflet-control
+  .results::-webkit-scrollbar-thumb {
   cursor: ns-resize;
 }
 
@@ -42,6 +44,7 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+  margin-left: 0.5rem;
 }
 .leaflet-control-zoom.leaflet-bar.leaflet-control ul li a {
   background-color: #293949 !important;
@@ -51,6 +54,7 @@
   padding: 0;
   width: 100%;
   text-wrap: nowrap;
+  text-align: left;
 }
 .leaflet-control-zoom.leaflet-bar.leaflet-control ul li a:hover {
   color: #1abc9c !important;

@@ -331,10 +331,10 @@ function renderLi(f) {
       </li>`;
     }
 
-    const name = f.leaflet.type === "UNIT" && f.leaflet.json.name;
-    const airportName =
-        f.leaflet.type === "AIRPORT" && f.leaflet.json.displayName;
-    const beaconCode = f.leaflet.type === "BEACON" && f.leaflet.json.callsign;
+    const type = f.leaflet.type || f.leaflet.$type;
+    const name = type === "UNIT" && f.leaflet.json.name;
+    const airportName = type === "AIRPORT" && f.leaflet.json.displayName;
+    const beaconCode = type === "BEACON" && f.leaflet.json.callsign;
     // console.log(
     //   f.leaflet.type === "AIRPORT",
     //   f.leaflet.json.displayName,
