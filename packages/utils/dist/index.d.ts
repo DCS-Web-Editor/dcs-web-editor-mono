@@ -105,3 +105,4 @@ export declare function sanitizeAngle(angle: number): number;
 export declare function openJsonEditor(data: any): void;
 export declare function sanitizeString(input: string): string;
 export declare function rgbToHsl(r: any, g: any, b: any): (number | undefined)[];
+export declare function getFilter(col: string): string;

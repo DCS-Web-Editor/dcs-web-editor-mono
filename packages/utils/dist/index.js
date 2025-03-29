@@ -433,3 +433,13 @@ export function rgbToHsl(r, g, b) {
     }
     return [h, s, l];
 }
+export function getFilter(col) {
+    const color = col || "#FFFF00";
+    // iconDrawer.style.boxShadow = ``;
+    var r = parseInt(color.substr(1, 2), 16);
+    var g = parseInt(color.substr(3, 2), 16);
+    var b = parseInt(color.substr(5, 2), 16);
+    const [h, s, l] = rgbToHsl(r, g, b);
+    const filter = `brightness(${l}) contrast(0.5) sepia() hue-rotate(${Math.floor(h * 360 - 50)}deg) saturate(${s * 5})`;
+    return filter;
+}

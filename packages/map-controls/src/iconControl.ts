@@ -1,7 +1,7 @@
 import Icons from "@dcs-web-editor-mono/icons";
 import "./iconControl.css";
 import { context, disablePaintControl, disableTextControl } from ".";
-import { rgbToHsl } from "@dcs-web-editor-mono/utils";
+import { getFilter } from "@dcs-web-editor-mono/utils";
 import { remove } from "lodash";
 export const iconControl = L.control({ position: "bottomleft" });
 const anchor = document.createElement("a");
@@ -153,7 +153,7 @@ function spawnIcon(options: IconOptions) {
 
     const { name, imageData, coordinates, color, type, l_id } = options;
 
-    const filter = getFilter(color);
+    const filter = getFilter(color || _color || colorPicker?.value);
     const opts = {
         className: "dwe-dropicon",
         html: `<img width=50 height=50 src="${imageData}" style="filter: ${filter}"/>`,
@@ -192,24 +192,6 @@ function spawnIcon(options: IconOptions) {
 
 const colorPicker = document.getElementById("colorpicker")!;
 if (colorPicker) colorPicker.addEventListener("change", renderDrawer);
-
-export function getFilter(col = "") {
-    const color = col || _color || colorPicker?.value || "#FFFF00";
-
-    // iconDrawer.style.boxShadow = ``;
-
-    var r = parseInt(color.substr(1, 2), 16);
-    var g = parseInt(color.substr(3, 2), 16);
-    var b = parseInt(color.substr(5, 2), 16);
-
-    const [h, s, l] = rgbToHsl(r, g, b);
-
-    const filter = `brightness(${l}) contrast(0.5) sepia() hue-rotate(${Math.floor(
-        h * 360 - 50
-    )}deg) saturate(${s * 5})`;
-
-    return filter;
-}
 
 let _color;
 export function updateColor(color: string) {
