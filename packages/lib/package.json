@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "ace/worker-lua.js",
-  "scripts": {},
+  "scripts": {
+    "build": "ls"
+  },
   "author": "",
   "license": "none",
   "dependencies": {}
