@@ -90,6 +90,8 @@ import Tower from "./small/Tower.png";
 import Question from "./small/question.png";
 import navigation_point from "./small/navigation_point.png";
 import Missile from "./small/missile.png";
+import Rocket from "./small/rocket.png";
+import Bomb from "./small/bomb.png";
 import Bomber from "./small/bomber.png";
 import oilrig from "./small/oilrig.png";
 import HeliRecon from "./small/heli recon.png";
@@ -207,6 +209,8 @@ const toExport: any = {
         Bullseye,
         navigation_point,
         Missile,
+        Rocket,
+        Bomb,
         Bomber,
         oilrig,
         HeliRecon,
