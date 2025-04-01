@@ -1,0 +1,10 @@
+{
+  "name": "@dcs-web-editor-mono/lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ace/worker-lua.js",
+  "scripts": {},
+  "author": "",
+  "license": "none",
+  "dependencies": {}
+}
