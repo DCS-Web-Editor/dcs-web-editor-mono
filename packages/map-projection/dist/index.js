@@ -91,6 +91,12 @@ const config = {
         false_northing: -3680057,
         scale_factor: 0.9996,
     },
+    GermanyCW: {
+        central_meridian: 21,
+        false_easting: 35427.62,
+        false_northing: -6061633.128,
+        scale_factor: 0.9996,
+    },
 };
 /**
  * proj4 projector

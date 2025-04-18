@@ -83,4 +83,8 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
+    "Cold War Germany": {
+        lat: number;
+        lon: number;
+    }[];
 };
