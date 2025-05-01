@@ -502,6 +502,7 @@ L.Map.PopupMovable = L.Handler.extend({
       popupmovable: true,
       _animateZoom: function (e) {
         if (!L.DomUtil.hasClass(this._container, this._movedLabel)) {
+          if (!this._map) return;
           const pos = this._map._latLngToNewLayerPoint(
               this._latlng,
               e.zoom,
