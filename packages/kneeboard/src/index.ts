@@ -96,6 +96,8 @@ let declination: Function;
 export function createKneeboard(element: HTMLElement, _declination: Function) {
     declination = _declination;
     _root = element;
+    _root.style.display = "block";
+
     state.airports = null;
 
     const HTML = `
