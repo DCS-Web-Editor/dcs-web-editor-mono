@@ -19,6 +19,7 @@
     "packages/**"
   ],
   "dependencies": {
+    "handsontable": "^15.3.0",
     "typescript": "^4.9.5",
     "vite": "^4.1.1"
   },

@@ -4,8 +4,8 @@ import _ from "lodash";
 
 // Controls
 import themeSelect, {
-  DEFAULT_THEME,
-  switchTheme,
+    DEFAULT_THEME,
+    switchTheme,
 } from "./components/controls/themeSelect";
 import metricSelect from "./components/controls/metricSelect";
 import coordinateSelect from "./components/controls/coordinateSelect";
@@ -48,45 +48,45 @@ import state from "./state";
 const registeredComponents: Component[] = [];
 
 export function register(...components: Component[]) {
-  registeredComponents.push(...components);
+    registeredComponents.push(...components);
 }
 
 (function init() {
-  register(
-    // Controls
-    names,
-    themeSelect,
-    spacingSelect,
-    metricSelect,
-    coordinateSelect,
-    // csv,
+    register(
+        // Controls
+        names,
+        themeSelect,
+        spacingSelect,
+        metricSelect,
+        coordinateSelect,
+        // csv,
 
-    // Components
-    date,
-    title,
-    mainTask,
-    coalitionTask,
-    bullseye,
-    airports,
-    unit,
-    group,
-    friendlies,
-    packages,
-    awacs,
-    tanker,
-    carrier,
-    weather,
-    laserCodes,
-    loadout,
-    fuel,
-    radio,
-    screenshot,
-    waypoints,
-    waypointProfile,
-    waypointDistanceProfile,
-    downloadAll,
-    notes
-  );
+        // Components
+        date,
+        title,
+        mainTask,
+        coalitionTask,
+        bullseye,
+        airports,
+        unit,
+        group,
+        friendlies,
+        packages,
+        awacs,
+        tanker,
+        carrier,
+        weather,
+        laserCodes,
+        loadout,
+        fuel,
+        radio,
+        screenshot,
+        waypoints,
+        waypointProfile,
+        waypointDistanceProfile,
+        downloadAll,
+        notes
+    );
 })();
 
 let _root: HTMLElement;
@@ -94,11 +94,11 @@ let context: Context;
 let declination: Function;
 
 export function createKneeboard(element: HTMLElement, _declination: Function) {
-  declination = _declination;
-  _root = element;
-  state.airports = null;
+    declination = _declination;
+    _root = element;
+    state.airports = null;
 
-  const HTML = `
+    const HTML = `
 
   <div id="capture">
   <!-- <div id="mask" class="no-print"></div> -->
@@ -142,109 +142,131 @@ export function createKneeboard(element: HTMLElement, _declination: Function) {
         ${createToggleCheckboxes()}
       </div>
     </div>
+    
+    <button id="close-kneeboard">close</button>
   </div>
+
   `;
-  _root.innerHTML = HTML;
+    _root.innerHTML = HTML;
+
+    document
+        .getElementById("close-kneeboard")
+        ?.addEventListener("click", () => {
+            _root.style.display = "none";
+        });
 }
 
 function createTemplateSections() {
-  return registeredComponents
-    .map((component) => {
-      if (component.template === false)
-        return `<div style="order:100; display: none;" class="no-print" id="${component.id}"></div>`;
-      const klass = "kneeboard-section";
-      return `<div class="${klass}" id="${component.id}"></div>`;
-    })
-    .join("\n");
+    return registeredComponents
+        .map((component) => {
+            if (component.template === false)
+                return `<div style="order:100; display: none;" class="no-print" id="${component.id}"></div>`;
+            const klass = "kneeboard-section";
+            return `<div class="${klass}" id="${component.id}"></div>`;
+        })
+        .join("\n");
 }
 
 function createControlButtons() {
-  return registeredComponents.map((component) => component.control).join("\n");
+    return registeredComponents
+        .map((component) => component.control)
+        .join("\n");
 }
 
 function createToggleCheckboxes() {
-  return registeredComponents
-    .map((component) => {
-      const { id, template } = component;
-      if (template === false) return "";
+    return registeredComponents
+        .map((component) => {
+            const { id, template } = component;
+            if (template === false) return "";
 
-      const checked = load("hidden-" + id) ? "" : "checked";
+            const checked = load("hidden-" + id) ? "" : "checked";
 
-      return `
+            return `
             <label for="checkbox-${id}">
               <input name="${id}" id="checkbox-${id}" ${checked} type="checkbox" />
               ${_.startCase(id)}
             </label>
           `;
-    })
-    .join("\n");
+        })
+        .join("\n");
 }
 
 export function renderKneeboard(
-  unitName: string,
-  groupName: string,
-  category: string,
-  countryName: string,
-  coalitionName: string,
-  mission: any,
-  dictionary: any,
-  options = {}
+    unitName: string,
+    groupName: string,
+    category: string,
+    countryName: string,
+    coalitionName: string,
+    mission: any,
+    dictionary: any,
+    options = {}
 ) {
-  // console.log(unitName, groupName, category, countryName, coalitionName, !!mission, !!dictionary);
+    // console.log(unitName, groupName, category, countryName, coalitionName, !!mission, !!dictionary);
 
-  const coalition = mission.coalition[coalitionName];
-  const countries = coalition.country;
-  const country = countries.find((c) => c.name === countryName)!;
+    const coalition = mission.coalition[coalitionName];
+    const countries = coalition.country;
+    const country = countries.find((c) => c.name === countryName)!;
 
-  const groups = country[category]?.group;
+    const groups = country[category]?.group;
 
-  if (!groups) {
-    console.error("no groups found in country", countryName, category, country);
-    return;
-  }
-  const group = groups.find((g) => g.name === groupName)!;
-  const unit = group.units.find((u) => u.name === unitName);
+    if (!groups) {
+        console.error(
+            "no groups found in country",
+            countryName,
+            category,
+            country
+        );
+        return;
+    }
+    const group = groups.find((g) => g.name === groupName)!;
+    const unit = group.units.find((u) => u.name === unitName);
 
-  context = {
-    unitName,
-    groupName,
-    category,
-    countryName,
-    coalitionName,
-    mission,
-    dictionary,
-    coalition,
-    countries,
-    country,
-    groups,
-    group,
-    unit,
-    declination,
-  };
+    context = {
+        unitName,
+        groupName,
+        category,
+        countryName,
+        coalitionName,
+        mission,
+        dictionary,
+        coalition,
+        countries,
+        country,
+        groups,
+        group,
+        unit,
+        declination,
+    };
 
-  document.querySelector("#content")?.setAttribute("name", unitName);
+    document.querySelector("#content")?.setAttribute("name", unitName);
 
-  // load theme
-  const storedTheme = load("theme") || DEFAULT_THEME;
-  setTimeout(() => switchTheme({ target: { value: storedTheme } }), 10);
+    // load theme
+    const storedTheme = load("theme") || DEFAULT_THEME;
+    setTimeout(() => switchTheme({ target: { value: storedTheme } }), 10);
 
-  // hide empty components
-  hideEmptyComponents(registeredComponents, context);
+    // hide empty components
+    hideEmptyComponents(registeredComponents, context);
 
-  // render all registered components
-  setTimeout(() => {
-    renderRegisteredComponents(
-      registeredComponents,
-      context,
-      options.noControls
-    );
-  }, 10);
-  return refresh;
+    // render all registered components
+    setTimeout(() => {
+        renderRegisteredComponents(
+            registeredComponents,
+            context,
+            options.noControls
+        );
+    }, 10);
+    return refresh;
 }
 
 export function refresh(only = null) {
-  setTimeout(
-    () => renderRegisteredComponents(registeredComponents, context, true, only),
-    10
-  );
+    setTimeout(
+        () =>
+            renderRegisteredComponents(
+                registeredComponents,
+                context,
+                true,
+                only
+            ),
+        10
+    );
 }

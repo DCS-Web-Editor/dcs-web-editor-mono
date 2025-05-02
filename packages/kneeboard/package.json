@@ -23,7 +23,8 @@
   "dependencies": {
     "@dcs-web-editor-mono/utils": "^1.0.0",
     "axios": "^1.6.8",
-    "handsontable": "^13.0.0",
-    "html2canvas": "^1.4.1"
+    "handsontable": "15.3",
+    "html2canvas": "^1.4.1",
+    "hyperformula": "^3.0.0"
   }
 }
