@@ -4,6 +4,7 @@ import airdrome_class_3 from "./small/airdrome_class_3.png";
 import airdrome_class_4 from "./small/airdrome_class_none.png";
 import airdrome_class_0 from "./small/airdrome_class_none.png";
 import airdrome_grass from "./small/airdrome_grass.png";
+import airdrome_supplier from "./small/airdrome_supplier.png";
 import HOMER from "./small/beacon_without_marker.png";
 import AIRPORT_HOMER_WITH_MARKER from "./small/beacon_with_marker.png";
 import VOR_DME from "./small/beacon_VOR-DME.png";
@@ -123,6 +124,7 @@ const toExport: any = {
         airdrome_class_4,
         airdrome_class_0,
         airdrome_grass,
+        airdrome_supplier,
         HOMER,
         AIRPORT_HOMER: HOMER,
         AIRPORT_HOMER_WITH_MARKER,
