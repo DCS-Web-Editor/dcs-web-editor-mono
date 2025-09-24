@@ -32,9 +32,9 @@ export function followControlToggle() {
     context.follow = !context.follow;
     if (context.follow) {
         anchor.classList.add("polyline-measure-controlOnBgColor");
-        map.options.scrollWheelZoom = "center";
+        if (map) map.options.scrollWheelZoom = "center";
     } else {
         anchor.classList.remove("polyline-measure-controlOnBgColor");
-        map.options.scrollWheelZoom = true;
+        if (map) map.options.scrollWheelZoom = true;
     }
 }
