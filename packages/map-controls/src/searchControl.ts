@@ -1,6 +1,6 @@
-import { MGRStoLL } from "@dcs-web-editor-mono/utils";
+import { MGRStoLL, renderFrequency, toDeg } from "@dcs-web-editor-mono/utils";
 import "./searchControl.css";
-import { context } from ".";
+import { context, followControlToggle } from ".";
 import axios from "axios";
 
 /* 
@@ -289,6 +289,10 @@ function openItem(item: any) {
 
     item.openPopup();
 
+    if (context.follow && followControlToggle) {
+        followControlToggle();
+    }
+
     map.setView({
         lat: item.leaflet.lat,
         lng: item.leaflet.lon,
@@ -334,7 +338,7 @@ function renderLi(f) {
     const type = f.leaflet.type || f.leaflet.$type;
     const name = type === "UNIT" && f.leaflet.json.name;
     const airportName = type === "AIRPORT" && f.leaflet.json.displayName;
-    const beaconCode = type === "BEACON" && f.leaflet.json.callsign;
+    const beaconCode = (type === "BEACON" && f.leaflet.json.callsign) || "";
     // console.log(
     //   f.leaflet.type === "AIRPORT",
     //   f.leaflet.json.displayName,
@@ -349,13 +353,27 @@ function renderLi(f) {
         display = cat + " " + translate(name) || name;
         displayInfo = `(${f.leaflet.json.type})`;
     } else if (airportName) {
+        const airport = f.leaflet?.json;
+        if (!airport) return;
         // AIRPORT
         display = `🅐 ${airportName}`;
-        displayInfo = `(${f.leaflet?.json.code})`;
-    } else if (beaconCode) {
+        // const runways = airport.runways?.map((r) => r.Name).join(", ");
+        const headings = airport.runways
+            ?.map((r) => toDeg(-r.course + Math.PI) + "°")
+            .join(", ");
+
+        displayInfo = `(${airport.code}) HDG ${headings}`;
+    } else if (type === "BEACON") {
         // BEACON
-        display = `⊙ ${beaconCode}`;
-        displayInfo = `(${f.leaflet?.json.display_name})`;
+        display = `⊙ ${
+            beaconCode ||
+            f.leaflet?.json.display_name ||
+            f.leaflet?.json.type_name
+        }`;
+        const frequency = f.leaflet?.json.frequency;
+        displayInfo = `(${
+            (frequency && renderFrequency(frequency)) || "---"
+        }) ${beaconType(f.leaflet?.json.type_name)}`;
     }
 
     return `<li>
@@ -363,4 +381,27 @@ function renderLi(f) {
         airportName
     )}', '${encode(beaconCode)}')" href="#">${display} ${displayInfo}</a>
           </li>`;
+}
+
+function beaconType(type_name: string) {
+    switch (type_name) {
+        case "PRMG_LOCALIZER":
+            return "PRMG LOC";
+        case "AIRPORT_HOMER_WITH_MARKER":
+            return "MARKER";
+        case "HOMER":
+            return "NDB";
+        case "AIRPORT_HOMER":
+            return "NDB";
+        case "ILS_LOCALIZER":
+            return "ILS LOC";
+        case "ILS_FAR_HOMER":
+            return "ILS";
+        case "ILS_NEAR_HOMER":
+            return "ILS";
+        case "ILS_GLIDESLOPE":
+            return "ILS GS";
+        default:
+            return type_name;
+    }
 }
