@@ -373,7 +373,7 @@ function renderLi(f) {
         const frequency = f.leaflet?.json.frequency;
         displayInfo = `(${
             (frequency && renderFrequency(frequency)) || "---"
-        }) ${beaconType(f.leaflet?.json.type_name)}`;
+        }) ${beaconTypePretty(f.leaflet?.json.type_name)}`;
     }
 
     return `<li>
@@ -383,7 +383,7 @@ function renderLi(f) {
           </li>`;
 }
 
-function beaconType(type_name: string) {
+export function beaconTypePretty(type_name: string) {
     switch (type_name) {
         case "PRMG_LOCALIZER":
             return "PRMG LOC";
