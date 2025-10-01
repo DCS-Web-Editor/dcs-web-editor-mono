@@ -22,10 +22,14 @@
 }
 .leaflet-control-zoom.leaflet-bar.leaflet-control .results::-webkit-scrollbar {
   width: 15px !important;
+  background-color: #23313f;
 }
+
 .leaflet-control-zoom.leaflet-bar.leaflet-control
   .results::-webkit-scrollbar-thumb {
   cursor: ns-resize;
+  background-color: #1abc9c;
+  border-radius: 5px;
 }
 
 .leaflet-control-zoom.leaflet-bar.leaflet-control .search-field {
