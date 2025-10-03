@@ -31,17 +31,9 @@
   border-color: yellow !important;
   font-size: smaller;
 }
+.moving-tooltip b {
+  font-size: small;
+}
 .plus-length {
   padding-left: 45px;
-}
-
-.moving-tooltip:before {
-  left: 0;
-  margin-left: -12px;
-  border-right-color: yellow !important;
-}
-.result-tooltip:before {
-  left: 0;
-  margin-left: -12px;
-  border-right-color: yellow !important;
 }

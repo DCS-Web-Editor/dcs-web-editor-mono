@@ -48,6 +48,8 @@ L.Control.Ruler = L.Control.extend({
         );
         pAnchor.role = "button";
         pAnchor.innerHTML = '<span><i class="fa fa-ruler"></i></span>';
+        pAnchor.title =
+            "Shortcut: 'L' click and drag to quickly measure bearing and range";
         this._container.appendChild(pAnchor);
 
         L.DomEvent.disableClickPropagation(this._container);
@@ -145,13 +147,13 @@ L.Control.Ruler = L.Control.extend({
             this._totalLength += this._result.Distance;
             if (this._clickCount > 1) {
                 text =
-                    "<b>" +
                     this.options.angleUnit.label +
-                    "</b>&nbsp;" +
+                    "&nbsp;" +
+                    "<b>" +
                     this._result.Bearing.toFixed(
                         this.options.angleUnit.decimal
                     ) +
-                    "&nbsp;" +
+                    "</b>&nbsp;" +
                     this.options.angleUnit.display +
                     "<br><b>" +
                     this.options.lengthUnit.label +
@@ -161,13 +163,12 @@ L.Control.Ruler = L.Control.extend({
                     this.options.lengthUnit.display;
             } else {
                 text =
-                    "<b>" +
                     this.options.angleUnit.label +
-                    "</b>&nbsp;" +
+                    "&nbsp;<b>" +
                     this._result.Bearing.toFixed(
                         this.options.angleUnit.decimal
                     ) +
-                    "&nbsp;" +
+                    "</b>&nbsp;" +
                     this.options.angleUnit.display +
                     "<br><b>" +
                     this.options.lengthUnit.label +
@@ -210,13 +211,13 @@ L.Control.Ruler = L.Control.extend({
             ).addTo(this._tempLine);
             if (this._clickCount > 1) {
                 text =
-                    "<b>" +
                     this.options.angleUnit.label +
-                    "</b>&nbsp;" +
+                    "&nbsp;" +
+                    "<b>" +
                     this._result.Bearing.toFixed(
                         this.options.angleUnit.decimal
                     ) +
-                    "&nbsp;" +
+                    "</b>&nbsp;" +
                     this.options.angleUnit.display +
                     "<br><b>" +
                     this.options.lengthUnit.label +
@@ -231,15 +232,15 @@ L.Control.Ruler = L.Control.extend({
                     ")</div>";
             } else {
                 text =
+                    // this.options.angleUnit.label +
                     "<b>" +
-                    this.options.angleUnit.label +
-                    "</b>&nbsp;" +
+                    "&nbsp;" +
                     this._result.Bearing.toFixed(
                         this.options.angleUnit.decimal
                     ) +
-                    "&nbsp;" +
+                    "</b>&nbsp;" +
                     this.options.angleUnit.display +
-                    "<br><b>" +
+                    "&nbsp;" +
                     this.options.lengthUnit.label +
                     "</b>&nbsp;" +
                     this._result.Distance.toFixed(
