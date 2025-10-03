@@ -1,0 +1,47 @@
+.leaflet-ruler {
+  height: 30px;
+  width: 30px;
+}
+.leaflet-ruler:hover {
+  background-color: #49d8bc !important;
+  color: #293949 !important;
+}
+.leaflet-ruler-clicked a {
+  background-color: #1abc9c !important;
+  color: #293949 !important;
+}
+.leaflet-bar {
+}
+.leaflet-control {
+  cursor: pointer;
+}
+.result-tooltip {
+  background-color: #23313f !important;
+  color: yellow !important;
+  border-width: medium;
+  border-color: yellow !important;
+  font-size: smaller;
+}
+.moving-tooltip {
+  background-color: #23313f !important;
+  color: yellow !important;
+  background-clip: padding-box;
+  opacity: 0.5;
+  border: dotted;
+  border-color: yellow !important;
+  font-size: smaller;
+}
+.plus-length {
+  padding-left: 45px;
+}
+
+.moving-tooltip:before {
+  left: 0;
+  margin-left: -12px;
+  border-right-color: yellow !important;
+}
+.result-tooltip:before {
+  left: 0;
+  margin-left: -12px;
+  border-right-color: yellow !important;
+}
