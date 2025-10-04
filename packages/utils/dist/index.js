@@ -443,3 +443,18 @@ export function getFilter(col) {
     const filter = `brightness(${l}) contrast(0.5) sepia() hue-rotate(${Math.floor(h * 360 - 50)}deg) saturate(${s * 5})`;
     return filter;
 }
+/**
+ * Converts a distance in pixels to a distance in meters on the Leaflet map.
+ * @param {number} pixelDistance - The distance in pixels.
+ * @returns {number} The distance in meters.
+ */
+export function pixelsToMeters(map, pixelDistance) {
+    if (!map || typeof map.containerPointToLatLng !== "function")
+        return 0;
+    const center = map.getSize().divideBy(2);
+    const pointA = center;
+    const pointB = center.add([pixelDistance, 0]);
+    const latlngA = map.containerPointToLatLng(pointA);
+    const latlngB = map.containerPointToLatLng(pointB);
+    return latlngA.distanceTo(latlngB);
+}
