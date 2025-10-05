@@ -101,6 +101,13 @@ export declare function toLatLng(latLon: LatLon): {
     lat: number;
     lng: number;
 };
+export declare function toLatLon(latLng: {
+    lat: number;
+    lng: number;
+}): {
+    lat: number;
+    lon: number;
+};
 export declare function sanitizeAngle(angle: number): number;
 export declare function openJsonEditor(data: any): void;
 export declare function sanitizeString(input: string): string;

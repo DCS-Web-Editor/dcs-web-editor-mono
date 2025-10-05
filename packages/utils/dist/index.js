@@ -383,6 +383,12 @@ export function toLatLng(latLon) {
         lng: latLon.lon,
     };
 }
+export function toLatLon(latLng) {
+    return {
+        lat: latLng.lat,
+        lon: latLng.lng,
+    };
+}
 export function sanitizeAngle(angle) {
     if (angle < 0)
         return angle + 360;
