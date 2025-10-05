@@ -1,0 +1,8 @@
+#atc-settings {
+  position: absolute;
+  right: 50%;
+  bottom: 10px;
+  background-color: var(--bg);
+  border: 2px solid var(--bg-dark);
+  z-index: 500;
+}
