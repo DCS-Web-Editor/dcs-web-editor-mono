@@ -1,8 +1,7 @@
-import { context, disablePaintControl, disableTextControl } from ".";
+import { context } from ".";
 import "./atcSettings.css";
 export const atcControl = L.control({ position: "bottomleft" });
 const anchor = document.createElement("a");
-const mapElement = document.getElementById("map")!;
 let map: L.Map;
 
 atcControl.onAdd = function (_map) {
@@ -22,7 +21,6 @@ atcControl.onAdd = function (_map) {
     anchor.innerHTML = '<span><i class="fa fa-satellite-dish"></i></span>';
     L.DomEvent.on(anchor, "click", atcControlActivate);
     this._div.appendChild(anchor);
-    renderSettings(this._div);
     return this._div;
 };
 
@@ -33,6 +31,11 @@ function atcControlActivate(e: Event) {
     if (context.atcMode) {
         anchor.classList.add("polyline-measure-controlOnBgColor");
         if (atcMenu) atcMenu.style.display = "block";
+        else {
+            const atcMenu = document.getElementById("atc-settings")!;
+            if (atcMenu) atcMenu.style.display = "block";
+            renderSettings(atcControl._div);
+        }
     } else {
         anchor.classList.remove("polyline-measure-controlOnBgColor");
         if (atcMenu) atcMenu.style.display = "none";
