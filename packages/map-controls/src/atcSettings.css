@@ -1,8 +1,9 @@
 #atc-settings {
   padding: 0.3rem 1rem;
-  position: fixed;
-  left: 50px;
-  bottom: 55px;
+  position: absolute;
+  width: max-content;
+  left: 40px;
+  margin-top: -32px;
   background-color: var(--bg);
   border: 2px solid var(--bg-dark);
   color: var(--text);

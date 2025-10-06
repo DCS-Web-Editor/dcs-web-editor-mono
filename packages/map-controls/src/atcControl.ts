@@ -22,7 +22,7 @@ atcControl.onAdd = function (_map) {
     anchor.innerHTML = '<span><i class="fa fa-satellite-dish"></i></span>';
     L.DomEvent.on(anchor, "click", atcControlActivate);
     this._div.appendChild(anchor);
-    renderSettings();
+    renderSettings(this._div);
     return this._div;
 };
 
@@ -32,10 +32,10 @@ function atcControlActivate(e: Event) {
     context.atcMode = !context.atcMode;
     if (context.atcMode) {
         anchor.classList.add("polyline-measure-controlOnBgColor");
-        atcMenu.style.display = "block";
+        if (atcMenu) atcMenu.style.display = "block";
     } else {
         anchor.classList.remove("polyline-measure-controlOnBgColor");
-        atcMenu.style.display = "none";
+        if (atcMenu) atcMenu.style.display = "none";
     }
 }
 
@@ -44,18 +44,20 @@ function atcControlActivate(e: Event) {
 //     atcControl.peerSync = peerSync;
 // };
 
-function renderSettings() {
+function renderSettings(parent) {
     // colorize all icons on map
     //   const icons = document.getElementsByClassName("dwe-dropicon");
     //   Object.values(icons).forEach((e) => {
     //     e.style.filter = filter;
     //   });
 
-    const atcMenu = document.getElementById("atc-settings")!;
+    const atcMenu = document.createElement("div")!;
+    atcMenu.id = "atc-settings";
+    parent.appendChild(atcMenu);
 
     if (atcMenu)
         atcMenu.innerHTML = `<div class="atc-info no-select">
-            <b>ATC Settings</b>
+            <b>ATC <i class="fa fa-gear"></i></b>
         <ul class="dropdown">
             <li title="Update can take a few seconds">
                <button id="atc-button-ground" >Show Ground</button>
