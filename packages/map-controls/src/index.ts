@@ -9,6 +9,7 @@ export const context = {
     searchMode: false,
     iconMode: false,
     atcMode: false,
+    showGround: false,
     follow: true,
     ruler: false,
     getColor: () => "#0C8",

@@ -485,6 +485,12 @@ export function toLatLon(latLng: { lat: number; lng: number }) {
     };
 }
 
+export function prettyLatLon(lat: number, lon: number, fix = 4) {
+    return `${lat > 0 ? "N" : "S"} ${Math.abs(lat).toFixed(fix)}, ${
+        lon > 0 ? "E" : "W"
+    } ${Math.abs(lon).toFixed(fix)}`;
+}
+
 export function sanitizeAngle(angle: number) {
     if (angle < 0) return angle + 360;
     if (angle >= 360) return angle - 360;

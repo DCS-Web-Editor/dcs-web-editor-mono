@@ -1,8 +1,27 @@
 #atc-settings {
-  position: absolute;
-  right: 50%;
-  bottom: 10px;
+  padding: 0.3rem 1rem;
+  position: fixed;
+  left: 50px;
+  bottom: 55px;
   background-color: var(--bg);
   border: 2px solid var(--bg-dark);
-  z-index: 500;
+  color: var(--text);
+  z-index: 1010;
+}
+
+#atc-settings ul {
+  padding: 0.3rem;
+  margin: 0;
+}
+
+#atc-settings ul.dropdown {
+  display: none;
+}
+#atc-settings:hover ul.dropdown {
+  display: block;
+}
+
+#atc-settings li {
+  padding: 0rem;
+  margin: 0.1rem;
 }

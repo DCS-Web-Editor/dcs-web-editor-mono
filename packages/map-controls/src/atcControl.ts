@@ -54,12 +54,27 @@ function renderSettings() {
     const atcMenu = document.getElementById("atc-settings")!;
 
     if (atcMenu)
-        atcMenu.innerHTML = `<div class="atc-info">
-            <h4 class="no-select">ATC Settings</h4>
-
+        atcMenu.innerHTML = `<div class="atc-info no-select">
+            <b>ATC Settings</b>
+        <ul class="dropdown">
+            <li title="Update can take a few seconds">
+               <button id="atc-button-ground" >Show Ground</button>
+               <span id="atc-show-ground">${
+                   context.showGround ? "ON" : "OFF"
+               }</span>
+            </li>
+         </ul>
     
        </div>
     `;
+
+    atcMenu
+        .querySelector("#atc-button-ground")!
+        .addEventListener("click", () => {
+            context.showGround = !context.showGround;
+            atcMenu.querySelector("#atc-show-ground")!.innerHTML =
+                context.showGround ? "ON" : "OFF";
+        });
 }
 
 interface Coordinates {
