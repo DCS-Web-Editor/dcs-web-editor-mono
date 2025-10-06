@@ -62,7 +62,13 @@ function renderSettings(parent) {
             <li title="Update can take a few seconds">
                <button id="atc-button-ground" >Show Ground</button>
                <span id="atc-show-ground">${
-                   context.showGround ? "ON" : "OFF"
+                   context.atcGround ? "ON" : "OFF"
+               }</span>
+            </li>
+            <li title="Update can take a few seconds">
+               <button id="atc-button-vectors" >Vectors</button>
+               <span id="atc-show-vectors">${
+                   context.atcVectors ? "ON" : "OFF"
                }</span>
             </li>
          </ul>
@@ -73,9 +79,17 @@ function renderSettings(parent) {
     atcMenu
         .querySelector("#atc-button-ground")!
         .addEventListener("click", () => {
-            context.showGround = !context.showGround;
+            context.atcGround = !context.atcGround;
             atcMenu.querySelector("#atc-show-ground")!.innerHTML =
-                context.showGround ? "ON" : "OFF";
+                context.atcGround ? "ON" : "OFF";
+        });
+
+    atcMenu
+        .querySelector("#atc-button-vectors")!
+        .addEventListener("click", () => {
+            context.atcVectors = !context.atcVectors;
+            atcMenu.querySelector("#atc-show-vectors")!.innerHTML =
+                context.atcVectors ? "ON" : "OFF";
         });
 }
 
