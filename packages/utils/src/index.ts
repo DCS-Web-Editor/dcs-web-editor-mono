@@ -551,7 +551,7 @@ export function rgbToHsl(r, g, b) {
     return [h, s, l];
 }
 
-export function getFilter(col: string) {
+export function getFilter(col: string, brightness = null) {
     const color = col || "#FFFF00";
 
     // iconDrawer.style.boxShadow = ``;
@@ -562,7 +562,9 @@ export function getFilter(col: string) {
 
     const [h, s, l]: [h: number, s: number, l: number] = rgbToHsl(r, g, b);
 
-    const filter = `brightness(${l}) contrast(0.5) sepia() hue-rotate(${Math.floor(
+    const filter = `brightness(${
+        brightness || l
+    }) contrast(0.5) sepia() hue-rotate(${Math.floor(
         h * 360 - 50
     )}deg) saturate(${s * 5})`;
 

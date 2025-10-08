@@ -113,7 +113,7 @@ export declare function sanitizeAngle(angle: number): number;
 export declare function openJsonEditor(data: any): void;
 export declare function sanitizeString(input: string): string;
 export declare function rgbToHsl(r: any, g: any, b: any): (number | undefined)[];
-export declare function getFilter(col: string): string;
+export declare function getFilter(col: string, brightness?: null): string;
 /**
  * Converts a distance in pixels to a distance in meters on the Leaflet map.
  * @param {number} pixelDistance - The distance in pixels.
