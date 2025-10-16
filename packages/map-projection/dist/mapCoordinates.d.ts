@@ -35,6 +35,10 @@ export declare const COORDINATES: {
         lat: number;
         lon: number;
     }[];
+    MarianaIslandsWWII: {
+        lat: number;
+        lon: number;
+    }[];
     "South Atlantic": {
         lat: number;
         lon: number;
