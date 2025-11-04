@@ -390,7 +390,7 @@ export function toLatLon(latLng) {
     };
 }
 export function prettyLatLon(lat, lon, fix = 4, separator = " ") {
-    return `${lat > 0 ? "N" : "S"}${separator}${Math.abs(lat).toFixed(fix)},${separator}${lon > 0 ? "E" : "W"} ${Math.abs(lon).toFixed(fix)}`;
+    return `${lat > 0 ? "N" : "S"}${separator}${Math.abs(lat).toFixed(fix)},${separator}${lon > 0 ? "E" : "W"}${separator}${Math.abs(lon).toFixed(fix)}`;
 }
 export function sanitizeAngle(angle) {
     if (angle < 0)

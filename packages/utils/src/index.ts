@@ -493,7 +493,9 @@ export function prettyLatLon(
 ) {
     return `${lat > 0 ? "N" : "S"}${separator}${Math.abs(lat).toFixed(
         fix
-    )},${separator}${lon > 0 ? "E" : "W"} ${Math.abs(lon).toFixed(fix)}`;
+    )},${separator}${lon > 0 ? "E" : "W"}${separator}${Math.abs(lon).toFixed(
+        fix
+    )}`;
 }
 
 export function sanitizeAngle(angle: number) {
