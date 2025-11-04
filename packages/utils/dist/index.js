@@ -389,8 +389,8 @@ export function toLatLon(latLng) {
         lon: latLng.lng,
     };
 }
-export function prettyLatLon(lat, lon, fix = 4) {
-    return `${lat > 0 ? "N" : "S"} ${Math.abs(lat).toFixed(fix)}, ${lon > 0 ? "E" : "W"} ${Math.abs(lon).toFixed(fix)}`;
+export function prettyLatLon(lat, lon, fix = 4, separator = " ") {
+    return `${lat > 0 ? "N" : "S"}${separator}${Math.abs(lat).toFixed(fix)},${separator}${lon > 0 ? "E" : "W"} ${Math.abs(lon).toFixed(fix)}`;
 }
 export function sanitizeAngle(angle) {
     if (angle < 0)
